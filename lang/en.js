@@ -3,6 +3,7 @@ window.translations_en = {
     'nav_about': 'About', 'nav_experience': 'Experience', 'nav_skills': 'Skills', 'nav_portfolio': 'Projects', 'nav_collaboration': 'Collaboration', 'nav_contact': 'Contact',
     'nav_about_mobile': 'About', 'nav_experience_mobile': 'Experience', 'nav_skills_mobile': 'Skills', 'nav_portfolio_mobile': 'Projects', 'nav_collaboration_mobile': 'Collaboration', 'nav_contact_mobile': 'Contact',
     'hero_name': 'Strategic Partner in Education, Operations & Technology',
+	"hero_subtitle_1": "| CEO, IVS JSC |  AI & EdTech Expert | Digital Transformation Leader |",    
     'hero_title': 'Strategic Operations & Technology Partner | Digital Transformation & Performance Optimization',
     'hero_subtitle': 'Technology architecture (Microservices, AI Adaptive Learning), EdTech product development (R&D) & multi-industry operations governance.',
     'hero_cta': 'Website IVS Academy',

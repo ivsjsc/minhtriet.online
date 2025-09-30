@@ -3,6 +3,7 @@ window.translations_vi = {
     'nav_about': 'Giới thiệu', 'nav_experience': 'Kinh nghiệm', 'nav_skills': 'Kỹ năng', 'nav_portfolio': 'Dự án', 'nav_collaboration': 'Hợp tác', 'nav_contact': 'Liên hệ',
     'nav_about_mobile': 'Giới thiệu', 'nav_experience_mobile': 'Kinh nghiệm', 'nav_skills_mobile': 'Kỹ năng', 'nav_portfolio_mobile': 'Dự án', 'nav_collaboration_mobile': 'Hợp tác', 'nav_contact_mobile': 'Liên hệ',
     'hero_name': 'Đối tác Chiến lược về Giáo dục, Vận hành & Công nghệ',
+    "hero_subtitle_1": "| CEO, IVS JSC | Chuyên gia AI & EdTech | Lãnh đạo Chuyển đổi số |",
     'hero_title': 'Đối tác Chiến lược Công nghệ | Chuyển đổi số & Tối ưu vận hành',
     'hero_subtitle': 'Kiến trúc công nghệ (Microservices, AI Adaptive Learning), phát triển sản phẩm EdTech (R&D) & quản trị vận hành đa ngành.',
     'hero_cta': 'Website IVS Academy',

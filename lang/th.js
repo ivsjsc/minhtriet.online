@@ -3,6 +3,7 @@ window.translations_th = {
 	'nav_about': 'เกี่ยวกับ', 'nav_experience': 'ประสบการณ์', 'nav_skills': 'ทักษะ', 'nav_portfolio': 'ผลงาน', 'nav_collaboration': 'ความร่วมมือ', 'nav_contact': 'ติดต่อ',
 	'nav_about_mobile': 'เกี่ยวกับ', 'nav_experience_mobile': 'ประสบการณ์', 'nav_skills_mobile': 'ทักษะ', 'nav_portfolio_mobile': 'ผลงาน', 'nav_collaboration_mobile': 'ความร่วมมือ', 'nav_contact_mobile': 'ติดต่อ',
 	'hero_name': 'พันธมิตรเชิงกลยุทธ์ในด้านการศึกษา การดำเนินงาน และเทคโนโลยี',
+	'hero_subtitle_1': '| CEO, IVS JSC | ผู้เชี่ยวชาญด้าน AI & EdTech | ผู้นำการเปลี่ยนแปลงสู่ดิจิทัล |',
 	'hero_title': 'หุ้นส่วนด้านปฏิบัติการเชิงกลยุทธ์ & เทคโนโลยี | การเปลี่ยนแปลงดิจิทัล & การปรับปรุงประสิทธิภาพ',
 	'hero_subtitle': 'สถาปัตยกรรมเทคโนโลยี (Microservices, AI Adaptive Learning), การพัฒนาผลิตภัณฑ์ EdTech (R&D) และการกำกับดูแลการดำเนินงานหลายอุตสาหกรรม.',
 	'hero_cta': 'Website IVS Academy',

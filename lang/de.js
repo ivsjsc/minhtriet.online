@@ -3,6 +3,7 @@ window.translations_de = {
 	'nav_about': 'Über mich', 'nav_experience': 'Erfahrung', 'nav_skills': 'Fähigkeiten', 'nav_portfolio': 'Projekte', 'nav_collaboration': 'Zusammenarbeit', 'nav_contact': 'Kontakt',
  	'nav_about_mobile': 'Über', 'nav_experience_mobile': 'Erfahrung', 'nav_skills_mobile': 'Fähigkeiten', 'nav_portfolio_mobile': 'Projekte', 'nav_collaboration_mobile': 'Zusammenarbeit', 'nav_contact_mobile': 'Kontakt',
 	'hero_name': 'Strategischer Partner für Bildung, Betrieb & Technologie',
+	'hero_subtitle_1': '| CEO, IVS JSC | KI- und EdTech-Experte | Leiter der digitalen Transformation |',
 	'hero_title': 'Strategischer Betriebs- & Technologiepartner | Digitale Transformation & Performance-Optimierung',
 	'hero_subtitle': 'Technologiearchitektur (Microservices, KI adaptive Lernsysteme), EdTech-Produktentwicklung (F&E) & branchenübergreifende Betriebssteuerung.',
 	'hero_cta': 'Website IVS Academy',
