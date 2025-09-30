@@ -28,7 +28,7 @@ window.translations_th = {
 	'project6_title': 'Strive Streak', 'project6_desc': 'เว็บแอปสำหรับติดตามนิสัยและเพิ่มประสิทธิภาพการทำงาน (strivestreak.netlify.app).',
 	'project7_title': 'QLGX', 'project7_desc': 'แอปพลิเคชันสำหรับจัดการโบสถ์ มหาวิทยาลัย สมาชิกโบสถ์ ฯลฯ',
 	'project8_title': 'IVS StaySmart', 'project8_desc': 'แอปพลิเคชันจัดการที่พักเช่า รวมรายงานการอยู่อาศัย บิลห้อง ฯลฯ',
-	'project9_title': 'ศูนย์ประชุมและงานแต่งงาน Ban Hanh', 'project9_desc': 'เว็บไซต์ศูนย์จัดงานและงานแต่งงาน (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+	'project9_title': 'ศูนย์ประชุมและงานแต่งงาน', 'project9_desc': 'เว็บไซต์ศูนย์จัดงานและงานแต่งงาน (trungtamhoinghitieccuoi-banhanh.netlify.app).',
 	'project10_title': 'SuoiCamp', 'project10_desc': 'เว็บไซต์การท่องเที่ยวเชิงนิเวศน์ การตั้งแคมป์ ธรรมชาติ...',
 	'project11_title': 'KhaDock', 'project11_desc': 'เว็บไซต์ผู้รับเหมาก่อสร้างท่าเรือในฟลอริดา สหรัฐอเมริกา',
 	'project12_title': 'KhaHome', 'project12_desc': 'เว็บไซต์ผู้รับเหมาก่อสร้างภายใน ปรับปรุง บ้านอัพเกรดในฟลอริดา สหรัฐอเมริกา',

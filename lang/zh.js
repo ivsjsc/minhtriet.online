@@ -28,7 +28,7 @@ window.translations_zh = {
 	'project6_title': 'Strive Streak', 'project6_desc': '提高生产力与习惯追踪的网络应用 (strivestreak.netlify.app)。',
 	'project7_title': 'QLGX', 'project7_desc': '用于管理教堂、教区、教友等的应用程序。',
 	'project8_title': 'IVS StaySmart', 'project8_desc': '出租住宿管理应用程序，集成居住报告、房间账单等。',
-	'project9_title': 'Ban Hanh 会议与婚礼中心', 'project9_desc': '活动与婚礼中心网站 (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
+	'project9_title': '会议与婚礼中心', 'project9_desc': '活动与婚礼中心网站 (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
 	'project10_title': 'SuoiCamp', 'project10_desc': '生态旅游网站，露营，自然...',
 	'project11_title': 'KhaDock', 'project11_desc': '佛罗리다州，美国港口建设承包商网站',
 	'project12_title': 'KhaHome', 'project12_desc': '佛罗리다州，美国室内建设、翻新、房屋升级承包商网站',

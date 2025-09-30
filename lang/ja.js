@@ -28,7 +28,7 @@ window.translations_ja = {
 	'project6_title': 'Strive Streak', 'project6_desc': '生産性／習慣トラッキングのウェブアプリ (strivestreak.netlify.app)。',
 	'project7_title': 'QLGX', 'project7_desc': '教会、教区、信者などを管理するアプリケーション。',
 	'project8_title': 'IVS StaySmart', 'project8_desc': '賃貸住宅管理アプリケーション、居住報告、部屋料金請求書などを統合。',
-	'project9_title': 'Ban Hanh 会議・結婚式センター', 'project9_desc': 'イベント＆結婚式会場のサイト (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
+	'project9_title': '会議・結婚式センター', 'project9_desc': 'イベント＆結婚式会場のサイト (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
 	'project10_title': 'SuoiCamp', 'project10_desc': 'エコツーリズムウェブサイト、キャンプ、自然...',
 	'project11_title': 'KhaDock', 'project11_desc': 'フロリダ州、米国での港湾建設請負業者のウェブサイト',
 	'project12_title': 'KhaHome', 'project12_desc': 'フロリダ州、米国での内装建設、リノベーション、住宅アップグレード請負業者のウェブサイト',

@@ -28,7 +28,7 @@ window.translations_fr = {
 	'project6_title': 'Strive Streak', 'project6_desc': 'Application web de productivité et de suivi des habitudes (strivestreak.netlify.app).',
 	'project7_title': 'QLGX', 'project7_desc': 'Application pour gérer les églises, paroisses, paroissiens, etc.',
 	'project8_title': 'IVS StaySmart', 'project8_desc': 'Application de gestion de locations d\'hébergement, intégrée avec rapports de résidence, factures de chambre, etc.',
-	'project9_title': 'Centre de Conférences et Mariages Ban Hanh', 'project9_desc': 'Site de centre d\'événements et de mariages (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+	'project9_title': 'Centre de Conférences et Mariages', 'project9_desc': 'Site de centre d\'événements et de mariages (trungtamhoinghitieccuoi-banhanh.netlify.app).',
 	'project10_title': 'SuoiCamp', 'project10_desc': 'Site web d\'écotourisme, camping, nature...',
 	'project11_title': 'KhaDock', 'project11_desc': 'Site web de l\'entrepreneur en construction portuaire en Floride, États-Unis',
 	'project12_title': 'KhaHome', 'project12_desc': 'Site web de l\'entrepreneur en construction intérieure, rénovation, mise à niveau domiciliaire en Floride, États-Unis',
