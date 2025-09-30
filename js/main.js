@@ -165,31 +165,36 @@ function applyLanguage(lang) {
     window.currentLang = lang;
     localStorage.setItem('language', lang);
 
+    // Always point window.translations to the current language object
+    if (window.translations[lang]) {
+        window.translations = window.translations[lang];
+    }
+
     // Update all elements with data-lang-key
     document.querySelectorAll('[data-lang-key]').forEach(element => {
         const key = element.getAttribute('data-lang-key');
-        if (window.translations[lang] && window.translations[lang][key]) {
-            element.textContent = window.translations[lang][key];
+        if (window.translations && window.translations[key]) {
+            element.textContent = window.translations[key];
         }
     });
 
     // Update placeholders for inputs that use data-lang-key-placeholder
     document.querySelectorAll('[data-lang-key-placeholder]').forEach(el => {
         const phKey = el.getAttribute('data-lang-key-placeholder');
-        if (window.translations[lang] && window.translations[lang][phKey]) {
-            el.setAttribute('placeholder', window.translations[lang][phKey]);
+        if (window.translations && window.translations[phKey]) {
+            el.setAttribute('placeholder', window.translations[phKey]);
         }
     });
 
     // Update select options which use data-lang-key
     document.querySelectorAll('select option[data-lang-key]').forEach(opt => {
         const k = opt.getAttribute('data-lang-key');
-        if (window.translations[lang] && window.translations[lang][k]) opt.textContent = window.translations[lang][k];
+        if (window.translations && window.translations[k]) opt.textContent = window.translations[k];
     });
 
     // Update document title
-    if (window.translations[lang] && window.translations[lang]['page_title']) {
-        document.title = window.translations[lang]['page_title'];
+    if (window.translations && window.translations['page_title']) {
+        document.title = window.translations['page_title'];
     }
 
     // Update language button text with proper language name
