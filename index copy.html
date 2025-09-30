@@ -422,7 +422,7 @@
                     <div class="md:order-2 flex justify-center">
                         <div class="relative">
                             <!-- Avatar with Advanced Effects -->
-                            <div class="w-40 h-40 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm relative animate-float">
+                            <div class="w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm relative animate-float">
                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 animate-pulse-slow"></div>
                                 <!-- Professional avatar placeholder - replace with actual photo -->
                                 <picture>
@@ -808,10 +808,10 @@
 
                         const color = iconColors[idx % iconColors.length];
 
-                        const title = window.translations && window.translations[exp.titleKey] ? window.translations[exp.titleKey] : exp.titleKey;
-                        const company = window.translations && window.translations[exp.companyKey] ? window.translations[exp.companyKey] : exp.companyKey;
-                        const duration = window.translations && window.translations[exp.durationKey] ? window.translations[exp.durationKey] : exp.durationKey;
-                        const details = exp.detailsKeys.map(key => window.translations && window.translations[key] ? window.translations[key] : key);
+                        const title = window.translations ? window.translations[exp.titleKey] || exp.titleKey : exp.titleKey;
+                        const company = window.translations ? window.translations[exp.companyKey] || exp.companyKey : exp.companyKey;
+                        const duration = window.translations ? window.translations[exp.durationKey] || exp.durationKey : exp.durationKey;
+                        const details = exp.detailsKeys.map(key => window.translations ? window.translations[key] || key : key);
 
                         item.innerHTML = `
                             <div class="flex items-start space-x-4">
