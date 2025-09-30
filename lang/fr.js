@@ -64,5 +64,6 @@ window.translations_fr = {
 	'form_subject_placeholder': 'Choisir le sujet...', 'form_subject_business': 'Collaboration commerciale', 'form_subject_project': 'Proposition de projet', 'form_subject_speaking': 'Invitation de conférence', 'form_subject_other': 'Autre',
 	'contact_social_prompt': 'Connectez via les canaux sociaux :',
 	'footer_copyright': '© 2025 Nguyen Minh Triet. Tous droits réservés.',
-	'footer_credit': 'Interface conçue et construite par Intelligence Artificielle'
+    'skill_cat6_title': 'Partenariats / Relation client', 'skill_cat6_li1': 'Développement de partenariats stratégiques', 'skill_cat6_li2': 'Gestion du service client', 'skill_cat6_li3': 'Analyse des besoins des clients',
+    'footer_credit': 'Conçu par une collaboration entre IVS Celestech et l\'IA, construit avec ❤️ au Vietnam.',
 };

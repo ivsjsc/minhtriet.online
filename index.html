@@ -1215,79 +1215,93 @@
         <!-- Contact form submit handler moved to js/main.js for centralized logic -->
     </main>
 
+
     <!-- Footer - UPDATED SECTION (Hidden in print) -->
     <footer class="bg-gray-900 text-white py-12 no-print">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-8 mb-8">
-                <!-- Column 1: Brand & Description -->
+                <!-- Column 1: Brand & Description (md:col-span-2) -->
                 <div class="md:col-span-2">
                     <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 flex items-center">
                         <img src="/images/favicon.svg" alt="IVS Celestech Icon" class="h-8 w-8 mr-2"> IVS Celestech
                     </h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <p class="text-gray-400 leading-relaxed text-sm" data-lang-key="footer_description">
                         Strategic Operations & Technology Partner. Expert in digital transformation and performance optimization with a passion for creating breakthrough technology solutions and scalable capabilities.
                     </p>
                 </div>
 
                 <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="text-xl font-semibold text-blue-400 mb-4">Quick Links</h4>
+                    <!-- Thêm data-lang-key cho tiêu đề Quick Links -->
+                    <h4 class="text-xl font-semibold text-blue-400 mb-4" data-lang-key="footer_quick_links_title">Quick Links</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors footer-link">About</a></li>
-                        <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors footer-link">Experience</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors footer-link">Portfolio</a></li>
-                        <li><a href="#collaboration" class="text-gray-400 hover:text-white transition-colors footer-link">Collaboration</a></li>
+                        <!-- Thêm data-lang-key cho các liên kết nhanh -->
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_about">About</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_experience">Experience</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_skills">Skills</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_portfolio">Portfolio</a></li>
+                        <li><a href="#collaboration" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_collaboration">Collaboration</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Contact Info -->
+                <!-- Column 3: Contact Info (Đã tối ưu hóa) -->
                 <div>
-                    <h4 class="text-xl font-semibold text-blue-400 mb-4">Contact Info</h4>
+                    <!-- Thêm data-lang-key cho tiêu đề -->
+                    <h4 class="text-xl font-semibold text-blue-400 mb-4" data-lang-key="footer_contact_title">Contact Info</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
+                        <!-- 1. Email -->
                         <li class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <a href="mailto:n.bi2993@gmail.com" class="hover:text-white transition-colors">info@minhtriet.online</a>
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <!-- Thêm data-lang-key cho Email và sửa href -->
+                            <a href="mailto:info@minhtriet.online" class="hover:text-white transition-colors" data-lang-key="footer_contact_email">info@minhtriet.online</a>
                         </li>
+                        <!-- 2. Phone -->
                         <li class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <span>+84 89692 0547</span>
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <!-- Thêm data-lang-key cho Phone -->
+                            <a href="tel:+84896920547" class="hover:text-white transition-colors" data-lang-key="footer_contact_phone">+84 89692 0547</a>
                         </li>
+                        <!-- 3. Address (Mở bản đồ) -->
                         <li class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>Long Phuoc, Dong Nai Province, Vietnam. 76213</span>
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <!-- Đã kích hoạt liên kết Google Maps -->
+                            <a href="https://maps.google.com/?q=Long+Phuoc,+Dong+Nai,+Vietnam" target="_blank" class="hover:text-white transition-colors" data-lang-key="footer_contact_address">
+                                Long Phuoc, Dong Nai, Vietnam
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom Row: Copyright & Social -->
+            <!-- Bottom Row: Copyright & Social (Tối ưu khoảng cách) -->
             <div class="flex flex-col md:flex-row justify-between items-center pt-4">
-                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm mb-4 md:mb-0" data-lang-key="footer_copyright">
                     © 2025 Nguyen Minh Triet. All rights reserved.
                 </p>
-                <div class="flex items-center justify-center md:justify-start space-x-6 pt-4">
-                    <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-600 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
-                        </svg>
+                <!-- Social Icons -->
+                <div class="flex items-center justify-center md:justify-start space-x-4 sm:space-x-6 pt-4 md:pt-0">
+                    <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-blue-600 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
                     </a>
-                    <a href="https://github.com/ivsjsc" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-110">
+                    <a href="https://github.com/ivsjsc" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-110">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                        </svg>
+                            </svg>
                     </a>
-                    <a href="mailto:nminhtr29@gmail.com" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110">
+                    <a href="mailto:nminhtr29@gmail.com" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </a>
-                    <a href="https://m.me/ivsacademy.edu" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
+                    <a href="https://m.me/ivsacademy.edu" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5" fill="currentColor">
                             <path d="M224 0c124.3 0 224 100.8 224 224s-100.8 224-224 224c-28.7 0-56.1-5.7-81.5-16.1l-105.7 34.2c-1.9.6-3.8.9-5.7.9-2.9 0-5.8-.9-8.4-2.8-5.3-4-7-10.7-4.1-16.7l13.6-27.9c-29.4-44.4-46.7-97.1-46.7-152.6 0-124.3 100.8-224 224-224zm-48 152c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm96 0c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm-48 192c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40z"/>
                         </svg>
                     </a>
-                    <a href="https://zalo.me/nmt5555789" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
+                    <a href="https://zalo.me/nmt5555789" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-5 h-5" fill="currentColor">
                             <path d="M374.9 12.9C369.2 5 360.7 0 351.4 0H160C140.2 0 125 15.2 125 35V310.8c0 10.4-3.1 20.3-8.8 28.7l-47.5 73.1c-14.8 22.8-5.3 53.6 21 64.6c1.1.4 2.2.7 3.3 1c1.5.3 3.1.5 4.6.5c10.5 0 20.2-5.4 25.7-14.4L206 373.9c16.5 4.3 33.7 6.4 51.1 6.4H350c30.9 0 55.9-25.1 55.9-56V112c0-21.3-11.8-40.4-30.8-50.6l-13-7.5z"/>
                         </svg>
                     </a>
-                    <a href="https://x.com/nminhtr29" target="_blank" rel="noopener noreferrer" class="w-12 h-12 glass rounded-full flex items-center justify-center text-black hover:text-white hover:bg-black transition-all duration-300 transform hover:scale-110">
+                    <a href="https://x.com/nminhtr29" target="_blank" rel="noopener noreferrer" class="w-10 h-10 glass rounded-full flex items-center justify-center text-black hover:text-white hover:bg-black transition-all duration-300 transform hover:scale-110">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" class="w-5 h-5" fill="currentColor">
                             <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"/>
                         </svg>
@@ -1295,8 +1309,9 @@
                 </div>
             </div>
             
+            <!-- Footer Credit (Giữ nguyên) -->
             <p class="text-center text-gray-600 text-xs mt-4"></p>
-                <a href="https://ivsacademy.edu.vn/pages/webdesign" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors">Designed & Developed by AI & IVS Celestech.</a>
+                <a href="https://ivsacademy.edu.vn/pages/webdesign" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="footer_credit">Designed & Developed by AI & IVS Celestech.</a>
             </p>
         </div>
     </footer>
@@ -1353,85 +1368,6 @@
                                             <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                         </svg>
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-                    <script>
-                        // Modal wiring: populate from a small in-page project dataset and open on .portfolio-item click
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const projects = [
-                                { id: 4, title: "IVS ENG", categoryDisplay: "EdTech & R&D", description: `<p>Engineering / product showcase website for IVS with demos and technical notes.</p>`, link: "https://ivseng.netlify.app/" },
-                                { id: 2, title: "IELTS Station Center - Project Management", categoryDisplay: "Project Management", description: `<p><strong>Comprehensive Project Management for Infrastructure Development</strong></p><p>• <strong>Market Research & Analysis:</strong> Conducted thorough market analysis and feasibility studies for establishing IELTS Station Center in Long Thanh area.</p><p>• <strong>Construction Management:</strong> Oversaw infrastructure development, facility planning, and construction supervision from concept to completion.</p><p>• <strong>Operational Setup:</strong> Managed the transition from construction to operational readiness, including staff recruitment, system implementation, and pilot testing.</p><p>• <strong>Stakeholder Coordination:</strong> Led coordination with multiple stakeholders including contractors, local authorities, and educational partners.</p>`, link: "https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" },
-                                { id: 5, title: "Mandarin by IVS", categoryDisplay: "EdTech & R&D", description: `<p>Mandarin learning product focused on HSK communication and practical lessons.</p>`, link: "https://mandarinbyivs.netlify.app/" },
-                                { id: 6, title: "Strive Streak", categoryDisplay: "SaaS Product", description: `<p>Habit-building and productivity web app with gamification to keep learners motivated.</p>`, link: "https://strivestreak.netlify.app/" },
-                                { id: 7, title: "QLGX", categoryDisplay: "SaaS Product", description: `<p>Management and community platform designed for parish and local organizations.</p>`, link: "https://qlgx.netlify.app/" },
-                                { id: 8, title: "IVS StaySmart", categoryDisplay: "SaaS Product", description: `<p>Accommodation & property management microsite simplifying bookings and billing.</p>`, link: "https://ivs-staysmart.netlify.app/" },
-                                { id: 9, title: "Trung tâm Hội nghị - Tiệc cưới", categoryDisplay: "Website", description: `<p>Event & wedding center website showcasing venues, menus and booking details.</p>`, link: "https://trungtamhoinghitieccuoi-banhanh.netlify.app/" },
-                                { id: 10, title: "SuoiCamp", categoryDisplay: "Website", description: `<p>Camp & outdoor activities booking site, with activity listings and reservation flows.</p>`, link: "https://suoicamp.netlify.app/" },
-                                { id: 11, title: "KhaDock", categoryDisplay: "Website", description: `<p>Product showcase & e-commerce presence for marina construction services.</p>`, link: "https://khadock.com/" },
-                                { id: 12, title: "KhaHome", categoryDisplay: "Website", description: `<p>Home improvement & interior service showcase site for Florida market.</p>`, link: "https://khahome.com/" },
-                                { id: 13, title: "IVS Academy", categoryDisplay: "Website", description: `<p>IVS JSC ecosystem site: education, technology and workforce solutions.</p>`, link: "https://ivsacademy.edu.vn/" },
-                                { id: 14, title: "Luv Yoga", categoryDisplay: "Website", description: `<p>Yoga studio & therapy service site with class schedules and instructor profiles.</p>`, link: "https://luv-yoga.site/" },
-                                // Short placeholders for projects that exist in other parts of the page
-                                { id: 1, title: "Giáo trình K-12 (Mầm non tới THPT)", categoryDisplay: "EdTech & R&D", description: `<p>Biên soạn và phát triển nội dung học thuật K-12, tích hợp nền tảng số hóa.</p>`, link: "https://ivseng.netlify.app" },
-                                { id: 3, title: "Giáo trình Kỹ năng sống & Anh ngữ", categoryDisplay: "EdTech & R&D", description: `<p>IVSLifeMinds — giáo trình kỹ năng sống tích hợp Anh ngữ dành cho tiểu học.</p>`, link: "https://drive.google.com/file/d/1m8FOUEX-EzswlmLjWBupi0a_GqfSaLrF/view?usp=drive_link" }
-                            ];
-
-                            const modal = document.getElementById('project-modal');
-                            const modalContent = modal.querySelector('.modal-content');
-                            const modalTitle = document.getElementById('modal-title');
-                            const modalCategory = document.getElementById('modal-category');
-                            const modalDescription = document.getElementById('modal-description');
-                            const modalLink = document.getElementById('modal-link');
-                            const closeModalBtn = document.getElementById('modal-close-btn');
-
-                            function openModalForProject(titleText) {
-                                const project = projects.find(p => p.title.trim() === titleText.trim());
-                                if (!project) return;
-                                modalTitle.textContent = project.title;
-                                modalCategory.textContent = project.categoryDisplay || '';
-                                modalDescription.innerHTML = project.description || '';
-                                if (project.link && project.link !== '#') {
-                                    modalLink.href = project.link;
-                                    modalLink.style.display = 'inline-flex';
-                                } else {
-                                    modalLink.style.display = 'none';
-                                }
-                                // show
-                                modal.classList.remove('invisible', 'opacity-0');
-                                modalContent.classList.remove('-translate-y-10');
-                                document.body.style.overflow = 'hidden';
-                            }
-
-                            function closeModal() {
-                                modal.classList.add('invisible', 'opacity-0');
-                                modalContent.classList.add('-translate-y-10');
-                                document.body.style.overflow = 'auto';
-                            }
-
-                            // Attach click handlers to portfolio items
-                            document.querySelectorAll('.portfolio-item').forEach(item => {
-                                item.style.cursor = 'pointer';
-                                item.addEventListener('click', function (e) {
-                                    // ignore clicks on external links inside card
-                                    if (e.target.closest('a')) return;
-                                    const h3 = item.querySelector('h3');
-                                    const title = h3 ? h3.textContent : null;
-                                    if (title) openModalForProject(title);
-                                });
-                            });
-
-                            closeModalBtn.addEventListener('click', closeModal);
-                            modal.addEventListener('click', function (e) {
-                                if (e.target === modal) closeModal();
-                            });
-                            document.addEventListener('keydown', function (e) {
-                                if (e.key === 'Escape') closeModal();
-                            });
-                        });
-                    </script>
                 </div>
             </div>
         </div>

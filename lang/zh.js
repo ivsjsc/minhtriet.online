@@ -65,5 +65,6 @@ window.translations_zh = {
 	'form_subject_placeholder': '选择主题...', 'form_subject_business': '商务合作', 'form_subject_project': '项目建议', 'form_subject_speaking': '演讲邀请', 'form_subject_other': '其他',
 	'contact_social_prompt': '通过社交渠道联系：',
 	'footer_copyright': '© 2025 阮明哲。保留所有权利。',
-	'footer_credit': '界面由人工智能设计与构建'
+    'skill_cat6_title': '合作伙伴 / 客户关怀', 'skill_cat6_li1': '战略合作伙伴发展', 'skill_cat6_li2': '客户关怀管理', 'skill_cat6_li3': '客户需求分析',
+    'footer_credit': '由 IVS Celestech 和 AI 合作设计，在越南用心 ❤️ 打造。',
 };

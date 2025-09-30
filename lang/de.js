@@ -1,7 +1,8 @@
-window.translations_de = {
+// de.ts
+export const translations_de: Record<string, string> = {
 	'page_title': 'Nguyen Minh Triet - Technologiechef & KI-Experte',
 	'nav_about': 'Über mich', 'nav_experience': 'Erfahrung', 'nav_skills': 'Fähigkeiten', 'nav_portfolio': 'Projekte', 'nav_collaboration': 'Zusammenarbeit', 'nav_contact': 'Kontakt',
- 	'nav_about_mobile': 'Über', 'nav_experience_mobile': 'Erfahrung', 'nav_skills_mobile': 'Fähigkeiten', 'nav_portfolio_mobile': 'Projekte', 'nav_collaboration_mobile': 'Zusammenarbeit', 'nav_contact_mobile': 'Kontakt',
+	'nav_about_mobile': 'Über', 'nav_experience_mobile': 'Erfahrung', 'nav_skills_mobile': 'Fähigkeiten', 'nav_portfolio_mobile': 'Projekte', 'nav_collaboration_mobile': 'Zusammenarbeit', 'nav_contact_mobile': 'Kontakt',
 	'hero_name': 'Strategischer Partner für Bildung, Betrieb & Technologie',
 	'hero_subtitle_1': '| CEO, IVS JSC | KI- und EdTech-Experte | Leiter der digitalen Transformation |',
 	'hero_title': 'Strategischer Betriebs- & Technologiepartner | Digitale Transformation & Performance-Optimierung',
@@ -50,16 +51,16 @@ window.translations_de = {
 	'skill_cat4_title': 'KI & Automatisierung', 'skill_cat4_li1': 'KI-Integration (Adaptive Learning)', 'skill_cat4_li2': 'RPA (Robotergesteuerte Prozessautomation)', 'skill_cat4_li3': 'Digitale Transformation',
 	'skill_cat5_title': 'Bildung & Produkte', 'skill_cat5_li1': 'Curriculum-Entwicklung (K-12, STEAM)', 'skill_cat5_li2': 'LMS/ERP/CRM-Implementierung', 'skill_cat5_li3': 'EdTech-Marktanalyse',
 	'skill_cat6_title': 'Partnerschaften / Kundenbetreuung',
-    'skill_cat6_li1': 'Strategische Partnerschaftsentwicklung', 
-    'skill_cat6_li2': 'Kundenbetreuungsmanagement',
-    'skill_cat6_li3': 'Analyse der Kundenbedürfnisse',
+	'skill_cat6_li1': 'Strategische Partnerschaftsentwicklung', 
+	'skill_cat6_li2': 'Kundenbetreuungsmanagement',
+	'skill_cat6_li3': 'Analyse der Kundenbedürfnisse',
 	'collaboration_title': 'Offen für Zusammenarbeit',
 	'collaboration_p1': 'Ich suche Möglichkeiten, meine Erfahrung und Expertise in visionären Unternehmen einzubringen. Ich bin offen, über folgende Rollen zu sprechen:',
 	'collaboration_role1_title': 'Strategische Position (Vollzeit/Teilzeit)', 'collaboration_role1_desc': 'Übernahme von Führungspositionen zur Steuerung und Optimierung von Betrieben, Leitung der digitalen Transformation und Produktentwicklung.',
 	'collaboration_role2_title': 'Strategischer Partner / Berater', 'collaboration_role2_desc': 'Beratung zu Technologie, Governance, Systemarchitektur und EdTech-Produktstrategie, um Unternehmen zu nachhaltigem Wachstum zu verhelfen.',
 	'collaboration_role3_title': 'Geschäftswebsites und -anwendungen', 'collaboration_role3_desc': 'Entwickeln Sie Geschäftswebsites und -anwendungen, optimieren Sie die Benutzererfahrung und richten Sie sich insbesondere an die Prioritätsbedürfnisse des Unternehmens aus.',
-    'collaboration_role4_title': 'Technologieausrüstung', 'collaboration_role4_desc': 'Beraten, vorstellen oder liefern Sie Technologieausrüstung, die für Geschäftsbedürfnisse geeignet ist.',
-    'collaboration_cta': 'Jetzt verbinden',
+	'collaboration_role4_title': 'Technologieausrüstung', 'collaboration_role4_desc': 'Beraten, vorstellen oder liefern Sie Technologieausrüstung, die für Geschäftsbedürfnisse geeignet ist.',
+	'collaboration_cta': 'Jetzt verbinden',
 	'contact_title': 'Kontakt & Austausch',
 	'contact_info_title': 'Kontaktinformation',
 	'contact_form_title': 'Nachricht senden',
@@ -67,6 +68,6 @@ window.translations_de = {
 	'form_sending': 'Wird gesendet...', 'form_success': 'Ihre Nachricht wurde gesendet!', 'form_error': 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
 	'form_subject_placeholder': 'Betreff auswählen...', 'form_subject_business': 'Geschäftliche Zusammenarbeit', 'form_subject_project': 'Projektvorschlag', 'form_subject_speaking': 'Vortragsanfrage', 'form_subject_other': 'Andere',
 	'contact_social_prompt': 'Verbinden Sie sich über soziale Kanäle:',
-	'footer_copyright': '© 2025 Nguyen Minh Triet. Alle Rechte vorbehalten.',
+	'footer_credit': 'Designed by a collaboration between IVS Celestech and AI, built with ❤️ in Vietnam.',
 	'footer_credit': 'Schnittstelle entworfen und gebaut von Künstlicher Intelligenz'
 };

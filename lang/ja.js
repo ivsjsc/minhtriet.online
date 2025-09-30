@@ -65,5 +65,6 @@ window.translations_ja = {
 	'form_subject_placeholder': '件名を選択...', 'form_subject_business': 'ビジネス協業', 'form_subject_project': 'プロジェクト提案', 'form_subject_speaking': '講演依頼', 'form_subject_other': 'その他',
 	'contact_social_prompt': 'ソーシャルチャネルを通じて接続：',
 	'footer_copyright': '© 2025 Nguyen Minh Triet. All Rights Reserved.',
-	'footer_credit': 'インターフェースは人工知能によってデザインおよび構築されました'
+    'skill_cat6_title': 'パートナーシップ / カスタマーケア', 'skill_cat6_li1': '戦略的パートナーシップ開発', 'skill_cat6_li2': 'カスタマーケア管理', 'skill_cat6_li3': '顧客ニーズ分析',
+    'footer_credit': 'IVS Celestech と AI のコラボレーションによって設計され、ベトナムで ❤️ を込めて構築されました。',
 };

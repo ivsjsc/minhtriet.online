@@ -65,5 +65,6 @@ window.translations_th = {
 	'form_subject_placeholder': 'เลือกหัวข้อ...', 'form_subject_business': 'ความร่วมมือทางธุรกิจ', 'form_subject_project': 'ข้อเสนอโปรเจค', 'form_subject_speaking': 'เชิญบรรยาย', 'form_subject_other': 'อื่น ๆ',
 	'contact_social_prompt': 'เชื่อมต่อผ่านช่องทางโซเชียล:',
 	'footer_copyright': '© 2025 Nguyen Minh Triet. All Rights Reserved.',
-	'footer_credit': 'ส่วนต่อประสานออกแบบและสร้างโดยปัญญาประดิษฐ์'
+    'skill_cat6_title': 'ความร่วมมือ / การดูแลลูกค้า', 'skill_cat6_li1': 'การพัฒนาพันธมิตรเชิงกลยุทธ์', 'skill_cat6_li2': 'การจัดการการดูแลลูกค้า', 'skill_cat6_li3': 'การวิเคราะห์ความต้องการของลูกค้า',
+    'footer_credit': 'ออกแบบโดยความร่วมมือระหว่าง IVS Celestech และ AI สร้างด้วย ❤️ ในเวียดนาม',
 };
