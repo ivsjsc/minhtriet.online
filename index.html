@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="page_title">Nguyễn Minh Triết - Chuyên gia Chuyển đổi số & Tối ưu Hiệu suất</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nguyễn Minh Triết - CEO IVS JSC, Chuyên gia AI & EdTech, Kiến trúc sư Microservices. Strategic Operations & Technology Partner.">
+    <meta name="keywords" content="CEO, AI Expert, EdTech, Microservices, Digital Transformation, Vietnam, Technology Leader, IVS JSC">
+    <meta name="author" content="Nguyen Minh Triet">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://minhtriet.online">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minhtriet.online">
+    <meta property="og:title" content="Nguyễn Minh Triết - Technology Leader & AI Expert">
+    <meta property="og:description" content="CEO IVS JSC, chuyên gia chuyển đổi số và tối ưu hiệu suất. Kiến trúc Microservices & AI Adaptive Learning.">
+    <meta property="og:image" content="https://minhtriet.online/images/og-image.webp">
+    <meta property="og:image:alt" content="Nguyễn Minh Triết - Professional Profile">
+    <meta property="og:site_name" content="MinhTriet.online">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://minhtriet.online">
+    <meta name="twitter:title" content="Nguyễn Minh Triết - Technology Leader">
+    <meta name="twitter:description" content="CEO IVS JSC, AI & EdTech Expert">
+    <meta name="twitter:image" content="https://minhtriet.online/images/og-image.webp">
+    <meta name="twitter:image:alt" content="Nguyễn Minh Triết - Professional Profile">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <script>
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'sans': ['Inter', 'sans-serif'],
+                            'mono': ['JetBrains Mono', 'monospace']
+                        },
+                        animation: {
+                            'float': 'float 6s ease-in-out infinite',
+                            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                            'gradient': 'gradient 8s ease infinite',
+                            'blob': 'blob 7s infinite',
+                            'glow': 'glow 2s ease-in-out infinite alternate'
+                        },
+                        keyframes: {
+                            float: {
+                                '0%, 100%': { transform: 'translateY(0px)' },
+                                '50%': { transform: 'translateY(-20px)' }
+                            },
+                            gradient: {
+                                '0%, 100%': { backgroundPosition: '0% 50%' },
+                                '50%': { backgroundPosition: '100% 50%' }
+                            },
+                            blob: {
+                                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                                '100%': { transform: 'translate(0px, 0px) scale(1)' }
+                            },
+                            glow: {
+                                from: { boxShadow: '0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6' },
+                                to: { boxShadow: '0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6' }
+                            }
+                        }
+                    }
+                }
+            };
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        .glass-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Deferred Scripts -->
+    <script src="./js/main.js" defer></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        /* Glassmorphism Effects */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            border-radius: 3px;
+        }
+        
+        /* Advanced Animations */
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 1rem;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(31, 38, 135, 0.5);
+        }
+        /* Timeline Enhancements */
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+            padding-left: 3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+            border-radius: 2px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border: 3px solid white;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover::after {
+            transform: scale(1.2);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+        }
+        
+        /* Particle Background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        /* Fade In Animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating Action Button */
+        #toTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 99;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border: none;
+            border-radius: 50%;
+            width: 3.5rem;
+            height: 3.5rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        #toTopBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(59, 130, 246, 0.6);
+        }
+        
+        /* Language Switcher */
+        .lang-switcher { position: relative; display: inline-block; }
+        #lang-button {
+          background: #0078d4; color: #fff; border: none; padding: 8px 12px;
+          border-radius: 4px; cursor: pointer; font-weight: bold;
+        }
+        #language-menu {
+          display: none; position: absolute; top: 100%; right: 0;
+          background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          border-radius: 4px; margin-top: 4px; list-style: none;
+          padding: 0; overflow: hidden; z-index: 1000;
+        }
+        #language-menu.active { display: block; }
+        #language-menu li {
+          padding: 8px 12px; cursor: pointer; white-space: nowrap;
+        }
+        #language-menu li:hover {
+          background: #f0f0f0;
+        }
+        
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                margin: 0.5rem 0;
+            }
+            
+            .timeline-item {
+                padding-left: 2rem;
+            }
+            
+            .timeline-item::before {
+                left: 0.7rem;
+            }
+            
+            .timeline-item::after {
+                left: 0.3rem;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-spinner {
+            width: 4rem;
+            height: 4rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-gray-700 relative">
+
+    <!-- Loading Screen -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="text-center">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-white font-medium">Loading Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Header -->
+    <header id="header" class="glass sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent tracking-wider hover:scale-105 transition-transform">
+                MinhTriet.online
+            </a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_about"></a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_experience"></a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_skills"></a>
+                    <a href="#portfolio" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_portfolio"></a>
+                    <a href="#collaboration" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_collaboration"></a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_contact"></a>
+                </nav>
+                <!-- Language Switcher -->
+                                <div class="lang-switcher">
+                                    <button id="lang-button">English ▼</button>
+                                    <ul id="language-menu">
+                                        <li data-lang="de">Deutsch</li>
+                                        <li data-lang="en">English</li>
+                                        <li data-lang="es">Español</li>
+                                        <li data-lang="fr">Français</li>
+                                        <li data-lang="ja">日本語</li>
+                                        <li data-lang="ko">한국어</li>
+                                        <li data-lang="th">ไทย</li>
+                                        <li data-lang="vi">Tiếng Việt</li>
+                                        <li data-lang="zh">中文</li>
+                                    </ul>
+                                </div>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden glass p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 glass-card mx-4 mb-4 rounded-lg">
+            <a href="#about" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_about_mobile"></a>
+            <a href="#experience" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_experience_mobile"></a>
+            <a href="#skills" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_skills_mobile"></a>
+            <a href="#portfolio" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_portfolio_mobile"></a>
+            <a href="#collaboration" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_collaboration_mobile"></a>
+            <a href="#contact" class="block py-3 text-gray-600 hover:text-blue-600 transition" data-lang-key="nav_contact_mobile"></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Particle Background -->
+            <div id="particles-js" class="absolute inset-0"></div>
+            
+            <!-- Animated Background Blobs -->
+            <div class="absolute inset-0">
+                <div class="absolute top-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+                <div class="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-20 left-40 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 py-20 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2 flex justify-center">
+                        <div class="relative">
+                            <!-- Avatar with Advanced Effects -->
+                            <div class="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/30 backdrop-blur-sm relative animate-float">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 animate-pulse-slow"></div>
+                                <!-- Professional avatar placeholder - replace with actual photo -->
+                                <picture>
+                                    <source srcset="./images/avatar.webp" type="image/webp">
+                                    <img src="./images/avatar.png" alt="Ảnh đại diện Nguyễn Minh Triết" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                                </picture>
+                                <!-- Floating Icons -->
+                                <div class="absolute -top-4 -right-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white animate-pulse">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white animate-bounce">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left md:order-1 space-y-6">
+                        <div class="space-y-2">
+                            <p class="text-lg text-blue-600 font-medium uppercase tracking-wide">Strategic Technology Leader</p>
+                            <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-4" data-lang-key="hero_name">
+                                <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+                                    NGUYỄN MINH TRIẾT
+                                </span>
+                            </h1>
+                            <div class="text-xl md:text-2xl font-semibold text-gray-700 min-h-[3rem]">
+                                <span id="typed-text"></span>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto md:mx-0" data-lang-key="hero_subtitle">
+                            Kiến trúc Công nghệ (Microservices, AI Adaptive Learning), Phát triển Sản phẩm EdTech (R&D) & Quản trị Vận hành Đa ngành.
+                        </p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#collaboration" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 shadow-lg hover:shadow-2xl">
+                                <span class="relative z-10" data-lang-key="hero_cta">Cơ hội Hợp tác</span>
+                                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                            <a href="#contact" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-600 transition-all duration-300 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white border-2 border-blue-200 hover:border-blue-300 transform hover:scale-105 shadow-lg">
+                                <span data-lang-key="hero_contact">Liên Hệ Ngay</span>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:rotate-45 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </a>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="flex items-center justify-center md:justify-start space-x-6 pt-4">
+                            <a href="https://linkedin.com/in/minhtriet" class="w-12 h-12 glass rounded-full flex items-center justify-center text-blue-600 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                            </svg>
+                            </a>
+                            <a href="https://github.com/minhtriet" class="w-12 h-12 glass rounded-full flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-110">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            </a>
+                            <a href="mailto:contact@minhtriet.online" class="w-12 h-12 glass rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                    </div>
+                    <p class="text-white/70 text-sm mt-2 font-medium" data-lang-key="scroll_indicator">Scroll to explore</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="about_title">Về Tôi</h2>
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="glass-card rounded-2xl p-8">
+                            <div class="space-y-6">
+                                <p class="text-lg text-gray-600 leading-relaxed" data-lang-key="about_p1">
+                                    Tôi là người kết nối hiệu quả giữa quản trị chiến lược và công nghệ đột phá. Với kinh nghiệm điều hành và phát triển dự án đa ngành, tôi am hiểu sâu sắc về cách thức vận hành và thúc đẩy tăng trưởng bền vững.
+                                </p>
+                                <p class="text-lg text-gray-600 leading-relaxed" data-lang-key="about_p2">
+                                    Tôi chuyên tư vấn và triển khai các giải pháp AI cùng tự động hóa, nhằm nâng cao hiệu suất, tạo ra sản phẩm scalable và xây dựng lợi thế cạnh tranh cốt lõi. Tôi luôn tìm kiếm cơ hội hợp tác để trực tiếp đóng góp vào sự phát triển lâu dài của các doanh nghiệp có tầm nhìn chiến lược.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Stats -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="glass-card rounded-xl p-6 text-center group hover:scale-105 transition-transform">
+                                <div class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">5+</div>
+                                <div class="text-gray-600 font-medium" data-lang-key="stat_years_experience_label">Years Experience</div>
+                            </div>
+                            <div class="glass-card rounded-xl p-6 text-center group hover:scale-105 transition-transform">
+                                <div class="text-4xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-2">50+</div>
+                                <div class="text-gray-600 font-medium" data-lang-key="stat_projects_completed_label">Projects Completed</div>
+                            </div>
+                            <div class="glass-card rounded-xl p-6 text-center group hover:scale-105 transition-transform">
+                                <div class="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">34%</div>
+                                <div class="text-gray-600 font-medium" data-lang-key="stat_revenue_growth_label">Revenue Growth</div>
+                            </div>
+                            <div class="glass-card rounded-xl p-6 text-center group hover:scale-105 transition-transform">
+                                <div class="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-2">99%</div>
+                                <div class="text-gray-600 font-medium" data-lang-key="stat_client_satisfaction_label">Client Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-50/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="portfolio_title"></h2>
+                <div class="max-w-6xl mx-auto">
+                    <!-- Filter Tabs -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <button class="filter-btn active px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="all" data-lang-key="filter_all">All Projects</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="edtech" data-lang-key="filter_edtech">EdTech</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="saas" data-lang-key="filter_saas">SaaS Platform</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="ai" data-lang-key="filter_ai">AI Solutions</button>
+                    </div>
+                    
+                    <!-- Project Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">                        
+                        <!-- Project 4: IVS ENG -->
+                        <div class="portfolio-item edtech" data-category="edtech">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project4_title">IVS ENG</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project4_desc">Engineering / product showcase website for IVS (ivseng.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Web</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivseng.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2: IELTS Station -->
+                        <div class="portfolio-item edtech" data-category="edtech">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project2_title">IELTS Station Center</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project2_desc">Modern English learning center with comprehensive IELTS preparation programs.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Management</span>
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">IELTS</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition">View Details</a>
+                                    <div class="flex space-x-2">
+                                        <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+
+                        <!-- Project 5: Mandarin by IVS -->
+                        <div class="portfolio-item edtech" data-category="edtech">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project5_title">Mandarin by IVS</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project5_desc">Mandarin language learning site developed by IVS (mandarinbyivs.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">EdTech</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://mandarinbyivs.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Strive Streak -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project6_title">Strive Streak</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project6_desc">Productivity / habit-tracking web application (strivestreak.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">SaaS</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://strivestreak.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: QLGX -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project7_title">QLGX</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project7_desc">Management / logistics platform (qlgx.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Management</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://qlgx.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: IVS StaySmart -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project8_title">IVS StaySmart</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project8_desc">Accommodation booking / management microsite (ivs-staysmart.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Hospitality</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivs-staysmart.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi Ban Hanh -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project9_title">Trung tâm Hội nghị - Tiệc cưới Ban Hanh</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project9_desc">Event & wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://trungtamhoinghitieccuoi-banhanh.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 10: SuoiCamp -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project10_title">SuoiCamp</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project10_desc">Camp & outdoor activities site (suoicamp.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://suoicamp.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 11: KhaDock -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project11_title">KhaDock</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project11_desc">E-commerce / product showcase for KhaDock (khadock.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">E-commerce</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khadock.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 12: KhaHome -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-500 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project12_title">KhaHome</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project12_desc">Home decor / interior showcase site (khahome.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Home</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khahome.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 13: IVS Academy -->
+                        <div class="portfolio-item edtech" data-category="edtech">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-600 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project13_title">IVS Academy</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project13_desc">Educational academy website for IVS Academy (ivsacademy.edu.vn).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivsacademy.edu.vn/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 14: Luv Yoga -->
+                        <div class="portfolio-item saas" data-category="saas">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project14_title">Luv Yoga</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project14_desc">Yoga studio website (luv-yoga.site).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Wellness</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://luv-yoga.site/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="experience_title">Hành Trình Sự Nghiệp</h2>
+                <div class="max-w-5xl mx-auto">
+                    <div id="timeline-container" class="timeline relative space-y-6">
+                        <!-- Timeline items will be rendered here by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Experience data provided by the user
+                const experienceData = [
+                    {
+                        title: "Tổng Giám đốc (CEO)",
+                        company: "IVS JSC (Công ty Cổ phần Dịch vụ Thương mại Integrate Vision Synergy)",
+                        duration: "2024 - Hiện tại",
+                        details: [
+                            "Lãnh đạo Chiến lược & Vận hành: Định hình tầm nhìn, chiến lược tăng trưởng, và chịu trách nhiệm toàn bộ về P&L (Profit and Loss). Tối ưu hóa vận hành thông qua số hóa và tự động hóa quy trình (RPA).",
+                            "Kiến trúc Hệ thống Công nghệ: Trực tiếp thiết kế và phát triển các giải pháp phần mềm theo kiến trúc Microservices và phương pháp Code-First, đảm bảo tính khả năng mở rộng (Scalability) và khả năng tích hợp API không giới hạn (ERP/CRM/LMS).",
+                            "Thành tựu & Phát triển Sản phẩm EdTech & AI:",
+                            "  - Tích hợp AI & Adaptive Learning: Nghiên cứu và áp dụng các giải pháp Trí tuệ Nhân tạo (AI) để tối ưu hóa trải nghiệm học tập cá nhân hóa (Adaptive Learning) và tự động hóa quy trình quản lý học viên.",
+                            "  - Giáo trình Biên soạn:",
+                            "    • Giáo trình K-12 (Mầm non tới THPT): Tham gia biên soạn và phát triển nội dung học thuật cho toàn bộ cấp độ K-12, tích hợp nền tảng số hóa (Tham khảo qua ivseng.netlify.app).",
+                            "    • Giáo trình cho trẻ Mầm non: Phát triển STEAM + Intelligence, kết hợp các hoạt động STEAM phù hợp với 9 loại hình trí thông minh của trẻ.",
+                            "    • Giáo trình Kỹ năng sống & Anh ngữ: Biên soạn IVSLifeMinds, giáo trình kỹ năng sống kết hợp Anh ngữ chuyên biệt cho Học sinh Tiểu học."
+                        ]
+                    },
+                    {
+                        title: "Trưởng Phòng Liên Kết & Phát Triển Dự Án",
+                        company: "Công ty CP Giáo dục Quốc tế AMG, Đồng Nai",
+                        duration: "2022 - 2024",
+                        details: [
+                            "Đạt mức tăng trưởng doanh thu ấn tượng 34% trong năm đầu, vượt chỉ tiêu kinh doanh liên tục.",
+                            "Chủ nhiệm dự án xây dựng IELTS Station tại Long Thành, chịu trách nhiệm toàn diện từ khâu nghiên cứu thị trường, lập kế hoạch tài chính đến vận hành thử nghiệm trung tâm ngoại ngữ.",
+                            "Quản lý Giáo dục: Liên kết được với gần 50 trường học từ Mầm non tới THPT trên địa bàn huyện Long Thành cũ, mở rộng mạng lưới đối tác giáo dục và điều hành các chương trình hợp tác."
+                        ]
+                    },
+                    {
+                        title: "Quản lý Kế Hoạch (Sự kiện)",
+                        company: "TheGenZicon, Đồng Nai",
+                        duration: "2022 - 2022",
+                        details: [
+                            "Tổ chức thành công sự kiện thu hút hơn 300 sinh viên tham dự và 1500 khách mời đêm chung kết (theo Đài ĐN RTV đưa tin).",
+                            "Được nhận Bằng khen từ Huyện Đoàn Long Thành vì thành tích tổ chức xuất sắc."
+                        ]
+                    },
+                    {
+                        title: "Quản Lý Phát Triển Kinh Doanh & Sự Kiện",
+                        company: "Nhà Hàng Song Trang",
+                        duration: "2021 - 2022",
+                        details: [
+                            "Quản lý Hợp tác Du lịch: Thiết lập và duy trì quan hệ đối tác với hơn 15.000 lượt khách trong 3 tháng du lịch và kết nối với hơn 200 công ty du lịch, mở rộng mạng lưới khách hàng tổ chức.",
+                            "Quản trị Nhà hàng & Sự kiện: Đảm nhận vai trò Nhà thiết kế đồ họa (Graphic Design) và quản lý trang trí cho các sự kiện tiệc, lễ cưới, đảm bảo chất lượng thẩm mỹ và ngân sách."
+                        ]
+                    },
+                    {
+                        title: "Quản Lý Ưu Đãi",
+                        company: "The Grand Ho Tram Strip, HCMC (Bà Rịa Vũng Tàu)",
+                        duration: "2018 - 2018",
+                        details: [
+                            "Chăm sóc Khách hàng cao cấp: Quản lý tài khoản thành viên khách hàng và lên kế hoạch ưu đãi tri ân khách hàng thân thiết, đảm bảo dịch vụ khách hàng chất lượng cao (Hospitality)."
+                        ]
+                    },
+                    {
+                        title: "Tiếp Viên Hàng Không",
+                        company: "VietJet Air, Sân bay Phú Quốc",
+                        duration: "2017 - 2017",
+                        details: [
+                            "Thực hiện nghiêm ngặt các quy trình an toàn và khẩn cấp, được đào tạo chuyên sâu về sơ cấp cứu và quản lý tình huống áp lực cao.",
+                            "Dịch vụ Khách hàng Chất lượng cao: phục vụ hành khách chuyên nghiệp."
+                        ]
+                    }
+                ];
+
+                // Render timeline
+                (function renderExperience() {
+                    const container = document.getElementById('timeline-container');
+                    if (!container) return;
+                    container.innerHTML = '';
+
+                    experienceData.forEach((exp, idx) => {
+                        const item = document.createElement('div');
+                        item.className = 'timeline-item glass-card rounded-xl p-6 mb-8 transform hover:scale-105 transition-all duration-300';
+
+                        const iconColors = [
+                            'from-blue-500 to-purple-600',
+                            'from-green-500 to-teal-600',
+                            'from-purple-500 to-pink-600',
+                            'from-orange-500 to-red-600',
+                            'from-yellow-500 to-amber-600',
+                            'from-indigo-500 to-violet-600'
+                        ];
+
+                        const color = iconColors[idx % iconColors.length];
+
+                        item.innerHTML = `
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br ${color} rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                        <h3 class="text-xl font-bold text-gray-900">${exp.title}</h3>
+                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 mt-2 sm:mt-0">${exp.duration}</span>
+                                    </div>
+                                    <p class="font-semibold text-blue-600 mb-2">${exp.company}</p>
+                                    <ul class="list-none space-y-3 text-gray-600">${exp.details.map(d => `<li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>${d}</span></li>`).join('')}</ul>
+                                </div>
+                            </div>
+                        `;
+
+                        container.appendChild(item);
+                    });
+                })();
+            </script>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="skills_title">Năng Lực Chuyên Môn</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat1_title">Lãnh đạo & Quản trị</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat1_li1">Lãnh đạo cấp cao (CEO/CTO/COO)</li>
+                            <li data-lang-key="skill_cat1_li2">Hoạch định và Điều hành P&L</li>
+                            <li data-lang-key="skill_cat1_li3">Quản lý Dự án Phức tạp</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat2_title">Vận hành & Dịch vụ</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat2_li1">Quản trị vận hành (Nhà hàng/Du lịch)</li>
+                            <li data-lang-key="skill_cat2_li2">Điều hành Trung tâm Ngoại ngữ</li>
+                            <li data-lang-key="skill_cat2_li3">Kỹ năng CSKH cao cấp</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat3_title">Công nghệ & Hệ thống</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat3_li1">Kiến trúc Microservices (Code-First)</li>
+                            <li data-lang-key="skill_cat3_li2">Lập trình & Phát triển Web/Mobile</li>
+                            <li data-lang-key="skill_cat3_li3">Phát triển nền tảng SaaS</li>
+                            <li data-lang-key="skill_cat3_li4">Thiết kế CSDL doanh nghiệp</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat4_title">AI & Tự động hóa</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat4_li1">Tích hợp AI (Adaptive Learning)</li>
+                            <li data-lang-key="skill_cat4_li2">Tự động hóa quy trình (RPA)</li>
+                            <li data-lang-key="skill_cat4_li3">Chuyển đổi số</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                           <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat5_title">Giáo dục & Sản phẩm</h3>
+                        </div>
+                         <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat5_li1">Phát triển Giáo trình (K-12, STEAM)</li>
+                            <li data-lang-key="skill_cat5_li2">Triển khai LMS/ERP/CRM</li>
+                            <li data-lang-key="skill_cat5_li3">Phân tích thị trường EdTech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration Section -->
+        <section id="collaboration" class="py-20 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="collaboration_title">Mời Hợp Tác</h2>
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8" data-lang-key="collaboration_p1">
+                        Tôi đang tìm kiếm cơ hội để đóng góp kinh nghiệm và chuyên môn của mình vào sự phát triển của các doanh nghiệp có tầm nhìn. Tôi sẵn sàng thảo luận về các vai trò sau:
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8 text-left">
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role1_title">Vị trí Chiến lược (Full-time/Part-time)</h3>
+                            <p class="text-gray-600" data-lang-key="collaboration_role1_desc">Đảm nhận các vị trí quản lý cấp cao, trực tiếp điều hành và tối ưu hóa hoạt động, dẫn dắt quá trình chuyển đổi số và phát triển sản phẩm.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role2_title">Đối tác Chiến lược / Cố vấn</h3>
+                            <p class="text-gray-600" data-lang-key="collaboration_role2_desc">Tham gia với vai trò cố vấn về công nghệ, quản trị, kiến trúc hệ thống và chiến lược phát triển sản phẩm EdTech để giúp doanh nghiệp tăng trưởng bền vững.</p>
+                        </div>
+                    </div>
+                     <a href="#contact" class="mt-12 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 duration-300 shadow-lg" data-lang-key="collaboration_cta">
+                        Kết nối ngay
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 fade-in-section">
+             <div class="container mx-auto px-6">
+                <h2 class="section-title" data-lang-key="contact_title">Liên Hệ & Trao đổi</h2>
+                <div class="max-w-xl mx-auto card !p-8">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-gray-800" data-lang-key="contact_form_title">Gửi Lời Nhắn Cho Tôi</h3>
+                    <form id="contactForm" action="https://formspree.io/f/myznwkkn" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2" data-lang-key="form_name">Họ và Tên</label>
+                            <input type="text" id="name" name="name" required data-lang-key-placeholder="form_name_placeholder" placeholder="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2" data-lang-key="form_email">Email</label>
+                            <input type="email" id="email" name="email" required data-lang-key-placeholder="form_email_placeholder" placeholder="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2" data-lang-key="form_subject">Chủ đề</label>
+                            <select id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition">
+                                <option value="" data-lang-key="form_subject_placeholder">Chọn chủ đề...</option>
+                                <option value="business" data-lang-key="form_subject_business">Hợp tác kinh doanh</option>
+                                <option value="project" data-lang-key="form_subject_project">Đề xuất dự án</option>
+                                <option value="speaking" data-lang-key="form_subject_speaking">Mời diễn thuyết</option>
+                                <option value="other" data-lang-key="form_subject_other">Khác</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2" data-lang-key="form_message">Nội dung</label>
+                            <textarea id="message" name="message" rows="4" required data-lang-key-placeholder="form_message_placeholder" placeholder="" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 duration-300 shadow-lg" data-lang-key="form_submit">Gửi Tin Nhắn</button>
+                        </div>
+                    </form>
+
+                    <!-- Form status (hidden by default) -->
+                    <div id="formStatus" class="hidden mt-6 max-w-md mx-auto text-left">
+                        <div class="success-message hidden">
+                            <div class="flex items-start p-4 mb-2 text-green-800 rounded-lg bg-green-50">
+                                <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                <div class="ml-3 text-sm font-medium" data-lang-key="form_success">Tin nhắn đã được gửi thành công!</div>
+                            </div>
+                        </div>
+                        <div class="error-message hidden">
+                            <div class="flex items-start p-4 mb-2 text-red-800 rounded-lg bg-red-50">
+                                <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                <div class="ml-3 text-sm font-medium" data-lang-key="form_error">Đã có lỗi xảy ra. Vui lòng thử lại!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-600 mb-4" data-lang-key="contact_social_prompt">Hoặc kết nối qua các kênh khác:</p>
+                        <div class="flex items-center justify-center space-x-6">
+                           <a href="mailto:n.bi2993@gmail.com" class="text-gray-500 hover:text-blue-600 transition" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                           <a href="tel:0896920547" class="text-gray-500 hover:text-blue-600 transition" aria-label="Phone"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+                           <a href="https://linkedin.com/in/nguyenminhtriet" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600 transition" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white py-16 overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                        MinhTriet.online
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Strategic Operations & Technology Partner. Chuyên gia chuyển đổi số và tối ưu hiệu suất với đam mê tạo ra những giải pháp công nghệ đột phá.
+                    </p>
+                    <!-- Load external JS (deferred) -->
+                    <script src="./js/utils.js" defer></script>
+                    <script src="./js/main.js" defer></script>
+
+                    <!-- Project details modal (injected to enable click-to-open details while keeping theme) -->
+                    <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 invisible opacity-0 z-50">
+                        <div class="modal-content transform -translate-y-10 bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+                            <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center z-10">
+                                <h3 id="modal-title" class="text-2xl font-bold text-gray-900"></h3>
+                                <button id="modal-close-btn" class="text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+                            </div>
+                            <div class="p-6 sm:p-8">
+                                <p id="modal-category" class="text-sm font-semibold text-indigo-600 mb-4 uppercase"></p>
+                                <div id="modal-description" class="prose max-w-none text-gray-700"></div>
+                                <div class="mt-8">
+                                    <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Xem chi tiết
+                                        <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 001.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Modal wiring: populate from a small in-page project dataset and open on .portfolio-item click
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const projects = [
+                                { id: 4, title: "IVS ENG", categoryDisplay: "EdTech & R&D", description: `<p>Engineering / product showcase website for IVS with demos and technical notes.</p>`, link: "https://ivseng.netlify.app/" },
+                                { id: 2, title: "IELTS Station Center", categoryDisplay: "EdTech & R&D", description: `<p>Modern English learning center with comprehensive IELTS preparation programs.</p>`, link: "#" },
+                                { id: 5, title: "Mandarin by IVS", categoryDisplay: "EdTech & R&D", description: `<p>Mandarin learning product focused on HSK communication and practical lessons.</p>`, link: "https://mandarinbyivs.netlify.app/" },
+                                { id: 6, title: "Strive Streak", categoryDisplay: "Sản phẩm SaaS", description: `<p>Habit-building and productivity web app with gamification to keep learners motivated.</p>`, link: "https://strivestreak.netlify.app/" },
+                                { id: 7, title: "QLGX", categoryDisplay: "Sản phẩm SaaS", description: `<p>Management and community platform designed for parish and local organizations.</p>`, link: "https://qlgx.netlify.app/" },
+                                { id: 8, title: "IVS StaySmart", categoryDisplay: "Sản phẩm SaaS", description: `<p>Accommodation & property management microsite simplifying bookings and billing.</p>`, link: "https://ivs-staysmart.netlify.app/" },
+                                { id: 9, title: "Trung tâm Hội nghị - Tiệc cưới Ban Hanh", categoryDisplay: "Website", description: `<p>Event & wedding center website showcasing venues, menus and booking details.</p>`, link: "https://trungtamhoinghitieccuoi-banhanh.netlify.app/" },
+                                { id: 10, title: "SuoiCamp", categoryDisplay: "Website", description: `<p>Camp & outdoor activities booking site, with activity listings and reservation flows.</p>`, link: "https://suoicamp.netlify.app/" },
+                                { id: 11, title: "KhaDock", categoryDisplay: "Website", description: `<p>Product showcase & e-commerce presence for marina construction services.</p>`, link: "https://khadock.com/" },
+                                { id: 12, title: "KhaHome", categoryDisplay: "Website", description: `<p>Home improvement & interior service showcase site for Florida market.</p>`, link: "https://khahome.com/" },
+                                { id: 13, title: "IVS Academy", categoryDisplay: "Website", description: `<p>IVS JSC ecosystem site: education, technology and workforce solutions.</p>`, link: "https://ivsacademy.edu.vn/" },
+                                { id: 14, title: "Luv Yoga", categoryDisplay: "Website", description: `<p>Yoga studio & therapy service site with class schedules and instructor profiles.</p>`, link: "https://luv-yoga.site/" },
+                                // Short placeholders for projects that exist in other parts of the page
+                                { id: 1, title: "Giáo trình K-12 (Mầm non tới THPT)", categoryDisplay: "EdTech & R&D", description: `<p>Biên soạn và phát triển nội dung học thuật K-12, tích hợp nền tảng số hóa.</p>`, link: "https://ivseng.netlify.app" },
+                                { id: 3, title: "Giáo trình Kỹ năng sống & Anh ngữ", categoryDisplay: "EdTech & R&D", description: `<p>IVSLifeMinds — giáo trình kỹ năng sống tích hợp Anh ngữ dành cho tiểu học.</p>`, link: "https://drive.google.com/file/d/1m8FOUEX-EzswlmLjWBupi0a_GqfSaLrF/view?usp=drive_link" }
+                            ];
+
+                            const modal = document.getElementById('project-modal');
+                            const modalContent = modal.querySelector('.modal-content');
+                            const modalTitle = document.getElementById('modal-title');
+                            const modalCategory = document.getElementById('modal-category');
+                            const modalDescription = document.getElementById('modal-description');
+                            const modalLink = document.getElementById('modal-link');
+                            const closeModalBtn = document.getElementById('modal-close-btn');
+
+                            function openModalForProject(titleText) {
+                                const project = projects.find(p => p.title.trim() === titleText.trim());
+                                if (!project) return;
+                                modalTitle.textContent = project.title;
+                                modalCategory.textContent = project.categoryDisplay || '';
+                                modalDescription.innerHTML = project.description || '';
+                                if (project.link && project.link !== '#') {
+                                    modalLink.href = project.link;
+                                    modalLink.style.display = 'inline-flex';
+                                } else {
+                                    modalLink.style.display = 'none';
+                                }
+                                // show
+                                modal.classList.remove('invisible', 'opacity-0');
+                                modalContent.classList.remove('-translate-y-10');
+                                document.body.style.overflow = 'hidden';
+                            }
+
+                            function closeModal() {
+                                modal.classList.add('invisible', 'opacity-0');
+                                modalContent.classList.add('-translate-y-10');
+                                document.body.style.overflow = 'auto';
+                            }
+
+                            // Attach click handlers to portfolio items
+                            document.querySelectorAll('.portfolio-item').forEach(item => {
+                                item.style.cursor = 'pointer';
+                                item.addEventListener('click', function (e) {
+                                    // ignore clicks on external links inside card
+                                    if (e.target.closest('a')) return;
+                                    const h3 = item.querySelector('h3');
+                                    const title = h3 ? h3.textContent : null;
+                                    if (title) openModalForProject(title);
+                                });
+                            });
+
+                            closeModalBtn.addEventListener('click', closeModal);
+                            modal.addEventListener('click', function (e) {
+                                if (e.target === modal) closeModal();
+                            });
+                            document.addEventListener('keydown', function (e) {
+                                if (e.key === 'Escape') closeModal();
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
