@@ -25,7 +25,7 @@ window.translations_vi = {
     'project6_title': 'Strive Streak', 'project6_desc': 'Ứng dụng theo dõi thói quen và năng suất (strivestreak.netlify.app).',
     'project7_title': 'QLGX', 'project7_desc': 'Nền tảng quản lý và logistics (qlgx.netlify.app).',
     'project8_title': 'IVS StaySmart', 'project8_desc': 'Trang đặt phòng và quản lý chỗ ở (ivs-staysmart.netlify.app).',
-    'project9_title': 'Trung tâm Hội nghị - Tiệc cưới Ban Hanh', 'project9_desc': 'Website trung tâm hội nghị và tiệc cưới (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+    'project9_title': 'Trung tâm Hội nghị - Tiệc cưới', 'project9_desc': 'Website trung tâm hội nghị và tiệc cưới (trungtamhoinghitieccuoi-banhanh.netlify.app).',
     'project10_title': 'SuoiCamp', 'project10_desc': 'Trang trại / hoạt động trải nghiệm ngoài trời (suoicamp.netlify.app).',
     'project11_title': 'KhaDock', 'project11_desc': 'Cửa hàng trực tuyến / giới thiệu sản phẩm KhaDock (khadock.com).',
     'project12_title': 'KhaHome', 'project12_desc': 'Trang giới thiệu nội thất và trang trí nhà cửa (khahome.com).',

@@ -25,7 +25,7 @@ window.translations_ko = {
 	'project6_title': 'Strive Streak', 'project6_desc': '생산성 및 습관 추적 웹 애플리케이션 (strivestreak.netlify.app).',
 	'project7_title': 'QLGX', 'project7_desc': '관리 및 물류 플랫폼 (qlgx.netlify.app).',
 	'project8_title': 'IVS StaySmart', 'project8_desc': '숙박 예약 및 관리 마이크로사이트 (ivs-staysmart.netlify.app).',
-	'project9_title': 'Trung tâm Hội nghị - Tiệc cưới Ban Hanh', 'project9_desc': '이벤트 및 결혼식 센터 웹사이트 (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+	'project9_title': '회의 및 결혼식 센터', 'project9_desc': '이벤트 및 결혼식 센터 웹사이트 (trungtamhoinghitieccuoi-banhanh.netlify.app).',
 	'project10_title': 'SuoiCamp', 'project10_desc': '캠프 및 야외 활동 사이트 (suoicamp.netlify.app).',
 	'project11_title': 'KhaDock', 'project11_desc': 'KhaDock의 전자상거래/제품 소개 사이트 (khadock.com).',
 	'project12_title': 'KhaHome', 'project12_desc': '홈 데코 / 인테리어 소개 사이트 (khahome.com).',

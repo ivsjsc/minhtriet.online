@@ -29,7 +29,7 @@ window.translations_en = {
     'project6_title': 'Strive Streak', 'project6_desc': 'Productivity and habit-tracking web application (strivestreak.netlify.app).',
     'project7_title': 'QLGX', 'project7_desc': 'Management and logistics platform (qlgx.netlify.app).',
     'project8_title': 'IVS StaySmart', 'project8_desc': 'Accommodation booking and management microsite (ivs-staysmart.netlify.app).',
-    'project9_title': 'Trung tâm Hội nghị - Tiệc cưới Ban Hanh', 'project9_desc': 'Event and wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+    'project9_title': 'Ban Hanh Conference and Wedding Center', 'project9_desc': 'Event and wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).',
     'project10_title': 'SuoiCamp', 'project10_desc': 'Camp and outdoor activities site (suoicamp.netlify.app).',
     'project11_title': 'KhaDock', 'project11_desc': 'E-commerce and product showcase for KhaDock (khadock.com).',
     'project12_title': 'KhaHome', 'project12_desc': 'Home decor and interior showcase site (khahome.com).',

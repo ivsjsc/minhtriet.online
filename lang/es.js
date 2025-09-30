@@ -28,7 +28,7 @@ window.translations_es = {
 	'project6_title': 'Strive Streak', 'project6_desc': 'Aplicación web de productividad y seguimiento de hábitos (strivestreak.netlify.app).',
 	'project7_title': 'QLGX', 'project7_desc': 'Plataforma de gestión y logística (qlgx.netlify.app).',
 	'project8_title': 'IVS StaySmart', 'project8_desc': 'Micrositio para reserva y gestión de alojamientos (ivs-staysmart.netlify.app).',
-	'project9_title': 'Centro de conferencias y banquetes Ban Hanh', 'project9_desc': 'Sitio web de centro de eventos y bodas (trungtamhoinghitieccuoi-banhanh.netlify.app).',
+	'project9_title': 'Centro de conferencias y banquetes', 'project9_desc': 'Sitio web de centro de eventos y bodas (trungtamhoinghitieccuoi-banhanh.netlify.app).',
 	'project10_title': 'SuoiCamp', 'project10_desc': 'Sitio de campamentos y actividades al aire libre (suoicamp.netlify.app).',
 	'project11_title': 'KhaDock', 'project11_desc': 'E-commerce y vitrina de productos de KhaDock (khadock.com).',
 	'project12_title': 'KhaHome', 'project12_desc': 'Sitio de presentación de decoración e interiores (khahome.com).',

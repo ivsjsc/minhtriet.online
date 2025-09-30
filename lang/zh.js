@@ -25,7 +25,7 @@ window.translations_zh = {
 	'project6_title': 'Strive Streak', 'project6_desc': '提高生产力与习惯追踪的网络应用 (strivestreak.netlify.app)。',
 	'project7_title': 'QLGX', 'project7_desc': '管理与物流平台 (qlgx.netlify.app)。',
 	'project8_title': 'IVS StaySmart', 'project8_desc': '住宿预订与管理微站 (ivs-staysmart.netlify.app)。',
-	'project9_title': 'Trung tâm Hội nghị - Tiệc cưới Ban Hanh', 'project9_desc': '活动与婚礼中心网站 (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
+	'project9_title': '会议与婚礼中心', 'project9_desc': '活动与婚礼中心网站 (trungtamhoinghitieccuoi-banhanh.netlify.app)。',
 	'project10_title': 'SuoiCamp', 'project10_desc': '露营与户外活动网站 (suoicamp.netlify.app)。',
 	'project11_title': 'KhaDock', 'project11_desc': 'KhaDock 的电商 / 产品展示网站 (khadock.com)。',
 	'project12_title': 'KhaHome', 'project12_desc': '家居装饰与室内展示网站 (khahome.com)。',
