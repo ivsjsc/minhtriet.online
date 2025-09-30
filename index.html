@@ -544,10 +544,11 @@
                 <div class="max-w-6xl mx-auto">
                     <!-- Filter Tabs -->
                     <div class="flex flex-wrap justify-center gap-4 mb-12">
-                        <button class="filter-btn active px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="all" data-lang-key="filter_all">All Projects</button>
-                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="edtech" data-lang-key="filter_edtech">EdTech</button>
-                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="saas" data-lang-key="filter_saas">SaaS Platform</button>
-                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="ai" data-lang-key="filter_ai">AI Solutions</button>
+                        <button class="filter-btn active px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="all" data-lang-key="filter_all">Tất cả dự án</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="business" data-lang-key="filter_business">Bussiness Development</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="education" data-lang-key="filter_education">Education RRD</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="utility" data-lang-key="filter_utility">Utility Application</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="website" data-lang-key="filter_website">Websites</button>
                     </div>
                     
                     <!-- Project Grid -->
@@ -569,22 +570,22 @@
                             </div>
                         </div>
                         <!-- Project 2: IELTS Station -->
-                        <div class="portfolio-item edtech" data-category="edtech">
+                        <div class="portfolio-item saas" data-category="saas">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
                                     <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project2_title">IELTS Station Center</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project2_desc">Modern English learning center with comprehensive IELTS preparation programs.</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project2_title">IELTS Station Center - Project Management</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project2_desc">Comprehensive project management for infrastructure development: market research, construction management, facility planning and operational setup.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Management</span>
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">IELTS</span>
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Project Management</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Infrastructure</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Market Research</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition">View Details</a>
+                                    <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
                                     <div class="flex space-x-2">
                                         <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
@@ -1089,7 +1090,7 @@
                         document.addEventListener('DOMContentLoaded', function () {
                             const projects = [
                                 { id: 4, title: "IVS ENG", categoryDisplay: "EdTech & R&D", description: `<p>Engineering / product showcase website for IVS with demos and technical notes.</p>`, link: "https://ivseng.netlify.app/" },
-                                { id: 2, title: "IELTS Station Center", categoryDisplay: "EdTech & R&D", description: `<p>Modern English learning center with comprehensive IELTS preparation programs.</p>`, link: "#" },
+                                { id: 2, title: "IELTS Station Center - Project Management", categoryDisplay: "Project Management", description: `<p><strong>Comprehensive Project Management for Infrastructure Development</strong></p><p>• <strong>Market Research & Analysis:</strong> Conducted thorough market analysis and feasibility studies for establishing IELTS Station Center in Long Thanh area.</p><p>• <strong>Construction Management:</strong> Oversaw infrastructure development, facility planning, and construction supervision from concept to completion.</p><p>• <strong>Operational Setup:</strong> Managed the transition from construction to operational readiness, including staff recruitment, system implementation, and pilot testing.</p><p>• <strong>Stakeholder Coordination:</strong> Led coordination with multiple stakeholders including contractors, local authorities, and educational partners.</p>`, link: "https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" },
                                 { id: 5, title: "Mandarin by IVS", categoryDisplay: "EdTech & R&D", description: `<p>Mandarin learning product focused on HSK communication and practical lessons.</p>`, link: "https://mandarinbyivs.netlify.app/" },
                                 { id: 6, title: "Strive Streak", categoryDisplay: "Sản phẩm SaaS", description: `<p>Habit-building and productivity web app with gamification to keep learners motivated.</p>`, link: "https://strivestreak.netlify.app/" },
                                 { id: 7, title: "QLGX", categoryDisplay: "Sản phẩm SaaS", description: `<p>Management and community platform designed for parish and local organizations.</p>`, link: "https://qlgx.netlify.app/" },
