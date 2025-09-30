@@ -781,77 +781,22 @@
             </div>
 
             <script>
-                // Experience data provided by the user
-                const experienceData = [
-                    {
-                        title: "Tổng Giám đốc (CEO)",
-                        company: "IVS JSC (Công ty Cổ phần Dịch vụ Thương mại Integrate Vision Synergy)",
-                        duration: "2024 - Hiện tại",
-                        details: [
-                            "Lãnh đạo Chiến lược & Vận hành: Định hình tầm nhìn, chiến lược tăng trưởng, và chịu trách nhiệm toàn bộ về P&L (Profit and Loss). Tối ưu hóa vận hành thông qua số hóa và tự động hóa quy trình (RPA).",
-                            "Kiến trúc Hệ thống Công nghệ: Trực tiếp thiết kế và phát triển các giải pháp phần mềm theo kiến trúc Microservices và phương pháp Code-First, đảm bảo tính khả năng mở rộng (Scalability) và khả năng tích hợp API không giới hạn (ERP/CRM/LMS).",
-                            "Thành tựu & Phát triển Sản phẩm EdTech & AI:",
-                            "  - Tích hợp AI & Adaptive Learning: Nghiên cứu và áp dụng các giải pháp Trí tuệ Nhân tạo (AI) để tối ưu hóa trải nghiệm học tập cá nhân hóa (Adaptive Learning) và tự động hóa quy trình quản lý học viên.",
-                            "  - Giáo trình Biên soạn:",
-                            "    • Giáo trình K-12 (Mầm non tới THPT): Tham gia biên soạn và phát triển nội dung học thuật cho toàn bộ cấp độ K-12, tích hợp nền tảng số hóa (Tham khảo qua ivseng.netlify.app).",
-                            "    • Giáo trình cho trẻ Mầm non: Phát triển STEAM + Intelligence, kết hợp các hoạt động STEAM phù hợp với 9 loại hình trí thông minh của trẻ.",
-                            "    • Giáo trình Kỹ năng sống & Anh ngữ: Biên soạn IVSLifeMinds, giáo trình kỹ năng sống kết hợp Anh ngữ chuyên biệt cho Học sinh Tiểu học."
-                        ]
-                    },
-                    {
-                        title: "Trưởng Phòng Liên Kết & Phát Triển Dự Án",
-                        company: "Công ty CP Giáo dục Quốc tế AMG, Đồng Nai",
-                        duration: "2022 - 2024",
-                        details: [
-                            "Đạt mức tăng trưởng doanh thu ấn tượng 34% trong năm đầu, vượt chỉ tiêu kinh doanh liên tục.",
-                            "Chủ nhiệm dự án xây dựng IELTS Station tại Long Thành, chịu trách nhiệm toàn diện từ khâu nghiên cứu thị trường, lập kế hoạch tài chính đến vận hành thử nghiệm trung tâm ngoại ngữ.",
-                            "Quản lý Giáo dục: Liên kết được với gần 50 trường học từ Mầm non tới THPT trên địa bàn huyện Long Thành cũ, mở rộng mạng lưới đối tác giáo dục và điều hành các chương trình hợp tác."
-                        ]
-                    },
-                    {
-                        title: "Quản lý Kế Hoạch (Sự kiện)",
-                        company: "TheGenZicon, Đồng Nai",
-                        duration: "2022 - 2022",
-                        details: [
-                            "Tổ chức thành công sự kiện thu hút hơn 300 sinh viên tham dự và 1500 khách mời đêm chung kết (theo Đài ĐN RTV đưa tin).",
-                            "Được nhận Bằng khen từ Huyện Đoàn Long Thành vì thành tích tổ chức xuất sắc."
-                        ]
-                    },
-                    {
-                        title: "Quản Lý Phát Triển Kinh Doanh & Sự Kiện",
-                        company: "Nhà Hàng Song Trang",
-                        duration: "2021 - 2022",
-                        details: [
-                            "Quản lý Hợp tác Du lịch: Thiết lập và duy trì quan hệ đối tác với hơn 15.000 lượt khách trong 3 tháng du lịch và kết nối với hơn 200 công ty du lịch, mở rộng mạng lưới khách hàng tổ chức.",
-                            "Quản trị Nhà hàng & Sự kiện: Đảm nhận vai trò Nhà thiết kế đồ họa (Graphic Design) và quản lý trang trí cho các sự kiện tiệc, lễ cưới, đảm bảo chất lượng thẩm mỹ và ngân sách."
-                        ]
-                    },
-                    {
-                        title: "Quản Lý Ưu Đãi",
-                        company: "The Grand Ho Tram Strip, HCMC (Bà Rịa Vũng Tàu)",
-                        duration: "2018 - 2018",
-                        details: [
-                            "Chăm sóc Khách hàng cao cấp: Quản lý tài khoản thành viên khách hàng và lên kế hoạch ưu đãi tri ân khách hàng thân thiết, đảm bảo dịch vụ khách hàng chất lượng cao (Hospitality)."
-                        ]
-                    },
-                    {
-                        title: "Tiếp Viên Hàng Không",
-                        company: "VietJet Air, Sân bay Phú Quốc",
-                        duration: "2017 - 2017",
-                        details: [
-                            "Thực hiện nghiêm ngặt các quy trình an toàn và khẩn cấp, được đào tạo chuyên sâu về sơ cấp cứu và quản lý tình huống áp lực cao.",
-                            "Dịch vụ Khách hàng Chất lượng cao: phục vụ hành khách chuyên nghiệp."
-                        ]
-                    }
-                ];
-
-                // Render timeline
+                // Render timeline using translations
                 (function renderExperience() {
                     const container = document.getElementById('timeline-container');
                     if (!container) return;
                     container.innerHTML = '';
 
-                    experienceData.forEach((exp, idx) => {
+                    const experiences = [
+                        { titleKey: 'exp1_title', companyKey: 'exp1_company', durationKey: 'exp1_duration', detailsKeys: ['exp1_li1', 'exp1_li2', 'exp1_li3', 'exp1_li4', 'exp1_li5', 'exp1_li6'] },
+                        { titleKey: 'exp2_title', companyKey: 'exp2_company', durationKey: 'exp2_duration', detailsKeys: ['exp2_li1', 'exp2_li2', 'exp2_li3'] },
+                        { titleKey: 'exp3_title', companyKey: 'exp3_company', durationKey: 'exp3_duration', detailsKeys: ['exp3_li1', 'exp3_li2'] },
+                        { titleKey: 'exp4_title', companyKey: 'exp4_company', durationKey: 'exp4_duration', detailsKeys: ['exp4_li1', 'exp4_li2'] },
+                        { titleKey: 'exp5_title', companyKey: 'exp5_company', durationKey: 'exp5_duration', detailsKeys: ['exp5_li1'] },
+                        { titleKey: 'exp6_title', companyKey: 'exp6_company', durationKey: 'exp6_duration', detailsKeys: ['exp6_li1', 'exp6_li2'] }
+                    ];
+
+                    experiences.forEach((exp, idx) => {
                         const item = document.createElement('div');
                         item.className = 'timeline-item glass-card rounded-xl p-6 mb-8 transform hover:scale-105 transition-all duration-300';
 
@@ -866,6 +811,11 @@
 
                         const color = iconColors[idx % iconColors.length];
 
+                        const title = window.translations ? window.translations[exp.titleKey] || exp.titleKey : exp.titleKey;
+                        const company = window.translations ? window.translations[exp.companyKey] || exp.companyKey : exp.companyKey;
+                        const duration = window.translations ? window.translations[exp.durationKey] || exp.durationKey : exp.durationKey;
+                        const details = exp.detailsKeys.map(key => window.translations ? window.translations[key] || key : key);
+
                         item.innerHTML = `
                             <div class="flex items-start space-x-4">
                                 <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br ${color} rounded-full flex items-center justify-center">
@@ -873,11 +823,11 @@
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                                        <h3 class="text-xl font-bold text-gray-900">${exp.title}</h3>
-                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 mt-2 sm:mt-0">${exp.duration}</span>
+                                        <h3 class="text-xl font-bold text-gray-900">${title}</h3>
+                                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 mt-2 sm:mt-0">${duration}</span>
                                     </div>
-                                    <p class="font-semibold text-blue-600 mb-2">${exp.company}</p>
-                                    <ul class="list-none space-y-3 text-gray-600">${exp.details.map(d => `<li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>${d}</span></li>`).join('')}</ul>
+                                    <p class="font-semibold text-blue-600 mb-2">${company}</p>
+                                    <ul class="list-none space-y-3 text-gray-600">${details.map(d => `<li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>${d}</span></li>`).join('')}</ul>
                                 </div>
                             </div>
                         `;
@@ -885,6 +835,9 @@
                         container.appendChild(item);
                     });
                 })();
+
+                // Re-render experience when language changes
+                window.addEventListener('languageChanged', renderExperience);
             </script>
         </section>
 
@@ -899,9 +852,9 @@
                             <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat1_title">Lãnh đạo & Quản trị</h3>
                         </div>
                         <ul class="space-y-2 text-gray-600 list-disc list-inside">
-                            <li data-lang-key="skill_cat1_li1">Lãnh đạo cấp cao (CEO/CTO/COO)</li>
+                            <li data-lang-key="skill_cat1_li1">Lãnh đạo cấp C (CEO/CTO/COO)</li>
                             <li data-lang-key="skill_cat1_li2">Hoạch định và Điều hành P&L</li>
-                            <li data-lang-key="skill_cat1_li3">Quản lý Dự án Phức tạp</li>
+                            <li data-lang-key="skill_cat1_li3">Quản lý & Phát triển Dự án</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -912,7 +865,7 @@
                         <ul class="space-y-2 text-gray-600 list-disc list-inside">
                             <li data-lang-key="skill_cat2_li1">Quản trị vận hành (Nhà hàng/Du lịch)</li>
                             <li data-lang-key="skill_cat2_li2">Điều hành Trung tâm Ngoại ngữ</li>
-                            <li data-lang-key="skill_cat2_li3">Kỹ năng CSKH cao cấp</li>
+                            <li data-lang-key="skill_cat2_li3">Kỹ năng CSKH</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -949,6 +902,17 @@
                             <li data-lang-key="skill_cat5_li3">Phân tích thị trường EdTech</li>
                         </ul>
                     </div>
+                    <div class="card">
+                        <div class="flex items-center mb-4">
+                           <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+                            <h3 class="text-xl font-bold text-gray-800" data-lang-key="skill_cat6_title">Quan hệ đối tác / Chăm sóc khách hàng</h3>
+                        </div>
+                         <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li data-lang-key="skill_cat6_li1">Phát triển mối quan hệ đối tác chiến lược</li>
+                            <li data-lang-key="skill_cat6_li2">Quản lý chăm sóc khách hàng</li>
+                            <li data-lang-key="skill_cat6_li3">Phân tích nhu cầu khách hàng</li>
+                        </ul>
+                    </div>                    
                 </div>
             </div>
         </section>
@@ -964,11 +928,11 @@
                     <div class="grid md:grid-cols-2 gap-8 text-left">
                         <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                              <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role1_title">Vị trí Chiến lược (Full-time/Part-time)</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role1_desc">Đảm nhận các vị trí quản lý cấp cao, trực tiếp điều hành và tối ưu hóa hoạt động, dẫn dắt quá trình chuyển đổi số và phát triển sản phẩm.</p>
+                            <p class="text-gray-600" data-lang-key="collaboration_role1_desc">Đảm nhận các vị trí có thể tối ưu hóa hoạt động, dẫn dắt quá trình chuyển đổi số và xây dựng quy trình.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                              <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role2_title">Đối tác Chiến lược / Cố vấn</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role2_desc">Tham gia với vai trò cố vấn về công nghệ, quản trị, kiến trúc hệ thống và chiến lược phát triển sản phẩm EdTech để giúp doanh nghiệp tăng trưởng bền vững.</p>
+                            <p class="text-gray-600" data-lang-key="collaboration_role2_desc">Tham gia với vai trò cố vấn về công nghệ, quản trị, kiến trúc hệ thống và chiến lược phát triển sản phẩm EdTech.</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                              <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role3_title">Trang Web, ứng dụng doanh nghiệp</h3>
@@ -1061,10 +1025,10 @@
                 <!-- Brand Section -->
                 <div class="md:col-span-2">
                     <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                        MinhTriet.online
+                        minhtriet.online
                     </h3>
                     <p class="text-gray-300 mb-6 leading-relaxed">
-                        Strategic Operations & Technology Partner. Chuyên gia chuyển đổi số và tối ưu hiệu suất với đam mê tạo ra những giải pháp công nghệ đột phá.
+                        Strategic Operations & Technology Partner.                    
                     </p>
                     <!-- Load external JS (deferred) -->
                     <script src="./js/utils.js" defer></script>
