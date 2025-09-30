@@ -39,14 +39,84 @@ function initializeWebsite() {
     initPortfolioFilters();
     
     // Initialize contact form
-    // Ensure a safe initContactForm exists. The page currently includes an inline
-    // submit handler in `index.html`; define a no-op here to avoid a runtime
-    // ReferenceError when `initializeWebsite` calls `initContactForm()`.
     function initContactForm() {
-        // No-op: inline script in index.html attaches the form submit listener.
-        // If you prefer centralizing the handler, replace this no-op with the
-        // form initialization logic and remove the inline script in index.html.
-        return;
+        // Centralized contact form handler moved from index.html inline script.
+        try {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            // Avoid attaching multiple listeners
+            if (form.__contactHandlerAttached) return;
+            form.__contactHandlerAttached = true;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const formStatus = document.getElementById('formStatus');
+                const successMsg = formStatus ? formStatus.querySelector('.success-message') : null;
+                const errorMsg = formStatus ? formStatus.querySelector('.error-message') : null;
+                const submitBtn = form.querySelector('button[type="submit"]');
+
+                // Hide previous messages
+                if (successMsg) successMsg.classList.add('hidden');
+                if (errorMsg) errorMsg.classList.add('hidden');
+                if (formStatus) formStatus.classList.add('hidden');
+
+                // Disable button and set localized sending text
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    const sendingText = (window.translations && (window.translations['form_sending'] || window.translations['form_sending'])) || 'Đang gửi...';
+                    submitBtn.textContent = sendingText;
+                }
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(async response => {
+                    // Try to parse JSON response (Formspree returns JSON on success/failure)
+                    let body = null;
+                    try {
+                        const contentType = response.headers.get('content-type') || '';
+                        if (contentType.includes('application/json')) {
+                            body = await response.json();
+                        } else {
+                            body = await response.text();
+                        }
+                    } catch (err) {
+                        console.warn('Could not parse response body', err);
+                    }
+
+                    console.log('Formspree response status:', response.status, 'body:', body);
+
+                    if (response.ok) {
+                        if (successMsg) successMsg.classList.remove('hidden');
+                        if (formStatus) formStatus.classList.remove('hidden');
+                        form.reset();
+                    } else {
+                        // If Formspree returned a helpful message include it in the console
+                        console.error('Form submission error', { status: response.status, body });
+                        throw new Error((body && body.error) ? body.error : 'Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    if (errorMsg) errorMsg.classList.remove('hidden');
+                    if (formStatus) formStatus.classList.remove('hidden');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        const submitText = (window.translations && (window.translations['form_submit'] || window.translations['form_submit'])) || 'Gửi Tin Nhắn';
+                        submitBtn.textContent = submitText;
+                    }
+                });
+            });
+        } catch (err) {
+            console.error('initContactForm error', err);
+        }
     }
     initContactForm();
     
@@ -62,7 +132,37 @@ function initializeWebsite() {
     // Load saved language
     const savedLang = localStorage.getItem('language') || 'en';
     changeLanguage(savedLang);
+
+    // Update footer year if present
+    const fy = document.getElementById('current-year-foot');
+    if (fy) fy.textContent = new Date().getFullYear();
 }
+
+// Newsletter subscribe validation and subtle CTA animation
+document.addEventListener('DOMContentLoaded', () => {
+    const subscribeBtn = document.querySelector('.newsletter-btn');
+    const emailInput = document.querySelector('.newsletter-input');
+    if (subscribeBtn && emailInput) {
+        subscribeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const v = (emailInput.value || '').trim();
+            const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+            if (!emailRx.test(v)) {
+                emailInput.classList.add('ring', 'ring-red-400');
+                setTimeout(() => emailInput.classList.remove('ring', 'ring-red-400'), 1500);
+                // lightweight feedback
+                alert('Please enter a valid email address');
+                return;
+            }
+            // Subtle animation
+            subscribeBtn.classList.add('transform', 'scale-95');
+            setTimeout(() => subscribeBtn.classList.remove('transform', 'scale-95'), 200);
+            // TODO: wire up to a newsletter backend - for now show a success state
+            subscribeBtn.textContent = 'Subscribed ✓';
+            subscribeBtn.disabled = true;
+        });
+    }
+});
 
 // Lazy-loading for images using data-src / data-srcset
 function initLazyImages() {
