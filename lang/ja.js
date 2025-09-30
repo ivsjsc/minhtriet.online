@@ -35,6 +35,7 @@ window.translations_ja = {
 	'project13_title': 'IVS Academy', 'project13_desc': 'IVS Academyの教育機関サイト (ivsacademy.edu.vn)。',
 	'project14_title': 'Luv Yoga', 'project14_desc': 'ヨガスタジオおよびウェルネスのサイト (luv-yoga.site)。',
 	'stat_years_experience_label': '経験年数', 'stat_projects_completed_label': '完了したプロジェクト', 'stat_revenue_growth_label': '収益成長', 'stat_client_satisfaction_label': '顧客満足度',
+	'stat_foreign_partners_label': 'Technology innovation and adoption',
 	'scroll_indicator': 'スクロールして探索',
 	'exp1_title': '最高経営責任者 (CEO)', 'exp1_company': 'IVS JSC (Integrate Vision Synergy 株式会社)', 'exp1_duration': '2024 - 現在 | Đồng Nai', 'exp1_li1': '成果 & EdTech & AI製品開発:', 'exp1_li2': '  - AI & アダプティブラーニング統合: 人工知能 (AI) ソリューションの研究と実装により、パーソナライズされた学習体験 (アダプティブラーニング) を最適化し、生徒管理プロセスを自動化。', 'exp1_li3': '  - カリキュラム開発:', 'exp1_li4': '    • K-12カリキュラム (幼稚園から高校): すべてのK-12レベル向けの学術コンテンツの編集と開発に参加、デジタルプラットフォームの統合 (ivseng.netlify.app参照)。', 'exp1_li5': '    • 幼稚園カリキュラム: STEAM + Intelligenceを開発、子供の9種類の知能に適したSTEAM活動を組み合わせ。', 'exp1_li6': '    • ライフスキル & 英語カリキュラム: IVSLifeMindsを編集、小学生向けの専門英語と組み合わせたライフスキルカリキュラム。',
 	'exp2_title': 'パートナーシップ＆プロジェクト開発責任者', 'exp2_company': 'AMG International Education JSC, Đồng Nai', 'exp2_duration': '2022 - 2024 | Đồng Nai', 'exp2_li1': '初年度で印象的な34%の収益成長を達成、継続的にビジネス目標を上回る。', 'exp2_li2': 'Long ThanhでのIELTS Station建設のプロジェクトマネージャー、市場調査、財務計画から語学センターの試験運用までの包括的な側面を担当。', 'exp2_li3': '教育管理: 旧Long Thanh地区の幼稚園から高校までのほぼ50の学校と連携、教育パートナーネットワークを拡大し、協力プログラムを運営。',

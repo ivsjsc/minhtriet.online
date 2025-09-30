@@ -35,6 +35,7 @@ window.translations_zh = {
 	'project13_title': 'IVS Academy', 'project13_desc': 'IVS Academy 教育网站 (ivsacademy.edu.vn)。',
 	'project14_title': 'Luv Yoga', 'project14_desc': '瑜伽工作室与健康网站 (luv-yoga.site)。',
 	'stat_years_experience_label': '工作年限', 'stat_projects_completed_label': '完成项目数', 'stat_revenue_growth_label': '收入增长', 'stat_client_satisfaction_label': '客户满意度',
+	'stat_foreign_partners_label': '技术创新与采用',
 	'scroll_indicator': '向下滚动以探索',
 	'exp1_title': '首席执行官 (CEO)', 'exp1_company': 'IVS JSC (Integrate Vision Synergy 股份有限公司)', 'exp1_duration': '2024 - 至今 | Đồng Nai', 'exp1_li1': '成就 & EdTech & AI 产品开发:', 'exp1_li2': '  - AI & 自适应学习整合: 研究并实施人工智能 (AI) 解决方案，以优化个性化学习体验 (自适应学习) 并自动化学生管理流程。', 'exp1_li3': '  - 课程开发:', 'exp1_li4': '    • K-12 课程 (幼儿园至高中): 参与编辑和开发所有 K-12 级别的学术内容，整合数字平台 (参考 ivseng.netlify.app)。', 'exp1_li5': '    • 幼儿园课程: 开发 STEAM + Intelligence，结合适合儿童 9 种智力的 STEAM 活动。', 'exp1_li6': '    • 生活技能 & 英语课程: 编辑 IVSLifeMinds，与小学学生专业英语相结合的生活技能课程。',
 	'exp2_title': '合作与项目开发负责人', 'exp2_company': 'AMG International Education JSC, Đồng Nai', 'exp2_duration': '2022 - 2024 | Đồng Nai', 'exp2_li1': '第一年实现令人印象深刻的 34% 收入增长，持续超额完成业务目标。', 'exp2_li2': 'Long Thanh IELTS Station 建设项目经理，负责从市场调研、金融规划到语言中心试运营的全面方面。', 'exp2_li3': '教育管理: 与旧 Long Thanh 区幼儿园至高中的近 50 所学校连接，扩展教育合作伙伴网络并运营合作项目。',

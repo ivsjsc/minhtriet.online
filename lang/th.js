@@ -34,6 +34,7 @@ window.translations_th = {
 	'project13_title': 'IVS Academy', 'project13_desc': 'เว็บไซต์สถาบันการศึกษา IVS Academy (ivsacademy.edu.vn).',
 	'project14_title': 'Luv Yoga', 'project14_desc': 'เว็บไซต์สตูดิโอโยคะและสุขภาพ (luv-yoga.site).',
 	'stat_years_experience_label': 'ปีของประสบการณ์', 'stat_projects_completed_label': 'โครงการที่เสร็จสิ้น', 'stat_revenue_growth_label': 'การเติบโตของรายได้', 'stat_client_satisfaction_label': 'ความพึงพอใจของลูกค้า',
+	'stat_foreign_partners_label': 'Technology innovation and adoption',
 	'scroll_indicator': 'เลื่อนเพื่อสำรวจ',
 	'exp1_title': 'ประธานเจ้าหน้าที่บริหาร (CEO)', 'exp1_company': 'IVS JSC (Integrate Vision Synergy)', 'exp1_duration': '2024 - ปัจจุบัน | Đồng Nai (ดงนาย)', 'exp1_li1': 'นำกลยุทธ์การบูรณาการ AI & Adaptive Learning สำหรับผลิตภัณฑ์การศึกษา.', 'exp1_li2': 'บริหารการพัฒนาแอปพลิเคชันและแพลตฟอร์ม SaaS.', 'exp1_li3': 'ดูแลหลักสูตร K-12 ทักษะชีวิต และเนื้อหาอังกฤษ.',
 	'exp2_title': 'หัวหน้าฝ่ายความร่วมมือและพัฒนาผลิตภัณฑ์', 'exp2_company': 'AMG International Education JSC', 'exp2_duration': '2022 - 2024 | ดงนาย', 'exp2_li1': 'บรรลุการเติบโตของรายได้ 34% ในปีแรก.', 'exp2_li2': 'ทำผลงานได้เกินเป้าหมายอย่างต่อเนื่อง.', 'exp2_li3': 'เป็นผู้นำโครงการศูนย์ภาษา IELTS Station.',

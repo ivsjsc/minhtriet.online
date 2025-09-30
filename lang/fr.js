@@ -35,6 +35,7 @@ window.translations_fr = {
 	'project13_title': 'IVS Academy', 'project13_desc': 'Site web de l\'académie éducative IVS Academy (ivsacademy.edu.vn).',
 	'project14_title': 'Luv Yoga', 'project14_desc': 'Site de studio de yoga et bien-être (luv-yoga.site).',
 	'stat_years_experience_label': 'Années d\'expérience', 'stat_projects_completed_label': 'Projets achevés', 'stat_revenue_growth_label': 'Croissance du chiffre d\'affaires', 'stat_client_satisfaction_label': 'Satisfaction des clients',
+	'stat_foreign_partners_label': 'Technology innovation and adoption',
 	'scroll_indicator': 'Faites défiler pour explorer',
 	'exp1_title': 'Directeur général (CEO)', 'exp1_company': 'IVS JSC (Integrate Vision Synergy)', 'exp1_duration': '2024 - Présent | Đồng Nai', 'exp1_li1': 'Diriger la stratégie d\'intégration de l\'IA & de l\'apprentissage adaptatif pour les produits éducatifs.', 'exp1_li2': 'Gérer le développement d\'applications et de plateformes SaaS.', 'exp1_li3': 'Superviser la compilation des programmes K-12, des compétences de vie et du contenu en anglais.',
 	'exp2_title': 'Responsable des partenariats & du développement de projets', 'exp2_company': 'AMG International Education JSC', 'exp2_duration': '2022 - 2024 | Dong Nai', 'exp2_li1': 'Atteint une croissance du chiffre d\'affaires de 34% la première année.', 'exp2_li2': 'A constamment dépassé les objectifs commerciaux.', 'exp2_li3': 'Chef de projet pour le centre d\'anglais IELTS Station.',
