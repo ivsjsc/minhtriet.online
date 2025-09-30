@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinhTriet-Tech&EduCodex.</title>
+    <title>Nguyen Minh Triet - Education - Technology & Codex</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Nguyễn Minh Triết - CEO IVS JSC, Chuyên gia AI & EdTech, Kiến trúc sư Microservices. Strategic Operations & Technology Partner.">
@@ -68,7 +68,7 @@
                             blob: {
                                 '0%': { transform: 'translate(0px, 0px) scale(1)' },
                                 '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                                 '100%': { transform: 'translate(0px, 0px) scale(1)' }
                             },
                             glow: {
@@ -106,8 +106,15 @@
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
+            /* FIX: Đảm bảo body không bao giờ tràn ngang */
+            overflow-x: hidden; 
         }
         
+        /* FIX: Thêm overflow-x: hidden cho HTML để bắt trọn lỗi tràn ngang */
+        html {
+            overflow-x: hidden;
+        }
+
         /* Glassmorphism Effects */
         .glass {
             background: rgba(255, 255, 255, 0.1);
@@ -343,161 +350,160 @@
             transition: width 0.3s ease;
         }
         
-    /* --- PRINT STYLES FOR A4 (START) --- */
-    @page {
-        /* Tối ưu lề in (Nếu người dùng không thiết lập lề tối thiểu trong cài đặt in) */
-        size: A4;
-        margin: 15mm;
-    }
-
-    @media print {
-        /* 1. Force Color Printing & Base Styles */
-        html, body {
-            -webkit-print-color-adjust: exact !important; /* Buộc in màu nền/màu chữ */
-            color-adjust: exact !important;
-            background: #ffffff !important;
-            color: #111827 !important;
-            padding-top: 0 !important;
-            margin: 0 !important;
-            /* Reset margin/padding để có nhiều không gian hơn trên A4 */
+        /* --- PRINT STYLES FOR A4 (START) --- */
+        @page {
+            /* Tối ưu lề in (mặc định) */
+            size: A4;
+            margin: 0; 
         }
 
-        /* 2. Hide Unnecessary Elements */
-        header, nav, .lang-switcher, #mobile-menu-button, .hero-cta, #toTopBtn, footer, .contact-form, .modal, #particles-js, .animate-blob,
-        .flex.items-center.justify-center.md\:justify-start.space-x-6, /* Social icons trong hero */
-        .loading-overlay, .progress-bar, .filter-btn, /* UI Elements */
-        .md\:col-span-2 > a > img, .footer-legal, .bg-gray-900,
-        .no-print /* Thêm class no-print vào các phần tử muốn ẩn */
-        {
-            display: none !important;
-            height: 0 !important;
-            visibility: hidden !important;
-        }
+        @media print {
+            /* 1. Force Color Printing & Base Styles */
+            html, body {
+                -webkit-print-color-adjust: exact !important; /* Buộc in màu nền/màu chữ */
+                color-adjust: exact !important;
+                background: #ffffff !important;
+                color: #111827 !important; 
+                padding: 0 !important;
+                margin: 0 !important;
+                min-height: auto !important;
+            }
 
-        /* 3. Layout and Margin Reset */
-        main, .container {
-            width: 100% !important;
-            max-width: none !important;
-            padding: 0 15mm !important; /* Lề trong 1.5cm */
-            margin: 0 auto !important;
-            transform: none !important;
-        }
-        section {
-            padding: 8mm 0 !important; /* Giảm padding giữa các section */
-            page-break-after: auto;
-        }
+            /* 2. Hide Unnecessary Elements (UI, animations, forms) */
+            header, nav, .lang-switcher, #mobile-menu-button, .hero-cta, #toTopBtn, footer, .contact-form, .modal, #particles-js, .animate-blob, 
+            .flex.items-center.justify-center.md\:justify-start.space-x-6, /* Social icons trong hero */
+            .loading-overlay, .progress-bar, .filter-btn, 
+            .md\:col-span-2 > a > img, .footer-legal, .bg-gray-900,
+            .no-print, 
+            .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.inset-0, 
+            .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.-top-4,
+            .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.-bottom-4 
+            {
+                display: none !important;
+                /* Loại bỏ height: 0 và visibility: hidden để không ảnh hưởng đến web view,
+                   chỉ cần display: none !important; là đủ cho print */
+            }
+            
+            /* 3. Layout and Margin Reset */
+            main, .container {
+                width: 100% !important;
+                max-width: none !important;
+                padding: 0 20mm !important; /* Lề in 2cm hai bên */
+                margin: 0 auto !important;
+                transform: none !important;
+            }
+            section {
+                padding: 10mm 0 !important; /* Lề trên/dưới section */
+                page-break-inside: avoid; /* Ngăn cắt section */
+                page-break-after: auto;
+            }
+            
+            /* 4. Ngắt trang nội dung lớn */
+            /* Buộc Ngắt trang sau Hero Section và About để dồn nội dung chính vào trang sau */
+            #about {
+                page-break-after: always;
+            }
+             /* Đảm bảo các khối không bị cắt */
+            .timeline-item, .card, .glass-card, .portfolio-item, .grid > div {
+                page-break-inside: avoid;
+                break-inside: avoid-page;
+                box-shadow: none !important;
+                background: #fcfcfc !important; 
+                border: 1px solid #e5e5e5 !important;
+                margin-bottom: 5mm !important; 
+                padding: 1rem !important;
+            }
+            /* Đảm bảo khối Skills nằm trọn vẹn */
+            #skills {
+                page-break-before: auto;
+                page-break-inside: avoid;
+            }
 
-        /* 4. Content Block Integrity (Avoid breaking inside) */
-        .timeline-item, .card, .glass-card, .portfolio-item, .grid > div {
-            page-break-inside: avoid;
-            break-inside: avoid-page;
-            box-shadow: none !important;
-            /* Đảm bảo nền card có màu nhẹ để tách biệt (in màu) */
-            background: #fcfcfc !important;
-            border: 1px solid #e5e5e5 !important;
-            margin-bottom: 5mm !important;
-            padding: 1rem !important;
-        }
+            /* 5. Typography and Color Fixes */
+            h1, h2, h3, .section-title, .text-transparent, p {
+                color: #111827 !important;
+                background: none !important;
+                -webkit-text-fill-color: #111827 !important;
+                -webkit-background-clip: unset !important;
+                background-clip: unset !important;
+                font-weight: 700 !important;
+                text-shadow: none !important;
+            }
+            .section-title {
+                margin-bottom: 7mm !important;
+                font-size: 24pt !important; /* Giảm kích thước tiêu đề chính */
+                border-bottom: 2px solid #3b82f6 !important;
+                padding-bottom: 2mm !important;
+            }
 
-        /* 5. Typography and Color Fixes */
-        h1, h2, h3, .section-title, .text-transparent {
-            color: #111827 !important;
-            background: none !important;
-            -webkit-text-fill-color: #111827 !important;
-            -webkit-background-clip: unset !important;
-            background-clip: unset !important;
-            font-weight: 700 !important;
-        }
-        .section-title {
-            margin-bottom: 5mm !important;
-        }
+            /* 6. Hero Section Re-layout (Tiêu đề CV) */
+            .relative.min-h-screen.flex {
+                min-height: auto !important;
+                padding-top: 10mm !important;
+                padding-bottom: 5mm !important;
+                display: flex !important;
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .grid.md\:grid-cols-2 {
+                display: flex !important;
+                flex-direction: row;
+                gap: 5mm;
+            }
+            .md\:order-2 {
+                order: 2 !important; 
+                flex: 0 0 100px;
+                display: block !important; 
+            }
+            .md\:order-1 {
+                order: 1 !important;
+                flex: 1;
+                text-align: left !important;
+                padding: 0 !important;
+            }
+            
+            /* Avatar print style */
+            .w-40.h-40.md\:w-96.md\:h-96 {
+                width: 90px !important;
+                height: 90px !important;
+                border: 3px solid #3b82f6 !important; 
+            }
+            .md\:order-1 h1 {
+                font-size: 28pt !important;
+            }
+            .md\:order-1 p[data-lang-key="hero_subtitle_1"] {
+                font-size: 10pt !important;
+            }
+            
+            /* 7. Timeline Style Enhancement */
+            .timeline-item {
+                padding-left: 20mm !important;
+            }
+            .timeline-item::after {
+                background: #3b82f6 !important; 
+                left: 10mm !important; 
+                top: 5mm !important;
+            }
+            .timeline-item::before {
+                background: #b3b3b3 !important; 
+                left: 14mm !important; 
+            }
+            .timeline-item ul {
+                list-style-type: disc !important;
+                padding-left: 15px !important;
+            }
 
-        /* 6. Hero Section Re-layout for CV Header Look */
-        .relative.min-h-screen.flex {
-            min-height: auto !important;
-            display: block !important;
-            padding-top: 15mm !important;
-            padding-bottom: 10mm !important;
+            /* 8. Show Contact Info for Print */
+            .md\:print\:block {
+                display: block !important;
+            }
+            .no-print + .mt-6.text-left.block.md\:hidden.md\:print\:block {
+                display: block !important;
+            }
+            
         }
-        /* Chuyển Hero sang bố cục 1 cột tối ưu cho CV */
-        .grid.md\:grid-cols-2 {
-            display: block !important; /* Bỏ flex/grid để xếp chồng */
-        }
-        .md\:order-2, .md\:order-1 {
-            order: unset !important;
-            flex: none !important;
-            width: 100% !important;
-            text-align: center !important;
-        }
-        .text-center.md\:text-left.md\:order-1 {
-            text-align: center !important;
-        }
-
-        /* Avatar print style (căn giữa, bỏ float) */
-        .w-40.h-40.md\:w-96.md\:h-96 {
-            width: 100px !important; /* Giảm kích thước ảnh */
-            height: 100px !important;
-            margin: 0 auto 10px auto !important; /* Căn giữa */
-            float: none !important;
-            display: block !important;
-            border-radius: 50% !important;
-            transform: none !important;
-            animation: none !important;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        /* Ẩn các icon nổi */
-        .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.inset-0,
-        .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.-top-4,
-        .w-40.h-40.md\:w-96.md\:h-96 > div.absolute.-bottom-4 {
-            display: none !important;
-        }
-
-        /* 7. Timeline Style Enhancement (In Color) */
-        .timeline-item::after {
-            background: #3b82f6 !important; /* Giữ màu xanh đậm */
-            border-color: #f7f7f7 !important;
-            box-shadow: none !important;
-        }
-        .timeline-item::before {
-            background: #6b7280 !important;
-            filter: none;
-        }
-        .timeline-item ul {
-            list-style-type: none !important;
-            padding-left: 0 !important;
-        }
-        .timeline-item ul li {
-            margin-left: 0 !important;
-            padding-left: 0 !important;
-        }
-
-        /* 8. Show Contact Info (currently hidden form) */
-        #contact .card {
-            padding: 1rem 15mm !important; /* Đảm bảo đủ lề */
-        }
-        .md\:print\:block {
-            display: block !important;
-        }
-        .no-print + .mt-6.text-left.block.md\:hidden.md\:print\:block {
-            display: block !important; /* Hiện lại thông tin liên hệ tĩnh */
-        }
-
-
-        /* Ensure all links show URL in print */
-        a[href]:not([href^="#"]):after {
-            content: " (" attr(href) ")";
-            font-size: 0.85em;
-            color: #334155;
-            word-break: break-all;
-        }
-
-        /* Tăng khoảng cách giữa các gạch đầu dòng chi tiết công việc */
-        .timeline-item ul.space-y-3 li {
-            margin-top: 5px !important;
-            margin-bottom: 5px !important;
-        }
-
-    }
+        /* --- PRINT STYLES FOR A4 (END) --- */
     </style>
 </head>
 <body class="text-gray-700 relative">
@@ -506,7 +512,6 @@
     <div id="loading-overlay" class="loading-overlay">
         <div class="text-center">
             <div class="loading-spinner mx-auto mb-4"></div>
-            <p class="text-white font-medium">Minh Triet - EdTech-Codex.</p>
             <p class="text-white font-medium">Loading...Have a good day!!!</p>
         </div>
     </div>
@@ -721,9 +726,9 @@
                                     <a href="https://ivseng.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
                                 </div>
                             </div>
-                        </div>                    
+                        </div>
                         <!-- Project 2: IELTS Station -->
-                        <div class="portfolio-item business" data-category="business" style="cursor: pointer;">
+                        <div class="portfolio-item business" data-category="business">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
                                     <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -739,14 +744,10 @@
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                    <div class="flex space-x-2">
-                                        <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-                        </div>    
+                        </div>                       
+
                         <!-- Project 5: Mandarin by IVS -->
                         <div class="portfolio-item education" data-category="education">
                             <div class="card relative overflow-hidden">
@@ -1225,6 +1226,7 @@
                     <ul class="space-y-3 text-sm">
                         <li><a href="#about" class="text-gray-400 hover:text-white transition-colors footer-link">About</a></li>
                         <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors footer-link">Experience</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors footer-link">Skills</a></li>
                         <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors footer-link">Portfolio</a></li>
                         <li><a href="#collaboration" class="text-gray-400 hover:text-white transition-colors footer-link">Collaboration</a></li>
                     </ul>
@@ -1234,15 +1236,15 @@
                 <div>
                     <h4 class="text-xl font-semibold text-blue-400 mb-4">Contact Info</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center space-x-2">
+                        <li class="flex items-start space-x-2">
                             <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <a href="mailto:n.bi2993@gmail.com" class="hover:text-white transition-colors">info@minhtriet.online</a>
                         </li>
-                        <li class="flex items-center space-x-2">
+                        <li class="flex items-start space-x-2">
                             <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <span>+84 89692 0547</span>
                         </li>
-                        <li class="flex items-center space-x-2">
+                        <li class="flex items-start space-x-2">
                             <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <span>Long Phuoc, Dong Nai Province, Vietnam. 76213</span>
                         </li>
