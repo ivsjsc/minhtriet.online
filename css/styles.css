@@ -35,8 +35,9 @@ html, body {
 
 #lang-button {
     white-space: nowrap; /* keep language label on one line */
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
 }
 
 /* Footer styles - modern, glass look */
@@ -71,3 +72,23 @@ html, body {
 
 .newsletter-input { padding: 0.65rem 0.8rem; border-radius: 9999px; border: 1px solid rgba(15,23,42,0.06); }
 .newsletter-btn { padding: 0.65rem 1rem; border-radius: 9999px; }
+
+/* Mobile-specific header and hero adjustments */
+@media (max-width: 768px) {
+    /* Center the brand/logo in the header while keeping controls to the right */
+    header .container { position: relative; padding-left: 0.75rem; padding-right: 0.75rem; }
+    header .container > a { position: absolute; left: 50%; transform: translateX(-50%); margin: 0; }
+
+    /* Keep language switcher and mobile menu button aligned on the right */
+    .lang-switcher { position: absolute; right: 3.5rem; top: 50%; transform: translateY(-50%); }
+    #mobile-menu-button { position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); }
+
+    /* Make language button more compact on small screens */
+    #lang-button { padding: 6px 8px; font-size: 0.85rem; border-radius: 6px; min-width: 56px; }
+
+    /* Ensure site title doesn't overflow or wrap */
+    header .container > a { white-space: nowrap; font-size: 1.05rem; }
+
+    /* Slightly smaller avatar on narrow screens to avoid layout crowding */
+    .w-40.h-40 { width: 9.5rem; height: 9.5rem; }
+}
