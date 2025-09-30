@@ -1,5 +1,5 @@
 window.translations_vi = {
-    'page_title': 'Nguyễn Minh Triết - Lãnh đạo Công nghệ & Chuyên gia AI',
+    'page_title': 'Nguyen Minh Triet - Education - Technology & Codex',
     'nav_about': 'Giới thiệu', 'nav_experience': 'Kinh nghiệm', 'nav_skills': 'Kỹ năng', 'nav_portfolio': 'Dự án', 'nav_collaboration': 'Hợp tác', 'nav_contact': 'Liên hệ',
     'nav_about_mobile': 'Giới thiệu', 'nav_experience_mobile': 'Kinh nghiệm', 'nav_skills_mobile': 'Kỹ năng', 'nav_portfolio_mobile': 'Dự án', 'nav_collaboration_mobile': 'Hợp tác', 'nav_contact_mobile': 'Liên hệ',
     'hero_name': 'NGUYỄN MINH TRIẾT',
@@ -7,9 +7,9 @@ window.translations_vi = {
     'hero_subtitle': 'Kiến trúc công nghệ (Microservices, AI Adaptive Learning), phát triển sản phẩm EdTech (R&D) & quản trị vận hành đa ngành.',
     'hero_cta': 'Website IVS Academy',
     'hero_contact': 'Liên hệ ngay',
-    'about_title': 'Về tôi',
-    'about_p1': 'Tôi là người kết nối hiệu quả giữa quản trị chiến lược và công nghệ đột phá. Với kinh nghiệm điều hành và phát triển dự án đa ngành, tôi am hiểu sâu sắc về cách thức vận hành và thúc đẩy tăng trưởng bền vững.',
-    'about_p2': 'Tôi chuyên tư vấn và triển khai các giải pháp AI cùng tự động hóa, nhằm nâng cao hiệu suất, tạo ra sản phẩm scalable và xây dựng lợi thế cạnh tranh cốt lõi. Tôi luôn tìm kiếm cơ hội hợp tác để trực tiếp đóng góp vào sự phát triển lâu dài của các doanh nghiệp có tầm nhìn chiến lược.',
+    'about_title': 'Giới thiệu',
+    'about_p1': 'Với kinh nghiệm làm việc, điều hành và phát triển các dự án đa ngành, tôi am hiểu sâu sắc về cách thức vận hành hệ thống nhằm tối ưu hóa hiệu suất.',
+    'about_p2': 'Tôi luôn tìm kiếm cơ hội hợp tác để trực tiếp đóng góp vào sự phát triển lâu dài của các doanh nghiệp có tầm nhìn, để cùng nghiên cứu và phát triển quy trình tự động hóa và xây dựng lợi thế cạnh tranh cốt lõi trong thời đại mới.',
     'portfolio_title': 'Dự án',
     'experience_title': 'Hành trình nghề nghiệp',
     /* New UI keys for full localization */
