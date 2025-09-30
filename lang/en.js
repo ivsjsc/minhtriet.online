@@ -15,9 +15,14 @@ window.translations_en = {
     'experience_title': 'Professional Journey',
 
     /* New UI keys added for full localization */
-    'filter_all': 'All Projects', 'filter_edtech': 'EdTech', 'filter_saas': 'SaaS Platform', 'filter_ai': 'AI Solutions',
+    'filter_all': 'All Projects',
+    'filter_business': 'Business Development',
+    'filter_education': 'Education R&D',
+    'filter_utility': 'Utility Application',
+    'filter_website': 'Websites',
     'project1_title': 'IVS EdTech Platform', 'project1_desc': 'Comprehensive educational technology platform with AI-powered adaptive learning system.',
-    'project2_title': 'IELTS Station Center', 'project2_desc': 'Modern English learning center with comprehensive IELTS preparation programs.',
+    'project2_title': 'IELTS Station Center - Project Management',
+    'project2_desc': 'Comprehensive project management for infrastructure development: market research, construction management, facility planning and operational setup.',
     'project3_title': 'AI Analytics Dashboard', 'project3_desc': 'Real-time analytics platform powered by machine learning for business intelligence.',
     'project4_title': 'IVS ENG', 'project4_desc': 'Engineering / product showcase website for IVS (ivseng.netlify.app).',
     'project5_title': 'Mandarin by IVS', 'project5_desc': 'Mandarin language learning site developed by IVS (mandarinbyivs.netlify.app).',

@@ -3,7 +3,7 @@ window.translations_ko = {
 	'nav_about': '소개', 'nav_experience': '경력', 'nav_skills': '기술', 'nav_portfolio': '포트폴리오', 'nav_collaboration': '협업', 'nav_contact': '연락처',
 	'nav_about_mobile': '소개', 'nav_experience_mobile': '경력', 'nav_skills_mobile': '기술', 'nav_portfolio_mobile': '포트폴리오', 'nav_collaboration_mobile': '협업', 'nav_contact_mobile': '연락처',
 	'hero_name': '교육, 운영 및 기술의 전략적 파트너',
-	
+
 	'hero_title': '전략 운영 및 기술 파트너 | 디지털 전환 및 성능 최적화',
 	'hero_subtitle': '기술 아키텍처(마이크로서비스, AI 적응형 학습), EdTech 제품 개발(R&D) 및 다중 산업 운영 거버넌스.',
 	'hero_cta': 'Website IVS Academy',
@@ -14,7 +14,11 @@ window.translations_ko = {
 	'portfolio_title': '포트폴리오',
 	'experience_title': '직업 여정',
 	/* New UI keys for full localization */
-	'filter_all': '모든 프로젝트', 'filter_edtech': '에듀테크', 'filter_saas': 'SaaS 플랫폼', 'filter_ai': 'AI 솔루션',
+	'filter_all': '모든 프로젝트',
+	'filter_business': '비즈니스 개발',
+	'filter_education': '교육 연구개발',
+	'filter_utility': '유틸리티 애플리케이션',
+	'filter_website': '웹사이트',
 	'project1_title': 'IVS 에듀테크 플랫폼', 'project1_desc': 'AI 기반 적응형 학습 시스템을 갖춘 종합 교육 기술 플랫폼입니다.',
 	'project4_title': 'IVS ENG', 'project4_desc': 'IVS의 엔지니어링/제품 소개 사이트 (ivseng.netlify.app).',
 	'project5_title': 'Mandarin by IVS', 'project5_desc': 'IVS가 개발한 중국어 학습 사이트 (mandarinbyivs.netlify.app).',
@@ -27,7 +31,7 @@ window.translations_ko = {
 	'project12_title': 'KhaHome', 'project12_desc': '홈 데코 / 인테리어 소개 사이트 (khahome.com).',
 	'project13_title': 'IVS Academy', 'project13_desc': 'IVS Academy 교육 기관 사이트 (ivsacademy.edu.vn).',
 	'project14_title': 'Luv Yoga', 'project14_desc': '요가 스튜디오 및 웰니스 사이트 (luv-yoga.site).',
-	'project2_title': 'IELTS Station 센터', 'project2_desc': '포괄적인 IELTS 준비 프로그램을 갖춘 현대적 영어 학습 센터입니다.',
+	'project2_title': 'IELTS Station 센터', 'project2_desc': '성과 중심 IELTS 준비 프로그램을 갖춘 현대적 영어 학습 센터입니다.',
 	'project3_title': 'AI 분석 대시보드', 'project3_desc': '비즈니스 인텔리전스를 위한 머신러닝 기반 실시간 분석 플랫폼입니다.',
 	'stat_years_experience_label': '경력(년)', 'stat_projects_completed_label': '완료된 프로젝트', 'stat_revenue_growth_label': '수익 성장', 'stat_client_satisfaction_label': '고객 만족도',
 	'scroll_indicator': '스크롤하여 탐색',
