@@ -48,10 +48,20 @@ function initPortfolioFilters() {
     });
 }
 
-// Contact form handling with validation
+// Contact form handling with validation and error handling
 function initContactForm() {
     const form = document.getElementById('contactForm');
-    if (!form) return;
+    if (!form) {
+        console.warn('Contact form not found');
+        return;
+    }
+
+    // Avoid attaching multiple listeners
+    if (form.__contactHandlerAttached) {
+        console.warn('Contact form handler already attached');
+        return;
+    }
+    form.__contactHandlerAttached = true;
 
     // Form elements
     const nameInput = form.querySelector('#name');

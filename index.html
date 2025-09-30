@@ -13,6 +13,16 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://minhtriet.online">
     
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none';">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://minhtriet.online">
@@ -38,6 +48,34 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nguyễn Minh Triết",
+        "jobTitle": "CEO & Technology Leader",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "IVS JSC",
+            "url": "https://ivsacademy.edu.vn"
+        },
+        "url": "https://minhtriet.online",
+        "image": "https://minhtriet.online/images/avatar.webp",
+        "sameAs": [
+            "https://linkedin.com/in/nguyen-minh-triet",
+            "https://github.com/minhtriet-ivs"
+        ],
+        "knowsAbout": [
+            "AI & EdTech",
+            "Microservices Architecture",
+            "Digital Transformation",
+            "Business Operations"
+        ],
+        "description": "CEO IVS JSC, chuyên gia chuyển đổi số và tối ưu hiệu suất. Kiến trúc Microservices & AI Adaptive Learning."
+    }
+    </script>
     
     <!-- Styles -->
     <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
@@ -122,7 +160,7 @@
         }
         
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
@@ -537,7 +575,7 @@
                 </nav>
                 <!-- Language Switcher (Hidden in print) -->
                                 <div class="lang-switcher">
-                                    <button id="lang-button">English ▼</button>
+                                    <button id="lang-button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">English ▼</button>
                                     <ul id="language-menu">
                                         <li data-lang="de">Deutsch</li>
                                         <li data-lang="en">English</li>
@@ -551,8 +589,8 @@
                                     </ul>
                                 </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden glass p-2 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <button id="mobile-menu-button" class="md:hidden glass p-2 rounded-lg" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
         </div>
         <!-- Mobile Menu (Hidden in print) -->
@@ -715,8 +753,9 @@
                     </div>
                     
                     <!-- Project Grid -->
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">                        
-                        <!-- Project 4: IVS ENG -->
+                    <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">                        
+                        <!-- Hiển thị 6 dự án đầu tiên theo mặc định -->
+                        <!-- Project 4: IVS ENG (Visible by default) -->
                         <div class="portfolio-item education" data-category="education">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 flex items-center justify-center">
@@ -732,7 +771,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Project 2: IELTS Station -->
+                        <!-- Project 2: IELTS Station (Visible by default) -->
                         <div class="portfolio-item business" data-category="business" style="cursor: pointer;">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
@@ -757,7 +796,7 @@
                                 </div>
                             </div>
                         </div>    
-                        <!-- Project 5: Mandarin by IVS -->
+                        <!-- Project 5: Mandarin by IVS (Visible by default) -->
                         <div class="portfolio-item education" data-category="education">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
@@ -774,7 +813,7 @@
                             </div>
                         </div>
 
-                        <!-- Project 6: Strive Streak -->
+                        <!-- Project 6: Strive Streak (Visible by default) -->
                         <div class="portfolio-item utility" data-category="utility">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
@@ -790,110 +829,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Project 7: QLGX -->
-                        <div class="portfolio-item utility" data-category="utility">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project7_title">QLGX</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project7_desc">Management / logistics platform (qlgx.netlify.app).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Management</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://qlgx.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 8: IVS StaySmart -->
-                        <div class="portfolio-item utility" data-category="utility">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project8_title">IVS StaySmart</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project8_desc">Accommodation booking / management microsite (ivs-staysmart.netlify.app).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Hospitality</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://ivs-staysmart.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi-->
-                        <div class="portfolio-item website" data-category="website">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project9_title">Trung tâm Hội nghị - Tiệc cưới</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project9_desc">Event & wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Events</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://trungtamhoinghitieccuoi-banhanh.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 10: SuoiCamp -->
-                        <div class="portfolio-item website" data-category="website">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project10_title">SuoiCamp</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project10_desc">Camp & outdoor activities site (suoicamp.netlify.app).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Events</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://suoicamp.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 11: KhaDock -->
-                        <div class="portfolio-item website" data-category="website">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project11_title">KhaDock</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project11_desc">E-commerce / product showcase for KhaDock (khadock.com).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">E-commerce</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://khadock.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 12: KhaHome -->
-                        <div class="portfolio-item website" data-category="website">
-                            <div class="card relative overflow-hidden">
-                                <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-500 rounded-lg mb-4 flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project12_title">KhaHome</h3>
-                                <p class="text-gray-600 mb-4" data-lang-key="project12_desc">Home decor / interior showcase site (khahome.com).</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Home</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <a href="https://khahome.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Project 13: IVS Academy -->
+                        
+                        <!-- Project 13: IVS Academy (Visible by default) -->
                         <div class="portfolio-item education" data-category="education">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-green-600 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
@@ -910,7 +847,7 @@
                             </div>
                         </div>
 
-                        <!-- Project 14: Luv Yoga -->
+                        <!-- Project 14: Luv Yoga (Visible by default) -->
                         <div class="portfolio-item utility" data-category="utility">
                             <div class="card relative overflow-hidden">
                                 <div class="aspect-video bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg mb-4 flex items-center justify-center">
@@ -926,7 +863,119 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Các dự án còn lại sẽ được ẩn đi ban đầu -->
+                        <!-- Project 7: QLGX (Hidden by default) -->
+                        <div class="portfolio-item utility hidden more-projects" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project7_title">QLGX</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project7_desc">Management / logistics platform (qlgx.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Management</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://qlgx.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: IVS StaySmart (Hidden by default) -->
+                        <div class="portfolio-item utility hidden more-projects" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project8_title">IVS StaySmart</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project8_desc">Accommodation booking / management microsite (ivs-staysmart.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Hospitality</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivs-staysmart.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project9_title">Trung tâm Hội nghị - Tiệc cưới</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project9_desc">Event & wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://trungtamhoinghitieccuoi-banhanh.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 10: SuoiCamp (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project10_title">SuoiCamp</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project10_desc">Camp & outdoor activities site (suoicamp.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://suoicamp.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 11: KhaDock (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project11_title">KhaDock</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project11_desc">E-commerce / product showcase for KhaDock (khadock.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">E-commerce</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khadock.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 12: KhaHome (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-500 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project12_title">KhaHome</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project12_desc">Home decor / interior showcase site (khahome.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Home</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khahome.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Toggle Button (Hidden in print) -->
+                    <div class="text-center mt-12 no-print">
+                        <button id="toggle-projects-btn" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                            <span id="toggle-text">Xem thêm dự án (6+)</span>
+                            <svg id="toggle-icon" class="ml-2 w-4 h-4 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -1285,8 +1334,7 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
                     </a>
                     <a href="https://github.com/ivsjsc" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-110">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
-                            </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path></svg>
                     </a>
                     <a href="mailto:nminhtr29@gmail.com" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-red-600 hover:text-white hover:bg-red-600 transition-all duration-300 transform hover:scale-110">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -1349,6 +1397,21 @@
                     <!-- Load external JS (deferred) -->
                     <script src="./js/utils.js" defer></script>
                     <script src="./js/main.js" defer></script>
+                    
+                    <!-- Service Worker Registration -->
+                    <script>
+                        if ('serviceWorker' in navigator) {
+                            window.addEventListener('load', () => {
+                                navigator.serviceWorker.register('./sw.js')
+                                    .then((registration) => {
+                                        console.log('SW registered: ', registration);
+                                    })
+                                    .catch((registrationError) => {
+                                        console.log('SW registration failed: ', registrationError);
+                                    });
+                            });
+                        }
+                    </script>
 
                     <!-- Project details modal (injected to enable click-to-open details while keeping theme) -->
                     <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 invisible opacity-0 z-50">
@@ -1454,6 +1517,95 @@
 
     <script>
         console.log('Current translations:', window.translations);
+    </script>
+
+    <script>
+        // Logic mới để ẩn/hiện dự án
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggle-projects-btn');
+            const moreProjects = document.querySelectorAll('.more-projects');
+            const toggleText = document.getElementById('toggle-text');
+            const toggleIcon = document.getElementById('toggle-icon');
+            let isExpanded = false;
+
+            // Đảm bảo các dự án phụ bị ẩn khi tải trang (dù đã có class hidden)
+            moreProjects.forEach(item => item.classList.add('hidden'));
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function() {
+                    isExpanded = !isExpanded;
+
+                    moreProjects.forEach(item => {
+                        // Thêm/bỏ class 'hidden'
+                        item.classList.toggle('hidden', !isExpanded);
+                        
+                        // Xử lý opacity và transform cho hiệu ứng mượt mà hơn
+                        if (isExpanded) {
+                            item.style.display = 'block'; // Hiển thị trước khi bỏ opacity
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300); // Ẩn hoàn toàn sau khi chuyển đổi opacity
+                        }
+                    });
+
+                    // Cập nhật text và icon
+                    if (isExpanded) {
+                        toggleText.textContent = 'Thu gọn dự án (Ẩn 6+)';
+                        toggleIcon.classList.add('rotate-180');
+                    } else {
+                        toggleText.textContent = 'Xem thêm dự án (6+)';
+                        toggleIcon.classList.remove('rotate-180');
+                    }
+
+                    // Điều chỉnh hiển thị khi bộ lọc đang hoạt động
+                    const activeFilter = document.querySelector('.filter-btn.active');
+                    if (activeFilter && activeFilter.getAttribute('data-filter') !== 'all') {
+                        // Nếu đang có bộ lọc, chạy lại bộ lọc để đảm bảo chỉ hiển thị các item hợp lệ
+                        const filterEvent = new CustomEvent('click');
+                        activeFilter.dispatchEvent(filterEvent);
+                    }
+                });
+            }
+            
+            // Cập nhật hàm lọc để tương thích với tính năng ẩn/hiện (Nếu đang ẩn, chỉ lọc các mục đang hiển thị)
+            // Cần cập nhật trong js/utils.js để đảm bảo tương thích với filters, nhưng vì tôi chỉ được cập nhật index.html, tôi sẽ thêm một logic đơn giản hóa.
+
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    const portfolioItems = document.querySelectorAll('#portfolio-grid .portfolio-item');
+
+                    portfolioItems.forEach(item => {
+                        // Chỉ lọc trên các mục đang hiện nếu chưa mở rộng, hoặc lọc trên tất cả nếu đã mở rộng
+                        const isMoreProject = item.classList.contains('more-projects');
+
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            // Nếu là mục phụ, chỉ hiện nếu đã mở rộng HOẶC không phải là mục phụ (mục chính)
+                            if (isMoreProject && !isExpanded) {
+                                item.style.display = 'none';
+                                item.style.opacity = '0';
+                            } else {
+                                item.style.display = 'block';
+                                setTimeout(() => item.style.opacity = '1', 50);
+                            }
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => item.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+
+
+        });
     </script>
 </body>
 </html>
