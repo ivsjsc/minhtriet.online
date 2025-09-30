@@ -5,7 +5,7 @@ window.translations_ko = {
 	'hero_name': 'NGUYEN MINH TRIET',
 	'hero_title': '전략 운영 및 기술 파트너 | 디지털 전환 및 성능 최적화',
 	'hero_subtitle': '기술 아키텍처(마이크로서비스, AI 적응형 학습), EdTech 제품 개발(R&D) 및 다중 산업 운영 거버넌스.',
-	'hero_cta': '협업 기회',
+	'hero_cta': 'Website IVS Academy',
 	'hero_contact': '지금 문의하기',
 	'about_title': '나에 대해',
 	'about_p1': '저는 응우옌 민 트리엣으로, 전략적 경영과 혁신 기술 사이의 효과적인 연결고리입니다. 다양한 산업 분야의 프로젝트 운영 및 개발 경험을 통해 운영 우수성과 지속 가능한 성장 촉진에 대한 깊은 이해를 보유하고 있습니다.',

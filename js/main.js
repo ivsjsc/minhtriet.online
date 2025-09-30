@@ -3,7 +3,7 @@
 
 // Global variables
 window.currentLang = 'vi';
-let typed = null;
+window.typed = window.typed || null;
 
 // Per-language translation objects are stored in /lang/*.js and are loaded on demand.
 // Keep an in-memory translations map which will be populated when lang files are loaded.
@@ -112,7 +112,7 @@ function initParticles() {
 // Typed text animation (with error handling)
 function initTypedText() {
     if (typeof Typed !== 'undefined') {
-        typed = new Typed('#typed-text', {
+        window.typed = new Typed('#typed-text', {
             strings: [
                 'CEO & Technology Leader',
                 'AI & EdTech Specialist', 

@@ -5,7 +5,7 @@ window.translations_de = {
 	'hero_name': 'NGUYEN MINH TRIET',
 	'hero_title': 'Strategischer Betriebs- & Technologiepartner | Digitale Transformation & Performance-Optimierung',
 	'hero_subtitle': 'Technologiearchitektur (Microservices, KI adaptive Lernsysteme), EdTech-Produktentwicklung (F&E) & branchenübergreifende Betriebssteuerung.',
-	'hero_cta': 'Kooperationsmöglichkeiten',
+	'hero_cta': 'Website IVS Academy',
 	'hero_contact': 'Jetzt kontaktieren',
 	'about_title': 'Über mich',
 	'about_p1': 'Ich verbinde effektiv strategisches Management mit bahnbrechender Technologie. Mit Erfahrung in Führungspositionen und multidisziplinärer Projektentwicklung verfüge ich über ein tiefes Verständnis für betriebliche Exzellenz und die Förderung nachhaltigen Wachstums.',

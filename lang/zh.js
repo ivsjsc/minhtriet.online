@@ -5,7 +5,7 @@ window.translations_zh = {
 	'hero_name': '阮明哲',
 	'hero_title': '战略运营与技术伙伴 | 数字化转型与绩效优化',
 	'hero_subtitle': '技术架构（微服务、AI 自适应学习）、教育技术产品研发（R&D）与多行业运营治理。',
-	'hero_cta': '合作机会',
+	'hero_cta': 'Website IVS Academy',
 	'hero_contact': '立即联系',
 	'about_title': '关于我',
 	'about_p1': '我是阮明哲，是战略管理与突破性技术之间的有效桥梁。凭借多行业项目管理和开发的经验，我深刻理解运营方法和促进可持续增长的策略。',

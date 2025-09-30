@@ -5,7 +5,7 @@ window.translations_vi = {
     'hero_name': 'NGUYỄN MINH TRIẾT',
     'hero_title': 'Đối tác Chiến lược Công nghệ | Chuyển đổi số & Tối ưu vận hành',
     'hero_subtitle': 'Kiến trúc công nghệ (Microservices, AI Adaptive Learning), phát triển sản phẩm EdTech (R&D) & quản trị vận hành đa ngành.',
-    'hero_cta': 'Cơ hội hợp tác',
+    'hero_cta': 'Website IVS Academy',
     'hero_contact': 'Liên hệ ngay',
     'about_title': 'Về tôi',
     'about_p1': 'Tôi là người kết nối hiệu quả giữa quản trị chiến lược và công nghệ đột phá. Với kinh nghiệm điều hành và phát triển dự án đa ngành, tôi am hiểu sâu sắc về cách thức vận hành và thúc đẩy tăng trưởng bền vững.',

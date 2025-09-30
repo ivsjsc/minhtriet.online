@@ -5,7 +5,7 @@ window.translations_en = {
     'hero_name': 'NGUYEN MINH TRIET',
     'hero_title': 'Strategic Operations & Technology Partner | Digital Transformation & Performance Optimization',
     'hero_subtitle': 'Technology architecture (Microservices, AI Adaptive Learning), EdTech product development (R&D) & multi-industry operations governance.',
-    'hero_cta': 'Opportunities to Collaborate',
+    'hero_cta': 'Website IVS Academy',
     'hero_contact': 'Contact Now',
     'about_title': 'About Me',
     'about_p1': 'I effectively connect strategic management and breakthrough technology. With experience in executive leadership and multi-disciplinary project development, I have deep understanding of operational excellence and driving sustainable growth.',

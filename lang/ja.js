@@ -5,7 +5,7 @@ window.translations_ja = {
 	'hero_name': 'NGUYEN MINH TRIET',
 	'hero_title': '戦略的オペレーション & テクノロジーパートナー | デジタルトランスフォーメーション & パフォーマンス最適化',
 	'hero_subtitle': 'テクノロジーアーキテクチャ（マイクロサービス、AIアダプティブラーニング）、EdTech製品開発（R&D）、および多業界の運用ガバナンス。',
-	'hero_cta': '協業のご案内',
+	'hero_cta': 'Website IVS Academy',
 	'hero_contact': '今すぐ連絡',
 	'about_title': '私について',
 	'about_p1': '私は戦略的経営と画期的技術を効果的に結びつける人物です。経営リーダーシップと多分野プロジェクト開発の経験を持ち、運用の卓越性と持続可能な成長の促進について深い理解を持っています。',
