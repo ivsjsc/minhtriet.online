@@ -2,7 +2,7 @@ window.translations_ko = {
 	'page_title': '응우옌 민 트리엣 - 기술 리더 및 AI 전문가',
 	'nav_about': '소개', 'nav_experience': '경력', 'nav_skills': '기술', 'nav_portfolio': '포트폴리오', 'nav_collaboration': '협업', 'nav_contact': '연락처',
 	'nav_about_mobile': '소개', 'nav_experience_mobile': '경력', 'nav_skills_mobile': '기술', 'nav_portfolio_mobile': '포트폴리오', 'nav_collaboration_mobile': '협업', 'nav_contact_mobile': '연락처',
-	'hero_name': 'NGUYEN MINH TRIET',
+	'hero_name': '교육, 운영 및 기술의 전략적 파트너',
 	'hero_title': '전략 운영 및 기술 파트너 | 디지털 전환 및 성능 최적화',
 	'hero_subtitle': '기술 아키텍처(마이크로서비스, AI 적응형 학습), EdTech 제품 개발(R&D) 및 다중 산업 운영 거버넌스.',
 	'hero_cta': 'Website IVS Academy',

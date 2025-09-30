@@ -2,7 +2,7 @@ window.translations_ja = {
 	'page_title': 'グエン・ミン・トリエット - テクノロジーリーダー & AI専門家',
 	'nav_about': '概要', 'nav_experience': '経歴', 'nav_skills': 'スキル', 'nav_portfolio': 'ポートフォリオ', 'nav_collaboration': '協力', 'nav_contact': 'お問い合わせ',
 	'nav_about_mobile': '概要', 'nav_experience_mobile': '経歴', 'nav_skills_mobile': 'スキル', 'nav_portfolio_mobile': 'ポートフォリオ', 'nav_collaboration_mobile': '協力', 'nav_contact_mobile': 'お問い合わせ',
-	'hero_name': 'NGUYEN MINH TRIET',
+	'hero_name': '教育、運営、テクノロジーの戦略的パートナー',
 	'hero_title': '戦略的オペレーション & テクノロジーパートナー | デジタルトランスフォーメーション & パフォーマンス最適化',
 	'hero_subtitle': 'テクノロジーアーキテクチャ（マイクロサービス、AIアダプティブラーニング）、EdTech製品開発（R&D）、および多業界の運用ガバナンス。',
 	'hero_cta': 'Website IVS Academy',

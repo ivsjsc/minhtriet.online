@@ -2,7 +2,7 @@ window.translations_es = {
 	'page_title': 'Nguyen Minh Triet - Líder tecnológico y experto en IA',
 	'nav_about': 'Acerca de', 'nav_experience': 'Experiencia', 'nav_skills': 'Habilidades', 'nav_portfolio': 'Proyectos', 'nav_collaboration': 'Colaboración', 'nav_contact': 'Contacto',
 	'nav_about_mobile': 'Acerca de', 'nav_experience_mobile': 'Experiencia', 'nav_skills_mobile': 'Habilidades', 'nav_portfolio_mobile': 'Proyectos', 'nav_collaboration_mobile': 'Colaboración', 'nav_contact_mobile': 'Contacto',
-	'hero_name': 'NGUYEN MINH TRIET',
+	'hero_name': 'Socio estratégico en educación, operaciones y tecnología',
 	'hero_title': 'Socio estratégico en operaciones y tecnología | Transformación digital y optimización de rendimiento',
 	'hero_subtitle': 'Arquitectura tecnológica (Microservicios, Aprendizaje Adaptativo AI), desarrollo de productos EdTech (I+D) y gobernanza de operaciones multi-industria.',
 	'hero_cta': 'Website IVS Academy',

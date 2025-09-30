@@ -2,7 +2,7 @@ window.translations_zh = {
 	'page_title': '阮明哲 - 技术领导与 AI 专家',
 	'nav_about': '关于', 'nav_experience': '经历', 'nav_skills': '技能', 'nav_portfolio': '作品集', 'nav_collaboration': '合作', 'nav_contact': '联系',
 	'nav_about_mobile': '关于', 'nav_experience_mobile': '经历', 'nav_skills_mobile': '技能', 'nav_portfolio_mobile': '作品集', 'nav_collaboration_mobile': '合作', 'nav_contact_mobile': '联系',
-	'hero_name': '阮明哲',
+	'hero_name': '教育、运营与技术的战略合作伙伴',
 	'hero_title': '战略运营与技术伙伴 | 数字化转型与绩效优化',
 	'hero_subtitle': '技术架构（微服务、AI 自适应学习）、教育技术产品研发（R&D）与多行业运营治理。',
 	'hero_cta': 'Website IVS Academy',
