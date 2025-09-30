@@ -63,5 +63,9 @@ window.translations_vi = {
     'form_subject_placeholder': 'Chọn chủ đề...', 'form_subject_business': 'Hợp tác kinh doanh', 'form_subject_project': 'Đề xuất dự án', 'form_subject_speaking': 'Mời diễn thuyết', 'form_subject_other': 'Khác',
     'contact_social_prompt': 'Kết nối qua các kênh mạng xã hội:',
     'footer_copyright': '© 2025 Nguyễn Minh Triết. Đã đăng ký bản quyền.',
-    'footer_credit': 'Giao diện thiết kế và xây dựng bởi Trí tuệ Nhân tạo'
+    'footer_credit': 'Giao diện thiết kế và xây dựng bởi Trí tuệ Nhân tạo',
+    'skill_cat6_title': 'Quan hệ đối tác / Chăm sóc khách hàng',
+    'skill_cat6_li1': 'Phát triển mối quan hệ đối tác chiến lược',
+    'skill_cat6_li2': 'Quản lý chăm sóc khách hàng',
+    'skill_cat6_li3': 'Phân tích nhu cầu khách hàng'
 };

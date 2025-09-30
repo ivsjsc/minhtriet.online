@@ -48,6 +48,7 @@ window.translations_ko = {
 	'skill_cat3_title': '기술 및 시스템', 'skill_cat3_li1': '마이크로서비스 아키텍처', 'skill_cat3_li2': '웹/모바일 개발', 'skill_cat3_li3': 'SaaS 플랫폼 개발', 'skill_cat3_li4': 'DB 설계',
 	'skill_cat4_title': 'AI 및 자동화', 'skill_cat4_li1': 'AI 통합 (적응형 학습)', 'skill_cat4_li2': 'RPA', 'skill_cat4_li3': '디지털 전환',
 	'skill_cat5_title': '교육 및 제품', 'skill_cat5_li1': '커리큘럼 개발 (K-12, STEAM)', 'skill_cat5_li2': 'LMS/ERP/CRM 구현', 'skill_cat5_li3': 'EdTech 시장 분석',
+	'skill_cat6_title': '파트너십 / 고객관리', 'skill_cat6_li1': '전략적 파트너십 개발', 'skill_cat6_li2': '고객 케어 관리', 'skill_cat6_li3': '고객 요구 분석',
 	'collaboration_title': '협업 가능',
 	'collaboration_p1': '저는 제 경험과 전문성을 비전 있는 기업에 기여할 기회를 찾고 있으며 다음 역할에 대해 논의할 의향이 있습니다:',
 	'collaboration_role1_title': '전략적 직책 (정규직/계약직)', 'collaboration_role1_desc': '운영을 운영 및 최적화하고 디지털 전환과 제품 개발을 이끄는 고위 리더십 역할을 맡습니다.',

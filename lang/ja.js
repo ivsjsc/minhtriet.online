@@ -48,6 +48,7 @@ window.translations_ja = {
 	'skill_cat3_title': '技術 & システム', 'skill_cat3_li1': 'マイクロサービスアーキテクチャ', 'skill_cat3_li2': 'Web/モバイル開発', 'skill_cat3_li3': 'SaaSプラットフォーム開発', 'skill_cat3_li4': 'DB設計',
 	'skill_cat4_title': 'AI & 自動化', 'skill_cat4_li1': 'AI統合（アダプティブラーニング）', 'skill_cat4_li2': 'RPA', 'skill_cat4_li3': 'デジタルトランスフォーメーション',
 	'skill_cat5_title': '教育 & 製品', 'skill_cat5_li1': 'カリキュラム開発（K-12、STEAM）', 'skill_cat5_li2': 'LMS/ERP/CRM実装', 'skill_cat5_li3': 'EdTech市場分析',
+	'skill_cat6_title': 'パートナーシップ / カスタマーケア', 'skill_cat6_li1': '戦略的パートナーシップ開発', 'skill_cat6_li2': 'カスタマーケア管理', 'skill_cat6_li3': '顧客ニーズ分析',
 	'collaboration_title': '協力可能',
 	'collaboration_p1': '私は、自分の経験と専門知識をビジョナリーな企業に貢献する機会を探しています。以下の役割について話し合うことができます：',
 	'collaboration_role1_title': '戦略的ポジション（フルタイム/パートタイム）', 'collaboration_role1_desc': '運用の運営と最適化、デジタルトランスフォーメーションと製品開発を主導するシニアリーダーシップの役割を引き受けます。',

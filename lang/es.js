@@ -48,6 +48,7 @@ window.translations_es = {
 	'skill_cat3_title': 'Tecnología y Sistemas', 'skill_cat3_li1': 'Arquitectura de microservicios', 'skill_cat3_li2': 'Desarrollo Web/Móvil', 'skill_cat3_li3': 'Desarrollo de plataformas SaaS', 'skill_cat3_li4': 'Diseño de bases de datos',
 	'skill_cat4_title': 'IA y Automatización', 'skill_cat4_li1': 'Integración de IA (Aprendizaje Adaptativo)', 'skill_cat4_li2': 'RPA', 'skill_cat4_li3': 'Transformación digital',
 	'skill_cat5_title': 'Educación y Productos', 'skill_cat5_li1': 'Desarrollo curricular (K-12, STEAM)', 'skill_cat5_li2': 'Implementación de LMS/ERP/CRM', 'skill_cat5_li3': 'Análisis del mercado EdTech',
+	'skill_cat6_title': 'Alianzas / Atención al Cliente', 'skill_cat6_li1': 'Desarrollo de alianzas estratégicas', 'skill_cat6_li2': 'Gestión de atención al cliente', 'skill_cat6_li3': 'Análisis de necesidades del cliente',
 	'collaboration_title': 'Abierto a colaborar',
 	'collaboration_p1': 'Busco oportunidades para aportar mi experiencia y conocimiento a empresas con visión. Estoy abierto a discutir los siguientes roles:',
 	'collaboration_role1_title': 'Puesto estratégico (Tiempo completo/Medio tiempo)', 'collaboration_role1_desc': 'Asumir puestos de liderazgo senior para gestionar y optimizar operaciones, liderar la transformación digital y el desarrollo de productos.',

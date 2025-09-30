@@ -64,5 +64,9 @@ window.translations_en = {
     'form_subject_placeholder': 'Choose subject...', 'form_subject_business': 'Business Collaboration', 'form_subject_project': 'Project Proposal', 'form_subject_speaking': 'Speaking Invitation', 'form_subject_other': 'Other',
     'contact_social_prompt': 'Connect via social channels:',
     'footer_copyright': '© 2025 Nguyen Minh Triet. All Rights Reserved.',
-    'footer_credit': 'Interface designed and built by Artificial Intelligence'
+    'footer_credit': 'Interface designed and built by Artificial Intelligence',
+    'skill_cat6_title': 'Partnerships / Customer Care',
+    'skill_cat6_li1': 'Strategic partnership development',
+    'skill_cat6_li2': 'Customer care management',
+    'skill_cat6_li3': 'Customer needs analysis'
 };

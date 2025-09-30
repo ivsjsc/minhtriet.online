@@ -48,6 +48,7 @@ window.translations_de = {
 	'skill_cat3_title': 'Technologie & Systeme', 'skill_cat3_li1': 'Microservices-Architektur', 'skill_cat3_li2': 'Web/Mobile-Entwicklung', 'skill_cat3_li3': 'SaaS-Plattform-Entwicklung', 'skill_cat3_li4': 'DB-Design',
 	'skill_cat4_title': 'KI & Automatisierung', 'skill_cat4_li1': 'KI-Integration (Adaptive Learning)', 'skill_cat4_li2': 'RPA (Robotergesteuerte Prozessautomation)', 'skill_cat4_li3': 'Digitale Transformation',
 	'skill_cat5_title': 'Bildung & Produkte', 'skill_cat5_li1': 'Curriculum-Entwicklung (K-12, STEAM)', 'skill_cat5_li2': 'LMS/ERP/CRM-Implementierung', 'skill_cat5_li3': 'EdTech-Marktanalyse',
+	'skill_cat6_title': 'Partnerschaften / Kundenbetreuung', 'skill_cat6_li1': 'Strategische Partnerschaftsentwicklung', 'skill_cat6_li2': 'Kundenbetreuungsmanagement', 'skill_cat6_li3': 'Analyse der Kundenbedürfnisse',
 	'collaboration_title': 'Offen für Zusammenarbeit',
 	'collaboration_p1': 'Ich suche Möglichkeiten, meine Erfahrung und Expertise in visionären Unternehmen einzubringen. Ich bin offen, über folgende Rollen zu sprechen:',
 	'collaboration_role1_title': 'Strategische Position (Vollzeit/Teilzeit)', 'collaboration_role1_desc': 'Übernahme von Führungspositionen zur Steuerung und Optimierung von Betrieben, Leitung der digitalen Transformation und Produktentwicklung.',

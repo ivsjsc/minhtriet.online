@@ -220,6 +220,11 @@ function applyLanguage(lang) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // Re-render Experience section if function exists
+    if (typeof window.renderExperience === 'function') {
+        window.renderExperience();
+    }
+
     // Update document language
     document.documentElement.lang = lang;
 }

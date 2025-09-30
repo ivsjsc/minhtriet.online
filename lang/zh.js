@@ -48,6 +48,7 @@ window.translations_zh = {
 	'skill_cat3_title': '技术与系统', 'skill_cat3_li1': '微服务架构', 'skill_cat3_li2': 'Web/移动开发', 'skill_cat3_li3': 'SaaS 平台开发', 'skill_cat3_li4': '数据库设计',
 	'skill_cat4_title': '人工智能与自动化', 'skill_cat4_li1': 'AI 集成（自适应学习）', 'skill_cat4_li2': '机器人流程自动化 (RPA)', 'skill_cat4_li3': '数字化转型',
 	'skill_cat5_title': '教育与产品', 'skill_cat5_li1': '课程开发（K-12、STEAM）', 'skill_cat5_li2': '实施 LMS/ERP/CRM', 'skill_cat5_li3': 'EdTech 市场分析',
+	'skill_cat6_title': '合作夥伴 / 客戶關懷', 'skill_cat6_li1': '策略性合作夥伴發展', 'skill_cat6_li2': '客戶關懷管理', 'skill_cat6_li3': '客戶需求分析',
 	'collaboration_title': '开放合作',
 	'collaboration_p1': '我期待将我的经验与专长贡献给有远见的企业，愿意讨论以下角色：',
 	'collaboration_role1_title': '战略职位（全职/兼职）', 'collaboration_role1_desc': '承担高层领导职位，运行并优化运营，领导数字化转型与产品开发。',
