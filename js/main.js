@@ -39,6 +39,15 @@ function initializeWebsite() {
     initPortfolioFilters();
     
     // Initialize contact form
+    // Ensure a safe initContactForm exists. The page currently includes an inline
+    // submit handler in `index.html`; define a no-op here to avoid a runtime
+    // ReferenceError when `initializeWebsite` calls `initContactForm()`.
+    function initContactForm() {
+        // No-op: inline script in index.html attaches the form submit listener.
+        // If you prefer centralizing the handler, replace this no-op with the
+        // form initialization logic and remove the inline script in index.html.
+        return;
+    }
     initContactForm();
     
     // Initialize navigation
