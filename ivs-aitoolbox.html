@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="toolbox_doc_title">AI Toolbox - Tổng Hợp Công Cụ AI Hiệu Quả Nhất</title>
+    <!-- Load Tailwind CSS (giống như trong index.html) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Sử dụng background tương tự như body trong minhtriet.online/styles.css */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        /* Custom gradient section title */
+        .section-title {
+            background: linear-gradient(90deg, #4F46E5, #8B5CF6); /* Indigo to Violet */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+        /* Tool card hover effect, lấy cảm hứng từ hover trong minhtriet.online/index.html */
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-left: 5px solid transparent;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            /* Thêm gradient nhẹ cho nền card */
+            background: linear-gradient(180deg, #ffffff 95%, #f7f7ff 100%);
+        }
+        .tool-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
+            border-left-color: #4F46E5; /* Indigo-600 */
+        }
+        /* Active filter button - CÁC NÚT LỌC CHÍNH */
+        .usecase-btn.active {
+            background-color: #4F46E5;
+            color: white;
+            box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
+            font-weight: 700;
+            transform: translateY(-3px);
+            border-color: #4F46E5;
+        }
+        .usecase-btn {
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        /* Bộ lọc phụ (tags) */
+        .filter-btn.active {
+            background-color: #8B5CF6;
+            color: white;
+            box-weight: 600;
+        }
+        /* Responsive search and filter layout */
+        @media (max-width: 768px) {
+            .filter-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .filter-buttons-scroll {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding-bottom: 0.5rem;
+                flex-wrap: nowrap; /* Buộc nút cuộn ngang */
+            }
+            .filter-buttons-scroll button {
+                flex-shrink: 0;
+            }
+            /* Đảm bảo Language Switcher hiển thị trên Mobile */
+            #lang-button {
+                padding: 6px 10px; 
+                font-size: 0.9rem;
+            }
+            .lang-switcher {
+                /* Dùng flex-shrink-0 để không bị co lại trên mobile */
+                flex-shrink: 0;
+                margin-left: 1rem; /* Khoảng cách với liên kết Trang Chủ */
+            }
+            /* Căn chỉnh lại Navbar trên mobile */
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            /* FIX: Giảm kích thước font link trang chủ trên mobile */
+            .home-link-small {
+                font-size: 1rem; /* Giảm từ text-xl xuống */
+            }
+        }
+        /* Style cho phần giải thích */
+        .concept-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #4F46E5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        /* Iframe container for responsiveness */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Chiều cao mặc định */
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+        /* Feature Tags Styling */
+        .feature-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px; /* rounded-full */
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .feature-best { background-color: #FFECB3; color: #FF9800; } /* Yellow for Best */
+        .feature-free { background-color: #B9F6CA; color: #00C853; } /* Green for Free */
+        .feature-speed { background-color: #BBDEFB; color: #2196F3; } /* Blue for Speed */
+        .feature-context { background-color: #E1BEE7; color: #9C27B0; } /* Purple for Context */
+        .feature-expensive { background-color: #FFCDD2; color: #F44336; } /* Red for High Cost */
+
+        /* Language Switcher Dropdown Styles */
+        .lang-switcher { position: relative; display: inline-block; }
+        #lang-button {
+          background: #4F46E5; color: #fff; border: none; padding: 8px 12px;
+          border-radius: 4px; cursor: pointer; font-weight: bold;
+          display: flex; align-items: center; 
+        }
+        #language-menu {
+          display: none; position: absolute; top: 100%; right: 0;
+          background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+          border-radius: 4px; margin-top: 4px; list-style: none;
+          padding: 0; overflow: hidden; z-index: 1000;
+          min-width: 120px;
+        }
+        #language-menu.active { display: block; }
+        #language-menu li {
+          padding: 8px 12px; cursor: pointer; white-space: nowrap;
+          font-size: 0.95rem;
+        }
+        #language-menu li:hover {
+          background: #f0f0f0;
+          color: #3b82f6;
+        }
+        #language-menu li.selected {
+             background: #e0f2fe; /* blue-50 */
+             font-weight: 600;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar đơn giản để liên kết lại trang chính -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 navbar-container">
+            <a href="index.html" class="font-bold text-gray-900 hover:text-indigo-600 transition home-link-small sm:text-xl" data-lang-key="toolbox_nav_back_small">
+                minhtriet.online
+            </a>
+            
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button id="lang-button" class="flex items-center">
+                    <span id="current-lang-text">Tiếng Việt</span> 
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <ul id="language-menu">
+                    <li data-lang="vi">Tiếng Việt</li>
+                    <li data-lang="en">English</li>
+                    <!-- Có thể thêm các ngôn ngữ khác nếu cần data dịch -->
+                </ul>
+            </div>
+            <!-- End Language Switcher -->
+        </div>
+    </nav>
+    
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center py-10 bg-white shadow-xl rounded-xl mb-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-3" data-lang-key="toolbox_title">
+                AI TOOLBOX
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="toolbox_subtitle">
+                Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
+            </p>
+        </header>
+
+        <!-- Main Content: Filter by Use Case (Mục đích sử dụng) - ƯU TIÊN SỐ 1 -->
+        <section class="mb-12">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <!-- Tiêu đề mới, tập trung vào giải quyết vấn đề -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center" data-lang-key="toolbox_h2_usecase">Tôi Muốn Dùng AI Để Làm Gì?</h2>
+                
+                <!-- Use Case Buttons -->
+                <div id="useCaseButtons" class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
+                    <!-- Nút lọc chính, thân thiện với người dùng không chuyên -->
+                    <button class="usecase-btn active px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="all" onclick="selectUseCase('all')">
+                        <span class="text-xl mr-2">🌟</span><span data-lang-key="toolbox_filter_all">Tất cả Công cụ</span>
+                    </button>
+                    <button class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="Viết lách" onclick="selectUseCase('Viết lách')">
+                        <span class="text-xl mr-2">✍️</span><span data-lang-key="toolbox_filter_writing">Viết, Tóm tắt, Ý tưởng</span>
+                    </button>
+                    <button class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="Hình ảnh" onclick="selectUseCase('Hình ảnh')">
+                        <span class="text-xl mr-2">🖼️</span><span data-lang-key="toolbox_filter_image">Vẽ, Thiết kế Đồ họa</span>
+                    </button>
+                    <button class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="Video & Audio" onclick="selectUseCase('Video & Audio')">
+                        <span class="text-xl mr-2">🎥</span><span data-lang-key="toolbox_filter_video">Tạo Video, Lồng tiếng</span>
+                    </button>
+                    <button class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="Học tập" onclick="selectUseCase('Học tập')">
+                        <span class="text-xl mr-2">📚</span><span data-lang-key="toolbox_filter_study">Học ngoại ngữ, Nghiên cứu</span>
+                    </button>
+                    <button class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-indigo-100 transition" data-filter="Lập trình" onclick="selectUseCase('Lập trình')">
+                        <span class="text-xl mr-2">💻</span><span data-lang-key="toolbox_filter_code">Hỗ trợ Lập trình, Tự động hóa</span>
+                    </button>
+                </div>
+                
+                <!-- Secondary Filter / Search Section (cho người dùng muốn tìm kiếm sâu hơn) -->
+                <div class="flex items-center space-x-4 border-t pt-4 mt-4">
+                    <div class="w-full md:w-auto relative flex-shrink-0">
+                        <input type="text" id="searchInput" data-lang-key-placeholder="toolbox_search_placeholder" placeholder="Tìm kiếm chi tiết (tùy chọn)..."
+                               class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500 transition"
+                               onkeyup="filterTools()">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    
+                    <div id="filterButtons" class="filter-buttons-scroll flex gap-2 w-full overflow-x-auto pb-1">
+                        <span class="text-sm text-gray-500 font-medium whitespace-nowrap pt-2 pr-1" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
+                        <!-- Filter buttons (tags) will be dynamically added here -->
+                    </div>
+
+                    <!-- Tips Button -->
+                    <button id="showTipsBtn" onclick="showTipsModal()" 
+                            class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-purple-600 text-white font-bold hover:bg-purple-700 transition transform hover:scale-105 shadow-md flex items-center justify-center flex-shrink-0">
+                        <span class="text-xl mr-2">💡</span><span data-lang-key="toolbox_tips_cta">Tips (Hướng dẫn)</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hướng dẫn hành động sau khi lọc -->
+        <p class="text-base text-gray-600 mb-6 px-4 py-3 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg" data-lang-key="important_tips_action">
+            <span data-lang-key="important_tips_text">
+                **TIPS QUAN TRỌNG:** Trước khi nhấp vào một công cụ, hãy nhớ xem mục **"Tips (Hướng dẫn)"** màu tím. Nó sẽ chỉ cho bạn cách đặt câu hỏi và khai thác sức mạnh của AI đó tốt nhất!
+            </span>
+        </p>
+
+        <!-- Tool List -->
+        <section>
+            <div id="toolsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tool cards will be generated here -->
+            </div>
+            <div id="noResults" class="hidden text-center text-xl text-gray-500 mt-10 p-6 bg-white rounded-xl shadow" data-lang-key="toolbox_no_results">
+                Không tìm thấy công cụ nào phù hợp với tiêu chí của bạn.
+            </div>
+        </section>
+        
+        <!-- --- PHẦN PHỤ TRỢ (MOVED DOWN) --- -->
+        
+        <!-- AI CHATBOT HƯỚNG DẪN TƯƠNG LAI -->
+        <section class="mb-12 pt-10 border-t border-gray-300">
+            <div class="bg-indigo-600 text-white rounded-xl shadow-2xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4" data-lang-key="chatbot_future_title">Hướng Dẫn Tự Động: Trợ Lý AI IVS Sắp Ra Mắt!</h2>
+                <p class="text-lg mb-6" data-lang-key="chatbot_future_desc">
+                    Bạn cần sự hướng dẫn chi tiết ngay bây giờ? Trong tương lai gần, bạn có thể **trò chuyện trực tiếp** với Trợ lý AI của IVS để nhận được câu trả lời cá nhân hóa cho mọi thắc mắc về công cụ và cách sử dụng.
+                </p>
+                <button onclick="alert('Tính năng đang được IVS Celestech phát triển! Hãy ghé thăm lại sau để trải nghiệm chatbot hướng dẫn tự động của chúng tôi.')" 
+                        class="inline-flex items-center px-8 py-3 bg-white text-indigo-600 font-bold rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
+                    <span class="text-2xl mr-2">🤖</span><span data-lang-key="chatbot_future_cta">Chờ Đón Chatbot Hướng Dẫn</span>
+                </button>
+            </div>
+        </section>
+        <!-- END CHATBOT FUTURE -->
+
+
+        <!-- CONCEPT EXPLANATION SECTION (Di chuyển xuống dưới) -->
+        <section class="mb-12 pt-10 border-t border-gray-300">
+            <div class="concept-card rounded-xl p-6">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4 text-center" data-lang-key="concept_h2_title">Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)</h2>
+                <div class="grid md:grid-cols-3 gap-6 text-sm">
+                    <!-- Concept 1: AI Độc Quyền (Closed Source) -->
+                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
+                        <h3 class="font-bold text-lg text-red-600 mb-2" data-lang-key="concept_closed_title">1. AI Độc Quyền (Closed Source)</h3>
+                        <p class="mb-2" data-lang-key="concept_closed_desc">AI chạy trên máy chủ của công ty (Ví dụ: ChatGPT, Gemini). Người dùng không thể xem hoặc tùy chỉnh mã nguồn.</p>
+                        <p class="font-semibold text-gray-700" data-lang-key="concept_closed_pro_con">Ưu điểm: Rất mạnh mẽ, dễ dùng. Nhược điểm: Mất phí, dữ liệu bị kiểm soát.</p>
+                    </div>
+
+                    <!-- Concept 2: AI Mã Nguồn Mở (Open Source) -->
+                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
+                        <h3 class="font-bold text-lg text-green-600 mb-2" data-lang-key="concept_open_title">2. AI Mã Nguồn Mở (Open Source)</h3>
+                        <p class="mb-2" data-lang-key="concept_open_desc">Mã mô hình được công bố rộng rãi (Ví dụ: Llama 3, Stable Diffusion). Ai cũng có thể nghiên cứu và cải tiến.</p>
+                        <p class="font-semibold text-gray-700" data-lang-key="concept_open_pro_con">Ưu điểm: Minh bạch, có thể tùy biến, miễn phí. Nhược điểm: Cần kiến thức kỹ thuật để vận hành.</p>
+                    </div>
+
+                    <!-- Concept 3: AI Ngoại Tuyến (Local/Offline) -->
+                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
+                        <h3 class="font-bold text-lg text-blue-600 mb-2" data-lang-key="concept_local_title">3. AI Ngoại Tuyến (Local/Offline)</h3>
+                        <p class="mb-2" data-lang-key="concept_local_desc">AI chạy hoàn toàn trên máy tính của bạn (Dùng Ollama hoặc Llama). Dữ liệu không gửi lên cloud.</p>
+                        <p class="font-semibold text-gray-700" data-lang-key="concept_local_pro_con">Ưu điểm: Bảo mật tuyệt đối, không cần Internet. Nhược điểm: Yêu cầu máy tính cấu hình mạnh (GPU).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END CONCEPT EXPLANATION SECTION -->
+
+        <!-- NEW IFRAME SECTION: Leaderboard (Di chuyển xuống dưới) -->
+        <section class="mb-12 pt-10 border-t border-gray-300">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
+                <div class="text-center text-sm text-gray-600 mb-4" data-lang-key="leaderboard_warning">
+                    *LƯU Ý: Nếu không thấy nội dung, có thể do trang web nguồn ngăn chặn việc nhúng (embedding) vì lý do bảo mật. Vui lòng bấm vào nút dưới để xem trực tiếp.
+                </div>
+                
+                <div class="iframe-container mb-6">
+                    <iframe id="leaderboardIframe" 
+                            src="https://artificialanalysis.ai/leaderboards/models" 
+                            title="Bảng Xếp Hạng Mô Hình AI" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="text-center">
+                    <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition-all duration-300">
+                        <span data-lang-key="leaderboard_cta">Xem Bảng Xếp Hạng Trực Tiếp →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- END IFRAME SECTION -->
+        
+        <!-- --- END PHẦN PHỤ TRỢ --- -->
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 mt-12 bg-gray-900 text-gray-400">
+        <p class="text-sm" data-lang-key="toolbox_footer_credit">Được phát triển bởi <span class="font-bold text-indigo-400">IVS Celestech</span>. Tối ưu hóa hiệu suất với AI.</p>
+    </footer>
+
+    <!-- Tips Modal -->
+    <div id="tipsModal" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 invisible opacity-0 z-50">
+        <div class="modal-content transform -translate-y-10 bg-white rounded-xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center z-10">
+                <h3 class="text-2xl font-bold text-gray-900" data-lang-key="modal_tips_title">💡 Tips Dùng AI Hiệu Quả Nhất</h3>
+                <button onclick="hideTipsModal()" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div id="modalTipsContent" class="p-6 sm:p-8 space-y-6 text-gray-700">
+                <!-- Content will be generated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // --- DATA DỊCH THUẬT (VIETNAMESE & ENGLISH) ---
+        const allTranslations = {
+            'vi': {
+                'toolbox_doc_title': 'AI Toolbox - Tổng Hợp Công Cụ AI Hiệu Quả Nhất',
+                'toolbox_nav_back_small': 'minhtriet.online',
+                'toolbox_nav_back': '← Trang Chủ Minh Triết',
+                'toolbox_nav_sub': 'IVS Celestech AI Initiative',
+                'toolbox_title': 'AI TOOLBOX',
+                'toolbox_subtitle': 'Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.', 
+                'toolbox_h2_usecase': 'Tôi Muốn Dùng AI Để Làm Gì?', 
+                'toolbox_filter_all': 'Tất cả Công cụ',
+                'toolbox_filter_writing': 'Viết, Tóm tắt, Ý tưởng', 
+                'toolbox_filter_image': 'Vẽ, Thiết kế Đồ họa', 
+                'toolbox_filter_video': 'Tạo Video, Lồng tiếng', 
+                'toolbox_filter_study': 'Học ngoại ngữ, Nghiên cứu', 
+                'toolbox_filter_code': 'Hỗ trợ Lập trình, Tự động hóa', 
+                'toolbox_search_placeholder': 'Tìm kiếm chi tiết (tùy chọn)...',
+                'toolbox_filter_tags_label': 'Lọc theo Tags chuyên môn:', 
+                'toolbox_no_results': 'Không tìm thấy công cụ nào phù hợp với tiêu chí của bạn.',
+                'toolbox_footer_credit': 'Được phát triển bởi IVS Celestech. Tối ưu hóa hiệu suất với AI.',
+                // TIPS Modal Content
+                'modal_tips_title': '💡 Tips Dùng AI Hiệu Quả Nhất',
+                'tip1_title': '1. Đừng hỏi AI, Hãy Giao Việc cho AI',
+                'tip1_desc': 'Thay vì hỏi: "ChatGPT là gì?", hãy thử: "Tôi đang làm Project X. Bạn hãy đóng vai trò là một [Vai trò chuyên gia] và giúp tôi [Mục tiêu cụ thể]."',
+                'tip2_title': '2. Sử dụng "Công Thức Prompt Siêu Đơn Giản"',
+                'tip2_desc': 'Khi không biết bắt đầu, hãy dùng công thức 3 bước: [Vai trò của AI] + [Mục tiêu] + [Định dạng đầu ra]. Ví dụ: "Đóng vai nhà phê bình công nghệ. Đánh giá Google Flow. Trả lời dưới dạng 5 gạch đầu dòng." ',
+                'tip3_title': '3. Chia nhỏ Vấn Đề (Quan trọng cho người mới)',
+                'tip3_desc': 'Nếu thấy quá khó, đừng hỏi một câu dài. Hãy chia thành 3 câu hỏi nhỏ, dễ hiểu. AI làm tốt nhất khi bạn cho nó từng bước đi rõ ràng.',
+                'tip4_title': '4. Thử Nghiệm với Nút Lọc "Tôi Muốn Làm Gì"',
+                'tip4_desc': 'Nếu bạn chưa rõ cần công cụ nào, hãy bấm vào các nút Viết lách, Hình ảnh hoặc Lập trình ở trên. Đây là cách nhanh nhất để thấy AI giải quyết vấn đề của bạn.',
+                'tip5_title': '5. Tuyệt đối Đừng vội nản (Hội thoại là chìa khóa)',
+                'tip5_desc': 'Nếu AI không trả lời đúng ý bạn ngay lập tức, đừng vội đánh giá thấp nó. Hãy hỏi thêm 1-2 câu để AI hiểu ngữ cảnh của bạn hơn. Kỹ năng hỏi tiếp (Refining) là điều quan trọng nhất để khai thác AI.',
+                // CONCEPTS
+                'concept_h2_title': 'Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)',
+                'concept_closed_title': '1. AI Độc Quyền (Closed Source)',
+                'concept_closed_desc': 'AI chạy trên máy chủ của công ty (Ví dụ: ChatGPT, Gemini). Người dùng không thể xem hoặc tùy chỉnh mã nguồn.',
+                'concept_closed_pro_con': 'Ưu điểm: Rất mạnh mẽ, dễ dùng. Nhược điểm: Mất phí, dữ liệu bị kiểm soát.',
+                'concept_open_title': '2. AI Mã Nguồn Mở (Open Source)',
+                'concept_open_desc': 'Mã mô hình được công bố rộng rãi (Ví dụ: Llama 3, Stable Diffusion). Ai cũng có thể nghiên cứu và cải tiến.',
+                'concept_open_pro_con': 'Ưu điểm: Minh bạch, có thể tùy biến, miễn phí. Nhược điểm: Cần kiến thức kỹ thuật để vận hành.',
+                'concept_local_title': '3. AI Ngoại Tuyến (Local/Offline)',
+                'concept_local_desc': 'AI chạy hoàn toàn trên máy tính của bạn (Dùng Ollama hoặc Llama). Dữ liệu không gửi lên cloud.',
+                'concept_local_pro_con': 'Ưu điểm: Bảo mật tuyệt đối, không cần Internet. Nhược điểm: Yêu cầu máy tính cấu hình mạnh (GPU).',
+                // LEADERBOARD
+                'leaderboard_h2_title': 'Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)',
+                'leaderboard_warning': '*LƯU Ý: Nếu không thấy nội dung, có thể do trang web nguồn ngăn chặn việc nhúng (embedding) vì lý do bảo mật. Vui lòng bấm vào nút dưới để xem trực tiếp.',
+                'leaderboard_cta': 'Xem Bảng Xếp Hạng Trực Tiếp →',
+                // Chatbot Future
+                'chatbot_future_title': 'Hướng Dẫn Tự Động: Trợ Lý AI IVS Sắp Ra Mắt!',
+                'chatbot_future_desc': 'Bạn cần sự hướng dẫn chi tiết ngay bây giờ? Trong tương lai gần, bạn có thể trò chuyện trực tiếp với Trợ lý AI của IVS để nhận được câu trả lời cá nhân hóa cho mọi thắc mắc về công cụ và cách sử dụng.',
+                'chatbot_future_cta': 'Chờ Đón Chatbot Hướng Dẫn',
+                // Quan trọng
+                'important_tips_text': '**TIPS QUAN TRỌNG:** Trước khi nhấp vào một công cụ, hãy nhớ xem mục **"Tips (Hướng dẫn)"** màu tím. Nó sẽ chỉ cho bạn cách đặt câu hỏi và khai thác sức mạnh của AI đó tốt nhất!',
+                // Feature Translations
+                'feature_best_vi': 'Thông minh/Tốt nhất',
+                'feature_best_en': 'Smartest/Best Performance',
+                'feature_multimodal_vi': 'Đa phương thức',
+                'feature_multimodal_en': 'Multimodal',
+                'feature_high_price_vi': 'Giá Cao',
+                'feature_high_price_en': 'High Cost',
+                'feature_large_context_vi': 'Ngữ cảnh Lớn',
+                'feature_large_context_en': 'Large Context',
+                'feature_real_time_vi': 'Thời gian Thực',
+                'feature_real_time_en': 'Real-time Data',
+                'feature_reasoning_vi': 'Lập luận Cao',
+                'feature_reasoning_en': 'High Reasoning',
+                'feature_google_integration_vi': 'Tích hợp Google',
+                'feature_google_integration_en': 'Google Integration',
+                'feature_free_best_vi': 'Miễn phí Tốt nhất',
+                'feature_free_best_en': 'Best Free Tier',
+                'feature_high_speed_vi': 'Tốc độ Cao',
+                'feature_high_speed_en': 'High Speed',
+                'feature_image_quality_vi': 'Chất lượng Ảnh',
+                'feature_image_quality_en': 'Image Quality',
+                'feature_video_quality_vi': 'Chất lượng Video',
+                'feature_video_quality_en': 'Video Quality',
+                'feature_audio_quality_vi': 'Chất lượng Âm thanh',
+                'feature_audio_quality_en': 'Audio Quality',
+                'feature_easy_to_use_vi': 'Dễ sử dụng',
+                'feature_easy_to_use_en': 'Easy to Use',
+                'feature_code_support_vi': 'Hỗ trợ Code',
+                'feature_code_support_en': 'Code Assistance',
+                'feature_automation_vi': 'Tự động hóa',
+                'feature_automation_en': 'Automation',
+                'feature_edtech_vi': 'Chuyên EdTech',
+                'feature_edtech_en': 'EdTech Specialized',
+                'feature_personalization_vi': 'Cá nhân hóa',
+                'feature_personalization_en': 'Personalization',
+                'feature_open_source_vi': 'Mã Nguồn Mở',
+                'feature_open_source_en': 'Open Source',
+                'feature_local_vi': 'Local (Offline)',
+                'feature_local_en': 'Local (Offline)',
+                'feature_social_integration_vi': 'Tích hợp MXH',
+                'feature_social_integration_en': 'Social Integration',
+                'feature_ai_avatar_vi': 'Avatar AI',
+                'feature_ai_avatar_en': 'AI Avatar',
+                'feature_create_slide_vi': 'Tạo Slide',
+                'feature_create_slide_en': 'Slide Creation',
+                'feature_high_security_vi': 'Bảo mật Cao',
+                'feature_high_security_en': 'High Security',
+                'feature_voice_interaction_vi': 'Tương tác Giọng nói',
+                'feature_voice_interaction_en': 'Voice Interaction',
+                'feature_video_call_vi': 'Video Call AI',
+                'feature_video_call_en': 'AI Video Call',
+                'feature_natural_comm_vi': 'Giao tiếp Tự nhiên',
+                'feature_natural_comm_en': 'Natural Communication',
+                'feature_tech_knowledge_vi': 'Cần Kiến thức Kỹ thuật',
+                'feature_tech_knowledge_en': 'Requires Technical Knowledge',
+                'feature_hardware_vi': 'Cần Cấu hình Mạnh (GPU)',
+                'feature_hardware_en': 'Requires Strong Hardware (GPU)'
+            },
+            'en': {
+                'toolbox_doc_title': 'AI Toolbox - Most Effective AI Tools Collection',
+                'toolbox_nav_back_small': 'minhtriet.online',
+                'toolbox_nav_back': '← Back to Minh Triet\'s Home',
+                'toolbox_nav_sub': 'IVS Celestech AI Initiative',
+                'toolbox_title': 'AI TOOLBOX',
+                'toolbox_subtitle': 'Find the right AI tool for your needs. Simple, effective, and verified.', 
+                'toolbox_h2_usecase': 'What Do You Want AI To Do?', 
+                'toolbox_filter_all': 'All Tools',
+                'toolbox_filter_writing': 'Writing, Summarizing, Ideas', 
+                'toolbox_filter_image': 'Drawing, Graphic Design', 
+                'toolbox_filter_video': 'Video Creation, Voiceover', 
+                'toolbox_filter_study': 'Language Learning, Research', 
+                'toolbox_filter_code': 'Coding Assistance, Automation', 
+                'toolbox_search_placeholder': 'Search specifics (optional)...',
+                'toolbox_filter_tags_label': 'Filter by Professional Tags:', 
+                'toolbox_no_results': 'No tools matched your criteria.',
+                'toolbox_footer_credit': 'Developed by IVS Celestech. Optimizing performance with AI.',
+                // TIPS Modal Content
+                'modal_tips_title': '💡 Most Effective AI Tips',
+                'tip1_title': '1. Don\'t Ask AI, Assign Tasks to AI',
+                'tip1_desc': 'Instead of asking: "What is ChatGPT?", try: "I\'m working on Project X. Act as a [Expert Role] and help me [Specific Goal]."',
+                'tip2_title': '2. Use the "Super Simple Prompt Formula"',
+                'tip2_desc': 'When stuck, use the 3-step formula: [AI\'s Role] + [Goal] + [Output Format]. Example: "Act as a tech critic. Review Google Flow. Reply in 5 bullet points."',
+                'tip3_title': '3. Break Down the Problem (Crucial for beginners)',
+                'tip3_desc': 'If the task seems too hard, don\'t ask one long question. Break it into 3 small, clear questions. AI performs best when given clear, sequential steps.',
+                'tip4_title': '4. Experiment with the "What I Want To Do" Filters',
+                'tip4_desc': 'If you\'re unsure which tool you need, click the Writing, Image, or Coding buttons above. This is the fastest way to see how AI solves your problem.',
+                'tip5_title': '5. Absolutely Do Not Give Up (Conversation is Key)',
+                'tip5_desc': 'If the AI doesn\'t understand your intent immediately, do not dismiss it. Ask 1-2 follow-up questions to help the AI grasp your context. The skill of refining (In-context learning) is the most critical aspect of leveraging AI.',
+                // CONCEPTS
+                'concept_h2_title': 'Essential AI Concepts to Know (Reference)',
+                'concept_closed_title': '1. Closed Source AI',
+                'concept_closed_desc': 'AI running on the company\'s server (e.g., ChatGPT, Gemini). Users cannot view or customize the source code.',
+                'concept_closed_pro_con': 'Pros: Very powerful, easy to use. Cons: Paid subscription, data governance concerns.',
+                'concept_open_title': '2. Open Source AI',
+                'concept_open_desc': 'Model code is publicly released (e.g., Llama 3, Stable Diffusion). Anyone can study and improve it.',
+                'concept_open_pro_con': 'Pros: Transparent, customizable, often free. Cons: Requires technical knowledge to operate.',
+                'concept_local_title': '3. Local/Offline AI',
+                'concept_local_desc': 'AI running entirely on your computer (using Ollama or Llama). Data is not sent to the cloud.',
+                'concept_local_pro_con': 'Pros: Absolute privacy, no Internet needed. Cons: Requires strong computer hardware (GPU).',
+                // LEADERBOARD
+                'leaderboard_h2_title': 'Global AI Leaderboard (Experimental)',
+                'leaderboard_warning': '*NOTE: If content is missing, the source website may be preventing embedding (iframe) for security reasons. Please click the button below to view directly.',
+                'leaderboard_cta': 'View Live Leaderboard →',
+                // Chatbot Future
+                'chatbot_future_title': 'Automated Guidance: IVS AI Assistant Coming Soon!',
+                'chatbot_future_desc': 'Need detailed guidance now? In the near future, you\'ll be able to chat directly with the IVS AI Assistant to get personalized answers to all your tool and usage questions.',
+                'chatbot_future_cta': 'Awaiting Guidance Chatbot',
+                // Quan trọng
+                'important_tips_text': '**IMPORTANT TIPS:** Before clicking on a tool, remember to check the purple **"Tips (Guidance)"** section. It will show you how to formulate questions and best harness the power of that AI!',
+                // Feature Translations
+                'feature_best_vi': 'Thông minh/Tốt nhất',
+                'feature_best_en': 'Smartest/Best Performance',
+                'feature_multimodal_vi': 'Đa phương thức',
+                'feature_multimodal_en': 'Multimodal',
+                'feature_high_price_vi': 'Giá Cao',
+                'feature_high_price_en': 'High Cost',
+                'feature_large_context_vi': 'Ngữ cảnh Lớn',
+                'feature_large_context_en': 'Large Context',
+                'feature_real_time_vi': 'Thời gian Thực',
+                'feature_real_time_en': 'Real-time Data',
+                'feature_reasoning_vi': 'Lập luận Cao',
+                'feature_reasoning_en': 'High Reasoning',
+                'feature_google_integration_vi': 'Tích hợp Google',
+                'feature_google_integration_en': 'Google Integration',
+                'feature_free_best_vi': 'Miễn phí Tốt nhất',
+                'feature_free_best_en': 'Best Free Tier',
+                'feature_high_speed_vi': 'Tốc độ Cao',
+                'feature_high_speed_en': 'High Speed',
+                'feature_image_quality_vi': 'Chất lượng Ảnh',
+                'feature_image_quality_en': 'Image Quality',
+                'feature_video_quality_vi': 'Chất lượng Video',
+                'feature_video_quality_en': 'Video Quality',
+                'feature_audio_quality_vi': 'Chất lượng Âm thanh',
+                'feature_audio_quality_en': 'Audio Quality',
+                'feature_easy_to_use_vi': 'Dễ sử dụng',
+                'feature_easy_to_use_en': 'Easy to Use',
+                'feature_code_support_vi': 'Hỗ trợ Code',
+                'feature_code_support_en': 'Code Assistance',
+                'feature_automation_vi': 'Tự động hóa',
+                'feature_automation_en': 'Automation',
+                'feature_edtech_vi': 'Chuyên EdTech',
+                'feature_edtech_en': 'EdTech Specialized',
+                'feature_personalization_vi': 'Cá nhân hóa',
+                'feature_personalization_en': 'Personalization',
+                'feature_open_source_vi': 'Mã Nguồn Mở',
+                'feature_open_source_en': 'Open Source',
+                'feature_local_vi': 'Local (Offline)',
+                'feature_local_en': 'Local (Offline)',
+                'feature_social_integration_vi': 'Tích hợp MXH',
+                'feature_social_integration_en': 'Social Integration',
+                'feature_ai_avatar_vi': 'Avatar AI',
+                'feature_ai_avatar_en': 'AI Avatar',
+                'feature_create_slide_vi': 'Tạo Slide',
+                'feature_create_slide_en': 'Slide Creation',
+                'feature_high_security_vi': 'Bảo mật Cao',
+                'feature_high_security_en': 'High Security',
+                'feature_voice_interaction_vi': 'Tương tác Giọng nói',
+                'feature_voice_interaction_en': 'Voice Interaction',
+                'feature_video_call_vi': 'Video Call AI',
+                'feature_video_call_en': 'AI Video Call',
+                'feature_natural_comm_vi': 'Giao tiếp Tự nhiên',
+                'feature_natural_comm_en': 'Natural Communication',
+                'feature_tech_knowledge_vi': 'Cần Kiến thức Kỹ thuật',
+                'feature_tech_knowledge_en': 'Requires Technical Knowledge',
+                'feature_hardware_vi': 'Cần Cấu hình Mạnh (GPU)',
+                'feature_hardware_en': 'Requires Strong Hardware (GPU)'
+            }
+        };
+
+        let currentLang = 'vi'; // Default language
+
+        function translateFeature(featureName) {
+            
+            // Tìm key chuẩn hóa trong bộ dịch
+            let key = null;
+            if (featureName.includes('Thông minh Nhất') || featureName.includes('Smartest')) key = 'feature_best';
+            else if (featureName.includes('Đa phương thức') || featureName.includes('Multimodal')) key = 'feature_multimodal';
+            else if (featureName.includes('Giá Cao') || featureName.includes('High Cost')) key = 'feature_high_price';
+            else if (featureName.includes('Ngữ cảnh Lớn') || featureName.includes('Large Context')) key = 'feature_large_context';
+            else if (featureName.includes('Thời gian Thực') || featureName.includes('Real-time')) key = 'feature_real_time';
+            else if (featureName.includes('Lập luận Cao') || featureName.includes('High Reasoning')) key = 'feature_reasoning';
+            else if (featureName.includes('Tích hợp Google') || featureName.includes('Google Integration')) key = 'feature_google_integration';
+            else if (featureName.includes('Miễn phí Tốt nhất') || featureName.includes('Best Free Tier')) key = 'feature_free_best';
+            else if (featureName.includes('Tốc độ Cao') || featureName.includes('High Speed')) key = 'feature_high_speed';
+            else if (featureName.includes('Chất lượng Ảnh') || featureName.includes('Image Quality')) key = 'feature_image_quality';
+            else if (featureName.includes('Chất lượng Video') || featureName.includes('Video Quality') || featureName.includes('Tạo Video') || featureName.includes('Chỉnh sửa Video')) key = 'feature_video_quality';
+            else if (featureName.includes('Chất lượng Âm thanh') || featureName.includes('Audio Quality')) key = 'feature_audio_quality';
+            else if (featureName.includes('Dễ sử dụng') || featureName.includes('Easy to Use')) key = 'feature_easy_to_use';
+            else if (featureName.includes('Hỗ trợ Code') || featureName.includes('Code Assistance')) key = 'feature_code_support';
+            else if (featureName.includes('Tự động hóa') || featureName.includes('Automation') || featureName.includes('Kinh doanh') || featureName.includes('Quản lý')) key = 'feature_automation';
+            else if (featureName.includes('Chuyên EdTech') || featureName.includes('EdTech Specialized')) key = 'feature_edtech';
+            else if (featureName.includes('Cá nhân hóa') || featureName.includes('Personalization')) key = 'feature_personalization';
+            else if (featureName.includes('Mã Nguồn Mở') || featureName.includes('Open Source')) key = 'feature_open_source';
+            else if (featureName.includes('Local (Offline)')) key = 'feature_local';
+            else if (featureName.includes('Tích hợp MXH') || featureName.includes('Social Integration') || featureName.includes('Marketing')) key = 'feature_social_integration';
+            else if (featureName.includes('Avatar AI')) key = 'feature_ai_avatar';
+            else if (featureName.includes('Tạo Slide') || featureName.includes('Slide Creation')) key = 'feature_create_slide';
+            else if (featureName.includes('Bảo mật Cao') || featureName.includes('High Security')) key = 'feature_high_security';
+            else if (featureName.includes('Tương tác Giọng nói') || featureName.includes('Voice Interaction')) key = 'feature_voice_interaction';
+            else if (featureName.includes('Video Call AI') || featureName.includes('AI Video Call')) key = 'feature_video_call';
+            else if (featureName.includes('Giao tiếp Tự nhiên') || featureName.includes('Natural Communication')) key = 'feature_natural_comm';
+            else if (featureName.includes('Cần Kiến thức Kỹ thuật') || featureName.includes('Requires Technical Knowledge')) key = 'feature_tech_knowledge';
+            else if (featureName.includes('Cần Cấu hình Mạnh (GPU)') || featureName.includes('Requires Strong Hardware (GPU)')) key = 'feature_hardware';
+
+
+            if (key) {
+                const viText = allTranslations['vi'][`${key}_vi`];
+                const enText = allTranslations['en'][`${key}_en`];
+                
+                if (currentLang === 'en' && enText) return enText;
+                if (currentLang === 'vi' && viText) return viText;
+                return featureName; // Fallback to original
+            }
+            
+            // Trường hợp không tìm thấy key chuẩn hóa, trả về chính nó.
+            return featureName; 
+        }
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            const translations = allTranslations[lang];
+            if (!translations) return;
+
+            // Apply text content translations
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[key]) {
+                    if (key === 'toolbox_footer_credit') {
+                        // Special handling for HTML content in footer
+                        const replacedText = translations[key].replace('IVS Celestech', '<span class="font-bold text-indigo-400">IVS Celestech</span>');
+                        element.innerHTML = replacedText;
+                    } else if (key === 'important_tips_text') {
+                        // Special handling for the important tips block
+                        const originalText = translations[key];
+                        // Replace **text** with <strong>text</strong>
+                        const formattedText = originalText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong></strong>');
+                        element.innerHTML = formattedText;
+                    } 
+                    else {
+                        element.textContent = translations[key];
+                    }
+                }
+            });
+
+            // Apply placeholder translations
+            document.querySelectorAll('[data-lang-key-placeholder]').forEach(el => {
+                const phKey = el.getAttribute('data-lang-key-placeholder');
+                if (translations[phKey]) {
+                    el.setAttribute('placeholder', translations[phKey]);
+                }
+            });
+
+            // Update language switcher text
+            const langNames = { 'vi': 'Tiếng Việt', 'en': 'English' };
+            document.getElementById('current-lang-text').textContent = langNames[lang] || lang.toUpperCase();
+            
+            // Highlight selected language in menu
+            document.querySelectorAll('#language-menu li').forEach(li => {
+                li.classList.remove('selected');
+                if (li.dataset.lang === lang) {
+                    li.classList.add('selected');
+                }
+            });
+            
+            // Rerender tools to update descriptions/features/names/etc.
+            filterTools();
+            // Re-populate modal content to update tip texts if visible
+            if (document.getElementById('tipsModal').classList.contains('visible')) {
+                populateTipsModal();
+            }
+        }
+        
+        function initLanguageSwitcher() {
+            const btn = document.getElementById('lang-button');
+            const menu = document.getElementById('language-menu');
+            
+            if (btn && menu) {
+                // Toggle dropdown
+                btn.addEventListener('click', e => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                
+                // Hide on outside click
+                document.addEventListener('click', () => {
+                    menu.classList.remove('active');
+                });
+                
+                // Handle language selection
+                menu.querySelectorAll('li').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const lang = item.dataset.lang;
+                        applyLanguage(lang);
+                        menu.classList.remove('active');
+                    });
+                });
+            }
+            // Set initial language based on browser/default
+            applyLanguage('vi'); 
+        }
+
+        const tipsContent = [
+            { key_title: 'tip1_title', key_desc: 'tip1_desc', icon: '🗣️' },
+            { key_title: 'tip2_title', key_desc: 'tip2_desc', icon: '📐' },
+            { key_title: 'tip3_title', key_desc: 'tip3_desc', icon: '✂️' },
+            { key_title: 'tip4_title', key_desc: 'tip4_desc', icon: '🖱️' },
+            { key_title: 'tip5_title', key_desc: 'tip5_desc', icon: '🧘' },
+        ];
+        
+        function populateTipsModal() {
+            const translations = allTranslations[currentLang];
+            const container = document.getElementById('modalTipsContent');
+            container.innerHTML = tipsContent.map(tip => `
+                <div class="flex items-start space-x-3 bg-indigo-50 p-4 rounded-lg border border-indigo-200">
+                    <span class="text-2xl pt-1 flex-shrink-0">${tip.icon}</span>
+                    <div>
+                        <h4 class="font-bold text-gray-900" data-lang-key="${tip.key_title}">${translations[tip.key_title]}</h4>
+                        <p class="text-sm text-gray-600" data-lang-key="${tip.key_desc}">${translations[tip.key_desc]}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showTipsModal() {
+            const modal = document.getElementById('tipsModal');
+            const modalContent = modal.querySelector('.modal-content');
+            populateTipsModal(); // Đảm bảo nội dung được tải
+            modal.classList.add('visible');
+            modalContent.classList.remove('-translate-y-10');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideTipsModal() {
+            const modal = document.getElementById('tipsModal');
+            const modalContent = modal.querySelector('.modal-content');
+            modal.classList.remove('visible');
+            modalContent.classList.add('-translate-y-10');
+            document.body.style.overflow = 'auto';
+        }
+
+        // --- END LOCAL TRANSLATION LOGIC ---
+
+
+        // Dữ liệu các công cụ AI
+        const aiTools = [
+            // CÁC MÔ HÌNH KHỦNG LONG MỚI NHẤT - Ưu tiên tuyệt đối 0.1
+            {
+                name: "GPT-5 (High)",
+                name_en: "GPT-5 (High)",
+                description: "Mô hình ngôn ngữ thế hệ tiếp theo của OpenAI, được kỳ vọng đột phá về lý luận, tốc độ và khả năng đa phương thức.",
+                description_en: "OpenAI's next-generation language model, expected to revolutionize reasoning, speed, and multimodal capabilities.",
+                tags: ["LLM", "Future Model", "Hype", "Closed Source", "Subscription"],
+                features: ["Thông minh Nhất", "Đa phương thức", "Giá Cao", "Video Call AI", "Giao tiếp Tự nhiên"],
+                link: "https://openai.com/",
+                icon: "👑",
+                useCase: ["Viết lách", "Lập trình", "Research"],
+                priority: 0.1,
+                alias: []
+            },
+            {
+                name: "Grok 4 (High)",
+                name_en: "Grok 4 (High)",
+                description: "Thế hệ Grok tiếp theo từ xAI, tích hợp sâu hơn với X/Twitter và khả năng xử lý ngữ cảnh dài vượt trội.",
+                description_en: "The next generation of Grok from xAI, featuring deeper integration with X/Twitter and superior large context processing.",
+                tags: ["LLM", "Future Model", "Real-time", "Closed Source", "Subscription"],
+                features: ["Thông minh Nhất", "Ngữ cảnh Lớn", "Thời gian Thực", "Video Call AI"],
+                link: "https://grok.x.ai/",
+                icon: "🚀",
+                useCase: ["Viết lách", "Marketing", "Research"],
+                priority: 0.1,
+                alias: []
+            },
+            {
+                name: "Claude 4.5 Sonnet (Future)",
+                name_en: "Claude 4.5 Sonnet (Future)",
+                description: "Mô hình Sonnet nâng cấp của Anthropic, hứa hẹn vượt trội về độ dài ngữ cảnh (context window) và tính chính xác.",
+                description_en: "Anthropic's upgraded Sonnet model, promising superior performance in context window length and accuracy.",
+                tags: ["LLM", "Future Model", "Research", "Closed Source", "Subscription"],
+                features: ["Thông minh Nhất", "Ngữ cảnh Lớn", "Giá Cao"],
+                link: "https://www.anthropic.com/",
+                icon: "⭐",
+                useCase: ["Viết lách", "Học tập", "Lập trình"],
+                priority: 0.1,
+                alias: []
+            },
+            {
+                name: "Claude 4 Opus (Future)",
+                name_en: "Claude 4 Opus (Future)",
+                description: "Mô hình mạnh nhất của Claude, vượt trội về khả năng lập luận, phân tích dữ liệu và hiểu ngữ cảnh phức tạp.",
+                description_en: "Claude's most powerful model, excelling in complex reasoning, data analysis, and sophisticated context understanding.",
+                tags: ["LLM", "Future Model", "Research", "Closed Source", "Subscription"],
+                features: ["Thông minh Nhất", "Ngữ cảnh Lớn", "Lập luận Cao"],
+                link: "https://www.anthropic.com/",
+                icon: "⚛️",
+                useCase: ["Viết lách", "Học tập", "Lập trình"],
+                priority: 0.1,
+                alias: []
+            },
+            {
+                name: "Gemini 2.5 Pro (Nâng cấp)",
+                name_en: "Gemini 2.5 Pro (Upgraded)",
+                description: "Phiên bản nâng cấp của Gemini Pro, tập trung vào khả năng lập luận phức tạp và tích hợp đa phương tiện nâng cao.",
+                description_en: "An upgraded version of Gemini Pro, focusing on complex reasoning capabilities and enhanced multimedia integration.",
+                tags: ["LLM", "Research", "Data Analysis", "Real-time", "Closed Source", "Subscription"],
+                features: ["Thông minh Nhất", "Tích hợp Google", "Đa phương thức", "Tương tác Giọng nói", "Video Call AI"],
+                link: "https://gemini.google.com/advanced",
+                icon: "⚡",
+                useCase: ["Học tập", "Viết lách", "Phân tích"],
+                priority: 0.1,
+                alias: []
+            },
+            
+            // CÁC LLM & CÔNG CỤ HIỆN HÀNH DẪN ĐẦU - Priority 1
+            {
+                name: "ChatGPT / GPT-4o",
+                name_en: "ChatGPT / GPT-4o",
+                description: "Mô hình ngôn ngữ lớn (LLM) đa năng, tốt nhất cho viết lách, tóm tắt, ý tưởng và lập trình cơ bản.",
+                description_en: "Versatile large language model (LLM), best for writing, summarizing, ideation, and basic programming.",
+                tags: ["LLM", "Text", "Coding", "Research", "Closed Source", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Tốc độ Cao", "Đa phương thức", "Tương tác Giọng nói", "Video Call AI", "Giao tiếp Tự nhiên"],
+                link: "https://openai.com/chatgpt",
+                icon: "🤖",
+                useCase: ["Viết lách", "Học tập", "Lập trình"],
+                priority: 1,
+                alias: ["chat", "gpt", "openai"]
+            },
+            {
+                name: "Gemini Advanced",
+                name_en: "Gemini Advanced",
+                description: "Mô hình LLM mạnh mẽ của Google, tích hợp Google Search, lý tưởng cho phân tích dữ liệu và thông tin thời gian thực.",
+                description_en: "Google's powerful LLM, integrated with Google Search, ideal for data analysis and real-time information.",
+                tags: ["LLM", "Research", "Data Analysis", "Real-time", "Closed Source", "Subscription"],
+                features: ["Tích hợp Google", "Thời gian Thực", "Tốc độ Cao", "Tương tác Giọng nói", "Giao tiếp Tự nhiên"],
+                link: "https://gemini.google.com/advanced",
+                icon: "✨",
+                useCase: ["Học tập", "Viết lách", "Phân tích"],
+                priority: 1,
+                alias: ["google", "chat"]
+            },
+            {
+                name: "Midjourney",
+                name_en: "Midjourney",
+                description: "Công cụ tạo hình ảnh chuyên nghiệp từ văn bản (text-to-image), nổi tiếng với chất lượng nghệ thuật cao cấp. (Closed Source, Cloud)",
+                description_en: "Professional text-to-image generation tool, famous for its high artistic quality. (Closed Source, Cloud)",
+                tags: ["Image", "Art", "Design", "Closed Source", "Subscription"],
+                features: ["Chất lượng Ảnh", "Giá Cao"],
+                link: "https://www.midjourney.com/",
+                icon: "🎨",
+                useCase: ["Hình ảnh", "Sáng tạo"],
+                priority: 1,
+                alias: ["vẽ", "hình", "draw"]
+            },
+            
+            // CÔNG CỤ UTILITY CAO CẤP & HYPE - Priority 2
+            {
+                name: "Sora (OpenAI)",
+                name_en: "Sora (OpenAI)",
+                description: "Mô hình tạo video từ văn bản (text-to-video) đột phá, tạo ra các cảnh quay phức tạp, chân thực và chất lượng cao. (Đang thử nghiệm)",
+                description_en: "Groundbreaking text-to-video model, generating complex, realistic, and high-quality footage. (Currently in testing)",
+                tags: ["Video", "Art", "Content Creation", "Closed Source", "Hype"],
+                features: ["Chất lượng Video", "Giá Cao", "Hype"],
+                link: "https://openai.com/sora",
+                icon: "🎬",
+                useCase: ["Video & Audio", "Sáng tạo", "Marketing"],
+                priority: 2,
+                alias: ["phim", "clip", "video"]
+            },
+            {
+                name: "Google Flow",
+                name_en: "Google Flow",
+                description: "Trình tạo quy trình làm việc tự động (workflow builder) bằng AI, giúp kết nối các dịch vụ Google (Gmail, Sheets, Drive) một cách dễ dàng.",
+                description_en: "AI-powered workflow builder, easily connecting various Google services (Gmail, Sheets, Drive) for automation.",
+                tags: ["Automation", "Productivity", "Business", "Closed Source", "Free Tier"],
+                features: ["Tự động hóa", "Miễn phí Tốt nhất", "Tích hợp Google"],
+                link: "https://labs.google/fx/vi/tools/flow",
+                icon: "⚙️",
+                useCase: ["Lập trình", "Tự động hóa", "Quản lý"],
+                priority: 2,
+                alias: ["tự động", "google", "flow"]
+            },
+            
+            // CÔNG CỤ CHUYÊN NGÀNH & MẠNH MẼ - Priority 3
+            {
+                name: "ElevenLabs",
+                name_en: "ElevenLabs",
+                description: "Công cụ dẫn đầu về Tạo Giọng Nói (TTS) tự nhiên và Nhân bản Giọng nói đa ngôn ngữ, hoàn hảo cho EdTech, lồng tiếng.",
+                description_en: "Leading tool for natural Text-to-Speech (TTS) and multilingual Voice Cloning, perfect for EdTech and voiceovers.",
+                tags: ["Audio", "TTS", "EdTech", "Closed Source", "Subscription"],
+                features: ["Chất lượng Âm thanh", "Đa ngôn ngữ", "Tương tác Giọng nói"],
+                link: "https://elevenlabs.io/",
+                icon: "🎤",
+                useCase: ["Video & Audio", "Học tập", "Sáng tạo"],
+                priority: 3,
+                alias: ["giọng nói", "lồng tiếng", "audio", "voice"]
+            },
+            {
+                name: "Runway Gen-2",
+                name_en: "Runway Gen-2",
+                description: "Công cụ tạo video từ văn bản (text-to-video) và chỉnh sửa video có sẵn, là tiêu chuẩn ngành cho nhà làm phim độc lập.",
+                description_en: "Text-to-video generation and existing video editing tool, the industry standard for independent filmmakers.",
+                tags: ["Video", "Art", "Content Creation", "Closed Source", "Subscription"],
+                features: ["Chỉnh sửa Video", "Tạo Video"],
+                link: "https://runwayml.com/",
+                icon: "🎬",
+                useCase: ["Video & Audio", "Sáng tạo"],
+                priority: 3,
+                alias: ["video", "clip"]
+            },
+             {
+                name: "Veo (Google DeepMind)",
+                name_en: "Veo (Google DeepMind)",
+                description: "Mô hình đối thủ của Sora, tạo ra video có độ phân giải cao (1080p) với khả năng kiểm soát chi tiết và chuyển động mượt mà. (Đang thử nghiệm)",
+                description_en: "Sora competitor model, generating high-resolution (1080p) video with smooth motion and detailed control. (Currently in testing)",
+                tags: ["Video", "Art", "Content Creation", "Closed Source", "Subscription"],
+                features: ["Chất lượng Video", "Tốc độ Cao"],
+                link: "https://deepmind.google/technologies/veo/",
+                icon: "📽️",
+                useCase: ["Video & Audio", "Sáng tạo", "Marketing"],
+                priority: 3,
+                alias: ["video", "clip", "google"]
+            },
+            {
+                name: "GitHub Copilot",
+                name_en: "GitHub Copilot",
+                description: "Trợ lý lập trình AI, hỗ trợ viết code, gợi ý hàm và sửa lỗi, tăng tốc độ phát triển phần mềm.",
+                description_en: "AI programming assistant that helps write code, suggest functions, and fix bugs, accelerating software development.",
+                tags: ["Coding", "Automation", "Developer", "Closed Source", "Subscription"],
+                features: ["Hỗ trợ Code", "Tự động hóa"],
+                link: "https://github.com/features/copilot",
+                icon: "💻",
+                useCase: ["Lập trình", "Tự động hóa"],
+                priority: 3,
+                alias: ["code", "lập trình"]
+            },
+            {
+                name: "IVS Adaptive Learning AI",
+                name_en: "IVS Adaptive Learning AI",
+                description: "Hệ thống học tập thích ứng độc quyền của IVS, tối ưu hóa lộ trình học tập và tự động đánh giá cho học viên EdTech.",
+                description_en: "IVS's proprietary adaptive learning system, optimizing learning paths and automating assessment for EdTech students.",
+                tags: ["EdTech", "Education", "Adaptive Learning", "AI Integration", "IVS Product"],
+                features: ["Chuyên EdTech", "Cá nhân hóa"],
+                link: "https://ivsacademy.edu.vn/",
+                icon: "📚",
+                useCase: ["Học tập", "Giáo dục"],
+                priority: 3,
+                alias: ["học", "edtech"]
+            },
+             {
+                name: "DeepSeek / Qwen (Cloud)",
+                name_en: "DeepSeek / Qwen (Cloud)",
+                description: "Các mô hình LLM Mã Nguồn Mở, mạnh trong tiếng Trung và lập trình, có các bản demo chạy trên Cloud. Rất mạnh về thẩm mỹ giao diện lập trình.",
+                description_en: "Open Source LLM models, strong in Chinese and coding, with demos running on Cloud. Highly praised for programming interface aesthetics.",
+                tags: ["LLM", "Coding", "Research", "Open Source", "Free Tier"],
+                features: ["Mã Nguồn Mở", "Miễn phí Tốt nhất", "Code Nhanh"],
+                link: "https://www.deepseek.com/",
+                icon: "🐉",
+                useCase: ["Lập trình", "Học tập"],
+                priority: 3,
+                alias: ["code", "qwen"]
+            },
+            {
+                name: "NotebookLM",
+                name_en: "NotebookLM",
+                description: "Trợ lý nghiên cứu của Google, giúp tổng hợp, phân tích và tạo ý tưởng từ tài liệu cá nhân của bạn (Google Drive/Docs).",
+                description_en: "Google's research assistant, helping summarize, analyze, and generate ideas from your personal documents (Google Drive/Docs).",
+                tags: ["Research", "Productivity", "LLM", "Closed Source", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Tích hợp Google", "Bảo mật Cao"],
+                link: "https://notebooklm.google/",
+                icon: "📝",
+                useCase: ["Học tập", "Viết lách", "Quản lý"],
+                priority: 3,
+                alias: ["docs", "nghiên cứu", "tài liệu"]
+            },
+            
+            // CÁC LLM, TÌM KIẾM & NỀN TẢNG KHÁC - Priority 4
+            {
+                name: "Perplexity AI",
+                name_en: "Perplexity AI",
+                description: "Công cụ trả lời câu hỏi và tìm kiếm tập trung vào việc cung cấp các trích dẫn nguồn chi tiết, rất tốt cho nghiên cứu.",
+                description_en: "A Q&A and search tool focused on providing detailed source citations, excellent for research.",
+                tags: ["Research", "LLM", "Information", "Closed Source", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Trích dẫn Tốt"],
+                link: "https://www.perplexity.ai/",
+                icon: "🔍",
+                useCase: ["Học tập", "Research"],
+                priority: 4,
+                alias: ["tìm kiếm", "nghiên cứu", "search"]
+            },
+            {
+                name: "Notion AI",
+                name_en: "Notion AI",
+                description: "Công cụ AI tích hợp trong Notion, dùng để tóm tắt tài liệu, brainstorm, viết blog và quản lý công việc.",
+                description_en: "AI tool integrated into Notion, used for summarizing documents, brainstorming, blog writing, and task management.",
+                tags: ["Productivity", "Writing", "Research", "Management", "Closed Source", "Subscription"],
+                features: ["Tích hợp Notion", "Quản lý Dự án"],
+                link: "https://www.notion.so/product/ai",
+                icon: "🧠",
+                useCase: ["Viết lách", "Học tập", "Quản lý"],
+                priority: 4,
+                alias: ["quản lý", "tóm tắt", "note"]
+            },
+            {
+                name: "Pika Labs",
+                name_en: "Pika Labs",
+                description: "Đối thủ cạnh tranh mạnh của Sora/Veo, dễ tiếp cận hơn cho người dùng phổ thông để tạo video ngắn và animation.",
+                description_en: "Strong competitor to Sora/Veo, highly accessible for general users to create short videos and animations.",
+                tags: ["Video", "Art", "Content Creation", "Closed Source", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Dễ sử dụng"],
+                link: "https://pika.art/",
+                icon: "🌟",
+                useCase: ["Video & Audio", "Sáng tạo", "Marketing"],
+                priority: 4,
+                alias: ["video", "animation", "clip"]
+            },
+            {
+                name: "HeyGen",
+                name_en: "HeyGen",
+                description: "Chuyên tạo ra các Avatar AI nói chuyện (talking avatars) từ văn bản, rất hữu ích cho các bài giảng hoặc video marketing.",
+                description_en: "Specializes in creating talking AI Avatars from text, highly useful for lectures or marketing videos.",
+                tags: ["Video", "Presentation", "Business", "Closed Source", "Subscription"],
+                features: ["Avatar AI", "Marketing"],
+                link: "https://www.heygen.com/",
+                icon: "🤵",
+                useCase: ["Video & Audio", "Kinh doanh"],
+                priority: 4,
+                alias: ["avatar", "video"]
+            },
+            {
+                name: "Meta AI / Llama 3 (Cloud)",
+                name_en: "Meta AI / Llama 3 (Cloud)",
+                description: "Trợ lý AI được tích hợp miễn phí vào Facebook, Instagram và WhatsApp. Tận dụng sức mạnh của mô hình Llama 3.",
+                description_en: "AI assistant integrated for free into Facebook, Instagram, and WhatsApp. Leverages the power of the Llama 3 model.",
+                tags: ["LLM", "Text", "Social Media", "Closed Source", "Free Tier"],
+                features: ["Tích hợp MXH", "Miễn phí Tốt nhất", "Giao tiếp Tự nhiên"],
+                link: "https://ai.meta.com/",
+                icon: "💬",
+                useCase: ["Viết lách", "Sáng tạo", "Marketing"],
+                priority: 4,
+                alias: ["facebook", "meta", "chat"]
+            },
+            {
+                name: "Gamma.app",
+                name_en: "Gamma.app",
+                description: "Tạo bài thuyết trình, văn bản hoặc trang web chuyên nghiệp chỉ từ một prompt ngắn. Tự động hóa sáng tạo nội dung.",
+                description_en: "Generates professional presentations, documents, or websites from just a short prompt. Automates content creation.",
+                tags: ["Presentation", "Design", "Business", "Automation", "Closed Source", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Tạo Slide"],
+                link: "https://gamma.app/",
+                icon: "📊",
+                useCase: ["Viết lách", "Thiết kế", "Kinh doanh"],
+                priority: 4,
+                alias: ["ppt", "powerpoint", "slide", "thuyết trình", "bài giảng"]
+            },
+            {
+                name: "Zapier AI (Automation)",
+                name_en: "Zapier AI (Automation)",
+                description: "Nền tảng tự động hóa hàng đầu, tích hợp AI để xây dựng các workflow tự động phức tạp (RPA) giữa hơn 6000 ứng dụng kinh doanh.",
+                description_en: "Leading automation platform, integrating AI to build complex automated workflows (RPA) between over 6,000 business applications.",
+                tags: ["Automation", "Business", "RPA", "Closed Source", "Subscription"],
+                features: ["Tự động hóa", "Tích hợp Ứng dụng", "Kinh doanh"],
+                link: "https://zapier.com/ai",
+                icon: "🔗",
+                useCase: ["Lập trình", "Tự động hóa", "Quản lý"],
+                priority: 4,
+                alias: ["rpa", "workflow", "tự động hóa"]
+            },
+            {
+                name: "Dataiku / Akkio",
+                name_en: "Dataiku / Akkio",
+                description: "Nền tảng tự động hóa Machine Learning (AutoML) giúp phân tích dữ liệu doanh nghiệp, tạo ra các mô hình dự đoán và BI bằng AI.",
+                description_en: "Automated Machine Learning (AutoML) platforms helping analyze business data, create predictive models, and AI-powered Business Intelligence (BI).",
+                tags: ["Data Analysis", "Machine Learning", "Business", "Subscription", "BI"],
+                features: ["Phân tích Dữ liệu", "Lập luận Cao", "Kinh doanh"],
+                link: "https://www.dataiku.com/",
+                icon: "📈",
+                useCase: ["Học tập", "Phân tích", "Quản lý"],
+                priority: 4,
+                alias: ["dữ liệu", "bi", "data"]
+            },
+            
+            // CÁC CÔNG CỤ OPEN SOURCE/LOCAL/NICHE - Priority 9 (Thấp nhất)
+            {
+                name: "LM Studio",
+                name_en: "LM Studio",
+                description: "Ứng dụng máy tính để tải và chạy các mô hình LLM Mã Nguồn Mở ngay trên máy cá nhân, không cần Internet. Giao diện đơn giản, dễ dùng hơn Ollama.",
+                description_en: "Desktop application to download and run Open Source LLMs directly on your personal computer, no internet needed. Easier UI than Ollama.",
+                tags: ["LLM", "Local/Offline", "Open Source", "Coding", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Bảo mật Cao", "Local", "Cần Cấu hình Mạnh (GPU)", "Dễ sử dụng"],
+                link: "https://lmstudio.ai/",
+                icon: "🖥️",
+                useCase: ["Lập trình", "Học tập"],
+                priority: 9,
+                alias: ["offline", "máy tính", "bảo mật"]
+            },
+            {
+                name: "Ollama (Local AI Runtime)",
+                name_en: "Ollama (Local AI Runtime)",
+                description: "Nền tảng đơn giản để chạy các mô hình AI Mã Nguồn Mở (như Llama 3) ngay trên máy tính cá nhân. Bảo mật và miễn phí.",
+                description_en: "Simple platform to run Open Source AI models (like Llama 3) directly on a personal computer. Secure and free.",
+                tags: ["LLM", "Local/Offline", "Open Source", "Coding", "Free Tier"],
+                features: ["Miễn phí Tốt nhất", "Bảo mật Cao", "Local", "Cần Kiến thức Kỹ thuật"],
+                link: "https://ollama.com/",
+                icon: "💾",
+                useCase: ["Lập trình", "Học tập"],
+                priority: 9,
+                alias: ["offline", "máy tính", "bảo mật"]
+            },
+            {
+                name: "Llama 3 (Self-hosted)",
+                name_en: "Llama 3 (Self-hosted)",
+                description: "Mô hình LLM Mã Nguồn Mở tốt nhất từ Meta, có thể cài đặt và chạy hoàn toàn ngoại tuyến trên máy tính cấu hình cao.",
+                description_en: "Meta's best Open Source LLM model, can be installed and run completely offline on a powerful computer.",
+                tags: ["LLM", "Local/Offline", "Open Source", "Research", "Free Tier"],
+                features: ["Bảo mật Cao", "Local", "Mã Nguồn Mở", "Cần Kiến thức Kỹ thuật", "Cần Cấu hình Mạnh (GPU)"],
+                link: "https://llama.meta.com/",
+                icon: "🦙",
+                useCase: ["Viết lách", "Học tập", "Lập trình"], // Giữ lại UseCase Viết lách
+                priority: 9,
+                alias: ["offline", "llama", "meta"]
+            },
+            {
+                name: "Stable Diffusion",
+                name_en: "Stable Diffusion",
+                description: "Mô hình tạo ảnh Mã Nguồn Mở hàng đầu. Cho phép tùy chỉnh và chạy Local/Offline, phù hợp cho lập trình viên và người dùng chuyên sâu.",
+                description_en: "Leading Open Source image generation model. Allows customization and running Local/Offline, suitable for developers and advanced users.",
+                tags: ["Image", "Art", "Open Source", "Local/Offline", "Free Tier"],
+                features: ["Mã Nguồn Mở", "Local", "Miễn phí", "Cần Cấu hình Mạnh (GPU)"],
+                link: "https://stability.ai/stablediffusion",
+                icon: "🧪",
+                useCase: ["Hình ảnh", "Lập trình", "Sáng tạo"],
+                priority: 9,
+                alias: ["ảnh", "vẽ", "miễn phí"]
+            },
+            {
+                name: "Grok (xAI)",
+                name_en: "Grok (xAI)",
+                description: "LLM có tích hợp thông tin thời gian thực từ X (Twitter), mang tính hài hước và thường ưu tiên các chủ đề tranh luận.",
+                description_en: "LLM with real-time information integration from X (Twitter), known for its humorous tone and often prioritizing controversial topics.",
+                tags: ["LLM", "Real-time", "Closed Source", "Subscription"],
+                features: ["Thời gian Thực", "Ngữ cảnh Lớn", "Giao tiếp Tự nhiên"],
+                link: "https://grok.x.ai/",
+                icon: "🌌",
+                useCase: ["Viết lách", "Marketing", "Research"],
+                priority: 9,
+                alias: ["xai", "elon", "twitter"]
+            }
+        ];
+
+        // Sắp xếp mặc định: ưu tiên (asc) -> name (asc)
+        aiTools.sort((a, b) => {
+            if (a.priority !== b.priority) {
+                return a.priority - b.priority;
+            }
+            return a.name.localeCompare(b.name);
+        });
+
+        let currentUseCase = 'all';
+        let currentTag = 'all';
+        
+        // --- CÁC HÀM XỬ LÝ GIAO DIỆN VÀ DỮ LIỆU ---
+
+        // Hàm tạo thẻ công cụ AI
+        function createToolCard(tool) {
+            
+            // Lấy tên và mô tả theo ngôn ngữ hiện tại
+            const name = currentLang === 'en' ? (tool.name_en || tool.name) : tool.name;
+            const description = currentLang === 'en' ? (tool.description_en || tool.description) : tool.description;
+            
+            // Tối ưu hóa hiển thị Tags với màu sắc phân loại
+            const tagsHtml = tool.tags.map(tag => {
+                let colorClass = 'bg-indigo-50 text-indigo-700';
+                if (tag === 'IVS Product') {
+                    colorClass = 'bg-purple-100 text-purple-700 font-bold';
+                } else if (tag === 'Free Tier') {
+                    colorClass = 'bg-green-100 text-green-700';
+                } else if (tag === 'Subscription' || tag === 'Closed Source') {
+                    colorClass = 'bg-red-100 text-red-700';
+                } else if (tag === 'Hype' || tag === 'Real-time' || tag === 'Future Model') {
+                    colorClass = 'bg-yellow-100 text-yellow-700';
+                } else if (tag === 'Open Source' || tag === 'Local/Offline') {
+                    colorClass = 'bg-blue-100 text-blue-700';
+                }
+                return `<span class="px-3 py-1 ${colorClass} rounded-full text-xs font-medium">${tag}</span>`;
+            }).join('');
+
+            // Tạo Feature Tags (đã dịch)
+            const featureTagsHtml = tool.features.map(feature => {
+                let featureClass = '';
+                if (feature.includes('Thông minh Nhất') || feature.includes('Best Performance')) featureClass = 'feature-best';
+                else if (feature.includes('Miễn phí') || feature.includes('Best Free Tier')) featureClass = 'feature-free';
+                else if (feature.includes('Tốc độ') || feature.includes('High Speed')) featureClass = 'feature-speed';
+                else if (feature.includes('Ngữ cảnh Lớn') || feature.includes('Large Context') || feature.includes('Lập luận Cao') || feature.includes('High Reasoning')) featureClass = 'feature-context';
+                else if (feature.includes('Giá Cao') || feature.includes('High Cost') || feature.includes('Cần Kiến thức Kỹ thuật') || feature.includes('Cần Cấu hình Mạnh (GPU)')) featureClass = 'feature-expensive'; // Nhóm các rào cản kỹ thuật vào tag đỏ
+                else featureClass = 'bg-gray-100 text-gray-700';
+                
+                const translatedFeature = translateFeature(feature);
+
+                return `<span class="feature-tag ${featureClass}">${translatedFeature}</span>`;
+            }).join('');
+
+            return `
+                <a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="tool-card bg-white p-6 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="text-3xl">${tool.icon}</span>
+                            <h3 class="text-xl font-bold text-gray-900">${name}</h3>
+                        </div>
+                        <div class="mb-3">${featureTagsHtml}</div>
+                        <p class="text-gray-600 mb-4 text-sm">${description}</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100">
+                        ${tagsHtml}
+                    </div>
+                </a>
+            `;
+        }
+
+        // Hàm hiển thị danh sách công cụ
+        function renderTools(tools) {
+            const listContainer = document.getElementById('toolsList');
+            const noResults = document.getElementById('noResults');
+
+            if (tools.length === 0) {
+                listContainer.innerHTML = '';
+                noResults.classList.remove('hidden');
+            } else {
+                listContainer.innerHTML = tools.map(createToolCard).join('');
+                noResults.classList.add('hidden');
+            }
+        }
+
+        // Hàm tạo nút lọc (Filter buttons - Tags)
+        function generateTagButtons() {
+            // Cập nhật danh sách ưu tiên để các tags mới hiển thị ngay đầu
+            const prioritizedTags = ["LLM", "Future Model", "Hype", "Video", "Image", "Open Source", "Local/Offline", "Closed Source", "IVS Product", "Free Tier", "Subscription", "Coding", "Education", "Real-time"];
+            const allTags = new Set(prioritizedTags);
+            
+            aiTools.forEach(tool => {
+                tool.tags.forEach(tag => allTags.add(tag));
+            });
+
+            const filterContainer = document.getElementById('filterButtons');
+            
+            // Xóa hết nút cũ (trừ tiêu đề 'Lọc theo Tags:')
+            while (filterContainer.children.length > 1) {
+                filterContainer.removeChild(filterContainer.lastChild);
+            }
+            
+            const sortedTags = Array.from(allTags).filter(tag => tag !== "all").sort((a, b) => {
+                const indexA = prioritizedTags.indexOf(a);
+                const indexB = prioritizedTags.indexOf(b);
+                
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                if (indexA !== -1) return -1;
+                if (indexB !== -1) return 1;
+                
+                return a.localeCompare(b);
+            });
+
+            // Thêm nút "Tất cả Tags" đầu tiên
+            const allTagBtn = document.createElement('button');
+            allTagBtn.className = 'filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 text-gray-700 hover:bg-indigo-50 transition whitespace-nowrap active';
+            allTagBtn.setAttribute('data-filter', 'all');
+            allTagBtn.textContent = 'Tất cả Tags';
+            allTagBtn.onclick = () => selectTag('all');
+            filterContainer.appendChild(allTagBtn);
+
+
+            sortedTags.forEach(tag => {
+                const button = document.createElement('button');
+                button.className = 'filter-btn px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700 hover:bg-indigo-50 transition whitespace-nowrap';
+                button.setAttribute('data-filter', tag);
+                button.textContent = tag;
+                button.onclick = () => selectTag(tag);
+                filterContainer.appendChild(button);
+            });
+        }
+
+        // Hàm chọn nút Lọc Chính (Use Case)
+        function selectUseCase(useCase) {
+            currentUseCase = useCase;
+            currentTag = 'all'; // Reset Tag filter khi chọn Use Case mới
+            
+            // Highlight nút Use Case
+            document.querySelectorAll('.usecase-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.borderColor = 'transparent';
+                if (btn.getAttribute('data-filter') === useCase) {
+                    btn.classList.add('active');
+                    btn.style.borderColor = '#4F46E5';
+                }
+            });
+
+            // Reset và Highlight nút Tag "Tất cả Tags"
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+
+            // Xóa nội dung tìm kiếm
+            document.getElementById('searchInput').value = ''; 
+            filterTools();
+        }
+
+        // Hàm chọn nút Lọc Phụ (Tag)
+        function selectTag(tag) {
+            currentTag = tag;
+            
+            // Highlight nút Tag
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-filter') === tag) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Xóa nội dung tìm kiếm
+            document.getElementById('searchInput').value = ''; 
+            filterTools();
+        }
+
+        // Hàm lọc chính
+        function filterTools() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            const filtered = aiTools.filter(tool => {
+                
+                // 1. Lọc theo Tìm kiếm (Tùy chọn) - ƯU TIÊN SỐ 1 KHI CÓ TEXT
+                if (searchTerm.length > 0) {
+                    // Kiểm tra tên (vi/en), mô tả (vi/en), tags và alias
+                    return (
+                        tool.name.toLowerCase().includes(searchTerm) ||
+                        (tool.name_en && tool.name_en.toLowerCase().includes(searchTerm)) ||
+                        tool.description.toLowerCase().includes(searchTerm) ||
+                        (tool.description_en && tool.description_en.toLowerCase().includes(searchTerm)) ||
+                        tool.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                        tool.alias.some(alias => alias.toLowerCase().includes(searchTerm.toLowerCase()))
+                    );
+                }
+
+                // 2. Lọc theo Use Case (Khi không có text tìm kiếm)
+                let matchesUseCase = currentUseCase === 'all' || tool.useCase.includes(currentUseCase);
+                
+                // 3. Lọc theo Tag (Khi không có text tìm kiếm)
+                let matchesTag = currentTag === 'all' || tool.tags.includes(currentTag);
+                
+                return matchesUseCase && matchesTag;
+            });
+            
+            // Sắp xếp lại sau khi lọc theo tiêu chí ưu tiên
+            filtered.sort((a, b) => {
+                if (a.priority !== b.priority) {
+                    return a.priority - b.priority;
+                }
+                return a.name.localeCompare(b.name);
+            });
+
+            renderTools(filtered);
+        }
+
+        // Khởi tạo trang
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+            generateTagButtons();
+            filterTools(); // Gọi filterTools để render và sắp xếp ban đầu
+            
+            // Lắng nghe sự kiện ESC để đóng modal
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' || event.key === 'Esc') {
+                    if (document.getElementById('tipsModal').classList.contains('visible')) {
+                        hideTipsModal();
+                    }
+                }
+            });
+
+            // Lắng nghe click ngoài modal để đóng
+            document.getElementById('tipsModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hideTipsModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
