@@ -1,5 +1,5 @@
 window.translations_th = {
-    'page_title': 'เหงียน มินห์ ทรียัต - ผู้นำด้านเทคโนโลยี & ผู้เชี่ยวชาญ AI',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': 'เกี่ยวกับ', 'nav_experience': 'ประสบการณ์', 'nav_skills': 'ทักษะ', 'nav_education': 'การศึกษา', 'nav_portfolio': 'โครงการ', 'nav_collaboration': 'ความร่วมมือ', 'nav_contact': 'ติดต่อ',
     'nav_about_mobile': 'เกี่ยวกับ', 'nav_experience_mobile': 'ประสบการณ์', 'nav_skills_mobile': 'ทักษะ', 'nav_education_mobile': 'การศึกษา', 'nav_portfolio_mobile': 'โครงการ', 'nav_collaboration_mobile': 'ความร่วมมือ', 'nav_contact_mobile': 'ติดต่อ',
     'hero_name': 'พันธมิตรเชิงกลยุทธ์ในด้านการศึกษา การดำเนินงาน และเทคโนโลยี',

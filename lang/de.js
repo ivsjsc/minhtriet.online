@@ -1,5 +1,5 @@
 window.translations_de = {
-    'page_title': 'Nguyen Minh Triet - Technologieführer & KI-Experte',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': 'Über mich', 'nav_experience': 'Erfahrung', 'nav_skills': 'Fähigkeiten', 'nav_education': 'Ausbildung', 'nav_portfolio': 'Projekte', 'nav_collaboration': 'Zusammenarbeit', 'nav_contact': 'Kontakt',
     'nav_about_mobile': 'Über', 'nav_experience_mobile': 'Erfahrung', 'nav_skills_mobile': 'Fähigkeiten', 'nav_education_mobile': 'Ausbildung', 'nav_portfolio_mobile': 'Projekte', 'nav_collaboration_mobile': 'Zusammenarbeit', 'nav_contact_mobile': 'Kontakt',
     'hero_name': 'Strategischer Partner für Bildung, Betrieb & Technologie',

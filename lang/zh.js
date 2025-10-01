@@ -1,5 +1,5 @@
 window.translations_zh_cn = {
-    'page_title': '阮明哲 - 技术领导者与 AI 专家',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': '关于', 'nav_experience': '经历', 'nav_skills': '技能', 'nav_education': '教育背景', 'nav_portfolio': '项目', 'nav_collaboration': '合作', 'nav_contact': '联系',
     'nav_about_mobile': '关于', 'nav_experience_mobile': '经历', 'nav_skills_mobile': '技能', 'nav_education_mobile': '教育', 'nav_portfolio_mobile': '项目', 'nav_collaboration_mobile': '合作', 'nav_contact_mobile': '联系',
     'hero_name': '教育、运营与技术的战略合作伙伴',

@@ -1,5 +1,5 @@
 window.translations_vi = {
-    'page_title': 'Nguyen Minh Triet - Education - Technology & Codex',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': 'Giới thiệu', 'nav_experience': 'Kinh nghiệm', 'nav_skills': 'Kỹ năng', 'nav_portfolio': 'Dự án', 'nav_collaboration': 'Hợp tác', 'nav_contact': 'Liên hệ',
     'nav_about_mobile': 'Giới thiệu', 'nav_experience_mobile': 'Kinh nghiệm', 'nav_skills_mobile': 'Kỹ năng', 'nav_portfolio_mobile': 'Dự án', 'nav_collaboration_mobile': 'Hợp tác', 'nav_contact_mobile': 'Liên hệ',
     'hero_name': 'Đối tác Chiến lược về Giáo dục, Vận hành & Công nghệ',

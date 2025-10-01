@@ -1,5 +1,5 @@
 window.translations_ja = {
-    'page_title': 'グエン・ミン・トリエット - テクノロジーリーダー & AI専門家',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': '概要', 'nav_experience': '経歴', 'nav_skills': 'スキル', 'nav_education': '学歴', 'nav_portfolio': 'プロジェクト', 'nav_collaboration': '協力', 'nav_contact': 'お問い合わせ',
     'nav_about_mobile': '概要', 'nav_experience_mobile': '経歴', 'nav_skills_mobile': 'スキル', 'nav_education_mobile': '学歴', 'nav_portfolio_mobile': 'プロジェクト', 'nav_collaboration_mobile': '協力', 'nav_contact_mobile': 'お問い合わせ',
     'hero_name': '教育、運営、テクノロジーの戦略的パートナー',

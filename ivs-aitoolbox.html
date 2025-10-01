@@ -8,39 +8,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        /* --- 1. GLOBAL STYLES (DARK MODE BASE) --- */
         body {
             font-family: 'Inter', sans-serif;
-            /* Sử dụng background tương tự như body trong minhtriet.online/styles.css */
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            /* Nền tối: Deep Indigo/Charcoal với tint Cam Tối nhẹ */
+            background: linear-gradient(135deg, #1A1A1D 0%, #302636 60%, #47321F 100%);
+            color: #E0E0E0; /* Chữ mặc định sáng */
             min-height: 100vh;
         }
         /* Custom gradient section title */
         .section-title {
-            background: linear-gradient(90deg, #4F46E5, #8B5CF6); /* Indigo to Violet */
+            background: linear-gradient(90deg, #8B5CF6, #4F46E5); /* Đảo ngược để tương phản trên nền tối */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 900;
         }
-        /* Tool card hover effect, lấy cảm hứng từ hover trong minhtriet.online/index.html */
+        /* Glow animation for emphasis */
+        @keyframes subtle-glow {
+            0% { box-shadow: 0 0 5px rgba(139, 92, 246, 0.2); }
+            50% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); }
+            100% { box-shadow: 0 0 5px rgba(139, 92, 246, 0.2); }
+        }
+        .animate-glow-slow {
+            animation: subtle-glow 4s infinite ease-in-out;
+        }
+
+
+        /* --- 2. CARD & BUTTON STYLES --- */
+
+        /* Tool card hover effect */
         .tool-card {
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border-left: 5px solid transparent;
             border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            /* Thêm gradient nhẹ cho nền card */
-            background: linear-gradient(180deg, #ffffff 95%, #f7f7ff 100%);
+            /* Nền card tối nhẹ hơn nền body */
+            background: #2b2b2b; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #f0f0f0; /* Chữ trên card */
         }
         .tool-card:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
-            border-left-color: #4F46E5; /* Indigo-600 */
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+            border-left-color: #8B5CF6; /* Purple accent */
         }
+        
         /* Active filter button - CÁC NÚT LỌC CHÍNH */
         .usecase-btn.active {
             background-color: #4F46E5;
             color: white;
-            box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
+            box-shadow: 0 6px 15px rgba(79, 70, 229, 0.6);
             font-weight: 700;
             transform: translateY(-3px);
             border-color: #4F46E5;
@@ -48,130 +65,83 @@
         .usecase-btn {
             transition: all 0.2s;
             border: 2px solid transparent;
+            /* Màu mặc định trên nền tối */
+            background-color: #4a4a4a;
+            color: #f0f0f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
+        .usecase-btn:hover:not(.active) {
+            background-color: #6a6a6a;
+        }
+
         /* Bộ lọc phụ (tags) */
+        .filter-btn {
+            background-color: #4a4a4a !important; /* Force dark background */
+            color: #b0b0b0 !important;
+        }
         .filter-btn.active {
-            background-color: #8B5CF6;
-            color: white;
-            box-weight: 600;
-        }
-        /* Responsive search and filter layout */
-        @media (max-width: 768px) {
-            .filter-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .filter-buttons-scroll {
-                overflow-x: auto;
-                justify-content: flex-start;
-                padding-bottom: 0.5rem;
-                flex-wrap: nowrap; /* Buộc nút cuộn ngang */
-            }
-            .filter-buttons-scroll button {
-                flex-shrink: 0;
-            }
-            /* Đảm bảo Language Switcher hiển thị trên Mobile */
-            #lang-button {
-                padding: 6px 10px; 
-                font-size: 0.9rem;
-            }
-            .lang-switcher {
-                /* Dùng flex-shrink-0 để không bị co lại trên mobile */
-                flex-shrink: 0;
-                margin-left: 1rem; /* Khoảng cách với liên kết Trang Chủ */
-            }
-            /* Căn chỉnh lại Navbar trên mobile */
-            .navbar-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-            }
-            /* FIX: Giảm kích thước font link trang chủ trên mobile */
-            .home-link-small {
-                font-size: 1rem; /* Giảm từ text-xl xuống */
-            }
-        }
-        /* Style cho phần giải thích */
-        .concept-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-left: 4px solid #4F46E5;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        /* Iframe container for responsiveness */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            height: 80vh; /* Chiều cao mặc định */
-            overflow: hidden;
-            border-radius: 0.75rem;
-        }
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Modal Styles */
-        .modal {
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .modal.visible {
-            visibility: visible;
-            opacity: 1;
-        }
-        .modal-content {
-            transition: transform 0.3s ease;
-        }
-        /* Feature Tags Styling */
-        .feature-tag {
-            font-size: 0.7rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 9999px; /* rounded-full */
+            background-color: #8B5CF6 !important;
+            color: white !important;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
             font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
         }
-        .feature-best { background-color: #FFECB3; color: #FF9800; } /* Yellow for Best */
-        .feature-free { background-color: #B9F6CA; color: #00C853; } /* Green for Free */
-        .feature-speed { background-color: #BBDEFB; color: #2196F3; } /* Blue for Speed */
-        .feature-context { background-color: #E1BEE7; color: #9C27B0; } /* Purple for Context */
-        .feature-expensive { background-color: #FFCDD2; color: #F44336; } /* Red for High Cost */
 
-        /* Language Switcher Dropdown Styles */
-        .lang-switcher { position: relative; display: inline-block; }
-        #lang-button {
-          background: #4F46E5; color: #fff; border: none; padding: 8px 12px;
-          border-radius: 4px; cursor: pointer; font-weight: bold;
-          display: flex; align-items: center; 
+        /* Style cho phần giải thích - CONCEPT CARD */
+        .concept-card {
+            background: #2b2b2b;
+            border-left: 4px solid #4F46E5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
-        #language-menu {
-          display: none; position: absolute; top: 100%; right: 0;
-          background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-          border-radius: 4px; margin-top: 4px; list-style: none;
-          padding: 0; overflow: hidden; z-index: 1000;
-          min-width: 120px;
+        .concept-card > div > div {
+            background: #3a3a3a !important;
+            color: #d0d0d0;
+            border: 1px solid #4f4f4f !important;
         }
-        #language-menu.active { display: block; }
-        #language-menu li {
-          padding: 8px 12px; cursor: pointer; white-space: nowrap;
-          font-size: 0.95rem;
+
+        /* --- 3. COMPONENT SPECIFIC STYLES --- */
+        
+        /* Header/Banner: Chữ trắng trên nền tối */
+        .header-banner .header-content .section-title, .header-banner .header-content p {
+            color: white;
+            -webkit-text-fill-color: white;
         }
-        #language-menu li:hover {
-          background: #f0f0f0;
-          color: #3b82f6;
+        
+        /* Navbar */
+        .navbar-container {
+            background-color: #2b2b2b;
+            border-bottom: 1px solid #444;
         }
-        #language-menu li.selected {
-             background: #e0f2fe; /* blue-50 */
-             font-weight: 600;
+        .home-link-small {
+             color: #E0E0E0;
         }
+        
+        /* TIPS quan trọng */
+        .important-tips-container {
+            background-color: #402f1a; /* Dark Cam Tối nhẹ */
+            color: #FFECB3; /* Chữ vàng nhạt tương phản */
+            border-color: #FF9800;
+        }
+        .important-tips-container strong {
+            color: white;
+        }
+        .text-gray-600 {
+            color: #b0b0b0; /* Light gray for subtle text */
+        }
+        
+        /* Feature Tags Styling FIX (Đảm bảo màu tag không bị ngược trên nền tối) */
+        .feature-tag { margin-right: 0.25rem; margin-bottom: 0.25rem; }
+        .feature-best { background-color: #4F46E5; color: white; } /* Indigo for Best */
+        .feature-free { background-color: #10B981; color: white; } /* Emerald for Free */
+        .feature-speed { background-color: #3B82F6; color: white; } /* Blue for Speed */
+        .feature-context { background-color: #8B5CF6; color: white; } /* Purple for Context */
+        .feature-expensive { background-color: #EF4444; color: white; } /* Red for High Cost */
+        
     </style>
 </head>
 <body class="text-gray-800">
 
     <!-- Navbar đơn giản để liên kết lại trang chính -->
-    <nav class="bg-white shadow-md sticky top-0 z-10">
+    <nav class="sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 navbar-container">
             <a href="index.html" class="font-bold text-gray-900 hover:text-indigo-600 transition home-link-small sm:text-xl" data-lang-key="toolbox_nav_back_small">
                 minhtriet.online
@@ -195,21 +165,24 @@
     
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
 
-        <!-- Header Section -->
-        <header class="text-center py-10 bg-white shadow-xl rounded-xl mb-12">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-3" data-lang-key="toolbox_title">
-                AI TOOLBOX
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto" data-lang-key="toolbox_subtitle">
-                Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
-            </p>
+        <!-- Header Section (SỬ DỤNG HÌNH ẢNH BANNER MỚI) -->
+        <header class="header-banner text-center py-16 sm:py-24 shadow-xl rounded-xl mb-12 animate-glow-slow">
+            <div class="header-overlay"></div>
+            <div class="header-content">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-3" data-lang-key="toolbox_title">
+                    AI TOOLBOX
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto" data-lang-key="toolbox_subtitle">
+                    Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
+                </p>
+            </div>
         </header>
 
         <!-- Main Content: Filter by Use Case (Mục đích sử dụng) - ƯU TIÊN SỐ 1 -->
         <section class="mb-12">
-            <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="bg-white/5 rounded-xl shadow-lg p-6 border border-gray-700">
                 <!-- Tiêu đề mới, tập trung vào giải quyết vấn đề -->
-                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center" data-lang-key="toolbox_h2_usecase">Tôi Muốn Dùng AI Để Làm Gì?</h2>
+                <h2 class="text-2xl font-bold text-gray-200 mb-6 text-center" data-lang-key="toolbox_h2_usecase">Tôi Muốn Dùng AI Để Làm Gì?</h2>
                 
                 <!-- Use Case Buttons -->
                 <div id="useCaseButtons" class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
@@ -234,31 +207,35 @@
                     </button>
                 </div>
                 
+                <!-- Tips Button (Vị trí mới, ngay dưới các nút Use Case) -->
+                <div class="flex justify-center mb-6">
+                    <button id="showTipsBtn" onclick="showTipsModal()" 
+                            class="usecase-btn px-6 py-3 rounded-lg bg-purple-600 text-white font-bold hover:bg-purple-700 transition transform hover:scale-105 shadow-lg flex items-center justify-center">
+                        <span class="text-xl mr-2">💡</span><span data-lang-key="toolbox_tips_cta">Tips (Hướng dẫn)</span>
+                    </button>
+                </div>
+
                 <!-- Secondary Filter / Search Section (cho người dùng muốn tìm kiếm sâu hơn) -->
-                <div class="flex items-center space-x-4 border-t pt-4 mt-4">
+                <div class="flex items-center space-x-4 border-t pt-4 mt-4 border-gray-700">
                     <div class="w-full md:w-auto relative flex-shrink-0">
                         <input type="text" id="searchInput" data-lang-key-placeholder="toolbox_search_placeholder" placeholder="Tìm kiếm chi tiết (tùy chọn)..."
-                               class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500 transition"
+                               class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-600 rounded-full focus:ring-purple-500 focus:border-purple-500 transition bg-gray-800 text-white"
                                onkeyup="filterTools()">
                         <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
                     
                     <div id="filterButtons" class="filter-buttons-scroll flex gap-2 w-full overflow-x-auto pb-1">
-                        <span class="text-sm text-gray-500 font-medium whitespace-nowrap pt-2 pr-1" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
+                        <span class="text-sm text-gray-400 font-medium whitespace-nowrap pt-2 pr-1" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
                         <!-- Filter buttons (tags) will be dynamically added here -->
                     </div>
 
-                    <!-- Tips Button -->
-                    <button id="showTipsBtn" onclick="showTipsModal()" 
-                            class="usecase-btn px-4 sm:px-6 py-2 rounded-lg bg-purple-600 text-white font-bold hover:bg-purple-700 transition transform hover:scale-105 shadow-md flex items-center justify-center flex-shrink-0">
-                        <span class="text-xl mr-2">💡</span><span data-lang-key="toolbox_tips_cta">Tips (Hướng dẫn)</span>
-                    </button>
+                    
                 </div>
             </div>
         </section>
 
         <!-- Hướng dẫn hành động sau khi lọc -->
-        <p class="text-base text-gray-600 mb-6 px-4 py-3 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg" data-lang-key="important_tips_action">
+        <p class="text-base mb-6 px-4 py-3 border-l-4 rounded-lg important-tips-container" data-lang-key="important_tips_action">
             <span data-lang-key="important_tips_text">
                 **TIPS QUAN TRỌNG:** Trước khi nhấp vào một công cụ, hãy nhớ xem mục **"Tips (Hướng dẫn)"** màu tím. Nó sẽ chỉ cho bạn cách đặt câu hỏi và khai thác sức mạnh của AI đó tốt nhất!
             </span>
@@ -269,7 +246,7 @@
             <div id="toolsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Tool cards will be generated here -->
             </div>
-            <div id="noResults" class="hidden text-center text-xl text-gray-500 mt-10 p-6 bg-white rounded-xl shadow" data-lang-key="toolbox_no_results">
+            <div id="noResults" class="hidden text-center text-xl text-gray-400 mt-10 p-6 bg-gray-800 rounded-xl shadow-lg" data-lang-key="toolbox_no_results">
                 Không tìm thấy công cụ nào phù hợp với tiêu chí của bạn.
             </div>
         </section>
@@ -277,10 +254,10 @@
         <!-- --- PHẦN PHỤ TRỢ (MOVED DOWN) --- -->
         
         <!-- AI CHATBOT HƯỚNG DẪN TƯƠNG LAI -->
-        <section class="mb-12 pt-10 border-t border-gray-300">
-            <div class="bg-indigo-600 text-white rounded-xl shadow-2xl p-8 text-center">
-                <h2 class="text-3xl font-bold mb-4" data-lang-key="chatbot_future_title">Hướng Dẫn Tự Động: Trợ Lý AI IVS Sắp Ra Mắt!</h2>
-                <p class="text-lg mb-6" data-lang-key="chatbot_future_desc">
+        <section class="mb-12 pt-10 border-t border-gray-700">
+            <div class="bg-indigo-600 rounded-xl shadow-2xl p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-white" data-lang-key="chatbot_future_title">Hướng Dẫn Tự Động: Trợ Lý AI IVS Sắp Ra Mắt!</h2>
+                <p class="text-lg mb-6 text-indigo-100" data-lang-key="chatbot_future_desc">
                     Bạn cần sự hướng dẫn chi tiết ngay bây giờ? Trong tương lai gần, bạn có thể **trò chuyện trực tiếp** với Trợ lý AI của IVS để nhận được câu trả lời cá nhân hóa cho mọi thắc mắc về công cụ và cách sử dụng.
                 </p>
                 <button onclick="alert('Tính năng đang được IVS Celestech phát triển! Hãy ghé thăm lại sau để trải nghiệm chatbot hướng dẫn tự động của chúng tôi.')" 
@@ -293,29 +270,29 @@
 
 
         <!-- CONCEPT EXPLANATION SECTION (Di chuyển xuống dưới) -->
-        <section class="mb-12 pt-10 border-t border-gray-300">
+        <section class="mb-12 pt-10 border-t border-gray-700">
             <div class="concept-card rounded-xl p-6">
-                <h2 class="text-2xl font-bold text-indigo-700 mb-4 text-center" data-lang-key="concept_h2_title">Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)</h2>
+                <h2 class="text-2xl font-bold text-indigo-400 mb-4 text-center" data-lang-key="concept_h2_title">Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)</h2>
                 <div class="grid md:grid-cols-3 gap-6 text-sm">
                     <!-- Concept 1: AI Độc Quyền (Closed Source) -->
-                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
-                        <h3 class="font-bold text-lg text-red-600 mb-2" data-lang-key="concept_closed_title">1. AI Độc Quyền (Closed Source)</h3>
-                        <p class="mb-2" data-lang-key="concept_closed_desc">AI chạy trên máy chủ của công ty (Ví dụ: ChatGPT, Gemini). Người dùng không thể xem hoặc tùy chỉnh mã nguồn.</p>
-                        <p class="font-semibold text-gray-700" data-lang-key="concept_closed_pro_con">Ưu điểm: Rất mạnh mẽ, dễ dùng. Nhược điểm: Mất phí, dữ liệu bị kiểm soát.</p>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <h3 class="font-bold text-lg text-red-400 mb-2" data-lang-key="concept_closed_title">1. AI Độc Quyền (Closed Source)</h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_closed_desc">AI chạy trên máy chủ của công ty (Ví dụ: ChatGPT, Gemini). Người dùng không thể xem hoặc tùy chỉnh mã nguồn.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_closed_pro_con">Ưu điểm: Rất mạnh mẽ, dễ dùng. Nhược điểm: Mất phí, dữ liệu bị kiểm soát.</p>
                     </div>
 
                     <!-- Concept 2: AI Mã Nguồn Mở (Open Source) -->
-                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
-                        <h3 class="font-bold text-lg text-green-600 mb-2" data-lang-key="concept_open_title">2. AI Mã Nguồn Mở (Open Source)</h3>
-                        <p class="mb-2" data-lang-key="concept_open_desc">Mã mô hình được công bố rộng rãi (Ví dụ: Llama 3, Stable Diffusion). Ai cũng có thể nghiên cứu và cải tiến.</p>
-                        <p class="font-semibold text-gray-700" data-lang-key="concept_open_pro_con">Ưu điểm: Minh bạch, có thể tùy biến, miễn phí. Nhược điểm: Cần kiến thức kỹ thuật để vận hành.</p>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <h3 class="font-bold text-lg text-green-400 mb-2" data-lang-key="concept_open_title">2. AI Mã Nguồn Mở (Open Source)</h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_open_desc">Mã mô hình được công bố rộng rãi (Ví dụ: Llama 3, Stable Diffusion). Ai cũng có thể nghiên cứu và cải tiến.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_open_pro_con">Ưu điểm: Minh bạch, có thể tùy biến, miễn phí. Nhược điểm: Cần kiến thức kỹ thuật để vận hành.</p>
                     </div>
 
                     <!-- Concept 3: AI Ngoại Tuyến (Local/Offline) -->
-                    <div class="p-4 bg-white rounded-lg shadow-inner border border-gray-100">
-                        <h3 class="font-bold text-lg text-blue-600 mb-2" data-lang-key="concept_local_title">3. AI Ngoại Tuyến (Local/Offline)</h3>
-                        <p class="mb-2" data-lang-key="concept_local_desc">AI chạy hoàn toàn trên máy tính của bạn (Dùng Ollama hoặc Llama). Dữ liệu không gửi lên cloud.</p>
-                        <p class="font-semibold text-gray-700" data-lang-key="concept_local_pro_con">Ưu điểm: Bảo mật tuyệt đối, không cần Internet. Nhược điểm: Yêu cầu máy tính cấu hình mạnh (GPU).</p>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-inner border border-gray-700">
+                        <h3 class="font-bold text-lg text-blue-400 mb-2" data-lang-key="concept_local_title">3. AI Ngoại Tuyến (Local/Offline)</h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_local_desc">AI chạy hoàn toàn trên máy tính của bạn (Dùng Ollama hoặc Llama). Dữ liệu không gửi lên cloud.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_local_pro_con">Ưu điểm: Bảo mật tuyệt đối, không cần Internet. Nhược điểm: Yêu cầu máy tính cấu hình mạnh (GPU).</p>
                     </div>
                 </div>
             </div>
@@ -323,10 +300,10 @@
         <!-- END CONCEPT EXPLANATION SECTION -->
 
         <!-- NEW IFRAME SECTION: Leaderboard (Di chuyển xuống dưới) -->
-        <section class="mb-12 pt-10 border-t border-gray-300">
-            <div class="bg-white rounded-xl shadow-lg p-6">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
-                <div class="text-center text-sm text-gray-600 mb-4" data-lang-key="leaderboard_warning">
+        <section class="mb-12 pt-10 border-t border-gray-700">
+            <div class="bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700">
+                <h2 class="text-2xl font-bold text-gray-200 mb-4 text-center" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
+                <div class="text-center text-sm text-gray-400 mb-4" data-lang-key="leaderboard_warning">
                     *LƯU Ý: Nếu không thấy nội dung, có thể do trang web nguồn ngăn chặn việc nhúng (embedding) vì lý do bảo mật. Vui lòng bấm vào nút dưới để xem trực tiếp.
                 </div>
                 
@@ -1226,16 +1203,16 @@
             }).join('');
 
             return `
-                <a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="tool-card bg-white p-6 shadow-md flex flex-col justify-between">
+                <a href="${tool.link}" target="_blank" rel="noopener noreferrer" class="tool-card p-6 shadow-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center space-x-3 mb-2">
                             <span class="text-3xl">${tool.icon}</span>
-                            <h3 class="text-xl font-bold text-gray-900">${name}</h3>
+                            <h3 class="text-xl font-bold text-gray-200">${name}</h3>
                         </div>
                         <div class="mb-3">${featureTagsHtml}</div>
-                        <p class="text-gray-600 mb-4 text-sm">${description}</p>
+                        <p class="text-gray-400 mb-4 text-sm">${description}</p>
                     </div>
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-100">
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-600">
                         ${tagsHtml}
                     </div>
                 </a>

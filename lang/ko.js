@@ -1,5 +1,5 @@
 window.translations_ko = {
-    'page_title': '응우옌 민 트리엣 - 기술 리더 및 AI 전문가',
+    'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
     'nav_about': '소개', 'nav_experience': '경력', 'nav_skills': '기술', 'nav_education': '학력', 'nav_portfolio': '프로젝트', 'nav_collaboration': '협업', 'nav_contact': '연락처',
     'nav_about_mobile': '소개', 'nav_experience_mobile': '경력', 'nav_skills_mobile': '기술', 'nav_education_mobile': '학력', 'nav_portfolio_mobile': '프로젝트', 'nav_collaboration_mobile': '협업', 'nav_contact_mobile': '연락처',
     'hero_name': '교육, 운영 및 기술의 전략적 파트너',
