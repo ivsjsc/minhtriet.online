@@ -13,16 +13,6 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://minhtriet.online">
     
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-    
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none';">
-    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://minhtriet.online">
@@ -48,34 +38,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Nguyễn Minh Triết",
-        "jobTitle": "CEO & Technology Leader",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "IVS JSC",
-            "url": "https://ivsacademy.edu.vn"
-        },
-        "url": "https://minhtriet.online",
-        "image": "https://minhtriet.online/images/avatar.webp",
-        "sameAs": [
-            "https://linkedin.com/in/nguyen-minh-triet",
-            "https://github.com/minhtriet-ivs"
-        ],
-        "knowsAbout": [
-            "AI & EdTech",
-            "Microservices Architecture",
-            "Digital Transformation",
-            "Business Operations"
-        ],
-        "description": "CEO IVS JSC, chuyên gia chuyển đổi số và tối ưu hiệu suất. Kiến trúc Microservices & AI Adaptive Learning."
-    }
-    </script>
     
     <!-- Styles -->
     <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
@@ -308,24 +270,25 @@
         }
         
         /* Language Switcher */
-        .lang-switcher { position: relative; display: inline-block; }
-        #lang-button {
-          background: #0078d4; color: #fff; border: none; padding: 8px 12px;
-          border-radius: 4px; cursor: pointer; font-weight: bold;
+        /* Cập nhật CSS để hiển thị ngôn ngữ dạng inline */
+        .lang-switcher { display: flex; align-items: center; }
+        .lang-link {
+            padding: 4px 8px;
+            margin-left: 4px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s;
         }
-        #language-menu {
-          display: none; position: absolute; top: 100%; right: 0;
-          background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-          border-radius: 4px; margin-top: 4px; list-style: none;
-          padding: 0; overflow: hidden; z-index: 1000;
+        .lang-link:hover {
+            background-color: rgba(59, 130, 246, 0.1); /* blue-500/10 */
+            color: #3b82f6; /* blue-600 */
         }
-        #language-menu.active { display: block; }
-        #language-menu li {
-          padding: 8px 12px; cursor: pointer; white-space: nowrap;
+        .lang-link.active {
+            background-color: #3b82f6; /* blue-600 */
+            color: white;
         }
-        #language-menu li:hover {
-          background: #f0f0f0;
-        }
+
         
         /* Enhanced Mobile Responsiveness (Được định nghĩa lại trong styles.css) */
         @media (max-width: 768px) {
@@ -343,6 +306,10 @@
             
             .timeline-item::after {
                 left: 0.3rem;
+            }
+            .lang-switcher {
+                flex-wrap: wrap; /* Cho phép các nút ngôn ngữ xuống dòng trên mobile */
+                justify-content: flex-end;
             }
         }
         
@@ -540,6 +507,11 @@
             margin-top: 5px !important;
             margin-bottom: 5px !important;
         }
+        
+        /* Fix cho iframe LinkedIn */
+        .linkedin-embed {
+            display: none !important;
+        }
 
     }
     </style>
@@ -573,24 +545,19 @@
                     <a href="#collaboration" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_collaboration"></a>
                     <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_contact"></a>
                 </nav>
-                <!-- Language Switcher (Hidden in print) -->
-                                <div class="lang-switcher">
-                                    <button id="lang-button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">English ▼</button>
-                                    <ul id="language-menu">
-                                        <li data-lang="de">Deutsch</li>
-                                        <li data-lang="en">English</li>
-                                        <li data-lang="es">Español</li>
-                                        <li data-lang="fr">Français</li>
-                                        <li data-lang="ja">日本語</li>
-                                        <li data-lang="ko">한국어</li>
-                                        <li data-lang="th">ไทย</li>
-                                        <li data-lang="vi">Tiếng Việt</li>
-                                        <li data-lang="zh">中文</li>
-                                    </ul>
-                                </div>
+                <!-- Language Switcher (MỚI) -->
+                <div class="lang-switcher">
+                    <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-link" data-lang="vi">VI</a>
+                    <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-link" data-lang="en">EN</a>
+                    <a href="javascript:void(0)" onclick="changeLanguage('ja')" class="lang-link" data-lang="ja">JA</a>
+                    <!-- Có thể thêm các ngôn ngữ khác nếu cần:
+                    <a href="javascript:void(0)" onclick="changeLanguage('ko')" class="lang-link" data-lang="ko">KO</a>
+                    <a href="javascript:void(0)" onclick="changeLanguage('zh')" class="lang-link" data-lang="zh">ZH</a>
+                    -->
+                </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden glass p-2 rounded-lg" aria-label="Toggle mobile menu" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <button id="mobile-menu-button" class="md:hidden glass p-2 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
         </div>
         <!-- Mobile Menu (Hidden in print) -->
@@ -635,7 +602,7 @@
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                             </div>
                             <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white animate-bounce no-print">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673m1.67-4.673A7.962 7.962 0 0112 20c-3.042 0-5.824-1.135-7.938-3l3-2.647z"></path></svg>
                             </div>
                         </div>
                         </div>
@@ -738,8 +705,23 @@
             </div>
         </section>
 
+        <!-- LinkedIn Embed Section (DI CHUYỂN ĐẾN ĐÂY) -->
+        <section id="linkedin-showcase" class="py-20 bg-gray-50/50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="linkedin-embed flex justify-center no-print">
+                    <div class="glass-card rounded-xl p-4 shadow-xl max-w-lg w-full">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Hoạt động nổi bật trên LinkedIn</h3>
+                        <!-- Container cho iframe -->
+                        <div class="w-full mx-auto" style="height: 1000px; max-width: 504px;">
+                            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7378863724805206016" height="992" width="504" frameborder="0" allowfullscreen="" title="Embedded post" class="w-full h-full"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 bg-gray-50/50 fade-in-section">
+        <section id="portfolio" class="py-20 fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="section-title" data-lang-key="portfolio_title"></h2>
                 <div class="max-w-6xl mx-auto">
@@ -1157,38 +1139,6 @@
         </section>
 
         <!-- Collaboration Section -->
-        <section id="collaboration" class="py-20 bg-gray-50 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="section-title" data-lang-key="collaboration_title">Mời Hợp Tác</h2>
-                <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8" data-lang-key="collaboration_p1">
-                        Tôi đang tìm kiếm cơ hội để đóng góp kinh nghiệm và chuyên môn của mình vào sự phát triển của các doanh nghiệp có tầm nhìn. Tôi sẵn sàng thảo luận về các vai trò sau:
-                    </p>
-                    <div class="grid md:grid-cols-2 gap-8 text-left">
-                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role1_title">Vị trí Chiến lược (Full-time/Part-time)</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role1_desc">Đảm nhận các vị trí có thể tối ưu hóa hoạt động, dẫn dắt quá trình chuyển đổi số và xây dựng quy trình.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role2_title">Đối tác Chiến lược / Cố vấn</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role2_desc">Tham gia với vai trò cố vấn về công nghệ, quản trị, kiến trúc hệ thống và chiến lược phát triển sản phẩm EdTech.</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role3_title">Trang Web, ứng dụng doanh nghiệp</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role3_desc">Phát triển các trang web và ứng dụng doanh nghiệp, tối ưu trải nghiệm người dùng và đặc biệt là đúng với nhu cầu ưu tiên của doanh nghiệp.</p>
-                        </div>                        
-                        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                             <h3 class="text-xl font-bold text-gray-800 mb-2" data-lang-key="collaboration_role4_title">Trang thiết bị công nghệ.</h3>
-                            <p class="text-gray-600" data-lang-key="collaboration_role4_desc">Tư vấn, giới thiệu hoặc cung cấp các thiết bị công nghệ phù hợp với nhu cầu doanh nghiệp.</p>
-                        </div>
-                    </div>
-                     <a href="#contact" class="mt-12 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 duration-300 shadow-lg no-print" data-lang-key="collaboration_cta">
-                        Kết nối ngay
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Collaboration Section -->
         <section id="collaboration" class="py-20 fade-in-section bg-gradient-to-br from-blue-50/50 to-purple-50/50 border-t-4 border-blue-200">
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-5xl font-extrabold mb-10 border-b-2 border-purple-400/50 pb-2" data-lang-key="collaboration_title">Mời Hợp Tác</h2>
@@ -1434,21 +1384,6 @@
                     <!-- Load external JS (deferred) -->
                     <script src="./js/utils.js" defer></script>
                     <script src="./js/main.js" defer></script>
-                    
-                    <!-- Service Worker Registration -->
-                    <script>
-                        if ('serviceWorker' in navigator) {
-                            window.addEventListener('load', () => {
-                                navigator.serviceWorker.register('./sw.js')
-                                    .then((registration) => {
-                                        console.log('SW registered: ', registration);
-                                    })
-                                    .catch((registrationError) => {
-                                        console.log('SW registration failed: ', registrationError);
-                                    });
-                            });
-                        }
-                    </script>
 
                     <!-- Project details modal (injected to enable click-to-open details while keeping theme) -->
                     <div id="project-modal" class="modal fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 invisible opacity-0 z-50">
