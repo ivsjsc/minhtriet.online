@@ -117,6 +117,13 @@
             overflow-x: hidden; 
         }
 
+        /* FIX CỐ ĐỊNH HEADER */
+        #header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
         /* Glassmorphism Effects */
         .glass {
             background: rgba(255, 255, 255, 0.1);
@@ -539,6 +546,7 @@
             <p class="text-white font-medium">Loading...Have a good day!!!</p>
         </div>
     </div>
+
     <!-- Progress Bar (Hidden in print) -->
     <div id="progress-bar" class="progress-bar"></div>
 
@@ -558,7 +566,7 @@
                     <a href="#collaboration" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_collaboration"></a>
                     <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_contact"></a>
                 </nav>
-                <!-- Language Switcher (KHÔI PHỤC DROPDOWN) -->
+                <!-- Language Switcher (KHÔI PHỤC DROPDOWN VÀ LOGIC MỚI) -->
                 <div class="lang-switcher">
                     <button id="lang-button" class="flex items-center">
                         <span id="current-lang-text">Tiếng Việt</span> 
@@ -667,7 +675,7 @@
                             </a>
                             <a href="https://m.me/ivsacademy.edu" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5" fill="currentColor">
-                                    <path d="M224 0c124.3 0 224 100.8 224 224s-100.8 224-224 224c-28.7 0-56.1-5.7-81.5-16.1l-105.7 34.2c-1.9.6-3.8.9-5.7.9-2.9 0-5.8-.9-8.4-2.8-5.3-4-7-10.7-4.1-16.7l13.6-27.9c-29.4-44.4-46.7-97.1-46.7-152.6 0-124.3 100.8-224 224-224zm-48 152c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm96 0c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zM224 400c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40z"/>
+                                    <path d="M224 0c124.3 0 224 100.8 224 224s-100.8 224-224 224c-28.7 0-56.1-5.7-81.5-16.1l-105.7 34.2c-1.9.6-3.8.9-5.7.9-2.9 0-5.8-.9-8.4-2.8-5.3-4-7-10.7-4.1-16.7l13.6-27.9c-29.4-44.4-46.7-97.1-46.7-152.6 0-124.3 100.8-224 224-224zm-48 152c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm96 0c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm-48 192c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40z"/>
                                 </svg>
                             </a>
                             <a href="https://zalo.me/nmt5555789" target="_blank" class="w-10 h-10 sm:w-12 sm:h-12 glass rounded-full flex items-center justify-center text-blue-500 hover:text-white hover:bg-blue-500 transition-all duration-300 transform hover:scale-110">
@@ -743,7 +751,7 @@
         </section>
 
         <!-- Skills Section - UPDATED -->
-        <section id="skills" class="py-20 fade-in-section bg-gray-50/50">
+        <section id="skills" class="py-20 fade-in-section">
             <div class="container mx-auto px-6">
             <h2 class="section-title" data-lang-key="skills_title">Năng Lực Chuyên Môn</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -934,18 +942,18 @@
                 <h3 class="text-xl font-bold text-gray-800" data-lang-key="edu2_degree">Cử nhân Ngôn ngữ Anh</h3>
                 <p class="font-medium text-green-600" data-lang-key="edu2_institution">Học viện Hàng không Việt Nam (HCMC)</p>
                 <p class="text-sm text-gray-500" data-lang-key="edu2_duration">2012 - 09/2016</p>
+                </div>                
+                 <!-- Education Item 4 -->
+                <div class="glass-card rounded-xl p-6 border-l-4 border-orange-500 hover:border-red-600 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <h3 class="text-xl font-bold text-gray-800" data-lang-key="edu4_degree">Chứng chỉ Nghiệp vụ Thương mại Hàng không</h3>
+                <p class="font-medium text-orange-600" data-lang-key="edu4_institution">Học viện Hàng không Việt Nam (HCMC)</p>
+                <p class="text-sm text-gray-500" data-lang-key="edu4_duration">2012 - 2015</p>
                 </div>
                 <!-- Education Item 3 -->
                 <div class="glass-card rounded-xl p-6 border-l-4 border-purple-500 hover:border-pink-600 hover:scale-105 hover:shadow-lg transition-all duration-300">
                 <h3 class="text-xl font-bold text-gray-800" data-lang-key="edu3_degree">Chứng chỉ Nghiệp vụ Quản lý Giáo dục Phổ thông</h3>
                 <p class="font-medium text-purple-600" data-lang-key="edu3_institution">Trường Cán Bộ Quản Lý Giáo Dục TP. HCM (HCMC)</p>
                 <p class="text-sm text-gray-500" data-lang-key="edu3_duration">2024</p>
-                </div>
-                <!-- Education Item 4 -->
-                <div class="glass-card rounded-xl p-6 border-l-4 border-orange-500 hover:border-red-600 hover:scale-105 hover:shadow-lg transition-all duration-300">
-                <h3 class="text-xl font-bold text-gray-800" data-lang-key="edu4_degree">Chứng chỉ Nghiệp vụ Thương mại Hàng không</h3>
-                <p class="font-medium text-orange-600" data-lang-key="edu4_institution">Học viện Hàng không Việt Nam (HCMC)</p>
-                <p class="text-sm text-gray-500" data-lang-key="edu4_duration">2012 - 2015</p>
                 </div>
             </div>
             </div>
@@ -1014,6 +1022,21 @@
                                 <h3 class="text-sm font-bold text-white text-center" data-lang-key="project6_title">Strive Streak</h3>
                             </div>
                         </div>
+                        <!-- Project 7: QLGX -->
+                        <div class="portfolio-item utility cursor-pointer" data-project-id="7" data-category="utility">
+                            <div class="aspect-square bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project7_title">QLGX</h3>
+                            </div>
+                        </div>
+                        <!-- Project 8: IVS StaySmart -->
+                        <div class="portfolio-item utility cursor-pointer" data-project-id="8" data-category="utility">
+                            <div class="aspect-square bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project8_title">IVS StaySmart</h3>
+                            </div>
+                        </div>
+
 
                         <!-- Dự án phụ (8 dự án, ẩn mặc định) -->
                         
@@ -1030,22 +1053,6 @@
                             <div class="aspect-square bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
                                 <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                 <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement2_title">Quản lý Du lịch</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 7: QLGX -->
-                        <div class="portfolio-item utility more-projects cursor-pointer" data-project-id="7" data-category="utility" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project7_title">QLGX</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 8: IVS StaySmart -->
-                        <div class="portfolio-item utility more-projects cursor-pointer" data-project-id="8" data-category="utility" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project8_title">IVS StaySmart</h3>
                             </div>
                         </div>
 
@@ -1080,6 +1087,14 @@
                                 <h3 class="text-sm font-bold text-white text-center" data-lang-key="project12_title">KhaHome</h3>
                             </div>
                         </div>
+                        
+                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi (lặp lại) -->
+                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="9" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project9_title">Hội nghị - Tiệc cưới</h3>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -1094,12 +1109,12 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Collaboration Section -->
         <section id="collaboration" class="py-20 fade-in-section bg-gradient-to-br from-blue-50/50 to-purple-50/50 border-t-4 border-blue-200">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-5xl font-extrabold mb-10 border-b-2 border-purple-400/50 pb-2" data-lang-key="collaboration_title">Mời Hợp Tác</h2>
-                <div class="max-w-4xl mx-auto text-center">
+                <h2 class="section-title text-4xl font-extrabold mb-10 border-b-2 border-purple-400/50 pb-2" data-lang-key="collaboration_title">Mời Hợp Tác</h2>
+                <div class="max-w-5xl mx-auto text-center">
                     <p class="text-xl font-medium text-gray-700 leading-relaxed mb-10" data-lang-key="collaboration_p1">
                         Tôi đang tìm kiếm cơ hội để đóng góp kinh nghiệm và chuyên môn của mình vào sự phát triển của các doanh nghiệp có tầm nhìn. Tôi sẵn sàng thảo luận về các vai trò sau:
                     </p>
@@ -1210,12 +1225,9 @@
                     </div>
                 </div>
              </div>
-        </section>
-
-        <!-- Contact form submit handler moved to js/main.js for centralized logic -->
+        </section>        
     </main>
-
-
+    
     <!-- Footer - UPDATED SECTION (Hidden in print) -->
     <footer class="bg-gray-900 text-white py-12 no-print">
         <div class="container mx-auto px-6">
@@ -1348,18 +1360,19 @@
                         document.addEventListener('DOMContentLoaded', function () {
                             const projects = [
                                 { id: 4, title: "IVS ENG", categoryDisplay: "EdTech & R&D", description: `<p>Engineering / product showcase website for IVS with demos and technical notes.</p>`, link: "https://ivseng.netlify.app/" },
-                                { id: 2, title: "IELTS Station Center - Project Management", categoryDisplay: "Project Management", description: `<p><strong>Comprehensive Project Management for Infrastructure Development</strong></p><p>• <strong>Market Research & Analysis:</strong> Conducted thorough market analysis and feasibility studies for establishing IELTS Station Center in Long Thanh area.</p><p>• <strong>Construction Management:</strong> Oversaw infrastructure development, facility planning, and construction supervision from concept to completion.</p><p>• <strong>Operational Setup:</strong> Managed the transition from construction to operational readiness, including staff recruitment, system implementation, and pilot testing.</p><p>• <strong>Stakeholder Coordination:</strong> Led coordination with multiple stakeholders including contractors, local authorities, and educational partners.</p>`, link: "https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" },
+                                { id: 2, title: "IELTS Station", categoryDisplay: "Project Management", description: `<p><strong>Comprehensive Project Management for IELTS Station Center</strong></p><p>• <strong>Market Research & Analysis:</strong> Conducted thorough market analysis and feasibility studies for establishing IELTS Station Center in Long Thanh area.</p><p>• <strong>Construction Management:</strong> Oversaw infrastructure development, facility planning, and construction supervision from concept to completion.</p><p>• <strong>Operational Setup:</strong> Managed the transition from construction to operational readiness, including staff recruitment, system implementation, and pilot testing.</p><p>• <strong>Stakeholder Coordination:</strong> Led coordination with multiple stakeholders including contractors, local authorities, and educational partners.</p>`, link: "https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" },
+                                { id: 13, title: "IVS Academy", categoryDisplay: "Website & Education", description: `<p>IVS JSC ecosystem site: education, technology and workforce solutions.</p>`, link: "https://ivsacademy.edu.vn/" },
+                                { id: 14, title: "Luv Yoga", categoryDisplay: "Website & Utility", description: `<p>Yoga studio & therapy service site with class schedules and instructor profiles.</p>`, link: "https://luv-yoga.site/" },
                                 { id: 5, title: "Mandarin by IVS", categoryDisplay: "EdTech & R&D", description: `<p>Mandarin learning product focused on HSK communication and practical lessons.</p>`, link: "https://mandarinbyivs.netlify.app/" },
                                 { id: 6, title: "Strive Streak", categoryDisplay: "SaaS Product", description: `<p>Habit-building and productivity web app with gamification to keep learners motivated.</p>`, link: "https://strivestreak.netlify.app/" },
                                 { id: 7, title: "QLGX", categoryDisplay: "SaaS Product", description: `<p>Management and community platform designed for parish and local organizations.</p>`, link: "https://qlgx.netlify.app/" },
                                 { id: 8, title: "IVS StaySmart", categoryDisplay: "SaaS Product", description: `<p>Accommodation & property management microsite simplifying bookings and billing.</p>`, link: "https://ivs-staysmart.netlify.app/" },
-                                { id: 9, title: "Trung tâm Hội nghị - Tiệc cưới", categoryDisplay: "Website", description: `<p>Event & wedding center website showcasing venues, menus and booking details.</p>`, link: "https://trungtamhoinghitieccuoi-banhanh.netlify.app/" },
+                                { id: 15, title: "TheGenZiCon 2023", categoryDisplay: "Business & Events", description: `<p><strong>Thành tựu TheGenZiCon 2023:</strong> Tổ chức thành công sự kiện thu hút hơn 300 sinh viên tham dự và 1500 khách mời đêm chung kết (theo Đài ĐN RTV đưa tin). Được nhận Bằng khen từ Huyện Đoàn Long Thành vì thành tích tổ chức xuất sắc.</p>`, link: "#" },
+                                { id: 16, title: "Quản lý Du lịch", categoryDisplay: "Business & Operations", description: `<p><strong>Quản lý Du lịch & Hợp tác đối tác (2022):</strong> Liên kết hơn 200 công ty du lịch, đón nhận hơn 15.000 lượt khách du lịch chỉ trong 3 tháng (2022). Mở rộng mạnh mẽ mạng lưới khách hàng tổ chức và tối ưu hóa quy trình vận hành dịch vụ.</p>`, link: "#" },
+                                { id: 9, title: "Hội nghị - Tiệc cưới", categoryDisplay: "Website", description: `<p>Event & wedding center website showcasing venues, menus and booking details.</p>`, link: "https://trungtamhoinghitieccuoi-banhanh.netlify.app/" },
                                 { id: 10, title: "SuoiCamp", categoryDisplay: "Website", description: `<p>Camp & outdoor activities booking site, with activity listings and reservation flows.</p>`, link: "https://suoicamp.netlify.app/" },
                                 { id: 11, title: "KhaDock", categoryDisplay: "Website", description: `<p>Product showcase & e-commerce presence for marina construction services.</p>`, link: "https://khadock.com/" },
                                 { id: 12, title: "KhaHome", categoryDisplay: "Website", description: `<p>Home improvement & interior service showcase site for Florida market.</p>`, link: "https://khahome.com/" },
-                                { id: 13, title: "IVS Academy", categoryDisplay: "Website", description: `<p>IVS JSC ecosystem site: education, technology and workforce solutions.</p>`, link: "https://ivsacademy.edu.vn/" },
-                                { id: 14, title: "Luv Yoga", categoryDisplay: "Website", description: `<p>Yoga studio & therapy service site with class schedules and instructor profiles.</p>`, link: "https://luv-yoga.site/" },
-                                // Short placeholders for projects that exist in other parts of the page
                                 { id: 1, title: "Giáo trình K-12 (Mầm non tới THPT)", categoryDisplay: "EdTech & R&D", description: `<p>Biên soạn và phát triển nội dung học thuật K-12, tích hợp nền tảng số hóa.</p>`, link: "https://ivseng.netlify.app" },
                                 { id: 3, title: "Giáo trình Kỹ năng sống & Anh ngữ", categoryDisplay: "EdTech & R&D", description: `<p>IVSLifeMinds — giáo trình kỹ năng sống tích hợp Anh ngữ dành cho tiểu học.</p>`, link: "https://drive.google.com/file/d/1m8FOUEX-EzswlmLjWBupi0a_GqfSaLrF/view?usp=drive_link" }
                             ];
