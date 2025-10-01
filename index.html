@@ -959,8 +959,8 @@
             </div>
         </section>
 
-        <!-- Portfolio Section - Giao diện mới (ô vuông) -->
-        <section id="portfolio" class="py-20 fade-in-section">
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-50/50 fade-in-section">
             <div class="container mx-auto px-6">
                 <h2 class="section-title" data-lang-key="portfolio_title"></h2>
                 <div class="max-w-6xl mx-auto">
@@ -973,135 +973,226 @@
                         <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="website" data-lang-key="filter_website">Website</button>
                     </div>
                     
-                    <!-- Project Grid: 6 cột trên PC, 2 cột trên Mobile -->
-                    <div id="portfolio-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        
-                        <!-- Dự án chính (8 dự án đầu, hiển thị mặc định) -->
-                        
-                        <!-- Project 4: IVS ENG -->
-                        <div class="portfolio-item education cursor-pointer" data-project-id="4" data-category="education">
-                            <div class="aspect-square bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project4_title">IVS ENG</h3>
+                    <!-- Project Grid -->
+                    <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">                        
+                        <!-- Hiển thị 6 dự án đầu tiên theo mặc định -->
+                        <!-- Project 4: IVS ENG (Visible by default) -->
+                        <div class="portfolio-item education" data-category="education">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project4_title">IVS ENG</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project4_desc">Ứng dụng học tiếng Anh phổ thông từ K-12 theo giáo trình IVS Mastery (ivseng.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education R&D</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivseng.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
                             </div>
                         </div>
-                        <!-- Project 2: IELTS Station -->
-                        <div class="portfolio-item business cursor-pointer" data-project-id="2" data-category="business">
-                            <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                                </svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project2_title">IELTS Station</h3>
+                        <!-- Project 2: IELTS Station (Visible by default) -->
+                        <div class="portfolio-item business" data-category="business" style="cursor: pointer;">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project2_title">IELTS Station Center - Project Management</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project2_desc">Comprehensive project management for infrastructure development: market research, construction management, facility planning and operational setup.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Project Management</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Infrastructure</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Market Research</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                    <div class="flex space-x-2">
+                                        <a href="https://ivsacademy.edu.vn/pages/ivscelestech-tcnoithat" class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Project 13: IVS Academy -->
-                        <div class="portfolio-item education cursor-pointer" data-project-id="13" data-category="education">
-                            <div class="aspect-square bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project13_title">IVS Academy</h3>
-                            </div>
-                        </div>
-                        <!-- Project 14: Luv Yoga -->
-                        <div class="portfolio-item utility cursor-pointer" data-project-id="14" data-category="utility">
-                            <div class="aspect-square bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project14_title">Luv Yoga</h3>
-                            </div>
-                        </div>
-                        <!-- Project 5: Mandarin by IVS -->
-                        <div class="portfolio-item education cursor-pointer" data-project-id="5" data-category="education">
-                            <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project5_title">Mandarin by IVS</h3>
-                            </div>
-                        </div>
-                        <!-- Project 6: Strive Streak -->
-                        <div class="portfolio-item utility cursor-pointer" data-project-id="6" data-category="utility">
-                            <div class="aspect-square bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project6_title">Strive Streak</h3>
-                            </div>
-                        </div>
-                        <!-- Project 7: QLGX -->
-                        <div class="portfolio-item utility cursor-pointer" data-project-id="7" data-category="utility">
-                            <div class="aspect-square bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project7_title">QLGX</h3>
-                            </div>
-                        </div>
-                        <!-- Project 8: IVS StaySmart -->
-                        <div class="portfolio-item utility cursor-pointer" data-project-id="8" data-category="utility">
-                            <div class="aspect-square bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project8_title">IVS StaySmart</h3>
+                        </div>    
+                        <!-- Project 5: Mandarin by IVS (Visible by default) -->
+                        <div class="portfolio-item education" data-category="education">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project5_title">Mandarin by IVS</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project5_desc">Mandarin language learning site developed by IVS (mandarinbyivs.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">EdTech</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://mandarinbyivs.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
                             </div>
                         </div>
 
-
-                        <!-- Dự án phụ (8 dự án, ẩn mặc định) -->
-                        
-                        <!-- NEW PROJECT 1: TheGenZiCon 2023 -->
-                        <div class="portfolio-item business education more-projects cursor-pointer" data-project-id="15" data-category="business education" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement1_title">TheGenZiCon 2023</h3>
-                            </div>
-                        </div>
-
-                        <!-- NEW PROJECT 2: Quản lý Du lịch & Hợp tác đối tác (2022) -->
-                        <div class="portfolio-item business more-projects cursor-pointer" data-project-id="16" data-category="business" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement2_title">Quản lý Du lịch</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi -->
-                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="9" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project9_title">Hội nghị - Tiệc cưới</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 10: SuoiCamp -->
-                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="10" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project10_title">SuoiCamp</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 11: KhaDock -->
-                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="11" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project11_title">KhaDock</h3>
-                            </div>
-                        </div>
-
-                        <!-- Project 12: KhaHome -->
-                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="12" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project12_title">KhaHome</h3>
+                        <!-- Project 6: Strive Streak (Visible by default) -->
+                        <div class="portfolio-item utility" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project6_title">Strive Streak</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project6_desc">Productivity / habit-tracking web application (strivestreak.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">SaaS</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://strivestreak.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi (lặp lại) -->
-                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="9" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
-                            <div class="aspect-square bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
-                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
-                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project9_title">Hội nghị - Tiệc cưới</h3>
+                        <!-- Project 13: IVS Academy (Visible by default) -->
+                        <div class="portfolio-item education" data-category="education">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-green-600 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project13_title">IVS Academy</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project13_desc">Educational academy website for IVS Academy (ivsacademy.edu.vn).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Education</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivsacademy.edu.vn/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Project 14: Luv Yoga (Visible by default) -->
+                        <div class="portfolio-item utility" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project14_title">Luv Yoga</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project14_desc">Yoga studio website (luv-yoga.site).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Wellness</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://luv-yoga.site/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Các dự án còn lại sẽ được ẩn đi ban đầu -->
+                        <!-- Project 7: QLGX (Hidden by default) -->
+                        <div class="portfolio-item utility hidden more-projects" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project7_title">QLGX</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project7_desc">Management / logistics platform (qlgx.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Management</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://qlgx.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: IVS StaySmart (Hidden by default) -->
+                        <div class="portfolio-item utility hidden more-projects" data-category="utility">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project8_title">IVS StaySmart</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project8_desc">Accommodation booking / management microsite (ivs-staysmart.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">Hospitality</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://ivs-staysmart.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project9_title">Trung tâm Hội nghị - Tiệc cưới</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project9_desc">Event & wedding center website (trungtamhoinghitieccuoi-banhanh.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://trungtamhoinghitieccuoi-banhanh.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 10: SuoiCamp (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project10_title">SuoiCamp</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project10_desc">Camp & outdoor activities site (suoicamp.netlify.app).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm font-medium">Events</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://suoicamp.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 11: KhaDock (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project11_title">KhaDock</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project11_desc">E-commerce / product showcase for KhaDock (khadock.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">E-commerce</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khadock.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 12: KhaHome (Hidden by default) -->
+                        <div class="portfolio-item website hidden more-projects" data-category="website">
+                            <div class="card relative overflow-hidden">
+                                <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-500 rounded-lg mb-4 flex items-center justify-center">
+                                    <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2" data-lang-key="project12_title">KhaHome</h3>
+                                <p class="text-gray-600 mb-4" data-lang-key="project12_desc">Home decor / interior showcase site (khahome.com).</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Home</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://khahome.com/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Toggle Button (Hidden in print) -->
                     <div class="text-center mt-12 no-print">
                         <button id="toggle-projects-btn" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                            <span id="toggle-text">Xem thêm dự án (8+)</span>
+                            <span id="toggle-text">Xem thêm dự án (6+)</span>
                             <svg id="toggle-icon" class="ml-2 w-4 h-4 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                     </div>
