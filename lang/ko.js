@@ -49,6 +49,11 @@ window.translations_ko = {
     'project12_title': 'KhaHome', 'project12_desc': '플로리다, 미국 실내 건설, 리노베이션, 주택 업그레이드 계약자 웹사이트',
     'project13_title': 'IVS Academy', 'project13_desc': 'IVS Academy 교육 기관 사이트 (ivsacademy.edu.vn).',
     'project14_title': 'Luv Yoga', 'project14_desc': '요가 스튜디오 및 웰니스 사이트 (luv-yoga.site).',
+    // NEW PROJECTS ADDED HERE
+    'project15_title': 'TheGenZiCon 2023 - 프로젝트 관리',
+    'project15_desc': '대규모 청소년 행사 (Đồng Nai) 조직: 300명 이상의 참가 학생, 최종 밤에 1500명의 게스트를 유치, 지구 청년 연합 표창장 수상.',
+    'project16_title': '관광 파트너 관리 (2022년)',
+    'project16_desc': '관광, 접객업 분야의 전략적 파트너십 개발 및 유지, 운영 최적화 및 서비스 수익 성장에 기여.',
     'stat_years_experience_label': '경력(년)', 'stat_projects_completed_label': '완료된 프로젝트', 'stat_revenue_growth_label': '수익 성장', 'stat_client_satisfaction_label': '고객 만족도',
     'stat_foreign_partners_label': '기술 혁신 및 도입',
     'scroll_indicator': '스크롤하여 탐색',

@@ -49,6 +49,11 @@ window.translations_de = {
     'project12_title': 'KhaHome', 'project12_desc': 'Website des Innenausbau-, Renovierungs- und Hausmodernisierungsunternehmers in Florida, USA',
     'project13_title': 'IVS Academy', 'project13_desc': 'Bildungsakademie-Website für IVS Academy (ivsacademy.edu.vn).',
     'project14_title': 'Luv Yoga', 'project14_desc': 'Yoga-Studio und Wellness-Seite (luv-yoga.site).',
+    // NEW PROJECTS ADDED HERE
+    'project15_title': 'TheGenZiCon 2023 - Projektmanagement',
+    'project15_desc': 'Organisation einer Großveranstaltung für Jugendliche (Đồng Nai): zog über 300 teilnehmende Studenten, 1500 Gäste der Abschlussveranstaltung an, erhielt ein Leistungszertifikat des Bezirksjugendverbandes.',
+    'project16_title': 'Management von Tourismuspartnern (2022)',
+    'project16_desc': 'Entwicklung und Pflege strategischer Partnerschaften in der Tourismus- und Hospitality-Branche, wodurch Betriebsoptimierung und Serviceumsatzwachstum unterstützt werden.',
     'stat_years_experience_label': 'Jahre Erfahrung', 'stat_projects_completed_label': 'Abgeschlossene Projekte', 'stat_revenue_growth_label': 'Umsatzwachstum', 'stat_client_satisfaction_label': 'Kundenzufriedenheit',
     'stat_foreign_partners_label': 'Technologische Innovation und Adaption',
     'scroll_indicator': 'Scrollen, um zu entdecken',

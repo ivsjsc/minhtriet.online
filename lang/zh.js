@@ -49,6 +49,11 @@ window.translations_zh_cn = {
     'project12_title': 'KhaHome', 'project12_desc': '佛罗里达州，美国室内建设、翻新、房屋升级承包商网站',
     'project13_title': 'IVS Academy', 'project13_desc': 'IVS Academy 教育网站 (ivsacademy.edu.vn)。',
     'project14_title': 'Luv Yoga', 'project14_desc': '瑜伽工作室与健康网站 (luv-yoga.site)。',
+    // NEW PROJECTS ADDED HERE
+    'project15_title': 'TheGenZiCon 2023 - 项目管理',
+    'project15_desc': '组织大型青年活动 (Đồng Nai)：吸引了 300 多名参与学生，1500 名总决赛之夜嘉宾，获得县青年团颁发的奖状。',
+    'project16_title': '旅游合作伙伴管理 (2022年)',
+    'project16_desc': '发展和维护旅游、酒店业的战略合作伙伴关系，有助于运营优化和服务收入增长。',
     'stat_years_experience_label': '工作年限', 'stat_projects_completed_label': '完成项目数', 'stat_revenue_growth_label': '收入增长', 'stat_client_satisfaction_label': '客户满意度',
     'stat_foreign_partners_label': '技术创新与应用',
     'scroll_indicator': '向下滚动以探索',

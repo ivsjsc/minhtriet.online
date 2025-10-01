@@ -20,7 +20,7 @@ window.translations_vi = {
     'filter_utility': 'Ứng dụng tiện ích',
     'filter_website': 'Website',
     'project1_title': 'Nền tảng EdTech IVS', 'project1_desc': 'Nền tảng công nghệ giáo dục toàn diện với hệ thống học thích ứng dùng AI.',
-        'project4_title': 'IVS ENG', 'project4_desc': 'ứng dụng học tiếng Anh phổ thông từ K-12 Theo giáo trình IVS Mastery (ivseng.netlify.app).',
+    'project4_title': 'IVS ENG', 'project4_desc': 'ứng dụng học tiếng Anh phổ thông từ K-12 Theo giáo trình IVS Mastery (ivseng.netlify.app).',
     'project5_title': 'Mandarin by IVS', 'project5_desc': 'Trang học tiếng Quan Thoại do IVS phát triển (mandarinbyivs.netlify.app).',
     'project6_title': 'Strive Streak', 'project6_desc': 'Ứng dụng theo dõi thói quen và năng suất (strivestreak.netlify.app).',
     'project7_title': 'QLGX', 'project7_desc': 'Ứng dụng quản lý nhà thờ, giáo xứ, giáo dân, vv..',
@@ -34,6 +34,11 @@ window.translations_vi = {
     'project2_title': 'Trung tâm IELTS Station - Quản lý Dự án',
     'project2_desc': 'Quản lý dự án toàn diện cho phát triển hạ tầng: nghiên cứu thị trường, quản lý xây dựng, quy hoạch cơ sở vật chất và thiết lập vận hành.',
     'project3_title': 'Bảng điều khiển phân tích AI', 'project3_desc': 'Nền tảng phân tích thời gian thực sử dụng máy học cho phân tích doanh nghiệp.',
+    // NEW PROJECTS ADDED HERE
+    'project15_title': 'TheGenZiCon 2023 - Quản lý Dự án',
+    'project15_desc': 'Tổ chức sự kiện thanh niên quy mô lớn (Đồng Nai): thu hút hơn 300 sinh viên tham dự, 1500 khách mời đêm chung kết, nhận Bằng khen Huyện Đoàn.',
+    'project16_title': 'Quản lý Đối tác Du lịch (2022)',
+    'project16_desc': 'Phát triển và duy trì quan hệ đối tác chiến lược trong ngành Du lịch, Hospitality, góp phần tối ưu hóa vận hành và tăng trưởng doanh thu dịch vụ.',
     'stat_years_experience_label': 'Số năm kinh nghiệm', 'stat_projects_completed_label': 'Dự án hoàn thành', 'stat_revenue_growth_label': 'Tăng trưởng doanh thu', 'stat_client_satisfaction_label': 'Hài lòng khách hàng',
     'stat_foreign_partners_label': 'Technology innovation and adoption',
     'scroll_indicator': 'Kéo để khám phá',
@@ -77,4 +82,3 @@ window.translations_vi = {
     'footer_contact_address': 'Long Phuoc, Dong Nai, Vietnam',
     'footer_description': 'Đối tác Chiến lược Công nghệ & Vận hành. Chuyên gia chuyển đổi số và tối ưu hiệu suất với đam mê kiến tạo giải pháp công nghệ đột phá và khả năng mở rộng quy mô.'
 };
-SSS
