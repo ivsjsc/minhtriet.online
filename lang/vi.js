@@ -68,5 +68,13 @@ window.translations_vi = {
     'skill_cat6_title': 'Quan hệ đối tác / Chăm sóc khách hàng',
     'skill_cat6_li1': 'Phát triển mối quan hệ đối tác chiến lược',
     'skill_cat6_li2': 'Quản lý chăm sóc khách hàng',
-    'skill_cat6_li3': 'Phân tích nhu cầu khách hàng'
+    'skill_cat6_li3': 'Phân tích nhu cầu khách hàng',
+    // Footer contact info
+    'footer_quick_links_title': 'Liên kết nhanh',
+    'footer_contact_title': 'Thông tin liên hệ',
+    'footer_contact_email': 'info@minhtriet.online',
+    'footer_contact_phone': '+84 89692 0547',
+    'footer_contact_address': 'Long Phuoc, Dong Nai, Vietnam',
+    'footer_description': 'Đối tác Chiến lược Công nghệ & Vận hành. Chuyên gia chuyển đổi số và tối ưu hiệu suất với đam mê kiến tạo giải pháp công nghệ đột phá và khả năng mở rộng quy mô.'
 };
+SSS

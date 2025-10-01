@@ -1,7 +1,7 @@
 window.translations_en = {
     'page_title': 'Nguyen Minh Triet - Technology Leader & AI Expert',
-    'nav_about': 'About', 'nav_experience': 'Experience', 'nav_skills': 'Skills', 'nav_portfolio': 'Projects', 'nav_collaboration': 'Collaboration', 'nav_contact': 'Contact',
-    'nav_about_mobile': 'About', 'nav_experience_mobile': 'Experience', 'nav_skills_mobile': 'Skills', 'nav_portfolio_mobile': 'Projects', 'nav_collaboration_mobile': 'Collaboration', 'nav_contact_mobile': 'Contact',
+    'nav_about': 'About', 'nav_experience': 'Experience', 'nav_skills': 'Skills', 'nav_education': 'Education', 'nav_portfolio': 'Projects', 'nav_collaboration': 'Collaboration', 'nav_contact': 'Contact',
+    'nav_about_mobile': 'About', 'nav_experience_mobile': 'Experience', 'nav_skills_mobile': 'Skills', 'nav_education_mobile': 'Education', 'nav_portfolio_mobile': 'Projects', 'nav_collaboration_mobile': 'Collaboration', 'nav_contact_mobile': 'Contact',
     'hero_name': 'Strategic Partner in Education, Operations & Technology',
 	"hero_subtitle_1": "| CEO, IVS JSC |  AI & EdTech Expert | Digital Transformation Leader |",    
     'hero_title': 'Strategic Operations & Technology Partner | Digital Transformation & Performance Optimization',
@@ -13,6 +13,21 @@ window.translations_en = {
     'about_p2': 'I specialize in consulting and implementing AI solutions and automation to enhance performance, create scalable products, and build core competitive advantages. I constantly seek collaboration opportunities to directly contribute to the long-term development of businesses with strategic vision.',
     'portfolio_title': 'Projects',
     'experience_title': 'Professional Journey',
+
+    // EDUCATION SECTION KEYS
+    'education_title': 'Education & Certificates',
+    'edu1_degree': 'Bachelor of Business Administration',
+    'edu1_institution': 'Vietnam Aviation Academy (HCMC)',
+    'edu1_duration': '2013 - Feb 2017',
+    'edu2_degree': 'Bachelor of English Language',
+    'edu2_institution': 'Vietnam Aviation Academy (HCMC)',
+    'edu2_duration': '2012 - Sep 2016',
+    'edu3_degree': 'Certificate in General Education Management',
+    'edu3_institution': 'Ho Chi Minh City Educational Management Cadre School (HCMC)',
+    'edu3_duration': '2024',
+    'edu4_degree': 'Certificate in Aviation Commercial Operations',
+    'edu4_institution': 'Vietnam Aviation Academy (HCMC)',
+    'edu4_duration': '2012 - 2015',
 
     /* New UI keys added for full localization */
     'filter_all': 'All Projects',
@@ -69,5 +84,11 @@ window.translations_en = {
     'skill_cat6_title': 'Partnerships / Customer Care',
     'skill_cat6_li1': 'Strategic partnership development',
     'skill_cat6_li2': 'Customer care management',
-    'skill_cat6_li3': 'Customer needs analysis'
+    'skill_cat6_li3': 'Customer needs analysis',
+    'footer_quick_links_title': 'Quick Links',
+    'footer_contact_title': 'Contact Info',
+    'footer_contact_email': 'info@minhtriet.online',
+    'footer_contact_phone': '+84 89692 0547',
+    'footer_contact_address': 'Long Phuoc, Dong Nai, Vietnam',
+    'footer_description': 'Strategic Operations & Technology Partner. Expert in digital transformation and performance optimization with a passion for creating breakthrough technology solutions and scalable capabilities.'
 };
