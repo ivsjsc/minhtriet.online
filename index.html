@@ -732,7 +732,7 @@
             <div class="container mx-auto px-6">
                 <div class="linkedin-embed flex justify-center no-print">
                     <div class="glass-card rounded-xl p-4 shadow-xl max-w-lg w-full">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Hoạt động nổi bật trên LinkedIn</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Active on Linkedin</h3>
                         <!-- Container cho iframe -->
                         <div class="w-full mx-auto" style="height: 1000px; max-width: 504px;">
                             <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7378863724805206016" height="992" width="504" frameborder="0" allowfullscreen="" title="Embedded post" class="w-full h-full"></iframe>
@@ -741,6 +741,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Skills Section - UPDATED -->
         <section id="skills" class="py-20 fade-in-section bg-gray-50/50">
             <div class="container mx-auto px-6">
@@ -950,177 +951,147 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
+        <!-- Portfolio Section - Giao diện mới (ô vuông) -->
         <section id="portfolio" class="py-20 fade-in-section">
             <div class="container mx-auto px-6">
-            <h2 class="section-title" data-lang-key="portfolio_title"></h2>
-            <div class="max-w-6xl mx-auto">
-                <!-- Filter Tabs (Hidden in print) -->
-                <div class="flex flex-wrap justify-center gap-4 mb-12 no-print">
-                <button class="filter-btn active px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="all" data-lang-key="filter_all">Tất cả dự án</button>
-                <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="business" data-lang-key="filter_business">Phát triển kinh doanh</button>
-                <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="education" data-lang-key="filter_education">Nghiên cứu & phát triển giáo dục</button>
-                <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="utility" data-lang-key="filter_utility">Ứng dụng tiện ích</button>
-                <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="website" data-lang-key="filter_website">Website</button>
-                </div>
-                
-                <!-- Project Grid: Sử dụng 6 cột trên desktop, 4 trên md, 2 trên mobile -->
-                <div id="portfolio-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4"> 
-                    <!-- 1. Project 4: IVS ENG (Visible by default) -->
-                    <div class="portfolio-item education" data-category="education">
-                        <div class="aspect-square bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project4_title">IVS ENG</h3>
-                        </div>
-                    </div>
-                    <!-- 2. Project 2: IELTS Station (Visible by default) -->
-                    <div class="portfolio-item business" data-category="business">
-                        <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project2_title">IELTS Station</h3>
-                        </div>
-                    </div>    
-                    <!-- 3. Project 13: IVS Academy (Visible by default) -->
-                    <div class="portfolio-item education website" data-category="education website">
-                        <div class="aspect-square bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project13_title">IVS Academy</h3>
-                        </div>
-                    </div>
-                    <!-- 4. Project 14: Luv Yoga (Visible by default) -->
-                    <div class="portfolio-item utility website" data-category="utility website">
-                        <div class="aspect-square bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project14_title">Luv Yoga</h3>
-                        </div>
-                    </div>
-                    <!-- 5. Project 5: Mandarin by IVS (Visible by default) -->
-                    <div class="portfolio-item education" data-category="education">
-                        <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project5_title">Mandarin by IVS</h3>
-                        </div>
-                    </div>
-                    <!-- 6. Project 6: Strive Streak (Visible by default) -->
-                    <div class="portfolio-item utility" data-category="utility">
-                        <div class="aspect-square bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project6_title">Strive Streak</h3>
-                        </div>
-                    </div>
-
-                    <!-- **** DỰ ÁN PHỤ (ẨN BAN ĐẦU) **** -->
-
-                    <!-- 7. Project: TheGenZiCon 2023 (Hidden by default) -->
-                    <div class="portfolio-item business education more-projects" data-category="business education">
-                        <div class="aspect-square bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement1_title">TheGenZiCon 2023</h3>
-                        </div>
-                    </div>
-
-                    <!-- 8. Project: Quản lý Du lịch & Hợp tác đối tác (Hidden by default) -->
-                    <div class="portfolio-item business more-projects" data-category="business">
-                        <div class="aspect-square bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement2_title">Quản lý Du lịch</h3>
-                        </div>
-                    </div>
-
-                    <!-- 9. Project 7: QLGX (Hidden by default) -->
-                    <div class="portfolio-item utility more-projects" data-category="utility">
-                        <div class="aspect-square bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project7_title">QLGX</h3>
-                        </div>
-                    </div>
-
-                    <!-- 10. Project 8: IVS StaySmart (Hidden by default) -->
-                    <div class="portfolio-item utility more-projects" data-category="utility">
-                        <div class="aspect-square bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project8_title">IVS StaySmart</h3>
-                        </div>
-                    </div>
-
-                    <!-- 11. Project 9: Trung tam Hoi Nghi Tiec Cuoi (Hidden by default) -->
-                    <div class="portfolio-item website more-projects" data-category="website">
-                        <div class="aspect-square bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project9_title">Hội nghị/Tiệc cưới</h3>
-                        </div>
-                    </div>
-
-                    <!-- 12. Project 10: SuoiCamp (Hidden by default) -->
-                    <div class="portfolio-item website more-projects" data-category="website">
-                        <div class="aspect-square bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project10_title">SuoiCamp</h3>
-                        </div>
-                    </div>
-
-                    <!-- 13. Project 11: KhaDock (Hidden by default) -->
-                    <div class="portfolio-item website more-projects" data-category="website">
-                        <div class="aspect-square bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project11_title">KhaDock</h3>
-                        </div>
-                    </div>
-
-                    <!-- 14. Project 12: KhaHome (Hidden by default) -->
-                    <div class="portfolio-item website more-projects" data-category="website">
-                        <div class="aspect-square bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center" data-lang-key="project12_title">KhaHome</h3>
-                        </div>
+                <h2 class="section-title" data-lang-key="portfolio_title"></h2>
+                <div class="max-w-6xl mx-auto">
+                    <!-- Filter Tabs (Hidden in print) -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12 no-print">
+                        <button class="filter-btn active px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="all" data-lang-key="filter_all">Tất cả dự án</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="business" data-lang-key="filter_business">Phát triển kinh doanh</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="education" data-lang-key="filter_education">Nghiên cứu & phát triển giáo dục</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="utility" data-lang-key="filter_utility">Ứng dụng tiện ích</button>
+                        <button class="filter-btn px-6 py-3 rounded-full glass-card font-medium transition-all hover:scale-105" data-filter="website" data-lang-key="filter_website">Website</button>
                     </div>
                     
-                    <!-- NEW PLACEHOLDER PROJECTS (Project 15-18, hidden by default) -->
-
-                    <!-- 15. Project Placeholder 1 (Hidden by default) -->
-                    <div class="portfolio-item business more-projects" data-category="business">
-                        <div class="aspect-square bg-gray-400/50 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center">Dự án mới 15</h3>
+                    <!-- Project Grid: 6 cột trên PC, 2 cột trên Mobile -->
+                    <div id="portfolio-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        
+                        <!-- Dự án chính (8 dự án đầu, hiển thị mặc định) -->
+                        
+                        <!-- Project 4: IVS ENG -->
+                        <div class="portfolio-item education cursor-pointer" data-project-id="4" data-category="education">
+                            <div class="aspect-square bg-gradient-to-br from-blue-400 to-indigo-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project4_title">IVS ENG</h3>
+                            </div>
                         </div>
+                        <!-- Project 2: IELTS Station -->
+                        <div class="portfolio-item business cursor-pointer" data-project-id="2" data-category="business">
+                            <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project2_title">IELTS Station</h3>
+                            </div>
+                        </div>
+                        <!-- Project 13: IVS Academy -->
+                        <div class="portfolio-item education cursor-pointer" data-project-id="13" data-category="education">
+                            <div class="aspect-square bg-gradient-to-br from-green-600 to-blue-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project13_title">IVS Academy</h3>
+                            </div>
+                        </div>
+                        <!-- Project 14: Luv Yoga -->
+                        <div class="portfolio-item utility cursor-pointer" data-project-id="14" data-category="utility">
+                            <div class="aspect-square bg-gradient-to-br from-pink-400 to-fuchsia-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project14_title">Luv Yoga</h3>
+                            </div>
+                        </div>
+                        <!-- Project 5: Mandarin by IVS -->
+                        <div class="portfolio-item education cursor-pointer" data-project-id="5" data-category="education">
+                            <div class="aspect-square bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project5_title">Mandarin by IVS</h3>
+                            </div>
+                        </div>
+                        <!-- Project 6: Strive Streak -->
+                        <div class="portfolio-item utility cursor-pointer" data-project-id="6" data-category="utility">
+                            <div class="aspect-square bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project6_title">Strive Streak</h3>
+                            </div>
+                        </div>
+
+                        <!-- Dự án phụ (8 dự án, ẩn mặc định) -->
+                        
+                        <!-- NEW PROJECT 1: TheGenZiCon 2023 -->
+                        <div class="portfolio-item business education more-projects cursor-pointer" data-project-id="15" data-category="business education" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-red-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement1_title">TheGenZiCon 2023</h3>
+                            </div>
+                        </div>
+
+                        <!-- NEW PROJECT 2: Quản lý Du lịch & Hợp tác đối tác (2022) -->
+                        <div class="portfolio-item business more-projects cursor-pointer" data-project-id="16" data-category="business" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="achievement2_title">Quản lý Du lịch</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: QLGX -->
+                        <div class="portfolio-item utility more-projects cursor-pointer" data-project-id="7" data-category="utility" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project7_title">QLGX</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: IVS StaySmart -->
+                        <div class="portfolio-item utility more-projects cursor-pointer" data-project-id="8" data-category="utility" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-teal-500 to-cyan-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project8_title">IVS StaySmart</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 9: Trung tam Hoi Nghi Tiec Cuoi -->
+                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="9" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-5-9-5-9 5 9 5z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project9_title">Hội nghị - Tiệc cưới</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 10: SuoiCamp -->
+                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="10" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-pink-500 to-rose-600 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l4 8-8 0 4-8z"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project10_title">SuoiCamp</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 11: KhaDock -->
+                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="11" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project11_title">KhaDock</h3>
+                            </div>
+                        </div>
+
+                        <!-- Project 12: KhaHome -->
+                        <div class="portfolio-item website more-projects cursor-pointer" data-project-id="12" data-category="website" style="display: none; opacity: 0; transform: translateY(20px);">
+                            <div class="aspect-square bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex flex-col items-center justify-center p-3 hover:scale-105 transition-transform shadow-lg">
+                                <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"></path></svg>
+                                <h3 class="text-sm font-bold text-white text-center" data-lang-key="project12_title">KhaHome</h3>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- 16. Project Placeholder 2 (Hidden by default) -->
-                    <div class="portfolio-item education more-projects" data-category="education">
-                        <div class="aspect-square bg-gray-400/50 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center">Dự án mới 16</h3>
-                        </div>
+                    <!-- Toggle Button (Hidden in print) -->
+                    <div class="text-center mt-12 no-print">
+                        <button id="toggle-projects-btn" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                            <span id="toggle-text">Xem thêm dự án (8+)</span>
+                            <svg id="toggle-icon" class="ml-2 w-4 h-4 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
                     </div>
 
-                    <!-- 17. Project Placeholder 3 (Hidden by default) -->
-                    <div class="portfolio-item utility more-projects" data-category="utility">
-                        <div class="aspect-square bg-gray-400/50 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center">Dự án mới 17</h3>
-                        </div>
-                    </div>
-
-                    <!-- 18. Project Placeholder 4 (Hidden by default) -->
-                    <div class="portfolio-item website more-projects" data-category="website">
-                        <div class="aspect-square bg-gray-400/50 rounded-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform cursor-pointer">
-                            <svg class="w-8 h-8 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <h3 class="text-sm font-bold text-white text-center">Dự án mới 18</h3>
-                        </div>
-                    </div>
                 </div>
-
-                <!-- Toggle Button (Hidden in print) -->
-                <div class="text-center mt-12 no-print">
-                <button id="toggle-projects-btn" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                    <span id="toggle-text">Xem thêm dự án (8+)</span>
-                    <svg id="toggle-icon" class="ml-2 w-4 h-4 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                </div>
-
-            </div>
             </div>
         </section>
         
