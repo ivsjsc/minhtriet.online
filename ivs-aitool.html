@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="toolbox_doc_title">AI Toolbox - Tổng Hợp Công Cụ AI Hiệu Quả Nhất</title>
+    <title data-lang-key="toolbox_doc_title">AI Toolbox - Most Effective AI Tools Collection</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -314,6 +314,30 @@
             background: var(--color-secondary);
         }
         
+        /* BỔ SUNG: Nút Scroll To Top */
+        #scroll-to-top-btn {
+            position: fixed;
+            bottom: 6rem; /* Đặt trên nút FAB Menu (1.5rem + 3.5rem + khoảng cách 1rem) */
+            right: 1.5rem;
+            z-index: 100;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: #FFD700; /* Màu vàng tương phản */
+            color: var(--color-bg-dark);
+            border-radius: 50%;
+            display: none; /* Mặc định ẩn */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+        #scroll-to-top-btn:hover {
+            transform: scale(1.1);
+            background: #FFB300;
+        }
+
         /* FAB Navigation Menu (Full screen overlay) */
         #fab-nav-menu {
             position: fixed;
@@ -337,10 +361,11 @@
         }
 
         .fab-menu-link {
-            font-size: 1.8rem;
+            /* CHỈNH SỬA: Giảm font size cho FAB link */
+            font-size: 1.25rem; /* Tương đương text-2xl/20px, nhỏ hơn 1.8rem trước đây */
             font-weight: 700;
             color: var(--color-text-light);
-            padding: 1rem 0;
+            padding: 0.75rem 0; /* Giảm padding */
             transition: color 0.2s, transform 0.2s;
         }
         .fab-menu-link:hover {
@@ -364,41 +389,7 @@
             font-size: 0.9rem; /* sm:text-base (16px) -> 14.4px */
             padding: 0.5rem 0.75rem; /* Giảm padding */
         }
-        /* Giảm font chữ cho tiêu đề Use Case */
-        #tool-list-section h2 {
-            font-size: 1.5rem; /* text-2xl (24px) -> 1.5rem */
-        }
-        
-        /* Giảm font chữ cho ô tìm kiếm và tag label */
-        #searchInput {
-            font-size: 0.875rem; /* text-sm */
-            padding: 0.5rem 1rem;
-        }
-        .filter-buttons-scroll span {
-             font-size: 0.75rem; /* text-xs */
-        }
-        .filter-btn {
-            font-size: 0.75rem !important; /* text-xs */
-            padding: 0.25rem 0.6rem !important;
-        }
-        
-        /* Giảm font chữ cho Tips quan trọng */
-        .important-tips-container {
-            font-size: 0.875rem; /* text-sm */
-        }
-
-        /* Giảm font chữ cho phần Tool Cards trên Mobile */
-        .tool-card h3 {
-            font-size: 1.125rem; /* text-lg */
-        }
-        .tool-card p.text-gray-400 {
-            font-size: 0.75rem; /* text-xs */
-        }
-        .tool-card span.feature-tag {
-            font-size: 0.625rem; /* text-xs (10px) - Rất nhỏ và tinh tế */
-        }
-
-
+/* ... (giữ nguyên các styles font khác) ... */
         /* Desktop adjustment: Tăng nhẹ lại cho Desktop (min-width: 768px) */
         @media (min-width: 768px) {
             #tool-list-section h2 {
@@ -423,17 +414,19 @@
 
     <!-- FAB NAVIGATION MENU (OVERLAY) -->
     <div id="fab-nav-menu" class="fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center p-8 hidden">
-        <button id="fab-close-btn" onclick="toggleFabMenu()" aria-label="Đóng Menu">&times;</button>
-        <h2 class="text-3xl font-black mb-10 text-purple-400">Điều Hướng Nhanh</h2>
+        <button id="fab-close-btn" onclick="toggleFabMenu()" aria-label="Close Menu">&times;</button>
+        <!-- Updated FAB Menu Title -->
+        <h2 class="text-3xl font-black mb-10 text-purple-400" data-lang-key="fab_menu_title">Quick Navigation</h2>
         <nav class="flex flex-col text-center space-y-4">
+            <!-- Updated FAB Menu Links -->
             <a href="#tool-list-section" class="fab-menu-link" onclick="toggleFabMenu()">
-                Kho Công Cụ 🛠️
+                <span data-lang-key="fab_link_tools">AI Tools Hub 🛠️</span>
             </a>
             <a href="#concept-section" class="fab-menu-link" onclick="toggleFabMenu()">
-                Khái Niệm AI 🧠
+                <span data-lang-key="fab_link_concepts">AI Concepts 🧠</span>
             </a>
             <a href="#leaderboard-section" class="fab-menu-link" onclick="toggleFabMenu()">
-                AI RANKING 🏆
+                <span data-lang-key="fab_link_ranking">AI RANKING 🏆</span>
             </a>
         </nav>
     </div>
@@ -443,6 +436,12 @@
         <svg id="fab-icon-open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         <svg id="fab-icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
+    
+    <!-- BỔ SUNG: Nút Scroll To Top -->
+    <button id="scroll-to-top-btn" aria-label="Scroll to Top" onclick="scrollToTop()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+    <!-- END SCROLL TO TOP -->
     <!-- END FAB -->
 
     <!-- Navbar đơn giản để liên kết lại trang chính (Chỉ còn Logo và Language Switch) -->
@@ -460,7 +459,7 @@
                 <!-- Language Switcher -->
                 <div class="lang-switcher relative flex-shrink-0 ml-2">
                     <button id="lang-button" class="flex items-center bg-gray-600 hover:bg-gray-700 text-white transition px-3 py-1 rounded-md text-sm">
-                        <span id="current-lang-text">Tiếng Việt</span> 
+                        <span id="current-lang-text">English</span> 
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <ul id="language-menu" class="absolute right-0 mt-2 w-40 bg-gray-800 rounded-md shadow-lg z-50 py-1 hidden">
@@ -493,7 +492,7 @@
                 AI TOOLBOX
             </h1>
             <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light" data-lang-key="toolbox_subtitle">
-                Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
+                Find the right AI tool for your needs. Simple, effective, and verified.
             </p>
         </div>
     </header>
@@ -506,27 +505,27 @@
         <section id="tool-list-section" class="mb-12">
             <div class="glass-effect rounded-2xl p-6 sm:p-8">
                 <!-- Tiêu đề mới, tập trung vào giải quyết vấn đề -->
-                <h2 class="text-2xl font-bold text-gray-200 mb-6 text-center" data-lang-key="toolbox_h2_usecase">Tôi Muốn Dùng AI Để Làm Gì?</h2>
+                <h2 class="text-2xl font-bold text-gray-200 mb-6 text-center" data-lang-key="toolbox_h2_usecase">What Do You Want AI To Do?</h2>
                 
                 <!-- Use Case Buttons (ĐÃ GIẢM FONT/PADDING CHO MOBILE) -->
                 <div id="useCaseButtons" class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
                     <button class="usecase-btn active px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="all" onclick="selectUseCase('all')">
-                        <span class="text-xl mr-2">🌟</span><span data-lang-key="toolbox_filter_all">Tất cả Công cụ</span>
+                        <span class="text-xl mr-2">🌟</span><span data-lang-key="toolbox_filter_all">All Tools</span>
                     </button>
                     <button class="usecase-btn px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="Viết lách" onclick="selectUseCase('Viết lách')">
-                        <span class="text-xl mr-2">✍️</span><span data-lang-key="toolbox_filter_writing">Viết, Tóm tắt, Ý tưởng</span>
+                        <span class="text-xl mr-2">✍️</span><span data-lang-key="toolbox_filter_writing">Writing, Summarizing, Ideas</span>
                     </button>
                     <button class="usecase-btn px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="Hình ảnh" onclick="selectUseCase('Hình ảnh')">
-                        <span class="text-xl mr-2">🖼️</span><span data-lang-key="toolbox_filter_image">Vẽ, Thiết kế Đồ họa</span>
+                        <span class="text-xl mr-2">🖼️</span><span data-lang-key="toolbox_filter_image">Drawing, Graphic Design</span>
                     </button>
                     <button class="usecase-btn px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="Video & Audio" onclick="selectUseCase('Video & Audio')">
-                        <span class="text-xl mr-2">🎥</span><span data-lang-key="toolbox_filter_video">Tạo Video, Lồng tiếng</span>
+                        <span class="text-xl mr-2">🎥</span><span data-lang-key="toolbox_filter_video">Video Creation, Voiceover</span>
                     </button>
                     <button class="usecase-btn px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="Học tập" onclick="selectUseCase('Học tập')">
-                        <span class="text-xl mr-2">📚</span><span data-lang-key="toolbox_filter_study">Học ngoại ngữ, Nghiên cứu</span>
+                        <span class="text-xl mr-2">📚</span><span data-lang-key="toolbox_filter_study">Language Learning, Research</span>
                     </button>
                     <button class="usecase-btn px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="Lập trình" onclick="selectUseCase('Lập trình')">
-                        <span class="text-xl mr-2">💻</span><span data-lang-key="toolbox_filter_code">Hỗ trợ Lập trình, Tự động hóa</span>
+                        <span class="text-xl mr-2">💻</span><span data-lang-key="toolbox_filter_code">Coding Assistance, Automation</span>
                     </button>
                 </div>
                 
@@ -534,14 +533,14 @@
                 <div class="flex justify-center mb-6">
                     <button id="showTipsBtn" onclick="showTipsModal()" 
                             class="usecase-btn px-6 py-3 rounded-full bg-purple-600 text-white font-bold hover:bg-purple-700 transition transform hover:scale-105 shadow-xl flex items-center justify-center">
-                        <span class="text-2xl mr-2">💡</span><span data-lang-key="toolbox_tips_cta">Tips (Hướng dẫn)</span>
+                        <span class="text-2xl mr-2">💡</span><span data-lang-key="toolbox_tips_cta">Tips (Guidance)</span>
                     </button>
                 </div>
 
                 <!-- Secondary Filter / Search Section (ĐÃ GIẢM FONT) -->
                 <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 border-t pt-4 mt-4 border-gray-700">
                     <div class="w-full md:w-auto relative flex-shrink-0">
-                        <input type="text" id="searchInput" data-lang-key-placeholder="toolbox_search_placeholder" placeholder="Tìm kiếm chi tiết (tùy chọn)..."
+                        <input type="text" id="searchInput" data-lang-key-placeholder="toolbox_search_placeholder" placeholder="Search specifics (optional)..."
                                class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-600 rounded-full focus:ring-purple-500 focus:border-purple-500 transition bg-gray-800 text-white shadow-inner text-sm"
                                onkeyup="filterTools()">
                         <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -549,7 +548,7 @@
                     
                     <!-- Filter Tags - Scrollable -->
                     <div id="filterButtons" class="filter-buttons-scroll flex gap-2 w-full pb-1">
-                        <span class="text-xs text-gray-400 font-medium whitespace-nowrap pt-2 pr-1 flex-shrink-0" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
+                        <span class="text-xs text-gray-400 font-medium whitespace-nowrap pt-2 pr-1 flex-shrink-0" data-lang-key="toolbox_filter_tags_label">Filter by Professional Tags:</span>
                         <!-- Filter buttons (tags) will be dynamically added here -->
                     </div>
                 </div>
@@ -559,7 +558,7 @@
         <!-- Hướng dẫn hành động sau khi lọc (ĐÃ GIẢM FONT) -->
         <p class="text-sm mb-6 px-4 py-3 border-l-4 rounded-xl important-tips-container shadow-md" data-lang-key="important_tips_action">
             <span data-lang-key="important_tips_text">
-                **TIPS QUAN TRỌNG:** Trước khi nhấp vào một công cụ, hãy nhớ xem mục **"Tips (Hướng dẫn)"** màu tím. Nó sẽ chỉ cho bạn cách đặt câu hỏi và khai thác sức mạnh của AI đó tốt nhất!
+                **IMPORTANT TIPS:** Before clicking on a tool, remember to check the purple **"Tips (Guidance)"** section. It will show you how to formulate questions and best harness the power of that AI!
             </span>
         </p>
 
@@ -569,7 +568,7 @@
                 <!-- Tool cards will be generated here -->
             </div>
             <div id="noResults" class="hidden text-center text-xl text-gray-400 mt-10 p-6 glass-effect rounded-xl" data-lang-key="toolbox_no_results">
-                Không tìm thấy công cụ nào phù hợp với tiêu chí của bạn.
+                No tools matched your criteria.
             </div>
         </section>
         
@@ -578,13 +577,13 @@
         <!-- AI CHATBOT HƯỚNG DẪN TƯƠNG LAI -->
         <section class="mb-12 pt-10 border-t border-gray-800">
             <div class="bg-gradient-to-r from-purple-800 to-indigo-800 rounded-xl shadow-2xl p-8 text-center border-2 border-purple-600">
-                <h2 class="text-3xl font-bold mb-4 text-white" data-lang-key="chatbot_future_title">Hướng Dẫn Tự Động: Trợ Lý AI IVS Sắp Ra Mắt!</h2>
+                <h2 class="text-3xl font-bold mb-4 text-white" data-lang-key="chatbot_future_title">Automated Guidance: IVS AI Assistant Coming Soon!</h2>
                 <p class="text-lg mb-6 text-purple-200" data-lang-key="chatbot_future_desc">
-                    Bạn cần sự hướng dẫn chi tiết ngay bây giờ? Trong tương lai gần, bạn có thể **trò chuyện trực tiếp** với Trợ lý AI của IVS để nhận được câu trả lời cá nhân hóa cho mọi thắc mắc về công cụ và cách sử dụng.
+                    Need detailed guidance now? In the near future, you'll be able to chat directly with the IVS AI Assistant to get personalized answers to all your tool and usage questions.
                 </p>
                 <button onclick="alert('Tính năng đang được IVS Celestech phát triển! Hãy ghé thăm lại sau để trải nghiệm chatbot hướng dẫn tự động của chúng tôi.')" 
                         class="inline-flex items-center px-8 py-3 bg-white text-indigo-700 font-bold rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
-                    <span class="text-2xl mr-2">🤖</span><span data-lang-key="chatbot_future_cta">Chờ Đón Chatbot Hướng Dẫn</span>
+                    <span class="text-2xl mr-2">🤖</span><span data-lang-key="chatbot_future_cta">Awaiting Guidance Chatbot</span>
                 </button>
             </div>
         </section>
@@ -594,27 +593,27 @@
         <!-- CONCEPT EXPLANATION SECTION -->
         <section id="concept-section" class="mb-12 pt-10 border-t border-gray-800">
             <div class="concept-card rounded-xl p-6">
-                <h2 class="text-2xl font-bold text-purple-400 mb-6 text-center" data-lang-key="concept_h2_title">Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)</h2>
+                <h2 class="text-2xl font-bold text-purple-400 mb-6 text-center" data-lang-key="concept_h2_title">Essential AI Concepts to Know (Reference)</h2>
                 <div class="grid md:grid-cols-3 gap-6 text-sm">
                     <!-- Concept 1: AI Độc Quyền (Closed Source) -->
                     <div class="p-4 bg-gray-800 rounded-xl shadow-inner border border-gray-700 transition transform hover:scale-[1.03]">
-                        <h3 class="font-bold text-lg text-red-400 mb-2 flex items-center"><span class="mr-2">🔒</span><span data-lang-key="concept_closed_title">1. AI Độc Quyền (Closed Source)</span></h3>
-                        <p class="mb-2 text-gray-400" data-lang-key="concept_closed_desc">AI chạy trên máy chủ của công ty (Ví dụ: ChatGPT, Gemini). Người dùng không thể xem hoặc tùy chỉnh mã nguồn.</p>
-                        <p class="font-semibold text-gray-300" data-lang-key="concept_closed_pro_con">Ưu điểm: Rất mạnh mẽ, dễ dùng. Nhược điểm: Mất phí, dữ liệu bị kiểm soát.</p>
+                        <h3 class="font-bold text-lg text-red-400 mb-2 flex items-center"><span class="mr-2">🔒</span><span data-lang-key="concept_closed_title">1. Closed Source AI</span></h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_closed_desc">AI running on the company's server (e.g., ChatGPT, Gemini). Users cannot view or customize the source code.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_closed_pro_con">Pros: Very powerful, easy to use. Cons: Paid subscription, data governance concerns.</p>
                     </div>
 
                     <!-- Concept 2: AI Mã Nguồn Mở (Open Source) -->
                     <div class="p-4 bg-gray-800 rounded-xl shadow-inner border border-gray-700 transition transform hover:scale-[1.03]">
-                        <h3 class="font-bold text-lg text-green-400 mb-2 flex items-center"><span class="mr-2">🌐</span><span data-lang-key="concept_open_title">2. AI Mã Nguồn Mở (Open Source)</span></h3>
-                        <p class="mb-2 text-gray-400" data-lang-key="concept_open_desc">Mã mô hình được công bố rộng rãi (Ví dụ: Llama 3, Stable Diffusion). Ai cũng có thể nghiên cứu và cải tiến.</p>
-                        <p class="font-semibold text-gray-300" data-lang-key="concept_open_pro_con">Ưu điểm: Minh bạch, có thể tùy biến, miễn phí. Nhược điểm: Cần kiến thức kỹ thuật để vận hành.</p>
+                        <h3 class="font-bold text-lg text-green-400 mb-2 flex items-center"><span class="mr-2">🌐</span><span data-lang-key="concept_open_title">2. Open Source AI</span></h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_open_desc">Model code is publicly released (e.g., Llama 3, Stable Diffusion). Anyone can study and improve it.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_open_pro_con">Pros: Transparent, customizable, often free. Cons: Requires technical knowledge to operate.</p>
                     </div>
 
                     <!-- Concept 3: AI Ngoại Tuyến (Local/Offline) -->
                     <div class="p-4 bg-gray-800 rounded-xl shadow-inner border border-gray-700 transition transform hover:scale-[1.03]">
-                        <h3 class="font-bold text-lg text-blue-400 mb-2 flex items-center"><span class="mr-2">💻</span><span data-lang-key="concept_local_title">3. AI Ngoại Tuyến (Local/Offline)</span></h3>
-                        <p class="mb-2 text-gray-400" data-lang-key="concept_local_desc">AI chạy hoàn toàn trên máy tính của bạn (Dùng Ollama hoặc Llama). Dữ liệu không gửi lên cloud.</p>
-                        <p class="font-semibold text-gray-300" data-lang-key="concept_local_pro_con">Ưu điểm: Bảo mật tuyệt đối, không cần Internet. Nhược điểm: Yêu cầu máy tính cấu hình mạnh (GPU).</p>
+                        <h3 class="font-bold text-lg text-blue-400 mb-2 flex items-center"><span class="mr-2">💻</span><span data-lang-key="concept_local_title">3. Local/Offline AI</span></h3>
+                        <p class="mb-2 text-gray-400" data-lang-key="concept_local_desc">AI running entirely on your computer (using Ollama or Llama). Data is not sent to the cloud.</p>
+                        <p class="font-semibold text-gray-300" data-lang-key="concept_local_pro_con">Pros: Absolute privacy, no Internet needed. Cons: Requires strong computer hardware (GPU).</p>
                     </div>
                 </div>
             </div>
@@ -624,15 +623,15 @@
         <!-- LEADERBOARD SECTION -->
         <section id="leaderboard-section" class="mb-12 pt-10 border-t border-gray-800">
             <div class="glass-effect rounded-xl p-6 border border-gray-700">
-                <h2 class="text-2xl font-bold text-gray-200 mb-4" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
+                <h2 class="text-2xl font-bold text-gray-200 mb-4" data-lang-key="leaderboard_h2_title">Global AI Leaderboard (Experimental)</h2>
                 <div class="text-center text-sm text-gray-400 mb-4" data-lang-key="leaderboard_warning">
-                    *LƯU Ý: Nếu không thấy nội dung, có thể do trang web nguồn ngăn chặn việc nhúng (embedding) vì lý do bảo mật. Vui lòng bấm vào nút dưới để xem trực tiếp.
+                    *NOTE: If content is missing, the source website may be preventing embedding (iframe) for security reasons. Please click the button below to view directly.
                 </div>
                 
                 <div class="iframe-container mb-6">
                     <iframe id="leaderboardIframe" 
                             src="https://artificialanalysis.ai/leaderboards/models" 
-                            title="Bảng Xếp Hạng Mô Hình AI" 
+                            title="Global AI Model Leaderboard" 
                             allowfullscreen>
                     </iframe>
                 </div>
@@ -640,7 +639,7 @@
                 <div class="text-center">
                     <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener noreferrer" 
                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-red-600 hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
-                        <span data-lang-key="leaderboard_cta">Xem Bảng Xếp Hạng Trực Tiếp →</span>
+                        <span data-lang-key="leaderboard_cta">View Live Leaderboard →</span>
                     </a>
                 </div>
             </div>
@@ -648,16 +647,80 @@
         
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-6 mt-12 bg-gray-900/80 glass-effect text-gray-400 border-t border-gray-800">
-        <p class="text-sm" data-lang-key="toolbox_footer_credit">Được phát triển bởi <span class="font-bold text-purple-400">IVS Celestech</span>. Tối ưu hóa hiệu suất với AI.</p>
+    <!-- Footer - UPDATED SECTION (Hidden in print) -->
+    <footer class="bg-gray-900 text-white py-12 no-print">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-8 mb-8">
+                <!-- Column 1: Brand & Description (md:col-span-2) -->
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 flex items-center">
+                        <img src="/images/favicon.svg" alt="IVS Celestech Icon" class="h-8 w-8 mr-2"> IVS Celestech
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-lang-key="footer_description">
+                        Strategic Operations & Technology Partner. Expert in digital transformation and performance optimization with a passion for creating breakthrough technology solutions and scalable capabilities.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <!-- Thêm data-lang-key cho tiêu đề Quick Links -->
+                    <h4 class="text-xl font-semibold text-blue-400 mb-4" data-lang-key="footer_quick_links_title">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <!-- Thêm data-lang-key cho các liên kết nhanh -->
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_about">About</a></li>
+                        <li><a href="#experience" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_experience">Experience</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors footer-link" data-lang-key="nav_portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info (Đã tối ưu hóa) -->
+                <div>
+                    <!-- Thêm data-lang-key cho tiêu đề -->
+                    <h4 class="text-xl font-semibold text-blue-400 mb-4" data-lang-key="footer_contact_title">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <!-- 1. Email -->
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <!-- Thêm data-lang-key cho Email và sửa href -->
+                            <a href="mailto:info@minhtriet.online" class="hover:text-white transition-colors" data-lang-key="footer_contact_email">info@minhtriet.online</a>
+                        </li>
+                        <!-- 2. Phone -->
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <!-- Thêm data-lang-key cho Phone -->
+                            <a href="tel:+84896920547" class="hover:text-white transition-colors" data-lang-key="footer_contact_phone">+84 89692 0547</a>
+                        </li>
+                        <!-- 3. Address (Mở bản đồ) -->
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <!-- Đã kích hoạt liên kết Google Maps -->
+                            <a href="https://maps.google.com/?q=Long+Phuoc,+Dong+Nai,+Vietnam" target="_blank" class="hover:text-white transition-colors" data-lang-key="footer_contact_address">
+                                Long Phuoc, Dong Nai, Vietnam
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Copyright & Credit (Centered and Compact) -->
+            <div class="text-center pt-2 pb-4">
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm mb-2" data-lang-key="footer_copyright">
+                    © 2025 Nguyen Minh Triet. All rights reserved.
+                </p>
+                <!-- Footer Credit -->
+                <p class="text-gray-600 text-xs">
+                    <a href="https://ivsacademy.edu.vn/pages/webdesign" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="footer_credit">Designed & Developed by AI & IVS Celestech.</a>
+                </p>
+            </div>
     </footer>
+    <!-- END Footer -->
 
     <!-- Tips Modal -->
     <div id="tipsModal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 invisible opacity-0 z-50">
         <div class="modal-content transform -translate-y-10 bg-gray-900 rounded-xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto border border-purple-600">
             <div class="sticky top-0 bg-gray-900 border-b border-purple-800 px-6 py-4 flex justify-between items-center z-10">
-                <h3 class="text-2xl font-bold text-purple-400" data-lang-key="modal_tips_title">💡 Tips Dùng AI Hiệu Quả Nhất</h3>
+                <h3 class="text-2xl font-bold text-purple-400" data-lang-key="modal_tips_title">💡 Most Effective AI Tips</h3>
                 <button onclick="hideTipsModal()" class="text-gray-400 hover:text-white text-3xl leading-none transition">&times;</button>
             </div>
             <div id="modalTipsContent" class="p-6 sm:p-8 space-y-6 text-gray-300">
@@ -686,6 +749,11 @@
                 'toolbox_no_results': 'Không tìm thấy công cụ nào phù hợp với tiêu chí của bạn.',
                 'toolbox_footer_credit': 'Được phát triển bởi IVS Celestech. Tối ưu hóa hiệu suất với AI.',
                 'toolbox_tips_cta': 'Tips (Hướng dẫn)',
+                // FAB Menu
+                'fab_menu_title': 'Điều Hướng Nhanh',
+                'fab_link_tools': 'Kho Công Cụ 🛠️',
+                'fab_link_concepts': 'Khái Niệm AI 🧠',
+                'fab_link_ranking': 'AI RANKING 🏆',
                 // TIPS Modal Content
                 'modal_tips_title': '💡 Tips Dùng AI Hiệu Quả Nhất',
                 'tip1_title': '1. Đừng hỏi AI, Hãy Giao Việc cho AI',
@@ -806,6 +874,11 @@
                 'toolbox_no_results': 'No tools matched your criteria.',
                 'toolbox_footer_credit': 'Developed by IVS Celestech. Optimizing performance with AI.',
                 'toolbox_tips_cta': 'Tips (Guidance)',
+                 // FAB Menu - New Translations
+                'fab_menu_title': 'Quick Navigation',
+                'fab_link_tools': 'AI Tools Hub 🛠️',
+                'fab_link_concepts': 'AI Concepts 🧠',
+                'fab_link_ranking': 'AI RANKING 🏆',
                 // TIPS Modal Content
                 'modal_tips_title': '💡 Most Effective AI Tips',
                 'tip1_title': '1. Don\'t Ask AI, Assign Tasks to AI',
@@ -840,6 +913,62 @@
                 // Quan trọng
                 'important_tips_text': '**IMPORTANT TIPS:** Before clicking on a tool, remember to check the purple **"Tips (Guidance)"** section. It will show you how to formulate questions and best harness the power of that AI!',
                 // Feature Translations (Thêm bản dịch cho các Feature)
+                'feature_best_vi': 'Thông minh/Tốt nhất',
+                'feature_best_en': 'Smartest/Best Performance',
+                'feature_multimodal_vi': 'Đa phương thức',
+                'feature_multimodal_en': 'Multimodal',
+                'feature_high_price_vi': 'Giá Cao',
+                'feature_high_price_en': 'High Cost',
+                'feature_large_context_vi': 'Ngữ cảnh Lớn',
+                'feature_large_context_en': 'Large Context',
+                'feature_real_time_vi': 'Thời gian Thực',
+                'feature_real_time_en': 'Real-time Data',
+                'feature_reasoning_vi': 'Lập luận Cao',
+                'feature_reasoning_en': 'High Reasoning',
+                'feature_google_integration_vi': 'Tích hợp Google',
+                'feature_google_integration_en': 'Google Integration',
+                'feature_free_best_vi': 'Miễn phí Tốt nhất',
+                'feature_free_best_en': 'Best Free Tier',
+                'feature_high_speed_vi': 'Tốc độ Cao',
+                'feature_high_speed_en': 'High Speed',
+                'feature_image_quality_vi': 'Chất lượng Ảnh',
+                'feature_image_quality_en': 'Image Quality',
+                'feature_video_quality_vi': 'Chất lượng Video',
+                'feature_video_quality_en': 'Video Quality',
+                'feature_audio_quality_vi': 'Chất lượng Âm thanh',
+                'feature_audio_quality_en': 'Audio Quality',
+                'feature_easy_to_use_vi': 'Dễ sử dụng',
+                'feature_easy_to_use_en': 'Easy to Use',
+                'feature_code_support_vi': 'Hỗ trợ Code',
+                'feature_code_support_en': 'Code Assistance',
+                'feature_automation_vi': 'Tự động hóa',
+                'feature_automation_en': 'Automation',
+                'feature_edtech_vi': 'Chuyên EdTech',
+                'feature_edtech_en': 'EdTech Specialized',
+                'feature_personalization_vi': 'Cá nhân hóa',
+                'feature_personalization_en': 'Personalization',
+                'feature_open_source_vi': 'Mã Nguồn Mở',
+                'feature_open_source_en': 'Open Source',
+                'feature_local_vi': 'Local (Offline)',
+                'feature_local_en': 'Local (Offline)',
+                'feature_social_integration_vi': 'Tích hợp MXH',
+                'feature_social_integration_en': 'Social Integration',
+                'feature_ai_avatar_vi': 'Avatar AI',
+                'feature_ai_avatar_en': 'AI Avatar',
+                'feature_create_slide_vi': 'Tạo Slide',
+                'feature_create_slide_en': 'Slide Creation',
+                'feature_high_security_vi': 'Bảo mật Cao',
+                'feature_high_security_en': 'High Security',
+                'feature_voice_interaction_vi': 'Tương tác Giọng nói',
+                'feature_voice_interaction_en': 'Voice Interaction',
+                'feature_video_call_vi': 'Video Call AI',
+                'feature_video_call_en': 'AI Video Call',
+                'feature_natural_comm_vi': 'Giao tiếp Tự nhiên',
+                'feature_natural_comm_en': 'Natural Communication',
+                'feature_tech_knowledge_vi': 'Cần Kiến thức Kỹ thuật',
+                'feature_tech_knowledge_en': 'Requires Technical Knowledge',
+                'feature_hardware_vi': 'Cần Cấu hình Mạnh (GPU)',
+                'feature_hardware_en': 'Requires Strong Hardware (GPU)',
                 'feature_code_fast_vi': 'Code Nhanh',
                 'feature_code_fast_en': 'Fast Code Generation',
                 'feature_citation_good_vi': 'Trích dẫn Tốt',
@@ -856,7 +985,7 @@
             }
         };
 
-        let currentLang = 'vi'; // Default language
+        let currentLang = 'en'; // Default language changed to EN
 
         // --- FAB MENU LOGIC ---
         function toggleFabMenu() {
@@ -920,7 +1049,7 @@
             else if (featureName.includes('Tích hợp Notion') || featureName.includes('Notion Integration')) key = 'feature_notion_integration';
             else if (featureName.includes('Quản lý Dự án') || featureName.includes('Project Management')) key = 'feature_project_management';
             else if (featureName.includes('Tích hợp Ứng dụng') || featureName.includes('App Integration')) key = 'feature_app_integration';
-            else if (featureName.includes('Marketing') || featureName.includes('Marketing')) key = 'feature_marketing';
+            else if (featureName.includes('Marketing')) key = 'feature_marketing';
 
 
             if (key) {
@@ -929,7 +1058,8 @@
                 
                 if (currentLang === 'en' && enText) return enText;
                 if (currentLang === 'vi' && viText) return viText;
-                return featureName; // Fallback to original
+                // Fallback to Vietnamese if English is missing, but prefer Vietnamese in default data structure
+                return currentLang === 'en' ? featureName : (viText || featureName); 
             }
             
             // Trường hợp không tìm thấy key chuẩn hóa, trả về chính nó.
@@ -1026,8 +1156,8 @@
                 });
             }
             
-            // Set initial language based on local storage or default
-            const savedLang = localStorage.getItem('language') || 'vi';
+            // Set initial language based on local storage or default (Start with 'en')
+            const savedLang = localStorage.getItem('language') || 'en';
             applyLanguage(savedLang); 
         }
 
@@ -1529,10 +1659,10 @@
                 
                 // Sử dụng SVG icon cho Feature (Tùy chọn)
                 let icon = '';
-                if (translatedFeature.includes('Thông minh') || translatedFeature.includes('Best Performance')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 10a4 4 0 118 0 4 4 0 01-8 0z" /></svg>`;
-                else if (translatedFeature.includes('Miễn phí')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 10a2 2 0 10-4 0 2 2 0 004 0zM12 10a2 2 0 10-4 0 2 2 0 004 0zM16 10a2 2 0 10-4 0 2 2 0 004 0z" /></svg>`;
-                else if (translatedFeature.includes('Ngữ cảnh')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 00-1 1v1a1 1 0 002 0V4a1 1 0 00-1-1zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM7 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM10 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM13 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1z" /></svg>`;
-                else if (translatedFeature.includes('Giá Cao') || translatedFeature.includes('Cần Kiến thức') || translatedFeature.includes('Cần Cấu hình')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 9a1 1 0 012 0v2a1 1 0 11-2 0V9zM11 9a1 1 0 112 0v2a1 1 0 11-2 0V9zM16 10a2 2 0 10-4 0 2 2 0 004 0z" /></svg>`;
+                if (translatedFeature.includes('Smartest') || translatedFeature.includes('Tốt nhất')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 10a4 4 0 118 0 4 4 0 01-8 0z" /></svg>`;
+                else if (translatedFeature.includes('Free') || translatedFeature.includes('Miễn phí')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 10a2 2 0 10-4 0 2 2 0 004 0zM12 10a2 2 0 10-4 0 2 2 0 004 0zM16 10a2 2 0 10-4 0 2 2 0 004 0z" /></svg>`;
+                else if (translatedFeature.includes('Context') || translatedFeature.includes('Ngữ cảnh')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 00-1 1v1a1 1 0 002 0V4a1 1 0 00-1-1zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM7 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM10 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM13 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1z" /></svg>`;
+                else if (translatedFeature.includes('Cost') || translatedFeature.includes('Giá Cao') || translatedFeature.includes('Technical') || translatedFeature.includes('Cấu hình')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 9a1 1 0 012 0v2a1 1 0 11-2 0V9zM11 9a1 1 0 112 0v2a1 1 0 11-2 0V9zM16 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" /></svg>`;
                 else icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm10 2a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" /></svg>`;
 
 
@@ -1554,7 +1684,7 @@
                     </div>
                     <div class="flex justify-between items-center pt-2">
                         <span class="text-sm font-semibold text-purple-400 transition-colors group-hover:text-white group-hover:underline">
-                            Truy cập Công cụ →
+                            ${currentLang === 'en' ? 'Access Tool →' : 'Truy cập Công cụ →'}
                         </span>
                         <div class="flex flex-wrap gap-1">
                             ${tagsHtml}
@@ -1616,7 +1746,8 @@
             const allTagBtn = document.createElement('button');
             allTagBtn.className = 'filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 text-gray-700 hover:bg-purple-600 hover:text-white transition whitespace-nowrap active shadow-md';
             allTagBtn.setAttribute('data-filter', 'all');
-            allTagBtn.textContent = 'Tất cả Tags';
+            // Cập nhật text cho nút All Tags dựa trên ngôn ngữ hiện tại
+            allTagBtn.textContent = currentLang === 'en' ? 'All Tags' : 'Tất cả Tags';
             allTagBtn.onclick = () => selectTag('all');
             filterContainer.appendChild(allTagBtn);
 
@@ -1732,6 +1863,32 @@
             });
         }
 
+        // Hàm cuộn mượt về đầu trang
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        window.scrollToTop = scrollToTop;
+
+
+        // Logic hiển thị/ẩn nút Scroll to Top
+        window.onscroll = function() {
+            const btn = document.getElementById("scroll-to-top-btn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "flex";
+                btn.style.opacity = 1;
+            } else {
+                btn.style.opacity = 0;
+                // Dùng setTimeout để ẩn sau khi fade-out
+                setTimeout(() => {
+                    if (document.body.scrollTop < 300 && document.documentElement.scrollTop < 300) {
+                        btn.style.display = "none";
+                    }
+                }, 300);
+            }
+        };
 
         // Khởi tạo trang
         document.addEventListener('DOMContentLoaded', () => {
