@@ -232,31 +232,33 @@
         /* --- HERO VIDEO STYLES (MOBILE FIRST) --- */
         .hero-video-container {
             position: relative;
-            /* Đảm bảo chiều cao tối thiểu cho mobile */
-            height: 50vh; 
-            min-height: 300px; 
+            /* CHỈNH SỬA: Đặt chiều cao container bằng 75% viewport height để tràn màn hình */
+            height: 75vh; 
+            min-height: 450px; 
             overflow: hidden;
+            /* Đảm bảo container này kéo dài hết màn hình */
+            width: 100%; 
+            margin: 0; 
+            padding: 0;
         }
 
         .hero-video {
             position: absolute;
             top: 50%;
             left: 50%;
-            /* Đảm bảo video luôn phủ kín container */
+            /* Đảm bảo video luôn phủ kín container, cắt bỏ phần thừa */
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
             transform: translate(-50%, -50%);
-            /* Scale up to fit narrow mobile screen if needed */
-            /* object-fit: cover; /* Alternative if transform doesn't work perfectly */ 
+            object-fit: cover; /* Đảm bảo video luôn phủ kín và không bị biến dạng */
         }
 
         /* Lớp phủ mờ tối trên video để đảm bảo text dễ đọc */
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.6); /* Overlay đen 60% */
             z-index: 1;
             /* Thêm gradient subtle để có vẻ chuyên nghiệp hơn */
             background: linear-gradient(180deg, rgba(18, 18, 23, 0.4) 0%, rgba(18, 18, 23, 0.8) 100%);
@@ -265,13 +267,15 @@
         .hero-content-wrapper {
             position: relative;
             z-index: 2;
+            height: 100%; /* Đảm bảo nội dung căn giữa được theo chiều dọc */
         }
 
         /* Desktop adjustments for video height */
         @media (min-width: 768px) {
             .hero-video-container {
-                height: 70vh;
-                min-height: 400px;
+                /* CHỈNH SỬA: Đặt chiều cao lớn hơn cho desktop */
+                height: 85vh; /* Thêm 10% chiều cao cho desktop */
+                min-height: 600px;
             }
             .hero-overlay {
                  background: linear-gradient(180deg, rgba(18, 18, 23, 0.2) 0%, rgba(18, 18, 23, 0.7) 100%);
@@ -353,6 +357,66 @@
             font-size: 3rem;
             cursor: pointer;
         }
+        
+        /* --- FONT SIZE OPTIMIZATION (MOBILE FIRST) --- */
+        /* Giảm font chữ cho các nút lọc chính */
+        #useCaseButtons .usecase-btn {
+            font-size: 0.9rem; /* sm:text-base (16px) -> 14.4px */
+            padding: 0.5rem 0.75rem; /* Giảm padding */
+        }
+        /* Giảm font chữ cho tiêu đề Use Case */
+        #tool-list-section h2 {
+            font-size: 1.5rem; /* text-2xl (24px) -> 1.5rem */
+        }
+        
+        /* Giảm font chữ cho ô tìm kiếm và tag label */
+        #searchInput {
+            font-size: 0.875rem; /* text-sm */
+            padding: 0.5rem 1rem;
+        }
+        .filter-buttons-scroll span {
+             font-size: 0.75rem; /* text-xs */
+        }
+        .filter-btn {
+            font-size: 0.75rem !important; /* text-xs */
+            padding: 0.25rem 0.6rem !important;
+        }
+        
+        /* Giảm font chữ cho Tips quan trọng */
+        .important-tips-container {
+            font-size: 0.875rem; /* text-sm */
+        }
+
+        /* Giảm font chữ cho phần Tool Cards trên Mobile */
+        .tool-card h3 {
+            font-size: 1.125rem; /* text-lg */
+        }
+        .tool-card p.text-gray-400 {
+            font-size: 0.75rem; /* text-xs */
+        }
+        .tool-card span.feature-tag {
+            font-size: 0.625rem; /* text-xs (10px) - Rất nhỏ và tinh tế */
+        }
+
+
+        /* Desktop adjustment: Tăng nhẹ lại cho Desktop (min-width: 768px) */
+        @media (min-width: 768px) {
+            #tool-list-section h2 {
+                font-size: 2rem; /* text-3xl */
+            }
+            #useCaseButtons .usecase-btn {
+                font-size: 1rem; /* text-base */
+                padding: 0.65rem 1rem;
+            }
+            .filter-btn {
+                font-size: 0.875rem !important; /* text-sm */
+                padding: 0.375rem 0.875rem !important;
+            }
+            .important-tips-container {
+                font-size: 1rem; /* text-base */
+            }
+        }
+        
     </style>
 </head>
 <body class="text-gray-200">
@@ -410,32 +474,33 @@
         </div>
     </nav>
     
+    <!-- HEADER SECTION (HERO VIDEO) - Đã tách ra khỏi container giới hạn chiều rộng để đảm bảo tràn màn hình -->
+    <header class="header-banner text-center rounded-none mb-0 hero-video-container">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <!-- Source: File đã được tải lên, sử dụng tên file mặc định -->
+            <source src="/videos/ivs-coding.mp4" type="video/mp4">
+            <!-- Fallback image nếu video không chạy -->
+            <img src="https://placehold.co/1200x300/121217/8B5CF6?text=IVS+AI+Toolbox" alt="AI Toolbox Video Background" class="min-w-full min-h-full object-cover">
+        </video>
+
+        <!-- Video Overlay (giúp text dễ đọc) -->
+        <div class="hero-overlay"></div>
+
+        <!-- Content Wrapper -->
+        <div class="hero-content-wrapper p-4 flex flex-col justify-center items-center h-full absolute inset-0">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-3 leading-tight !text-white !-webkit-text-fill-color:white" data-lang-key="toolbox_title">
+                AI TOOLBOX
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light" data-lang-key="toolbox_subtitle">
+                Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
+            </p>
+        </div>
+    </header>
+    <!-- END HERO VIDEO SECTION -->
+
+    <!-- Khối DIV chứa nội dung còn lại - Bắt đầu sau Hero (để các section khác vẫn giới hạn chiều rộng) -->
     <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-
-        <!-- HEADER SECTION (HERO VIDEO) -->
-        <header class="header-banner text-center shadow-2xl rounded-2xl mb-12 animate-glow-slow hero-video-container">
-            <!-- Video Background -->
-            <video autoplay loop muted playsinline class="hero-video">
-                <!-- Source: File đã được tải lên, sử dụng tên file mặc định -->
-                <source src="ivs-coding.mp4" type="video/mp4">
-                <!-- Fallback image nếu video không chạy -->
-                <img src="https://placehold.co/1200x300/121217/8B5CF6?text=IVS+AI+Toolbox" alt="AI Toolbox Video Background" class="min-w-full min-h-full object-cover">
-            </video>
-
-            <!-- Video Overlay (giúp text dễ đọc) -->
-            <div class="hero-overlay"></div>
-
-            <!-- Content Wrapper -->
-            <div class="hero-content-wrapper p-4 flex flex-col justify-center items-center h-full absolute inset-0">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-3 leading-tight !text-white !-webkit-text-fill-color:white" data-lang-key="toolbox_title">
-                    AI TOOLBOX
-                </h1>
-                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light" data-lang-key="toolbox_subtitle">
-                    Tìm công cụ AI theo nhu cầu của bạn. Đơn giản, hiệu quả và được kiểm chứng.
-                </p>
-            </div>
-        </header>
-        <!-- END HERO VIDEO SECTION -->
 
         <!-- Main Content: Filter by Use Case (Mục đích sử dụng) - #tool-list-section -->
         <section id="tool-list-section" class="mb-12">
@@ -443,8 +508,8 @@
                 <!-- Tiêu đề mới, tập trung vào giải quyết vấn đề -->
                 <h2 class="text-2xl font-bold text-gray-200 mb-6 text-center" data-lang-key="toolbox_h2_usecase">Tôi Muốn Dùng AI Để Làm Gì?</h2>
                 
-                <!-- Use Case Buttons (Thêm hiệu ứng tương tác) -->
-                <div id="useCaseButtons" class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
+                <!-- Use Case Buttons (ĐÃ GIẢM FONT/PADDING CHO MOBILE) -->
+                <div id="useCaseButtons" class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
                     <button class="usecase-btn active px-4 sm:px-6 py-2 rounded-xl bg-gray-200 text-gray-800 transition transform" data-filter="all" onclick="selectUseCase('all')">
                         <span class="text-xl mr-2">🌟</span><span data-lang-key="toolbox_filter_all">Tất cả Công cụ</span>
                     </button>
@@ -473,26 +538,26 @@
                     </button>
                 </div>
 
-                <!-- Secondary Filter / Search Section -->
+                <!-- Secondary Filter / Search Section (ĐÃ GIẢM FONT) -->
                 <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 border-t pt-4 mt-4 border-gray-700">
                     <div class="w-full md:w-auto relative flex-shrink-0">
                         <input type="text" id="searchInput" data-lang-key-placeholder="toolbox_search_placeholder" placeholder="Tìm kiếm chi tiết (tùy chọn)..."
-                               class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-600 rounded-full focus:ring-purple-500 focus:border-purple-500 transition bg-gray-800 text-white shadow-inner"
+                               class="w-full md:w-64 pl-10 pr-4 py-2 border border-gray-600 rounded-full focus:ring-purple-500 focus:border-purple-500 transition bg-gray-800 text-white shadow-inner text-sm"
                                onkeyup="filterTools()">
                         <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
                     
                     <!-- Filter Tags - Scrollable -->
                     <div id="filterButtons" class="filter-buttons-scroll flex gap-2 w-full pb-1">
-                        <span class="text-sm text-gray-400 font-medium whitespace-nowrap pt-2 pr-1 flex-shrink-0" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
+                        <span class="text-xs text-gray-400 font-medium whitespace-nowrap pt-2 pr-1 flex-shrink-0" data-lang-key="toolbox_filter_tags_label">Lọc theo Tags chuyên môn:</span>
                         <!-- Filter buttons (tags) will be dynamically added here -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hướng dẫn hành động sau khi lọc -->
-        <p class="text-base mb-6 px-4 py-3 border-l-4 rounded-xl important-tips-container shadow-md" data-lang-key="important_tips_action">
+        <!-- Hướng dẫn hành động sau khi lọc (ĐÃ GIẢM FONT) -->
+        <p class="text-sm mb-6 px-4 py-3 border-l-4 rounded-xl important-tips-container shadow-md" data-lang-key="important_tips_action">
             <span data-lang-key="important_tips_text">
                 **TIPS QUAN TRỌNG:** Trước khi nhấp vào một công cụ, hãy nhớ xem mục **"Tips (Hướng dẫn)"** màu tím. Nó sẽ chỉ cho bạn cách đặt câu hỏi và khai thác sức mạnh của AI đó tốt nhất!
             </span>
@@ -1467,7 +1532,7 @@
                 if (translatedFeature.includes('Thông minh') || translatedFeature.includes('Best Performance')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6 10a4 4 0 118 0 4 4 0 01-8 0z" /></svg>`;
                 else if (translatedFeature.includes('Miễn phí')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 10a2 2 0 10-4 0 2 2 0 004 0zM12 10a2 2 0 10-4 0 2 2 0 004 0zM16 10a2 2 0 10-4 0 2 2 0 004 0z" /></svg>`;
                 else if (translatedFeature.includes('Ngữ cảnh')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 00-1 1v1a1 1 0 002 0V4a1 1 0 00-1-1zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM7 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM10 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1zM13 11a1 1 0 00-1 1v1a1 1 0 002 0v-1a1 1 0 00-1-1z" /></svg>`;
-                else if (translatedFeature.includes('Giá Cao') || translatedFeature.includes('Cần Kiến thức') || translatedFeature.includes('Cần Cấu hình')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 9a1 1 0 012 0v2a1 1 0 11-2 0V9zM11 9a1 1 0 112 0v2a1 1 0 11-2 0V9z" clip-rule="evenodd" /></svg>`;
+                else if (translatedFeature.includes('Giá Cao') || translatedFeature.includes('Cần Kiến thức') || translatedFeature.includes('Cần Cấu hình')) icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 9a1 1 0 012 0v2a1 1 0 11-2 0V9zM11 9a1 1 0 112 0v2a1 1 0 11-2 0V9zM16 10a2 2 0 10-4 0 2 2 0 004 0z" /></svg>`;
                 else icon = `<svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm10 2a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" /></svg>`;
 
 
