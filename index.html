@@ -1594,33 +1594,9 @@
             });
         };
 
-        // 4. Khởi tạo Language Switcher (khôi phục lại logic từ file gốc, thay thế cho logic inline cũ)
-        function initLanguageSwitcher() {
-            const btn = document.getElementById('lang-button');
-            const menu = document.getElementById('language-menu');
-            
-            if (btn && menu) {
-                // Toggle dropdown
-                btn.addEventListener('click', e => {
-                    e.stopPropagation();
-                    menu.classList.toggle('active');
-                });
-                
-                // Hide on outside click
-                document.addEventListener('click', () => {
-                    menu.classList.remove('active');
-                });
-                
-                // Handle language selection
-                menu.querySelectorAll('li').forEach(item => {
-                    item.addEventListener('click', () => {
-                        const lang = item.dataset.lang;
-                        window.changeLanguageAndSetActive(lang);
-                        menu.classList.remove('active');
-                    });
-                });
-            }
-        }
+        // Note: the actual dropdown initialization is provided by `js/main.js` (initLanguageSwitcher).
+        // Here we only keep the high-level helper `changeLanguageAndSetActive` and call the
+        // centralized initializer from main.js during DOMContentLoaded below.
 
         // 5. Thêm initLanguageSwitcher vào DOMContentLoaded
         document.addEventListener('DOMContentLoaded', function() {

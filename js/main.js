@@ -146,10 +146,13 @@ function initializeWebsite() {
     
     // Initialize language switcher
     initLanguageSwitcher();
-    
-    // Load saved language
-    const savedLang = localStorage.getItem('language') || 'en';
-    changeLanguage(savedLang);
+
+    // Load saved language (default to the page language or 'vi')
+    const savedLang = localStorage.getItem('language') || document.documentElement.lang || 'vi';
+    // Make sure changeLanguage is applied after init; changeLanguage now returns a Promise
+    changeLanguage(savedLang).catch(err => {
+        console.warn('changeLanguage failed during init:', err);
+    });
 
     // Update footer year if present
     const fy = document.getElementById('current-year-foot');
@@ -258,38 +261,54 @@ function initTypedText() {
 
 // Language switching with improved UX
 function changeLanguage(lang) {
-    // If translations for this lang are not loaded yet, load them and then apply.
-    const langBtn = document.getElementById('lang-button');
-    if (!window.translationsMap[lang]) {
-        if (langBtn) {
-            // Keep inner structure (span#current-lang-text) intact; show a short loading indicator
-            const span = document.getElementById('current-lang-text');
+    // Returns a Promise that resolves when language is loaded and applied.
+    return new Promise((resolve, reject) => {
+        if (!lang) return reject(new Error('No language specified'));
+
+        const langBtn = document.getElementById('lang-button');
+        const span = document.getElementById('current-lang-text');
+
+        // If translations for this lang are not loaded yet, load them and then apply.
+        if (!window.translationsMap[lang]) {
             if (span) span.textContent = 'Loading...';
-            else langBtn.textContent = 'Loading...';
+            else if (langBtn) langBtn.textContent = 'Loading...';
+
+            const script = document.createElement('script');
+            script.src = `./lang/${lang}.js`;
+            script.onload = () => {
+                const varName = `translations_${lang}`;
+                if (window[varName]) {
+                    window.translationsMap[lang] = window[varName];
+                }
+                try {
+                    applyLanguage(lang);
+                    resolve();
+                } catch (err) {
+                    reject(err);
+                }
+            };
+            script.onerror = (e) => {
+                console.warn('Failed to load language file for', lang, e);
+                if (span) span.textContent = 'ERR';
+                else if (langBtn) langBtn.textContent = 'ERR';
+                // fallback to English if available
+                if (window.translationsMap['en']) {
+                    try { applyLanguage('en'); resolve(); } catch (err) { reject(err); }
+                } else {
+                    reject(new Error('Failed to load language and no fallback available'));
+                }
+            };
+            document.head.appendChild(script);
+            return;
         }
 
-        const script = document.createElement('script');
-        script.src = `./lang/${lang}.js`;
-        script.onload = () => {
-            const varName = `translations_${lang}`;
-            if (window[varName]) {
-                window.translationsMap[lang] = window[varName];
-            }
+        try {
             applyLanguage(lang);
-        };
-        script.onerror = () => {
-            console.warn('Failed to load language file for', lang);
-            const span = document.getElementById('current-lang-text');
-            if (span) span.textContent = 'ERR';
-            else if (langBtn) langBtn.textContent = 'ERR';
-            // fallback to English if available
-            if (window.translationsMap['en']) applyLanguage('en');
-        };
-        document.head.appendChild(script);
-        return;
-    }
-
-    applyLanguage(lang);
+            resolve();
+        } catch (err) {
+            reject(err);
+        }
+    });
 }
 
 function applyLanguage(lang) {
@@ -355,8 +374,10 @@ function applyLanguage(lang) {
     const menu = document.getElementById('language-menu');
     if (menu) {
         menu.querySelectorAll('li').forEach(li => {
-            if (li.dataset && li.dataset.lang === lang) li.classList.add('selected');
-            else li.classList.remove('selected');
+            try {
+                if (li.dataset && li.dataset.lang === lang) li.classList.add('selected');
+                else li.classList.remove('selected');
+            } catch (e) { /* ignore malformed items */ }
         });
     }
 
@@ -381,23 +402,31 @@ function initLanguageSwitcher() {
     const menu = document.getElementById('language-menu');
     
     if (btn && menu) {
-        // Toggle dropdown
+        // Toggle dropdown and prevent immediate document click from closing it
         btn.addEventListener('click', e => {
             e.stopPropagation();
             menu.classList.toggle('active');
         });
-        
+
         // Hide on outside click
         document.addEventListener('click', () => {
             menu.classList.remove('active');
         });
-        
-        // Handle language selection
-        menu.querySelectorAll('li').forEach(item => {
-            item.addEventListener('click', () => {
-                const lang = item.dataset.lang;
-                changeLanguage(lang);
+
+        // Use event delegation on the menu for robustness
+        menu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const li = e.target.closest('li');
+            if (!li) return;
+            const lang = li.dataset && li.dataset.lang;
+            if (!lang) return;
+
+            // changeLanguage returns a Promise; update UI when done
+            changeLanguage(lang).then(() => {
+                // ensure menu closed and selected state updated
                 menu.classList.remove('active');
+            }).catch(err => {
+                console.warn('Language change failed:', err);
             });
         });
     }
