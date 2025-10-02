@@ -10,6 +10,39 @@ window.typed = window.typed || null;
 // Note: window.translations_XX is loaded from lang/*.js files
 window.translations = {};
 
+// Development helper: when running on localhost (Live Server), unregister any service
+// workers and clear caches to avoid serving stale content during development.
+// This runs only on localhost/127.0.0.1 and is safe to keep — it does nothing in prod.
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    if ('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.getRegistrations().then(regs => {
+                regs.forEach(reg => {
+                    console.info('Unregistering service worker (dev):', reg);
+                    reg.unregister();
+                });
+            }).catch(err => console.warn('Error getting SW registrations:', err));
+        } catch (e) {
+            console.warn('ServiceWorker unregister error', e);
+        }
+    }
+
+    // Clear caches created by service workers (best-effort)
+    if (window.caches && window.caches.keys) {
+        try {
+            caches.keys().then(keys => {
+                keys.forEach(key => {
+                    caches.delete(key).then(ok => {
+                        if (ok) console.info('Deleted cache (dev):', key);
+                    });
+                });
+            });
+        } catch (e) {
+            console.warn('Cache clear error (dev):', e);
+        }
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeWebsite();
