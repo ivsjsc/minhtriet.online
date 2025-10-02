@@ -71,10 +71,6 @@
                                 '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                                 '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                                 '100%': { transform: 'translate(0px, 0px) scale(1)' }
-                            },
-                            glow: {
-                                from: { boxShadow: '0 0 20px #3b82f6, 0 0 40px #3b82f6, 0 0 60px #3b82f6' },
-                                to: { boxShadow: '0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6' }
                             }
                         }
                     }
@@ -294,7 +290,8 @@
           padding: 0; overflow: hidden; z-index: 1000;
           min-width: 120px;
         }
-        #language-menu.active { display: block; }
+        /* Đã sửa: Sử dụng class 'active' trong JS để hiển thị menu */
+        #language-menu.active { display: block; } 
         #language-menu li {
           padding: 8px 12px; cursor: pointer; white-space: nowrap;
           font-size: 0.95rem;
@@ -570,6 +567,7 @@
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <ul id="language-menu">
+                        <!-- Thêm class selected ban đầu để JS có thể quản lý trạng thái -->
                         <li data-lang="en">English</li>
                         <li data-lang="ja">日本語</li>
                         <li data-lang="ko">한국어</li>
@@ -915,7 +913,15 @@
 
                 // Initial render
                 document.addEventListener('DOMContentLoaded', function() {
-                    setTimeout(renderExperience, 2000); // Wait for translations to load
+                    // Chờ một khoảng thời gian ngắn để đảm bảo main.js đã load và định nghĩa window.translations
+                    // (Lưu ý: Dù đã có defer nhưng vẫn cần khoảng chờ nhẹ nếu main.js quá nặng)
+                    setTimeout(function() {
+                        if (typeof window.renderExperience === 'function') {
+                            window.renderExperience();
+                        } else {
+                            console.warn('renderExperience is not yet defined.');
+                        }
+                    }, 500); 
                 });
 
                 // Re-render when language changes
