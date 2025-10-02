@@ -84,7 +84,7 @@ window.translations_ru = {
     'form_sending': 'Отправка...', 'form_success': 'Ваше сообщение успешно отправлено!', 'form_error': 'Произошла ошибка. Пожалуйста, попробуйте еще раз!',
     'form_subject_placeholder': 'Выберите тему...', 'form_subject_business': 'Сотрудничество', 'form_subject_project': 'Предложение проекта', 'form_subject_speaking': 'Приглашение на выступление', 'form_subject_other': 'Другое',
     'contact_social_prompt': 'Связаться через социальные сети:',
-    'footer_copyright': '© 2025 Nguyen Minh Triet. Все права защищены.',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. Это имущество является собственностью IVS JSC.",
     'footer_credit': 'Разработано в сотрудничестве между IVS Celestech и ИИ, сделано с ❤️ во Вьетнаме.',
     'skill_cat6_title': 'Партнерство / Обслуживание клиентов',
     'skill_cat6_li1': 'Развитие стратегического партнерства',

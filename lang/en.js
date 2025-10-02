@@ -86,7 +86,7 @@ window.translations_en = {
     'form_sending': 'Sending...', 'form_success': 'Your message has been sent!', 'form_error': 'An error occurred. Please try again.' ,
     'form_subject_placeholder': 'Choose subject...', 'form_subject_business': 'Business Collaboration', 'form_subject_project': 'Project Proposal', 'form_subject_speaking': 'Speaking Invitation', 'form_subject_other': 'Other',
     'contact_social_prompt': 'Connect via social channels:',
-    'footer_copyright': '© 2025 Nguyen Minh Triet. All Rights Reserved.',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. This asset is the property of IVS JSC.",
     'footer_credit': 'Designed by a collaboration between IVS Celestech and AI, built with ❤️ in Vietnam.',
     'skill_cat6_title': 'Partnerships / Customer Care',
     'skill_cat6_li1': 'Strategic partnership development',

@@ -84,7 +84,7 @@ window.translations_ko = {
     'form_sending': '전송 중...', 'form_success': '메시지가 전송되었습니다!', 'form_error': '오류가 발생했습니다. 다시 시도해주세요.',
     'form_subject_placeholder': '주제 선택...', 'form_subject_business': '비즈니스 협업', 'form_subject_project': '프로젝트 제안', 'form_subject_speaking': '강연 초청', 'form_subject_other': '기타',
     'contact_social_prompt': '소셜 채널로 연결하기:',
-    'footer_copyright': '© 2025 Nguyen Minh Triet. All Rights Reserved.',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. 이 자산은 IVS JSC의 소유입니다.",
     'footer_credit': 'IVS Celestech와 AI의 협업으로 디자인되었으며, 베트남에서 ❤️를 담아 제작되었습니다.',
     'footer_quick_links_title': '빠른 링크',
     'footer_contact_title': '연락처 정보',

@@ -84,7 +84,7 @@ window.translations_zh_cn = {
     'form_sending': '发送中...', 'form_success': '您的消息已发送！', 'form_error': '发生错误。请再试一次。',
     'form_subject_placeholder': '选择主题...', 'form_subject_business': '商务合作', 'form_subject_project': '项目建议', 'form_subject_speaking': '演讲邀请', 'form_subject_other': '其他',
     'contact_social_prompt': '通过社交渠道连接：',
-    'footer_copyright': '© 2025 阮明哲。保留所有权利。',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. 此资产为IVS JSC所有。",
     'footer_credit': '由 IVS Celestech 和 AI 合作设计，在越南用心 ❤️ 打造。',
     'footer_quick_links_title': '快速链接',
     'footer_contact_title': '联系信息',

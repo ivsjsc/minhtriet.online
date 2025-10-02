@@ -84,7 +84,7 @@ window.translations_de = {
     'form_sending': 'Wird gesendet...', 'form_success': 'Ihre Nachricht wurde gesendet!', 'form_error': 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
     'form_subject_placeholder': 'Betreff auswählen...', 'form_subject_business': 'Geschäftliche Zusammenarbeit', 'form_subject_project': 'Projektvorschlag', 'form_subject_speaking': 'Vortragsanfrage', 'form_subject_other': 'Andere',
     'contact_social_prompt': 'Verbinden Sie sich über soziale Kanäle:',
-    'footer_copyright': '© 2025 Nguyen Minh Triet. Alle Rechte vorbehalten.',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. Dieses Eigentum gehört der IVS JSC.",
     'footer_credit': 'Entworfen in Zusammenarbeit zwischen IVS Celestech und KI, gebaut mit ❤️ in Vietnam.',
     'footer_quick_links_title': 'Schnell-Links',
     'footer_contact_title': 'Kontaktinformation',

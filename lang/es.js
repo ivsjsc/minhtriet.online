@@ -84,7 +84,7 @@ window.translations_es = {
     'form_sending': 'Enviando...', 'form_success': '¡Tu mensaje ha sido enviado!', 'form_error': 'Ocurrió un error. Por favor inténtalo de nuevo.',
     'form_subject_placeholder': 'Selecciona asunto...', 'form_subject_business': 'Colaboración comercial', 'form_subject_project': 'Propuesta de proyecto', 'form_subject_speaking': 'Invitación para hablar', 'form_subject_other': 'Otro',
     'contact_social_prompt': 'Conéctese a través de canales sociales:',
-    'footer_copyright': '© 2025 Nguyen Minh Triet. Todos los derechos reservados.',
+    "footer_copyright": "© 2025 Nguyen Minh Triet. Este activo es propiedad de IVS JSC.",
     'footer_credit': 'Diseñado por una colaboración entre IVS Celestech e IA, construido con ❤️ en Vietnam.',
     'footer_quick_links_title': 'Enlaces rápidos',
     'footer_contact_title': 'Información de contacto',

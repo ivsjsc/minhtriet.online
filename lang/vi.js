@@ -70,7 +70,7 @@ window.translations_vi = {
     'form_sending': 'Đang gửi...', 'form_success': 'Tin nhắn đã được gửi!', 'form_error': 'Đã có lỗi xảy ra. Vui lòng thử lại!',
     'form_subject_placeholder': 'Chọn chủ đề...', 'form_subject_business': 'Hợp tác kinh doanh', 'form_subject_project': 'Đề xuất dự án', 'form_subject_speaking': 'Mời diễn thuyết', 'form_subject_other': 'Khác',
     'contact_social_prompt': 'Kết nối qua các kênh mạng xã hội:',
-    'footer_copyright': '© 2025 Nguyễn Minh Triết. Đã đăng ký bản quyền.',
+    "footer_copyright": "© 2025 Nguyễn Minh Triết. Tài sản này thuộc sở hữu của IVS JSC.",
     'footer_credit': 'Được thiết kế bởi sự hợp tác giữa IVS Celestech và AI, xây dựng với ❤️ tại Việt Nam.',
     'skill_cat6_title': 'Quan hệ đối tác / Chăm sóc khách hàng',
     'skill_cat6_li1': 'Phát triển mối quan hệ đối tác chiến lược',
