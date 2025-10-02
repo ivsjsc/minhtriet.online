@@ -43,6 +43,67 @@ if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
     }
 }
 
+// One-shot cache clear trigger for troubleshooting on any host.
+// Usage: open the page with ?clearcache=1 (e.g. https://minhtriet.online/ivs-aitoolbox.html?clearcache=1)
+// This will unregister service workers, clear caches, then reload the page once without the query.
+if (location.search && location.search.indexOf('clearcache=1') !== -1) {
+    console.info('clearcache trigger detected: unregistering service workers and clearing caches...');
+
+    const doReload = () => {
+        try {
+            // Remove query string from URL without reloading (so subsequent reload is clean)
+            const cleanUrl = location.origin + location.pathname + location.hash;
+            window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {
+            console.warn('Could not remove query string from URL:', e);
+        }
+
+        // Reload the page to fetch fresh resources from the network
+        setTimeout(() => {
+            console.info('Reloading page to fetch fresh resources...');
+            location.reload();
+        }, 400);
+    };
+
+    // Unregister service workers (if any)
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(regs => {
+            if (regs.length === 0) {
+                console.info('No service workers registered.');
+                // Still attempt to clear caches
+                if (window.caches && window.caches.keys) caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+                doReload();
+                return;
+            }
+            Promise.all(regs.map(reg => reg.unregister())).then(results => {
+                console.info('Service workers unregistered:', results);
+                // Clear caches (best-effort)
+                if (window.caches && window.caches.keys) {
+                    caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))).then(() => doReload()).catch(err => {
+                        console.warn('Error clearing caches:', err);
+                        doReload();
+                    });
+                } else {
+                    doReload();
+                }
+            }).catch(err => {
+                console.warn('Error unregistering service workers:', err);
+                // still try clearing caches
+                if (window.caches && window.caches.keys) caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+                doReload();
+            });
+        }).catch(err => {
+            console.warn('Could not get service worker registrations:', err);
+            if (window.caches && window.caches.keys) caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+            doReload();
+        });
+    } else {
+        // No service worker support; just clear caches if possible and reload
+        if (window.caches && window.caches.keys) caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+        doReload();
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initializeWebsite();
