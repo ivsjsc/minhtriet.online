@@ -274,18 +274,36 @@
             margin: 0; 
             padding: 0;
         }
-
-        .hero-video {
+        /* Mobile styles for hero-video */
+        @media (max-width: 767px) {
+            .hero-video {
             position: absolute;
             top: 50%;
             left: 50%;
             /* Đảm bảo video luôn phủ kín container, cắt bỏ phần thừa */
-            min-width: 100%;
+            min-width: 70%;
+            min-height: 60%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* Đảm bảo video luôn phủ kín và không bị biến dạng */
+            }
+        }
+
+        /* Desktop styles for hero-video */
+        @media (min-width: 768px) {
+            .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Đảm bảo video luôn phủ kín container, cắt bỏ phần thừa */
+            min-width: 130%;
             min-height: 100%;
             width: auto;
             height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover; /* Đảm bảo video luôn phủ kín và không bị biến dạng */
+            }
         }
 
         /* Lớp phủ mờ tối trên video để đảm bảo text dễ đọc */
@@ -294,7 +312,7 @@
             inset: 0;
             z-index: 1;
             /* Thêm gradient subtle để có vẻ chuyên nghiệp hơn */
-            background: linear-gradient(180deg, rgba(18, 18, 23, 0.4) 0%, rgba(18, 18, 23, 0.8) 100%);
+            background: linear-gradient(15deg, rgba(18, 18, 23, 0.4) 0%, rgba(18, 18, 23, 0.8) 50%);
         }
 
         .hero-content-wrapper {
