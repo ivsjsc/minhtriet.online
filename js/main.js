@@ -8,7 +8,10 @@ window.typed = window.typed || null;
 // Per-language translation objects are stored in /lang/*.js and are loaded on demand.
 // Keep an in-memory translations map which will be populated when lang files are loaded.
 // Note: window.translations_XX is loaded from lang/*.js files
-window.translations = {};
+// translationsMap keeps all loaded language objects by code (e.g. translationsMap.en)
+// window.translations will point to the currently active language object (for convenience)
+window.translationsMap = {};
+window.translations = null;
 
 // Development helper: when running on localhost (Live Server), unregister any service
 // workers and clear caches to avoid serving stale content during development.
@@ -255,33 +258,37 @@ function initTypedText() {
 
 // Language switching with improved UX
 function changeLanguage(lang) {
-    // If translations are not loaded in-memory, try to load external lang file
-    if (!window.translations[lang]) {
-        const langBtn = document.getElementById('lang-button');
+    // If translations for this lang are not loaded yet, load them and then apply.
+    const langBtn = document.getElementById('lang-button');
+    if (!window.translationsMap[lang]) {
         if (langBtn) {
-            const prev = langBtn.textContent;
-            langBtn.textContent = 'Loading...';
+            // Keep inner structure (span#current-lang-text) intact; show a short loading indicator
+            const span = document.getElementById('current-lang-text');
+            if (span) span.textContent = 'Loading...';
+            else langBtn.textContent = 'Loading...';
         }
+
         const script = document.createElement('script');
         script.src = `./lang/${lang}.js`;
         script.onload = () => {
-            // map loaded window.translations_<code> to translations[code]
             const varName = `translations_${lang}`;
             if (window[varName]) {
-                window.translations[lang] = window[varName];
+                window.translationsMap[lang] = window[varName];
             }
-            if (langBtn) langBtn.textContent = lang.toUpperCase();
             applyLanguage(lang);
         };
         script.onerror = () => {
             console.warn('Failed to load language file for', lang);
-            if (langBtn) langBtn.textContent = 'ERR';
+            const span = document.getElementById('current-lang-text');
+            if (span) span.textContent = 'ERR';
+            else if (langBtn) langBtn.textContent = 'ERR';
             // fallback to English if available
-            if (window.translations['en']) applyLanguage('en');
+            if (window.translationsMap['en']) applyLanguage('en');
         };
         document.head.appendChild(script);
         return;
     }
+
     applyLanguage(lang);
 }
 
@@ -289,9 +296,11 @@ function applyLanguage(lang) {
     window.currentLang = lang;
     localStorage.setItem('language', lang);
 
-    // Always point window.translations to the current language object
-    if (window.translations[lang]) {
-        window.translations = window.translations[lang];
+    // Set the active translations object for convenience
+    if (window.translationsMap && window.translationsMap[lang]) {
+        window.translations = window.translationsMap[lang];
+    } else {
+        window.translations = null;
     }
 
     // Update all elements with data-lang-key
@@ -321,21 +330,34 @@ function applyLanguage(lang) {
         document.title = window.translations['page_title'];
     }
 
-    // Update language button text with proper language name
+    // Update language button display (preserve inner span if present)
     const langBtn = document.getElementById('lang-button');
-    if (langBtn) {
-        const langNames = {
-            'en': 'English',
-            'vi': 'Tiếng Việt', 
-            'zh': '中文',
-            'ko': '한국어',
-            'th': 'ไทย',
-            'de': 'Deutsch',
-            'es': 'Español',
-            'fr': 'Français',
-            'ja': '日本語'
-        };
-        langBtn.textContent = (langNames[lang] || lang.toUpperCase()) + ' ▼';
+    const currentLangText = document.getElementById('current-lang-text');
+    const langNames = {
+        'en': 'English',
+        'vi': 'Tiếng Việt', 
+        'zh': '中文',
+        'ko': '한국어',
+        'th': 'ไทย',
+        'de': 'Deutsch',
+        'es': 'Español',
+        'fr': 'Français',
+        'ja': '日本語'
+    };
+    const displayName = (langNames[lang] || lang.toUpperCase());
+    if (currentLangText) {
+        currentLangText.textContent = displayName;
+    } else if (langBtn) {
+        langBtn.textContent = displayName + ' ▼';
+    }
+
+    // Update menu selected state if menu exists
+    const menu = document.getElementById('language-menu');
+    if (menu) {
+        menu.querySelectorAll('li').forEach(li => {
+            if (li.dataset && li.dataset.lang === lang) li.classList.add('selected');
+            else li.classList.remove('selected');
+        });
     }
 
     // Update current year dynamically
