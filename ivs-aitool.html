@@ -148,6 +148,8 @@
         .nav-link-item {
             color: var(--color-text-light);
             transition: color 0.3s;
+            /* Thiết lập kích thước font hợp lý cho mobile */
+            font-size: 0.75rem; /* Rất nhỏ gọn */
         }
         .nav-link-item:hover {
             color: var(--color-primary);
@@ -215,7 +217,7 @@
             color: var(--color-primary);
         }
 
-        /* Style cho phần AI Analyzer */
+        /* Style cho phần AI Analyzer (đã gỡ) */
         .analyzer-container {
             background-color: #1a1a1e;
             border: 2px solid var(--color-secondary);
@@ -284,36 +286,115 @@
             width: 100%;
         }
         
-        /* Mobile Menu (chứa các nút landing) */
-        #mobile-nav-menu {
+        /* --- FAB Styles (Floating Action Button) --- */
+        #fab-menu-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 100;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
             display: flex;
-            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.6);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        #fab-menu-btn:hover {
+            transform: scale(1.1);
+            background: var(--color-secondary);
+        }
+        
+        /* FAB Navigation Menu (Full screen overlay) */
+        #fab-nav-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(18, 18, 23, 0.95);
+            z-index: 99;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+            transform: scale(1.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #fab-nav-menu.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        .fab-menu-link {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-text-light);
+            padding: 1rem 0;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .fab-menu-link:hover {
+            color: var(--color-primary);
+            transform: translateX(10px);
+        }
+        
+        /* Close button on the Menu */
+        #fab-close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 3rem;
+            cursor: pointer;
         }
     </style>
 </head>
 <body class="text-gray-200">
 
-    <!-- Navbar đơn giản để liên kết lại trang chính -->
+    <!-- FAB NAVIGATION MENU (OVERLAY) -->
+    <div id="fab-nav-menu" class="fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center p-8 hidden">
+        <button id="fab-close-btn" onclick="toggleFabMenu()" aria-label="Đóng Menu">&times;</button>
+        <h2 class="text-3xl font-black mb-10 text-purple-400">Điều Hướng Nhanh</h2>
+        <nav class="flex flex-col text-center space-y-4">
+            <a href="#tool-list-section" class="fab-menu-link" onclick="toggleFabMenu()">
+                Kho Công Cụ 🛠️
+            </a>
+            <a href="#concept-section" class="fab-menu-link" onclick="toggleFabMenu()">
+                Khái Niệm AI 🧠
+            </a>
+            <a href="#leaderboard-section" class="fab-menu-link" onclick="toggleFabMenu()">
+                AI RANKING 🏆
+            </a>
+        </nav>
+    </div>
+
+    <!-- Nút FAB (Floating Action Button) -->
+    <button id="fab-menu-btn" onclick="toggleFabMenu()" aria-label="Mở Menu Điều Hướng">
+        <svg id="fab-icon-open" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        <svg id="fab-icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <!-- END FAB -->
+
+    <!-- Navbar đơn giản để liên kết lại trang chính (Chỉ còn Logo và Language Switch) -->
     <nav class="sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 navbar-container glass-effect">
             <div class="mobile-navbar-content">
                 <!-- Nút Trang chủ (Mobile First) -->
-                <a href="index.html" class="font-bold text-lg hover:text-indigo-600 transition home-link-small" data-lang-key="toolbox_nav_back_small">
+                <a href="index.html" class="font-bold text-lg hover:text-indigo-600 transition home-link-small flex-shrink-0 mr-2" data-lang-key="toolbox_nav_back_small">
                     minhtriet.online
                 </a>
                 
-                <!-- Landing Links (Dùng cho cả Mobile và Desktop) -->
-                <div id="mobile-nav-menu" class="flex items-center space-x-4">
-                    <a href="#analyzer-section" class="nav-link-item text-sm font-medium hover:text-purple-400 transition-colors">
-                        Phân tích AI
-                    </a>
-                    <a href="#tool-list-section" class="nav-link-item text-sm font-medium hover:text-purple-400 transition-colors">
-                        Kho công cụ
-                    </a>
-                </div>
+                <!-- Loại bỏ Landing Links khỏi Navbar -->
+                <div class="flex-grow"></div> 
                 
                 <!-- Language Switcher -->
-                <div class="lang-switcher relative">
+                <div class="lang-switcher relative flex-shrink-0 ml-2">
                     <button id="lang-button" class="flex items-center bg-gray-600 hover:bg-gray-700 text-white transition px-3 py-1 rounded-md text-sm">
                         <span id="current-lang-text">Tiếng Việt</span> 
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -356,40 +437,7 @@
         </header>
         <!-- END HERO VIDEO SECTION -->
 
-        <!-- NEW: GEMINI AI TOOL ANALYZER SECTION -->
-        <section id="analyzer-section" class="mb-12 pt-10 border-t border-gray-800">
-            <div class="analyzer-container rounded-2xl p-6 sm:p-8 shadow-2xl">
-                <h2 class="text-3xl font-bold text-white mb-4 text-center">
-                    <span class="section-title !bg-clip-text !text-transparent !font-bold">✨ AI Tool Analyzer by IVS Celestech ✨</span>
-                </h2>
-                <p class="text-gray-400 mb-6 text-center">
-                    Dán tên bất kỳ công cụ AI nào (ví dụ: Midjourney, Claude 3 Opus, hoặc Perplexity) để nhận phân tích, đánh giá, và điểm mạnh/yếu do Gemini cung cấp, có trích dẫn nguồn thời gian thực.
-                </p>
-
-                <div class="flex flex-col md:flex-row gap-4 mb-4">
-                    <input type="text" id="toolNameInput" placeholder="Nhập tên công cụ AI cần phân tích (ví dụ: Runway Gen-2)"
-                           class="w-full md:w-3/4 px-4 py-3 border border-gray-600 rounded-xl focus:ring-purple-500 focus:border-purple-500 transition bg-gray-800 text-white shadow-inner">
-                    <button id="analyzeToolBtn" onclick="analyzeTool()"
-                            class="w-full md:w-1/4 px-6 py-3 rounded-xl bg-purple-600 text-white font-bold hover:bg-purple-700 transition transform hover:scale-[1.02] shadow-lg flex items-center justify-center disabled:bg-gray-500 disabled:cursor-not-allowed">
-                        <svg id="loadingSpinner" class="animate-spin h-5 w-5 mr-3 hidden" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                        <span id="analyzeBtnText">✨ Phân tích nhanh bằng Gemini ✨</span>
-                    </button>
-                </div>
-
-                <div id="analysisResult" class="analyzer-result p-4 rounded-xl text-sm text-gray-300 overflow-y-auto mt-4">
-                    <!-- Kết quả phân tích sẽ hiển thị ở đây -->
-                    <p class="text-gray-500">Kết quả phân tích sẽ xuất hiện tại đây.</p>
-                </div>
-                
-                <div id="citationSources" class="text-xs text-gray-500 mt-3 hidden">
-                    <p class="font-semibold text-purple-400 mb-1">Nguồn trích dẫn:</p>
-                    <ul id="sourcesList" class="list-disc list-inside space-y-1"></ul>
-                </div>
-            </div>
-        </section>
-        <!-- END GEMINI AI TOOL ANALYZER SECTION -->
-
-        <!-- Main Content: Filter by Use Case (Mục đích sử dụng) -->
+        <!-- Main Content: Filter by Use Case (Mục đích sử dụng) - #tool-list-section -->
         <section id="tool-list-section" class="mb-12">
             <div class="glass-effect rounded-2xl p-6 sm:p-8">
                 <!-- Tiêu đề mới, tập trung vào giải quyết vấn đề -->
@@ -479,7 +527,7 @@
 
 
         <!-- CONCEPT EXPLANATION SECTION -->
-        <section class="mb-12 pt-10 border-t border-gray-800">
+        <section id="concept-section" class="mb-12 pt-10 border-t border-gray-800">
             <div class="concept-card rounded-xl p-6">
                 <h2 class="text-2xl font-bold text-purple-400 mb-6 text-center" data-lang-key="concept_h2_title">Các Khái Niệm AI Cốt Lõi Cần Biết (Tham Khảo)</h2>
                 <div class="grid md:grid-cols-3 gap-6 text-sm">
@@ -509,9 +557,9 @@
         <!-- END CONCEPT EXPLANATION SECTION -->
 
         <!-- LEADERBOARD SECTION -->
-        <section class="mb-12 pt-10 border-t border-gray-800">
+        <section id="leaderboard-section" class="mb-12 pt-10 border-t border-gray-800">
             <div class="glass-effect rounded-xl p-6 border border-gray-700">
-                <h2 class="text-2xl font-bold text-gray-200 mb-4 text-center" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
+                <h2 class="text-2xl font-bold text-gray-200 mb-4" data-lang-key="leaderboard_h2_title">Bảng Xếp Hạng AI Toàn Cầu (Thử Nghiệm)</h2>
                 <div class="text-center text-sm text-gray-400 mb-4" data-lang-key="leaderboard_warning">
                     *LƯU Ý: Nếu không thấy nội dung, có thể do trang web nguồn ngăn chặn việc nhúng (embedding) vì lý do bảo mật. Vui lòng bấm vào nút dưới để xem trực tiếp.
                 </div>
@@ -745,145 +793,29 @@
 
         let currentLang = 'vi'; // Default language
 
-        // --- GEMINI API INTEGRATION FUNCTIONS ---
-
-        /**
-         * Hàm phân tích công cụ AI bằng Gemini API.
-         * Sử dụng Google Search grounding để có thông tin cập nhật.
-         */
-        async function analyzeTool() {
-            const inputElement = document.getElementById('toolNameInput');
-            const toolName = inputElement.value.trim();
-            const resultElement = document.getElementById('analysisResult');
-            const btn = document.getElementById('analyzeToolBtn');
-            const spinner = document.getElementById('loadingSpinner');
-            const btnText = document.getElementById('analyzeBtnText');
-            const sourcesContainer = document.getElementById('citationSources');
-            const sourcesList = document.getElementById('sourcesList');
-
-            if (!toolName) {
-                resultElement.innerHTML = '<p class="text-yellow-500">Vui lòng nhập tên công cụ AI bạn muốn phân tích.</p>';
-                return;
-            }
-
-            // 1. Cập nhật trạng thái loading
-            btn.disabled = true;
-            spinner.classList.remove('hidden');
-            btnText.textContent = 'Đang phân tích...';
-            resultElement.innerHTML = '<p class="text-purple-400 animate-pulse">Đang yêu cầu Gemini tìm kiếm và phân tích về **' + toolName + '**. Vui lòng chờ...</p>';
-            sourcesContainer.classList.add('hidden');
-
-            const userQuery = `Hãy tìm kiếm thông tin mới nhất về công cụ AI có tên là "${toolName}" và thực hiện một bài đánh giá khách quan. Bài đánh giá phải có cấu trúc sau:
-1. **Tổng quan:** Công cụ này là gì, được phát triển bởi ai.
-2. **Điểm mạnh cốt lõi:** Các tính năng nổi bật.
-3. **Điểm yếu/Hạn chế:** Các vấn đề thường gặp hoặc các điểm cần cải thiện.
-4. **Đề xuất sử dụng:** Công cụ này phù hợp nhất cho ai (ví dụ: Designer, Developer, Marketing).
-Hãy trả lời bằng Tiếng Việt.`;
-
-            const systemPrompt = "Bạn là một nhà phân tích và đánh giá công cụ AI chuyên nghiệp, khách quan, sử dụng thông tin từ Google Search để đảm bảo độ chính xác và cập nhật. Luôn trả lời bằng định dạng Markdown rõ ràng và sử dụng ngôn ngữ thân thiện, chuyên nghiệp.";
-            const apiKey = "";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            const payload = {
-                contents: [{ parts: [{ text: userQuery }] }],
-                tools: [{ "google_search": {} }],
-                systemInstruction: {
-                    parts: [{ text: systemPrompt }]
-                },
-            };
-
-            const maxRetries = 3;
-            let currentRetry = 0;
-            let responseData = null;
-
-            // Hàm chờ với thuật toán backoff
-            const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-
-            while (currentRetry < maxRetries) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429) {
-                        // Throttling: chờ và thử lại
-                        currentRetry++;
-                        const waitTime = Math.pow(2, currentRetry) * 1000 + Math.random() * 1000;
-                        await delay(waitTime);
-                        continue;
-                    }
-
-                    if (!response.ok) {
-                        throw new Error(`API returned status ${response.status}`);
-                    }
-
-                    responseData = await response.json();
-                    break; // Thành công, thoát vòng lặp
-                } catch (error) {
-                    console.error('Fetch error:', error);
-                    currentRetry++;
-                    if (currentRetry >= maxRetries) {
-                         throw new Error('Không thể kết nối đến API Gemini sau nhiều lần thử lại.');
-                    }
-                    const waitTime = Math.pow(2, currentRetry) * 1000 + Math.random() * 1000;
-                    await delay(waitTime);
-                }
-            }
-
-
-            // 2. Xử lý kết quả
-            if (responseData) {
-                const candidate = responseData.candidates?.[0];
-                let generatedText = "Không nhận được phản hồi phân tích.";
-                let sources = [];
-                
-                if (candidate && candidate.content?.parts?.[0]?.text) {
-                    generatedText = candidate.content.parts[0].text;
-
-                    // Trích xuất nguồn (nếu có grounding)
-                    const groundingMetadata = candidate.groundingMetadata;
-                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
-                        sources = groundingMetadata.groundingAttributions
-                            .map(attribution => ({
-                                uri: attribution.web?.uri,
-                                title: attribution.web?.title,
-                            }))
-                            .filter(source => source.uri && source.title); 
-                    }
-                }
-
-                // Hiển thị văn bản kết quả
-                resultElement.textContent = generatedText; 
-
-                // Hiển thị nguồn trích dẫn
-                sourcesList.innerHTML = '';
-                if (sources.length > 0) {
-                    sources.forEach(source => {
-                        const li = document.createElement('li');
-                        li.innerHTML = `<a href="${source.uri}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-purple-400 transition-colors truncate block" title="${source.title} (${source.uri})">${source.title}</a>`;
-                        sourcesList.appendChild(li);
-                    });
-                    sourcesContainer.classList.remove('hidden');
-                } else {
-                    sourcesContainer.classList.add('hidden');
-                }
-
+        // --- FAB MENU LOGIC ---
+        function toggleFabMenu() {
+            const menu = document.getElementById('fab-nav-menu');
+            const openIcon = document.getElementById('fab-icon-open');
+            const closeIcon = document.getElementById('fab-icon-close');
+            
+            menu.classList.toggle('active');
+            
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Ngăn cuộn nền
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
             } else {
-                resultElement.innerHTML = '<p class="text-red-500">Rất tiếc, đã xảy ra lỗi trong quá trình phân tích. Vui lòng thử lại sau.</p>';
+                // Sử dụng timeout ngắn để cho phép hiệu ứng transition chạy trước khi ẩn
+                setTimeout(() => menu.classList.add('hidden'), 300);
+                document.body.style.overflow = 'auto'; // Cho phép cuộn nền
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
             }
-
-            // 3. Reset trạng thái
-            btn.disabled = false;
-            spinner.classList.add('hidden');
-            btnText.textContent = '✨ Phân tích nhanh bằng Gemini ✨';
         }
-
-        // Đưa hàm analyzeTool ra ngoài global scope
-        window.analyzeTool = analyzeTool;
-
-        // --- END GEMINI API INTEGRATION FUNCTIONS ---
+        window.toggleFabMenu = toggleFabMenu;
+        // --- END FAB MENU LOGIC ---
 
 
         function translateFeature(featureName) {
@@ -1720,7 +1652,7 @@ Hãy trả lời bằng Tiếng Việt.`;
         
         // --- Smooth Scroll Logic (Cải tiến để kéo mượt mà) ---
         function initSmoothScroll() {
-            document.querySelectorAll('#mobile-nav-menu a[href^="#"]').forEach(anchor => {
+            document.querySelectorAll('.fab-menu-link').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
