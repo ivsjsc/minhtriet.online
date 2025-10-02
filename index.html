@@ -562,21 +562,21 @@
                     <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition font-medium relative" data-lang-key="nav_contact"></a>
                 </nav>                
                 <div class="lang-switcher">
-                    <button id="lang-button" class="flex items-center">
+                    <button id="lang-button" class="flex items-center" onclick="document.getElementById('language-menu').classList.toggle('active');">
                         <span id="current-lang-text">English</span> 
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <ul id="language-menu">
                         <!-- Thêm class selected ban đầu để JS có thể quản lý trạng thái -->
-                        <li data-lang="en">English</li>
-                        <li data-lang="ja">日本語</li>
-                        <li data-lang="ko">한국어</li>
-                        <li data-lang="zh">中文</li>
-                        <li data-lang="th">ไทย</li>
-                        <li data-lang="fr">Français</li>
-                        <li data-lang="es">Español</li>
-                        <li data-lang="de">Deutsch</li>
-                        <li data-lang="vi">Tiếng Việt</li>                        
+                        <li data-lang="en" onclick="changeLanguageAndSetActive('en'); document.getElementById('language-menu').classList.remove('active');">English</li>
+                        <li data-lang="ja" onclick="changeLanguageAndSetActive('ja'); document.getElementById('language-menu').classList.remove('active');">日本語</li>
+                        <li data-lang="ko" onclick="changeLanguageAndSetActive('ko'); document.getElementById('language-menu').classList.remove('active');">한국어</li>
+                        <li data-lang="zh" onclick="changeLanguageAndSetActive('zh'); document.getElementById('language-menu').classList.remove('active');">中文</li>
+                        <li data-lang="th" onclick="changeLanguageAndSetActive('th'); document.getElementById('language-menu').classList.remove('active');">ไทย</li>
+                        <li data-lang="fr" onclick="changeLanguageAndSetActive('fr'); document.getElementById('language-menu').classList.remove('active');">Français</li>
+                        <li data-lang="es" onclick="changeLanguageAndSetActive('es'); document.getElementById('language-menu').classList.remove('active');">Español</li>
+                        <li data-lang="de" onclick="changeLanguageAndSetActive('de'); document.getElementById('language-menu').classList.remove('active');">Deutsch</li>
+                        <li data-lang="vi" onclick="changeLanguageAndSetActive('vi'); document.getElementById('language-menu').classList.remove('active');">Tiếng Việt</li>                        
                     </ul>
                 </div>
             </div>
