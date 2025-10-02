@@ -91,5 +91,12 @@ window.translations_ko = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': '베트남 Đồng Nai, Long Phuoc',
-    'footer_description': '전략 운영 및 기술 파트너. 디지털 전환 및 성능 최적화 전문가로서 획기적인 기술 솔루션과 확장 가능한 역량 창출에 대한 열정을 가지고 있습니다.'
+    'footer_description': '전략 운영 및 기술 파트너. 디지털 전환 및 성능 최적화 전문가로서 획기적인 기술 솔루션과 확장 가능한 역량 창출에 대한 열정을 가지고 있습니다.',
+    'ivs_toolbox_subtitle': '최고의 AI 플랫폼 모음',
+    'ivs_toolbox_description': 'AI는 매일 변화합니다. 우리는 최고의 AI 도구들을 수집하고 공유하여, 귀하의 필요에 맞는 해결책을 쉽게 찾을 수 있도록 돕습니다.',
+    'ivs_toolbox_title': 'IVS AI TOOLBOX',
+    'ivs_toolbox_cta': 'AI 도구 탐색하기',
+    'toggle_view_more': '더 많은 프로젝트 보기 (6+)',
+    'toggle_collapse': '적게 보기 (6+개 숨기기)',
+    'ivs_toolbox_cta': 'AI 도구 탐색하기'
 };

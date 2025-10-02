@@ -91,5 +91,10 @@ window.translations_zh_cn = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': '越南，同奈省，隆福',
-    'footer_description': '战略运营与技术伙伴。数字化转型和绩效优化专家，热衷于创造突破性技术解决方案和可扩展的能力。'
+    'footer_description': '战略运营与技术伙伴。数字化转型和绩效优化专家，热衷于创造突破性技术解决方案和可扩展的能力',
+    'ivs_toolbox_subtitle': '最佳AI平台合集',
+    'ivs_toolbox_description': '人工智能日新月异，我们整理并分享最佳AI工具，帮助您轻松找到满足您需求的解决方案。',
+    'toggle_view_more': '查看更多项目 (6+)',    
+    'toggle_collapse': '收起项目 (隐藏 6+)',
+    'ivs_toolbox_cta': '探索 AI 工具'
 };

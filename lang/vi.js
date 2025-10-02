@@ -41,6 +41,8 @@ window.translations_vi = {
     'project16_desc': 'Phát triển và duy trì quan hệ đối tác chiến lược trong ngành Du lịch, Hospitality, góp phần tối ưu hóa vận hành và tăng trưởng doanh thu dịch vụ.',
     'stat_years_experience_label': 'Số năm kinh nghiệm', 'stat_projects_completed_label': 'Dự án hoàn thành', 'stat_revenue_growth_label': 'Tăng trưởng doanh thu', 'stat_client_satisfaction_label': 'Hài lòng khách hàng',
     'stat_foreign_partners_label': 'Technology innovation and adoption',
+    'toggle_view_more': 'Xem thêm dự án (6+)',
+    'toggle_collapse': 'Thu gọn dự án (Ẩn 6+)',
     'scroll_indicator': 'Kéo để khám phá',
     'exp1_title': 'Tổng Giám đốc (CEO)', 'exp1_company': 'IVS JSC (Công ty Cổ phần Dịch vụ Thương mại Integrate Vision Synergy)', 'exp1_duration': '2024 - Hiện tại | Đồng Nai', 'exp1_li1': 'Thành tựu & Phát triển Sản phẩm EdTech & AI:', 'exp1_li2': '  - Tích hợp AI & Adaptive Learning: Nghiên cứu và áp dụng các giải pháp Trí tuệ Nhân tạo (AI) để tối ưu hóa trải nghiệm học tập cá nhân hóa (Adaptive Learning) và tự động hóa quy trình quản lý học viên.', 'exp1_li3': '  - Giáo trình Biên soạn:', 'exp1_li4': '    • Giáo trình K-12 (Mầm non tới THPT): Tham gia biên soạn và phát triển nội dung học thuật cho toàn bộ cấp độ K-12, tích hợp nền tảng số hóa (Tham khảo qua ivseng.netlify.app).', 'exp1_li5': '    • Giáo trình cho trẻ Mầm non: Phát triển STEAM + Intelligence, kết hợp các hoạt động STEAM phù hợp với 9 loại hình trí thông minh của trẻ.', 'exp1_li6': '    • Giáo trình Kỹ năng sống & Anh ngữ: Biên soạn IVSLifeMinds, giáo trình kỹ năng sống kết hợp Anh ngữ chuyên biệt cho Học sinh Tiểu học.',
     'exp2_title': 'Liên Kết thị trường & Phát Triển Dự Án', 'exp2_company': 'Công ty CP Giáo dục Quốc tế AMG, Đồng Nai', 'exp2_duration': '2022 - 2024 | Đồng Nai', 'exp2_li1': 'Đạt mức tăng trưởng doanh thu ấn tượng 34% trong năm đầu, vượt chỉ tiêu kinh doanh liên tục.', 'exp2_li2': 'Chủ nhiệm dự án xây dựng IELTS Station tại Long Thành, chịu trách nhiệm toàn diện từ khâu nghiên cứu thị trường, lập kế hoạch tài chính đến vận hành thử nghiệm trung tâm ngoại ngữ.', 'exp2_li3': 'Quản lý Giáo dục: Liên kết được với gần 50 trường học từ Mầm non tới THPT trên địa bàn huyện Long Thành cũ, mở rộng mạng lưới đối tác giáo dục và điều hành các chương trình hợp tác.',
@@ -81,4 +83,8 @@ window.translations_vi = {
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'Long Phuoc, Dong Nai, Vietnam',
     'footer_description': 'Đối tác Chiến lược Công nghệ & Vận hành. Chuyên gia chuyển đổi số và tối ưu hiệu suất với đam mê kiến tạo giải pháp công nghệ đột phá và khả năng mở rộng quy mô.'
+    , 'ivs_toolbox_subtitle': 'Tổng hợp các nền tảng AI tốt nhất',
+    'ivs_toolbox_description': 'AI mỗi ngày mỗi khác. Chúng tôi tổng hợp và chia sẻ những công cụ AI tốt nhất, giúp bạn dễ dàng tìm thấy giải pháp phù hợp cho nhu cầu của mình.',
+    'ivs_toolbox_title': 'IVS AI TOOLBOX',
+    'ivs_toolbox_cta': 'Khám Phá AI Tools',
 };

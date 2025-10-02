@@ -91,5 +91,10 @@ window.translations_ja = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'ベトナム、ドンナイ省、ロンフオック',
-    'footer_description': '戦略的オペレーション & テクノロジーパートナー。デジタルトランスフォーメーションとパフォーマンス最適化の専門家であり、画期的な技術ソリューションとスケーラブルな能力を創造することに情熱を注いでいます。'
+    'footer_description': '戦略的オペレーション & テクノロジーパートナー。デジタルトランスフォーメーションとパフォーマンス最適化の専門家であり、画期的な技術ソリューションとスケーラブルな能力を創造することに情熱を注いでいます。',
+    'ivs_toolbox_subtitle': '最高のAIプラットフォームのコレクション',
+    'ivs_toolbox_description': 'AIは日々変化しています。私たちは最高のAIツールをまとめ、共有することで、あなたが自分のニーズに合ったソリューションを簡単に見つけられるように支援します。',
+    'toggle_view_more': 'もっと見る (6+件)',
+    'toggle_collapse': '少なく表示 (6+件を非表示)',
+    'ivs_toolbox_cta': 'AIツールを探る'
 };

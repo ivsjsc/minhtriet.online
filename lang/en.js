@@ -57,6 +57,8 @@ window.translations_en = {
     'project16_desc': 'Developed and maintained strategic partnerships in the Tourism, Hospitality industry, contributing to operational optimization and service revenue growth.',
     'stat_years_experience_label': 'Years Experience', 'stat_projects_completed_label': 'Projects Completed', 'stat_revenue_growth_label': 'Revenue Growth', 'stat_client_satisfaction_label': 'Client Satisfaction',
     'stat_foreign_partners_label': 'Technology innovation and adoption',
+    'toggle_view_more': 'View more projects (6+)',
+    'toggle_collapse': 'Show less projects (hide 6+)',
     'scroll_indicator': 'Scroll to explore',
     'exp1_title': 'Chief Executive Officer (CEO)', 'exp1_company': 'IVS JSC (Integrate Vision Synergy Joint Stock Company)', 'exp1_duration': '2024 - Present | Dong Nai', 'exp1_li1': 'Achievements & EdTech & AI Product Development:', 'exp1_li2': '  - AI & Adaptive Learning Integration: Research and implement Artificial Intelligence (AI) solutions to optimize personalized learning experiences (Adaptive Learning) and automate student management processes.', 'exp1_li3': '  - Curriculum Development:', 'exp1_li4': '    • K-12 Curriculum (Preschool to High School): Participate in compiling and developing academic content for all K-12 levels, integrating digital platforms (Refer to ivseng.netlify.app).', 'exp1_li5': '    • Preschool Curriculum: Develop STEAM + Intelligence, combining STEAM activities suitable for 9 types of children\'s intelligence.', 'exp1_li6': '    • Life Skills & English Curriculum: Compile IVSLifeMinds, life skills curriculum combined with specialized English for Primary School students.',
     'exp2_title': 'Head of Partnerships & Project Development', 'exp2_company': 'AMG International Education JSC, Dong Nai', 'exp2_duration': '2022 - 2024 | Dong Nai', 'exp2_li1': 'Achieved impressive 34% revenue growth in the first year, consistently exceeding business targets.', 'exp2_li2': 'Project manager for IELTS Station construction in Long Thanh, responsible for comprehensive aspects from market research, financial planning to trial operation of the language center.', 'exp2_li3': 'Education Management: Connected with nearly 50 schools from Preschool to High School in the old Long Thanh district, expanding education partner network and managing cooperation programs.',
@@ -95,5 +97,10 @@ window.translations_en = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'Long Phuoc, Dong Nai, Vietnam',
-    'footer_description': 'Strategic Operations & Technology Partner. Expert in digital transformation and performance optimization with a passion for creating breakthrough technology solutions and scalable capabilities.'
+    'footer_description': 'Strategic Operations & Technology Partner. Expert in digital transformation and performance optimization with a passion for creating breakthrough technology solutions and scalable capabilities.',
+    'ivs_toolbox_subtitle': 'A collection of the best AI platforms',
+    'ivs_toolbox_description': 'AI changes every day. We compile and share the best AI tools, helping you easily find the right solution for your needs.',
+    'ivs_toolbox_title': 'IVS AI TOOLBOX',
+    'ivs_toolbox_cta': 'Explore AI Tools',
+
 };

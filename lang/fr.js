@@ -91,5 +91,10 @@ window.translations_fr = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'Long Phuoc, Đồng Nai, Vietnam',
-    'footer_description': 'Partenaire stratégique en opérations et technologie. Expert en transformation numérique et optimisation de la performance avec une passion pour la création de solutions technologiques révolutionnaires et de capacités évolutives.'
+    'footer_description': 'Partenaire stratégique en opérations et technologie. Expert en transformation numérique et optimisation de la performance avec une passion pour la création de solutions technologiques révolutionnaires et de capacités évolutives.',
+    'ivs_toolbox_subtitle': 'Une collection des meilleures plateformes d\'IA',
+    'ivs_toolbox_description': 'L\'IA change tous les jours. Nous compilons et partageons les meilleurs outils d\'IA pour vous aider à trouver facilement la solution adaptée à vos besoins.',
+    'toggle_view_more': 'Voir plus de projets (6+)',
+    'toggle_collapse': 'Afficher moins de projets (masquer 6+)',
+    'ivs_toolbox_cta': 'Explorer les outils d\'IA'
 };

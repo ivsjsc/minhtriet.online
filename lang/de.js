@@ -91,5 +91,12 @@ window.translations_de = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'Long Phuoc, Đồng Nai, Vietnam',
-    'footer_description': 'Strategischer Betriebs- & Technologiepartner. Experte für digitale Transformation und Performance-Optimierung mit einer Leidenschaft für die Schaffung bahnbrechender Technologielösungen und skalierbarer Fähigkeiten.'
+    'footer_description': 'Strategischer Betriebs- & Technologiepartner. Experte für digitale Transformation und Performance-Optimierung mit einer Leidenschaft für die Schaffung bahnbrechender Technologielösungen und skalierbarer Fähigkeiten.',
+    'ivs_toolbox_subtitle': 'Die besten KI-Plattformen zusammengefasst',
+    'ivs_toolbox_description': 'Da sich die KI täglich ändert, haben wir die besten KI-Tools zusammengestellt und teilen sie, damit Sie leicht die richtige Lösung für Ihre Bedürfnisse finden können.',
+    'ivs_toolbox_title': 'IVS AI TOOLBOX',
+    'ivs_toolbox_cta': 'AI-Tools erkunden',
+    'toggle_view_more': 'Mehr Projekte anzeigen (6+)',
+    'toggle_collapse': 'Weniger Projekte anzeigen (6+ ausblenden)',
+    'ivs_toolbox_cta': 'AI-Tools erkunden'
 };
