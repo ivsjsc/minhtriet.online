@@ -1492,6 +1492,33 @@
             </div>
             </div>
         </section>
+        <!-- Photo Album Section (portrait-friendly) -->
+        <section id="photo-album" class="py-16 bg-gray-50 dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white" data-lang-key="photo_album_title">Photo Album</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="photo-item">
+                        <div class="aspect-[3/4] w-full rounded-lg overflow-hidden shadow-lg">
+                            <img src="images/photo0001.webp" alt="Photo 1" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+
+                    <div class="photo-item">
+                        <div class="aspect-[3/4] w-full rounded-lg overflow-hidden shadow-lg">
+                            <img src="images/photo0002.webp" alt="Photo 2" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+
+                    <div class="photo-item">
+                        <div class="aspect-[3/4] w-full rounded-lg overflow-hidden shadow-lg">
+                            <img src="images/photo0003.webp" alt="Photo 3" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     
     <!-- Footer - UPDATED SECTION (Hidden in print) -->
@@ -1878,24 +1905,5 @@
 
         });
     </script>
-
-    <!-- Photo Album Section -->
-    <section id="photo-album" class="py-16 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white" data-lang-key="photo_album_title">Photo Album</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="photo-item">
-                    <img src="./images/pages/photo0003.webp" alt="Photo 1" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                </div>
-                <div class="photo-item">
-                    <img src="./images/pages/photo0002.webp" alt="Photo 2" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                </div>
-                <div class="photo-item">
-                    <img src="./images/pages/photo0003.webp" alt="Photo 3" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                </div>
-            </div>
-        </div>
-    </section>
-
 </body>
 </html>
