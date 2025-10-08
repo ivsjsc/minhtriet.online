@@ -97,4 +97,17 @@ window.translations_es = {
     'toggle_view_more': 'Ver más proyectos (6+)',
     'toggle_collapse': 'Mostrar menos proyectos (ocultar 6+)',
     'ivs_toolbox_cta': 'Explorar herramientas de IA'
+    ,
+    // Outstanding Projects section
+    'outstanding_projects_eyebrow': 'PROYECTOS DESTACADOS',
+    'outstanding_projects_title': 'Proyectos Innovadores y Notables',
+    'outstanding_projects_description': 'Explore proyectos emblemáticos seleccionados en EdTech, operaciones y desarrollo de productos que muestran innovación e impacto medible.',
+    'featured_project1_title': 'IVS English Learners App',
+    'featured_project1_desc': 'Plataforma de aprendizaje de inglés impulsada por IA con corrector de escritura y compañero de conversación para trayectorias de aprendizaje personalizadas.',
+    'featured_project2_title': 'IELTS Station Center',
+    'featured_project2_desc': 'Gestión integral del proyecto para la construcción y operación de un centro IELTS en Long Thanh.',
+    'featured_project3_title': 'IVS Academy',
+    'featured_project3_desc': 'Plataforma educativa integral que ofrece soluciones de aprendizaje habilitadas por tecnología.',
+    'outstanding_projects_cta': 'Ver todos los proyectos',
+    'lightbox_title': 'IVS English Learners App: Álbum de funciones (1/10)'
 };

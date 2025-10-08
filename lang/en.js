@@ -103,4 +103,16 @@ window.translations_en = {
     'ivs_toolbox_title': 'IVS AI TOOLBOX',
     'ivs_toolbox_cta': 'Explore AI Tools',
 
+    // Outstanding Projects section
+    'outstanding_projects_eyebrow': 'OUTSTANDING PROJECTS',
+    'outstanding_projects_title': 'Breakthrough & Notable Projects',
+    'outstanding_projects_description': 'Explore selected flagship projects in EdTech, operations and product development that showcase innovation and measurable impact.',
+    'featured_project1_title': 'IVS English Learners App',
+    'featured_project1_desc': 'AI-powered English learning platform with Writing Grader and Speaking Partner for personalized learning journeys.',
+    'featured_project2_title': 'IELTS Station Center',
+    'featured_project2_desc': 'End-to-end project management for building and operating an IELTS center in Long Thanh.',
+    'featured_project3_title': 'IVS Academy',
+    'featured_project3_desc': 'Comprehensive education platform delivering technology-enabled learning solutions.',
+    'outstanding_projects_cta': 'View All Projects',
+    'lightbox_title': 'IVS English Learners App: Feature Album (1/10)',
 };
