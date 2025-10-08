@@ -100,3 +100,17 @@ window.translations_de = {
     'toggle_collapse': 'Weniger Projekte anzeigen (6+ ausblenden)',
     'ivs_toolbox_cta': 'AI-Tools erkunden'
 };
+
+// Outstanding Projects (added)
+window.translations_de['outstanding_projects_eyebrow'] = 'HERVORRAGENDE PROJEKTE';
+window.translations_de['outstanding_projects_title'] = 'Bahnbrechende & Bemerkenswerte Projekte';
+window.translations_de['outstanding_projects_description'] = 'Entdecken Sie ausgewählte Vorzeigeprojekte in EdTech, Betrieb und Produktentwicklung, die Innovation und messbare Wirkung zeigen.';
+window.translations_de['featured_project1_title'] = 'IVS English Learners App';
+window.translations_de['featured_project1_desc'] = 'KI-gestützte Englischlernplattform mit Schreibkorrektor und Sprachpartner für personalisierte Lernwege.';
+window.translations_de['featured_project2_title'] = 'IELTS Station Center';
+window.translations_de['featured_project2_desc'] = 'End-to-End-Projektmanagement für den Bau und Betrieb eines IELTS-Zentrums in Long Thanh.';
+window.translations_de['featured_project3_title'] = 'IVS Academy';
+window.translations_de['featured_project3_desc'] = 'Umfassende Bildungsplattform, die technologiegestützte Lernlösungen anbietet.';
+window.translations_de['outstanding_projects_cta'] = 'Alle Projekte anzeigen';
+window.translations_de['lightbox_title'] = 'IVS English Learners App: Funktionsalbum (1/10)';
+window.translations_de['photo_album_title'] = 'Fotoalbum';

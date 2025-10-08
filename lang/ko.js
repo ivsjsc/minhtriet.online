@@ -98,5 +98,18 @@ window.translations_ko = {
     'ivs_toolbox_cta': 'AI 도구 탐색하기',
     'toggle_view_more': '더 많은 프로젝트 보기 (6+)',
     'toggle_collapse': '적게 보기 (6+개 숨기기)',
-    'ivs_toolbox_cta': 'AI 도구 탐색하기'
+    'ivs_toolbox_cta': 'AI 도구 탐색하기',
+
+    // Outstanding Projects (added)
+    'outstanding_projects_eyebrow': '주요 프로젝트',
+    'outstanding_projects_title': '획기적이고 주목할 만한 프로젝트',
+    'outstanding_projects_description': 'EdTech, 운영 및 제품 개발 분야에서 혁신과 측정 가능한 영향을 보여주는 대표 프로젝트를 살펴보세요.',
+    'featured_project1_title': 'IVS English Learners App',
+    'featured_project1_desc': '글쓰기 채점기와 말하기 파트너를 제공하는 AI 기반 영어 학습 플랫폼.',
+    'featured_project2_title': 'IELTS Station Center',
+    'featured_project2_desc': 'Long Thanh에 있는 IELTS 센터 건설 및 운영을 위한 종합 프로젝트 관리.',
+    'featured_project3_title': 'IVS Academy',
+    'featured_project3_desc': '기술 기반 학습 솔루션을 제공하는 종합 교육 플랫폼.',
+    'outstanding_projects_cta': '모든 프로젝트 보기',
+    'lightbox_title': 'IVS English Learners App: 기능 앨범 (1/10)'
 };

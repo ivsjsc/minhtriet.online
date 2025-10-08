@@ -109,5 +109,6 @@ window.translations_es = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': 'Plataforma educativa integral que ofrece soluciones de aprendizaje habilitadas por tecnología.',
     'outstanding_projects_cta': 'Ver todos los proyectos',
-    'lightbox_title': 'IVS English Learners App: Álbum de funciones (1/10)'
+    'lightbox_title': 'IVS English Learners App: Álbum de funciones (1/10)',
+    'photo_album_title': 'Álbum de Fotos'
 };

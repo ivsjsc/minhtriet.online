@@ -98,4 +98,5 @@ window.translations_vi = {
     'featured_project3_desc': 'Nền tảng giáo dục toàn diện của IVS JSC, cung cấp giải pháp công nghệ và đào tạo cho thế hệ trẻ.',
     'outstanding_projects_cta': 'Xem Tất Cả Dự Án',
     'lightbox_title': 'IVS English Learners App: Album Tính năng (1/10)',
+    'photo_album_title': 'Album Ảnh'
 };

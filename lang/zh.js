@@ -96,5 +96,18 @@ window.translations_zh_cn = {
     'ivs_toolbox_description': '人工智能日新月异，我们整理并分享最佳AI工具，帮助您轻松找到满足您需求的解决方案。',
     'toggle_view_more': '查看更多项目 (6+)',    
     'toggle_collapse': '收起项目 (隐藏 6+)',
-    'ivs_toolbox_cta': '探索 AI 工具'
+    'ivs_toolbox_cta': '探索 AI 工具',
+
+    // Outstanding Projects (added)
+    'outstanding_projects_eyebrow': '杰出项目',
+    'outstanding_projects_title': '突破性与重要项目',
+    'outstanding_projects_description': '探索在 EdTech、运营和产品开发领域的精选旗舰项目，展示创新与可衡量的影响。',
+    'featured_project1_title': 'IVS English Learners App',
+    'featured_project1_desc': '由 AI 驱动的英语学习平台，提供写作评分和口语伙伴，实现个性化学习路径。',
+    'featured_project2_title': 'IELTS Station Center',
+    'featured_project2_desc': '在 Long Thanh 建设和运营 IELTS 中心的端到端项目管理。',
+    'featured_project3_title': 'IVS Academy',
+    'featured_project3_desc': '提供技术支持学习解决方案的综合教育平台。',
+    'outstanding_projects_cta': '查看所有项目',
+    'lightbox_title': 'IVS English Learners App：功能相册 (1/10)'
 };

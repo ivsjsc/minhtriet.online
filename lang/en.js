@@ -115,4 +115,5 @@ window.translations_en = {
     'featured_project3_desc': 'Comprehensive education platform delivering technology-enabled learning solutions.',
     'outstanding_projects_cta': 'View All Projects',
     'lightbox_title': 'IVS English Learners App: Feature Album (1/10)',
+    'photo_album_title': 'Photo Album'
 };
