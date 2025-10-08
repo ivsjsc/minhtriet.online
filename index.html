@@ -13,6 +13,19 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://minhtriet.online">
     
+    <!-- Hreflang Tags for Multilingual SEO -->
+    <link rel="alternate" hreflang="vi" href="https://minhtriet.online">
+    <link rel="alternate" hreflang="en" href="https://minhtriet.online/en">
+    <link rel="alternate" hreflang="de" href="https://minhtriet.online/de">
+    <link rel="alternate" hreflang="es" href="https://minhtriet.online/es">
+    <link rel="alternate" hreflang="fr" href="https://minhtriet.online/fr">
+    <link rel="alternate" hreflang="ja" href="https://minhtriet.online/ja">
+    <link rel="alternate" hreflang="ko" href="https://minhtriet.online/ko">
+    <link rel="alternate" hreflang="ru" href="https://minhtriet.online/ru">
+    <link rel="alternate" hreflang="th" href="https://minhtriet.online/th">
+    <link rel="alternate" hreflang="zh" href="https://minhtriet.online/zh">
+    <link rel="alternate" hreflang="x-default" href="https://minhtriet.online/en">
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://minhtriet.online">
@@ -1903,6 +1916,123 @@
             });
 
 
+        });
+    </script>
+
+    <!-- Dynamic SEO Meta Tags System -->
+    <script>
+        // Language-specific meta descriptions optimized for SEO and cultural context
+        const metaDescriptions = {
+            vi: 'Nguyễn Minh Triết - CEO IVS JSC | Chuyên gia AI & EdTech | Kiến trúc Microservices | Chuyển đổi số và tối ưu hiệu suất cho doanh nghiệp Việt Nam',
+            en: 'Minh Triet - CEO of IVS JSC | AI & EdTech Expert | Microservices Architect | Strategic partner in digital transformation and performance optimization',
+            de: 'Minh Triet - CEO IVS JSC | KI & EdTech-Experte | Mikroservices-Architekt | Strategischer Partner für systematische digitale Transformation und Sicherheit',
+            es: 'Minh Triet - CEO de IVS JSC | Experto en IA y EdTech | Arquitecto de Microservicios | Socio estratégico en transformación digital e innovación tecnológica',
+            fr: 'Minh Triet - PDG d\'IVS JSC | Expert en IA et EdTech | Architecte Microservices | Partenaire stratégique en transformation numérique et excellence opérationnelle',
+            ja: 'Minh Triet - IVS JSC CEO | AI・EdTech専門家 | マイクロサービスアーキテクト | デジタル変革とパフォーマンス最適化の戦略的パートナー',
+            ko: 'Minh Triet - IVS JSC CEO | AI 및 EdTech 전문가 | 마이크로서비스 아키텍트 | 첨단 교육 기술과 디지털 혁신의 전략적 파트너',
+            ru: 'Minh Triet - Генеральный директор IVS JSC | Эксперт по ИИ и EdTech | Архитектор микросервисов | Стратегический партнер по цифровой трансформации',
+            th: 'Minh Triet - CEO ของ IVS JSC | ผู้เชี่ยวชาญด้าน AI และ EdTech | สถาปนิก Microservices | พันธมิตรเชิงกลยุทธ์ในการเปลี่ยนแปลงดิจิทัล',
+            zh: 'Minh Triet - IVS JSC首席执行官 | AI与教育科技专家 | 微服务架构师 | 数字化转型与性能优化的战略合作伙伴'
+        };
+
+        const ogTitles = {
+            vi: 'Nguyễn Minh Triết - Chuyên gia AI, EdTech & Chuyển đổi số',
+            en: 'Minh Triet - AI, EdTech & Digital Transformation Expert',
+            de: 'Minh Triet - KI, EdTech & Digitale Transformation Experte',
+            es: 'Minh Triet - Experto en IA, EdTech y Transformación Digital',
+            fr: 'Minh Triet - Expert en IA, EdTech et Transformation Numérique',
+            ja: 'Minh Triet - AI、EdTechとデジタル変革の専門家',
+            ko: 'Minh Triet - AI, EdTech 및 디지털 혁신 전문가',
+            ru: 'Minh Triet - Эксперт по ИИ, EdTech и цифровой трансформации',
+            th: 'Minh Triet - ผู้เชี่ยวชาญด้าน AI, EdTech และการเปลี่ยนแปลงดิจิทัล',
+            zh: 'Minh Triet - AI、教育科技与数字化转型专家'
+        };
+
+        const ogDescriptions = {
+            vi: 'CEO IVS JSC - Đối tác chiến lược trong công nghệ và vận hành. Chuyên gia chuyển đổi số, kiến trúc microservices và AI adaptive learning.',
+            en: 'CEO of IVS JSC - Strategic partner in technology and operations. Expert in digital transformation, microservices architecture, and AI adaptive learning.',
+            de: 'CEO von IVS JSC - Strategischer Partner für Technologie und Betrieb. Experte für digitale Transformation, Mikroservices-Architektur und KI-adaptives Lernen.',
+            es: 'CEO de IVS JSC - Socio estratégico en tecnología y operaciones. Experto en transformación digital, arquitectura de microservicios y aprendizaje adaptativo con IA.',
+            fr: 'PDG d\'IVS JSC - Partenaire stratégique en technologie et opérations. Expert en transformation numérique, architecture microservices et apprentissage adaptatif par IA.',
+            ja: 'IVS JSC CEO - テクノロジーとオペレーションの戦略的パートナー。デジタル変革、マイクロサービスアーキテクチャ、AI適応学習の専門家。',
+            ko: 'IVS JSC CEO - 기술 및 운영 분야의 전략적 파트너. 디지털 혁신, 마이크로서비스 아키텍처, AI 적응형 학습 전문가.',
+            ru: 'Генеральный директор IVS JSC - Стратегический партнер в области технологий и операций. Эксперт по цифровой трансформации, архитектуре микросервисов и адаптивному обучению с ИИ.',
+            th: 'CEO ของ IVS JSC - พันธมิตรเชิงกลยุทธ์ด้านเทคโนโลยีและการดำเนินงาน ผู้เชี่ยวชาญด้านการเปลี่ยนแปลงดิจิทัล สถาปัตยกรรม Microservices และการเรียนรู้แบบปรับตัวด้วย AI',
+            zh: 'IVS JSC首席执行官 - 技术与运营战略合作伙伴。数字化转型、微服务架构和AI自适应学习专家。'
+        };
+
+        // Function to update meta tags dynamically based on language
+        function updateMetaTags(lang) {
+            // Update description
+            const descMeta = document.querySelector('meta[name="description"]');
+            if (descMeta) descMeta.content = metaDescriptions[lang] || metaDescriptions.en;
+
+            // Update Open Graph tags
+            const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+            if (ogTitleMeta) ogTitleMeta.content = ogTitles[lang] || ogTitles.en;
+
+            const ogDescMeta = document.querySelector('meta[property="og:description"]');
+            if (ogDescMeta) ogDescMeta.content = ogDescriptions[lang] || ogDescriptions.en;
+
+            // Update Twitter tags
+            const twitterTitleMeta = document.querySelector('meta[property="twitter:title"]');
+            if (twitterTitleMeta) twitterTitleMeta.content = ogTitles[lang] || ogTitles.en;
+
+            const twitterDescMeta = document.querySelector('meta[property="twitter:description"]');
+            if (twitterDescMeta) twitterDescMeta.content = ogDescriptions[lang] || ogDescriptions.en;
+
+            // Update html lang attribute
+            document.documentElement.setAttribute('lang', lang);
+
+            // Update canonical and Open Graph URLs if using language-specific paths
+            const currentPath = window.location.pathname;
+            const langPath = lang === 'vi' ? '/' : `/${lang}`;
+            const canonicalUrl = `https://minhtriet.online${langPath}`;
+            
+            const canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (canonicalLink) canonicalLink.href = canonicalUrl;
+
+            const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+            if (ogUrlMeta) ogUrlMeta.content = canonicalUrl;
+
+            const twitterUrlMeta = document.querySelector('meta[property="twitter:url"]');
+            if (twitterUrlMeta) twitterUrlMeta.content = canonicalUrl;
+        }
+
+        // Override the original changeLanguageAndSetActive to include meta tag updates
+        const originalChangeLanguageAndSetActive = window.changeLanguageAndSetActive;
+        window.changeLanguageAndSetActive = function(lang) {
+            // Call original function
+            if (originalChangeLanguageAndSetActive) {
+                originalChangeLanguageAndSetActive(lang);
+            }
+            
+            // Update meta tags
+            updateMetaTags(lang);
+            
+            // Update URL without reload (for better UX, optional)
+            const newPath = lang === 'vi' ? '/' : `/${lang}`;
+            if (window.history && window.history.pushState) {
+                window.history.pushState({lang: lang}, '', newPath);
+            }
+        };
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialLang = localStorage.getItem('language') || 'vi';
+            updateMetaTags(initialLang);
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.lang) {
+                const lang = event.state.lang;
+                localStorage.setItem('language', lang);
+                if (window.changeLanguage) {
+                    window.changeLanguage(lang);
+                }
+                updateMetaTags(lang);
+            }
         });
     </script>
 </body>

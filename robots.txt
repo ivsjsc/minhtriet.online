@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://minhtriet.online/sitemap.xml
+Sitemap: https://minhtriet.online/sitemap-multilingual.xml
 
 # Disallow admin or private areas (if any)
 Disallow: /admin/

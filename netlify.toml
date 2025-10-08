@@ -1,0 +1,59 @@
+[[redirects]]
+  from = "/en"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/de"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/es"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/fr"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/ja"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/ko"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/ru"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/th"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/zh"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Fallback for all other routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
