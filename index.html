@@ -1313,12 +1313,32 @@
                     </div>
                     </div>
                 </div>
+
+                <!-- Project 17: Mộc Mạc Garden (Hidden by default) -->
+                <div class="portfolio-item website hidden more-projects" data-category="website">
+                    <div class="card relative overflow-hidden">
+                    <div class="aspect-video bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mộc Mạc Garden</h3>
+                    <p class="text-gray-600 mb-4">MỘC MẠC GARDEN - TRAO CHẤT LƯỢNG NHẬN AN TÂM. Với sứ mệnh trao những sản phẩm thuần khiết từ thiên nhiên, chúng tôi cam kết mang đến những giải pháp chăm sóc sức khỏe tốt nhất cho cộng đồng.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Health & Wellness</span>
+                        <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">Natural Products</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="https://mocmacgarden.netlify.app/" class="text-blue-600 hover:text-blue-800 font-medium transition" target="_blank" rel="noopener">View Details</a>
+                    </div>
+                    </div>
+                </div>
                 </div>
 
                 <!-- Toggle Button (Hidden in print) -->
                 <div class="text-center mt-12 no-print">
                 <button id="toggle-projects-btn" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                    <span id="toggle-text" data-lang-key="toggle_view_more">Xem thêm dự án (6+)</span>
+                    <span id="toggle-text" data-lang-key="toggle_view_more">Xem thêm dự án (7+)</span>
                     <svg id="toggle-icon" class="ml-2 w-4 h-4 transform rotate-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
                 </div>
@@ -1881,10 +1901,10 @@
                     // Cập nhật text và icon
                     if (isExpanded) {
                         // Use translations when available
-                        toggleText.textContent = (window.translations && window.translations.toggle_collapse) || 'Thu gọn dự án (Ẩn 6+)';
+                        toggleText.textContent = (window.translations && window.translations.toggle_collapse) || 'Thu gọn dự án (Ẩn 7+)';
                         toggleIcon.classList.add('rotate-180');
                     } else {
-                        toggleText.textContent = (window.translations && window.translations.toggle_view_more) || 'Xem thêm dự án (6+)';
+                        toggleText.textContent = (window.translations && window.translations.toggle_view_more) || 'Xem thêm dự án (7+)';
                         toggleIcon.classList.remove('rotate-180');
                     }
 
