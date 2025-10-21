@@ -51,6 +51,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -62,10 +68,12 @@
                 <a href="#" class="text-2xl font-bold tracking-wider text-white">AURA</a>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="hover:text-violet-400 transition-colors">Tính Năng</a>
+                    <a href="#technology" class="hover:text-violet-400 transition-colors">Công Nghệ</a>
                     <a href="#roadmap" class="hover:text-violet-400 transition-colors">Lộ Trình</a>
-                    <a href="#community" class="hover:text-violet-400 transition-colors">Cộng Đồng</a>
+                    <a href="#team" class="hover:text-violet-400 transition-colors">Đội Ngũ</a>
+                    <a href="#faq" class="hover:text-violet-400 transition-colors">FAQ</a>
                 </div>
-                <button class="px-5 py-2 text-sm font-semibold bg-violet-600 hover:bg-violet-500 rounded-full transition-all duration-300 transform hover:scale-105 neon-glow">
+                <button id="connect-wallet-btn" class="px-5 py-2 w-36 text-sm font-semibold bg-violet-600 hover:bg-violet-500 rounded-full transition-all duration-300 transform hover:scale-105 neon-glow">
                     Kết Nối Ví
                 </button>
             </nav>
@@ -124,6 +132,36 @@
             </div>
         </section>
 
+        <!-- Technology Section -->
+        <section id="technology" class="py-20 scroll-reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Nền Tảng Công Nghệ Vững Chắc</h2>
+                <p class="mt-2 text-gray-400">AURA được xây dựng trên những công nghệ Web3 tiên tiến nhất.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-6 text-center flex flex-col items-center">
+                    <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <h3 class="text-lg font-bold mt-4">Blockchain Ethereum</h3>
+                    <p class="text-sm text-gray-400 mt-2">Đảm bảo tính minh bạch, an toàn và quyền sở hữu thực sự cho mọi tài sản số.</p>
+                </div>
+                <div class="glass-card p-6 text-center flex flex-col items-center">
+                    <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12V8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"></path><path d="M4 12v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4"></path><line x1="8" y1="24" x2="8" y2="20"></line><line x1="16" y1="24" x2="16" y2="20"></line><line x1="12" y1="4" x2="12" y2="8"></line><line x1="12" y1="20" x2="12" y2="16"></line><line x1="24" y1="12" x2="20" y2="12"></line><line x1="4" y1="12" x2="0" y2="12"></line></svg>
+                    <h3 class="text-lg font-bold mt-4">Lưu trữ IPFS</h3>
+                    <p class="text-sm text-gray-400 mt-2">Dữ liệu và nội dung được lưu trữ phi tập trung, chống kiểm duyệt và luôn bền vững.</p>
+                </div>
+                <div class="glass-card p-6 text-center flex flex-col items-center">
+                    <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 1-9.5 5.5v11L12 23l9.5-5.5v-11L12 1z"></path><path d="m12 1-9.5 5.5"></path><path d="M21.5 6.5 12 12"></path><path d="m2.5 6.5 9.5 5.5"></path><path d="M12 23v-11"></path></svg>
+                    <h3 class="text-lg font-bold mt-4">Unreal Engine 5</h3>
+                    <p class="text-sm text-gray-400 mt-2">Mang đến trải nghiệm đồ họa 3D siêu thực, sống động và mượt mà chưa từng có.</p>
+                </div>
+                <div class="glass-card p-6 text-center flex flex-col items-center">
+                    <svg class="w-12 h-12 text-violet-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <h3 class="text-lg font-bold mt-4">Hợp Đồng Thông Minh</h3>
+                    <p class="text-sm text-gray-400 mt-2">Tự động hóa các giao dịch và quy tắc trong metaverse, tạo ra một nền kinh tế công bằng.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Roadmap Section -->
         <section id="roadmap" class="py-20 scroll-reveal">
             <div class="text-center mb-16">
@@ -131,10 +169,7 @@
                 <p class="mt-2 text-gray-400">Hành trình xây dựng tương lai của AURA.</p>
             </div>
             <div class="relative">
-                <!-- Vertical line -->
                 <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
-                
-                <!-- Roadmap Item 1 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center mb-4 md:mb-0">
                          <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
@@ -145,8 +180,6 @@
                          </div>
                     </div>
                 </div>
-
-                <!-- Roadmap Item 2 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center flex-row-reverse mb-4 md:mb-0">
                         <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
@@ -157,8 +190,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Roadmap Item 3 -->
                 <div class="relative mb-12">
                     <div class="flex items-center justify-center mb-4 md:mb-0">
                          <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
@@ -169,8 +200,6 @@
                          </div>
                     </div>
                 </div>
-
-                 <!-- Roadmap Item 4 -->
                 <div class="relative">
                     <div class="flex items-center justify-center flex-row-reverse mb-4 md:mb-0">
                         <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
@@ -183,7 +212,68 @@
                 </div>
             </div>
         </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 scroll-reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Đội Ngũ Sáng Lập</h2>
+                <p class="mt-2 text-gray-400">Những người tâm huyết đứng sau AURA Metaverse.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+                <div class="text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-violet-500" src="https://placehold.co/200x200/0a0a0a/a78bfa?text=AVATAR" alt="Avatar Alex Nguyen">
+                    <h4 class="mt-4 text-xl font-bold">Alex Nguyen</h4>
+                    <p class="text-violet-400">Giám đốc Điều hành (CEO)</p>
+                </div>
+                <div class="text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-violet-500" src="https://placehold.co/200x200/0a0a0a/a78bfa?text=AVATAR" alt="Avatar Jane Tran">
+                    <h4 class="mt-4 text-xl font-bold">Jane Tran</h4>
+                    <p class="text-violet-400">Giám đốc Công nghệ (CTO)</p>
+                </div>
+                <div class="text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-violet-500" src="https://placehold.co/200x200/0a0a0a/a78bfa?text=AVATAR" alt="Avatar David Le">
+                    <h4 class="mt-4 text-xl font-bold">David Le</h4>
+                    <p class="text-violet-400">Trưởng phòng Thiết kế (CDO)</p>
+                </div>
+                <div class="text-center">
+                    <img class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-violet-500" src="https://placehold.co/200x200/0a0a0a/a78bfa?text=AVATAR" alt="Avatar Sarah Pham">
+                    <h4 class="mt-4 text-xl font-bold">Sarah Pham</h4>
+                    <p class="text-violet-400">Trưởng phòng Marketing (CMO)</p>
+                </div>
+            </div>
+        </section>
         
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 scroll-reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Câu Hỏi Thường Gặp</h2>
+                <p class="mt-2 text-gray-400">Những điều bạn muốn biết về AURA.</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="group bg-gray-900/50 border border-gray-800 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:border-violet-500">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>AURA Metaverse là gì?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400">AURA là một thế giới ảo phi tập trung được xây dựng trên công nghệ blockchain, nơi người dùng có thể sở hữu tài sản kỹ thuật số, tương tác xã hội, chơi game và tham gia vào một nền kinh tế kỹ thuật số hoàn toàn mới.</p>
+                </details>
+                <details class="group bg-gray-900/50 border border-gray-800 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:border-violet-500">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>Làm thế nào để tham gia AURA?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400">Bạn sẽ cần một ví tiền điện tử tương thích (như MetaMask) để kết nối với nền tảng. Sau khi kết nối, bạn có thể tạo avatar và bắt đầu khám phá. Hãy theo dõi các kênh thông báo của chúng tôi để biết ngày ra mắt chính thức.</p>
+                </details>
+                <details class="group bg-gray-900/50 border border-gray-800 rounded-lg p-6 cursor-pointer transition-all duration-300 hover:border-violet-500">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>Tài sản trong AURA có giá trị thực không?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <p class="mt-4 text-gray-400">Có. Tất cả tài sản trong AURA, từ đất đai, vật phẩm đến avatar, đều là các NFT (Tài sản không thể thay thế) trên blockchain. Bạn thực sự sở hữu chúng và có thể tự do mua bán, trao đổi trên các chợ giao dịch NFT.</p>
+                </details>
+            </div>
+        </section>
+
         <!-- Community Section -->
         <section id="community" class="py-20 scroll-reveal">
              <div class="text-center bg-gray-900/50 border border-gray-800 rounded-2xl p-12">
@@ -199,22 +289,63 @@
                          <span>Theo Dõi X</span>
                      </a>
                 </div>
+                <div class="mt-12 max-w-xl mx-auto">
+                    <h3 class="font-semibold text-lg">Đừng Bỏ Lỡ Bất Kỳ Cập Nhật Nào</h3>
+                    <form class="mt-4 flex flex-col sm:flex-row gap-2">
+                        <input type="email" placeholder="Nhập email của bạn..." class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-white">
+                        <button type="submit" class="px-6 py-3 font-bold bg-violet-600 text-white rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-violet-500">Đăng Ký</button>
+                    </form>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <p>&copy; 2025 AURA Metaverse. Mọi quyền được bảo lưu.</p>
+    <footer class="border-t border-gray-800 bg-gray-900/30">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="col-span-1">
+                    <a href="#" class="text-3xl font-bold tracking-wider text-white">AURA</a>
+                    <p class="mt-4 text-gray-400">Xây dựng tương lai của thế giới ảo, cùng nhau.</p>
+                </div>
+                <div class="col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <div>
+                        <h5 class="font-semibold tracking-wide text-white">Khám Phá</h5>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#features" class="text-gray-400 hover:text-violet-400">Tính Năng</a></li>
+                            <li><a href="#technology" class="text-gray-400 hover:text-violet-400">Công Nghệ</a></li>
+                            <li><a href="#roadmap" class="text-gray-400 hover:text-violet-400">Lộ Trình</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold tracking-wide text-white">Về Chúng Tôi</h5>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#team" class="text-gray-400 hover:text-violet-400">Đội Ngũ</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-violet-400">Whitepaper</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-violet-400">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold tracking-wide text-white">Cộng Đồng</h5>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-violet-400">Discord</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-violet-400">X (Twitter)</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-violet-400">Telegram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-500">&copy; 2025 AURA Metaverse. Mọi quyền được bảo lưu.</p>
+            </div>
         </div>
     </footer>
+
 
     <!-- Three.js and animation script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        // Three.js background animation
         let scene, camera, renderer, shape;
 
         function initThreeJS() {
@@ -227,17 +358,15 @@
             
             renderer.setSize(window.innerWidth, window.innerHeight);
 
-            // Create a more complex shape
             const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
             const material = new THREE.MeshStandardMaterial({
-                color: 0x8b5cf6, // violet-500
+                color: 0x8b5cf6,
                 wireframe: true,
             });
             shape = new THREE.Mesh(geometry, material);
             shape.scale.set(0.1, 0.1, 0.1);
             scene.add(shape);
 
-            // Add lighting
             const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
             scene.add(ambientLight);
             const pointLight = new THREE.PointLight(0xffffff, 1.5);
@@ -252,10 +381,8 @@
         function animate() {
             if (!renderer) return;
             requestAnimationFrame(animate);
-
             shape.rotation.x += 0.001;
             shape.rotation.y += 0.002;
-
             renderer.render(scene, camera);
         }
 
@@ -268,11 +395,9 @@
 
         window.addEventListener('resize', onWindowResize, false);
         
-        // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', (event) => {
             initThreeJS();
 
-            // Header background on scroll
             const header = document.getElementById('header');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
@@ -284,7 +409,6 @@
                 }
             });
 
-            // Scroll reveal animation
             const revealElements = document.querySelectorAll('.scroll-reveal');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -298,8 +422,20 @@
             revealElements.forEach(elem => {
                 observer.observe(elem);
             });
+            
+            const connectWalletBtn = document.getElementById('connect-wallet-btn');
+            connectWalletBtn.addEventListener('click', () => {
+                if (connectWalletBtn.textContent.trim() === 'Kết Nối Ví') {
+                    // In a real app, this would trigger MetaMask or another wallet provider.
+                    const mockAddress = "0x1A2b...dE3F";
+                    connectWalletBtn.textContent = `${mockAddress.substring(0, 6)}...${mockAddress.substring(mockAddress.length - 4)}`;
+                } else {
+                    connectWalletBtn.textContent = 'Kết Nối Ví';
+                }
+            });
         });
 
     </script>
 </body>
 </html>
+
