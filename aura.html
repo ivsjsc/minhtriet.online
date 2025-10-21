@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Metaverse - Cánh Cửa Đến Tương Lai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #E0E0E0;
+        }
+        .hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(76, 29, 149, 0.5);
+            border-color: rgba(124, 58, 237, 0.7);
+        }
+        .neon-glow {
+            box-shadow: 0 0 5px #6d28d9, 0 0 10px #6d28d9, 0 0 15px #6d28d9;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold tracking-wider text-white">AURA</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-violet-400 transition-colors">Tính Năng</a>
+                    <a href="#roadmap" class="hover:text-violet-400 transition-colors">Lộ Trình</a>
+                    <a href="#community" class="hover:text-violet-400 transition-colors">Cộng Đồng</a>
+                </div>
+                <button class="px-5 py-2 text-sm font-semibold bg-violet-600 hover:bg-violet-500 rounded-full transition-all duration-300 transform hover:scale-105 neon-glow">
+                    Kết Nối Ví
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-content flex flex-col items-center px-4">
+            <h1 class="text-4xl md:text-7xl font-black uppercase tracking-tighter leading-tight bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-fuchsia-500">
+                Bước Vào Vũ Trụ AURA
+            </h1>
+            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-300">
+                Tái định hình thực tại của bạn. Khám phá, sáng tạo và kết nối trong một thế giới phi tập trung không giới hạn.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#features" class="px-8 py-3 font-bold bg-white text-black rounded-full transition-transform transform hover:scale-105">Khám Phá Ngay</a>
+                <a href="#community" class="px-8 py-3 font-bold bg-transparent border-2 border-violet-500 text-white rounded-full transition-all hover:bg-violet-500 hover:border-violet-500">Tham Gia Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-20">
+        <!-- Features Section -->
+        <section id="features" class="py-20 scroll-reveal">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Một Hệ Sinh Thái Toàn Diện</h2>
+                <p class="mt-2 text-gray-400">Những gì bạn có thể trải nghiệm trong AURA Metaverse.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="glass-card p-8">
+                    <div class="w-12 h-12 mb-4 bg-violet-900/50 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Danh Tính Số Phi Tập Trung</h3>
+                    <p class="text-gray-400">Tạo avatar độc nhất, sở hữu dữ liệu cá nhân và tài sản kỹ thuật số của bạn một cách an toàn trên blockchain.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="glass-card p-8">
+                     <div class="w-12 h-12 mb-4 bg-violet-900/50 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Chợ Giao Dịch NFT</h3>
+                    <p class="text-gray-400">Mua, bán và trao đổi các vật phẩm độc quyền, đất đai ảo, và các tác phẩm nghệ thuật dưới dạng NFT.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="glass-card p-8">
+                    <div class="w-12 h-12 mb-4 bg-violet-900/50 rounded-lg flex items-center justify-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-400"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"></path><path d="M10 19v-3.96 3.15"></path><path d="M7 19h5"></path><rect width="6" height="4" x="16" y="13" rx="2"></rect></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Thế Giới Ảo Sống Động</h3>
+                    <p class="text-gray-400">Khám phá các thành phố tương lai, tham gia sự kiện, chơi game và tương tác xã hội trong môi trường 3D chân thực.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="py-20 scroll-reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold">Lộ Trình Phát Triển</h2>
+                <p class="mt-2 text-gray-400">Hành trình xây dựng tương lai của AURA.</p>
+            </div>
+            <div class="relative">
+                <!-- Vertical line -->
+                <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-700"></div>
+                
+                <!-- Roadmap Item 1 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center mb-4 md:mb-0">
+                         <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
+                         <div class="w-full md:w-1/2 md:pr-12 text-center md:text-right">
+                            <p class="font-bold text-violet-400">Q1 2026</p>
+                            <h4 class="font-bold text-xl mt-1">Khởi động nền tảng</h4>
+                            <p class="text-gray-400 mt-2">Phát hành phiên bản Alpha, ra mắt tính năng tạo avatar và ví điện tử tích hợp.</p>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap Item 2 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center flex-row-reverse mb-4 md:mb-0">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
+                        <div class="w-full md:w-1/2 md:pl-12 text-center md:text-left">
+                           <p class="font-bold text-violet-400">Q2 2026</p>
+                           <h4 class="font-bold text-xl mt-1">Mở bán đất ảo (Land Sale)</h4>
+                           <p class="text-gray-400 mt-2">Tổ chức sự kiện mở bán các lô đất ảo đầu tiên, giới thiệu chợ giao dịch NFT.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roadmap Item 3 -->
+                <div class="relative mb-12">
+                    <div class="flex items-center justify-center mb-4 md:mb-0">
+                         <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
+                         <div class="w-full md:w-1/2 md:pr-12 text-center md:text-right">
+                            <p class="font-bold text-violet-400">Q3 2026</p>
+                            <h4 class="font-bold text-xl mt-1">Tích hợp SDK cho nhà phát triển</h4>
+                            <p class="text-gray-400 mt-2">Ra mắt bộ công cụ cho phép các nhà phát triển bên thứ ba xây dựng trải nghiệm và ứng dụng trên AURA.</p>
+                         </div>
+                    </div>
+                </div>
+
+                 <!-- Roadmap Item 4 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center flex-row-reverse mb-4 md:mb-0">
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-6 bg-violet-500 rounded-full border-4 border-[#0A0A0A]"></div>
+                        <div class="w-full md:w-1/2 md:pl-12 text-center md:text-left">
+                           <p class="font-bold text-violet-400">Q4 2026</p>
+                           <h4 class="font-bold text-xl mt-1">Khởi chạy DAO</h4>
+                           <p class="text-gray-400 mt-2">Thành lập Tổ chức Tự trị Phi tập trung (DAO) để cộng đồng tham gia quản trị và định hướng phát triển dự án.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Section -->
+        <section id="community" class="py-20 scroll-reveal">
+             <div class="text-center bg-gray-900/50 border border-gray-800 rounded-2xl p-12">
+                <h2 class="text-4xl font-bold">Gia Nhập Cộng Đồng Của Chúng Tôi</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                    Kết nối với những nhà thám hiểm, nhà sáng tạo và nhà xây dựng khác. Cùng nhau định hình tương lai của thế giới ảo.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                     <a href="#" class="px-8 py-4 font-bold bg-violet-600 text-white rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-violet-500 neon-glow flex items-center space-x-2">
+                        <span>Tham Gia Discord</span>
+                     </a>
+                     <a href="#" class="px-8 py-4 font-bold bg-gray-800 text-white rounded-full transition-transform transform hover:scale-105 hover:bg-gray-700 flex items-center space-x-2">
+                         <span>Theo Dõi X</span>
+                     </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>&copy; 2025 AURA Metaverse. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Three.js and animation script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Three.js background animation
+        let scene, camera, renderer, shape;
+
+        function initThreeJS() {
+            const canvas = document.getElementById('hero-canvas');
+            if (!canvas) return;
+
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+            
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            // Create a more complex shape
+            const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+            const material = new THREE.MeshStandardMaterial({
+                color: 0x8b5cf6, // violet-500
+                wireframe: true,
+            });
+            shape = new THREE.Mesh(geometry, material);
+            shape.scale.set(0.1, 0.1, 0.1);
+            scene.add(shape);
+
+            // Add lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+            scene.add(ambientLight);
+            const pointLight = new THREE.PointLight(0xffffff, 1.5);
+            pointLight.position.set(5, 5, 5);
+            scene.add(pointLight);
+
+            camera.position.z = 5;
+
+            animate();
+        }
+
+        function animate() {
+            if (!renderer) return;
+            requestAnimationFrame(animate);
+
+            shape.rotation.x += 0.001;
+            shape.rotation.y += 0.002;
+
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            if (!camera || !renderer) return;
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize, false);
+        
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', (event) => {
+            initThreeJS();
+
+            // Header background on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(10, 10, 10, 0.8)';
+                    header.style.backdropFilter = 'blur(10px)';
+                } else {
+                    header.style.backgroundColor = 'transparent';
+                    header.style.backdropFilter = 'none';
+                }
+            });
+
+            // Scroll reveal animation
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            revealElements.forEach(elem => {
+                observer.observe(elem);
+            });
+        });
+
+    </script>
+</body>
+</html>
