@@ -95,6 +95,79 @@
     
     <!-- Critical CSS -->
     <style>
+        /* LinkedIn badge responsive sizing and alignment */
+        .badge-container .badge-base__link {
+            font-weight: 700;
+            transition: transform 0.25s ease, font-size 0.25s ease;
+        }
+        .badge-container .badge-base__link span {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Larger, one-side layout on medium+ screens */
+        @media (min-width: 768px) {
+            .badge-container .badge-base__link {
+                font-size: 1.85rem; /* slightly larger label */
+            }
+            .badge-container .badge-base__link span {
+                width: 64px;
+                height: 64px;
+                line-height: 64px;
+            }
+            /* keep the badge visually contained and left-aligned in its column */
+            .about-badge-col { display: flex; justify-content: flex-start; align-items: center; }
+        }
+
+        /* On small screens keep smaller and centered so it sits above the text box */
+        @media (max-width: 767px) {
+            .badge-container .badge-base__link { font-size: 1.4rem; }
+            .about-badge-col { display: flex; justify-content: center; }
+        }
+
+        /* Badge dot base and per-dot colors using nth-child to avoid inline styles */
+        .badge-dot {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+        .badge-dot--dark { color: black; }
+
+        /* Larger on md+ */
+        @media (min-width: 768px) {
+            .badge-dot { width: 64px; height: 64px; line-height: 64px; margin-right: 8px; }
+            .about-badge-col { padding-right: 1.5rem; }
+        }
+
+        /* define colors per position to match previous inline colors */
+        .badge-base__link .badge-dot:nth-child(1)  { background:#ff6b6b }
+        .badge-base__link .badge-dot:nth-child(2)  { background:#4ecdc4 }
+        .badge-base__link .badge-dot:nth-child(3)  { background:#45b7d1 }
+        .badge-base__link .badge-dot:nth-child(4)  { background:#f9ca24 }
+        .badge-base__link .badge-dot:nth-child(5)  { background:#f0932b }
+        .badge-base__link .badge-dot:nth-child(6)  { background:#eb4d4b }
+        .badge-base__link .badge-dot:nth-child(7)  { background:#6c5ce7 }
+        .badge-base__link .badge-dot:nth-child(8)  { background:#a29bfe }
+        .badge-base__link .badge-dot:nth-child(9)  { background:#fd79a8 }
+        .badge-base__link .badge-dot:nth-child(10) { background:#00b894 }
+        .badge-base__link .badge-dot:nth-child(11) { background:#e17055 }
+        .badge-base__link .badge-dot:nth-child(12) { background:#74b9ff }
+        .badge-base__link .badge-dot:nth-child(13) { background:#ffeaa7 }
+        .badge-base__link .badge-dot:nth-child(14) { background:#d63031 }
+        .badge-base__link .badge-dot:nth-child(15) { background:#00cec9 }
+        .badge-base__link .badge-dot:nth-child(16) { background:#e84393 }
         .glass-card {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.8);
@@ -748,26 +821,28 @@
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                     <!-- LinkedIn Badge (replaced embed section) -->
                         <div class="container mx-auto px-10">
-                            <div class="flex justify-center">
+                            <div class="flex justify-center md:justify-start about-badge-col">
                                 <!-- User-provided LinkedIn badge snippet -->
                                 <div class="badge-container">
-                                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="mtrietng" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://vn.linkedin.com/in/mtrietng?trk=profile-badge" style="text-decoration: none; display: inline-flex; align-items: center; gap: 4px; font-size: 1.5rem; font-weight: bold;">
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #ff6b6b; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">m</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #4ecdc4; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">i</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #45b7d1; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">n</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #f9ca24; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">h</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #f0932b; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">t</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #eb4d4b; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">r</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #6c5ce7; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">i</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #a29bfe; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">e</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #fd79a8; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">t</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #00b894; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">.</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #e17055; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">o</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #74b9ff; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">n</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #ffeaa7; color: black; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">l</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #d63031; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">i</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #00cec9; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">n</span>
-                                        <span style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: #e84393; color: white; text-align: center; line-height: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">e</span>
+                                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="mtrietng" data-version="v1">
+                                        <a class="badge-base__link LI-simple-link" href="https://vn.linkedin.com/in/mtrietng?trk=profile-badge" aria-label="LinkedIn - Triet Minh Nguyen, view profile" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                                            <span class="sr-only">Triet Minh Nguyen (LinkedIn) — View profile</span>
+                                        <span class="badge-dot">m</span>
+                                            <span class="badge-dot">i</span>
+                                            <span class="badge-dot">n</span>
+                                            <span class="badge-dot">h</span>
+                                            <span class="badge-dot">t</span>
+                                            <span class="badge-dot">r</span>
+                                            <span class="badge-dot">i</span>
+                                            <span class="badge-dot">e</span>
+                                            <span class="badge-dot">t</span>
+                                            <span class="badge-dot">.</span>
+                                            <span class="badge-dot">o</span>
+                                            <span class="badge-dot">n</span>
+                                            <span class="badge-dot badge-dot--dark">l</span>
+                                            <span class="badge-dot">i</span>
+                                            <span class="badge-dot">n</span>
+                                            <span class="badge-dot">e</span>
                                     </a></div>
                                 </div>
                             </div>
