@@ -168,6 +168,47 @@
         .badge-base__link .badge-dot:nth-child(14) { background:#d63031 }
         .badge-base__link .badge-dot:nth-child(15) { background:#00cec9 }
         .badge-base__link .badge-dot:nth-child(16) { background:#e84393 }
+
+        /* Responsive image replacement for badge text */
+        .about-badge-img {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+            object-fit: cover;
+            display: inline-block;
+        }
+        @media (min-width: 768px) {
+            .about-badge-img { width: 220px; border-radius: 12px; }
+        }
+        @media (max-width: 420px) {
+            .about-badge-img { width: 120px; }
+        }
+
+        /* Arrange the badge image and the rendered LinkedIn card vertically with proper spacing */
+        .badge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        /* Limit the width of the LinkedIn rendered card so it matches the image width */
+        .badge-base {
+            width: 100%;
+            max-width: 220px;
+            display: block;
+        }
+        @media (max-width: 767px) {
+            .badge-base { max-width: 140px; }
+        }
+        .badge-base .LI-simple-link { display: inline-block; }
+        /* Ensure the image has breathing room above the rendered badge */
+        .about-badge-img { margin-bottom: 6px; }
+        @media (min-width: 768px) {
+            .badge-container { align-items: flex-start; }
+            .about-badge-img { margin-bottom: 12px; }
+            .badge-base { max-width: 280px; }
+        }
         .glass-card {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.8);
@@ -825,25 +866,11 @@
                                 <!-- User-provided LinkedIn badge snippet -->
                                 <div class="badge-container">
                                     <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="mtrietng" data-version="v1">
-                                        <a class="badge-base__link LI-simple-link" href="https://vn.linkedin.com/in/mtrietng?trk=profile-badge" aria-label="LinkedIn - Triet Minh Nguyen, view profile" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                                        <a class="badge-base__link LI-simple-link" href="https://vn.linkedin.com/in/mtrietng?trk=profile-badge" aria-label="LinkedIn - Triet Minh Nguyen, view profile" style="text-decoration: none; display: inline-flex; align-items: center; gap: 12px;">
                                             <span class="sr-only">Triet Minh Nguyen (LinkedIn) — View profile</span>
-                                        <span class="badge-dot">m</span>
-                                            <span class="badge-dot">i</span>
-                                            <span class="badge-dot">n</span>
-                                            <span class="badge-dot">h</span>
-                                            <span class="badge-dot">t</span>
-                                            <span class="badge-dot">r</span>
-                                            <span class="badge-dot">i</span>
-                                            <span class="badge-dot">e</span>
-                                            <span class="badge-dot">t</span>
-                                            <span class="badge-dot">.</span>
-                                            <span class="badge-dot">o</span>
-                                            <span class="badge-dot">n</span>
-                                            <span class="badge-dot badge-dot--dark">l</span>
-                                            <span class="badge-dot">i</span>
-                                            <span class="badge-dot">n</span>
-                                            <span class="badge-dot">e</span>
-                                    </a></div>
+                                            <img src="images/pages/englishlearners/minhtriet.online.png" alt="minhtriet.online" class="about-badge-img">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>                        
