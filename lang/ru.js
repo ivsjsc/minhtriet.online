@@ -113,5 +113,11 @@ window.translations_ru = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': 'Комплексная образовательная платформа, предоставляющая технологически поддерживаемые решения для обучения.',
     'outstanding_projects_cta': 'Посмотреть все проекты',
-    'lightbox_title': 'IVS English Learners App: Альбом функций (1/10)'
+    'lightbox_title': 'IVS English Learners App: Альбом функций (1/10)',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': 'Интерактивная платформа изучения английского K-12, помогающая учащимся открывать и участвовать в современных программах обучения.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': 'Умное приложение оценки и размещения для языковых центров с 100% автоматизированным процессом тестирования компетенций.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': 'Комплексная платформа управления детскими садами, соединяющая семьи и школы с ресурсами обучения для детей.'
 };

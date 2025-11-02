@@ -111,5 +111,11 @@ window.translations_ko = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': '기술 기반 학습 솔루션을 제공하는 종합 교육 플랫폼.',
     'outstanding_projects_cta': '모든 프로젝트 보기',
-    'lightbox_title': 'IVS English Learners App: 기능 앨범 (1/10)'
+    'lightbox_title': 'IVS English Learners App: 기능 앨범 (1/10)',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': '학습자가 현대적인 학습 프로그램을 발견하고 참여할 수 있는 인터랙티브 K-12 영어 학습 플랫폼.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': '언어 센터를 위한 스마트 평가 및 배치 애플리케이션으로, 100% 자동화된 능력 평가 프로세스.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': '가족과 학교를 연결하고 어린이 학습 리소스를 제공하는 종합 유치원 관리 플랫폼.'
 };

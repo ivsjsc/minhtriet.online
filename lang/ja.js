@@ -109,5 +109,11 @@ window.translations_ja = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': 'テクノロジーを活用した学習ソリューションを提供する総合教育プラットフォーム。',
     'outstanding_projects_cta': 'すべてのプロジェクトを見る',
-    'lightbox_title': 'IVS English Learners App: 機能アルバム (1/10)'
+    'lightbox_title': 'IVS English Learners App: 機能アルバム (1/10)',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': '学習者が現代的な学習プログラムを発見し、参加できるインタラクティブなK-12英語学習プラットフォーム。',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': '言語センター向けのスマート評価・配置アプリケーション。習得度テストプロセスを100%自動化。',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': '家族と学校を結び、子供向け学習リソースを提供する包括的な幼稚園管理プラットフォーム。'
 };

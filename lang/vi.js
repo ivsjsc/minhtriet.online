@@ -1,7 +1,7 @@
 window.translations_vi = {
     'page_title': 'Minh Triet - EdTech, Automation & AI for The new Generation',
-    'nav_about': 'Giới thiệu', 'nav_experience': 'Kinh nghiệm', 'nav_skills': 'Kỹ năng', 'nav_portfolio': 'Dự án', 'nav_collaboration': 'Hợp tác', 'nav_contact': 'Liên hệ',
-    'nav_about_mobile': 'Giới thiệu', 'nav_experience_mobile': 'Kinh nghiệm', 'nav_skills_mobile': 'Kỹ năng', 'nav_portfolio_mobile': 'Dự án', 'nav_collaboration_mobile': 'Hợp tác', 'nav_contact_mobile': 'Liên hệ',
+    'nav_about': 'Giới thiệu', 'nav_experience': 'Kinh nghiệm', 'nav_skills': 'Kỹ năng', 'nav_education': 'Học vấn', 'nav_portfolio': 'Dự án', 'nav_collaboration': 'Hợp tác', 'nav_contact': 'Liên hệ',
+    'nav_about_mobile': 'Giới thiệu', 'nav_experience_mobile': 'Kinh nghiệm', 'nav_skills_mobile': 'Kỹ năng', 'nav_education_mobile': 'Học vấn', 'nav_portfolio_mobile': 'Dự án', 'nav_collaboration_mobile': 'Hợp tác', 'nav_contact_mobile': 'Liên hệ',
     'hero_name': 'Đối tác Chiến lược về Giáo dục, Vận hành & Công nghệ',
     "hero_subtitle_1": "| CEO, IVS JSC | Chuyên gia AI & EdTech | Lãnh đạo Chuyển đổi số |",
     'hero_title': 'Đối tác Chiến lược Công nghệ | Chuyển đổi số & Tối ưu vận hành',
@@ -51,6 +51,7 @@ window.translations_vi = {
     'exp5_title': 'Quản Lý Ưu Đãi - Khách hàng thân thiết', 'exp5_company': 'The Grand Ho Tram Strip, HCMC (Bà Rịa Vũng Tàu)', 'exp5_duration': '2018 - 2018 | Bà Rịa Vũng Tàu', 'exp5_li1': 'Chăm sóc Khách hàng cao cấp: Quản lý tài khoản thành viên khách hàng và lên kế hoạch ưu đãi tri ân khách hàng thân thiết, đảm bảo dịch vụ khách hàng chất lượng cao (Hospitality).',
     'exp6_title': 'Đội bay - Phi hành đoàn', 'exp6_company': 'VietJet Air, Sân bay Phú Quốc', 'exp6_duration': '2017 - 2017 | Phú Quốc', 'exp6_li1': 'Thực hiện nghiêm ngặt các quy trình an toàn và khẩn cấp, được đào tạo chuyên sâu về sơ cấp cứu và quản lý tình huống áp lực cao.', 'exp6_li2': 'Dịch vụ Khách hàng Chất lượng cao: phục vụ hành khách chuyên nghiệp.',
     'skills_title': 'Chuyên môn',
+    'education_title': 'Học vấn & Chứng chỉ',
     'skill_cat1_title': '  Quản trị',     'skill_cat1_li1': 'Lãnh đạo cấp C (CEO/CTO/COO)', 'skill_cat1_li2': 'Quản trị P&L', 'skill_cat1_li3': 'Quản lý dự án phức tạp',
     'skill_cat2_title': 'Vận hành & Dịch vụ', 'skill_cat2_li1': 'Quản lý vận hành', 'skill_cat2_li2': 'Vận hành trung tâm ngoại ngữ', 'skill_cat2_li3': 'Dịch vụ khách hàng cao cấp',
     'skill_cat3_title': 'Công nghệ & Hệ thống', 'skill_cat3_li1': 'Kiến trúc Microservices', 'skill_cat3_li2': 'Phát triển Web/Mobile', 'skill_cat3_li3': 'Phát triển nền tảng SaaS', 'skill_cat3_li4': 'Thiết kế CSDL',
@@ -98,5 +99,11 @@ window.translations_vi = {
     'featured_project3_desc': 'Nền tảng giáo dục toàn diện của IVS JSC, cung cấp giải pháp công nghệ và đào tạo cho thế hệ trẻ.',
     'outstanding_projects_cta': 'Xem Tất Cả Dự Án',
     'lightbox_title': 'IVS English Learners App: Album Tính năng (1/10)',
-    'photo_album_title': 'Album Ảnh'
+    'photo_album_title': 'Album Ảnh',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': 'Nền tảng học tập tiếng Anh tương tác K-12, giúp người học khám phá và tham gia các chương trình học tập hiện đại.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': 'Ứng dụng đánh giá và xếp lớp thông minh dành cho các Trung tâm Ngoại ngữ, tự động hóa 100% quá trình kiểm tra trình độ.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': 'Nền tảng quản lý trường mầm non toàn diện, kết nối gia đình-trường học và cung cấp tài nguyên học tập cho trẻ em.'
 };

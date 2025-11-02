@@ -115,5 +115,11 @@ window.translations_en = {
     'featured_project3_desc': 'Comprehensive education platform delivering technology-enabled learning solutions.',
     'outstanding_projects_cta': 'View All Projects',
     'lightbox_title': 'IVS English Learners App: Feature Album (1/10)',
-    'photo_album_title': 'Photo Album'
+    'photo_album_title': 'Photo Album',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': 'Interactive K-12 English learning platform that helps learners discover and engage in modern learning programs.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': 'Smart assessment and placement application for Language Centers, 100% automated proficiency testing process.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': 'Comprehensive kindergarten management platform connecting families and schools with learning resources for children.'
 };

@@ -10,6 +10,7 @@ window.translations_fr = {
     'hero_contact': 'Contactez maintenant',
 
     'portfolio_title': 'Projets',
+    'education_title': 'Éducation & Certificats',
 
     // Outstanding Projects section
     'outstanding_projects_eyebrow': 'PROJETS EXCEPTIONNELS',
@@ -27,5 +28,11 @@ window.translations_fr = {
     'footer_contact_email': 'info@minhtriet.online',
     'footer_contact_phone': '+84 89692 0547',
     'footer_contact_address': 'Long Phuoc, Đồng Nai, Vietnam',
-    'footer_credit': 'Conçu par une collaboration entre IVS Celestech et l\'IA, construit avec ♥ au Vietnam.'
+    'footer_credit': 'Conçu par une collaboration entre IVS Celestech et l\'IA, construit avec ♥ au Vietnam.',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': 'Plateforme interactive d\'apprentissage de l\'anglais K-12 qui aide les apprenants à découvrir et à participer à des programmes d\'apprentissage modernes.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': 'Application intelligente d\'évaluation et de placement pour les centres de langues avec processus de test de compétence 100% automatisé.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': 'Plateforme complète de gestion des écoles maternelles connectant familles et écoles avec des ressources d\'apprentissage pour les enfants.'
 };

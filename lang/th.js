@@ -109,5 +109,11 @@ window.translations_th = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': 'แพลตฟอร์มการศึกษาที่ครอบคลุมซึ่งให้โซลูชันการเรียนรู้ที่ขับเคลื่อนด้วยเทคโนโลยี.',
     'outstanding_projects_cta': 'ดูโครงการทั้งหมด',
-    'lightbox_title': 'IVS English Learners App: อัลบั้มคุณสมบัติ (1/10)'
+    'lightbox_title': 'IVS English Learners App: อัลบั้มคุณสมบัติ (1/10)',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': 'แพลตฟอร์มการเรียนภาษาอังกฤษแบบอินเทอร์แอคทีฟ K-12 ที่ช่วยให้ผู้เรียนค้นพบและมีส่วนร่วมในโปรแกรมการเรียนรู้สมัยใหม่.',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': 'แอปพลิเคชันการประเมินและการจัดวางอัจฉริยะสำหรับศูนย์ภาษา พร้อมกระบวนการทดสอบความสามารถที่อัตโนมัติ 100%.',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': 'แพลตฟอร์มการจัดการโรงเรียนอนุบาลที่ครอบคลุม เชื่อมโยงครอบครัวและโรงเรียนกับทรัพยากรการเรียนรู้สำหรับเด็ก.'
 };

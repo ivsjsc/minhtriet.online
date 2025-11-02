@@ -109,5 +109,11 @@ window.translations_zh = {
     'featured_project3_title': 'IVS Academy',
     'featured_project3_desc': '提供技术支持学习解决方案的综合教育平台。',
     'outstanding_projects_cta': '查看所有项目',
-    'lightbox_title': 'IVS English Learners App：功能相册 (1/10)'
+    'lightbox_title': 'IVS English Learners App：功能相册 (1/10)',
+    'project20_title': 'ENGLISH Learners App',
+    'project20_desc': '互动式 K-12 英语学习平台，帮助学习者发现和参与现代学习项目。',
+    'project21_title': 'IVS Testing & Placement App',
+    'project21_desc': '面向语言中心的智能评估和分班应用，100% 自动化能力测试流程。',
+    'project22_title': 'IVS Kinderlink App',
+    'project22_desc': '综合幼儿园管理平台，连接家庭和学校，为儿童提供学习资源。'
 };
