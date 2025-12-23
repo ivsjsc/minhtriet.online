@@ -41,51 +41,77 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* --- GLOBAL STYLES (MODERN DARK MODE) --- */
+        /* --- GLOBAL STYLES --- */
         :root {
             --color-primary: #8B5CF6;
+            --color-primary-light: #A78BFA;
             --color-secondary: #4F46E5;
-            --color-bg-dark: #121217;
-            --color-card-bg: #1e1e26;
-            --color-text-light: #E0E0E0;
-            --color-text-subtle: #9CA3AF;
+            --color-accent: #EC4899;
+            --color-bg-dark: #0F172A;
+            --color-bg-darker: #0B1120;
+            --color-card-bg: #1E293B;
+            --color-text-light: #F1F5F9;
+            --color-text-subtle: #CBD5E1;
+            --color-text-muted: #94A3B8;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--color-bg-dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-darker) 100%);
             color: var(--color-text-light);
             min-height: 100vh;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
+            overflow-x: hidden;
         }
 
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Glass morphism effect */
         .glass-effect {
-            backdrop-filter: blur(8px);
-            background-color: rgba(30, 30, 38, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
         }
 
+        /* Section title with gradient */
         .section-title {
-            background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
+            background: linear-gradient(135deg, #60A5FA 0%, #8B5CF6 50%, #EC4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 900;
+            letter-spacing: -0.02em;
         }
 
+        /* --- NAVBAR STYLES --- */
         .navbar-container {
-            background-color: #1a1a1e;
-            border-bottom: 1px solid #333;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .home-link-small {
-            color: #FFD700;
+            color: #FCD34D;
             font-weight: 900;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            font-size: 1.25rem;
+            letter-spacing: -0.01em;
         }
 
         .home-link-small:hover {
-            color: #FFB300;
+            color: #FBBF24;
+            transform: translateX(-2px);
         }
 
         .mobile-navbar-content {
@@ -95,86 +121,485 @@
             width: 100%;
         }
 
-        /* Card Styles */
-        .app-card {
-            background: var(--color-card-bg);
+        /* Language switcher */
+        #lang-button {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(79, 70, 229, 0.1) 100%);
             border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .app-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(139, 92, 246, 0.6);
-            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.35);
-        }
-
-        .app-card h3 {
-            color: var(--color-primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
-
-        .app-card p {
             color: var(--color-text-subtle);
-            margin-bottom: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        #lang-button:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(79, 70, 229, 0.2) 100%);
+            border-color: rgba(139, 92, 246, 0.5);
+            color: var(--color-text-light);
+        }
+
+        #language-menu {
+            background: linear-gradient(135deg, var(--color-card-bg) 0%, rgba(30, 41, 59, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        #language-menu li a {
+            transition: all 0.2s ease;
+            color: var(--color-text-subtle);
+        }
+
+        #language-menu li a:hover {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding-left: 1.25rem;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.1) 0%, 
+                rgba(79, 70, 229, 0.05) 50%, 
+                rgba(236, 72, 153, 0.05) 100%);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            padding: 4rem 1rem 3rem;
+        }
+
+        /* Animated background elements */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--color-text-subtle);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
             line-height: 1.6;
         }
 
+        /* --- APP CARD STYLES --- */
+        .app-card {
+            position: relative;
+            background: linear-gradient(135deg, var(--color-card-bg) 0%, rgba(30, 41, 59, 0.8) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0) 0%,
+                rgba(139, 92, 246, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 1;
+        }
+
+        .app-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
+        }
+
+        .app-card:hover::before {
+            opacity: 1;
+        }
+
+        .app-icon-box {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .app-card:nth-child(2) .app-icon-box {
+            background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+        }
+
+        .app-card:nth-child(3) .app-icon-box {
+            background: linear-gradient(135deg, #F472B6 0%, #EC4899 100%);
+        }
+
+        .app-card h3 {
+            position: relative;
+            z-index: 2;
+            color: var(--color-text-light);
+            font-size: clamp(1.5rem, 4vw, 1.875rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-text-light) 0%, var(--color-primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-card p {
+            position: relative;
+            z-index: 2;
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .app-tags {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(79, 70, 229, 0.15) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--color-primary-light);
+            transition: all 0.2s ease;
+        }
+
+        .app-tag:hover {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(79, 70, 229, 0.25) 100%);
+            border-color: rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .app-card:nth-child(1) .app-tag {
+            color: #60A5FA;
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+
+        .app-card:nth-child(1) .app-tag {
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+        }
+
+        .app-card:nth-child(2) .app-tag {
+            color: var(--color-primary-light);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(79, 70, 229, 0.15) 100%);
+        }
+
+        .app-card:nth-child(3) .app-tag {
+            color: #F472B6;
+            background: linear-gradient(135deg, rgba(244, 114, 182, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+        }
+
+        /* --- BUTTON STYLES --- */
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(139, 92, 246, 0.6);
         }
 
+        .cta-button:active {
+            transform: translateY(-2px);
+        }
+
+        .cta-button svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* --- BENEFITS SECTION --- */
+        .benefits-section {
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.05) 0%, 
+                rgba(79, 70, 229, 0.03) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            border-radius: 16px;
+            padding: clamp(2rem, 6vw, 3rem);
+        }
+
+        .benefits-section h2 {
+            font-size: clamp(1.75rem, 5vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--color-text-light);
+        }
+
+        .benefit-item {
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, 
+                rgba(30, 41, 59, 0.5) 0%, 
+                rgba(15, 23, 42, 0.3) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: linear-gradient(135deg, 
+                rgba(30, 41, 59, 0.8) 0%, 
+                rgba(15, 23, 42, 0.5) 100%);
+            border-color: rgba(139, 92, 246, 0.3);
+            transform: translateX(4px);
+        }
+
+        .benefit-item h3 {
+            color: var(--color-primary-light);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-item p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- CTA SECTION --- */
+        .cta-section {
+            background: linear-gradient(135deg, 
+                rgba(139, 92, 246, 0.1) 0%, 
+                rgba(79, 70, 229, 0.05) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: clamp(2.5rem, 6vw, 4rem);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.75rem, 5vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--color-text-light);
+        }
+
+        .cta-section p {
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            line-height: 1.7;
+        }
+
+        .cta-buttons-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: linear-gradient(180deg, 
+                rgba(15, 23, 42, 0.8) 0%, 
+                rgba(11, 17, 32, 1) 100%);
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            padding: 2rem 1rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        footer p:hover {
+            color: var(--color-primary-light);
+        }
+
+        /* --- SCROLL TO TOP BUTTON --- */
         .scroll-to-top-btn {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            width: 3.5rem;
-            height: 3.5rem;
-            background: #FFD700;
-            color: var(--color-bg-dark);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            color: white;
             border-radius: 50%;
-            border: 2px solid white;
+            border: none;
             display: none;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             z-index: 100;
         }
 
         .scroll-to-top-btn:hover {
-            transform: scale(1.1);
-            background: #FFB300;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(139, 92, 246, 0.7);
         }
 
         .scroll-to-top-btn.show {
             display: flex;
         }
 
-        /* Responsive */
-        @media (min-width: 768px) {
-            .app-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 768px) {
+            .hero-section::before,
+            .hero-section::after {
+                width: 300px;
+                height: 300px;
+            }
+
+            .app-card {
+                padding: 1.5rem;
+            }
+
+            .app-icon-box {
+                padding: 1.5rem;
+                font-size: 2.5rem;
+            }
+
+            .benefits-section,
+            .cta-section {
+                padding: 1.5rem;
+            }
+
+            .cta-buttons-group {
+                flex-direction: column;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .home-link-small {
+                font-size: 1rem;
+            }
+
+            #lang-button {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 2.5rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .app-card {
+                padding: 1.25rem;
+            }
+
+            .app-icon-box {
+                padding: 1.25rem;
+                font-size: 2.25rem;
+            }
+
+            .app-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar-container,
+            .scroll-to-top-btn,
+            footer {
+                display: none;
             }
         }
     </style>
@@ -212,79 +637,76 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="text-center py-16 sm:py-24 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-b border-purple-800/30">
-        <div class="max-w-5xl mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-4 leading-tight" data-lang-key="hero_title">
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="section-title" data-lang-key="hero_title">
                 AI For You
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto font-light" data-lang-key="hero_subtitle">
+            <p data-lang-key="hero_subtitle">
                 Discover quality learning and research applications powered by AI
             </p>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
 
         <!-- Featured Apps Section -->
-        <section id="featured-apps" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-100" data-lang-key="featured_apps_title">
+        <section id="featured-apps" class="mb-16 sm:mb-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-100" data-lang-key="featured_apps_title">
                 Featured Learning Apps
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                 
                 <!-- ELearners Card -->
                 <div class="app-card">
-                    <div class="mb-4 p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg text-center">
-                        <div class="text-4xl">📚</div>
-                    </div>
+                    <div class="app-icon-box">📚</div>
                     <h3 data-lang-key="app1_title">ELearners</h3>
                     <p data-lang-key="app1_desc">
                         Interactive learning platform with AI-powered study tools, adaptive quizzes, and personalized learning paths for students of all levels.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-600/30 text-blue-300 rounded-full text-xs font-medium">AI Learning</span>
-                        <span class="px-3 py-1 bg-blue-600/30 text-blue-300 rounded-full text-xs font-medium">Adaptive Paths</span>
+                    <div class="app-tags">
+                        <span class="app-tag">AI Learning</span>
+                        <span class="app-tag">Adaptive Paths</span>
                     </div>
                     <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
-                        Visit App →
+                        <span>Visit App</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
                 </div>
 
                 <!-- IVS Learning Card -->
                 <div class="app-card">
-                    <div class="mb-4 p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg text-center">
-                        <div class="text-4xl">🎓</div>
-                    </div>
+                    <div class="app-icon-box">🎓</div>
                     <h3 data-lang-key="app2_title">IVS Learning</h3>
                     <p data-lang-key="app2_desc">
                         Comprehensive education platform offering courses, tutorials, and AI-assisted learning for professional development and skill building.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs font-medium">EdTech</span>
-                        <span class="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs font-medium">Professional</span>
+                    <div class="app-tags">
+                        <span class="app-tag">EdTech</span>
+                        <span class="app-tag">Professional</span>
                     </div>
                     <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
-                        Visit App →
+                        <span>Visit App</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
                 </div>
 
                 <!-- Cocou AI Card -->
                 <div class="app-card">
-                    <div class="mb-4 p-4 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg text-center">
-                        <div class="text-4xl">🧠</div>
-                    </div>
+                    <div class="app-icon-box">🧠</div>
                     <h3 data-lang-key="app3_title">Cocou - AI Psychology</h3>
                     <p data-lang-key="app3_desc">
                         Personalized AI psychology companion offering emotional support, wellness insights, and mental health guidance powered by advanced AI.
                     </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-pink-600/30 text-pink-300 rounded-full text-xs font-medium">AI Psychology</span>
-                        <span class="px-3 py-1 bg-pink-600/30 text-pink-300 rounded-full text-xs font-medium">Wellness</span>
+                    <div class="app-tags">
+                        <span class="app-tag">AI Psychology</span>
+                        <span class="app-tag">Wellness</span>
                     </div>
                     <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
-                        Visit App →
+                        <span>Visit App</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
                 </div>
 
@@ -292,42 +714,51 @@
         </section>
 
         <!-- Why Choose These Apps -->
-        <section class="mb-16 glass-effect rounded-xl p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold text-gray-100 mb-6" data-lang-key="why_choose_title">
+        <section class="mb-16 sm:mb-24 benefits-section glass-effect">
+            <h2 data-lang-key="why_choose_title">
                 Why These Apps?
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
-                <div>
-                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit1_title">✨ Quality Assured</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="benefit-item">
+                    <h3 data-lang-key="benefit1_title">✨ Quality Assured</h3>
                     <p data-lang-key="benefit1_desc">Hand-picked applications with proven track records and genuine AI implementation for effective learning.</p>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit2_title">🎯 Results-Driven</h3>
+                <div class="benefit-item">
+                    <h3 data-lang-key="benefit2_title">🎯 Results-Driven</h3>
                     <p data-lang-key="benefit2_desc">Each platform offers measurable outcomes with personalized learning paths and adaptive content delivery.</p>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit3_title">🚀 User-Friendly</h3>
+                <div class="benefit-item">
+                    <h3 data-lang-key="benefit3_title">🚀 User-Friendly</h3>
                     <p data-lang-key="benefit3_desc">Intuitive interfaces designed for learners of all ages and technical skill levels.</p>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit4_title">🔒 Secure & Reliable</h3>
+                <div class="benefit-item">
+                    <h3 data-lang-key="benefit4_title">🔒 Secure & Reliable</h3>
                     <p data-lang-key="benefit4_desc">Built on trusted infrastructure with emphasis on data privacy and security.</p>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="text-center py-8 glass-effect rounded-xl border border-purple-600/50">
-            <h2 class="text-2xl font-bold mb-4 text-gray-100" data-lang-key="cta_title">
+        <section class="cta-section">
+            <h2 data-lang-key="cta_title">
                 Ready to Learn?
             </h2>
-            <p class="text-gray-300 mb-6 max-w-2xl mx-auto" data-lang-key="cta_desc">
+            <p data-lang-key="cta_desc">
                 Choose an app above and start your learning journey today. Each platform is designed to adapt to your unique learning style.
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button">ELearners</a>
-                <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button">IVS Learning</a>
-                <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button">Cocou AI</a>
+            <div class="cta-buttons-group">
+                <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button">
+                    <span>ELearners</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                </a>
+                <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button">
+                    <span>IVS Learning</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                </a>
+                <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button">
+                    <span>Cocou AI</span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                </a>
             </div>
         </section>
 
