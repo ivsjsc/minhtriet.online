@@ -215,11 +215,12 @@
 
         .hero-content p {
             font-size: clamp(1rem, 3vw, 1.25rem);
-            color: var(--color-text-subtle);
+            color: #E6EEF8;
             max-width: 600px;
             margin: 0 auto;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 1.6;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.28);
         }
 
         /* --- APP CARD STYLES --- */
@@ -374,6 +375,37 @@
             cursor: pointer;
             font-size: 0.95rem;
             white-space: nowrap;
+            outline: none;
+        }
+
+        .cta-button:focus-visible,
+        .cta-button:focus {
+            box-shadow: 0 0 0 4px rgba(139,92,246,0.18);
+            transform: translateY(-2px);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(139,92,246,0.18);
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: #111827;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            z-index: 9999;
+            transform: translateY(-120%);
+            transition: transform .18s ease;
+        }
+
+        .skip-link:focus,
+        .skip-link:focus-visible {
+            transform: translateY(0);
         }
 
         .cta-button:hover {
@@ -439,7 +471,7 @@
         }
 
         .benefit-item p {
-            color: var(--color-text-muted);
+            color: var(--color-text-subtle);
             font-size: 0.95rem;
             line-height: 1.6;
         }
@@ -526,6 +558,18 @@
             display: flex;
         }
 
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .hero-section::before,
+            .hero-section::after,
+            .app-card,
+            .cta-button,
+            .benefit-item {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
         /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 768px) {
             .hero-section::before,
@@ -550,6 +594,10 @@
 
             .cta-buttons-group {
                 flex-direction: column;
+            }
+
+            .app-tags {
+                gap: 0.5rem;
             }
 
             .cta-button {
@@ -605,6 +653,7 @@
     </style>
 </head>
 <body class="text-gray-200">
+    <a href="#main-content" class="skip-link" style="position:absolute;left:1rem;top:1rem;background:#111827;color:#fff;padding:8px 12px;border-radius:6px;z-index:9999;transform:translateY(-120%);transition:transform .18s ease" onfocus="this.style.transform='translateY(0)';" onblur="this.style.transform='translateY(-120%)';">Skip to content</a>
 
     <!-- Scroll To Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()" aria-label="Scroll to Top">
@@ -627,9 +676,9 @@
                         <span id="current-lang-text">English</span>
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </button>
-                    <ul id="language-menu" class="hidden absolute right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50 min-w-max">
-                        <li><a onclick="applyLanguage('en')" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">English</a></li>
-                        <li><a onclick="applyLanguage('vi')" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">Tiếng Việt</a></li>
+                    <ul id="language-menu" class="hidden absolute right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50 min-w-max" role="menu" aria-label="Language menu">
+                        <li><a onclick="applyLanguage('en')" role="menuitem" tabindex="0" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">English</a></li>
+                        <li><a onclick="applyLanguage('vi')" role="menuitem" tabindex="0" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">Tiếng Việt</a></li>
                     </ul>
                 </div>
             </div>
@@ -670,7 +719,7 @@
                         <span class="app-tag">AI Learning</span>
                         <span class="app-tag">Adaptive Paths</span>
                     </div>
-                    <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                    <a href="https://ivslearning.io.vn" target="_blank" rel="noopener noreferrer" aria-label="Visit ELearners (opens in new tab)" class="cta-button" data-lang-key="app_visit_btn">
                         <span>Visit App</span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
@@ -687,7 +736,7 @@
                         <span class="app-tag">EdTech</span>
                         <span class="app-tag">Professional</span>
                     </div>
-                    <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                    <a href="https://ivslearning.top" target="_blank" rel="noopener noreferrer" aria-label="Visit IVS Learning (opens in new tab)" class="cta-button" data-lang-key="app_visit_btn">
                         <span>Visit App</span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
@@ -704,7 +753,7 @@
                         <span class="app-tag">AI Psychology</span>
                         <span class="app-tag">Wellness</span>
                     </div>
-                    <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                    <a href="https://cocou-ai.web.app" target="_blank" rel="noopener noreferrer" aria-label="Visit Cocou AI (opens in new tab)" class="cta-button" data-lang-key="app_visit_btn">
                         <span>Visit App</span>
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                     </a>
@@ -747,15 +796,15 @@
                 Choose an app above and start your learning journey today. Each platform is designed to adapt to your unique learning style.
             </p>
             <div class="cta-buttons-group">
-                <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button">
+                <a href="https://ivslearning.io.vn" target="_blank" rel="noopener noreferrer" class="cta-button">
                     <span>ELearners</span>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
-                <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button">
+                <a href="https://ivslearning.top" target="_blank" rel="noopener noreferrer" class="cta-button">
                     <span>IVS Learning</span>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
-                <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button">
+                <a href="https://cocou-ai.web.app" target="_blank" rel="noopener noreferrer" class="cta-button">
                     <span>Cocou AI</span>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                 </a>
@@ -855,6 +904,16 @@
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 menu.classList.toggle('hidden');
+            });
+
+            // Keyboard support: Enter/Space to activate menu items
+            menu.querySelectorAll('a[role="menuitem"]').forEach(item => {
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        item.click();
+                    }
+                });
             });
 
             document.addEventListener('click', () => {
