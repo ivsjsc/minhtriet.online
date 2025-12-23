@@ -5,31 +5,29 @@
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://unpkg.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; frame-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Box - Minh Triet</title>
+    <title>AI For You - Learning & Research Tools</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="AI Toolbox - Simple AI tools for beginners, helping you select the right tool for your needs and quickly adapt to AI through tips on direct questioning, simple questioning, and effective AI usage strategies.">
-    <meta name="keywords" content="Tổng hợp công cụ AI, AI Tools, AI Toolbox, AI cho người mới, Mẹo sử dụng AI, Tư duy AI, Hỏi AI hiệu quả, Công cụ trí tuệ nhân tạo, AI hỗ trợ viết lách, AI tạo hình ảnh, AI tạo video, AI học tập, AI lập trình, EdTech, Chuyển đổi số, Tối ưu hiệu suất, Microservices, Học máy, Học sâu, Xử lý ngôn ngữ tự nhiên">
+    <meta name="description" content="AI For You - Discover quality learning and research applications. ELearners, IVS Learning, and Cocou AI - your personal AI assistants for education.">
+    <meta name="keywords" content="learning apps, research tools, AI education, ELearners, IVS Learning, Cocou AI, personalized learning">
     <meta name="author" content="Nguyen Minh Triet">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://minhtriet.online">
+    <link rel="canonical" href="https://minhtriet.online/ivs-aitool.html">
     
-    <!-- Open Graph / Facebook -->    <!-- LinkedIn (uses Open Graph tags, so already covered above; no additional specific tags needed) -->
+    <!-- Open Graph / Facebook -->    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://minhtriet.online/ivs-aitool.html">
-    <meta property="og:title" content="AI Toolbox - Minh Triet">
-    <meta property="og:description" content="Find the right AI tool for your needs. Simple, effective, and verified. Discover tips for effective AI usage and explore a curated collection of AI tools for writing, image generation, video creation, learning, and coding.">
+    <meta property="og:title" content="AI For You - Learning & Research Tools">
+    <meta property="og:description" content="Discover quality learning and research applications. ELearners, IVS Learning, and Cocou AI - your personal AI assistants for education.">
     <meta property="og:image" content="https://minhtriet.online/images/og-image.webp">
-    <meta property="og:image:alt" content="AI Toolbox - Minh Triet">
     <meta property="og:site_name" content="MinhTriet.online">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://minhtriet.online/ivs-aitool.html">
-    <meta property="twitter:title" content="AI Toolbox - Minh Triet">
-    <meta property="twitter:description" content="Find the right AI tool for your needs. Simple, effective, and verified. Explore curated AI tools and tips for writing, images, videos, learning, and coding.">
-    <meta property="twitter:image" content="https://minhtriet.online/images/og-image.webp">
-    <meta property="twitter:image:alt" content="AI Toolbox - Minh Triet">  
+    <meta property="twitter:title" content="AI For You - Learning & Research Tools">
+    <meta property="twitter:description" content="Discover quality learning and research applications. ELearners, IVS Learning, and Cocou AI.">
+    <meta property="twitter:image" content="https://minhtriet.online/images/og-image.webp">  
    
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,10 +41,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* --- 1. GLOBAL STYLES (MODERN DARK MODE BASE) --- */
+        /* --- GLOBAL STYLES (MODERN DARK MODE) --- */
         :root {
-            --color-primary: #8B5CF6; /* Purple 500 */
-            --color-secondary: #4F46E5; /* Indigo 600 */
+            --color-primary: #8B5CF6;
+            --color-secondary: #4F46E5;
             --color-bg-dark: #121217;
             --color-card-bg: #1e1e26;
             --color-text-light: #E0E0E0;
@@ -54,419 +52,410 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            /* Nền tối sâu hơn: Deep Charcoal */
-            background: var(--color-bg-dark); 
-            color: var(--color-text-light); 
+            background: var(--color-bg-dark);
+            color: var(--color-text-light);
             min-height: 100vh;
             transition: background-color 0.3s;
         }
 
-        /* Hiệu ứng Glass/Blur cho nền (tùy chọn) */
         .glass-effect {
             backdrop-filter: blur(8px);
-            background-color: rgba(30, 30, 38, 0.6); /* Card background with transparency */
+            background-color: rgba(30, 30, 38, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
-        /* Custom gradient section title (Chữ màu sắc rực rỡ trên nền tối) */
         .section-title {
-            background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899); /* Blue -> Purple -> Pink */
+            background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 900;
         }
-        
-        /* Subtle Glow Animation for emphasis */
-        @keyframes subtle-glow {
-            0% { box-shadow: 0 0 5px rgba(var(--color-primary), 0.2); }
-            50% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); }
-            100% { box-shadow: 0 0 5px rgba(139, 92, 246, 0.2); }
-        }
-        .animate-glow-slow {
-            animation: subtle-glow 4s infinite ease-in-out;
-        }
 
-        /* --- 2. CARD & BUTTON STYLES --- */
-
-        /* Tool card - Nâng cấp hiệu ứng 3D nhẹ khi hover */
-        .tool-card {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border-left: 4px solid transparent;
-            border-radius: 0.75rem; 
-            background: var(--color-card-bg); 
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
-            /* Nâng cấp: Hiệu ứng Shimmering Border */
-            --border-color: rgba(139, 92, 246, 0.0);
-            border: 1px solid var(--border-color);
-        }
-        .tool-card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.35);
-            /* Thay đổi màu border khi hover */
-            border-left-color: var(--color-primary); 
-            --border-color: rgba(139, 92, 246, 0.5);
-            border: 1px solid var(--border-color);
-        }
-
-        /* Active filter button - Nút lọc chính */
-        .usecase-btn.active {
-            background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-            color: white;
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
-            font-weight: 700;
-            transform: translateY(-3px);
-            border: 2px solid #fff;
-        }
-        .usecase-btn {
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            background-color: #333333;
-            color: var(--color-text-light);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            /* Hiệu ứng Scale nhẹ khi hover */
-        }
-        .usecase-btn:hover:not(.active) {
-            background-color: #4a4a4a;
-            transform: scale(1.05);
-        }
-
-        /* Secondary Filter / Tags */
-        .filter-btn {
-            background-color: #333333 !important;
-            color: var(--color-text-subtle) !important;
-            transition: all 0.2s;
-        }
-        .filter-btn.active {
-            background-color: var(--color-primary) !important;
-            color: white !important;
-            box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
-            font-weight: 600;
-        }
-        .filter-buttons-scroll {
-            /* Tăng kích thước cuộn ngang trên mobile */
-            overflow-x: auto;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        /* Hiệu ứng card Concept */
-        .concept-card {
-            background: var(--color-card-bg);
-            border-left: 4px solid var(--color-primary);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-        .concept-card > div > div {
-            background: #2b2b2b !important;
-            border: 1px solid rgba(255, 255, 255, 0.05) !important;
-        }
-
-        /* Navbar Tối */
         .navbar-container {
             background-color: #1a1a1e;
             border-bottom: 1px solid #333;
         }
-        /* Style mới cho nút Trang chủ: tương phản cao */
+
         .home-link-small {
-             color: #FFD700; /* Vàng/Gold */
-             font-weight: 900;
-             transition: color 0.3s;
+            color: #FFD700;
+            font-weight: 900;
+            transition: color 0.3s;
         }
+
         .home-link-small:hover {
-             color: #FFB300;
+            color: #FFB300;
         }
 
-        /* Nút điều hướng nhanh (Landing Links) */
-        .nav-link-item {
-            color: var(--color-text-light);
-            transition: color 0.3s;
-            /* Thiết lập kích thước font hợp lý cho mobile */
-            font-size: 0.75rem; /* Rất nhỏ gọn */
-        }
-        .nav-link-item:hover {
-            color: var(--color-primary);
-        }
-
-
-        /* Tips QUAN TRỌNG */
-        .important-tips-container {
-            background-color: #36291a; 
-            color: #FFECB3; 
-            border-color: #FF9800;
-        }
-        
-        /* Modal Animation */
-        .modal.visible {
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 0.3s ease-out;
-        }
-        .modal-content {
-            transition: transform 0.3s ease-out;
-        }
-        .modal.visible .modal-content {
-             transform: translateY(0);
-        }
-
-        /* Iframe Container Styling */
-        .iframe-container {
-            height: 600px; /* Chiều cao cố định cho iframe */
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Feature Tags Styling */
-        .feature-tag {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.25rem 0.6rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-right: 0.5rem; 
-            margin-bottom: 0.4rem; 
-            white-space: nowrap;
-            transition: background-color 0.2s, color 0.2s;
-        }
-        .feature-best { background-color: #8B5CF6; color: white; } /* Purple/Tím */
-        .feature-free { background-color: #10B981; color: white; } /* Emerald/Xanh lá */
-        .feature-speed { background-color: #3B82F6; color: white; } /* Blue/Xanh dương */
-        .feature-context { background-color: #EC4899; color: white; } /* Pink/Hồng */
-        .feature-expensive { background-color: #EF4444; color: white; } /* Red/Đỏ */
-        .feature-default { background-color: #4A5568; color: #E2E8F0; } /* Dark Gray/Xám đậm */
-        
-        /* Hiệu ứng Hover cho Tool Card Title */
-        .tool-card h3 {
-            transition: color 0.3s;
-        }
-        .tool-card:hover h3 {
-            color: var(--color-primary);
-        }
-
-        /* Style cho phần AI Analyzer (đã gỡ) */
-        .analyzer-container {
-            background-color: #1a1a1e;
-            border: 2px solid var(--color-secondary);
-        }
-        .analyzer-result {
-            min-height: 200px;
-            background-color: #1e1e26;
-            border: 1px solid #333;
-            white-space: pre-wrap; /* Quan trọng để giữ định dạng markdown */
-        }
-
-        /* --- HERO VIDEO STYLES (MOBILE FIRST) --- */
-        .hero-video-container {
-            position: relative;
-            /* CHỈNH SỬA: Đặt chiều cao container bằng 75% viewport height để tràn màn hình */
-            height: 75vh; 
-            min-height: 450px; 
-            overflow: hidden;
-            /* Đảm bảo container này kéo dài hết màn hình */
-            width: 100%; 
-            margin: 0; 
-            padding: 0;
-        }
-        /* Mobile styles for hero-video */
-        @media (max-width: 767px) {
-            .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /* Đảm bảo video luôn phủ kín container, cắt bỏ phần thừa */
-            min-width: 70%;
-            min-height: 60%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover; /* Đảm bảo video luôn phủ kín và không bị biến dạng */
-            }
-        }
-
-        /* Desktop styles for hero-video */
-        @media (min-width: 768px) {
-            .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            /* Đảm bảo video luôn phủ kín container, cắt bỏ phần thừa */
-            min-width: 130%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover; /* Đảm bảo video luôn phủ kín và không bị biến dạng */
-            }
-        }
-
-        /* Lớp phủ mờ tối trên video để đảm bảo text dễ đọc */
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            /* Thêm gradient subtle để có vẻ chuyên nghiệp hơn */
-            background: linear-gradient(15deg, rgba(18, 18, 23, 0.4) 0%, rgba(18, 18, 23, 0.8) 50%);
-        }
-
-        .hero-content-wrapper {
-            position: relative;
-            z-index: 2;
-            height: 100%; /* Đảm bảo nội dung căn giữa được theo chiều dọc */
-        }
-
-        /* Desktop adjustments for video height */
-        @media (min-width: 768px) {
-            .hero-video-container {
-                /* CHỈNH SỬA: Đặt chiều cao lớn hơn cho desktop */
-                height: 85vh; /* Thêm 10% chiều cao cho desktop */
-                min-height: 600px;
-            }
-            .hero-overlay {
-                 background: linear-gradient(180deg, rgba(18, 18, 23, 0.2) 0%, rgba(18, 18, 23, 0.7) 100%);
-            }
-        }
-        
-        /* Mobile Navbar Layout Fix: Dùng Flex để sắp xếp 3 phần */
         .mobile-navbar-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
-        
-        /* --- FAB Styles (Floating Action Button) --- */
-        #fab-menu-btn {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            z-index: 100;
-            width: 3.5rem;
-            height: 3.5rem;
-            background: var(--color-primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.6);
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        /* Card Styles */
+        .app-card {
+            background: var(--color-card-bg);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        #fab-menu-btn:hover {
-            transform: scale(1.1);
-            background: var(--color-secondary);
+        .app-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.35);
         }
-        
-        /* BỔ SUNG: Nút Scroll To Top */
-        #scroll-to-top-btn {
+
+        .app-card h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .app-card p {
+            color: var(--color-text-subtle);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.6);
+        }
+
+        .scroll-to-top-btn {
             position: fixed;
-            bottom: 6rem; /* Đặt trên nút FAB Menu (1.5rem + 3.5rem + khoảng cách 1rem) */
-            right: 1.5rem;
-            z-index: 100;
+            bottom: 2rem;
+            right: 2rem;
             width: 3.5rem;
             height: 3.5rem;
-            background: #FFD700; /* Màu vàng tương phản */
+            background: #FFD700;
             color: var(--color-bg-dark);
             border-radius: 50%;
-            display: none; /* Mặc định ẩn */
+            border: 2px solid white;
+            display: none;
             align-items: center;
             justify-content: center;
             box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
-            transition: opacity 0.3s ease, transform 0.3s ease;
             cursor: pointer;
-            border: 2px solid white;
+            transition: all 0.3s;
+            z-index: 100;
         }
-        #scroll-to-top-btn:hover {
+
+        .scroll-to-top-btn:hover {
             transform: scale(1.1);
             background: #FFB300;
         }
 
-        /* FAB Navigation Menu (Full screen overlay) */
-        #fab-nav-menu {
-            position: fixed;
-            inset: 0;
-            background: rgba(18, 18, 23, 0.95);
-            z-index: 99;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease-in-out;
-            transform: scale(1.05);
+        .scroll-to-top-btn.show {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #fab-nav-menu.active {
-            opacity: 1;
-            pointer-events: auto;
-            transform: scale(1);
         }
 
-        .fab-menu-link {
-            /* CHỈNH SỬA: Giảm font size cho FAB link */
-            font-size: 1.25rem; /* Tương đương text-2xl/20px, nhỏ hơn 1.8rem trước đây */
-            font-weight: 700;
-            color: var(--color-text-light);
-            padding: 0.75rem 0; /* Giảm padding */
-            transition: color 0.2s, transform 0.2s;
-        }
-        .fab-menu-link:hover {
-            color: var(--color-primary);
-            transform: translateX(10px);
-        }
-        
-        /* Close button on the Menu */
-        #fab-close-btn {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            color: white;
-            font-size: 3rem;
-            cursor: pointer;
-        }
-        
-        /* --- FONT SIZE OPTIMIZATION (MOBILE FIRST) --- */
-        /* Giảm font chữ cho các nút lọc chính */
-        #useCaseButtons .usecase-btn {
-            font-size: 0.9rem; /* sm:text-base (16px) -> 14.4px */
-            padding: 0.5rem 0.75rem; /* Giảm padding */
-        }
-/* ... (giữ nguyên các styles font khác) ... */
-        /* Desktop adjustment: Tăng nhẹ lại cho Desktop (min-width: 768px) */
+        /* Responsive */
         @media (min-width: 768px) {
-            #tool-list-section h2 {
-                font-size: 2rem; /* text-3xl */
-            }
-            #useCaseButtons .usecase-btn {
-                font-size: 1rem; /* text-base */
-                padding: 0.65rem 1rem;
-            }
-            .filter-btn {
-                font-size: 0.875rem !important; /* text-sm */
-                padding: 0.375rem 0.875rem !important;
-            }
-            .important-tips-container {
-                font-size: 1rem; /* text-base */
+            .app-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
             }
         }
-        
     </style>
 </head>
 <body class="text-gray-200">
 
-    <!-- FAB NAVIGATION MENU (OVERLAY) -->
-    <div id="fab-nav-menu" class="fixed inset-0 bg-black bg-opacity-95 flex-col justify-center items-center p-8 hidden">
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" onclick="scrollToTop()" aria-label="Scroll to Top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 navbar-container glass-effect">
+            <div class="mobile-navbar-content">
+                <a href="index.html" class="font-bold text-lg hover:text-indigo-600 transition home-link-small flex-shrink-0 mr-2">
+                    minhtriet.online
+                </a>
+                
+                <div class="flex-grow"></div>
+                
+                <!-- Language Switcher -->
+                <div class="lang-switcher relative flex-shrink-0 ml-2">
+                    <button id="lang-button" class="px-3 py-1 bg-gray-800 hover:bg-gray-700 rounded-lg text-sm font-semibold transition flex items-center">
+                        <span id="current-lang-text">English</span>
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </button>
+                    <ul id="language-menu" class="hidden absolute right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50 min-w-max">
+                        <li><a onclick="applyLanguage('en')" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">English</a></li>
+                        <li><a onclick="applyLanguage('vi')" class="px-4 py-2 hover:bg-purple-600 cursor-pointer block">Tiếng Việt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center py-16 sm:py-24 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-b border-purple-800/30">
+        <div class="max-w-5xl mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl section-title mb-4 leading-tight" data-lang-key="hero_title">
+                AI For You
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto font-light" data-lang-key="hero_subtitle">
+                Discover quality learning and research applications powered by AI
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Featured Apps Section -->
+        <section id="featured-apps" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-100" data-lang-key="featured_apps_title">
+                Featured Learning Apps
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- ELearners Card -->
+                <div class="app-card">
+                    <div class="mb-4 p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg text-center">
+                        <div class="text-4xl">📚</div>
+                    </div>
+                    <h3 data-lang-key="app1_title">ELearners</h3>
+                    <p data-lang-key="app1_desc">
+                        Interactive learning platform with AI-powered study tools, adaptive quizzes, and personalized learning paths for students of all levels.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-600/30 text-blue-300 rounded-full text-xs font-medium">AI Learning</span>
+                        <span class="px-3 py-1 bg-blue-600/30 text-blue-300 rounded-full text-xs font-medium">Adaptive Paths</span>
+                    </div>
+                    <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                        Visit App →
+                    </a>
+                </div>
+
+                <!-- IVS Learning Card -->
+                <div class="app-card">
+                    <div class="mb-4 p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg text-center">
+                        <div class="text-4xl">🎓</div>
+                    </div>
+                    <h3 data-lang-key="app2_title">IVS Learning</h3>
+                    <p data-lang-key="app2_desc">
+                        Comprehensive education platform offering courses, tutorials, and AI-assisted learning for professional development and skill building.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs font-medium">EdTech</span>
+                        <span class="px-3 py-1 bg-purple-600/30 text-purple-300 rounded-full text-xs font-medium">Professional</span>
+                    </div>
+                    <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                        Visit App →
+                    </a>
+                </div>
+
+                <!-- Cocou AI Card -->
+                <div class="app-card">
+                    <div class="mb-4 p-4 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg text-center">
+                        <div class="text-4xl">🧠</div>
+                    </div>
+                    <h3 data-lang-key="app3_title">Cocou - AI Psychology</h3>
+                    <p data-lang-key="app3_desc">
+                        Personalized AI psychology companion offering emotional support, wellness insights, and mental health guidance powered by advanced AI.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-pink-600/30 text-pink-300 rounded-full text-xs font-medium">AI Psychology</span>
+                        <span class="px-3 py-1 bg-pink-600/30 text-pink-300 rounded-full text-xs font-medium">Wellness</span>
+                    </div>
+                    <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button" data-lang-key="app_visit_btn">
+                        Visit App →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose These Apps -->
+        <section class="mb-16 glass-effect rounded-xl p-8 border border-gray-700">
+            <h2 class="text-2xl font-bold text-gray-100 mb-6" data-lang-key="why_choose_title">
+                Why These Apps?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit1_title">✨ Quality Assured</h3>
+                    <p data-lang-key="benefit1_desc">Hand-picked applications with proven track records and genuine AI implementation for effective learning.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit2_title">🎯 Results-Driven</h3>
+                    <p data-lang-key="benefit2_desc">Each platform offers measurable outcomes with personalized learning paths and adaptive content delivery.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit3_title">🚀 User-Friendly</h3>
+                    <p data-lang-key="benefit3_desc">Intuitive interfaces designed for learners of all ages and technical skill levels.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-2" data-lang-key="benefit4_title">🔒 Secure & Reliable</h3>
+                    <p data-lang-key="benefit4_desc">Built on trusted infrastructure with emphasis on data privacy and security.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center py-8 glass-effect rounded-xl border border-purple-600/50">
+            <h2 class="text-2xl font-bold mb-4 text-gray-100" data-lang-key="cta_title">
+                Ready to Learn?
+            </h2>
+            <p class="text-gray-300 mb-6 max-w-2xl mx-auto" data-lang-key="cta_desc">
+                Choose an app above and start your learning journey today. Each platform is designed to adapt to your unique learning style.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://ivslearning.io.vn" target="_blank" rel="noopener" class="cta-button">ELearners</a>
+                <a href="https://ivslearning.top" target="_blank" rel="noopener" class="cta-button">IVS Learning</a>
+                <a href="https://cocou-ai.web.app" target="_blank" rel="noopener" class="cta-button">Cocou AI</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 mb-2" data-lang-key="footer_copyright">
+                © 2025 Minh Triet. All rights reserved.
+            </p>
+            <p class="text-gray-600 text-sm">
+                Built with 💜 for learners everywhere.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Translation Data
+        const translations = {
+            'en': {
+                'hero_title': 'AI For You',
+                'hero_subtitle': 'Discover quality learning and research applications powered by AI',
+                'featured_apps_title': 'Featured Learning Apps',
+                'app1_title': 'ELearners',
+                'app1_desc': 'Interactive learning platform with AI-powered study tools, adaptive quizzes, and personalized learning paths for students of all levels.',
+                'app2_title': 'IVS Learning',
+                'app2_desc': 'Comprehensive education platform offering courses, tutorials, and AI-assisted learning for professional development and skill building.',
+                'app3_title': 'Cocou - AI Psychology',
+                'app3_desc': 'Personalized AI psychology companion offering emotional support, wellness insights, and mental health guidance powered by advanced AI.',
+                'app_visit_btn': 'Visit App →',
+                'why_choose_title': 'Why These Apps?',
+                'benefit1_title': '✨ Quality Assured',
+                'benefit1_desc': 'Hand-picked applications with proven track records and genuine AI implementation for effective learning.',
+                'benefit2_title': '🎯 Results-Driven',
+                'benefit2_desc': 'Each platform offers measurable outcomes with personalized learning paths and adaptive content delivery.',
+                'benefit3_title': '🚀 User-Friendly',
+                'benefit3_desc': 'Intuitive interfaces designed for learners of all ages and technical skill levels.',
+                'benefit4_title': '🔒 Secure & Reliable',
+                'benefit4_desc': 'Built on trusted infrastructure with emphasis on data privacy and security.',
+                'cta_title': 'Ready to Learn?',
+                'cta_desc': 'Choose an app above and start your learning journey today. Each platform is designed to adapt to your unique learning style.',
+                'footer_copyright': '© 2025 Minh Triet. All rights reserved.'
+            },
+            'vi': {
+                'hero_title': 'AI Dành Cho Bạn',
+                'hero_subtitle': 'Khám phá các ứng dụng học tập và nghiên cứu chất lượng cao được hỗ trợ bởi AI',
+                'featured_apps_title': 'Các Ứng Dụng Học Tập Nổi Bật',
+                'app1_title': 'ELearners',
+                'app1_desc': 'Nền tảng học tập tương tác với các công cụ học tập do AI hỗ trợ, bài kiểm tra thích ứng và lộ trình học tập cá nhân hóa cho sinh viên ở mọi cấp độ.',
+                'app2_title': 'IVS Learning',
+                'app2_desc': 'Nền tảng giáo dục toàn diện cung cấp các khóa học, hướng dẫn và học tập hỗ trợ bởi AI cho phát triển chuyên nghiệp và xây dựng kỹ năng.',
+                'app3_title': 'Cocou - Tâm Lý Học AI',
+                'app3_desc': 'Người bạn tâm lý AI cá nhân hóa cung cấp hỗ trợ cảm xúc, thông tin chi tiết về sức khỏe và hướng dẫn sức khỏe tâm thần được hỗ trợ bởi AI tiên tiến.',
+                'app_visit_btn': 'Truy Cập Ứng Dụng →',
+                'why_choose_title': 'Tại Sao Chọn Những Ứng Dụng Này?',
+                'benefit1_title': '✨ Đảm Bảo Chất Lượng',
+                'benefit1_desc': 'Những ứng dụng được chọn lọc kỹ càng với hình sự tích lũy và triển khai AI thực sự để học tập hiệu quả.',
+                'benefit2_title': '🎯 Dựa Vào Kết Quả',
+                'benefit2_desc': 'Mỗi nền tảng cung cấp kết quả có thể đo lường được với lộ trình học tập cá nhân hóa và cung cấp nội dung thích ứng.',
+                'benefit3_title': '🚀 Thân Thiện Với Người Dùng',
+                'benefit3_desc': 'Giao diện trực quan được thiết kế cho người học ở mọi độ tuổi và cấp độ kỹ năng kỹ thuật.',
+                'benefit4_title': '🔒 An Toàn & Đáng Tin Cậy',
+                'benefit4_desc': 'Được xây dựng trên cơ sở hạ tầng đáng tin cậy với nhấn mạnh vào quyền riêng tư và bảo mật dữ liệu.',
+                'cta_title': 'Sẵn Sàng Học Tập?',
+                'cta_desc': 'Chọn một ứng dụng ở trên và bắt đầu hành trình học tập của bạn ngay hôm nay. Mỗi nền tảng được thiết kế để thích ứng với phong cách học tập độc đáo của bạn.',
+                'footer_copyright': '© 2025 Minh Triet. Bảo lưu mọi quyền.'
+            }
+        };
+
+        let currentLang = localStorage.getItem('language') || 'en';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update all elements with data-lang-key
+            document.querySelectorAll('[data-lang-key]').forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            // Update language switcher text
+            document.getElementById('current-lang-text').textContent = lang === 'en' ? 'English' : 'Tiếng Việt';
+            document.documentElement.lang = lang;
+        }
+
+        function initLanguageSwitcher() {
+            const btn = document.getElementById('lang-button');
+            const menu = document.getElementById('language-menu');
+            
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+
+            applyLanguage(currentLang);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scrollToTopBtn');
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+        });
+    </script>
+
+</body>
+</html>
         <button id="fab-close-btn" onclick="toggleFabMenu()" aria-label="Close Menu">&times;</button>
         <!-- Updated FAB Menu Title -->
         <h2 class="text-3xl font-black mb-10 text-purple-400" data-lang-key="fab_menu_title">Quick Navigation</h2>
