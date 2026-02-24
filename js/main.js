@@ -131,18 +131,26 @@ function initializeWebsite() {
     }, 100);
     
     // Initialize scroll animations
-    initScrollAnimations();
+    if (typeof initScrollAnimations === 'function') {
+        initScrollAnimations();
+    }
     
     // Initialize portfolio filters
-    initPortfolioFilters();
+    if (typeof initPortfolioFilters === 'function') {
+        initPortfolioFilters();
+    }
     
     // Contact form is handled in utils.js - avoid duplication
     
     // Initialize navigation
-    initNavigation();
+    if (typeof initNavigation === 'function') {
+        initNavigation();
+    }
     
     // Initialize scroll progress
-    initScrollProgress();
+    if (typeof initScrollProgress === 'function') {
+        initScrollProgress();
+    }
     
     // Initialize language switcher
     initLanguageSwitcher();

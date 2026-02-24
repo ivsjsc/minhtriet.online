@@ -340,9 +340,6 @@ function initNavigation() {
                 ticking = true;
             }
         });
-            
-            lastScrollY = currentScrollY;
-        });
     }
 
     // Back to top button
