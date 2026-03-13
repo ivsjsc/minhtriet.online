@@ -3033,7 +3033,32 @@
     });
 
     nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => closeMenu());
+      a.addEventListener("click", (e) => {
+        const href = a.getAttribute("href");
+        if (href && href.startsWith("#")) {
+          const sectionId = href.substring(1);
+          const section = document.getElementById(sectionId);
+          if (section) {
+            // Luôn mở rộng section tương ứng khi nhấp vào menu header
+            const toggleBtn = section.querySelector(".section-toggle");
+            const sectionBody = section.querySelector(".section-body");
+            if (toggleBtn && sectionBody) {
+              if (sectionBody.hidden) {
+                e.preventDefault();
+                const txt = toggleBtn.querySelector(".section-toggle-text");
+                const lang = localStorage.getItem("site_lang") || "vi";
+                toggleBtn.setAttribute("aria-expanded", "true");
+                section.classList.remove("collapsed");
+                sectionBody.hidden = false;
+                if (txt) txt.textContent = currentSectionToggleLabel(lang, true);
+                // Sau khi mở section, cuộn tới section
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }
+          }
+        }
+        closeMenu();
+      });
     });
 
     document.addEventListener("click", (event) => {
