@@ -1,0 +1,60 @@
+*** Begin Patch
+*** Update File: aura.html
+@@
+-        </section>
+-
+-        <!-- Roadmap Section -->
++        </section>
++ 
++        <!-- Business Projects Section -->
++        <section id= business-projects class=py-20 scroll-reveal>
++            <div class= text-center mb-12>
++                <h2 class= text-4xl font-bold>D? Án Ho?t Ð?ng Kinh Doanh</h2>
++                <p class= mt-2 text-gray-400>Ngoài các sáng ki?n công ngh?, tôi d?n d?t nh?ng chuong trình kinh doanh và s? ki?n nhân r?ng thuong hi?u và tr?i nghi?m khách hàng.</p>
++            </div>
++            <div class= space-y-8>
++                <div class= glass-card p-8>
++                    <div class= flex flex-col md:flex-row gap-4 md:items-center md:justify-between>
++                        <div>
++                            <p class= text-sm uppercase tracking-wide text-violet-400>Head of Market Development</p>
++                            <h3 class= text-2xl font-bold text-white>AMG International Education JSC</h3>
++                            <p class= text-gray-400 mt-2>M? r?ng h?p tác g?n 50 tru?ng h?c và lãnh d?o tri?n khai d? án IELTS Station.</p>
++                        </div>
++                        <span class= px-4 py-2 rounded-full border border-gray-800 bg-gray-900/50 text-sm text-gray-300>06/2023 - 04/2024</span>
++                    </div>
++                    <p class= mt-6 text-gray-400>Thu g?n</p>
++                    <ul class= mt-4 space-y-3 text-gray-300 list-disc list-inside>
++                        <li>Thi?t l?p và ký k?t h?p tác thành công v?i g?n 50 tru?ng h?c t?i Ð?ng Nai trong vòng 10 tháng.</li>
++                        <li>Lãnh d?o d? án IELTS Station t? kh?o sát th? tru?ng, thi?t k? mô hình kinh doanh, xây d?ng co s? v?t ch?t d?n v?n hành ?n d?nh.</li>
++                        <li>Ði?u ph?i d?i ngu da phòng ban d? b?o d?m ti?n d? tri?n khai, ch?t lu?ng d?ch v? và hi?u qu? chi phí.</li>
++                        <li>T? ch?c s? ki?n c?ng d?ng quy mô 1.500 ngu?i, góp ph?n nâng d? ph? thuong hi?u và t?o k?t n?i d?a phuong.</li>
++                    </ul>
++                </div>
++                <div class= glass-card p-8>
++                    <div class= flex flex-col md:flex-row gap-4 md:items-center md:justify-between>
++                        <div>
++                            <p class= text-sm uppercase tracking-wide text-violet-400>Business Development & Events Manager</p>
++                            <h3 class= text-2xl font-bold text-white>Song Trang Restaurant</h3>
++                            <p class= text-gray-400 mt-2>Phát tri?n d?i tác l? hành và v?n hành d?ch v? s? ki?n hàng d?u t?i Ð?ng Nai.</p>
++                        </div>
++                        <div class= flex flex-col items-end gap-2 text-sm>
++                            <span class= px-4 py-2 rounded-full border border-gray-800 bg-gray-900/50 text-sm text-gray-300>11/2021 - 04/2023</span>
++                            <a href= https://songtrangboutiquehotel.monamedia.net/nha-hang/ target=_blank rel=noreferrer class=text-xs uppercase tracking-wide text-violet-300>Xem nhà hàng</a>
++                        </div>
++                    </div>
++                    <p class= mt-6 text-gray-400>Thu g?n</p>
++                    <ul class= mt-4 space-y-3 text-gray-300 list-disc list-inside>
++                        <li>Xây d?ng m?ng lu?i h?p tác v?i hon 200 công ty l? hành, t?o dòng khách ?n d?nh cho nhà hàng.</li>
++                        <li>Ð?t m?c ph?c v? 15.000 khách ch? trong 3 tháng cao di?m nh? t?i uu quy trình booking và v?n hành d?ch v?.</li>
++                        <li>Ph? trách thi?t k? hình ?nh và decor cho các s? ki?n l?n, b?o d?m ch?t lu?ng tr?i nghi?m và tiêu chu?n th?m m?.</li>
++                        <li>Phát tri?n gói s?n ph?m d?ch v? theo t?ng phân khúc khách hàng nh?m t?i da doanh thu trên m?i s? ki?n.</li>
++                    </ul>
++                    <div class= mt-6 text-sm text-gray-500>
++                        <a href= https://maps.app.goo.gl/NwkLSgjHGM4V3soGA target=_blank rel=noreferrer class=text-violet-300 hover:underline>Xem v? trí d? án</a>
++                    </div>
++                </div>
++            </div>
++        </section>
++ 
++        <!-- Roadmap Section -->
+*** End Patch
