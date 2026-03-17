@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -757,153 +757,6 @@
       margin-bottom: 12px;
     }
 
-    .eco-shell {
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .eco-header {
-      text-align: center;
-      margin-bottom: 18px;
-      padding: 4px 0 2px;
-    }
-
-    .eco-kicker {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 7px 12px;
-      background: rgba(255, 255, 255, 0.88);
-      color: var(--forest);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .eco-title {
-      margin: 0;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(1.9rem, 4vw, 3rem);
-      line-height: 1;
-    }
-
-    .eco-sub {
-      margin: 10px auto 0;
-      color: var(--muted);
-      max-width: 720px;
-      line-height: 1.7;
-      font-size: 0.98rem;
-    }
-
-    .eco-app-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .eco-card {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 16px;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 12px;
-    }
-
-    .eco-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .eco-logo {
-      width: 58px;
-      height: 58px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #fff;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      flex: 0 0 58px;
-    }
-
-    .eco-logo img {
-      width: 85%;
-      height: 85%;
-      object-fit: contain;
-    }
-
-    .eco-platform {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 800;
-      color: var(--accent);
-      margin: 0 0 3px;
-    }
-
-    .eco-name {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-weight: 800;
-      color: var(--ink);
-    }
-
-    .eco-desc {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.92rem;
-    }
-
-    .eco-features {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .eco-features li {
-      border: 1px dashed var(--line);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 7px 9px;
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.45;
-      font-weight: 600;
-    }
-
-    .eco-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-weight: 700;
-      font-size: 0.82rem;
-      background: rgba(255, 255, 255, 0.92);
-      color: var(--forest);
-      width: fit-content;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .eco-link:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-    }
-
     .footer {
       padding: 10px 0 38px;
     }
@@ -935,8 +788,7 @@
       .hero-grid,
       .grid-2,
       .grid-3,
-      .contact-grid,
-      .eco-app-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
       .head { grid-template-columns: 1fr; }
       .head-controls {
         flex-wrap: wrap;
@@ -1050,7 +902,6 @@
       .job { padding: 16px 14px 16px 44px; }
       .job::before { left: 12px; }
       .job::after { left: 18px; }
-      .eco-features { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1495,102 +1346,161 @@
       </div>
     </section>
 
-    <section class="section" id="digital-ecosystem">
-      <div class="wrap section-card glass-card background-grid reveal" style="padding: 0;">
-        <div style="padding: 38px 28px 18px 28px; text-align: center;">
-          <span class="eco-kicker" data-i18n="eco_kicker" style="font-size: 0.92rem;">IVS Product Suite</span>
-          <h2 class="eco-title" data-i18n="eco_title" style="margin-bottom: 8px;">IVS Digital Ecosystem</h2>
-          <p class="eco-sub" data-i18n="eco_sub" style="font-size: 1.08rem; color: var(--muted); max-width: 600px; margin: 0 auto;">
-            The IVS digital ecosystem for language center systems, meeting all your operation, assessment, and learning needs.
-          </p>
+    <section id="digital-ecosystem" class="py-12 px-6 bg-white rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden scroll-mt-28">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <img src="images/logo/logo.png" alt="IVS Logo" class="mx-auto w-24 h-24 md:w-32 md:h-32 object-contain mb-6" onerror="this.src='https://placehold.co/200x200/9D4ED8/FFFFFF?text=IVS+Logo'" />
+                <span class="text-secondary font-black text-[10px] uppercase tracking-[0.3em] bg-secondary/10 px-6 py-2 rounded-full inline-block mb-6 border border-secondary/20" data-i18n="badgeTech">Proprietary Technology Stack</span>
+                <h2 class="text-4xl md:text-5xl font-black text-primary uppercase tracking-tighter" data-i18n="ecoTitle">IVS Digital Ecosystem</h2>
+                <p class="text-slate-500 mt-6 text-base font-medium max-w-2xl mx-auto" data-i18n="ecoDesc">Designed specifically for language centers, our ecosystem covers every aspect of operations, assessment, and learning.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- App 1: CenterCare -->
+                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-secondary transition-all group">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div>
+                                    <span class="text-[10px] font-black text-secondary uppercase tracking-widest">Platform #1</span>
+                                    <h3 class="text-3xl font-black text-primary uppercase flex items-center gap-2">
+                                        <img src="images/logo/logo-ivs.png" alt="IVS Logo" class="w-8 h-8 object-contain inline-block align-middle mr-1" onerror="this.src='https://placehold.co/40x40/ffffff/9D4ED8?text=IVS'" />
+                                        CenterCare
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 mb-8 leading-relaxed font-medium" data-i18n="app1DescLong">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-secondary"></i> <span data-i18n="feat1_1">Tuition Management</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-secondary"></i> <span data-i18n="feat1_2">Digital Attendance</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-secondary"></i> <span data-i18n="feat1_3">Parent App Sync</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-secondary"></i> <span data-i18n="feat1_4">Smart Scheduling</span></div>
+                            </div>
+                            <a href="https://ivscentercare.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-secondary transition-all shadow-lg">
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
+                                <img src="images/logo/logo-centercare.png" alt="CenterCare Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 2: Examia -->
+                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-accent transition-all group">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1 hidden lg:block">
+                            <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
+                                <img src="images/logo/logo-examia.png" alt="Examia Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div>
+                                <span class="text-[10px] font-black text-accent uppercase tracking-widest">Platform #2</span>
+                                <h3 class="text-3xl font-black text-primary uppercase flex items-center gap-2">
+                                    <img src="images/logo/logo-ivs.png" alt="Examia Logo" class="w-8 h-8 object-contain inline-block align-middle mr-1" onerror="this.src='https://placehold.co/40x40/ffffff/EF5675?text=IVS'" />
+                                    IVS Examia
+                                </h3>
+                            </div>
+                        </div>
+                            <p class="text-slate-600 mb-8 leading-relaxed font-medium" data-i18n="app2DescLong">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> <span data-i18n="feat2_1">Auto-Grading Engine</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> <span data-i18n="feat2_2">Competency Analytics</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> <span data-i18n="feat2_3">Question Bank</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> <span data-i18n="feat2_4">Anti-Cheat Mode</span></div>
+                            </div>
+                            <a href="https://ivsexamia.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-accent transition-all shadow-lg">
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 3: ELearners -->
+                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-blue-500 transition-all group">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div>
+                                    <span class="text-[10px] font-black text-blue-500 uppercase tracking-widest">Platform #3</span>
+                                    <h3 class="text-3xl font-black text-primary uppercase flex items-center gap-2">
+                                        <img src="images/logo/logo.png" alt="ELearners Logo" class="w-8 h-8 object-contain inline-block align-middle mr-1" onerror="this.src='https://placehold.co/40x40/ffffff/3b82f6?text=IVS'" />
+                                        ELearners
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 mb-8 leading-relaxed font-medium" data-i18n="app3DescLong">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span data-i18n="feat3_1">Gamified Lessons</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span data-i18n="feat3_2">AI Voice Feedback</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span data-i18n="feat3_3">Daily Goal Tracker</span></div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span data-i18n="feat3_4">Reward System</span></div>
+                            </div>
+                            <a href="https://ivslearning.io.vn" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-blue-500 transition-all shadow-lg">
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <div class="hidden lg:block">
+                            <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
+                                <img src="images/logo/logo-elearners.png" alt="ELearners Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- App 4: Testing Placement -->
+            <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-emerald-500 transition-all group">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 hidden lg:block">
+                        <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
+                            <img src="images/logo/logo-testing.png" alt="Testing Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div>
+                                <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Platform #4</span>
+                                <h3 class="text-3xl font-black text-primary uppercase flex items-center gap-2">
+                                    <img src="images/logo/logo-ivs.png" alt="Testing Placement Logo" class="w-8 h-8 object-contain inline-block align-middle mr-1" onerror="this.src='https://placehold.co/40x40/ffffff/10b981?text=IVS'" />
+                                    Testing Placement
+                                </h3>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed font-medium" data-i18n="app4DescLong">Accurate entrance level testing tool, optimizing class classification.</p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="feat4_1">Automated Testing</span></div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="feat4_2">Level Classification</span></div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="feat4_3">Instant Results</span></div>
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="feat4_4">Report Generation</span></div>
+                        </div>
+                        <a href="https://testplacement.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-emerald-500 transition-all shadow-lg">
+                            <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>              
+
+            <div class="mt-12 bg-primary rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 background-grid"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8 justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl mb-2 flex items-center gap-2"><i data-lucide="handshake" class="text-secondary"></i> <span data-i18n="techSynergy">Software-as-a-Partner Model</span></h3>
+                        <p class="text-slate-300 text-sm max-w-xl" data-i18n="techSynergyDesc">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</p>
+                    </div>
+                    <ul class="text-sm space-y-2 bg-white/10 p-4 rounded-xl border border-white/20 shrink-0 w-full md:w-auto">
+                        <li class="flex items-center gap-2"><i data-lucide="cloud" class="w-4 h-4 text-blue-400"></i> <span data-i18n="techFeat1">Centralized Cloud Database</span></li>
+                        <li class="flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4 text-emerald-400"></i> <span data-i18n="techFeat2">Real-time Satellite Sync</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="eco-app-grid" style="padding: 0 28px 32px 28px; grid-template-columns: 1fr 1fr; gap: 32px;">
-          <!-- App 1 -->
-          <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-centercare.png" alt="CenterCare" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco1_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #1</div>
-              <h3 class="eco-name" data-i18n="eco1_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS CenterCare</h3>
-              <p class="eco-desc" data-i18n="eco1_desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco1_f1">Tuition Management</li>
-                <li data-i18n="eco1_f2">Digital Attendance</li>
-                <li data-i18n="eco1_f3">Parent App Sync</li>
-                <li data-i18n="eco1_f4">Smart Scheduling</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco1_btn" href="https://ivscentercare.web.app/" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-          <!-- App 2 -->
-          <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-examia.png" alt="Examia" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco2_platform" style="color: #e86a6a; font-weight: 700; margin-bottom: 2px;">Platform #2</div>
-              <h3 class="eco-name" data-i18n="eco2_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS Examia</h3>
-              <p class="eco-desc" data-i18n="eco2_desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco2_f1">Auto-Grading Engine</li>
-                <li data-i18n="eco2_f2">Competency Analytics</li>
-                <li data-i18n="eco2_f3">Question Bank</li>
-                <li data-i18n="eco2_f4">Anti-Cheat Mode</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco2_btn" href="https://ivsexamia.web.app/" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-          <!-- App 3 -->
-          <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-elearners.png" alt="ELearners" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco3_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #3</div>
-              <h3 class="eco-name" data-i18n="eco3_name" style="font-size: 1.45rem; margin-bottom: 8px;">ELearners</h3>
-              <p class="eco-desc" data-i18n="eco3_desc">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco3_f1">Gamified Lessons</li>
-                <li data-i18n="eco3_f2">AI Voice Feedback</li>
-                <li data-i18n="eco3_f3">Daily Goal Tracker</li>
-                <li data-i18n="eco3_f4">Reward System</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco3_btn" href="https://ivslearning.io.vn" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-          <!-- App 4 -->
-          <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-testing.png" alt="Testing Placement" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco4_platform" style="color: #43b97b; font-weight: 700; margin-bottom: 2px;">Platform #4</div>
-              <h3 class="eco-name" data-i18n="eco4_name" style="font-size: 1.45rem; margin-bottom: 8px;">Testing Placement</h3>
-              <p class="eco-desc" data-i18n="eco4_desc">Accurate entrance level testing tool, optimizing class classification.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco4_f1">Automated Testing</li>
-                <li data-i18n="eco4_f2">Level Classification</li>
-                <li data-i18n="eco4_f3">Instant Results</li>
-                <li data-i18n="eco4_f4">Report Generation</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco4_btn" href="https://testplacement.web.app/" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-        </div>
-        <div style="padding: 0 28px 32px 28px;">
-          <div class="edu-wide collapsible-item" style="margin-top: 2.2rem; background: rgba(255,255,255,0.93);">
-            <div class="edu-meta" data-i18n="eco_sync_badge" style="background: #f3ecde; color: #b06a3b;">Software-as-a-Partner Model</div>
-            <h3 data-i18n="eco_sync_title" style="margin: 10px 0 8px; font-size: 1.13rem;">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
-            <ul class="eco-features" style="margin-top: 12px;">
-              <li data-i18n="eco_sync_f1">Centralized Cloud Database</li>
-              <li data-i18n="eco_sync_f2">Real-time Satellite Sync</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+    </section>    
+
     <section class="section" id="projects">
       <div class="wrap card section-card reveal">
         <div class="head">
