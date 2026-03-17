@@ -52,84 +52,12 @@
       --ink: #172f28;
       --muted: #61746c;
       --paper: #fff9f2;
-      --line: rgba(23, 47, 40, 0.14);
-      --accent: #b06a3b;
-      --accent-soft: rgba(176, 106, 59, 0.14);
-      --forest: #2a4f41;
-      --bg: #f3ecde;
-      --card: rgba(255, 251, 243, 0.78);
-      --shadow: 0 24px 80px rgba(23, 47, 40, 0.12);
-      --radius-xl: 28px;
-      --radius-lg: 18px;
-      --max: 1240px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: "Manrope", sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(176, 106, 59, 0.18), transparent 28%),
-        radial-gradient(circle at 90% 12%, rgba(42, 79, 65, 0.14), transparent 24%),
-        linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
-      min-height: 100vh;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(23, 47, 40, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(23, 47, 40, 0.02) 1px, transparent 1px);
-      background-size: 34px 34px;
-      mask-image: radial-gradient(circle at center, black 45%, transparent 92%);
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 26px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(16px);
-      background: rgba(243, 236, 222, 0.84);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .topbar-inner {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 12px;
-      align-items: center;
-      padding: 14px 0;
-      position: relative;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .brand small {
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      font-size: 0.72rem;
-      font-weight: 700;
-    }
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
 
     .brand strong {
       font-family: "Playfair Display", serif;
@@ -1056,12 +984,11 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="wrap topbar-inner">
+    <div class="wrap topbar-inner glass-card" style="backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
       <a class="brand" href="#top">
         <small data-i18n="brand_tag">minhtriet.online</small>
         <strong data-i18n="brand_name">Nguyen Minh Triet</strong>
       </a>
-
       <div class="tools">
         <label class="lang-wrap" for="lang" aria-label="Language switcher">
           <span class="lang-icon" aria-hidden="true">&#127760;</span>
@@ -1081,7 +1008,6 @@
         <a class="btn" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
         <button type="button" id="menu-btn" class="menu-btn" aria-label="Open menu" aria-expanded="false" data-i18n="menu">Menu</button>
       </div>
-
       <nav id="nav" class="nav">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#strength" data-i18n="nav_strength">Strengths</a>
@@ -1096,7 +1022,7 @@
   <main id="top">
     <section class="section hero">
       <div class="wrap hero-grid">
-        <article class="card hero-copy reveal">
+        <article class="glass-card hero-copy reveal">
           <div class="eyebrow" data-i18n="hero_kicker">External Relations - Project Leadership - Education Digital Transformation</div>
           <h1 data-i18n="hero_title">Strategic Relations & Digital Growth</h1>
           <p class="lead" data-i18n="hero_lead">I connect external affairs, operations, and technology execution to build sustainable school-enterprise partnerships and practical value for learners.</p>
@@ -1111,7 +1037,7 @@
           </div>
         </article>
 
-        <aside class="card hero-aside reveal">
+        <aside class="glass-card hero-aside reveal">
           <div class="portrait">
             <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait">
           </div>
@@ -1154,7 +1080,7 @@
 </style>
 
     <section class="section" id="about">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
             <p class="kicker" data-i18n="about_kicker">About</p>
@@ -1192,7 +1118,7 @@
     </section>
 
     <section class="section" id="strength">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
             <p class="kicker" data-i18n="strength_kicker">Core Competencies</p>
@@ -1242,7 +1168,7 @@
     </section>
 
     <section class="section" id="experience">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
             <p class="kicker" data-i18n="exp_kicker">Experience</p>
@@ -1326,12 +1252,12 @@
           <article class="job" data-exp-id="e5">
             <div class="job-top">
               <div>
-                <h3 class="role">Co-Founder</h3>
-                <div class="company">TUK TUK: Tea - Pizza & Beer</div>
+                <h3 class="role" data-i18n="e5_role">Co-Founder</h3>
+                <div class="company" data-i18n="e5_company">TUK TUK: Tea - Pizza & Beer</div>
               </div>
               <div class="period">2019 - 2021</div>
             </div>
-            <p>Khởi nghiệp và quản lý chuỗi 04 chi nhánh F&B, tối ưu hóa cung ứng, vận hành và chất lượng dịch vụ.</p>
+            <p data-i18n="e5_desc">Khởi nghiệp và quản lý chuỗi 04 chi nhánh F&B, tối ưu hóa cung ứng, vận hành và chất lượng dịch vụ.</p>
             <button class="exp-toggle" type="button" aria-expanded="false">
               <span class="exp-toggle-text">Xem chi tiết</span>
               <span class="exp-toggle-icon">+</span>
@@ -1342,12 +1268,12 @@
           <article class="job" data-exp-id="e6">
             <div class="job-top">
               <div>
-                <h3 class="role">Rewards Manager & Flight Crew</h3>
-                <div class="company">The Grand Ho Tram & VietJet Air</div>
+                <h3 class="role" data-i18n="e6_role">Rewards Manager & Flight Crew</h3>
+                <div class="company" data-i18n="e6_company">The Grand Ho Tram & VietJet Air</div>
               </div>
               <div class="period">2017 - 2019</div>
             </div>
-            <p>Rèn luyện năng lực phục vụ phân khúc cao cấp, quản trị loyalty và xử lý tình huống theo chuẩn hàng không quốc tế.</p>
+            <p data-i18n="e6_desc">Rèn luyện năng lực phục vụ phân khúc cao cấp, quản trị loyalty và xử lý tình huống theo chuẩn hàng không quốc tế.</p>
             <button class="exp-toggle" type="button" aria-expanded="false">
               <span class="exp-toggle-text">Xem chi tiết</span>
               <span class="exp-toggle-icon">+</span>
@@ -1359,7 +1285,7 @@
       </div>
     </section>
     <section class="section" id="education">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
             <p class="kicker" data-i18n="edu_kicker">Education</p>
@@ -1496,112 +1422,122 @@
     </section>
 
     <section class="section" id="digital-ecosystem">
-      <div class="wrap section-card glass-card background-grid reveal" style="padding: 0;">
-        <div style="padding: 38px 28px 18px 28px; text-align: center;">
-          <span class="eco-kicker" data-i18n="eco_kicker" style="font-size: 0.92rem;">IVS Product Suite</span>
-          <h2 class="eco-title" data-i18n="eco_title" style="margin-bottom: 8px;">IVS Digital Ecosystem</h2>
-          <p class="eco-sub" data-i18n="eco_sub" style="font-size: 1.08rem; color: var(--muted); max-width: 600px; margin: 0 auto;">
-            The IVS digital ecosystem for language center systems, meeting all your operation, assessment, and learning needs.
-          </p>
+      <div class="wrap glass-card section-card reveal background-grid">
+        <div class="head">
+          <div>
+            <span class="eco-kicker" data-i18n="eco_kicker" data-lang-key="eco_kicker" style="font-size: 0.92rem;">IVS Product Suite</span>
+            <h2 class="eco-title" data-i18n="eco_title" data-lang-key="eco_title" style="margin-bottom: 8px;">IVS Digital Ecosystem</h2>
+            <p class="eco-sub" data-i18n="eco_sub" data-lang-key="eco_sub" style="font-size: 1.08rem; color: var(--muted); max-width: 600px; margin: 0 auto;">
+              The IVS digital ecosystem for language center systems, meeting all your operation, assessment, and learning needs.
+            </p>
+          </div>
+          <div class="head-controls">
+            <button class="section-toggle" type="button" aria-expanded="false">
+              <span class="section-toggle-text" data-i18n="section_collapse" data-lang-key="section_collapse">Thu gọn</span>
+              <span class="section-toggle-icon">+</span>
+            </button>
+          </div>
         </div>
-        <div class="eco-app-grid" style="padding: 0 28px 32px 28px; grid-template-columns: 1fr 1fr; gap: 32px;">
-          <!-- App 1 -->
-          <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-centercare.png" alt="CenterCare" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco1_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #1</div>
-              <h3 class="eco-name" data-i18n="eco1_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS CenterCare</h3>
-              <p class="eco-desc" data-i18n="eco1_desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco1_f1">Tuition Management</li>
-                <li data-i18n="eco1_f2">Digital Attendance</li>
-                <li data-i18n="eco1_f3">Parent App Sync</li>
-                <li data-i18n="eco1_f4">Smart Scheduling</li>
+        <div class="section-body" hidden>
+          <div class="eco-app-grid" style="padding: 0 28px 32px 28px; grid-template-columns: 1fr 1fr; gap: 32px;">
+            <!-- App 1 -->
+            <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
+              <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
+                <img src="images/logo/logo-centercare.png" alt="CenterCare" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
+              </div>
+              <div style="flex:1;">
+                <div class="eco-platform" data-i18n="eco1_platform" data-lang-key="eco1_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #1</div>
+                <h3 class="eco-name" data-i18n="eco1_name" data-lang-key="eco1_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS CenterCare</h3>
+                <p class="eco-desc" data-i18n="eco1_desc" data-lang-key="eco1_desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
+                <ul class="eco-features">
+                  <li data-i18n="eco1_f1" data-lang-key="eco1_f1">Tuition Management</li>
+                  <li data-i18n="eco1_f2" data-lang-key="eco1_f2">Digital Attendance</li>
+                  <li data-i18n="eco1_f3" data-lang-key="eco1_f3">Parent App Sync</li>
+                  <li data-i18n="eco1_f4" data-lang-key="eco1_f4">Smart Scheduling</li>
+                </ul>
+                <a class="eco-link" data-i18n="eco1_btn" data-lang-key="eco1_btn" href="https://ivscentercare.web.app/" target="_blank" rel="noopener">Explore Specs</a>
+              </div>
+            </article>
+            <!-- App 2 -->
+            <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
+              <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
+                <img src="images/logo/logo-examia.png" alt="Examia" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
+              </div>
+              <div style="flex:1;">
+                <div class="eco-platform" data-i18n="eco2_platform" data-lang-key="eco2_platform" style="color: #e86a6a; font-weight: 700; margin-bottom: 2px;">Platform #2</div>
+                <h3 class="eco-name" data-i18n="eco2_name" data-lang-key="eco2_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS Examia</h3>
+                <p class="eco-desc" data-i18n="eco2_desc" data-lang-key="eco2_desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
+                <ul class="eco-features">
+                  <li data-i18n="eco2_f1" data-lang-key="eco2_f1">Auto-Grading Engine</li>
+                  <li data-i18n="eco2_f2" data-lang-key="eco2_f2">Competency Analytics</li>
+                  <li data-i18n="eco2_f3" data-lang-key="eco2_f3">Question Bank</li>
+                  <li data-i18n="eco2_f4" data-lang-key="eco2_f4">Anti-Cheat Mode</li>
+                </ul>
+                <a class="eco-link" data-i18n="eco2_btn" data-lang-key="eco2_btn" href="https://ivsexamia.web.app/" target="_blank" rel="noopener">Explore Specs</a>
+              </div>
+            </article>
+            <!-- App 3 -->
+            <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
+              <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
+                <img src="images/logo/logo-elearners.png" alt="ELearners" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
+              </div>
+              <div style="flex:1;">
+                <div class="eco-platform" data-i18n="eco3_platform" data-lang-key="eco3_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #3</div>
+                <h3 class="eco-name" data-i18n="eco3_name" data-lang-key="eco3_name" style="font-size: 1.45rem; margin-bottom: 8px;">ELearners</h3>
+                <p class="eco-desc" data-i18n="eco3_desc" data-lang-key="eco3_desc">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
+                <ul class="eco-features">
+                  <li data-i18n="eco3_f1" data-lang-key="eco3_f1">Gamified Lessons</li>
+                  <li data-i18n="eco3_f2" data-lang-key="eco3_f2">AI Voice Feedback</li>
+                  <li data-i18n="eco3_f3" data-lang-key="eco3_f3">Daily Goal Tracker</li>
+                  <li data-i18n="eco3_f4" data-lang-key="eco3_f4">Reward System</li>
+                </ul>
+                <a class="eco-link" data-i18n="eco3_btn" data-lang-key="eco3_btn" href="https://ivslearning.io.vn" target="_blank" rel="noopener">Explore Specs</a>
+              </div>
+            </article>
+            <!-- App 4 -->
+            <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
+              <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
+                <img src="images/logo/logo-testing.png" alt="Testing Placement" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
+              </div>
+              <div style="flex:1;">
+                <div class="eco-platform" data-i18n="eco4_platform" data-lang-key="eco4_platform" style="color: #43b97b; font-weight: 700; margin-bottom: 2px;">Platform #4</div>
+                <h3 class="eco-name" data-i18n="eco4_name" data-lang-key="eco4_name" style="font-size: 1.45rem; margin-bottom: 8px;">Testing Placement</h3>
+                <p class="eco-desc" data-i18n="eco4_desc" data-lang-key="eco4_desc">Accurate entrance level testing tool, optimizing class classification.</p>
+                <ul class="eco-features">
+                  <li data-i18n="eco4_f1" data-lang-key="eco4_f1">Automated Testing</li>
+                  <li data-i18n="eco4_f2" data-lang-key="eco4_f2">Level Classification</li>
+                  <li data-i18n="eco4_f3" data-lang-key="eco4_f3">Instant Results</li>
+                  <li data-i18n="eco4_f4" data-lang-key="eco4_f4">Report Generation</li>
+                </ul>
+                <a class="eco-link" data-i18n="eco4_btn" data-lang-key="eco4_btn" href="https://testplacement.web.app/" target="_blank" rel="noopener">Explore Specs</a>
+              </div>
+            </article>
+          </div>
+          <div style="padding: 0 28px 32px 28px;">
+            <div class="edu-wide collapsible-item" style="margin-top: 2.2rem; background: rgba(255,255,255,0.93);">
+              <div class="edu-meta" data-i18n="eco_sync_badge" data-lang-key="eco_sync_badge" style="background: #f3ecde; color: #b06a3b;">Software-as-a-Partner Model</div>
+              <h3 data-i18n="eco_sync_title" data-lang-key="eco_sync_title" style="margin: 10px 0 8px; font-size: 1.13rem;">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
+              <ul class="eco-features" style="margin-top: 12px;">
+                <li data-i18n="eco_sync_f1" data-lang-key="eco_sync_f1">Centralized Cloud Database</li>
+                <li data-i18n="eco_sync_f2" data-lang-key="eco_sync_f2">Real-time Satellite Sync</li>
               </ul>
-              <a class="eco-link" data-i18n="eco1_btn" href="https://ivscentercare.web.app/" target="_blank" rel="noopener">Explore Specs</a>
             </div>
-          </article>
-          <!-- App 2 -->
-          <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-examia.png" alt="Examia" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco2_platform" style="color: #e86a6a; font-weight: 700; margin-bottom: 2px;">Platform #2</div>
-              <h3 class="eco-name" data-i18n="eco2_name" style="font-size: 1.45rem; margin-bottom: 8px;">IVS Examia</h3>
-              <p class="eco-desc" data-i18n="eco2_desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco2_f1">Auto-Grading Engine</li>
-                <li data-i18n="eco2_f2">Competency Analytics</li>
-                <li data-i18n="eco2_f3">Question Bank</li>
-                <li data-i18n="eco2_f4">Anti-Cheat Mode</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco2_btn" href="https://ivsexamia.web.app/" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-          <!-- App 3 -->
-          <article class="eco-card" style="display: flex; flex-direction: row; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-elearners.png" alt="ELearners" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco3_platform" style="color: #b06a3b; font-weight: 700; margin-bottom: 2px;">Platform #3</div>
-              <h3 class="eco-name" data-i18n="eco3_name" style="font-size: 1.45rem; margin-bottom: 8px;">ELearners</h3>
-              <p class="eco-desc" data-i18n="eco3_desc">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco3_f1">Gamified Lessons</li>
-                <li data-i18n="eco3_f2">AI Voice Feedback</li>
-                <li data-i18n="eco3_f3">Daily Goal Tracker</li>
-                <li data-i18n="eco3_f4">Reward System</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco3_btn" href="https://ivslearning.io.vn" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-          <!-- App 4 -->
-          <article class="eco-card" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 32px;">
-            <div class="eco-logo" style="background: #fff; width: 220px; height: 160px; border-radius: 24px; box-shadow: 0 2px 24px #b06a3b22; display: flex; align-items: center; justify-content: center;">
-              <img src="images/logo/logo-testing.png" alt="Testing Placement" style="width: 90%; max-height: 120px; object-fit: contain;" onerror="this.src='images/logo/logo.png'">
-            </div>
-            <div style="flex:1;">
-              <div class="eco-platform" data-i18n="eco4_platform" style="color: #43b97b; font-weight: 700; margin-bottom: 2px;">Platform #4</div>
-              <h3 class="eco-name" data-i18n="eco4_name" style="font-size: 1.45rem; margin-bottom: 8px;">Testing Placement</h3>
-              <p class="eco-desc" data-i18n="eco4_desc">Accurate entrance level testing tool, optimizing class classification.</p>
-              <ul class="eco-features">
-                <li data-i18n="eco4_f1">Automated Testing</li>
-                <li data-i18n="eco4_f2">Level Classification</li>
-                <li data-i18n="eco4_f3">Instant Results</li>
-                <li data-i18n="eco4_f4">Report Generation</li>
-              </ul>
-              <a class="eco-link" data-i18n="eco4_btn" href="https://testplacement.web.app/" target="_blank" rel="noopener">Explore Specs</a>
-            </div>
-          </article>
-        </div>
-        <div style="padding: 0 28px 32px 28px;">
-          <div class="edu-wide collapsible-item" style="margin-top: 2.2rem; background: rgba(255,255,255,0.93);">
-            <div class="edu-meta" data-i18n="eco_sync_badge" style="background: #f3ecde; color: #b06a3b;">Software-as-a-Partner Model</div>
-            <h3 data-i18n="eco_sync_title" style="margin: 10px 0 8px; font-size: 1.13rem;">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
-            <ul class="eco-features" style="margin-top: 12px;">
-              <li data-i18n="eco_sync_f1">Centralized Cloud Database</li>
-              <li data-i18n="eco_sync_f2">Real-time Satellite Sync</li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
     
     <section class="section" id="projects">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
-            <p class="kicker" data-i18n="project_kicker">Flagship Projects</p>
-            <h2 data-i18n="project_title">Technology Projects</h2>
+            <p class="kicker" data-i18n="project_kicker" data-lang-key="project_kicker">Flagship Projects</p>
+            <h2 class="eco-title" data-i18n="project_title" data-lang-key="project_title">Technology Projects</h2>
           </div>
           <div class="head-controls">
-            <p class="note" data-i18n="project_note">Real products focused on measurable outcomes in education, analytics, and daily operations.</p>
+            <p class="note" data-i18n="project_note" data-lang-key="project_note">Real products focused on measurable outcomes in education, analytics, and daily operations.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_collapse" data-lang-key="section_collapse">Thu gọn</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1683,7 +1619,7 @@
     </section>
 
     <section class="section" id="contact">
-      <div class="wrap card section-card reveal">
+      <div class="wrap glass-card section-card reveal">
         <div class="head">
           <div>
             <p class="kicker" data-i18n="contact_kicker">Contact</p>
@@ -1726,7 +1662,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-card reveal">
+    <div class="wrap glass-card footer-card reveal">
       <span data-i18n="footer_left">Professional profile of Nguyen Minh Triet - Strategic Relations, Operations, and Digital Growth.</span>
       <span>© <span id="year"></span> minhtriet.online</span>
     </div>
