@@ -395,6 +395,18 @@ function applyLanguage(lang) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // Update experience details
+    if (window.translations && window.translations.experienceDetails) {
+        const expDict = window.translations.experienceDetails;
+        document.querySelectorAll(".job[data-exp-id]").forEach(job => {
+            const expId = job.getAttribute("data-exp-id");
+            const panel = job.querySelector(".exp-details");
+            if (panel && expDict[expId]) {
+                panel.innerHTML = `<ul class="list">${expDict[expId].map(item => `<li>${item}</li>`).join("")}</ul>`;
+            }
+        });
+    }
+
     // Re-render Experience section if function exists
     if (typeof window.renderExperience === 'function') {
         window.renderExperience();
