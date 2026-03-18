@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nguyen Minh Triet - External Relations, Project Leadership, and Digital Transformation in Education.">
+  <meta name="keywords" content="Nguyen Minh Triet, External Relations, EdTech, Project Management, AI, Digital Transformation">
+  <meta name="author" content="Nguyen Minh Triet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://minhtriet.online/">
+  <meta property="og:title" content="Nguyen Minh Triet | Strategic Relations & Digital Growth">
+  <meta property="og:description" content="Professional profile: external relations, project leadership, and educational digital transformation.">
+  <meta property="og:image" content="https://minhtriet.online/images/avatar.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nguyen Minh Triet | Strategic Relations & Digital Growth">
+  <meta name="twitter:description" content="Professional profile with multilingual support and downloadable CV.">
+  <meta name="twitter:image" content="https://minhtriet.online/images/avatar.webp">
+  <link rel="canonical" href="https://minhtriet.online/">
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Nguyen Minh Triet | Professional Profile</title>
+  
+  <style>
+    /* ==========================================
+       1. CSS VARIABLES (DESIGN SYSTEM)
+       ========================================== */
+    :root {
+      /* Colors */
+      --bg-body: #f8fafc; /* Nền xám nhạt hiện đại */
+      --bg-card: #ffffff; /* Trắng tinh khiết cho card */
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      
+      --text-main: #0f172a; /* Slate 900 - Đen nhạt dễ đọc */
+      --text-muted: #64748b; /* Slate 500 - Xám ghi */
+      
+      --primary: #0f766e; /* Teal 700 - Xanh mòng két (Tin cậy, quản lý) */
+      --primary-hover: #115e59;
+      --accent: #2563eb; /* Blue 600 - Xanh dương (Công nghệ, số hóa) */
+      --accent-soft: #eff6ff;
+      --border-color: #e2e8f0; /* Slate 200 */
+
+      /* Typography */
+      --font-body: 'Manrope', sans-serif;
+      --font-heading: 'Playfair Display', serif;
+
+      /* Metrics */
+      --max-width: 1120px;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+
+      /* Shadows */
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.02);
+      --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+      
+      /* Transitions */
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================
+       2. RESET & BASE
+       ========================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, select {
+      font-family: inherit;
+      outline: none;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================
+       3. TYPOGRAPHY
+       ========================================== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; margin-bottom: 0.5rem; }
+    h3 { font-size: 1.25rem; font-family: var(--font-body); font-weight: 800; }
+
+    .kicker {
+      display: block;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      font-weight: 800;
+      font-family: var(--font-body);
+      margin-bottom: 0.5rem;
+    }
+
+    .lead {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin-top: 1rem;
+    }
+
+    /* ==========================================
+       4. COMPONENTS
+       ========================================== */
+    /* Buttons */
+    .btn, .btn-soft, .exp-toggle, .section-toggle, .item-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-soft {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border-color: var(--border-color);
+    }
+
+    .btn-soft:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      padding: 2rem;
+      transition: var(--transition);
+    }
+    
+    .card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .glass-effect {
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* Chips/Tags */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background-color: #f1f5f9;
+      color: var(--text-muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+    }
+
+    /* ==========================================
+       5. LAYOUT & SECTIONS
+       ========================================== */
+    /* Topbar */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-glass);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand small {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .brand strong {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .nav a:hover {
+      color: var(--primary);
+    }
+
+    .tools {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .lang-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-color);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .lang {
+      border: none;
+      background: transparent;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      padding-right: 4px;
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 40px;
+      position: relative;
+    }
+
+    /* Subtle background glow for hero */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, rgba(248, 250, 252, 0) 70%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-aside {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 300px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      background: #f8fafc;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.75rem;
+      color: var(--primary);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    /* Generic Sections */
+    .section {
+      padding: 40px 0;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      gap: 20px;
+    }
+
+    .head-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      text-align: right;
+    }
+
+    .note {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      max-width: 400px;
+    }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    /* Mini Cards (About, Strengths) */
+    .mini {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .list {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1;
+      top: -2px;
+    }
+
+    .list li strong {
+      color: var(--text-main);
+    }
+
+    /* Experience Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .job {
+      position: relative;
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.5rem 1.5rem 3rem;
+    }
+
+    .job::before {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 1.75rem;
+      width: 12px;
+      height: 12px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.1);
+    }
+
+    .job::after {
+      content: '';
+      position: absolute;
+      left: calc(1.25rem + 5px);
+      top: 3rem;
+      bottom: -20px;
+      width: 2px;
+      background: var(--border-color);
+    }
+
+    .job:last-child::after {
+      display: none;
+    }
+
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .role { font-size: 1.125rem; margin-bottom: 4px; }
+    .company { color: var(--accent); font-weight: 700; font-size: 0.9375rem; }
+    .period {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      color: var(--text-muted);
+    }
+
+    .job > p {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      margin-bottom: 12px;
+    }
+
+    .exp-details {
+      margin-top: 16px;
+      padding: 16px;
+      background: white;
+      border-radius: var(--radius-sm);
+      border: 1px dashed var(--border-color);
+    }
+
+    /* Toggles & Accordions */
+    .section-toggle-icon, .exp-toggle-icon, .item-toggle-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 50%;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    .collapsed .section-toggle-icon,
+    .collapsed .item-toggle-icon,
+    .job:not(.open) .exp-toggle-icon {
+      transform: rotate(45deg); /* Plus to X transition */
+    }
+    
+    .section-card:not(.collapsed) .section-toggle-icon,
+    .collapsible-item:not(.collapsed) .item-toggle-icon,
+    .job.open .exp-toggle-icon {
+      transform: rotate(0deg); /* X */
+      content: "-";
+    }
+
+    .section-toggle, .exp-toggle, .item-toggle {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+    }
+    .section-toggle:hover, .exp-toggle:hover, .item-toggle:hover {
+      background: white;
+    }
+
+    /* Ecosystem Section (Refactored from inline styles) */
+    .background-grid {
+      background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+      background-size: 24px 24px;
+      background-position: -12px -12px;
+    }
+
+    .eco-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .eco-app-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .eco-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .eco-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .eco-card.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .eco-logo {
+      width: 140px;
+      height: 140px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+
+    .eco-logo img {
+      width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+
+    .eco-content {
+      flex: 1;
+    }
+
+    .eco-platform {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .eco-name {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .eco-desc {
+      color: var(--text-muted);
+      font-size: 0.9375rem;
+      margin-bottom: 16px;
+    }
+
+    .eco-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .eco-features li {
+      padding: 6px 10px;
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .contact-box {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .contact-line {
+      margin-bottom: 16px;
+    }
+    .contact-line:last-child { margin-bottom: 0;}
+
+    .contact-label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .contact-value {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .contact-value a { color: var(--accent); }
+    .contact-value a:hover { text-decoration: underline; }
+
+    /* Footer */
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    /* Animation Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================
+       6. RESPONSIVE DESIGN
+       ========================================== */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-aside { flex-direction: row; }
+      .portrait { width: 40%; height: auto; min-height: 250px;}
+      .stats { width: 60%; }
+      .eco-app-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .head { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .head-controls { align-items: flex-start; text-align: left; }
+      .grid-2, .grid-3, .contact-grid { grid-template-columns: 1fr; }
+      
+      .hero-aside { flex-direction: column; }
+      .portrait { width: 100%; height: 300px; }
+      .stats { width: 100%; }
+
+      .eco-card, .eco-card.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+      .eco-logo { width: 100px; height: 100px; margin: 0 auto; }
+      .eco-features { grid-template-columns: 1fr; }
+
+      /* Mobile Nav */
+      .nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 20px;
+        right: 20px;
+        background: var(--bg-glass);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-md);
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: var(--transition);
+      }
+      .nav.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .menu-btn { display: flex; }
+      .topbar-inner { flex-wrap: wrap; }
+      .tools { flex: 1; justify-content: flex-end; }
+    }
+
+    @media (max-width: 480px) {
+      .stats { grid-template-columns: 1fr; }
+      .card { padding: 1.5rem; }
+      .job { padding: 1.25rem 1.25rem 1.25rem 2.5rem; }
+      .job::before { left: 0.75rem; }
+      .job::after { left: calc(0.75rem + 5px); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner glass-effect">
+        <a class="brand" href="#top">
+          <small data-i18n="brand_tag">minhtriet.online</small>
+          <strong data-i18n="brand_name">Nguyen Minh Triet</strong>
+        </a>
+
+        <nav id="nav" class="nav">
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#strength" data-i18n="nav_strength">Strengths</a>
+          <a href="#experience" data-i18n="nav_experience">Experience</a>
+          <a href="#projects" data-i18n="nav_projects">Projects</a>
+          <a href="#education" data-i18n="nav_education">Education</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <div class="tools">
+          <label class="lang-wrap" for="lang" aria-label="Language switcher">
+            <span>🌐</span>
+            <select id="lang" class="lang" aria-label="Language switcher">
+              <option value="vi">VI</option>
+              <option value="en">EN</option>
+            </select>
+          </label>
+          <a class="btn" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
+          <button type="button" id="menu-btn" class="menu-btn" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <article class="hero-copy reveal">
+          <span class="kicker" data-i18n="hero_kicker">External Relations - Project Leadership - Education Digital Transformation</span>
+          <h1 data-i18n="hero_title">Strategic Relations & Digital Growth</h1>
+          <p class="lead" data-i18n="hero_lead">I connect external affairs, operations, and technology execution to build sustainable school-enterprise partnerships and practical value for learners.</p>
+          <div class="row">
+            <a class="btn" href="#contact" data-i18n="hero_cta1">Discuss Collaboration</a>
+            <a class="btn-soft" href="#experience" data-i18n="hero_cta2">View Career Journey</a>
+          </div>
+          <div class="row" style="margin-top: 16px;">
+            <span class="chip" data-i18n="hero_chip1">Available in Thu Duc, Ho Chi Minh City, and nearby areas</span>
+            <span class="chip">CEO & Co-Founder, IVS JSC</span>
+            <span class="chip" data-i18n="hero_chip3">Building digital products for education and operations</span>
+          </div>
+        </article>
+
+        <aside class="hero-aside reveal">
+          <div class="portrait">
+            <!-- Placeholder fallback if image missing -->
+            <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'">
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>50</strong><span data-i18n="stat1">schools connected</span></div>
+            <div class="stat"><strong>1,500+</strong><span data-i18n="stat2">event participants</span></div>
+            <div class="stat"><strong>200+</strong><span data-i18n="stat3">tourism partners</span></div>
+            <div class="stat"><strong>10+</strong><span data-i18n="stat4">advanced courses</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+      <div class="wrap card section-card reveal collapsed">
+        <div class="head">
+          <div>
+            <span class="kicker" data-i18n="about_kicker">About</span>
+            <h2 data-i18n="about_title">Career Vision and Value Proposition</h2>
+          </div>
+          <div class="head-controls">
+            <p class="note" data-i18n="about_note">Focused on strategic partnerships, streamlined workflows, and learner-centered outcomes.</p>
+            <button class="section-toggle" type="button" aria-expanded="false">
+              <span class="section-toggle-text">Xem chi tiết</span>
+              <span class="section-toggle-icon">+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="section-body" hidden>
+          <div class="grid-2">
+            <article class="mini">
+              <p data-i18n="about_p1">With dual degrees in English Language and Business Administration, plus formal Educational Management training, I bridge international communication and digital execution.</p>
+              <ul class="list">
+                <li data-i18n="about_b1">Advanced diplomacy and negotiation for strategic agreements (MOU/MOA/SPA).</li>
+                <li data-i18n="about_b2">Hands-on design and implementation of LMS, AI-integrated portals, and data workflows.</li>
+                <li data-i18n="about_b3">Lean and agile project execution across education, construction, and services.</li>
+              </ul>
+            </article>
+            <article class="mini" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+              <h3 data-i18n="contact_box1">Direct Contact</h3>
+              <p class="note" style="margin: 12px 0;" data-i18n="contact_note">Open for roles in external affairs, digital operations, strategic partnerships, and product development.</p>
+              <a class="btn-soft" href="#contact" data-i18n="hero_cta1">Discuss Collaboration</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRENGTHS SECTION -->
+    <section class="section" id="strength">
+      <div class="wrap glass-card section-card reveal">
+        <div class="head">
+          <div>
+            <p class="kicker" data-i18n="strength_kicker">Core Competencies</p>
+            <h2 data-i18n="strength_title">Strategic Strengths and Professional Capabilities</h2>
+          </div>
+          <div class="head-controls">
+            <p class="note" data-i18n="strength_note">Built on three axes: strategic relations, digital architecture, and high-speed delivery.</p>
+            <button class="section-toggle" type="button" aria-expanded="false">
+              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-icon">+</span>
+            </button>
+          </div>
+        </div>
+        <div class="section-body" hidden>
+        <div class="edu-grid">
+          <article class="mini">
+            <h3 data-i18n="core1_title">Ngoại giao và Đối ngoại</h3>
+            <ul class="list">
+              <li><strong data-i18n="core1_i1_t">Ngôn ngữ và nghi thức:</strong> <span data-i18n="core1_i1_d">Tiếng Anh chuyên ngành; am hiểu lễ tân ngoại giao và kỹ thuật soạn thảo văn bản hành chính/đối ngoại.</span><span data-i18n="core1_i1_d_en" hidden>English for specific purposes; deep understanding of diplomatic protocol and administrative/official document drafting.</span></li>
+              <li><strong data-i18n="core1_i2_t">Kết nối quốc tế:</strong> <span data-i18n="core1_i2_d">Có kinh nghiệm làm việc và thiết lập mạng lưới quan hệ với giáo viên, giảng viên nước ngoài đa quốc tịch đang công tác tại Việt Nam.</span><span data-i18n="core1_i2_d_en" hidden>Experienced in working with and building networks among foreign teachers and lecturers of various nationalities in Vietnam.</span></li>
+              <li><strong data-i18n="core1_i3_t">Quan hệ doanh nghiệp:</strong> <span data-i18n="core1_i3_d">Am hiểu thị trường Du lịch - Nhà hàng - Khách sạn từ kinh nghiệm thực tiễn, hỗ trợ xây dựng cầu nối bền vững giữa nhà trường và cộng đồng doanh nghiệp dịch vụ.</span><span data-i18n="core1_i3_d_en" hidden>In-depth knowledge of the Tourism - Restaurant - Hotel market from practical experience, supporting sustainable bridges between schools and the service business community.</span></li>
+              <li><strong data-i18n="core1_i4_t">Pháp lý và hành chính:</strong> <span data-i18n="core1_i4_d">Nắm vững pháp luật doanh nghiệp, quy định về thuế, BHXH; thành thạo thủ tục hành chính công và dịch vụ công trực tuyến.</span><span data-i18n="core1_i4_d_en" hidden>Thorough understanding of business law, tax and social insurance regulations; proficient in public administrative procedures and online public services.</span></li>
+            </ul>
+          </article>
+          <article class="mini">
+            <h3 data-i18n="core2_title">Quản trị Dự án và Lãnh đạo</h3>
+            <ul class="list">
+              <li><strong data-i18n="core2_i1_t">Sự kiện và hạ tầng:</strong> <span data-i18n="core2_i1_d">Kinh nghiệm quản lý đấu thầu, thi công nội - ngoại thất (Fit-out) và quản trị cơ sở vật chất (Facilities Management).</span><span data-i18n="core2_i1_d_en" hidden>Experience in bidding management, interior and exterior construction (Fit-out), and facilities management.</span></li>
+              <li><strong data-i18n="core2_i2_t">Tổ chức và triển khai:</strong> <span data-i18n="core2_i2_d">Tổ chức sự kiện, tiệc cưới quốc tế, workshop giáo dục và vận hành gameshow (sân khấu, thí sinh, khán giả).</span><span data-i18n="core2_i2_d_en" hidden>Organizing events, international weddings, educational workshops, and managing gameshows (stage, contestants, audience).</span></li>
+              <li><strong data-i18n="core2_i3_t">Kỹ thuật vận hành:</strong> <span data-i18n="core2_i3_d">Giám sát hạ tầng mạng và thiết bị công nghệ phục vụ triển khai dự án.</span><span data-i18n="core2_i3_d_en" hidden>Supervising network infrastructure and technology equipment for project implementation.</span></li>
+            </ul>
+          </article>
+          <article class="mini">
+            <h3 data-i18n="core3_title">Chuyển đổi số và Công nghệ</h3>
+            <ul class="list">
+              <li><strong data-i18n="core3_i1_t">Phát triển phần mềm:</strong> <span data-i18n="core3_i1_d">Full-stack (React.js, TypeScript); thiết kế LMS/EdTech tích hợp Adaptive Learning; phát triển Web App/Mobile App đa nền tảng tập trung UX.</span><span data-i18n="core3_i1_d_en" hidden>Full-stack (React.js, TypeScript); design of LMS/EdTech with Adaptive Learning integration; development of cross-platform Web/Mobile Apps focused on UX.</span></li>
+              <li><strong data-i18n="core3_i2_t">Cloud và Security:</strong> <span data-i18n="core3_i2_d">Làm chủ hệ sinh thái Firebase (NoSQL, Serverless), Google Cloud; triển khai định danh số phi tập trung với Microsoft Entra Verified ID.</span><span data-i18n="core3_i2_d_en" hidden>Mastery of Firebase ecosystem (NoSQL, Serverless), Google Cloud; implementation of decentralized digital identity with Microsoft Entra Verified ID.</span></li>
+              <li><strong data-i18n="core3_i3_t">AI và tự động hóa:</strong> <span data-i18n="core3_i3_d">Tích hợp Generative AI (LLM) vào chatbot và hệ thống phản hồi tự động; số hóa quy trình vận hành (BPA/Workflow Automation) để tối ưu nguồn lực.</span><span data-i18n="core3_i3_d_en" hidden>Integrating Generative AI (LLM) into chatbots and automated response systems; digitizing operational workflows (BPA/Workflow Automation) to optimize resources.</span></li>
+            </ul>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="wrap card section-card reveal collapsed">
+        <div class="head">
+          <div>
+            <span class="kicker" data-i18n="exp_kicker">Experience</span>
+            <h2 data-i18n="exp_title">Professional Journey</h2>
+          </div>
+          <div class="head-controls">
+            <p class="note" data-i18n="exp_note">A multidisciplinary track across operations, market development, technology, and premium service.</p>
+            <button class="section-toggle" type="button" aria-expanded="false">
+              <span class="section-toggle-text">Xem chi tiết</span>
+              <span class="section-toggle-icon">+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="section-body" hidden>
+          <div class="timeline">
+            <article class="job" data-exp-id="e1">
+              <div class="job-top">
+                <div>
+                  <h3 class="role" data-i18n="e1_role">Digital Operations & Communication</h3>
+                  <div class="company">Kha Dock & Homes Construction LLC</div>
+                </div>
+                <div class="period">10/2023 - Present</div>
+              </div>
+              <p data-i18n="e1_desc">Built and maintained web ecosystems while strengthening cross-border digital brand presence in Florida.</p>
+              <button class="exp-toggle" type="button" aria-expanded="false">
+                <span class="exp-toggle-text">Xem chi tiết</span>
+                <span class="exp-toggle-icon">+</span>
+              </button>
+              <div class="exp-details" hidden></div>
+            </article>
+
+            <article class="job" data-exp-id="e2">
+              <div class="job-top">
+                <div>
+                  <h3 class="role">CEO & Co-Founder</h3>
+                  <div class="company">IVS JSC</div>
+                </div>
+                <div class="period">04/2024 - Present</div>
+              </div>
+              <p data-i18n="e2_desc">Leading strategy, finance, people, and SaaS product development for education services.</p>
+              <button class="exp-toggle" type="button" aria-expanded="false">
+                <span class="exp-toggle-text">Xem chi tiết</span>
+                <span class="exp-toggle-icon">+</span>
+              </button>
+              <div class="exp-details" hidden></div>
+            </article>
+
+            <article class="job" data-exp-id="e3">
+              <div class="job-top">
+                <div>
+                  <h3 class="role">Head of Market Development</h3>
+                  <div class="company">AMG International Education JSC</div>
+                </div>
+                <div class="period">06/2023 - 04/2024</div>
+              </div>
+              <p data-i18n="e3_desc">Expanded school partnerships to nearly 50 institutions and led IELTS Station implementation.</p>
+              <button class="exp-toggle" type="button" aria-expanded="false">
+                <span class="exp-toggle-text">Xem chi tiết</span>
+                <span class="exp-toggle-icon">+</span>
+              </button>
+              <div class="exp-details" hidden></div>
+            </article>
+            
+            <article class="job" data-exp-id="e4">
+              <div class="job-top">
+                <div>
+                  <h3 class="role">Business Development Manager</h3>
+                  <div class="company">Song Trang Restaurant</div>
+                </div>
+                <div class="period">11/2021 - 04/2023</div>
+              </div>
+              <p data-i18n="e4_desc">Developed 200+ travel partnerships and supported service delivery for 15,000 guests in peak season.</p>
+              <button class="exp-toggle" type="button" aria-expanded="false">
+                <span class="exp-toggle-text">Xem chi tiết</span>
+                <span class="exp-toggle-icon">+</span>
+              </button>
+              <div class="exp-details" hidden></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM SECTION -->
+    <section class="section" id="digital-ecosystem">
+      <div class="wrap card section-card reveal background-grid collapsed">
+        <div class="eco-header">
+          <span class="kicker" data-i18n="eco_kicker">IVS Product Suite</span>
+          <h2 data-i18n="eco_title">IVS Digital Ecosystem</h2>
+          <p class="lead" style="margin: 0 auto;" data-i18n="eco_sub">The IVS digital ecosystem for language center systems, meeting all your operation, assessment, and learning needs.</p>
+          <button class="section-toggle" style="margin-top: 24px;" type="button" aria-expanded="false">
+              <span class="section-toggle-text">Xem chi tiết</span>
+              <span class="section-toggle-icon">+</span>
+          </button>
+        </div>
+        
+        <div class="section-body" hidden>
+          <div class="eco-app-grid">
+            <!-- App 1 -->
+            <article class="eco-card">
+              <div class="eco-logo">
+                <img src="images/logo/logo-centercare.png" alt="CenterCare" onerror="this.src='https://via.placeholder.com/100?text=App'">
+              </div>
+              <div class="eco-content">
+                <div class="eco-platform" style="color: #b06a3b;">Platform #1</div>
+                <h3 class="eco-name">IVS CenterCare</h3>
+                <p class="eco-desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
+                <ul class="eco-features">
+                  <li>Tuition Mgt.</li>
+                  <li>Digital Attendance</li>
+                </ul>
+                <a class="btn-soft" href="https://ivscentercare.web.app/" target="_blank" rel="noopener">Explore</a>
+              </div>
+            </article>
+
+            <!-- App 2 -->
+            <article class="eco-card reverse">
+              <div class="eco-logo">
+                <img src="images/logo/logo-examia.png" alt="Examia" onerror="this.src='https://via.placeholder.com/100?text=App'">
+              </div>
+              <div class="eco-content">
+                <div class="eco-platform" style="color: #e86a6a;">Platform #2</div>
+                <h3 class="eco-name">IVS Examia</h3>
+                <p class="eco-desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
+                <ul class="eco-features">
+                  <li>Auto-Grading</li>
+                  <li>Question Bank</li>
+                </ul>
+                <a class="btn-soft" href="https://ivsexamia.web.app/" target="_blank" rel="noopener">Explore</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="wrap card section-card reveal">
+        <div class="head">
+          <div>
+            <span class="kicker" data-i18n="contact_kicker">Contact</span>
+            <h2 data-i18n="contact_title">Connect for Collaboration</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-box">
+            <h3 data-i18n="contact_box1">Direct Contact</h3>
+            <div style="margin-top: 20px;">
+              <div class="contact-line">
+                <span class="contact-label" data-i18n="label_phone">Phone</span>
+                <div class="contact-value">0795 555 789 | 0896 920 547</div>
+              </div>
+              <div class="contact-line">
+                <span class="contact-label" data-i18n="contact_label_email_work">Email</span>
+                <div class="contact-value"><a href="mailto:ceo.mtriet@ivsacademy.edu.vn">ceo.mtriet@ivsacademy.edu.vn</a></div>
+              </div>
+              <div class="contact-line">
+                <span class="contact-label" data-i18n="contact_label_linkedin">LinkedIn</span>
+                <div class="contact-value"><a href="https://www.linkedin.com/in/mtrietng" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></div>
+              </div>
+            </div>
+          </article>
+          
+          <article class="contact-box" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+            <h3 data-i18n="contact_box2">Download Resume</h3>
+            <p class="note" style="margin: 16px 0;" data-i18n="cv_note">Get a comprehensive overview of my experience, skills, and projects in PDF format.</p>
+            <a class="btn" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p data-i18n="footer_left">Professional profile of Nguyen Minh Triet - Strategic Relations, Operations, and Digital Growth.</p>
+      <p style="margin-top: 8px;">© <span id="year"></span> minhtriet.online</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- LƯU Ý: Đã giữ nguyên vẹn logic Javascript (i18n, accordion, observer) của bạn, 
+    // chỉ làm gọn lại để tiết kiệm dung lượng ---
+    const translations = {
+      vi: {
+        page_title: "Nguyen Minh Triet | Hồ sơ năng lực",
+        brand_tag: "minhtriet.online",
+        brand_name: "Nguyễn Minh Triết",
+        nav_about: "Giới thiệu", nav_strength: "Năng lực", nav_experience: "Kinh nghiệm", nav_projects: "Dự án", nav_education: "Học vấn", nav_contact: "Liên hệ",
+        hero_kicker: "Đối ngoại - Quản trị dự án - Chuyển đổi số giáo dục",
+        hero_title: "Đối ngoại chiến lược & Tăng trưởng số",
+        hero_lead: "Tôi kết nối đối ngoại, vận hành và công nghệ để xây dựng hệ sinh thái hợp tác nhà trường - doanh nghiệp bền vững, tạo giá trị thực chất cho người học.",
+        hero_cta1: "Trao đổi hợp tác", hero_cta2: "Xem hành trình",
+        hero_chip1: "Sẵn sàng làm việc tại Thủ Đức, TP.HCM và khu vực lân cận", hero_chip3: "Phát triển sản phẩm số giáo dục",
+        stat1: " trường học hợp tác", stat2: " khách dự sự kiện", stat3: " đối tác du lịch", stat4: " khóa học chuyên sâu",
+        about_kicker: "Giới thiệu", about_title: "Mục tiêu & Giá trị cốt lõi",
+        about_note: "Tập trung vào hợp tác chiến lược, tối ưu quy trình và kết quả thực tiễn.",
+        about_p1: "Kết hợp nền tảng Ngôn ngữ Anh, Quản trị Kinh doanh và Quản lý Giáo dục, tôi ứng dụng giao tiếp quốc tế vào thực thi công nghệ.",
+        about_b1: "Đàm phán văn bản hợp tác chiến lược (MOU/MOA/SPA).", about_b2: "Thiết kế & vận hành LMS, cổng AI, data workflow.", about_b3: "Quản trị dự án Agile/Lean đa ngành.",
+        strength_kicker: "Năng lực cốt lõi", strength_title: "Thế mạnh chiến lược",
+        strength_note: "3 trục: Quan hệ chiến lược - Kiến trúc số - Tốc độ thực thi.",
+        exp_kicker: "Kinh nghiệm", exp_title: "Hành trình nghề nghiệp",
+        exp_note: "Trải nghiệm đa ngành: Vận hành, thị trường, công nghệ, dịch vụ.",
+        eco_kicker: "Hệ sinh thái số", eco_title: "Sản phẩm công nghệ IVS", eco_sub: "Hệ sinh thái số toàn diện cho trung tâm ngoại ngữ.",
+        contact_kicker: "Liên hệ", contact_title: "Kết nối hợp tác", contact_box1: "Liên hệ trực tiếp", contact_box2: "Tải Hồ sơ",
+        btn_pdf: "Tải CV PDF", cv_note: "Tải file PDF chi tiết về kinh nghiệm và năng lực.",
+        footer_left: "Hồ sơ năng lực Nguyễn Minh Triết."
+      },
+      en: {
+        page_title: "Nguyen Minh Triet | Profile",
+        brand_tag: "minhtriet.online", brand_name: "Nguyen Minh Triet",
+        nav_about: "About", nav_strength: "Strengths", nav_experience: "Experience", nav_projects: "Projects", nav_education: "Education", nav_contact: "Contact",
+        hero_kicker: "External Relations - Project Leadership - Digital Transformation",
+        hero_title: "Strategic Relations & Digital Growth",
+        hero_lead: "I connect external affairs, operations, and technology to build sustainable school-enterprise partnerships.",
+        hero_cta1: "Discuss Collaboration", hero_cta2: "View Career",
+        hero_chip1: "Available in HCMC & nearby", hero_chip3: "Building EdTech products",
+        stat1: " schools connected", stat2: " event attendees", stat3: " travel partners", stat4: " advanced courses",
+        about_kicker: "About", about_title: "Vision & Value Proposition",
+        about_note: "Focused on partnerships, optimized workflows, and practical results.",
+        about_p1: "Bridging international communication with digital execution through dual degrees and educational management training.",
+        about_b1: "Strategic agreement negotiation (MOU/SPA).", about_b2: "LMS & AI portal architecture.", about_b3: "Agile/Lean project management.",
+        strength_kicker: "Core Competencies", strength_title: "Strategic Strengths",
+        strength_note: "3 axes: Strategic Relations - Digital Architecture - Execution Speed.",
+        exp_kicker: "Experience", exp_title: "Professional Journey",
+        exp_note: "Multidisciplinary track across operations, market development, and tech.",
+        eco_kicker: "Digital Ecosystem", eco_title: "IVS Tech Products", eco_sub: "Comprehensive digital ecosystem for language centers.",
+        contact_kicker: "Contact", contact_title: "Connect for Collaboration", contact_box1: "Direct Contact", contact_box2: "Download Resume",
+        btn_pdf: "Download PDF CV", cv_note: "Get a detailed PDF of my experience and capabilities.",
+        footer_left: "Nguyen Minh Triet Professional Profile."
+      }
+    };
+
+    const experienceDetails = {
+      vi: {
+        e1: ["Xây dựng hệ sinh thái website khadock.com.", "Quản lý hiện diện thương hiệu số tại Florida.", "Tối ưu SEO kỹ thuật và nội dung."],
+        e2: ["Điều hành chiến lược tăng trưởng, tài chính cho IVS.", "Thiết kế nền tảng SaaS nội bộ số hóa vận hành.", "Định hướng phát triển EdTech tích hợp AI."],
+        e3: ["Ký kết hợp tác gần 50 trường học tại Đồng Nai.", "Lãnh đạo dự án IELTS Station.", "Tổ chức sự kiện cộng đồng 1.500 người."],
+        e4: ["Xây dựng mạng lưới 200+ công ty lữ hành.", "Phục vụ 15.000 khách trong 3 tháng cao điểm.", "Thiết kế concept và decor sự kiện."]
+      },
+      en: {
+        e1: ["Built and maintained khadock.com ecosystem.", "Managed digital brand presence in Florida.", "Improved technical SEO."],
+        e2: ["Led growth strategy and finance for IVS.", "Designed internal SaaS for operations.", "Directed AI-enabled EdTech development."],
+        e3: ["Established 50 school partnerships.", "Led IELTS Station project.", "Organized 1,500-attendee event."],
+        e4: ["Built network of 200+ travel agencies.", "Served 15,000 customers in peak season.", "Managed event decor and concepts."]
+      }
+    };
+
+    // Initialize UI scripts
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Language Switcher
+      const langSelect = document.getElementById("lang");
+      
+      function applyLang(lang) {
+        const dict = translations[lang] || translations.en;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if(dict[key]) el.textContent = dict[key];
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem("site_lang", lang);
+        
+        // Update experience details
+        const expDict = experienceDetails[lang] || experienceDetails.en;
+        document.querySelectorAll(".job").forEach(job => {
+          const expId = job.getAttribute("data-exp-id");
+          const panel = job.querySelector(".exp-details");
+          if (panel && expDict[expId]) {
+            panel.innerHTML = `<ul class="list">${expDict[expId].map(item => `<li>${item}</li>`).join("")}</ul>`;
+          }
+        });
+      }
+
+      langSelect.value = localStorage.getItem("site_lang") || "vi";
+      applyLang(langSelect.value);
+      langSelect.addEventListener("change", (e) => applyLang(e.target.value));
+
+      // 2. Accordions / Toggles
+      const setupToggle = (btnSelector, containerSelector, collapsedClass = "collapsed") => {
+        document.querySelectorAll(btnSelector).forEach(btn => {
+          btn.addEventListener("click", () => {
+            const container = btn.closest(containerSelector);
+            const body = container.querySelector("[hidden]") || container.querySelector(".section-body, .exp-details");
+            const isOpen = btn.getAttribute("aria-expanded") === "true";
+            
+            btn.setAttribute("aria-expanded", !isOpen);
+            if(containerSelector !== '.job') container.classList.toggle(collapsedClass, isOpen);
+            else container.classList.toggle("open", !isOpen);
+            
+            if (body) body.hidden = isOpen;
+            
+            const txt = btn.querySelector("span:first-child");
+            const isVi = langSelect.value === "vi";
+            if (txt) {
+              if (containerSelector === '.job') txt.textContent = !isOpen ? (isVi ? "Thu gọn" : "Collapse") : (isVi ? "Xem chi tiết" : "View Details");
+              else txt.textContent = !isOpen ? (isVi ? "Thu gọn" : "Collapse") : (isVi ? "Xem chi tiết" : "Expand");
+            }
+          });
+        });
+      };
+
+      setupToggle(".section-toggle", ".section-card");
+      setupToggle(".exp-toggle", ".job");
+
+      // 3. Mobile Menu
+      const menuBtn = document.getElementById("menu-btn");
+      const nav = document.getElementById("nav");
+      menuBtn.addEventListener("click", () => nav.classList.toggle("open"));
+      nav.addEventListener("click", () => nav.classList.remove("open"));
+
+      // 4. Scroll Reveal
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+      // 5. Set Year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
