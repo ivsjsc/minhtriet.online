@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
-  <!-- Thêm thư viện Tailwind CSS (chế độ preflight: false để không làm hỏng CSS gốc) và Lucide Icons -->
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -40,32 +40,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <title>Nguyen Minh Triet | Professional Profile</title>
-  <style>
-    /* Glass card effect */
-    .glass-card {
-      background: rgba(255,255,255,0.7);
-      border-radius: 3.5rem;
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.18);
-      transition: box-shadow 0.3s, border-color 0.3s;
-    }
-    .glass-card:hover {
-      box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
-    }
-    /* Grid background for synergy block */
-    .background-grid {
-      background-image: repeating-linear-gradient(90deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px),
-        repeating-linear-gradient(0deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px);
-      background-size: 40px 40px;
-      background-position: center;
-    }
-    /* Neon drop shadow */
-    .drop-shadow-neon {
-      filter: drop-shadow(0 0 8px #9D4ED8) drop-shadow(0 0 16px #EF5675);
-    }
-  </style>
   <style>
     :root {
       --ink: #172f28;
@@ -808,21 +782,43 @@
       transform: translateY(0);
     }
 
+    /* Glass card effect (Consolidated) */
+    .glass-card {
+      background: rgba(255,255,255,0.75);
+      border-radius: 3.5rem !important;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: box-shadow 0.3s, border-color 0.3s;
+      overflow: hidden;
+    }
+    .glass-card:hover {
+      box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
+      border-color: #9D4ED8;
+    }
+    
+    /* Grid background for synergy block */
+    .background-grid {
+      background-image: repeating-linear-gradient(90deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(0deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px);
+      background-size: 40px 40px;
+      background-position: center;
+    }
+    
+    /* Neon drop shadow */
+    .drop-shadow-neon {
+      filter: drop-shadow(0 0 8px #9D4ED8) drop-shadow(0 0 16px #EF5675);
+    }
+
     @media (max-width: 1120px) {
       .hero-grid,
       .grid-2,
       .grid-3,
       .contact-grid { grid-template-columns: 1fr; }
       .head { grid-template-columns: 1fr; }
-      .head-controls {
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 1120px) {
-      .edu-grid {
-        grid-template-columns: 1fr;
-      }
+      .head-controls { flex-wrap: wrap; }
+      .edu-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 920px) {
@@ -833,9 +829,7 @@
         padding: 10px 0;
       }
       .brand { grid-area: brand; }
-      .brand strong {
-        font-size: clamp(1.45rem, 5vw, 2rem);
-      }
+      .brand strong { font-size: clamp(1.45rem, 5vw, 2rem); }
       .tools {
         grid-area: tools;
         gap: 8px;
@@ -873,13 +867,8 @@
         background: rgba(255, 255, 255, 0.86);
         font-size: 0.96rem;
       }
-      .nav a::after {
-        display: none;
-      }
-      .nav a.nav-download {
-        background: var(--accent);
-        color: #fff;
-      }
+      .nav a::after { display: none; }
+      .nav a.nav-download { background: var(--accent); color: #fff; }
       .nav.open {
         opacity: 1;
         transform: translate(-50%, 0) scale(1);
@@ -891,42 +880,28 @@
       .wrap { width: min(var(--max), calc(100% - 14px)); }
       .topbar-inner {
         grid-template-columns: 1fr;
-        grid-template-areas:
-          "brand"
-          "tools";
+        grid-template-areas: "brand" "tools";
         gap: 8px;
       }
-      .brand {
-        gap: 2px;
-      }
+      .brand { gap: 2px; }
       .brand strong {
         font-size: clamp(1.2rem, 8vw, 1.7rem);
         line-height: 0.92;
-      }
-      .brand small {
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-      }
-      .hero-copy,
-      .section-card { padding: 20px; }
-      .brand strong {
         max-width: none;
       }
+      .brand small { font-size: 0.68rem; letter-spacing: 0.16em; }
+      .hero-copy,
+      .section-card { padding: 20px; }
       .tools {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         width: 100%;
       }
-      .lang-wrap {
-        padding: 0 10px;
-      }
+      .lang-wrap { padding: 0 10px; }
       .tools .lang,
       .tools .btn,
-      .tools .menu-btn {
-        padding: 9px 12px;
-        font-size: 0.92rem;
-      }
+      .tools .menu-btn { padding: 9px 12px; font-size: 0.92rem; }
       .row { flex-direction: column; align-items: stretch; }
       .stats { grid-template-columns: 1fr; }
       .job { padding: 16px 14px 16px 44px; }
@@ -970,6 +945,7 @@
         <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#digital-ecosystem" data-i18n="nav_ecosystem">Digital Ecosystem</a>
         <a href="#education" data-i18n="nav_education">Education</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
         <a class="nav-download" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
       </nav>
     </div>
@@ -1018,7 +994,7 @@
             </div>
             <div class="grid gap-10">
               <div class="portrait">
-                <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait">
+                <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" onerror="this.src='https://placehold.co/400x400/2a4f41/ffffff?text=Profile+Image'">
               </div>
               <div class="stats">
                 <div class="stat"><strong>50</strong><span data-i18n="stat1">schools connected through partnerships</span></div>
@@ -1031,34 +1007,6 @@
         </article>
       </div>
     </section>
-<style>
-  /* Glass card effect */
-  .glass-card {
-    background: rgba(255,255,255,0.75);
-    border-radius: 3.5rem !important;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.18);
-    transition: box-shadow 0.3s, border-color 0.3s;
-    overflow: hidden;
-  }
-  .glass-card:hover {
-    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
-    border-color: #9D4ED8;
-  }
-  /* Grid background for synergy block */
-  .background-grid {
-    background-image: repeating-linear-gradient(90deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px),
-      repeating-linear-gradient(0deg, rgba(156,163,175,0.12) 0px, rgba(156,163,175,0.12) 1px, transparent 1px, transparent 40px);
-    background-size: 40px 40px;
-    background-position: center;
-  }
-  /* Neon drop shadow */
-  .drop-shadow-neon {
-    filter: drop-shadow(0 0 8px #9D4ED8) drop-shadow(0 0 16px #EF5675);
-  }
-</style>
 
     <section class="section" id="about">
       <div class="wrap card section-card reveal">
@@ -1070,7 +1018,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="about_note">Focused on strategic partnerships, streamlined workflows, and learner-centered outcomes.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1108,7 +1056,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="strength_note">Built on three axes: strategic relations, digital architecture, and high-speed delivery.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1117,30 +1065,30 @@
         <div class="section-body" hidden>
         <div class="edu-grid">
           <article class="mini">
-            <h3 data-i18n="core1_title">Ngoại giao và Đối ngoại</h3>
+            <h3 data-i18n="core1_title">External Relations and Diplomacy</h3>
             <ul class="list">
-              <li><strong data-i18n="core1_i1_t">Ngôn ngữ và nghi thức:</strong> <span data-i18n="core1_i1_d">Tiếng Anh chuyên ngành; am hiểu lễ tân ngoại giao và kỹ thuật soạn thảo văn bản hành chính/đối ngoại.</span></li>
-              <li><strong data-i18n="core1_i2_t">Kết nối quốc tế:</strong> <span data-i18n="core1_i2_d">Có kinh nghiệm làm việc và thiết lập mạng lưới quan hệ với giáo viên, giảng viên nước ngoài đa quốc tịch đang công tác tại Việt Nam.</span></li>
-              <li><strong data-i18n="core1_i3_t">Quan hệ doanh nghiệp:</strong> <span data-i18n="core1_i3_d">Am hiểu thị trường Du lịch - Nhà hàng - Khách sạn từ kinh nghiệm thực tiễn, hỗ trợ xây dựng cầu nối bền vững giữa nhà trường và cộng đồng doanh nghiệp dịch vụ.</span></li>
-              <li><strong data-i18n="core1_i4_t">Pháp lý và hành chính:</strong> <span data-i18n="core1_i4_d">Nắm vững pháp luật doanh nghiệp, quy định về thuế, BHXH; thành thạo thủ tục hành chính công và dịch vụ công trực tuyến.</span></li>
+              <li><strong data-i18n="core1_i1_t">Language and protocol:</strong> <span data-i18n="core1_i1_d">Specialized professional English; strong command of diplomatic protocol and formal administrative/external communication drafting.</span></li>
+              <li><strong data-i18n="core1_i2_t">International networking:</strong> <span data-i18n="core1_i2_d">Experienced in working with and building relationships across multinational foreign teachers and lecturers in Vietnam.</span></li>
+              <li><strong data-i18n="core1_i3_t">Enterprise relations:</strong> <span data-i18n="core1_i3_d">Deep practical understanding of Travel - Restaurant - Hospitality sectors, helping build sustainable bridges between schools and service businesses.</span></li>
+              <li><strong data-i18n="core1_i4_t">Legal and administrative capability:</strong> <span data-i18n="core1_i4_d">Solid understanding of business law, tax and social insurance regulations; proficient in public administrative procedures and online public services.</span></li>
             </ul>
           </article>
 
           <article class="mini">
-            <h3 data-i18n="core2_title">Quản trị Dự án và Lãnh đạo</h3>
+            <h3 data-i18n="core2_title">Project Governance and Leadership</h3>
             <ul class="list">
-              <li><strong data-i18n="core2_i1_t">Sự kiện và hạ tầng:</strong> <span data-i18n="core2_i1_d">Kinh nghiệm quản lý đấu thầu, thi công nội - ngoại thất (Fit-out) và quản trị cơ sở vật chất (Facilities Management).</span></li>
-              <li><strong data-i18n="core2_i2_t">Tổ chức và triển khai:</strong> <span data-i18n="core2_i2_d">Tổ chức sự kiện, tiệc cưới quốc tế, workshop giáo dục và vận hành gameshow (sân khấu, thí sinh, khán giả).</span></li>
-              <li><strong data-i18n="core2_i3_t">Kỹ thuật vận hành:</strong> <span data-i18n="core2_i3_d">Giám sát hạ tầng mạng và thiết bị công nghệ phục vụ triển khai dự án.</span></li>
+              <li><strong data-i18n="core2_i1_t">Events and infrastructure:</strong> <span data-i18n="core2_i1_d">Experienced in bidding coordination, interior/exterior fit-out management, and facilities management.</span></li>
+              <li><strong data-i18n="core2_i2_t">Organization and execution:</strong> <span data-i18n="core2_i2_d">Hands-on experience organizing international weddings, educational workshops, and gameshow operations (stage, contestants, audience).</span></li>
+              <li><strong data-i18n="core2_i3_t">Technical operations:</strong> <span data-i18n="core2_i3_d">Network infrastructure and technology equipment supervision for project implementation.</span></li>
             </ul>
           </article>
 
           <article class="mini">
-            <h3 data-i18n="core3_title">Chuyển đổi số và Công nghệ</h3>
+            <h3 data-i18n="core3_title">Digital Transformation and Technology</h3>
             <ul class="list">
-              <li><strong data-i18n="core3_i1_t">Phát triển phần mềm:</strong> <span data-i18n="core3_i1_d">Full-stack (React.js, TypeScript); thiết kế LMS/EdTech tích hợp Adaptive Learning; phát triển Web App/Mobile App đa nền tảng tập trung UX.</span></li>
-              <li><strong data-i18n="core3_i2_t">Cloud và Security:</strong> <span data-i18n="core3_i2_d">Làm chủ hệ sinh thái Firebase (NoSQL, Serverless), Google Cloud; triển khai định danh số phi tập trung với Microsoft Entra Verified ID.</span></li>
-              <li><strong data-i18n="core3_i3_t">AI và tự động hóa:</strong> <span data-i18n="core3_i3_d">Tích hợp Generative AI (LLM) vào chatbot và hệ thống phản hồi tự động; số hóa quy trình vận hành (BPA/Workflow Automation) để tối ưu nguồn lực.</span></li>
+              <li><strong data-i18n="core3_i1_t">Software development:</strong> <span data-i18n="core3_i1_d">Full-stack (React.js, TypeScript); LMS/EdTech architecture with Adaptive Learning; cross-platform Web and Mobile development with UX focus.</span></li>
+              <li><strong data-i18n="core3_i2_t">Cloud and security:</strong> <span data-i18n="core3_i2_d">Strong command of Firebase ecosystem (NoSQL, Serverless), Google Cloud, and decentralized digital identity implementation with Microsoft Entra Verified ID.</span></li>
+              <li><strong data-i18n="core3_i3_t">AI and automation:</strong> <span data-i18n="core3_i3_d">Integrates Generative AI (LLM) into chatbots and automated response systems; digitizes operations through BPA and workflow automation.</span></li>
             </ul>
           </article>
         </div>
@@ -1158,7 +1106,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="exp_note">A multidisciplinary track across operations, market development, technology, and premium service.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1265,6 +1213,7 @@
         </div>
       </div>
     </section>
+
     <section class="section" id="education">
       <div class="wrap card section-card reveal">
         <div class="head">
@@ -1275,7 +1224,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="edu_note">A multidisciplinary academic background supporting technical and business alignment.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1287,7 +1236,7 @@
             <h3 data-i18n="edu1_title">BA in English Language</h3>
             <p data-i18n="edu1_desc">Vietnam Aviation Academy (2012-2016).</p>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1302,7 +1251,7 @@
             <h3 data-i18n="edu2_title">Bachelor of Business Administration</h3>
             <p data-i18n="edu2_desc">Vietnam Aviation Academy (2013-2017).</p>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1317,7 +1266,7 @@
             <h3 data-i18n="edu3_title">Educational Management Certification</h3>
             <p data-i18n="edu3_desc">Ho Chi Minh City School of Educational Management (2024).</p>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1332,7 +1281,7 @@
             <h3 data-i18n="edu4_title">Intermediate Diploma in Aviation Commercial Services</h3>
             <p data-i18n="edu4_desc">Vietnam Aviation Academy (VAA).</p>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1350,7 +1299,7 @@
             <div class="edu-meta" data-i18n="edu_profile_badge">Academic Record</div>
             <h3 data-i18n="edu_profile_title">Verified academic profile summary</h3>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1368,7 +1317,7 @@
             <div class="edu-meta" data-i18n="edu_cert_badge">Professional Certifications</div>
             <h3 data-i18n="edu_cert_title">Technology Certifications</h3>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1385,7 +1334,7 @@
             <div class="edu-meta" data-i18n="edu_it_badge">Digital Capability</div>
             <h3 data-i18n="edu_it_title">IT and Systems Competency</h3>
             <button class="item-toggle" type="button" aria-expanded="false">
-              <span class="item-toggle-text">Thu gọn</span>
+              <span class="item-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="item-toggle-icon">+</span>
             </button>
             <div class="item-body" hidden>
@@ -1415,7 +1364,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="ecoDesc">Designed specifically for language centers, our ecosystem covers every aspect of operations, assessment, and learning.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1424,7 +1373,7 @@
         <div class="section-body" hidden>
             <div class="space-y-12 mt-8">
                 <!-- App 1: CenterCare -->
-                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-secondary transition-all group">
+                <div class="glass-card p-8 md:p-12 border border-slate-100 transition-all group relative">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <div class="flex items-center gap-4 mb-6">
@@ -1444,23 +1393,23 @@
                                 <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-secondary"></i> <span data-i18n="feat1_4">Smart Scheduling</span></div>
                             </div>
                             <a href="https://ivscentercare.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-secondary transition-all shadow-lg">
-                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4 text-white"></i>
                             </a>
                         </div>
                         <div class="hidden lg:block">
                             <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
-                                <img src="images/logo/logo-centercare.png" alt="CenterCare Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                                <img src="images/logo/logo-centercare.png" alt="CenterCare Large" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400/9D4ED8/FFFFFF?text=CenterCare'" />
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- App 2: Examia -->
-                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-accent transition-all group">
+                <div class="glass-card p-8 md:p-12 border border-slate-100 transition-all group relative">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div class="order-2 lg:order-1 hidden lg:block">
                             <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
-                                <img src="images/logo/logo-examia.png" alt="Examia Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                                <img src="images/logo/logo-examia.png" alt="Examia Large" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400/EF5675/FFFFFF?text=Examia'" />
                             </div>
                         </div>
                         <div class="order-1 lg:order-2">
@@ -1481,14 +1430,14 @@
                                 <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> <span data-i18n="feat2_4">Anti-Cheat Mode</span></div>
                             </div>
                             <a href="https://ivsexamia.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-accent transition-all shadow-lg">
-                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4 text-white"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- App 3: ELearners -->
-                <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-blue-500 transition-all group">
+                <div class="glass-card p-8 md:p-12 border border-slate-100 transition-all group relative">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <div class="flex items-center gap-4 mb-6">
@@ -1508,24 +1457,23 @@
                                 <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-500"></i> <span data-i18n="feat3_4">Reward System</span></div>
                             </div>
                             <a href="https://ivslearning.io.vn" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-blue-500 transition-all shadow-lg">
-                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4 text-white"></i>
                             </a>
                         </div>
                         <div class="hidden lg:block">
                             <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
-                                <img src="images/logo/logo-elearners.png" alt="ELearners Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                                <img src="images/logo/logo-elearners.png" alt="ELearners Large" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400/3B82F6/FFFFFF?text=ELearners'" />
                             </div>
                         </div>
                     </div>
                 </div>
 
-
             <!-- App 4: Testing Placement -->
-            <div class="glass-card rounded-[3.5rem] p-8 md:p-12 shadow-soft border border-slate-100 hover:border-emerald-500 transition-all group">
+            <div class="glass-card p-8 md:p-12 border border-slate-100 transition-all group relative">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="order-2 lg:order-1 hidden lg:block">
                         <div class="rounded-[2.5rem] overflow-hidden border-4 border-slate-50 shadow-2xl bg-slate-100 aspect-video flex items-center justify-center relative">
-                            <img src="images/logo/logo-testing.png" alt="Testing Large" class="w-full h-full object-contain" onerror="this.src='images/logo/logo.png'" />
+                            <img src="images/logo/logo-testing.png" alt="Testing Large" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/600x400/10B981/FFFFFF?text=Testing'" />
                         </div>
                     </div>
                     <div class="order-1 lg:order-2">
@@ -1546,7 +1494,7 @@
                             <div class="flex items-center gap-2 text-xs font-bold text-slate-500"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> <span data-i18n="feat4_4">Report Generation</span></div>
                         </div>
                         <a href="https://testplacement.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-emerald-500 transition-all shadow-lg">
-                            <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4"></i>
+                            <span data-i18n="openApp">Explore Details</span> <i data-lucide="external-link" class="w-4 h-4 text-white"></i>
                         </a>
                         </div>
                     </div>
@@ -1567,7 +1515,7 @@
             </div>
         </div>
       </div>
-    </section>    
+    </section>  
 
     <section class="section" id="projects">
       <div class="wrap card section-card reveal">
@@ -1579,7 +1527,7 @@
           <div class="head-controls">
             <p class="note" data-i18n="project_note">Real products focused on measurable outcomes in education, analytics, and daily operations.</p>
             <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
               <span class="section-toggle-icon">+</span>
             </button>
           </div>
@@ -1659,6 +1607,54 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="contact">
+      <div class="wrap card section-card reveal">
+        <div class="head">
+          <div>
+            <p class="kicker" data-i18n="contact_kicker">Contact</p>
+            <h2 data-i18n="contact_title">Connect for Collaboration and Recruitment</h2>
+          </div>
+          <div class="head-controls">
+            <p class="note" data-i18n="contact_note">Open for roles in external affairs, digital operations, strategic partnerships, and product development.</p>
+            <button class="section-toggle" type="button" aria-expanded="false">
+              <span class="section-toggle-text" data-i18n="section_expand">Expand</span>
+              <span class="section-toggle-icon">+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="section-body" hidden>
+          <div class="contact-grid">
+            <article class="contact-box">
+              <h3 data-i18n="contact_box1">Direct Contact</h3>
+              <div class="line">
+                <span class="label" data-i18n="contact_label_email_work">Work Email</span>
+                <a href="mailto:nminhtr29@gmail.com" class="font-semibold text-primary hover:text-accent transition-colors">nminhtr29@gmail.com</a>
+              </div>
+              <div class="line">
+                <span class="label" data-i18n="contact_label_linkedin">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="font-semibold text-primary hover:text-accent transition-colors">linkedin.com/in/mtrietng</a>
+              </div>
+              <div class="line">
+                <span class="label" data-i18n="label_address">Address:</span>
+                <span class="font-medium text-slate-600" data-i18n="value_address">1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province</span>
+              </div>
+            </article>
+            <article class="contact-box">
+              <h3 data-i18n="contact_box2">Download CV</h3>
+              <p class="mb-4 text-slate-600 text-sm" data-i18n="cv_note">Use the button below to download the CV PDF.</p>
+              <a class="btn inline-flex items-center gap-2" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" style="text-decoration: none;">
+                <i data-lucide="download" class="w-4 h-4 text-white"></i>
+                <span data-i18n="btn_pdf">Download CV PDF</span>
+              </a>
+              <div id="translation-status" class="translation-status hidden"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
