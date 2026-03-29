@@ -791,76 +791,452 @@
   </header>
 
   <main id="top">
-    <!-- ═══════════════ HERO ═══════════════ -->
-    <section class="section hero">
-      <div class="wrap hero-grid">
+<section class="section hero">
+  <div class="wrap hero-grid">
+    <article class="card hero-content reveal">
+      
+      <!-- Portrait Image - Top Priority -->
+      <div class="hero-portrait">
+        <img src="./images/avatar.webp" alt="Nguyen Minh Triet" 
+          onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
+      </div>
 
-        <!-- LEFT: Portrait → Stats → Social -->
-        <div class="card hero-visual reveal">
-          <div class="portrait">
-            <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait"
-              onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
+      <!-- Social Network Icons - Immediately After Image -->
+      <div class="social-row">
+        <a href="mailto:nminhtr29@gmail.com" class="social-icon" style="background:#D44638;" aria-label="Email">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="social-icon" style="background:#0A66C2;" aria-label="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="https://www.facebook.com/ngmi.triet" target="_blank" class="social-icon" style="background:#1877F2;" aria-label="Facebook">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.494v-9.294H9.691V11.01h3.129V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+        </a>
+        <a href="https://m.me/ngmi.triet" target="_blank" class="social-icon" style="background:#1877F2;" aria-label="Messenger">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/ngmi.triet/" target="_blank" class="social-icon" style="background:#E4405F;" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+        </a>
+        <a href="https://github.com/ivsjsc" target="_blank" class="social-icon" style="background:#333;" aria-label="GitHub">
+          <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="https://zalo.me/nmt5555789" target="_blank" class="social-icon" style="background:#0068FF;" aria-label="Zalo">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/></svg>
+        </a>
+        <a href="https://x.com/nminhtr29" target="_blank" class="social-icon" style="background:#000;" aria-label="X (Twitter)">
+          <svg viewBox="0 0 1200 1227" fill="currentColor"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
+        </a>
+      </div>
+
+      <!-- Main Content - Simplified -->
+      <div class="hero-text">
+        <h1 data-i18n="hero_title">Kinh nghiệm tham gia nhiều lĩnh vực như hàng không, du lịch, nhà hàng - khách sạn, giáo dục, công nghệ</h1>
+        <p class="lead" data-i18n="hero_lead">Luôn tiếp nhận, tìm tòi học hỏi và phát triển từ những điều mới, mong muốn không giới hạn về tư duy.</p>
+        
+        <!-- 4 Key Highlights (Always Visible) -->
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">⚡</div>
+            <span data-i18n="highlight1">Đa nhiệm mạnh mẽ</span>
           </div>
-
-          <div class="stats">
-            <div class="stat"><strong>50</strong><span data-i18n="stat1">schools connected</span></div>
-            <div class="stat"><strong>1,500+</strong><span data-i18n="stat2">event participants</span></div>
-            <div class="stat"><strong>200+</strong><span data-i18n="stat3">tourism partners</span></div>
-            <div class="stat"><strong>10+</strong><span data-i18n="stat4">Cloud / AI courses</span></div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🤝</div>
+            <span data-i18n="highlight2">Quan hệ đối tác</span>
           </div>
-
-          <!-- Social Network icons -->
-          <div class="social-row">
-            <!-- Email -->
-            <a href="mailto:nminhtr29@gmail.com" class="social-icon-sm" style="background:#D44638;" aria-label="Email">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </a>
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="social-icon-sm" style="background:#0A66C2;" aria-label="LinkedIn">
-              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/ngmi.triet" target="_blank" class="social-icon-sm" style="background:#1877F2;" aria-label="Facebook">
-              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.494v-9.294H9.691V11.01h3.129V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
-            </a>
-            <!-- Messenger -->
-            <a href="https://m.me/ngmi.triet" target="_blank" class="social-icon-sm" style="background:#1877F2;" aria-label="Messenger">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z"/></svg>
-            </a>
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/ngmi.triet/" target="_blank" class="social-icon-sm" style="background:#E4405F;" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com/ivsjsc" target="_blank" class="social-icon-sm" style="background:#333;" aria-label="GitHub">
-              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
-            </a>
-            <!-- Zalo -->
-            <a href="https://zalo.me/nmt5555789" target="_blank" class="social-icon-sm" style="background:#0068FF;" aria-label="Zalo">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/></svg>
-            </a>
-            <!-- X / Twitter -->
-            <a href="https://x.com/nminhtr29" target="_blank" class="social-icon-sm" style="background:#000;" aria-label="X (Twitter)">
-              <svg viewBox="0 0 1200 1227" fill="currentColor"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
-            </a>
+          <div class="highlight-item">
+            <div class="highlight-icon">⚙️</div>
+            <span data-i18n="highlight3">Tối ưu quy trình</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🌐</div>
+            <span data-i18n="highlight4">Đa ngành nghề</span>
           </div>
         </div>
 
-        <!-- RIGHT: Copy -->
-        <article class="card hero-copy reveal">
-          <span class="eyebrow" data-i18n="hero_kicker">External Relations · Project Leadership · Digital Transformation</span>
-          <h1 data-i18n="hero_title">Strategic Relations &amp; Digital Growth
-            <span class="highlight" data-i18n="hero_name">Nguyen Minh Triet</span>
-          </h1>
-          <p class="lead" data-i18n="hero_lead">I connect external affairs, operations, and technology execution to build sustainable school-enterprise partnerships and practical value for learners.</p>
-          <div class="row">
-            <a class="btn" href="#contact" data-i18n="hero_cta1">Contact now</a>
-            <a class="btn-soft" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
-          </div>
-        </article>
-
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero_cta1">Liên hệ ngay</a>
+          <button class="btn btn-secondary" id="toggleStatsBtn" data-i18n="btn_view_stats">Xem thống kê</button>
+        </div>
       </div>
-    </section>
+
+      <!-- Collapsible Stats Section -->
+      <div class="stats-section" id="statsSection" hidden>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>50</strong>
+            <span data-i18n="stat1">trường học kết nối hợp tác</span>
+          </div>
+          <div class="stat-card">
+            <strong>1,500+</strong>
+            <span data-i18n="stat2">khách tham dự sự kiện quy mô lớn</span>
+          </div>
+          <div class="stat-card">
+            <strong>200+</strong>
+            <span data-i18n="stat3">đối tác du lịch đã kết nối</span>
+          </div>
+          <div class="stat-card">
+            <strong>10+</strong>
+            <span data-i18n="stat4">khóa học nâng cao Cloud, Security, AI</span>
+          </div>
+        </div>
+        <div class="stats-cta">
+          <a href="#experience" class="btn btn-explore" data-i18n="btn_explore_more">
+            Khám phá chi tiết bên dưới ↓
+          </a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+</section>
+
+<style>
+/* Hero Section Optimized Styles */
+.hero {
+  padding: 40px 0 60px;
+}
+
+.hero-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  padding: 40px;
+  background: rgba(255, 251, 243, 0.78);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(23, 47, 40, 0.14);
+  border-radius: 28px;
+  box-shadow: 0 24px 80px rgba(23, 47, 40, 0.12);
+}
+
+/* Portrait Image */
+.hero-portrait {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 24px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 47, 40, 0.14);
+  background: linear-gradient(180deg, rgba(42, 79, 65, 0.08), rgba(176, 106, 59, 0.14));
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+
+/* Social Icons Row */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hero Text */
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.2;
+  color: #172f28;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.hero-text .lead {
+  font-size: 1.05rem;
+  color: #61746c;
+  line-height: 1.8;
+  margin: 0 0 32px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 4 Key Highlights Grid */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(23, 47, 40, 0.08);
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 79, 65, 0.15);
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.highlight-item span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #172f28;
+  line-height: 1.4;
+}
+
+/* CTA Buttons */
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: #2a4f41;
+  color: #fff;
+  border: 2px solid #2a4f41;
+}
+
+.btn-primary:hover {
+  background: #172f28;
+  border-color: #172f28;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(42, 79, 65, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.76);
+  color: #172f28;
+  border: 2px solid rgba(23, 47, 40, 0.14);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(42, 79, 65, 0.2);
+}
+
+/* Collapsible Stats Section */
+.stats-section {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px dashed rgba(23, 47, 40, 0.14);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.83);
+  border: 1px solid rgba(23, 47, 40, 0.14);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2a4f41;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #61746c;
+  line-height: 1.5;
+}
+
+.stats-cta {
+  text-align: center;
+}
+
+.btn-explore {
+  background: linear-gradient(135deg, #b06a3b 0%, #ef5675 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(176, 106, 59, 0.3);
+}
+
+.btn-explore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(176, 106, 59, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 24px;
+  }
+  
+  .hero-portrait {
+    max-width: 220px;
+  }
+  
+  .social-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stat-card strong {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn {
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+// Toggle Stats Section
+document.getElementById('toggleStatsBtn').addEventListener('click', function() {
+  const statsSection = document.getElementById('statsSection');
+  const isHidden = statsSection.hidden;
+  statsSection.hidden = !isHidden;
+  this.textContent = isHidden 
+    ? (translations[localStorage.getItem('site_lang') || 'vi']?.btn_hide_stats || 'Ẩn thống kê')
+    : (translations[localStorage.getItem('site_lang') || 'vi']?.btn_view_stats || 'Xem thống kê');
+});
+</script>
+
+
+
+              <script>
+                              vi: {
+  // ... existing translations
+  highlight1: "Đa nhiệm mạnh mẽ",
+  highlight2: "Quan hệ đối tác",
+  highlight3: "Tối ưu quy trình",
+  highlight4: "Đa ngành nghề",
+  btn_view_stats: "Xem thống kê",
+  btn_hide_stats: "Ẩn thống kê",
+  btn_explore_more: "Khám phá chi tiết bên dưới ↓"
+},
+en: {
+  // ... existing translations
+  highlight1: "Strong Multitasking",
+  highlight2: "Partner Relations",
+  highlight3: "Process Optimization",
+  highlight4: "Multi-Industry",
+  btn_view_stats: "View Statistics",
+  btn_hide_stats: "Hide Statistics",
+  btn_explore_more: "Explore Details Below ↓"
+}
+
+
+              </script>
 
     <!-- ═══════════════ ABOUT ═══════════════ -->
     <section class="section" id="about">
@@ -3447,6 +3823,22 @@
 
     // ─── FOOTER YEAR ───
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ─── TOGGLE STATS SECTION ───
+    const toggleStatsBtn = document.getElementById('toggleStatsBtn');
+    const statsSection = document.getElementById('statsSection');
+    if (toggleStatsBtn && statsSection) {
+      toggleStatsBtn.addEventListener('click', () => {
+        const isHidden = statsSection.hasAttribute('hidden');
+        if (isHidden) {
+          statsSection.removeAttribute('hidden');
+          toggleStatsBtn.textContent = 'Ẩn thống kê';
+        } else {
+          statsSection.setAttribute('hidden', '');
+          toggleStatsBtn.textContent = 'Xem thống kê';
+        }
+      });
+    }
 
     // ─── LUCIDE ICONS ───
     lucide.createIcons();
