@@ -825,28 +825,52 @@
         </a>
       </div>
 
-      <!-- Main Content - Simplified -->
+      <!-- Main Content - Refined -->
       <div class="hero-text">
-        <h1 data-i18n="hero_title">Kinh nghiệm tham gia nhiều lĩnh vực như hàng không, du lịch, nhà hàng - khách sạn, giáo dục, công nghệ</h1>
+        <!-- Industry Tags - Clean Visual Separation -->
+        <div class="industry-tags">
+          <span class="tag">✈️ Hàng không</span>
+          <span class="tag">🏖️ Du lịch</span>
+          <span class="tag">🏨 Nhà hàng - Khách sạn</span>
+          <span class="tag">📚 Giáo dục</span>
+          <span class="tag">💻 Công nghệ</span>
+        </div>
+
+        <!-- Title - Reduced Font Size -->
+        <h1 data-i18n="hero_title">Đa ngành - Đa lĩnh vực</h1>
+        
+        <!-- Lead Text -->
         <p class="lead" data-i18n="hero_lead">Luôn tiếp nhận, tìm tòi học hỏi và phát triển từ những điều mới, mong muốn không giới hạn về tư duy.</p>
         
         <!-- 4 Key Highlights (Always Visible) -->
         <div class="highlights-grid">
           <div class="highlight-item">
             <div class="highlight-icon">⚡</div>
-            <span data-i18n="highlight1">Đa nhiệm mạnh mẽ</span>
+            <div class="highlight-content">
+              <strong data-i18n="highlight1_title">Đa nhiệm</strong>
+              <span data-i18n="highlight1_desc">Xử lý vấn đề</span>
+            </div>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">🤝</div>
-            <span data-i18n="highlight2">Quan hệ đối tác</span>
+            <div class="highlight-content">
+              <strong data-i18n="highlight2_title">Khắc phục</strong>
+              <span data-i18n="highlight2_desc">Sự cố & Đối tác</span>
+            </div>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">⚙️</div>
-            <span data-i18n="highlight3">Tối ưu quy trình</span>
+            <div class="highlight-content">
+              <strong data-i18n="highlight3_title">Tối ưu</strong>
+              <span data-i18n="highlight3_desc">Quy trình công nghệ</span>
+            </div>
           </div>
           <div class="highlight-item">
             <div class="highlight-icon">🌐</div>
-            <span data-i18n="highlight4">Đa ngành nghề</span>
+            <div class="highlight-content">
+              <strong data-i18n="highlight4_title">Kinh nghiệm</strong>
+              <span data-i18n="highlight4_desc">Đa ngành nghề</span>
+            </div>
           </div>
         </div>
 
@@ -889,18 +913,18 @@
 </section>
 
 <style>
-/* Hero Section Optimized Styles */
+/* Hero Section Refined Styles */
 .hero {
-  padding: 40px 0 60px;
+  padding: 30px 0 50px;
 }
 
 .hero-grid {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
 .hero-content {
-  padding: 40px;
+  padding: 32px;
   background: rgba(255, 251, 243, 0.78);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(23, 47, 40, 0.14);
@@ -911,9 +935,9 @@
 /* Portrait Image */
 .hero-portrait {
   width: 100%;
-  max-width: 280px;
-  margin: 0 auto 24px;
-  border-radius: 22px;
+  max-width: 240px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(23, 47, 40, 0.14);
   background: linear-gradient(180deg, rgba(42, 79, 65, 0.08), rgba(176, 106, 59, 0.14));
@@ -931,14 +955,14 @@
 .social-row {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .social-icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -954,8 +978,8 @@
 }
 
 .social-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Hero Text */
@@ -963,21 +987,54 @@
   text-align: center;
 }
 
+/* Industry Tags - Clean Visual Separation */
+.industry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(23, 47, 40, 0.14);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(23, 47, 40, 0.1);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(176, 106, 59, 0.15);
+  border-color: rgba(176, 106, 59, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Title - Reduced Font Size */
 .hero-text h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  line-height: 1.2;
-  color: #172f28;
-  margin: 0 0 20px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 16px;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .hero-text .lead {
-  font-size: 1.05rem;
-  color: #61746c;
-  line-height: 1.8;
-  margin: 0 0 32px;
-  max-width: 680px;
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -986,10 +1043,10 @@
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 32px 0;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.6);
+  gap: 12px;
+  margin: 28px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   border: 1px solid rgba(23, 47, 40, 0.08);
 }
@@ -997,8 +1054,8 @@
 .highlight-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 10px;
+  padding: 12px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -1011,30 +1068,44 @@
 }
 
 .highlight-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
-.highlight-item span {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #172f28;
-  line-height: 1.4;
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.highlight-content strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.highlight-content span {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
 }
 
 /* CTA Buttons */
 .hero-cta {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .btn {
   border-radius: 999px;
-  padding: 14px 32px;
-  font-size: 1rem;
+  padding: 12px 28px;
+  font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1047,22 +1118,22 @@
 }
 
 .btn-primary {
-  background: #2a4f41;
+  background: var(--forest);
   color: #fff;
-  border: 2px solid #2a4f41;
+  border: 2px solid var(--forest);
 }
 
 .btn-primary:hover {
-  background: #172f28;
-  border-color: #172f28;
+  background: var(--primary);
+  border-color: var(--primary);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(42, 79, 65, 0.3);
 }
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.76);
-  color: #172f28;
-  border: 2px solid rgba(23, 47, 40, 0.14);
+  color: var(--ink);
+  border: 2px solid var(--line);
 }
 
 .btn-secondary:hover {
@@ -1073,9 +1144,9 @@
 
 /* Collapsible Stats Section */
 .stats-section {
-  margin-top: 32px;
-  padding-top: 32px;
-  border-top: 2px dashed rgba(23, 47, 40, 0.14);
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 2px dashed var(--line);
   animation: slideDown 0.4s ease;
 }
 
@@ -1093,32 +1164,32 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .stat-card {
   background: rgba(255, 255, 255, 0.83);
-  border: 1px solid rgba(23, 47, 40, 0.14);
-  border-radius: 16px;
-  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
   text-align: center;
 }
 
 .stat-card strong {
   display: block;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  color: #2a4f41;
+  color: var(--forest);
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .stat-card span {
   display: block;
-  font-size: 0.9rem;
-  color: #61746c;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 .stats-cta {
@@ -1126,12 +1197,12 @@
 }
 
 .btn-explore {
-  background: linear-gradient(135deg, #b06a3b 0%, #ef5675 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent) 100%);
   color: #fff;
   border: none;
-  padding: 16px 40px;
+  padding: 14px 32px;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
   display: inline-flex;
@@ -1153,12 +1224,12 @@
   }
   
   .hero-portrait {
-    max-width: 220px;
+    max-width: 200px;
   }
   
   .social-icon {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
   
   .social-icon svg {
@@ -1166,22 +1237,31 @@
     height: 18px;
   }
   
+  .industry-tags {
+    gap: 6px;
+  }
+  
+  .tag {
+    font-size: 0.78rem;
+    padding: 5px 10px;
+  }
+  
   .highlights-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
   
   .stats-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
   
   .stat-card strong {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   
   .hero-cta {
@@ -1202,30 +1282,42 @@ document.getElementById('toggleStatsBtn').addEventListener('click', function() {
   const isHidden = statsSection.hidden;
   statsSection.hidden = !isHidden;
   this.textContent = isHidden 
-    ? (translations[localStorage.getItem('site_lang') || 'vi']?.btn_hide_stats || 'Ẩn thống kê')
-    : (translations[localStorage.getItem('site_lang') || 'vi']?.btn_view_stats || 'Xem thống kê');
+    ? (translations[localStorage.getItem('site_lang') || 'vi']?.btn_view_stats || 'Xem thống kê')
+    : (translations[localStorage.getItem('site_lang') || 'vi']?.btn_hide_stats || 'Ẩn thống kê');
 });
 </script>
 
 
 
-              <script>
+<script>
                               vi: {
   // ... existing translations
-  highlight1: "Đa nhiệm mạnh mẽ",
-  highlight2: "Quan hệ đối tác",
-  highlight3: "Tối ưu quy trình",
-  highlight4: "Đa ngành nghề",
+  hero_title: "Đa ngành - Đa lĩnh vực",
+  industry_tags: "Hàng không · Du lịch · Nhà hàng - Khách sạn · Giáo dục · Công nghệ",
+  highlight1_title: "Đa nhiệm",
+  highlight1_desc: "Xử lý vấn đề",
+  highlight2_title: "Khắc phục",
+  highlight2_desc: "Sự cố & Đối tác",
+  highlight3_title: "Tối ưu",
+  highlight3_desc: "Quy trình công nghệ",
+  highlight4_title: "Kinh nghiệm",
+  highlight4_desc: "Đa ngành nghề",
   btn_view_stats: "Xem thống kê",
   btn_hide_stats: "Ẩn thống kê",
   btn_explore_more: "Khám phá chi tiết bên dưới ↓"
 },
 en: {
   // ... existing translations
-  highlight1: "Strong Multitasking",
-  highlight2: "Partner Relations",
-  highlight3: "Process Optimization",
-  highlight4: "Multi-Industry",
+  hero_title: "Multi-Industry Expert",
+  industry_tags: "Aviation · Tourism · Hospitality · Education · Technology",
+  highlight1_title: "Multitasking",
+  highlight1_desc: "Problem Solving",
+  highlight2_title: "Troubleshooting",
+  highlight2_desc: "Issues & Partners",
+  highlight3_title: "Optimization",
+  highlight3_desc: "Tech Processes",
+  highlight4_title: "Experience",
+  highlight4_desc: "Multi-Industry",
   btn_view_stats: "View Statistics",
   btn_hide_stats: "Hide Statistics",
   btn_explore_more: "Explore Details Below ↓"
