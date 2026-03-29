@@ -249,6 +249,11 @@
     .menu-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
 
     .menu-btn { display: none; }
+    .nav-download {
+      background: var(--accent);
+      color: #fff;
+      border-color: transparent;
+    }
 
     .section {
       padding: 24px 0;
@@ -843,24 +848,26 @@
       }
       .nav {
         position: absolute;
-        left: 0;
-        right: 0;
+        left: 50%;
+        right: auto;
+        width: min(420px, calc(100% - 26px));
         top: calc(100% + 8px);
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
         border: 1px solid var(--line);
         border-radius: 16px;
-        padding: 10px;
+        padding: 12px;
         background: rgba(255, 251, 243, 0.95);
         box-shadow: var(--shadow);
         opacity: 0;
-        transform: translateY(-8px) scale(0.98);
+        transform: translate(-50%, -8px) scale(0.98);
         pointer-events: none;
         transition: opacity 0.2s ease, transform 0.2s ease;
       }
       .nav a {
         display: block;
+        text-align: center;
         padding: 11px 12px;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.86);
@@ -869,9 +876,13 @@
       .nav a::after {
         display: none;
       }
+      .nav a.nav-download {
+        background: var(--accent);
+        color: #fff;
+      }
       .nav.open {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translate(-50%, 0) scale(1);
         pointer-events: auto;
       }
     }
@@ -959,7 +970,7 @@
         <a href="#projects" data-i18n="nav_projects">Projects</a>
         <a href="#digital-ecosystem" data-i18n="nav_ecosystem">Digital Ecosystem</a>
         <a href="#education" data-i18n="nav_education">Education</a>
-        <a href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
+        <a class="nav-download" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
       </nav>
     </div>
   </header>
@@ -1398,7 +1409,7 @@
             <p class="kicker" data-i18n="badgeTech">Proprietary Technology Stack</p>
             <h2 class="flex items-center gap-3">
               <img src="images/logo/logo.png" alt="IVS Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain hidden sm:block" onerror="this.src='https://placehold.co/80x80/9D4ED8/FFFFFF?text=IVS'" />
-              <span data-i18n="ecoTitle">IVS Digital Ecosystem</span>
+              <span data-i18n="ecoTitle">Applications</span>
             </h2>
           </div>
           <div class="head-controls">
@@ -1648,48 +1659,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section" id="contact">
-      <div class="wrap card section-card reveal">
-        <div class="head">
-          <div>
-            <p class="kicker" data-i18n="contact_kicker">Contact</p>
-            <h2 data-i18n="contact_title">Connect for Collaboration and Recruitment</h2>
-          </div>
-          <div class="head-controls">
-            <p class="note" data-i18n="contact_note">Open for roles in external affairs, digital operations, strategic partnerships, and product development.</p>
-            <button class="section-toggle" type="button" aria-expanded="false">
-              <span class="section-toggle-text">Thu gọn</span>
-              <span class="section-toggle-icon">+</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="section-body" hidden>
-        <div class="contact-grid">
-          <article class="contact-box">
-            <h3 data-i18n="contact_box1">Direct Contact</h3>
-            <div class="line"><span class="label" data-i18n="label_phone">Phone</span><p>0795 555 789 | 0896 920 547</p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_email_work">Work Email</span><p><a href="mailto:ceo.mtriet@ivsacademy.edu.vn">ceo.mtriet@ivsacademy.edu.vn</a></p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_email_personal">Personal Email</span><p><a href="mailto:mi.triet@outlook.com">mi.triet@outlook.com</a></p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_website_personal">Website</span><p><a href="https://www.minhtriet.online" target="_blank" rel="noopener">www.minhtriet.online</a></p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_website_company">Company Website</span><p><a href="https://www.ivsacademy.edu.vn" target="_blank" rel="noopener">www.ivsacademy.edu.vn</a></p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_linkedin">LinkedIn</span><p><a href="https://www.linkedin.com/in/mtrietng" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></p></div>
-            <div class="line"><span class="label" data-i18n="contact_label_github">GitHub</span><p><a href="https://github.com/ivsjsc" target="_blank" rel="noopener">github.com/ivsjsc</a></p></div>
-            <div class="line"><span class="label" data-i18n="label_address">Address</span><p data-i18n="value_address">1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province</p></div>
-          </article>
-          <article class="contact-box">
-            <h3 data-i18n="contact_box2">Download CV</h3>
-            <p data-i18n="cv_note">Use the buttons below to download Markdown CV or save this page as PDF.</p>
-            <div class="row">
-              <a class="btn" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
-            </div>
-            <div class="translation-status" id="translation-status"></div>
-          </article>
-        </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -1721,7 +1690,7 @@
         hero_name: "Nguyễn Minh Triết",
         hero_title: "Kinh nghiệm tham gia nhiều lĩnh vực như hàng không, du lịch, nhà hàng - khách sạn, giáo dục, công nghệ",
         hero_lead: "Luôn tiếp nhận, tìm tòi học hỏi và phát triển từ những điều mới, mong muốn không giới hạn về tư duy.",
-        hero_cta1: "Liên hệ trao đổi ngay",
+        hero_cta1: "Liên hệ ngay",
         hero_cta2: "Xem hành trình nghề nghiệp",
         hero_chip1: "Sẵn sàng làm việc tại Thủ Đức, TP.HCM và khu vực lân cận",
         hero_chip3: "Phát triển sản phẩm số cho giáo dục và vận hành",
@@ -1967,7 +1936,7 @@
         
         // Thêm bản dịch cho phần Digital Ecosystem (English)
         badgeTech: "Proprietary Technology Stack",
-        ecoTitle: "IVS Digital Ecosystem",
+        ecoTitle: "Applications",
         ecoDesc: "Designed specifically for language centers, our ecosystem covers every aspect of operations, assessment, and learning.",
         app1DescLong: "A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.",
         feat1_1: "Tuition Management",
