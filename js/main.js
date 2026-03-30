@@ -155,6 +155,9 @@ function initializeWebsite() {
     // Initialize language switcher
     initLanguageSwitcher();
 
+    // Initialize scroll to top
+    initScrollToTop();
+
     // Load saved language (default to the page language or 'vi')
     const savedLang = localStorage.getItem('language') || document.documentElement.lang || 'vi';
     // Make sure changeLanguage is applied after init; changeLanguage now returns a Promise
@@ -454,6 +457,37 @@ function initLanguageSwitcher() {
 
 // Global function for language switching (called from HTML)
 window.changeLanguage = changeLanguage;
+
+// Scroll to Top functionality
+function initScrollToTop() {
+    const scrollBtn = document.getElementById('scroll-to-top');
+    if (!scrollBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+
+    // Scroll to top when clicked
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Initialize scroll to top in website initialization
+function initializeWebsite() {
+    // ... existing code ...
+    
+    // Initialize scroll to top
+    initScrollToTop();
+}
 
 // Export for use in other modules if needed
 if (typeof module !== 'undefined' && module.exports) {
