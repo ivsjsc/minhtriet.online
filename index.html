@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f0e8d8">
+<meta name="color-scheme" content="light">
 <meta name="description" content="Nguyen Minh Triet - External Relations, Project Leadership, and Digital Transformation in Education.">
 <meta name="keywords" content="Nguyen Minh Triet, External Relations, EdTech, Project Management, AI, Digital Transformation">
 <meta name="author" content="Nguyen Minh Triet">
@@ -28,9 +30,9 @@ corePlugins: { preflight: false },
 theme: {
 extend: {
 colors: {
-primary: '#172f28',
-secondary: '#b06a3b',
-accent: '#EF5675'
+primary: '#152922',
+secondary: '#a55f2e',
+accent: '#c44a6b'
 }
 }
 }
@@ -40,31 +42,52 @@ accent: '#EF5675'
 <title>Nguyen Minh Triet | Professional Profile</title>
 <style>
 :root {
---ink: #172f28;
---muted: #61746c;
+--ink: #152922;
+--muted: #4a5c54;
 --paper: #fff9f2;
---line: rgba(23, 47, 40, 0.14);
---accent: #b06a3b;
---accent-soft: rgba(176, 106, 59, 0.14);
+--line: rgba(23, 47, 40, 0.17);
+--accent: #a55f2e;
+--accent-hover: #8d4f24;
+--accent-soft: rgba(165, 95, 46, 0.16);
 --forest: #2a4f41;
---bg: #f3ecde;
---card: rgba(255, 251, 243, 0.78);
---shadow: 0 24px 80px rgba(23, 47, 40, 0.12);
+--forest-hover: #1e3b32;
+--bg: #f0e8d8;
+--card: rgba(255, 252, 246, 0.86);
+--shadow: 0 24px 72px rgba(23, 47, 40, 0.11);
+--shadow-sm: 0 10px 32px rgba(23, 47, 40, 0.07);
 --radius-xl: 28px;
 --radius-lg: 18px;
---max: 1240px;
+--max: 1180px;
+--text-base: 1.0625rem;
+--leading-body: 1.65;
+--leading-tight: 1.25;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+scroll-behavior: smooth;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color-scheme: light;
+}
 body {
 margin: 0;
-font-family: "Manrope", sans-serif;
+font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+font-size: var(--text-base);
+line-height: var(--leading-body);
+letter-spacing: -0.01em;
 color: var(--ink);
 background:
-radial-gradient(circle at 10% 0%, rgba(176, 106, 59, 0.18), transparent 28%),
-radial-gradient(circle at 90% 12%, rgba(42, 79, 65, 0.14), transparent 24%),
-linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+radial-gradient(ellipse 120% 80% at 10% -10%, rgba(176, 106, 59, 0.14), transparent 42%),
+radial-gradient(ellipse 100% 60% at 92% 8%, rgba(42, 79, 65, 0.1), transparent 38%),
+linear-gradient(180deg, #faf6ee 0%, var(--bg) 48%, #ebe3d4 100%);
 min-height: 100vh;
+min-height: 100dvh;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+font-feature-settings: "kern" 1, "liga" 1;
+padding-left: env(safe-area-inset-left, 0px);
+padding-right: env(safe-area-inset-right, 0px);
 }
 body::before {
 content: "";
@@ -78,8 +101,19 @@ background-size: 34px 34px;
 mask-image: radial-gradient(circle at center, black 45%, transparent 92%);
 }
 a { color: inherit; text-decoration: none; }
+:focus:not(:focus-visible) {
+outline: none;
+}
+:focus-visible {
+outline: 2px solid var(--forest);
+outline-offset: 3px;
+}
+::selection {
+background: rgba(42, 79, 65, 0.22);
+color: var(--ink);
+}
 .wrap {
-width: min(var(--max), calc(100% - 26px));
+width: min(var(--max), calc(100% - clamp(18px, 4.5vw, 32px)));
 margin: 0 auto;
 position: relative;
 z-index: 1;
@@ -88,9 +122,12 @@ z-index: 1;
 position: sticky;
 top: 0;
 z-index: 30;
-backdrop-filter: blur(16px);
-background: rgba(243, 236, 222, 0.84);
+backdrop-filter: blur(18px) saturate(1.1);
+-webkit-backdrop-filter: blur(18px) saturate(1.1);
+background: rgba(250, 246, 236, 0.88);
 border-bottom: 1px solid var(--line);
+padding-top: max(0px, env(safe-area-inset-top, 0px));
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset;
 }
 .topbar-inner {
 display: grid;
@@ -195,9 +232,18 @@ box-shadow: none;
 min-width: 56px;
 }
 .btn { background: var(--forest); color: #fff; border-color: transparent; }
-.btn:hover,
+.btn:hover {
+background: var(--forest-hover);
+transform: translateY(-1px);
+box-shadow: var(--shadow-sm);
+}
 .btn-soft:hover,
-.menu-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+.menu-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.nav-download:hover {
+filter: brightness(1.05);
+transform: translateY(-1px);
+box-shadow: var(--shadow-sm);
+}
 .menu-btn { display: none; }
 .nav-download {
 background: var(--accent);
@@ -205,17 +251,18 @@ color: #fff;
 border-color: transparent;
 }
 .section {
-padding: 24px 0;
+padding: clamp(20px, 3.5vw, 28px) 0;
 }
 .card {
 border: 1px solid var(--line);
 background: var(--card);
 backdrop-filter: blur(12px);
-box-shadow: var(--shadow);
+-webkit-backdrop-filter: blur(12px);
+box-shadow: var(--shadow-sm);
 border-radius: var(--radius-xl);
 }
 .hero {
-padding-top: 38px;
+padding-top: clamp(28px, 5vw, 42px);
 }
 .hero-grid {
 display: grid;
@@ -224,7 +271,7 @@ gap: 20px;
 align-items: stretch;
 }
 .hero-copy {
-padding: 34px;
+padding: clamp(22px, 4.5vw, 36px);
 position: relative;
 overflow: hidden;
 }
@@ -269,9 +316,9 @@ letter-spacing: 0;
 .lead {
 margin: 16px 0 0;
 color: var(--muted);
-line-height: 1.8;
-font-size: 1.03rem;
-max-width: 780px;
+line-height: 1.72;
+font-size: clamp(1rem, 2.4vw, 1.075rem);
+max-width: min(44rem, 65ch);
 }
 .row {
 display: flex;
@@ -357,7 +404,7 @@ color: var(--muted);
 font-size: 0.84rem;
 line-height: 1.55;
 }
-.section-card { padding: 30px; }
+.section-card { padding: clamp(22px, 3.5vw, 32px); }
 .head {
 display: grid;
 grid-template-columns: minmax(320px, 1.15fr) minmax(360px, 0.85fr);
@@ -389,9 +436,9 @@ line-height: 0.95;
 }
 .note {
 margin: 0;
-max-width: none;
+max-width: min(70ch, 100%);
 color: var(--muted);
-line-height: 1.74;
+line-height: 1.72;
 text-align: left;
 }
 .section-toggle {
@@ -689,7 +736,7 @@ font-weight: 700;
 margin-bottom: 12px;
 }
 .footer {
-padding: 10px 0 38px;
+padding: 12px 0 max(36px, calc(20px + env(safe-area-inset-bottom, 0px)));
 }
 .footer-card {
 border: 1px solid var(--line);
@@ -924,13 +971,13 @@ max-width: 400px;
 width: 100%;
 padding: 14px 14px 16px;
 position: sticky;
-top: 88px;
+top: max(5.5rem, calc(0.5rem + env(safe-area-inset-top, 0px) + 4.25rem));
 align-self: start;
 }
 .portrait {
 min-height: 0;
 aspect-ratio: 3 / 4;
-max-height: min(68vh, 500px);
+max-height: min(68vh, min(500px, 70dvh));
 }
 .hero-visual .stat strong {
 font-size: 1.22rem;
@@ -1069,6 +1116,32 @@ height: 40px;
 .social-icon-sm svg {
 width: 18px;
 height: 18px;
+}
+}
+/* Touch / coarse pointer: vùng chạm thoải mái (Apple HIG ~44pt) */
+@media (pointer: coarse) {
+.btn,
+.btn-soft,
+.menu-btn,
+.hero-stats-toggle,
+.section-toggle,
+.item-toggle,
+.exp-toggle {
+min-height: 44px;
+padding-block: max(11px, 0.65em);
+}
+.nav.open a {
+min-height: 44px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.lang-wrap {
+min-height: 44px;
+}
+.social-icon-sm {
+min-width: 44px;
+min-height: 44px;
 }
 }
 </style>
