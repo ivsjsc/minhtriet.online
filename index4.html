@@ -731,6 +731,144 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 transform: translateY(-3px);
 box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
+.social-row {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+align-items: center;
+margin-top: 14px;
+}
+.social-icon-sm {
+width: 42px;
+height: 42px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+text-decoration: none;
+}
+.social-icon-sm:hover {
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+.social-icon-sm svg {
+width: 20px;
+height: 20px;
+flex-shrink: 0;
+}
+.industry-tags {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+gap: 10px;
+margin: 14px 0 18px;
+padding: 16px 18px;
+background: rgba(255, 255, 255, 0.65);
+border: 1px solid var(--line);
+border-radius: 16px;
+backdrop-filter: blur(8px);
+}
+.industry-label {
+display: block;
+width: 100%;
+font-size: 0.72rem;
+font-weight: 700;
+color: var(--muted);
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin-bottom: 6px;
+}
+.industry-tags .tag {
+padding: 7px 14px;
+background: rgba(255, 255, 255, 0.95);
+border: 1px solid var(--line);
+border-radius: 999px;
+font-size: 0.82rem;
+font-weight: 600;
+color: var(--forest);
+white-space: nowrap;
+box-shadow: 0 2px 6px rgba(23, 47, 40, 0.05);
+}
+.hero-ops-line {
+margin: 8px 0 0;
+font-size: clamp(1rem, 2.4vw, 1.2rem);
+font-weight: 700;
+color: var(--accent);
+line-height: 1.35;
+max-width: 42rem;
+}
+.hero-highlights {
+display: grid;
+grid-template-columns: 1fr;
+gap: 10px;
+margin: 18px 0 6px;
+}
+@media (min-width: 640px) {
+.hero-highlights {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+.hero-hl {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 14px 16px;
+border: 1px solid var(--line);
+border-radius: 16px;
+background: rgba(255, 255, 255, 0.82);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-hl:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 28px rgba(23, 47, 40, 0.08);
+}
+.hero-hl-icon {
+font-size: 1.5rem;
+width: 44px;
+height: 44px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 12px;
+background: rgba(42, 79, 65, 0.06);
+flex-shrink: 0;
+}
+.hero-hl strong {
+display: block;
+font-size: 0.95rem;
+font-weight: 700;
+color: var(--ink);
+margin-bottom: 2px;
+}
+.hero-hl span {
+font-size: 0.82rem;
+color: var(--muted);
+line-height: 1.45;
+}
+.hero-h1 {
+margin: 14px 0 0;
+font-family: "Playfair Display", serif;
+font-size: clamp(2rem, 6.5vw, 3.6rem);
+line-height: 1.05;
+letter-spacing: -0.02em;
+}
+.hero-title-line {
+display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+}
+}
 @media (max-width: 1120px) {
 .hero-grid,
 .grid-2,
@@ -829,6 +967,14 @@ width: 100%;
 width: 42px;
 height: 42px;
 }
+.social-icon-sm {
+width: 40px;
+height: 40px;
+}
+.social-icon-sm svg {
+width: 18px;
+height: 18px;
+}
 }
 </style>
 </head>
@@ -844,16 +990,16 @@ height: 42px;
 <label class="lang-wrap" for="lang" aria-label="Language switcher">
 <span class="lang-icon" aria-hidden="true">&#127760;</span>
 <select id="lang" class="lang" aria-label="Language switcher">
-<option value="en">EN</option>
-<option value="vi">VI</option>
-<option value="de">DE</option>
-<option value="es">ES</option>
-<option value="fr">FR</option>
-<option value="ja">JA</option>
-<option value="ko">KO</option>
-<option value="ru">RU</option>
-<option value="th">TH</option>
-<option value="zh">ZH</option>
+<option value="vi">🇻🇳 VI</option>
+<option value="en">🇬🇧 EN</option>
+<option value="de">🇩🇪 DE</option>
+<option value="es">🇪🇸 ES</option>
+<option value="fr">🇫🇷 FR</option>
+<option value="ja">🇯🇵 JA</option>
+<option value="ko">🇰🇷 KO</option>
+<option value="ru">🇷🇺 RU</option>
+<option value="th">🇹🇭 TH</option>
+<option value="zh">🇨🇳 ZH</option>
 </select>
 </label>
 <a class="btn" href="#contact" data-i18n="hero_cta1">Contact now</a>
@@ -866,6 +1012,7 @@ height: 42px;
 <a href="#projects" data-i18n="nav_projects">Projects</a>
 <a href="#digital-ecosystem" data-i18n="nav_ecosystem">Applications</a>
 <a href="#education" data-i18n="nav_education">Education</a>
+<a href="#contact" data-i18n="nav_contact">Contact</a>
 <a class="nav-download" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
 </nav>
 </div>
@@ -904,7 +1051,7 @@ onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
 <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.494v-9.294H9.691V11.01h3.129V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
 </a>
 <!-- Messenger -->
-<a href="https://m.me/ngmi.triet" target="_blank" class="social-icon-sm" style="background:#1877F2;" aria-label="Messenger">
+<a href="https://m.me/ngmi.triet" target="_blank" class="social-icon-sm" style="background:#0084FF;" aria-label="Messenger">
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z"/></svg>
 </a>
 <!-- Instagram -->
@@ -929,10 +1076,43 @@ onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
 <!-- RIGHT: Copy -->
 <article class="card hero-copy reveal">
 <span class="eyebrow" data-i18n="hero_kicker">External Relations · Project Leadership · Digital Transformation</span>
-<h1 data-i18n="hero_title">Strategic Relations &amp; Digital Growth
+<h1 class="hero-h1">
+<span class="hero-title-line" data-i18n="hero_title">Strategic Relations &amp; Digital Growth</span>
 <span class="highlight" data-i18n="hero_name">Nguyen Minh Triet</span>
 </h1>
+<p class="hero-ops-line" data-i18n="hero_ops_line">Operations &amp; Corporate Legal</p>
+<div class="industry-tags" id="tagList" aria-label="Expertise tags"></div>
 <p class="lead" data-i18n="hero_lead">I connect external affairs, operations, and technology execution to build sustainable school-enterprise partnerships and practical value for learners.</p>
+<div class="hero-highlights">
+<div class="hero-hl">
+<span class="hero-hl-icon" aria-hidden="true">⚖️</span>
+<div>
+<strong data-i18n="highlight1_title">Legal &amp; Ops</strong>
+<span data-i18n="highlight1_desc">Corporate admin support</span>
+</div>
+</div>
+<div class="hero-hl">
+<span class="hero-hl-icon" aria-hidden="true">🚀</span>
+<div>
+<strong data-i18n="highlight2_title">Ops Support</strong>
+<span data-i18n="highlight2_desc">Workflow optimization</span>
+</div>
+</div>
+<div class="hero-hl">
+<span class="hero-hl-icon" aria-hidden="true">🏗️</span>
+<div>
+<strong data-i18n="highlight3_title">Ecosystems</strong>
+<span data-i18n="highlight3_desc">Multi-platform apps</span>
+</div>
+</div>
+<div class="hero-hl">
+<span class="hero-hl-icon" aria-hidden="true">🤝</span>
+<div>
+<strong data-i18n="highlight4_title">Expert Network</strong>
+<span data-i18n="highlight4_desc">Project &amp; Partner management</span>
+</div>
+</div>
+</div>
 <div class="row">
 <a class="btn" href="#contact" data-i18n="hero_cta1">Contact now</a>
 <a class="btn-soft" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
@@ -1594,6 +1774,17 @@ stat1: "trường học kết nối hợp tác",
 stat2: "khách tham dự sự kiện quy mô lớn",
 stat3: "đối tác du lịch đã kết nối",
 stat4: "khóa học nâng cao Cloud, Security, AI",
+hero_ops_line: "Vận hành & Pháp lý Doanh nghiệp",
+sectors_label: "Lĩnh vực chuyên môn",
+highlight1_title: "Pháp lý & Vận hành",
+highlight1_desc: "Hỗ trợ quản trị doanh nghiệp",
+highlight2_title: "Hỗ trợ vận hành",
+highlight2_desc: "Tối ưu hóa luồng công việc",
+highlight3_title: "Hệ sinh thái",
+highlight3_desc: "Ứng dụng đa nền tảng",
+highlight4_title: "Kết nối chuyên gia",
+highlight4_desc: "Quản lý dự án & Đối tác",
+tags: ["✈️ Hàng không", "🏖️ Du lịch", "🏨 Hospitality", "📚 Giáo dục", "💻 Công nghệ", "🎨 Nghệ thuật"],
 about_kicker: "Giới thiệu",
 about_title: "Mục tiêu nghề nghiệp và giá trị đóng góp",
 about_note: "Tập trung vào hợp tác chiến lược, tối ưu quy trình và kết quả hướng đến người học.",
@@ -1767,6 +1958,17 @@ stat1: "schools connected through partnerships",
 stat2: "participants in major events",
 stat3: "tourism partners engaged",
 stat4: "advanced courses in Cloud, Security, AI",
+hero_ops_line: "Operations & Corporate Legal",
+sectors_label: "Expertise areas",
+highlight1_title: "Legal & Ops",
+highlight1_desc: "Corporate admin support",
+highlight2_title: "Ops support",
+highlight2_desc: "Workflow optimization",
+highlight3_title: "Ecosystems",
+highlight3_desc: "Multi-platform apps",
+highlight4_title: "Expert network",
+highlight4_desc: "Project & partner management",
+tags: ["✈️ Aviation", "🏖️ Tourism", "🏨 Hospitality", "📚 Education", "💻 Tech", "🎨 Arts"],
 about_kicker: "About",
 about_title: "Career Vision and Value Proposition",
 about_note: "Focused on strategic partnerships, streamlined workflows, and learner-centered outcomes.",
@@ -1940,6 +2142,17 @@ stat1: "Schulen durch Partnerschaften verbunden",
 stat2: "Teilnehmer an Großveranstaltungen",
 stat3: "Tourismuspartner eingebunden",
 stat4: "Fortgeschrittene Kurse in Cloud, Security, AI",
+hero_ops_line: "Betrieb & Unternehmensrecht",
+sectors_label: "Fachgebiete",
+highlight1_title: "Recht & Betrieb",
+highlight1_desc: "Administrative Unterstützung",
+highlight2_title: "Operations-Support",
+highlight2_desc: "Prozessoptimierung",
+highlight3_title: "Ökosysteme",
+highlight3_desc: "Multi-Plattform-Apps",
+highlight4_title: "Expertennetzwerk",
+highlight4_desc: "Projekt- & Partnermanagement",
+tags: ["✈️ Luftfahrt", "🏖️ Tourismus", "🏨 Gastgewerbe", "📚 Bildung", "💻 Technologie", "🎨 Kunst"],
 about_kicker: "Über mich",
 about_title: "Karrierevision und Leistungsversprechen",
 about_note: "Fokussiert auf strategische Partnerschaften, optimierte Arbeitsabläufe und lernerzentrierte Ergebnisse.",
@@ -2113,6 +2326,17 @@ stat1: "escuelas conectadas mediante alianzas",
 stat2: "participantes en eventos principales",
 stat3: "socios turísticos involucrados",
 stat4: "cursos avanzados en Cloud, Seguridad, IA",
+hero_ops_line: "Operaciones y legal corporativo",
+sectors_label: "Áreas de experiencia",
+highlight1_title: "Legal y operaciones",
+highlight1_desc: "Soporte administrativo corporativo",
+highlight2_title: "Soporte operativo",
+highlight2_desc: "Optimización de flujos de trabajo",
+highlight3_title: "Ecosistemas",
+highlight3_desc: "Aplicaciones multiplataforma",
+highlight4_title: "Red de expertos",
+highlight4_desc: "Gestión de proyectos y socios",
+tags: ["✈️ Aviación", "🏖️ Turismo", "🏨 Hostelería", "📚 Educación", "💻 Tecnología", "🎨 Arte"],
 about_kicker: "Sobre mí",
 about_title: "Visión Profesional y Propuesta de Valor",
 about_note: "Enfocado en alianzas estratégicas, optimización de flujos de trabajo y resultados centrados en el estudiante.",
@@ -2286,6 +2510,17 @@ stat1: "écoles connectées via des partenariats",
 stat2: "participants aux événements majeurs",
 stat3: "partenaires touristiques engagés",
 stat4: "cours avancés en Cloud, Sécurité, IA",
+hero_ops_line: "Opérations & droit des entreprises",
+sectors_label: "Domaines d'expertise",
+highlight1_title: "Juridique & opérations",
+highlight1_desc: "Support administratif aux entreprises",
+highlight2_title: "Support opérationnel",
+highlight2_desc: "Optimisation des flux de travail",
+highlight3_title: "Écosystèmes",
+highlight3_desc: "Applications multiplateformes",
+highlight4_title: "Réseau d'experts",
+highlight4_desc: "Gestion de projets & partenaires",
+tags: ["✈️ Aviation", "🏖️ Tourisme", "🏨 Hôtellerie", "📚 Éducation", "💻 Technologie", "🎨 Art"],
 about_kicker: "À propos",
 about_title: "Vision Professionnelle et Proposition de Valeur",
 about_note: "Axé sur les partenariats stratégiques, les flux de travail optimisés et les résultats centrés sur l'apprenant.",
@@ -2459,6 +2694,17 @@ stat1: "提携している学校",
 stat2: "主要イベントの参加者",
 stat3: "関与した観光パートナー",
 stat4: "クラウド、セキュリティ、AI の上級コース",
+hero_ops_line: "運営と企業法務",
+sectors_label: "専門分野",
+highlight1_title: "法務と運営",
+highlight1_desc: "企業管理のサポート",
+highlight2_title: "運営サポート",
+highlight2_desc: "ワークフローの最適化",
+highlight3_title: "エコシステム",
+highlight3_desc: "マルチプラットフォームアプリ",
+highlight4_title: "専門家ネットワーク",
+highlight4_desc: "プロジェクト・パートナー管理",
+tags: ["✈️ 航空", "🏖️ 観光", "🏨 ホスピタリティ", "📚 教育", "💻 テクノロジー", "🎨 芸術"],
 about_kicker: "経歴",
 about_title: "キャリアビジョンと提供価値",
 about_note: "戦略的パートナーシップ、ワークフローの合理化、学習者中心の成果に注力しています。",
@@ -2632,6 +2878,17 @@ stat1: "파트너십으로 연결된 학교",
 stat2: "주요 행사 참가자",
 stat3: "관여한 관광 파트너",
 stat4: "클라우드, 보안, AI 고급 과정",
+hero_ops_line: "운영 및 기업 법무",
+sectors_label: "전문 분야",
+highlight1_title: "법무 및 운영",
+highlight1_desc: "기업 행정 지원",
+highlight2_title: "운영 지원",
+highlight2_desc: "워크플로 최적화",
+highlight3_title: "생태계",
+highlight3_desc: "멀티 플랫폼 앱",
+highlight4_title: "전문가 네트워크",
+highlight4_desc: "프로젝트 및 파트너 관리",
+tags: ["✈️ 항공", "🏖️ 관광", "🏨 환대 산업", "📚 교육", "💻 기술", "🎨 예술"],
 about_kicker: "소개",
 about_title: "경력 비전 및 가치 제안",
 about_note: "전략적 파트너십, 간소화된 워크플로, 학습자 중심의 성과에 중점을 둡니다.",
@@ -2805,6 +3062,17 @@ stat1: "школ подключено через партнерство",
 stat2: "участников крупных мероприятий",
 stat3: "партнеров по туризму привлечено",
 stat4: "продвинутых курсов по Cloud, Security, AI",
+hero_ops_line: "Операции и корпоративное право",
+sectors_label: "Области экспертизы",
+highlight1_title: "Право и операции",
+highlight1_desc: "Поддержка корпоративного управления",
+highlight2_title: "Операционная поддержка",
+highlight2_desc: "Оптимизация рабочих процессов",
+highlight3_title: "Экосистемы",
+highlight3_desc: "Мультиплатформенные приложения",
+highlight4_title: "Сеть экспертов",
+highlight4_desc: "Управление проектами и партнёрами",
+tags: ["✈️ Авиация", "🏖️ Туризм", "🏨 Гостеприимство", "📚 Образование", "💻 Технологии", "🎨 Искусство"],
 about_kicker: "Обо мне",
 about_title: "Карьерное видение и Ценностное предложение",
 about_note: "Сосредоточен на стратегическом партнерстве, оптимизации рабочих процессов и результатах, ориентированных на учащихся.",
@@ -2978,6 +3246,17 @@ stat1: "โรงเรียนที่เชื่อมต่อผ่าน
 stat2: "ผู้เข้าร่วมกิจกรรมสำคัญ",
 stat3: "พันธมิตรด้านการท่องเที่ยวที่เข้าร่วม",
 stat4: "หลักสูตรขั้นสูงใน Cloud, Security, AI",
+hero_ops_line: "การดำเนินงานและกฎหมายธุรกิจ",
+sectors_label: "สาขาความเชี่ยวชาญ",
+highlight1_title: "กฎหมายและการดำเนินงาน",
+highlight1_desc: "สนับสนุนการบริหารองค์กร",
+highlight2_title: "สนับสนุนการปฏิบัติงาน",
+highlight2_desc: "เพิ่มประสิทธิภาพเวิร์กโฟลว์",
+highlight3_title: "ระบบนิเวศ",
+highlight3_desc: "แอปหลายแพลตฟอร์ม",
+highlight4_title: "เครือข่ายผู้เชี่ยวชาญ",
+highlight4_desc: "การจัดการโครงการและพันธมิตร",
+tags: ["✈️ การบิน", "🏖️ การท่องเที่ยว", "🏨 การบริการที่พัก", "📚 การศึกษา", "💻 เทคโนโลยี", "🎨 ศิลปะ"],
 about_kicker: "เกี่ยวกับ",
 about_title: "วิสัยทัศน์ด้านอาชีพและคุณค่าที่ส่งมอบ",
 about_note: "มุ่งเน้นไปที่การเป็นพันธมิตรเชิงกลยุทธ์ เวิร์กโฟลว์ที่คล่องตัว และผลลัพธ์ที่เน้นผู้เรียนเป็นศูนย์กลาง",
@@ -3151,6 +3430,17 @@ stat1: "通过合作连接的学校",
 stat2: "大型活动参与者",
 stat3: "参与的旅游合作伙伴",
 stat4: "云、安全、AI 高级课程",
+hero_ops_line: "运营与企业法务",
+sectors_label: "专业领域",
+highlight1_title: "法务与运营",
+highlight1_desc: "企业行政管理支持",
+highlight2_title: "运营支持",
+highlight2_desc: "工作流优化",
+highlight3_title: "生态系统",
+highlight3_desc: "多平台应用",
+highlight4_title: "专家网络",
+highlight4_desc: "项目与伙伴管理",
+tags: ["✈️ 航空", "🏖️ 旅游", "🏨 酒店与餐饮", "📚 教育", "💻 科技", "🎨 艺术"],
 about_kicker: "关于",
 about_title: "职业愿景与价值主张",
 about_note: "专注于战略伙伴关系、优化工作流程和以学习者为中心的成果。",
@@ -3514,16 +3804,38 @@ const table = translations[langCode] || {};
 const missing = baseKeys.filter((k) => !(k in table));
 return { missing, total: baseKeys.length };
 }
+const HTML_LANG = {
+vi: "vi",
+en: "en",
+de: "de",
+es: "es",
+fr: "fr",
+ja: "ja",
+ko: "ko",
+ru: "ru",
+th: "th",
+zh: "zh-Hans"
+};
+function renderIndustryTags(lang) {
+const el = document.getElementById("tagList");
+if (!el) return;
+const dict = translations[lang] || translations.en;
+const tags = Array.isArray(dict.tags) ? dict.tags : translations.en.tags || [];
+const label = dict.sectors_label || translations.en.sectors_label || "";
+el.innerHTML = `<span class="industry-label">${label}</span>${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}`;
+}
 function applyLang(rawLang) {
 const lang = translations[rawLang] ? rawLang : "en";
 const dict = translations[lang];
 document.querySelectorAll("[data-i18n]").forEach((el) => {
 const key = el.getAttribute("data-i18n");
-el.textContent = dict[key] ?? translations.en[key] ?? key;
+const val = dict[key] ?? translations.en[key] ?? key;
+if (typeof val === "string") el.textContent = val;
 });
 document.title = dict.page_title || translations.en.page_title;
-document.documentElement.lang = lang === "vi" ? "vi" : "en";
+document.documentElement.lang = HTML_LANG[lang] || "en";
 localStorage.setItem("site_lang", lang);
+renderIndustryTags(lang);
 const audit = translationAudit(lang);
 if (audit.missing.length === 0) {
 statusEl.textContent = `${dict.translation_ok || translations.en.translation_ok} (${audit.total}/${audit.total})`;
