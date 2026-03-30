@@ -1,7 +1,7 @@
 // Service Worker for minhtriet.online
 // Provides offline caching and performance optimization
 
-const CACHE_NAME = 'minhtriet-v1.0.1';
+const CACHE_NAME = 'minhtriet-v1.0.2';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -11,6 +11,7 @@ const urlsToCache = [
     '/js/translations.js',
     '/images/avatar.webp',
     '/images/favicon.svg',
+    '/images/logo/nmt-logo.png',
     '/lang/vi.js',
     '/lang/en.js',
     '/lang/zh.js',
