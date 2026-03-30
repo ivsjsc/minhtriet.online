@@ -65,6 +65,8 @@
       background-image: linear-gradient(to bottom, #EAE6DB, #D8D4C7);
       min-height: 100vh;
     }
+
+    body::before {
       content: "";
       position: fixed;
       inset: 0;
@@ -787,452 +789,590 @@
   </header>
 
   <main id="top">
-<section class="section hero">
-  <div class="wrap hero-grid">
-    <article class="card hero-content reveal">
-      
-      <!-- Portrait Image - Top Priority -->
-      <div class="hero-portrait">
-        <img src="./images/avatar.webp" alt="Nguyen Minh Triet" 
-          onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
-      </div>
+    <div class="lang-switch">
+        <select id="langSelect" class="lang-select" onchange="setLanguage(this.value)">
+            <option value="vi">🇻🇳 VI</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="de">🇩🇪 DE</option>
+            <option value="es">🇪🇸 ES</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="ja">🇯🇵 JA</option>
+            <option value="ko">🇰🇷 KO</option>
+            <option value="ru">🇷🇺 RU</option>
+            <option value="th">🇹🇭 TH</option>
+            <option value="zh">🇨🇳 ZH</option>
+        </select>
+    </div>
 
-      <!-- Social Network Icons - Immediately After Image -->
-      <div class="social-row">
-        <a href="mailto:nminhtr29@gmail.com" class="social-icon" style="background:#D44638;" aria-label="Email">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="social-icon" style="background:#0A66C2;" aria-label="LinkedIn">
-          <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
-        </a>
-        <a href="https://www.facebook.com/ngmi.triet" target="_blank" class="social-icon" style="background:#1877F2;" aria-label="Facebook">
-          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.494v-9.294H9.691V11.01h3.129V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
-        </a>
-        <a href="https://m.me/ngmi.triet" target="_blank" class="social-icon" style="background:#1877F2;" aria-label="Messenger">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.001 11.639C.001 4.949 5.241 0 12.001 0S24 4.95 24 11.639c0 6.689-5.24 11.638-12 11.638-1.21 0-2.38-.16-3.47-.46a.96.96 0 00-.64.05l-2.39 1.05a.96.96 0 01-1.35-.85l-.07-2.14a.97.97 0 00-.32-.68A11.39 11.389 0 01.002 11.64zm8.32-2.19l-3.52 5.6c-.35.53.32 1.139.82.75l3.79-2.87c.26-.2.6-.2.87 0l2.8 2.1c.84.63 2.04.4 2.6-.48l3.52-5.6c.35-.53-.32-1.13-.82-.75l-3.79 2.87c-.25.2-.6.2-.86 0l-2.8-2.1a1.8 1.8 0 00-2.61.48z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/ngmi.triet/" target="_blank" class="social-icon" style="background:#E4405F;" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
-        </a>
-        <a href="https://github.com/ivsjsc" target="_blank" class="social-icon" style="background:#333;" aria-label="GitHub">
-          <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
-        </a>
-        <a href="https://zalo.me/nmt5555789" target="_blank" class="social-icon" style="background:#0068FF;" aria-label="Zalo">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/></svg>
-        </a>
-        <a href="https://x.com/nminhtr29" target="_blank" class="social-icon" style="background:#000;" aria-label="X (Twitter)">
-          <svg viewBox="0 0 1200 1227" fill="currentColor"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
-        </a>
-      </div>
+    <section class="section hero">
+        <div class="wrap hero-grid">
+            <article class="hero-content reveal">
 
-      <!-- Main Content - Simplified -->
-      <div class="hero-text">
-        <h1 data-i18n="hero_title">Kinh nghiệm tham gia nhiều lĩnh vực như hàng không, du lịch, nhà hàng - khách sạn, giáo dục, công nghệ</h1>
-        <p class="lead" data-i18n="hero_lead">Luôn tiếp nhận, tìm tòi học hỏi và phát triển từ những điều mới, mong muốn không giới hạn về tư duy.</p>
-        
-        <!-- 4 Key Highlights (Always Visible) -->
-        <div class="highlights-grid">
-          <div class="highlight-item">
-            <div class="highlight-icon">⚡</div>
-            <span data-i18n="highlight1">Đa nhiệm mạnh mẽ</span>
-          </div>
-          <div class="highlight-item">
-            <div class="highlight-icon">🤝</div>
-            <span data-i18n="highlight2">Quan hệ đối tác</span>
-          </div>
-          <div class="highlight-item">
-            <div class="highlight-icon">⚙️</div>
-            <span data-i18n="highlight3">Tối ưu quy trình</span>
-          </div>
-          <div class="highlight-item">
-            <div class="highlight-icon">🌐</div>
-            <span data-i18n="highlight4">Đa ngành nghề</span>
-          </div>
+                <div class="hero-portrait-container">
+                    <div class="hero-portrait">
+                        <img src="./images/avatar.webp" alt="Nguyen Minh Triet"
+                             onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
+                    </div>
+                </div>
+
+                <div class="social-row">
+                    <a href="mailto:nminhtr29@gmail.com" class="social-icon" style="background:#D44638;" aria-label="Email">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" class="social-icon" style="background:#0A66C2;" aria-label="LinkedIn">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/ngmi.triet" target="_blank" class="social-icon" style="background:#1877F2;" aria-label="Facebook">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24h11.494v-9.294H9.691V11.01h3.129V8.309c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z"/></svg>
+                    </a>
+                    <a href="https://m.me/ngmi.triet" target="_blank" class="social-icon" style="background:#0084FF;" aria-label="Messenger">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.51 3.733 7.198V22l3.356-1.841c.884.246 1.815.383 2.784.383 5.523 0 10-4.145 10-9.258S17.523 2 12 2zm1.18 12.33l-2.544-2.715-4.965 2.715 5.46-5.8 2.618 2.715 4.89-2.715-5.46 5.8z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ngmi.triet/" target="_blank" class="social-icon" style="background:#E4405F;" aria-label="Instagram">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.805.249 2.227.412.56.216.96.475 1.382.897.422.422.68.822.897 1.382.163.422.358 1.057.412 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.249 1.805-.412 2.227-.216.56-.475.96-.897 1.382-.422.422-.822.68-1.382.897-.422.163-1.057.358-2.227.412-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.805-.249-2.227-.412-.56-.216-.96-.475-1.382-.897-.422-.422-.68-.822-.897-1.382-.163-.422-.358-1.057-.412-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.249-1.805.412-2.227.216-.56.475-.96.897-1.382.422-.422.822-.68 1.382-.897.422-.163 1.057-.358 2.227-.412 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.741 0 12s.012 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126s1.336 1.078 2.126 1.384c.766.296 1.636.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.012 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384s1.078-1.336 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.012-3.667-.072-4.947c-.06-1.277-.261-2.148-.558-2.913-.306-.788-.717-1.459-1.384-2.126S18.65.935 17.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://github.com/ivsjsc" target="_blank" class="social-icon" style="background:#333;" aria-label="GitHub">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://zalo.me/nmt5555789" target="_blank" class="social-icon" style="background:#0068FF;" aria-label="Zalo">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M40,32c0,4.4-3.6,8-8,8H16c-4.4,0-8-3.6-8-8V16c0-4.4,3.6-8,8-8h16c4.4,0,8,3.6,8,8V32z M25,24l5-7h-3l-3.5,5l-3.5-5h-3l5,7l-5,7h3l3.5-5l3.5,5h3L25,24z"/></svg>
+                    </a>
+                    <a href="https://x.com/nminhtr29" target="_blank" class="social-icon" style="background:#000;" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+
+                <div class="hero-text">
+                    <div class="industry-tags" id="tagList">
+                        <!-- Tags will be injected here -->
+                    </div>
+
+                    <h1 data-i18n="hero_title">Vận hành & Pháp lý Doanh nghiệp</h1>
+                    <p class="lead" data-i18n="hero_lead">Chuyên sâu về vận hành, hỗ trợ vận hành và tư vấn pháp lý doanh nghiệp cơ bản. Đồng hành xây dựng hệ sinh thái ứng dụng đa nền tảng tối ưu.</p>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚖️</span>
+                            <div class="highlight-content">
+                                <strong data-i18n="highlight1_title">Pháp lý & Vận hành</strong>
+                                <span data-i18n="highlight1_desc">Hỗ trợ quản trị doanh nghiệp</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🚀</span>
+                            <div class="highlight-content">
+                                <strong data-i18n="highlight2_title">Hỗ trợ vận hành</strong>
+                                <span data-i18n="highlight2_desc">Tối ưu hóa luồng công việc</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🏗️</span>
+                            <div class="highlight-content">
+                                <strong data-i18n="highlight3_title">Hệ sinh thái</strong>
+                                <span data-i18n="highlight3_desc">Ứng dụng đa nền tảng</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🤝</span>
+                            <div class="highlight-content">
+                                <strong data-i18n="highlight4_title">Kết nối chuyên gia</strong>
+                                <span data-i18n="highlight4_desc">Quản lý dự án & Đối tác</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="#contact" data-i18n="hero_cta1">Liên hệ ngay</a>
+                        <button class="btn btn-secondary" id="toggleStatsBtn" data-i18n="btn_view_stats">Xem thống kê</button>
+                    </div>
+                </div>
+
+                <div class="stats-section" id="statsSection" hidden>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <strong>50</strong>
+                            <span data-i18n="stat1">trường học kết nối hợp tác</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>1,500+</strong>
+                            <span data-i18n="stat2">khách tham dự sự kiện</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>200+</strong>
+                            <span data-i18n="stat3">đối tác du lịch</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>10+</strong>
+                            <span data-i18n="stat4">khóa học chuyên sâu</span>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
         </div>
+    </section>
 
-        <!-- CTA Buttons -->
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#contact" data-i18n="hero_cta1">Liên hệ ngay</a>
-          <button class="btn btn-secondary" id="toggleStatsBtn" data-i18n="btn_view_stats">Xem thống kê</button>
-        </div>
-      </div>
+    <style>
+        :root {
+            --forest: #2a4f41;
+            --primary: #b06a3b;
+            --accent: #d4a373;
+            --ink: #172f28;
+            --muted: #5c6b64;
+            --line: rgba(23, 47, 40, 0.1);
+            --bg: #fdfbf7;
+            --white: #ffffff;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-      <!-- Collapsible Stats Section -->
-      <div class="stats-section" id="statsSection" hidden>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <strong>50</strong>
-            <span data-i18n="stat1">trường học kết nối hợp tác</span>
-          </div>
-          <div class="stat-card">
-            <strong>1,500+</strong>
-            <span data-i18n="stat2">khách tham dự sự kiện quy mô lớn</span>
-          </div>
-          <div class="stat-card">
-            <strong>200+</strong>
-            <span data-i18n="stat3">đối tác du lịch đã kết nối</span>
-          </div>
-          <div class="stat-card">
-            <strong>10+</strong>
-            <span data-i18n="stat4">khóa học nâng cao Cloud, Security, AI</span>
-          </div>
-        </div>
-        <div class="stats-cta">
-          <a href="#experience" class="btn btn-explore" data-i18n="btn_explore_more">
-            Khám phá chi tiết bên dưới ↓
-          </a>
-        </div>
-      </div>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    </article>
-  </div>
-</section>
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
-/* Hero Section Optimized Styles */
-.hero {
-  padding: 40px 0 60px;
-}
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-.hero-grid {
-  max-width: 900px;
-  margin: 0 auto;
-}
+        /* ═══════════════ UTILITIES ═══════════════ */
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.hero-content {
-  padding: 40px;
-  background: rgba(255, 251, 243, 0.78);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(23, 47, 40, 0.14);
-  border-radius: 28px;
-  box-shadow: 0 24px 80px rgba(23, 47, 40, 0.12);
-}
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
 
-/* Portrait Image */
-.hero-portrait {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto 24px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid rgba(23, 47, 40, 0.14);
-  background: linear-gradient(180deg, rgba(42, 79, 65, 0.08), rgba(176, 106, 59, 0.14));
-}
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.hero-portrait img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  display: block;
-}
+        /* ═══════════════ LANGUAGE SWITCHER ═══════════════ */
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
 
-/* Social Icons Row */
-.social-row {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
-}
+        .lang-select {
+            padding: 8px 16px;
+            border-radius: 50px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-family: inherit;
+            color: var(--ink);
+        }
 
-.social-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+        /* ═══════════════ HERO SECTION ═══════════════ */
+        .hero {
+            padding: 60px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-.social-icon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-}
+        .hero-grid {
+            max-width: 850px;
+            margin: 0 auto;
+        }
 
-.social-icon svg {
-  width: 22px;
-  height: 22px;
-}
+        .hero-content {
+            padding: 40px;
+            background: rgba(255, 251, 243, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--line);
+            border-radius: 32px;
+            box-shadow: 0 32px 80px rgba(23, 47, 40, 0.08);
+            text-align: center;
+        }
 
-/* Hero Text */
-.hero-text {
-  text-align: center;
-}
+        /* Portrait Image Container - Hidden on mobile */
+        .hero-portrait-container {
+            display: none;
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto 24px;
+        }
 
-.hero-text h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  line-height: 1.2;
-  color: #172f28;
-  margin: 0 0 20px;
-  font-weight: 700;
-}
+        @media (min-width: 768px) {
+            .hero-portrait-container {
+                display: block;
+            }
+        }
 
-.hero-text .lead {
-  font-size: 1.05rem;
-  color: #61746c;
-  line-height: 1.8;
-  margin: 0 0 32px;
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-}
+        .hero-portrait {
+            width: 100%;
+            height: 280px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 4px solid var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: linear-gradient(180deg, #e0e7e4, #f2ece4);
+        }
 
-/* 4 Key Highlights Grid */
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 32px 0;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
-  border: 1px solid rgba(23, 47, 40, 0.08);
-}
+        .hero-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-.highlight-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
+        /* Social Icons */
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
-.highlight-item:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(42, 79, 65, 0.15);
-}
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+        }
 
-.highlight-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-}
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
 
-.highlight-item span {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #172f28;
-  line-height: 1.4;
-}
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+        }
 
-/* CTA Buttons */
-.hero-cta {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
+        /* Industry Tags */
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px dashed var(--line);
+        }
 
-.btn {
-  border-radius: 999px;
-  padding: 14px 32px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  border: none;
-  font-family: inherit;
-}
+        .tag {
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--muted);
+            transition: var(--transition);
+        }
 
-.btn-primary {
-  background: #2a4f41;
-  color: #fff;
-  border: 2px solid #2a4f41;
-}
+        /* Typography */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 5vw, 2.4rem);
+            color: var(--ink);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
 
-.btn-primary:hover {
-  background: #172f28;
-  border-color: #172f28;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(42, 79, 65, 0.3);
-}
+        .lead {
+            font-size: 1rem;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
 
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.76);
-  color: #172f28;
-  border: 2px solid rgba(23, 47, 40, 0.14);
-}
+        /* Highlights Grid */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
 
-.btn-secondary:hover {
-  background: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(42, 79, 65, 0.2);
-}
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--white);
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            transition: all 0.3s ease;
+        }
 
-/* Collapsible Stats Section */
-.stats-section {
-  margin-top: 32px;
-  padding-top: 32px;
-  border-top: 2px dashed rgba(23, 47, 40, 0.14);
-  animation: slideDown 0.4s ease;
-}
+        .highlight-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        .highlight-icon {
+            font-size: 1.5rem;
+        }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
+        .highlight-content strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
 
-.stat-card {
-  background: rgba(255, 255, 255, 0.83);
-  border: 1px solid rgba(23, 47, 40, 0.14);
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-}
+        .highlight-content span {
+            font-size: 0.8rem;
+            color: var(--muted);
+            display: block;
+            line-height: 1.3;
+        }
 
-.stat-card strong {
-  display: block;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #2a4f41;
-  line-height: 1;
-  margin-bottom: 8px;
-}
+        /* Buttons */
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.stat-card span {
-  display: block;
-  font-size: 0.9rem;
-  color: #61746c;
-  line-height: 1.5;
-}
+        .btn {
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
 
-.stats-cta {
-  text-align: center;
-}
+        .btn-primary {
+            background: var(--forest);
+            color: white;
+        }
 
-.btn-explore {
-  background: linear-gradient(135deg, #b06a3b 0%, #ef5675 100%);
-  color: #fff;
-  border: none;
-  padding: 16px 40px;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(176, 106, 59, 0.3);
-}
+        .btn-secondary {
+            background: var(--white);
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
 
-.btn-explore:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(176, 106, 59, 0.4);
-}
+        /* Stats Section */
+        .stats-section {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 2px dashed var(--line);
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 24px;
-  }
-  
-  .hero-portrait {
-    max-width: 220px;
-  }
-  
-  .social-icon {
-    width: 42px;
-    height: 42px;
-  }
-  
-  .social-icon svg {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .highlights-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .stat-card strong {
-    font-size: 1.8rem;
-  }
-  
-  .hero-text h1 {
-    font-size: 1.6rem;
-  }
-  
-  .hero-cta {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .btn {
-    justify-content: center;
-  }
-}
-</style>
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
 
-<script>
-// Toggle Stats Section
-document.getElementById('toggleStatsBtn').addEventListener('click', function() {
-  const statsSection = document.getElementById('statsSection');
-  const isHidden = statsSection.hidden;
-  statsSection.hidden = !isHidden;
-  this.textContent = isHidden 
-    ? (translations[localStorage.getItem('site_lang') || 'vi']?.btn_hide_stats || 'Ẩn thống kê')
-    : (translations[localStorage.getItem('site_lang') || 'vi']?.btn_view_stats || 'Xem thống kê');
-});
-</script>
+        .stat-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+        }
 
+        .stat-card strong {
+            display: block;
+            font-size: 2rem;
+            color: var(--forest);
+            margin-bottom: 4px;
+        }
 
+        [hidden] {
+            display: none !important;
+        }
 
-              <script>
-                              vi: {
-  // ... existing translations
-  highlight1: "Đa nhiệm mạnh mẽ",
-  highlight2: "Quan hệ đối tác",
-  highlight3: "Tối ưu quy trình",
-  highlight4: "Đa ngành nghề",
-  btn_view_stats: "Xem thống kê",
-  btn_hide_stats: "Ẩn thống kê",
-  btn_explore_more: "Khám phá chi tiết bên dưới ↓"
-},
-en: {
-  // ... existing translations
-  highlight1: "Strong Multitasking",
-  highlight2: "Partner Relations",
-  highlight3: "Process Optimization",
-  highlight4: "Multi-Industry",
-  btn_view_stats: "View Statistics",
-  btn_hide_stats: "Hide Statistics",
-  btn_explore_more: "Explore Details Below ↓"
-}
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero-content { padding: 24px; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .hero-cta { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
 
+    <script>
+        const translations = {
+            vi: {
+                hero_title: "Vận hành & Pháp lý Doanh nghiệp",
+                hero_lead: "Chuyên sâu về vận hành, hỗ trợ vận hành và tư vấn pháp lý doanh nghiệp cơ bản. Đồng hành xây dựng hệ sinh thái ứng dụng đa nền tảng tối ưu.",
+                hero_cta1: "Liên hệ ngay",
+                btn_view_stats: "Xem thống kê",
+                btn_hide_stats: "Ẩn thống kê",
+                highlight1_title: "Pháp lý & Vận hành", highlight1_desc: "Hỗ trợ quản trị doanh nghiệp",
+                highlight2_title: "Hỗ trợ vận hành", highlight2_desc: "Tối ưu hóa luồng công việc",
+                highlight3_title: "Hệ sinh thái", highlight3_desc: "Ứng dụng đa nền tảng",
+                highlight4_title: "Kết nối chuyên gia", highlight4_desc: "Quản lý dự án & Đối tác",
+                stat1: "trường học kết nối hợp tác", stat2: "khách tham dự sự kiện",
+                stat3: "đối tác du lịch", stat4: "khóa học chuyên sâu",
+                tags: ["✈️ Hàng không", "🏖️ Du lịch", "🏨 Hospitality", "📚 Giáo dục", "💻 Công nghệ", "🎨 Nghệ thuật"]
+            },
+            en: {
+                hero_title: "Operations & Corporate Legal",
+                hero_lead: "Specializing in operations, operations support, and basic corporate legal consulting. Developing optimized multi-platform application ecosystems.",
+                hero_cta1: "Contact Now",
+                btn_view_stats: "View Statistics",
+                btn_hide_stats: "Hide Statistics",
+                highlight1_title: "Legal & Ops", highlight1_desc: "Corporate admin support",
+                highlight2_title: "Ops Support", highlight2_desc: "Workflow optimization",
+                highlight3_title: "Ecosystems", highlight3_desc: "Multi-platform apps",
+                highlight4_title: "Expert Network", highlight4_desc: "Project & Partner management",
+                stat1: "Partner schools", stat2: "Event attendees",
+                stat3: "Tourism partners", stat4: "Advanced courses",
+                tags: ["✈️ Aviation", "🏖️ Tourism", "🏨 Hospitality", "📚 Education", "💻 Tech", "🎨 Art"]
+            },
+            de: {
+                hero_title: "Betrieb & Unternehmensrecht",
+                hero_lead: "Spezialisiert auf Betrieb, Betriebsunterstützung und grundlegende rechtliche Beratung für Unternehmen. Aufbau von plattformübergreifenden Ökosystemen.",
+                hero_cta1: "Kontakt", btn_view_stats: "Statistiken", btn_hide_stats: "Ausblenden",
+                highlight1_title: "Recht & Betrieb", highlight1_desc: "Admin-Unterstützung",
+                highlight2_title: "Support", highlight2_desc: "Prozessoptimierung",
+                highlight3_title: "Ökosysteme", highlight3_desc: "Multi-Plattform-Apps",
+                highlight4_title: "Expertennetzwerk", highlight4_desc: "Projektmanagement",
+                tags: ["✈️ Luftfahrt", "🏖️ Tourismus", "🏨 Gastgewerbe", "📚 Bildung", "💻 Technologie", "🎨 Kunst"]
+            },
+            es: {
+                hero_title: "Operaciones y Legal Corporativo",
+                hero_lead: "Especialista en operaciones, soporte operativo y consultoría legal básica. Desarrollo de ecosistemas de aplicaciones multiplataforma.",
+                hero_cta1: "Contactar", btn_view_stats: "Ver estadísticas", btn_hide_stats: "Ocultar",
+                highlight1_title: "Legal y Ops", highlight1_desc: "Soporte administrativo",
+                highlight2_title: "Soporte Operativo", highlight2_desc: "Optimización de flujo",
+                highlight3_title: "Ecosistemas", highlight3_desc: "Apps multiplataforma",
+                highlight4_title: "Red de Expertos", highlight4_desc: "Gestión de proyectos",
+                tags: ["✈️ Aviación", "🏖️ Turismo", "🏨 Hostelería", "📚 Educación", "💻 Tecnología", "🎨 Arte"]
+            },
+            fr: {
+                hero_title: "Opérations & Juridique",
+                hero_lead: "Spécialisé en opérations, support opérationnel et conseil juridique de base. Développement d'écosystèmes d'applications multiplateformes.",
+                hero_cta1: "Contact", btn_view_stats: "Statistiques", btn_hide_stats: "Cacher",
+                highlight1_title: "Droit & Ops", highlight1_desc: "Support administratif",
+                highlight2_title: "Support Ops", highlight2_desc: "Optimisation des flux",
+                highlight3_title: "Écosystèmes", highlight3_desc: "Apps multiplateformes",
+                highlight4_title: "Réseau d'experts", highlight4_desc: "Gestion de projets",
+                tags: ["✈️ Aviation", "🏖️ Tourisme", "🏨 Hôtellerie", "📚 Éducation", "💻 Technologie", "🎨 Art"]
+            },
+            ja: {
+                hero_title: "運営と企業法務",
+                hero_lead: "運営、運営サポート、および基本的な企業法務コンサルティングを専門としています。マルチプラットフォームのエコシステムを構築します。",
+                hero_cta1: "お問い合わせ", btn_view_stats: "統計を表示", btn_hide_stats: "隠す",
+                highlight1_title: "法務と運営", highlight1_desc: "管理サポート",
+                highlight2_title: "運営サポート", highlight2_desc: "ワークフローの最適化",
+                highlight3_title: "エコシステム", highlight3_desc: "マルチプラットフォーム",
+                highlight4_title: "専門家ネットワーク", highlight4_desc: "プロジェクト管理",
+                tags: ["✈️ 航空", "🏖️ 観光", "🏨 ホスピタリティ", "📚 教育", "💻 テクノロジー", "🎨 芸術"]
+            },
+            ko: {
+                hero_title: "운영 및 기업 법무",
+                hero_lead: "운영, 운영 지원 및 기본적인 기업 법무 컨설팅 전문. 최적화된 멀티 플랫폼 애플리케이션 생태계를 구축합니다.",
+                hero_cta1: "문의하기", btn_view_stats: "통계 보기", btn_hide_stats: "숨기기",
+                highlight1_title: "법무 및 운영", highlight1_desc: "행정 지원",
+                highlight2_title: "운영 지원", highlight2_desc: "워크플로우 최적화",
+                highlight3_title: "생태계", highlight3_desc: "멀티 플랫폼 앱",
+                highlight4_title: "전문가 네트워크", highlight4_desc: "프로젝트 관리",
+                tags: ["✈️ 항공", "🏖️ 관광", "🏨 환대 산업", "📚 교육", "💻 기술", "🎨 예술"]
+            },
+            ru: {
+                hero_title: "Операции и Юридическое сопровождение",
+                hero_lead: "Специализация на операциях, операционной поддержке и базовом юридическом консультировании. Разработка экосистем приложений.",
+                hero_cta1: "Связаться", btn_view_stats: "Статистика", btn_hide_stats: "Скрыть",
+                highlight1_title: "Право и Опс", highlight1_desc: "Админ. поддержка",
+                highlight2_title: "Поддержка Опс", highlight2_desc: "Оптимизация потоков",
+                highlight3_title: "Экосистемы", highlight3_desc: "Приложения",
+                highlight4_title: "Сеть экспертов", highlight4_desc: "Управление проектами",
+                tags: ["✈️ Авиация", "🏖️ Туризм", "🏨 Гостеприимство", "📚 Образование", "💻 Технологии", "🎨 Искусство"]
+            },
+            th: {
+                hero_title: "การดำเนินงานและกฎหมายธุรกิจ",
+                hero_lead: "เชี่ยวชาญด้านการดำเนินงาน การสนับสนุน และการให้คำปรึกษาทางกฎหมายเบื้องต้น ร่วมสร้างระบบนิเวศแอปพลิเคชันที่เหมาะสมที่สุด",
+                hero_cta1: "ติดต่อสอบถาม", btn_view_stats: "ดูสถิติ", btn_hide_stats: "ซ่อน",
+                highlight1_title: "กฎหมายและการจัดการ", highlight1_desc: "สนับสนุนการบริหาร",
+                highlight2_title: "สนับสนุนการปฏิบัติงาน", highlight2_desc: "เพิ่มประสิทธิภาพงาน",
+                highlight3_title: "ระบบนิเวศ", highlight3_desc: "แอปหลายแพลตฟอร์ม",
+                highlight4_title: "เครือข่ายผู้เชี่ยวชาญ", highlight4_desc: "การจัดการโครงการ",
+                tags: ["✈️ การบิน", "🏖️ การท่องเที่ยว", "🏨 การโรงแรม", "📚 การศึกษา", "💻 เทคโนโลยี", "🎨 ศิลปะ"]
+            },
+            zh: {
+                hero_title: "运营与企业法务",
+                hero_lead: "专注于运营、运营支持及基础企业法务咨询。致力于构建优化的多平台应用生态系统。",
+                hero_cta1: "联系我们", btn_view_stats: "查看统计", btn_hide_stats: "隐藏",
+                highlight1_title: "法务与运营", highlight1_desc: "行政管理支持",
+                highlight2_title: "运营支持", highlight2_desc: "工作流优化",
+                highlight3_title: "生态系统", highlight3_desc: "多平台应用",
+                highlight4_title: "专家网络", highlight4_desc: "项目与伙伴管理",
+                tags: ["✈️ 航空", "🏖️ 旅游", "🏨 餐饮住宿", "📚 教育", "💻 科技", "🎨 艺术"]
+            }
+        };
 
-              </script>
+        let currentLang = localStorage.getItem('site_lang') || 'vi';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('site_lang', lang);
+            document.getElementById('langSelect').value = lang;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            const tagList = document.getElementById('tagList');
+            if (translations[lang].tags) {
+                tagList.innerHTML = translations[lang].tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            }
+
+            const statsSection = document.getElementById('statsSection');
+            const toggleBtn = document.getElementById('toggleStatsBtn');
+            toggleBtn.textContent = statsSection.hidden
+                ? translations[lang].btn_view_stats
+                : translations[lang].btn_hide_stats;
+        }
+
+        document.getElementById('toggleStatsBtn').addEventListener('click', function() {
+            const statsSection = document.getElementById('statsSection');
+            statsSection.hidden = !statsSection.hidden;
+            this.textContent = statsSection.hidden
+                ? translations[currentLang].btn_view_stats
+                : translations[currentLang].btn_hide_stats;
+        });
+
+        window.onload = () => {
+            setLanguage(currentLang);
+        };
+    </script>
 
     <!-- ═══════════════ ABOUT ═══════════════ -->
     <section class="section" id="about">
