@@ -1076,21 +1076,122 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px dashed var(--line);
+            gap: 10px;
+            margin: 28px 0 32px;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* Label cho section tags */
+        .industry-label {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
         }
 
         .tag {
-            padding: 6px 14px;
-            background: rgba(255, 255, 255, 0.8);
+            padding: 8px 18px;
+            background: var(--white);
             border: 1px solid var(--line);
-            border-radius: 20px;
+            border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--muted);
+            font-weight: 500;
+            color: var(--ink);
             transition: var(--transition);
+            cursor: default;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            box-shadow: 0 2px 6px rgba(23, 47, 40, 0.04);
+
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .tag:hover {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, #fff, #fffaf3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(176, 106, 59, 0.15);
+            color: var(--forest);
+        }
+
+        .tag::before {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .tag {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+            .tag:hover {
+                transform: none;
+            }
+        }
+
+        /* Desktop (≥1024px) */
+        @media (min-width: 1024px) {
+            .industry-tags {
+                padding: 24px 32px;
+                gap: 12px;
+            }
+            .tag {
+                padding: 10px 22px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablet (768px - 1023px) */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .hero-content { padding: 48px; }
+            .industry-tags { padding: 18px 20px; }
+        }
+
+        /* Mobile (<768px) */
+        @media (max-width: 767px) {
+            .industry-tags {
+                padding: 16px 12px;
+                gap: 8px;
+                border-radius: 14px;
+            }
+            .tag {
+                padding: 7px 14px;
+                font-size: 0.8rem;
+                border-radius: 40px;
+            }
+            .tag::before {
+                font-size: 1rem;
+            }
+        }
+
+        /* Small Mobile (<480px) */
+        @media (max-width: 479px) {
+            .industry-tags {
+                padding: 12px 8px;
+                gap: 6px;
+            }
+            .tag {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .industry-label {
+                font-size: 0.7rem;
+                margin-bottom: 10px;
+            }
         }
 
         /* Typography */
@@ -1237,90 +1338,96 @@
                 highlight4_title: "Kết nối chuyên gia", highlight4_desc: "Quản lý dự án & Đối tác",
                 stat1: "trường học kết nối hợp tác", stat2: "khách tham dự sự kiện",
                 stat3: "đối tác du lịch", stat4: "khóa học chuyên sâu",
+                sectors_label: "Lĩnh vực chuyên môn",
                 tags: ["✈️ Hàng không", "🏖️ Du lịch", "🏨 Hospitality", "📚 Giáo dục", "💻 Công nghệ", "🎨 Nghệ thuật"]
             },
             en: {
                 hero_title: "Operations & Corporate Legal",
-                hero_lead: "Specializing in operations, operations support, and basic corporate legal consulting. Developing optimized multi-platform application ecosystems.",
-                hero_cta1: "Contact Now",
-                btn_view_stats: "View Statistics",
-                btn_hide_stats: "Hide Statistics",
+                hero_lead: "Specializing in operations, operations support, and basic corporate legal consulting. Committed to building optimized multi-platform application ecosystems.",
+                hero_cta1: "Contact Now", btn_view_stats: "View Statistics", btn_hide_stats: "Hide Statistics",
                 highlight1_title: "Legal & Ops", highlight1_desc: "Corporate admin support",
                 highlight2_title: "Ops Support", highlight2_desc: "Workflow optimization",
                 highlight3_title: "Ecosystems", highlight3_desc: "Multi-platform apps",
                 highlight4_title: "Expert Network", highlight4_desc: "Project & Partner management",
-                stat1: "Partner schools", stat2: "Event attendees",
-                stat3: "Tourism partners", stat4: "Advanced courses",
+                stat1: "Partner schools", stat2: "Event attendees", stat3: "Tourism partners", stat4: "Advanced courses",
+                sectors_label: "Expertise Areas",
                 tags: ["✈️ Aviation", "🏖️ Tourism", "🏨 Hospitality", "📚 Education", "💻 Tech", "🎨 Art"]
             },
             de: {
                 hero_title: "Betrieb & Unternehmensrecht",
-                hero_lead: "Spezialisiert auf Betrieb, Betriebsunterstützung und grundlegende rechtliche Beratung für Unternehmen. Aufbau von plattformübergreifenden Ökosystemen.",
+                hero_lead: "Spezialisiert auf Betrieb, Betriebsunterstützung und grundlegende Rechtsberatung für Unternehmen. Ziel ist der Aufbau optimierter plattformübergreifender Anwendungsökosysteme.",
                 hero_cta1: "Kontakt", btn_view_stats: "Statistiken", btn_hide_stats: "Ausblenden",
                 highlight1_title: "Recht & Betrieb", highlight1_desc: "Admin-Unterstützung",
                 highlight2_title: "Support", highlight2_desc: "Prozessoptimierung",
                 highlight3_title: "Ökosysteme", highlight3_desc: "Multi-Plattform-Apps",
                 highlight4_title: "Expertennetzwerk", highlight4_desc: "Projektmanagement",
+                sectors_label: "Fachgebiete",
                 tags: ["✈️ Luftfahrt", "🏖️ Tourismus", "🏨 Gastgewerbe", "📚 Bildung", "💻 Technologie", "🎨 Kunst"]
             },
             es: {
                 hero_title: "Operaciones y Legal Corporativo",
-                hero_lead: "Especialista en operaciones, soporte operativo y consultoría legal básica. Desarrollo de ecosistemas de aplicaciones multiplataforma.",
+                hero_lead: "Especialista en operaciones, soporte operativo y consultoría legal corporativa básica. Comprometido con el desarrollo de ecosistemas de aplicaciones multiplataforma optimizados.",
                 hero_cta1: "Contactar", btn_view_stats: "Ver estadísticas", btn_hide_stats: "Ocultar",
                 highlight1_title: "Legal y Ops", highlight1_desc: "Soporte administrativo",
                 highlight2_title: "Soporte Operativo", highlight2_desc: "Optimización de flujo",
                 highlight3_title: "Ecosistemas", highlight3_desc: "Apps multiplataforma",
                 highlight4_title: "Red de Expertos", highlight4_desc: "Gestión de proyectos",
+                sectors_label: "Áreas de especialidad",
                 tags: ["✈️ Aviación", "🏖️ Turismo", "🏨 Hostelería", "📚 Educación", "💻 Tecnología", "🎨 Arte"]
             },
             fr: {
                 hero_title: "Opérations & Juridique",
-                hero_lead: "Spécialisé en opérations, support opérationnel et conseil juridique de base. Développement d'écosystèmes d'applications multiplateformes.",
+                hero_lead: "Spécialisé en opérations, support opérationnel et conseil juridique d'entreprise de base. Engagé dans la construction d'écosystèmes d'applications multiplateformes optimisés.",
                 hero_cta1: "Contact", btn_view_stats: "Statistiques", btn_hide_stats: "Cacher",
                 highlight1_title: "Droit & Ops", highlight1_desc: "Support administratif",
                 highlight2_title: "Support Ops", highlight2_desc: "Optimisation des flux",
                 highlight3_title: "Écosystèmes", highlight3_desc: "Apps multiplateformes",
                 highlight4_title: "Réseau d'experts", highlight4_desc: "Gestion de projets",
+                sectors_label: "Domaines d'expertise",
                 tags: ["✈️ Aviation", "🏖️ Tourisme", "🏨 Hôtellerie", "📚 Éducation", "💻 Technologie", "🎨 Art"]
             },
             ja: {
                 hero_title: "運営と企業法務",
-                hero_lead: "運営、運営サポート、および基本的な企業法務コンサルティングを専門としています。マルチプラットフォームのエコシステムを構築します。",
+                hero_lead: "運営、運営サポート、および基礎的な企業法務コンサルティングを専門としています。最適化されたマルチプラットフォーム・アプリケーションのエコシステム構築に注力しています。",
                 hero_cta1: "お問い合わせ", btn_view_stats: "統計を表示", btn_hide_stats: "隠す",
                 highlight1_title: "法務と運営", highlight1_desc: "管理サポート",
                 highlight2_title: "運営サポート", highlight2_desc: "ワークフローの最適化",
                 highlight3_title: "エコシステム", highlight3_desc: "マルチプラットフォーム",
                 highlight4_title: "専門家ネットワーク", highlight4_desc: "プロジェクト管理",
+                sectors_label: "専門分野",
                 tags: ["✈️ 航空", "🏖️ 観光", "🏨 ホスピタリティ", "📚 教育", "💻 テクノロジー", "🎨 芸術"]
             },
             ko: {
                 hero_title: "운영 및 기업 법무",
-                hero_lead: "운영, 운영 지원 및 기본적인 기업 법무 컨설팅 전문. 최적화된 멀티 플랫폼 애플리케이션 생태계를 구축합니다.",
+                hero_lead: "운영, 운영 지원 및 기초 기업 법무 컨설팅 전문. 최적화된 멀티 플랫폼 애플리케이션 생태계 구축에 집중합니다.",
                 hero_cta1: "문의하기", btn_view_stats: "통계 보기", btn_hide_stats: "숨기기",
                 highlight1_title: "법무 및 운영", highlight1_desc: "행정 지원",
                 highlight2_title: "운영 지원", highlight2_desc: "워크플로우 최적화",
                 highlight3_title: "생태계", highlight3_desc: "멀티 플랫폼 앱",
                 highlight4_title: "전문가 네트워크", highlight4_desc: "프로젝트 관리",
+                sectors_label: "전문 분야",
                 tags: ["✈️ 항공", "🏖️ 관광", "🏨 환대 산업", "📚 교육", "💻 기술", "🎨 예술"]
             },
             ru: {
                 hero_title: "Операции и Юридическое сопровождение",
-                hero_lead: "Специализация на операциях, операционной поддержке и базовом юридическом консультировании. Разработка экосистем приложений.",
+                hero_lead: "Специализация на операциях, операционной поддержке и базовом юридическом консультировании бизнеса. Сфокусирован на создании оптимизированных экосистем мультиплатформенных приложений.",
                 hero_cta1: "Связаться", btn_view_stats: "Статистика", btn_hide_stats: "Скрыть",
                 highlight1_title: "Право и Опс", highlight1_desc: "Админ. поддержка",
                 highlight2_title: "Поддержка Опс", highlight2_desc: "Оптимизация потоков",
                 highlight3_title: "Экосистемы", highlight3_desc: "Приложения",
                 highlight4_title: "Сеть экспертов", highlight4_desc: "Управление проектами",
+                sectors_label: "Сферы компетенций",
                 tags: ["✈️ Авиация", "🏖️ Туризм", "🏨 Гостеприимство", "📚 Образование", "💻 Технологии", "🎨 Искусство"]
             },
             th: {
                 hero_title: "การดำเนินงานและกฎหมายธุรกิจ",
-                hero_lead: "เชี่ยวชาญด้านการดำเนินงาน การสนับสนุน และการให้คำปรึกษาทางกฎหมายเบื้องต้น ร่วมสร้างระบบนิเวศแอปพลิเคชันที่เหมาะสมที่สุด",
+                hero_lead: "เชี่ยวชาญด้านการดำเนินงาน การสนับสนุน และการให้คำปรึกษากฎหมายธุรกิจเบื้องต้น มุ่งสร้างระบบนิเวศแอปพลิเคชันหลายแพลตฟอร์มที่เหมาะสมที่สุด",
                 hero_cta1: "ติดต่อสอบถาม", btn_view_stats: "ดูสถิติ", btn_hide_stats: "ซ่อน",
                 highlight1_title: "กฎหมายและการจัดการ", highlight1_desc: "สนับสนุนการบริหาร",
                 highlight2_title: "สนับสนุนการปฏิบัติงาน", highlight2_desc: "เพิ่มประสิทธิภาพงาน",
                 highlight3_title: "ระบบนิเวศ", highlight3_desc: "แอปหลายแพลตฟอร์ม",
                 highlight4_title: "เครือข่ายผู้เชี่ยวชาญ", highlight4_desc: "การจัดการโครงการ",
+                sectors_label: "ด้านความเชี่ยวชาญ",
                 tags: ["✈️ การบิน", "🏖️ การท่องเที่ยว", "🏨 การโรงแรม", "📚 การศึกษา", "💻 เทคโนโลยี", "🎨 ศิลปะ"]
             },
             zh: {
@@ -1331,6 +1438,7 @@
                 highlight2_title: "运营支持", highlight2_desc: "工作流优化",
                 highlight3_title: "生态系统", highlight3_desc: "多平台应用",
                 highlight4_title: "专家网络", highlight4_desc: "项目与伙伴管理",
+                sectors_label: "专业领域",
                 tags: ["✈️ 航空", "🏖️ 旅游", "🏨 餐饮住宿", "📚 教育", "💻 科技", "🎨 艺术"]
             }
         };
@@ -1351,7 +1459,13 @@
 
             const tagList = document.getElementById('tagList');
             if (translations[lang].tags) {
-                tagList.innerHTML = translations[lang].tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+                const label = translations[lang].sectors_label || translations.vi.sectors_label;
+                tagList.innerHTML = `
+                    <span class="industry-label" data-i18n="sectors_label">${label}</span>
+                    ${translations[lang].tags.map((tag, i) =>
+                        `<span class="tag" style="animation-delay: ${0.1 + i * 0.05}s">${tag}</span>`
+                    ).join('')}
+                `;
             }
 
             const statsSection = document.getElementById('statsSection');
