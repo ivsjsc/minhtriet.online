@@ -4112,24 +4112,6 @@ if (typeof lucide !== 'undefined') {
 lucide.createIcons();
 }
 
-// Debug scroll to top button
-setTimeout(() => {
-    const btn = document.getElementById('scroll-to-top');
-    console.log('Scroll to top button:', btn);
-    if (btn) {
-        console.log('Button styles:', getComputedStyle(btn));
-        console.log('Button position:', btn.getBoundingClientRect());
-        // Make it visible for testing
-        btn.style.background = 'red';
-        btn.style.zIndex = '99999';
-    } else {
-        console.error('Scroll to top button not found!');
-    }
-}, 1000);
-</script>
-
-<!-- Scroll to Top Button -->
-<button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" style="position: fixed; bottom: 20px; right: 20px; width: 48px; height: 48px; background: red; border-radius: 50%; border: none; color: white; cursor: pointer; z-index: 9999;">
   <i data-lucide="arrow-up"></i>
 </button>
 

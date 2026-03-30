@@ -472,12 +472,18 @@ function initScrollToTop() {
     const scrollBtn = document.getElementById('scroll-to-top');
     if (!scrollBtn) return;
 
+    // Hide button initially
+    scrollBtn.style.opacity = '0';
+    scrollBtn.style.transform = 'translateY(100px)';
+
     // Show/hide button based on scroll position
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('show');
+            scrollBtn.style.opacity = '1';
+            scrollBtn.style.transform = 'translateY(0)';
         } else {
-            scrollBtn.classList.remove('show');
+            scrollBtn.style.opacity = '0';
+            scrollBtn.style.transform = 'translateY(100px)';
         }
     });
 
