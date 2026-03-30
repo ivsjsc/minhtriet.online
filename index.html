@@ -22,22 +22,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<!-- Tailwind CSS & Lucide Icons -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-corePlugins: { preflight: false },
-theme: {
-extend: {
-colors: {
-primary: '#152922',
-secondary: '#a55f2e',
-accent: '#c44a6b'
-}
-}
-}
-}
-</script>
+<!-- Local CSS -->
+<link rel="stylesheet" href="./css/tailwind.css">
+<!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <title>Nguyen Minh Triet | Professional Profile</title>
 <style>
@@ -1916,6 +1903,9 @@ Testing Placement
 <span>© <span id="year"></span> minhtriet.online</span>
 </div>
 </footer>
+<button id="scrollToTop" type="button" aria-label="Scroll to top" title="Scroll to top" class="fixed bottom-6 right-6 z-50 hidden items-center justify-center w-11 h-11 rounded-full bg-primary-600 text-white shadow-soft hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition">
+<i data-lucide="arrow-up" class="w-5 h-5"></i>
+</button>
 <script>
 const translations = {
 vi: {
@@ -3808,6 +3798,24 @@ const menuBtn = document.getElementById("menu-btn");
 const nav = document.getElementById("nav");
 const langSelect = document.getElementById("lang");
 const statusEl = document.getElementById("translation-status");
+function safeStorageGet(key) {
+try {
+return window.localStorage.getItem(key);
+} catch {
+return null;
+}
+}
+function safeStorageSet(key, value) {
+try {
+window.localStorage.setItem(key, value);
+} catch {}
+}
+function getSiteLang() {
+return safeStorageGet("site_lang") || "vi";
+}
+function setSiteLang(lang) {
+safeStorageSet("site_lang", lang);
+}
 const experienceDetails = {
 vi: {
 e1: [
@@ -3931,7 +3939,7 @@ btn.addEventListener("click", () => {
 const job = btn.closest(".job");
 const panel = job.querySelector(".exp-details");
 const txt = job.querySelector(".exp-toggle-text");
-const lang = localStorage.getItem("site_lang") || "vi";
+const lang = getSiteLang();
 const willOpen = !job.classList.contains("open");
 job.classList.toggle("open", willOpen);
 btn.setAttribute("aria-expanded", String(willOpen));
@@ -3944,7 +3952,7 @@ btn.addEventListener("click", () => {
 const card = btn.closest(".section-card");
 const body = card.querySelector(".section-body");
 const txt = btn.querySelector(".section-toggle-text");
-const lang = localStorage.getItem("site_lang") || "vi";
+const lang = getSiteLang();
 const willOpen = btn.getAttribute("aria-expanded") === "false";
 btn.setAttribute("aria-expanded", String(willOpen));
 card.classList.toggle("collapsed", !willOpen);
@@ -3957,7 +3965,7 @@ btn.addEventListener("click", () => {
 const item = btn.closest(".collapsible-item");
 const body = item.querySelector(".item-body");
 const txt = btn.querySelector(".item-toggle-text");
-const lang = localStorage.getItem("site_lang") || "vi";
+const lang = getSiteLang();
 const willOpen = btn.getAttribute("aria-expanded") === "false";
 btn.setAttribute("aria-expanded", String(willOpen));
 item.classList.toggle("collapsed", !willOpen);
@@ -3988,7 +3996,7 @@ if (toggleBtn && sectionBody) {
 if (sectionBody.hidden) {
 e.preventDefault();
 const txt = toggleBtn.querySelector(".section-toggle-text");
-const lang = localStorage.getItem("site_lang") || "vi";
+const lang = getSiteLang();
 toggleBtn.setAttribute("aria-expanded", "true");
 section.classList.remove("collapsed");
 sectionBody.hidden = false;
@@ -4048,7 +4056,7 @@ const panel = document.getElementById("heroStatsPanel");
 const btn = document.getElementById("heroStatsToggle");
 const span = btn?.querySelector(".hero-stats-toggle-text");
 if (!panel || !btn || !span) return;
-const lang = localStorage.getItem("site_lang") || "vi";
+const lang = getSiteLang();
 const dict = translations[lang] || translations.en;
 const open = !panel.hidden;
 const show = dict.hero_stats_show ?? translations.en.hero_stats_show ?? "";
@@ -4067,13 +4075,15 @@ if (typeof val === "string") el.textContent = val;
 });
 document.title = dict.page_title || translations.en.page_title;
 document.documentElement.lang = HTML_LANG[lang] || "en";
-localStorage.setItem("site_lang", lang);
+setSiteLang(lang);
 renderIndustryTags(lang);
 const audit = translationAudit(lang);
+if (statusEl) {
 if (audit.missing.length === 0) {
 statusEl.textContent = `${dict.translation_ok || translations.en.translation_ok} (${audit.total}/${audit.total})`;
 } else {
 statusEl.textContent = `${dict.translation_missing || translations.en.translation_missing}: ${audit.missing.length}/${audit.total}`;
+}
 }
 renderExperienceDetails(lang);
 renderSectionToggles(lang);
@@ -4085,7 +4095,7 @@ if (audit.missing.length > 0) {
 console.warn(`[i18n] Missing keys for ${lang}:`, audit.missing);
 }
 }
-const savedLang = localStorage.getItem("site_lang") || "vi";
+const savedLang = getSiteLang();
 langSelect.value = translations[savedLang] ? savedLang : "en";
 applyLang(langSelect.value);
 langSelect.addEventListener("change", (e) => {
@@ -4097,7 +4107,20 @@ if (!panel) return;
 panel.hidden = !panel.hidden;
 syncHeroStatsToggleLabel();
 });
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+const scrollBtn = document.getElementById("scrollToTop");
+function syncScrollToTop() {
+if (!scrollBtn) return;
+const show = window.scrollY > 420;
+scrollBtn.classList.toggle("hidden", !show);
+scrollBtn.classList.toggle("inline-flex", show);
+}
+syncScrollToTop();
+window.addEventListener("scroll", syncScrollToTop, { passive: true });
+scrollBtn?.addEventListener("click", () => {
+window.scrollTo({ top: 0, behavior: "smooth" });
+});
 const io = new IntersectionObserver((entries) => {
 entries.forEach((entry) => {
 if (entry.isIntersecting) {
@@ -4111,10 +4134,7 @@ document.querySelectorAll(".reveal").forEach((node) => io.observe(node));
 if (typeof lucide !== 'undefined') {
 lucide.createIcons();
 }
-
-  <i data-lucide="arrow-up"></i>
-</button>
-
+</script>
 </body>
 </html>
 

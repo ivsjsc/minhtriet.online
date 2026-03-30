@@ -131,12 +131,8 @@
 }
 
 /* Enhanced Breakpoint System */
-@custom-media --tablet (min-width: 768px) and (max-width: 1023px);
-@custom-media --desktop (min-width: 1024px) and (max-width: 1279px);
-@custom-media --large-desktop (min-width: 1280px);
-
 /* Tablet-specific styles */
-@media (--tablet) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .container {
     max-width: 90%;
     margin: 0 auto;
@@ -148,7 +144,7 @@
 }
 
 /* Desktop-specific optimizations */
-@media (--desktop) {
+@media (min-width: 1024px) and (max-width: 1279px) {
   .hero-content {
     max-width: 80%;
   }
@@ -159,7 +155,7 @@
 }
 
 /* Large desktop enhancements */
-@media (--large-desktop) {
+@media (min-width: 1280px) {
   .container {
     max-width: 1400px;
   }

@@ -1,0 +1,10 @@
+{
+  "name": "minhtriet-online",
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i ./css/styles.css -o ./css/tailwind.css --minify"
+  }
+}

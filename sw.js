@@ -1,11 +1,11 @@
 // Service Worker for minhtriet.online
 // Provides offline caching and performance optimization
 
-const CACHE_NAME = 'minhtriet-v1.0.0';
+const CACHE_NAME = 'minhtriet-v1.0.1';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/css/styles.css',
+    '/css/tailwind.css',
     '/js/main.js',
     '/js/utils.js',
     '/js/translations.js',
