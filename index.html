@@ -107,8 +107,10 @@ position: relative;
 z-index: 1;
 }
 .topbar {
-position: sticky;
+position: fixed;
 top: 0;
+left: 0;
+right: 0;
 z-index: 30;
 backdrop-filter: blur(18px) saturate(1.1);
 -webkit-backdrop-filter: blur(18px) saturate(1.1);
@@ -1177,7 +1179,13 @@ min-height: 44px;
 <a href="#digital-ecosystem" data-i18n="nav_ecosystem">Applications</a>
 <a href="#education" data-i18n="nav_education">Education</a>
 <a href="#contact" data-i18n="nav_contact">Contact</a>
-<a class="nav-download" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
+<div class="nav-download dropdown">
+  <button class="dropdown-toggle" data-i18n="btn_pdf">Tải CV PDF ▼</button>
+  <div class="dropdown-menu">
+    <a href="./CV.NguyenMinhTriet-vi.pdf" download class="dropdown-item">Tiếng Việt</a>
+    <a href="./CV.NguyenMinhTriet-en.pdf" download class="dropdown-item">English</a>
+  </div>
+</div>
 </nav>
 </div>
 </header>
@@ -1283,7 +1291,13 @@ onerror="this.src='https://placehold.co/400x500/2a4f41/ffffff?text=NMT'">
 </div>
 <div class="row">
 <a class="btn" href="#contact" data-i18n="hero_cta1">Contact now</a>
-<a class="btn-soft" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" data-i18n="btn_pdf">Download CV PDF</a>
+<div class="dropdown">
+  <button class="dropdown-toggle btn-soft" data-i18n="btn_pdf">Download CV ▼</button>
+  <div class="dropdown-menu">
+    <a href="./CV.NguyenMinhTriet-vi.pdf" download class="dropdown-item">Tiếng Việt</a>
+    <a href="./CV.NguyenMinhTriet-en.pdf" download class="dropdown-item">English</a>
+  </div>
+</div>
 </div>
 </article>
 
@@ -1895,10 +1909,16 @@ Testing Placement
 <article class="contact-box">
 <h3 data-i18n="contact_box2">Download CV</h3>
 <p class="mb-4 text-slate-600 text-sm" data-i18n="cv_note">Use the button below to download the CV PDF.</p>
-<a class="btn inline-flex items-center gap-2" href="./3.%20CV.pdf" download="Nguyen-Minh-Triet-CV.pdf" style="text-decoration: none;">
-<i data-lucide="download" class="w-4 h-4 text-white"></i>
-<span data-i18n="btn_pdf">Download CV PDF</span>
-</a>
+<div class="dropdown">
+  <button class="dropdown-toggle btn inline-flex items-center gap-2" style="text-decoration: none;">
+    <i data-lucide="download" class="w-4 h-4 text-white"></i>
+    <span data-i18n="btn_pdf">Download CV ▼</span>
+  </button>
+  <div class="dropdown-menu">
+    <a href="./CV.NguyenMinhTriet-vi.pdf" download class="dropdown-item">Tiếng Việt</a>
+    <a href="./CV.NguyenMinhTriet-en.pdf" download class="dropdown-item">English</a>
+  </div>
+</div>
 <div id="translation-status" class="translation-status hidden"></div>
 </article>
 </div>
@@ -1910,7 +1930,7 @@ Testing Placement
 <div class="wrap footer-card reveal">
 <span class="inline-flex items-center gap-3">
 <img src="./images/logo/nmt-logo.png" alt="NMT Logo" width="32" height="32" class="w-8 h-8 object-contain" loading="lazy" decoding="async">
-<span data-i18n="footer_left">Professional profile of Nguyen Minh Triet - Strategic Relations, Operations, and Digital Growth.</span>
+<span data-i18n="footer_left">Đối ngoại chiến lược • Vận hành • Tăng trưởng số</span>
 </span>
 <span>© <span id="year"></span> minhtriet.online</span>
 </div>
@@ -1966,10 +1986,10 @@ hero_stats_hide: "Ẩn số liệu",
 about_kicker: "Giới thiệu",
 about_title: "Mục tiêu nghề nghiệp & triết lý quản trị",
 about_note: "Hệ thống + Đội ngũ + Lãnh đạo = Kết quả xuất sắc.",
-about_p1: "Tôi tìm kiếm cơ hội đồng hành cùng các tổ chức định hướng hiệu quả vận hành & tăng trưởng bền vững tại các vị trí: Quản lý Vận hành, COO (Chief Operating Officer), hoặc Tư vấn Chiến lược.",
-about_b1: "Thiết kế lại hệ thống vận hành, giảm 80% công việc thủ công để tối ưu chi phí & nhân lực; quản lý đồng thời 4 chi nhánh F&B, đảm bảo kiểm soát chất lượng.",
-about_b2: "Điều phối phục vụ 15.000+ khách mùa cao điểm (Du lịch) với tỷ lệ lỗi 0%; tổ chức sự kiện 1.500+ người trong điều kiện ngân sách hạn chế & timeline gấp rút.",
-about_b3: "Trực tiếp đàm phán và quản lý 50+ chuyên gia quốc tế; xây dựng văn hóa làm việc hiệu suất cao trong môi trường đa phòng ban, đa văn hóa.",
+about_p1: "Tôi tìm kiếm cơ hội đồng hành cùng các tổ chức định hướng hiệu quả vận hành & tăng trưởng bền vững tại các vị trí: Quản lý Vận hành, COO (Chief Operating Officer), hoặc Tư vấn Chiến lược, Tối ưu hiệu suất vận hành, Số hóa, tự động hóa quy trình.",
+about_b1: "Thiết kế lại hệ thống vận hành, giảm 80% công việc thủ công để tối ưu chi phí & nhân lực; đảm bảo kiểm soát chất lượng.",
+about_b2: "Kết nối các chuyên gia quốc tế; xây dựng văn hóa làm việc hiệu suất cao trong môi trường đa phòng ban, đa văn hóa.",
+about_b3: "Tối ưu hóa quy trình vận hành thông qua số hóa và tự động hóa, giúp tổ chức hoạt động hiệu quả và bền vững.",
 contact_info_title: "Thông tin liên hệ",
 label_address: "Địa chỉ:",
 value_address: "Số 1104, tổ 6, Ấp Đất Mới, Xã Long Phước, Tỉnh Đồng Nai",
@@ -2022,9 +2042,9 @@ project_note: "Sản phẩm thực tế, hướng kết quả đo được trong
 p1_desc: "Hệ thống quản trị trung tâm ngoại ngữ và kênh thông tin đào tạo số.",
 p2_desc: "Bộ công cụ AI cho kiến trúc, tối ưu CV và hỗ trợ sức khỏe tinh thần.",
 p3_desc: "Nền tảng EdTech và tiện ích cho học tập, đánh giá, tài chính và nhà ở sinh viên.",
-badgeTech: "Hệ sinh thái công nghệ nội bộ",
-ecoTitle: "Hệ sinh thái Số IVS",
-ecoDesc: "Được thiết kế chuyên biệt cho trung tâm ngoại ngữ, hệ sinh thái của chúng tôi bao phủ mọi khía cạnh từ vận hành, khảo thí đến học tập.",
+badgeTech: "Hệ sinh thái công nghệ IVS",
+ecoTitle: "Hệ sinh thái số IVS",
+ecoDesc: "Được thiết kế cho trung tâm ngoại ngữ, hệ sinh thái giúp vận hành trơn tru, hiệu quả và bền vững.",
 app1DescLong: "Nền tảng quản trị toàn diện đồng bộ dữ liệu học viên, lịch học, học phí và báo cáo vận hành thời gian thực.",
 feat1_1: "Quản lý Học phí",
 feat1_2: "Điểm danh Số",
@@ -2104,7 +2124,7 @@ contact_label_website_company: "Website công ty",
 contact_label_linkedin: "LinkedIn",
 contact_label_github: "GitHub",
 cv_note: "Dùng nút bên dưới để tải CV PDF.",
-footer_left: "Hồ sơ năng lực của Nguyễn Minh Triết - Đối ngoại chiến lược, vận hành và tăng trưởng số.",
+footer_left: "Đối ngoại chiến lược • Vận hành • Tăng trưởng số",
 translation_ok: "Kiểm tra bản dịch: đầy đủ",
 translation_missing: "Kiểm tra bản dịch: thiếu"
 },
@@ -2155,9 +2175,9 @@ about_kicker: "About",
 about_title: "Career Objective & Management Philosophy",
 about_note: "Systems + Team + Leadership = Outstanding results.",
 about_p1: "I’m seeking opportunities to partner with organizations focused on operational efficiency and sustainable growth in roles such as Operations Manager, COO (Chief Operating Officer), or Strategic Consultant.",
-about_b1: "Redesigned operating systems, cutting manual work by 80% to optimize cost and headcount; managed 4 F&B branches with strict quality control.",
-about_b2: "Coordinated service for 15,000+ peak-season guests (Travel) with a 0% error rate; delivered events for 1,500+ attendees under tight budgets and deadlines.",
-about_b3: "Negotiated with and managed 50+ international experts; built a high-performance culture across multi-department, multicultural environments.",
+about_b1: "Redesigned operating systems, cutting manual work by 80% to optimize cost and headcount; ensuring quality control.",
+about_b2: "Connecting international experts; building a high-performance work culture in multi-departmental, multicultural environments.",
+about_b3: "Optimizing operational processes through digitalization and automation, helping organizations operate efficiently and sustainably.",
 contact_info_title: "Contact Information",
 label_address: "Address:",
 value_address: "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province",
@@ -2342,10 +2362,10 @@ hero_stats_hide: "Ausblenden",
 about_kicker: "Über mich",
 about_title: "Karriereziel & Managementphilosophie",
 about_note: "System + Team + Führung = hervorragende Ergebnisse.",
-about_p1: "Ich suche Möglichkeiten, Organisationen mit Fokus auf operative Effizienz und nachhaltiges Wachstum in Rollen wie Operations Manager, COO (Chief Operating Officer) oder Strategieberater zu unterstützen.",
-about_b1: "Betriebssysteme neu gestaltet, 80% manuelle Arbeit reduziert, Kosten und Personal optimiert; gleichzeitig 4 F&B-Standorte geführt und Qualität konsequent gesichert.",
-about_b2: "In der Hochsaison 15.000+ Gäste (Tourismus) koordiniert mit 0% Fehlerquote; Events mit 1.500+ Teilnehmenden unter engem Budget und straffen Deadlines umgesetzt.",
-about_b3: "50+ internationale Expert:innen verhandelt und geführt; eine leistungsstarke Kultur in multi-departmentalen, multikulturellen Umgebungen aufgebaut.",
+about_p1: "Ich suche Möglichkeiten, Organisationen mit Fokus auf operative Effizienz und nachhaltiges Wachstum in Rollen wie Operations Manager, COO (Chief Operating Officer), Strategieberater, operative Leistungsoptimierung, Digitalisierung und Prozessautomatisierung zu unterstützen.",
+about_b1: "Betriebssysteme neu gestaltet, 80% manuelle Arbeit reduziert, Kosten und Personal optimiert; Qualitätssicherung gewährleistet.",
+about_b2: "Internationale Experten vernetzt; Hochleistungskultur in multidepartmentalen, multikulturellen Umgebungen aufgebaut.",
+about_b3: "Betriebsabläufe durch Digitalisierung und Automatisierung optimiert, um effiziente und nachhaltige Organisationsabläufe zu ermöglichen.",
 contact_info_title: "Kontaktinformationen",
 label_address: "Adresse:",
 value_address: "1104, Gruppe 6, Ap Dat Moi, Gemeinde Long Phuoc, Provinz Dong Nai",
@@ -2530,10 +2550,10 @@ hero_stats_hide: "Ocultar",
 about_kicker: "Sobre mí",
 about_title: "Objetivo Profesional y Filosofía de Gestión",
 about_note: "Sistema + Equipo + Liderazgo = resultados sobresalientes.",
-about_p1: "Busco oportunidades para acompañar a organizaciones enfocadas en eficiencia operativa y crecimiento sostenible en roles como Gerente de Operaciones, COO (Chief Operating Officer) o Consultor Estratégico.",
-about_b1: "Rediseñé sistemas operativos, reduciendo 80% del trabajo manual para optimizar costos y personal; gestioné 4 sucursales de F&B con control de calidad estricto.",
-about_b2: "Coordiné la atención de 15.000+ clientes en temporada alta (Turismo) con 0% de errores; organicé eventos de 1.500+ personas con presupuesto limitado y plazos ajustados.",
-about_b3: "Negocié y gestioné 50+ especialistas internacionales; construí una cultura de alto desempeño en entornos multidisciplinarios y multiculturales.",
+about_p1: "Busco oportunidades para acompañar a organizaciones enfocadas en eficiencia operativa y crecimiento sostenible en roles como Gerente de Operaciones, COO (Chief Operating Officer), Consultor Estratégico, optimización del rendimiento operacional, digitalización y automatización de procesos.",
+about_b1: "Rediseñé sistemas operativos, reduciendo 80% del trabajo manual para optimizar costos y personal; aseguré el control de calidad.",
+about_b2: "Conecté expertos internacionales; construí una cultura de alto rendimiento en entornos multidisciplinarios y multiculturales.",
+about_b3: "Optimicé los procesos operativos mediante digitalización y automatización, ayudando a las organizaciones a funcionar de manera eficiente y sostenible.",
 contact_info_title: "Información de Contacto",
 label_address: "Dirección:",
 value_address: "1104, Grupo 6, Ap Dat Moi, Comuna de Long Phuoc, Provincia de Dong Nai",
@@ -2719,7 +2739,7 @@ about_kicker: "À propos",
 about_title: "Objectif professionnel & philosophie de gestion",
 about_note: "Système + Équipe + Leadership = résultats d’excellence.",
 about_p1: "Je recherche des opportunités pour accompagner des organisations axées sur l’efficacité opérationnelle et une croissance durable, en tant que Responsable des opérations, COO (Chief Operating Officer) ou Consultant stratégique.",
-about_b1: "Refonte des systèmes opérationnels, réduction de 80% des tâches manuelles pour optimiser coûts et effectifs ; gestion simultanée de 4 sites F&B avec un contrôle qualité strict.",
+about_b1: "Refonte des systèmes opérationnels, réduction de 80% des tâches manuelles pour optimiser coûts et effectifs; assurance du contrôle qualité.",
 about_b2: "Coordination de 15 000+ clients en haute saison (Tourisme) avec un taux d’erreur de 0% ; organisation d’événements de 1 500+ personnes sous contraintes de budget et de délais.",
 about_b3: "Négociation et management de 50+ experts internationaux ; construction d’une culture haute performance dans des environnements multiculturels et multi-départements.",
 contact_info_title: "Coordonnées",
@@ -4149,4 +4169,3 @@ lucide.createIcons();
 </script>
 </body>
 </html>
-
