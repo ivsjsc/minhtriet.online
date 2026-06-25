@@ -28,6 +28,8 @@
 
 <meta property="og:image" content="https://minhtriet.online/images/avatar.webp">
 
+<meta property="og:locale" content="vi_VN" id="og-locale">
+
 <meta name="twitter:card" content="summary_large_image">
 
 <meta name="twitter:title" content="Nguyen Minh Triet | Strategic Relations & Digital Growth">
@@ -7992,7 +7994,37 @@ window.localStorage.setItem(key, value);
 
 function getSiteLang() {
 
-return safeStorageGet("site_lang") || "vi";
+const stored = safeStorageGet("site_lang");
+
+if (stored && translations[stored]) return stored;
+
+// Browser language detection
+const browserLang = navigator.language || navigator.languages?.[0] || "";
+
+const langMap = {
+  "vi": "vi",
+  "en": "en",
+  "de": "de",
+  "es": "es",
+  "fr": "fr",
+  "ja": "ja",
+  "ko": "ko",
+  "ru": "ru",
+  "th": "th",
+  "zh": "zh",
+  "zh-cn": "zh",
+  "zh-tw": "zh",
+  "zh-hk": "zh"
+};
+
+// Check if browser language starts with any supported language code
+for (const [code, mapped] of Object.entries(langMap)) {
+  if (browserLang.toLowerCase().startsWith(code)) {
+    return mapped;
+  }
+}
+
+return "vi"; // Default fallback
 
 }
 
@@ -8519,6 +8551,24 @@ if (typeof val === "string") el.textContent = val;
 document.title = dict.page_title || translations.en.page_title;
 
 document.documentElement.lang = HTML_LANG[lang] || "en";
+
+// Update og:locale meta tag
+const ogLocale = document.getElementById("og-locale");
+if (ogLocale) {
+  const localeMap = {
+    vi: "vi_VN",
+    en: "en_US",
+    de: "de_DE",
+    es: "es_ES",
+    fr: "fr_FR",
+    ja: "ja_JP",
+    ko: "ko_KR",
+    ru: "ru_RU",
+    th: "th_TH",
+    zh: "zh_CN"
+  };
+  ogLocale.content = localeMap[lang] || "en_US";
+}
 
 setSiteLang(lang);
 
