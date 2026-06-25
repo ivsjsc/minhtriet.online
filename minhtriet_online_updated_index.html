@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#10251f" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Nguyễn Minh Triết - CEO IVS JSC, Strategic Operations, EdTech, AI Products, Trust Commerce and Digital Platform Architecture." />
+  <meta name="keywords" content="Nguyen Minh Triet, Nguyễn Minh Triết, IVS JSC, IVS Academy, CenterCare, LearningCare, Aivy TeacherMatch, ACFMart, QRVerified, EdTech, AI, Digital Transformation" />
+  <meta name="author" content="Nguyễn Minh Triết" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://minhtriet.online/" />
+  <meta property="og:title" content="Nguyễn Minh Triết | CEO IVS JSC & Platform Builder" />
+  <meta property="og:description" content="Professional profile of Nguyễn Minh Triết: strategic operations, EdTech products, AI systems, trust commerce and multi-platform digital growth." />
+  <meta property="og:image" content="https://minhtriet.online/images/avatar.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nguyễn Minh Triết | CEO IVS JSC & Platform Builder" />
+  <meta name="twitter:description" content="Strategic operations, EdTech products, AI systems, trust commerce and multi-platform digital growth." />
+  <meta name="twitter:image" content="https://minhtriet.online/images/avatar.webp" />
+  <link rel="canonical" href="https://minhtriet.online/" />
+  <link rel="icon" type="image/png" href="./images/logo/nmt-logo.png" />
+  <link rel="apple-touch-icon" href="./images/logo/nmt-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <title>Nguyễn Minh Triết | CEO IVS JSC & Platform Builder</title>
+  <style>
+    :root {
+      --ink: #10251f;
+      --muted: #5a665f;
+      --soft: #f7f1e6;
+      --paper: #fffaf2;
+      --paper-2: #fff7ea;
+      --line: rgba(16, 37, 31, 0.14);
+      --forest: #214c3f;
+      --forest-2: #10251f;
+      --moss: #6d7d47;
+      --gold: #b87938;
+      --gold-soft: rgba(184, 121, 56, 0.16);
+      --blue: #244e73;
+      --white: #ffffff;
+      --shadow-sm: 0 12px 30px rgba(16, 37, 31, 0.08);
+      --shadow: 0 24px 70px rgba(16, 37, 31, 0.14);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 16% -8%, rgba(184, 121, 56, 0.18), transparent 35%),
+        radial-gradient(circle at 92% 6%, rgba(33, 76, 63, 0.16), transparent 36%),
+        linear-gradient(180deg, #fbf6ed 0%, #efe6d7 58%, #e8dfcf 100%);
+      min-height: 100vh;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding-left: env(safe-area-inset-left, 0px);
+      padding-right: env(safe-area-inset-right, 0px);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(16, 37, 31, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 37, 31, 0.025) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: radial-gradient(circle at center, black 45%, transparent 94%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, select { font: inherit; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    ::selection { background: rgba(184, 121, 56, 0.24); color: var(--ink); }
+
+    .wrap { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; position: relative; z-index: 1; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: rgba(251, 246, 237, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px) saturate(1.15);
+      -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    }
+    .topbar-inner {
+      min-height: 74px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-logo {
+      width: 46px; height: 46px; border-radius: 16px; object-fit: contain; flex: 0 0 46px;
+      background: rgba(255,255,255,.72); border: 1px solid var(--line); padding: 4px;
+    }
+    .brand-text { min-width: 0; }
+    .brand small { display: block; color: var(--muted); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 800; }
+    .brand strong { display: block; font-family: "Playfair Display", serif; font-size: clamp(1.35rem, 5vw, 1.92rem); line-height: .98; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .actions { display: flex; align-items: center; gap: 8px; }
+    .nav {
+      position: fixed;
+      left: 14px; right: 14px; top: calc(74px + env(safe-area-inset-top, 0px));
+      display: grid; gap: 8px; padding: 12px;
+      background: rgba(255, 250, 242, 0.96); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow);
+      opacity: 0; transform: translateY(-10px) scale(.985); pointer-events: none; transition: .22s ease;
+    }
+    .nav.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .nav a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 12px; border-radius: 12px; color: var(--muted); font-weight: 800; background: rgba(255,255,255,.72); }
+    .nav a:hover { color: var(--ink); background: rgba(184, 121, 56, 0.11); }
+    .btn, .icon-btn, .select {
+      min-height: 44px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px;
+      background: rgba(255,255,255,.82); color: var(--ink); font-weight: 800; cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+    }
+    .btn:hover, .icon-btn:hover, .select:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .btn-primary { background: var(--forest); color: #fff; border-color: transparent; }
+    .btn-primary:hover { background: var(--forest-2); }
+    .icon-btn { width: 44px; padding: 0; }
+    .select { appearance: none; padding-right: 14px; }
+    .cv-menu { position: relative; }
+    .cv-menu-panel {
+      position: absolute; right: 0; top: calc(100% + 10px); width: min(320px, calc(100vw - 28px));
+      display: grid; gap: 8px; padding: 10px;
+      background: rgba(255, 250, 242, 0.98); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow);
+      opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: .2s ease;
+    }
+    .cv-menu.open .cv-menu-panel, .cv-menu:focus-within .cv-menu-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+    .cv-menu-panel a { display: flex; gap: 10px; align-items: center; padding: 11px; border-radius: 14px; border: 1px solid transparent; background: rgba(255,255,255,.72); font-weight: 800; }
+    .cv-menu-panel a:hover { border-color: rgba(184, 121, 56, .24); background: rgba(184, 121, 56, .1); }
+    .badge { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; height: 34px; padding: 0 8px; border-radius: 12px; background: rgba(33, 76, 63, .1); color: var(--forest); font-size: .78rem; font-weight: 900; }
+
+    main { padding-top: 14px; }
+    .section { padding: 24px 0; scroll-margin-top: 96px; }
+    .card {
+      border: 1px solid var(--line); background: rgba(255, 250, 242, 0.82);
+      border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-grid { display: grid; gap: 14px; }
+    .hero-card { padding: clamp(22px, 5vw, 42px); overflow: hidden; position: relative; }
+    .hero-card::after {
+      content: ""; position: absolute; right: -120px; bottom: -140px; width: 320px; height: 320px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(184, 121, 56, .22), transparent 68%); pointer-events: none;
+    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.78); color: var(--forest); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .09em; }
+    h1, h2 { font-family: "Playfair Display", serif; letter-spacing: -.03em; }
+    h1 { margin: 18px 0 0; font-size: clamp(2.45rem, 12vw, 6rem); line-height: .9; max-width: 10ch; }
+    .hero-subtitle { margin: 16px 0 0; font-size: clamp(1.05rem, 4vw, 1.65rem); font-weight: 800; line-height: 1.22; color: var(--gold); max-width: 52rem; }
+    .lead { margin: 16px 0 0; color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.12rem); max-width: 68ch; }
+    .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; background: rgba(255,255,255,.76); color: var(--forest); font-size: .88rem; font-weight: 800; }
+    .profile-card { padding: 14px; display: grid; gap: 12px; }
+    .portrait { border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(180deg, rgba(33, 76, 63, .08), rgba(184, 121, 56, .16)); min-height: 360px; }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; }
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .stat { border: 1px solid var(--line); border-radius: 16px; padding: 14px; background: rgba(255,255,255,.76); }
+    .stat strong { display: block; font-size: 1.45rem; line-height: 1; color: var(--forest); }
+    .stat span { display: block; margin-top: 6px; color: var(--muted); font-size: .83rem; line-height: 1.45; }
+    .social-row { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; }
+    .social { width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; box-shadow: 0 8px 18px rgba(16,37,31,.14); transition: .2s ease; }
+    .social:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(16,37,31,.18); }
+    .social svg { width: 20px; height: 20px; }
+
+    .section-card { padding: clamp(20px, 4vw, 34px); }
+    .section-head { display: grid; gap: 10px; margin-bottom: 18px; }
+    .kicker { margin: 0; color: var(--gold); font-size: .78rem; text-transform: uppercase; letter-spacing: .13em; font-weight: 900; }
+    h2 { margin: 0; font-size: clamp(2rem, 8vw, 3.55rem); line-height: .95; }
+    .note { margin: 0; color: var(--muted); max-width: 72ch; }
+    .grid { display: grid; gap: 12px; }
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .mini {
+      border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 18px;
+      background: rgba(255,255,255,.76); min-height: 100%; position: relative; overflow: hidden;
+    }
+    .mini h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.35; }
+    .mini p { margin: 0; color: var(--muted); }
+    .mini .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .pill { display: inline-flex; align-items: center; gap: 5px; padding: 6px 9px; border-radius: 999px; border: 1px solid rgba(16,37,31,.11); background: rgba(247,241,230,.86); color: var(--forest); font-size: .77rem; font-weight: 900; }
+    .list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+    .list li { display: flex; gap: 10px; align-items: flex-start; color: var(--muted); }
+    .list li::before { content: ""; width: 8px; height: 8px; margin-top: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px var(--gold-soft); flex: 0 0 auto; }
+    .split { display: grid; gap: 12px; }
+    .feature-band {
+      border-radius: 24px; padding: 22px; background: linear-gradient(135deg, var(--forest-2), var(--forest)); color: #fff; overflow: hidden; position: relative;
+    }
+    .feature-band::after { content: ""; position: absolute; right: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,.08); }
+    .feature-band p { color: rgba(255,255,255,.75); margin: 8px 0 0; }
+    .feature-band h3 { margin: 0; font-size: 1.4rem; line-height: 1.2; }
+    .product-card { display: grid; gap: 12px; }
+    .product-top { display: flex; align-items: flex-start; gap: 12px; }
+    .product-icon { width: 46px; height: 46px; border-radius: 15px; display: inline-flex; align-items: center; justify-content: center; background: rgba(33,76,63,.1); color: var(--forest); flex: 0 0 auto; }
+    .product-icon i { width: 22px; height: 22px; }
+    .product-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; color: var(--forest); font-size: .88rem; font-weight: 900; }
+    .product-link:hover { color: var(--gold); }
+    .portfolio-row { display: grid; gap: 12px; }
+    .portfolio-card { border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: rgba(255,255,255,.74); }
+    .portfolio-cover { min-height: 132px; padding: 18px; display: flex; align-items: flex-end; background: linear-gradient(135deg, rgba(33,76,63,.9), rgba(184,121,56,.72)); color: #fff; }
+    .portfolio-cover span { display: inline-flex; padding: 7px 10px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.1); font-size: .75rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .portfolio-body { padding: 18px; }
+    .portfolio-body h3 { margin: 0 0 8px; font-size: 1.16rem; }
+    .portfolio-body p { margin: 0; color: var(--muted); }
+    .link-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .link-list a { padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); background: rgba(247,241,230,.8); color: var(--forest); font-size: .8rem; font-weight: 900; }
+    .link-list a:hover { background: var(--forest); color: #fff; border-color: transparent; }
+    .timeline { position: relative; display: grid; gap: 12px; }
+    .job { position: relative; padding: 18px 18px 18px 48px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(255,255,255,.76); }
+    .job::before { content: ""; position: absolute; left: 18px; top: 24px; width: 12px; height: 12px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 0 8px rgba(33,76,63,.12); }
+    .job h3 { margin: 0; font-size: 1.05rem; }
+    .job .period { display: inline-flex; margin-top: 7px; padding: 5px 9px; border-radius: 999px; background: rgba(184,121,56,.12); color: var(--gold); font-size: .78rem; font-weight: 900; }
+    .job p { margin: 10px 0 0; color: var(--muted); }
+    .contact-grid { display: grid; gap: 12px; }
+    .contact-line { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .contact-line:last-child { border-bottom: 0; }
+    .label { color: var(--gold); text-transform: uppercase; letter-spacing: .11em; font-size: .72rem; font-weight: 900; }
+    footer { padding: 10px 0 max(34px, calc(18px + env(safe-area-inset-bottom, 0px))); }
+    .footer-card { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 18px; color: var(--muted); border-radius: 18px; background: rgba(255,255,255,.68); border: 1px solid var(--line); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    @media (min-width: 720px) {
+      .wrap { width: min(var(--max), calc(100% - 48px)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .split { grid-template-columns: 1fr 1fr; }
+      .portfolio-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1040px) {
+      main { padding-top: 24px; }
+      .topbar-inner { grid-template-columns: auto 1fr auto; }
+      .nav {
+        position: static; opacity: 1; transform: none; pointer-events: auto; box-shadow: none; border: 0; border-radius: 0; padding: 0;
+        display: flex; justify-content: center; gap: 18px; background: transparent;
+      }
+      .nav a { min-height: 0; padding: 4px 0; background: transparent; position: relative; }
+      .nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: .2s ease; }
+      .nav a:hover::after { transform: scaleX(1); }
+      #menuBtn { display: none; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(310px, 410px); align-items: start; gap: 18px; }
+      .hero-card { min-height: 650px; display: flex; flex-direction: column; justify-content: center; }
+      .profile-card { position: sticky; top: 94px; }
+      .portrait { aspect-ratio: 3 / 4; min-height: 0; }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .portfolio-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 430px) {
+      .wrap { width: min(var(--max), calc(100% - 20px)); }
+      .topbar-inner { min-height: 66px; }
+      .brand-logo { width: 42px; height: 42px; flex-basis: 42px; border-radius: 14px; }
+      .brand small { font-size: .65rem; }
+      .brand strong { max-width: 180px; }
+      .select { display: none; }
+      .btn span.optional { display: none; }
+      .stats { grid-template-columns: 1fr; }
+      .hero-cta .btn { width: 100%; }
+      .section { padding: 18px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nguyễn Minh Triết",
+    "url": "https://minhtriet.online/",
+    "jobTitle": "CEO, Platform Builder, Digital Operations Lead",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "IVS JSC",
+      "url": "https://ivsacademy.edu.vn/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/mtrietng/",
+      "https://github.com/ivsjsc",
+      "https://x.com/nminhtr29"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Nguyễn Minh Triết homepage">
+        <img src="./images/logo/nmt-logo.png" alt="NMT Logo" class="brand-logo" loading="eager" decoding="async" />
+        <span class="brand-text">
+          <small>minhtriet.online</small>
+          <strong>Nguyễn Minh Triết</strong>
+        </span>
+      </a>
+
+      <nav id="nav" class="nav" aria-label="Main navigation">
+        <a href="#about">Profile</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#portfolio">Products</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <select id="langSelect" class="select" aria-label="Language selector">
+          <option value="vi">VI</option>
+          <option value="en">EN</option>
+        </select>
+        <div class="cv-menu" id="cvMenu">
+          <button class="btn btn-primary" type="button" id="cvBtn" aria-expanded="false">
+            <i data-lucide="download" aria-hidden="true"></i>
+            <span class="optional">CV</span>
+          </button>
+          <div class="cv-menu-panel" role="menu">
+            <a href="./CV.NguyenMinhTriet-vi.pdf" download><span class="badge">VI</span><span>CV tiếng Việt</span></a>
+            <a href="./CV.NguyenMinhTriet-en.pdf" download><span class="badge">EN</span><span>English CV</span></a>
+            <a href="./cv-online.html" target="_blank" rel="noopener"><span class="badge">Web</span><span>CV Online</span></a>
+          </div>
+        </div>
+        <button class="icon-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section hero" aria-labelledby="heroTitle">
+      <div class="wrap hero-grid">
+        <article class="card hero-card reveal">
+          <span class="eyebrow"><i data-lucide="sparkles"></i> CEO IVS JSC • Platform Builder • EdTech & AI</span>
+          <h1 id="heroTitle">Build systems. Scale trust.</h1>
+          <p class="hero-subtitle">Nguyễn Minh Triết — Strategic Operations, Digital Product Architecture & Education Technology.</p>
+          <p class="lead">Tôi xây dựng các nền tảng số có khả năng vận hành thật: từ giáo dục, quản trị trung tâm, tuyển dụng giáo viên, LMS, thương mại tin cậy đến cổng thông tin địa phương. Điểm chung là hệ thống rõ ràng, quy trình có thể mở rộng và sản phẩm phục vụ nhu cầu thực tế.</p>
+          <div class="chips" aria-label="Core positioning">
+            <span class="chip">CEO IVS JSC</span>
+            <span class="chip">EdTech & AI Products</span>
+            <span class="chip">Operations & SOPs</span>
+            <span class="chip">Trust Commerce</span>
+            <span class="chip">Digital Platform Strategy</span>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#portfolio"><i data-lucide="layers"></i> Xem sản phẩm</a>
+            <a class="btn" href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener"><i data-lucide="linkedin"></i> LinkedIn</a>
+            <a class="btn" href="mailto:mi.triet@outlook.com"><i data-lucide="mail"></i> Liên hệ</a>
+          </div>
+        </article>
+
+        <aside class="card profile-card reveal" aria-label="Profile snapshot">
+          <div class="portrait">
+            <img src="./images/avatar.webp" alt="Nguyễn Minh Triết portrait" loading="eager" decoding="async" onerror="this.src='https://placehold.co/420x560/214c3f/ffffff?text=NMT'" />
+          </div>
+          <div class="stats" aria-label="Professional statistics">
+            <div class="stat"><strong>50+</strong><span>school partnerships & education connections</span></div>
+            <div class="stat"><strong>1,500+</strong><span>event participants organized</span></div>
+            <div class="stat"><strong>200+</strong><span>service and tourism partners developed</span></div>
+            <div class="stat"><strong>15+</strong><span>digital products, prototypes and platforms</span></div>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a href="mailto:mi.triet@outlook.com" class="social" style="background:#D44638" aria-label="Email"><i data-lucide="mail"></i></a>
+            <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener" class="social" style="background:#0A66C2" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="https://m.me/nmi.triet" target="_blank" rel="noopener" class="social" style="background:#0084FF" aria-label="Messenger"><i data-lucide="message-circle"></i></a>
+            <a href="https://github.com/ivsjsc" target="_blank" rel="noopener" class="social" style="background:#24292f" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://x.com/nminhtr29" target="_blank" rel="noopener" class="social" style="background:#000" aria-label="X"><i data-lucide="twitter"></i></a>
+            <a href="https://zalo.me/nmt5555789" target="_blank" rel="noopener" class="social" style="background:#0068FF" aria-label="Zalo"><span style="font-size:.78rem;font-weight:900">Zalo</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">Professional Profile</p>
+          <h2>Vị trí hiện tại: CEO IVS JSC & người xây nền tảng.</h2>
+          <p class="note">Trang này được cập nhật để phản ánh giai đoạn mới: IVS JSC không chỉ là hồ sơ cá nhân hay kinh nghiệm vận hành, mà là năng lực xây dựng sản phẩm số, triển khai thị trường và kết nối đối tác trong giáo dục – công nghệ – thương mại tin cậy.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="mini">
+            <h3>Strategic Operations</h3>
+            <p>Thiết kế quy trình, chuẩn hóa SOP, kiểm soát vận hành đa chi nhánh, quản trị đội ngũ và xử lý bài toán phức tạp trong điều kiện áp lực cao.</p>
+            <div class="meta"><span class="pill">Lean</span><span class="pill">SOP</span><span class="pill">Execution</span></div>
+          </article>
+          <article class="mini">
+            <h3>Product & Platform Architecture</h3>
+            <p>Định hình cấu trúc sản phẩm, luồng dữ liệu, vai trò người dùng, phân quyền, mô hình vận hành và cách sản phẩm tạo giá trị thương mại thật.</p>
+            <div class="meta"><span class="pill">SaaS</span><span class="pill">LMS</span><span class="pill">Marketplace</span></div>
+          </article>
+          <article class="mini">
+            <h3>Partnership & Market Development</h3>
+            <p>Kết nối trường học, trung tâm, giáo viên nước ngoài, doanh nghiệp dịch vụ, đối tác địa phương và các mô hình hợp tác có thể triển khai.</p>
+            <div class="meta"><span class="pill">Education</span><span class="pill">External Relations</span><span class="pill">Growth</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="platforms">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">IVS JSC Platform Stack</p>
+          <h2>Các phần mới đã được đưa vào profile.</h2>
+          <p class="note">Nhóm nội dung ưu tiên hiển thị trực tiếp trên trang chủ: IVS Academy, CenterCare, LearningCare, IVS LMS, Aivy TeacherMatch, ACFMart, QRVerified và DongNaiCity.</p>
+        </div>
+        <div class="split">
+          <div class="feature-band">
+            <h3>IVS JSC — Education, Technology & Digital Operations</h3>
+            <p>Integrate Vision Synergy Trading Services JSC định vị ở giao điểm giữa giáo dục, phần mềm vận hành, AI ứng dụng và phát triển nền tảng số.</p>
+            <div class="link-list">
+              <a href="https://ivsacademy.edu.vn/" target="_blank" rel="noopener">IVS Academy</a>
+              <a href="https://center.ivslearning.io.vn/" target="_blank" rel="noopener">CenterCare</a>
+              <a href="https://care.ivslearning.io.vn/" target="_blank" rel="noopener">LearningCare</a>
+              <a href="https://lms.ivslearning.io.vn/" target="_blank" rel="noopener">IVS LMS</a>
+            </div>
+          </div>
+          <div class="grid">
+            <article class="mini product-card">
+              <div class="product-top"><span class="product-icon"><i data-lucide="school"></i></span><div><h3>IVS Academy</h3><p>Thương hiệu giáo dục, liên kết đào tạo, ngoại ngữ, kỹ năng và các chương trình triển khai tại trường/đối tác.</p></div></div>
+            </article>
+            <article class="mini product-card">
+              <div class="product-top"><span class="product-icon"><i data-lucide="workflow"></i></span><div><h3>CenterCare + LearningCare + LMS</h3><p>Bộ nền tảng quản trị trung tâm, kết nối phụ huynh/học viên và vận hành học tập trực tuyến.</p></div></div>
+            </article>
+          </div>
+        </div>
+        <div class="grid grid-4" style="margin-top:12px">
+          <article class="mini"><h3>CenterCare</h3><p>Quản lý lớp học, học phí, điểm danh, giáo viên, lương và vận hành trung tâm.</p><a class="product-link" href="https://center.ivslearning.io.vn/" target="_blank" rel="noopener">Open CenterCare <i data-lucide="external-link"></i></a></article>
+          <article class="mini"><h3>LearningCare</h3><p>Cổng chăm sóc học viên/phụ huynh, giúp minh bạch thông tin học tập và tương tác.</p><a class="product-link" href="https://care.ivslearning.io.vn/" target="_blank" rel="noopener">Open LearningCare <i data-lucide="external-link"></i></a></article>
+          <article class="mini"><h3>IVS LMS</h3><p>Nền tảng học tập trực tuyến cho nội dung, lớp học, kiểm tra và quản lý tiến độ.</p><a class="product-link" href="https://lms.ivslearning.io.vn/" target="_blank" rel="noopener">Open LMS <i data-lucide="external-link"></i></a></article>
+          <article class="mini"><h3>Aivy TeacherMatch</h3><p>Kết nối trực tiếp giáo viên nước ngoài với trung tâm/cơ sở giáo dục dựa trên hồ sơ, vị trí và nhu cầu tuyển dụng.</p><a class="product-link" href="https://ivslearning.top/" target="_blank" rel="noopener">Open App <i data-lucide="external-link"></i></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">Products & Ventures</p>
+          <h2>Danh mục sản phẩm nổi bật.</h2>
+          <p class="note">Tập trung vào những nền tảng có câu chuyện rõ ràng, có khả năng dùng làm portfolio khi gặp đối tác, nhà đầu tư, trường học hoặc doanh nghiệp cần chuyển đổi số.</p>
+        </div>
+        <div class="portfolio-row">
+          <article class="portfolio-card">
+            <div class="portfolio-cover"><span>Education Operations</span></div>
+            <div class="portfolio-body">
+              <h3>CenterCare / LearningCare / IVS LMS</h3>
+              <p>Trục sản phẩm giáo dục: quản trị trung tâm, chăm sóc học viên/phụ huynh và học tập trực tuyến.</p>
+              <div class="link-list"><a href="https://center.ivslearning.io.vn/" target="_blank" rel="noopener">Center</a><a href="https://care.ivslearning.io.vn/" target="_blank" rel="noopener">Care</a><a href="https://lms.ivslearning.io.vn/" target="_blank" rel="noopener">LMS</a></div>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-cover" style="background:linear-gradient(135deg,#1f2937,#0f766e)"><span>Teacher Recruitment</span></div>
+            <div class="portfolio-body">
+              <h3>Aivy TeacherMatch</h3>
+              <p>Marketplace tuyển dụng giáo viên, định hướng kết nối trực tiếp giáo viên nước ngoài và trung tâm/cơ sở giáo dục tại Việt Nam.</p>
+              <div class="link-list"><a href="https://ivslearning.top/" target="_blank" rel="noopener">ivslearning.top</a><a href="https://aivy-teachermatch.web.app/" target="_blank" rel="noopener">Web App</a></div>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-cover" style="background:linear-gradient(135deg,#143c2f,#b87938)"><span>Trust Commerce</span></div>
+            <div class="portfolio-body">
+              <h3>ACFMart + QRVerified</h3>
+              <p>Nền tảng thương mại tin cậy với seller kiểm soát, QR xác thực, dữ liệu truy xuất và mô hình vận hành chống hàng giả.</p>
+              <div class="link-list"><a href="https://acfmart.vn/" target="_blank" rel="noopener">Buyer</a><a href="https://qr.acfmart.vn/" target="_blank" rel="noopener">QRVerified</a><a href="https://acfmart.store/" target="_blank" rel="noopener">Seller</a></div>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-cover" style="background:linear-gradient(135deg,#244e73,#6d7d47)"><span>Local Platform</span></div>
+            <div class="portfolio-body">
+              <h3>DongNaiCity</h3>
+              <p>Cổng thông tin và bất động sản Đồng Nai, định hướng chuyên sâu, tiện ích và gắn với nhu cầu thị trường địa phương.</p>
+              <div class="link-list"><a href="https://dongnaicity.com.vn/" target="_blank" rel="noopener">Portal</a><a href="https://news.dongnaicity.com.vn/" target="_blank" rel="noopener">News</a></div>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-cover" style="background:linear-gradient(135deg,#3b0764,#b87938)"><span>AI & Testing</span></div>
+            <div class="portfolio-body">
+              <h3>Aivy Testing / iLearners / KinderLink</h3>
+              <p>Các sản phẩm kiểm tra xếp lớp, học tiếng Anh, hỗ trợ học tập và kết nối giáo dục.</p>
+              <div class="link-list"><a href="https://aivy-testing.web.app/" target="_blank" rel="noopener">Aivy Testing</a><a href="https://ilearners.web.app/" target="_blank" rel="noopener">iLearners</a><a href="https://ivskinderlink.web.app/" target="_blank" rel="noopener">KinderLink</a></div>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-cover" style="background:linear-gradient(135deg,#111827,#244e73)"><span>AI Assistants</span></div>
+            <div class="portfolio-body">
+              <h3>Aivy Product Suite</h3>
+              <p>Nhóm trợ lý AI và công cụ năng suất: kiến trúc, CV, workflow, hỗ trợ phản hồi và thử nghiệm sản phẩm nhanh.</p>
+              <div class="link-list"><a href="https://aivy-architect.web.app/" target="_blank" rel="noopener">Architect</a><a href="https://cv-w-aivy.web.app/" target="_blank" rel="noopener">CV AI</a><a href="https://ledger2gether.web.app/" target="_blank" rel="noopener">Ledger</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">Capabilities</p>
+          <h2>Năng lực cốt lõi.</h2>
+          <p class="note">Các năng lực này nên được đặt trước phần kinh nghiệm để người đọc hiểu ngay “Triết mạnh ở đâu” trước khi xem timeline chi tiết.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="mini">
+            <h3>Business & Operations</h3>
+            <ul class="list">
+              <li>Chuẩn hóa quy trình, kiểm soát chất lượng và xây dựng SOP.</li>
+              <li>Điều phối dự án, sự kiện, cơ sở vật chất và hoạt động đa nhóm.</li>
+              <li>Quản trị chi phí, nhân sự, đối tác và chất lượng triển khai.</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <h3>Technology & Product</h3>
+            <ul class="list">
+              <li>React, TypeScript, Firebase, Google Cloud và các nền tảng serverless.</li>
+              <li>Thiết kế luồng user, phân quyền, dữ liệu, dashboard và MVP.</li>
+              <li>Ứng dụng AI/automation vào sản phẩm, vận hành và chăm sóc khách hàng.</li>
+            </ul>
+          </article>
+          <article class="mini">
+            <h3>External Relations</h3>
+            <ul class="list">
+              <li>Làm việc với trường học, trung tâm, giáo viên nước ngoài và đối tác doanh nghiệp.</li>
+              <li>Soạn thảo hồ sơ, proposal, nội dung đối ngoại và tài liệu thương mại.</li>
+              <li>Kết nối thị trường giáo dục, dịch vụ, công nghệ và dự án địa phương.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="journey">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">Professional Journey</p>
+          <h2>Hành trình đa ngành, quy về một năng lực: xây hệ thống.</h2>
+          <p class="note">Từ hàng không, du lịch, F&B, khách sạn, giáo dục đến công nghệ, trọng tâm nhất quán là vận hành thực chiến, quản trị dự án và biến nhu cầu phức tạp thành cấu trúc có thể triển khai.</p>
+        </div>
+        <div class="timeline">
+          <article class="job"><h3>CEO / Founder-level Operator — IVS JSC</h3><span class="period">2024 — Present</span><p>Lãnh đạo định hướng sản phẩm, đối tác, vận hành và phát triển các nền tảng số của IVS JSC trong giáo dục, EdTech, AI và trust commerce.</p></article>
+          <article class="job"><h3>IELTS Station Long Thành & Education Partnerships</h3><span class="period">Education Development</span><p>Tham gia xây dựng mô hình trung tâm, phát triển quan hệ trường học, vận hành chương trình, sự kiện và kết nối giáo viên/đối tác.</p></article>
+          <article class="job"><h3>Tourism, Hospitality, F&B Operations</h3><span class="period">Multi-industry Operations</span><p>Phát triển đối tác dịch vụ, tổ chức vận hành mùa cao điểm, kiểm soát chất lượng và xử lý bài toán phục vụ trong môi trường áp lực cao.</p></article>
+          <article class="job"><h3>Digital Product Builder</h3><span class="period">AI / SaaS / Web Apps</span><p>Tự thiết kế, triển khai và thử nghiệm nhiều sản phẩm web/app phục vụ giáo dục, tuyển dụng, vận hành, thương mại, thông tin địa phương và năng suất cá nhân.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap card section-card reveal">
+        <div class="section-head">
+          <p class="kicker">Contact</p>
+          <h2>Kết nối cho hợp tác, tuyển dụng hoặc phát triển sản phẩm.</h2>
+          <p class="note">Phù hợp cho đối tác giáo dục, trung tâm, trường học, doanh nghiệp cần xây nền tảng số, nhà đầu tư quan tâm EdTech/Trust Commerce, hoặc cơ hội điều hành – phát triển dự án.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="mini">
+            <h3>Direct Contact</h3>
+            <div class="contact-line"><span class="label">Email</span><a href="mailto:mi.triet@outlook.com">mi.triet@outlook.com</a></div>
+            <div class="contact-line"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></div>
+            <div class="contact-line"><span class="label">Messenger</span><a href="https://m.me/nmi.triet" target="_blank" rel="noopener">m.me/nmi.triet</a></div>
+          </article>
+          <article class="mini">
+            <h3>Business Links</h3>
+            <div class="contact-line"><span class="label">IVS Academy</span><a href="https://ivsacademy.edu.vn/" target="_blank" rel="noopener">ivsacademy.edu.vn</a></div>
+            <div class="contact-line"><span class="label">GitHub</span><a href="https://github.com/ivsjsc" target="_blank" rel="noopener">github.com/ivsjsc</a></div>
+            <div class="contact-line"><span class="label">CV</span><a href="./cv-online.html" target="_blank" rel="noopener">Xem CV Online</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-card">
+      <span>© <span id="year"></span> Nguyễn Minh Triết. Built for minhtriet.online.</span>
+      <span>IVS JSC • Education • Technology • Trust Platforms</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    const menuBtn = document.getElementById('menuBtn');
+    const cvMenu = document.getElementById('cvMenu');
+    const cvBtn = document.getElementById('cvBtn');
+    const year = document.getElementById('year');
+    const langSelect = document.getElementById('langSelect');
+
+    year.textContent = new Date().getFullYear();
+
+    function refreshIcons() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons();
+    }
+    window.addEventListener('load', refreshIcons);
+    document.addEventListener('DOMContentLoaded', refreshIcons);
+
+    menuBtn?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+      refreshIcons();
+    });
+    nav?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn?.setAttribute('aria-expanded', 'false');
+        if (menuBtn) menuBtn.innerHTML = '<i data-lucide="menu"></i>';
+        refreshIcons();
+      });
+    });
+
+    cvBtn?.addEventListener('click', () => {
+      const open = cvMenu.classList.toggle('open');
+      cvBtn.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', (event) => {
+      if (cvMenu && !cvMenu.contains(event.target)) {
+        cvMenu.classList.remove('open');
+        cvBtn?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const english = {
+      hero: {
+        title: 'Build systems. Scale trust.',
+        subtitle: 'Nguyen Minh Triet — Strategic Operations, Digital Product Architecture & Education Technology.'
+      }
+    };
+    const vietnamese = {
+      hero: {
+        title: 'Build systems. Scale trust.',
+        subtitle: 'Nguyễn Minh Triết — Strategic Operations, Digital Product Architecture & Education Technology.'
+      }
+    };
+    langSelect?.addEventListener('change', () => {
+      const lang = langSelect.value;
+      document.documentElement.lang = lang;
+      localStorage.setItem('minhtriet_lang', lang);
+      const dict = lang === 'en' ? english : vietnamese;
+      document.getElementById('heroTitle').textContent = dict.hero.title;
+      document.querySelector('.hero-subtitle').textContent = dict.hero.subtitle;
+    });
+    const savedLang = localStorage.getItem('minhtriet_lang');
+    if (savedLang && langSelect) {
+      langSelect.value = savedLang;
+      langSelect.dispatchEvent(new Event('change'));
+    }
+  </script>
+</body>
+</html>
