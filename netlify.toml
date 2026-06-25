@@ -1,4 +1,16 @@
 [[redirects]]
+  from = "/"
+  to = "/en"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/vi"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[[redirects]]
   from = "/en"
   to = "/index.html"
   status = 200

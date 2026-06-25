@@ -5,19 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#10251f">
   <meta name="color-scheme" content="light">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="description" content="Nguyen Minh Triet, Founder and CEO at IVS JSC, builds practical education, AI, operations and trust-based digital platforms from Vietnam.">
   <meta name="keywords" content="Nguyen Minh Triet, IVS JSC, IVS Academy, CenterCare, LearningCare, IVS LMS, Aivy TeacherMatch, ACFMart, QRVerified, EdTech, AI, founder profile">
   <meta name="author" content="Nguyen Minh Triet">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://minhtriet.online/">
+  <meta property="og:url" content="https://minhtriet.online/en">
   <meta property="og:title" content="Nguyen Minh Triet | Founder / CEO at IVS JSC">
   <meta property="og:description" content="Building education, AI and trusted digital platforms from Vietnam.">
   <meta property="og:image" content="https://minhtriet.online/images/avatar.webp">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="th_TH">
+  <meta property="og:locale:alternate" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nguyen Minh Triet | Founder / CEO at IVS JSC">
   <meta name="twitter:description" content="Building education, AI and trusted digital platforms from Vietnam.">
   <meta name="twitter:image" content="https://minhtriet.online/images/avatar.webp">
-  <link rel="canonical" href="https://minhtriet.online/">
+  <link rel="canonical" href="https://minhtriet.online/en">
+  <link rel="alternate" hreflang="en" href="https://minhtriet.online/en">
+  <link rel="alternate" hreflang="vi" href="https://minhtriet.online/vi">
+  <link rel="alternate" hreflang="de" href="https://minhtriet.online/de">
+  <link rel="alternate" hreflang="es" href="https://minhtriet.online/es">
+  <link rel="alternate" hreflang="fr" href="https://minhtriet.online/fr">
+  <link rel="alternate" hreflang="ja" href="https://minhtriet.online/ja">
+  <link rel="alternate" hreflang="ko" href="https://minhtriet.online/ko">
+  <link rel="alternate" hreflang="ru" href="https://minhtriet.online/ru">
+  <link rel="alternate" hreflang="th" href="https://minhtriet.online/th">
+  <link rel="alternate" hreflang="zh" href="https://minhtriet.online/zh">
+  <link rel="alternate" hreflang="x-default" href="https://minhtriet.online/en">
   <link rel="icon" type="image/png" href="./images/logo/nmt-logo.png">
   <link rel="apple-touch-icon" href="./images/logo/nmt-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,22 +49,20 @@
   <style>
     :root {
       --ink: #10251f;
-      --muted: #59665f;
-      --subtle: #748079;
+      --muted: #5d6962;
+      --soft: #7b857d;
       --ivory: #fbf6ed;
       --paper: #fffaf2;
       --paper-strong: #fffdf8;
-      --line: rgba(16, 37, 31, 0.14);
+      --line: rgba(16, 37, 31, 0.12);
       --forest: #214c3f;
       --forest-dark: #10251f;
       --gold: #b87938;
-      --copper: #9f6137;
-      --moss: #617348;
-      --blue: #315b74;
-      --shadow-sm: 0 12px 30px rgba(16, 37, 31, 0.08);
-      --shadow-md: 0 24px 70px rgba(16, 37, 31, 0.13);
-      --radius: 8px;
-      --radius-lg: 14px;
+      --gold-2: #d09b52;
+      --shadow-sm: 0 12px 28px rgba(16, 37, 31, 0.08);
+      --shadow-md: 0 24px 70px rgba(16, 37, 31, 0.14);
+      --radius: 12px;
+      --radius-lg: 20px;
       --max: 1180px;
     }
 
@@ -53,9 +73,9 @@
       font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at 14% -8%, rgba(184, 121, 56, 0.18), transparent 34%),
-        radial-gradient(circle at 92% 2%, rgba(33, 76, 63, 0.14), transparent 31%),
-        linear-gradient(180deg, #fbf6ed 0%, #f2eadc 56%, #e9dfcf 100%);
+        radial-gradient(circle at 12% -8%, rgba(184, 121, 56, 0.18), transparent 32%),
+        radial-gradient(circle at 92% 3%, rgba(33, 76, 63, 0.14), transparent 30%),
+        linear-gradient(180deg, #fbf6ed 0%, #f2eadc 54%, #e9dfcf 100%);
       min-height: 100vh;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
@@ -63,6 +83,7 @@
       padding-left: env(safe-area-inset-left, 0);
       padding-right: env(safe-area-inset-right, 0);
     }
+
     body::before {
       content: "";
       position: fixed;
@@ -73,8 +94,9 @@
         linear-gradient(rgba(16, 37, 31, 0.025) 1px, transparent 1px),
         linear-gradient(90deg, rgba(16, 37, 31, 0.025) 1px, transparent 1px);
       background-size: 36px 36px;
-      mask-image: radial-gradient(circle at center, #000 45%, transparent 92%);
+      mask-image: radial-gradient(circle at center, #000 46%, transparent 92%);
     }
+
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     button, select { font: inherit; }
@@ -83,6 +105,7 @@
     :focus-visible { outline: 3px solid rgba(184, 121, 56, 0.58); outline-offset: 3px; }
     ::selection { background: rgba(184, 121, 56, 0.24); color: var(--ink); }
 
+    .wrap { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
     .skip-link {
       position: fixed;
       left: 16px;
@@ -97,45 +120,44 @@
       box-shadow: var(--shadow-sm);
     }
     .skip-link:focus { transform: translateY(0); }
-    .wrap { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 70;
       padding-top: env(safe-area-inset-top, 0);
       border-bottom: 1px solid var(--line);
-      background: rgba(251, 246, 237, 0.9);
-      backdrop-filter: blur(18px) saturate(1.1);
-      -webkit-backdrop-filter: blur(18px) saturate(1.1);
+      background: rgba(251, 246, 237, 0.88);
+      backdrop-filter: blur(18px) saturate(1.12);
+      -webkit-backdrop-filter: blur(18px) saturate(1.12);
     }
     .topbar-inner {
-      min-height: 72px;
+      min-height: 76px;
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       padding: 10px 0;
     }
     .brand {
       min-width: 0;
       display: flex;
       align-items: center;
-      gap: 11px;
+      gap: 12px;
     }
     .brand-logo {
       width: 46px;
       height: 46px;
       border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.76);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.8);
       object-fit: contain;
       padding: 4px;
       flex: 0 0 auto;
     }
     .brand small {
       display: block;
-      color: var(--subtle);
+      color: var(--soft);
       font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 0.13em;
@@ -147,44 +169,35 @@
     .brand strong {
       display: block;
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(1.25rem, 5vw, 1.85rem);
+      font-size: clamp(1.2rem, 4vw, 1.7rem);
       line-height: 1;
-      letter-spacing: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .top-actions { display: flex; align-items: center; gap: 8px; }
 
-    .nav {
-      position: fixed;
-      top: calc(72px + env(safe-area-inset-top, 0));
-      left: 14px;
-      right: 14px;
-      display: grid;
-      gap: 6px;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: rgba(255, 250, 242, 0.98);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-10px);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-    .nav.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
-    .nav a {
+    .top-actions {
       display: flex;
-      justify-content: center;
       align-items: center;
-      min-height: 44px;
-      border-radius: var(--radius);
-      color: var(--muted);
-      font-size: 0.96rem;
-      font-weight: 800;
+      gap: 8px;
+      justify-content: flex-end;
     }
-    .nav a:hover { background: rgba(184, 121, 56, 0.1); color: var(--ink); }
+
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-right: 8px;
+    }
+    .desktop-nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .desktop-nav a:hover { color: var(--ink); }
 
     .icon-btn, .btn, .lang-btn {
       min-height: 44px;
@@ -194,450 +207,522 @@
       gap: 8px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.8);
       color: var(--ink);
       font-weight: 800;
-      transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+      transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      box-shadow: none;
     }
+    .icon-btn:hover, .btn:hover, .lang-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
     .icon-btn { width: 44px; padding: 0; }
     .btn { padding: 10px 14px; }
-    .btn:hover, .icon-btn:hover, .lang-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
     .btn-primary { border-color: transparent; background: var(--forest); color: white; }
     .btn-primary:hover { background: var(--forest-dark); }
     .btn-gold { border-color: transparent; background: var(--gold); color: white; }
-    .btn-ghost { background: rgba(255, 255, 255, 0.7); }
-    .btn[aria-disabled="true"] { opacity: 0.48; pointer-events: none; }
-    .desktop-only { display: none; }
+    .btn-gold:hover { background: #9e6237; }
+    .btn-ghost { background: rgba(255, 255, 255, 0.72); }
+    .btn-pill { border-radius: 999px; }
 
-    .language {
-      display: none;
-      align-items: center;
-      gap: 4px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.58);
-      padding: 3px;
+    .lang-switcher {
+      position: relative;
     }
-    .lang-btn {
-      min-height: 36px;
-      border: 0;
-      padding: 0 10px;
-      border-radius: 6px;
-      box-shadow: none;
-      font-size: 0.84rem;
+    .lang-toggle {
+      min-width: 180px;
+      padding: 0 12px;
+      justify-content: space-between;
+      border-radius: 999px;
     }
-    .lang-btn[aria-pressed="true"] { background: var(--forest); color: white; }
-    .lang-note {
-      position: fixed;
-      left: 50%;
-      bottom: 18px;
-      z-index: 80;
-      max-width: min(420px, calc(100% - 28px));
-      transform: translate(-50%, 16px);
-      opacity: 0;
-      pointer-events: none;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--paper-strong);
-      box-shadow: var(--shadow-md);
-      padding: 12px 14px;
+    .lang-toggle strong {
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+    }
+    .lang-toggle span {
       color: var(--muted);
-      font-size: 0.92rem;
-      transition: 0.2s ease;
+      font-weight: 700;
+      font-size: 0.82rem;
     }
-    .lang-note.is-visible { opacity: 1; transform: translate(-50%, 0); }
-
-    .cv-menu { position: relative; }
-    .cv-panel {
+    .lang-menu {
       position: absolute;
-      top: calc(100% + 10px);
       right: 0;
-      width: min(320px, calc(100vw - 28px));
-      display: grid;
-      gap: 8px;
+      top: calc(100% + 10px);
+      width: min(280px, calc(100vw - 28px));
       padding: 10px;
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background: rgba(255, 250, 242, 0.98);
       box-shadow: var(--shadow-md);
-      transform: translateY(-8px);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: 0.2s ease;
+      display: none;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      z-index: 90;
     }
-    .cv-menu.is-open .cv-panel {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateY(0);
+    .lang-menu.is-open { display: grid; }
+    .lang-menu button {
+      min-height: 44px;
+      justify-content: space-between;
+      padding: 0 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--ink);
     }
-    .cv-panel a, .cv-panel span {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      padding: 11px;
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.72);
+    .lang-menu button:hover { background: rgba(184, 121, 56, 0.08); }
+    .lang-menu button.is-active {
+      background: rgba(33, 76, 63, 0.08);
+      border-color: rgba(33, 76, 63, 0.16);
+      color: var(--forest-dark);
+    }
+    .lang-menu small {
+      color: var(--muted);
       font-weight: 800;
-    }
-    .cv-panel small { display: block; color: var(--subtle); font-weight: 700; line-height: 1.35; }
-    .cv-panel [hidden] { display: none; }
-    .badge {
-      min-width: 34px;
-      height: 34px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--radius);
-      background: rgba(33, 76, 63, 0.1);
-      color: var(--forest);
-      font-size: 0.78rem;
-      font-weight: 900;
-      flex: 0 0 auto;
+      letter-spacing: 0.05em;
     }
 
-    main { padding-top: 14px; }
-    .section { padding: 24px 0; scroll-margin-top: 92px; }
-    .card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: rgba(255, 250, 242, 0.82);
-      box-shadow: var(--shadow-sm);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .menu-toggle { display: inline-flex; }
+    .mobile-nav {
+      display: none;
+      padding: 0 0 14px;
     }
-    .section-card { padding: clamp(20px, 4.5vw, 34px); }
-    .section-head { display: grid; gap: 9px; margin-bottom: 18px; }
-    .kicker {
-      margin: 0;
-      color: var(--gold);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    h1, h2, h3 {
-      margin: 0;
-      color: var(--forest-dark);
-      line-height: 1.08;
-      letter-spacing: 0;
-    }
-    h1, h2 { font-family: "Playfair Display", Georgia, serif; }
-    h1 { margin-top: 16px; max-width: 10ch; font-size: clamp(2.7rem, 14vw, 6.6rem); line-height: 0.9; }
-    h2 { font-size: clamp(2rem, 8vw, 3.7rem); }
-    h3 { font-size: 1.08rem; }
-    p { margin: 0; }
-    .lead {
-      margin-top: 16px;
-      max-width: 69ch;
+    .mobile-nav.is-open { display: block; }
+    .mobile-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 18px;
+      margin-top: 6px;
       color: var(--muted);
-      font-size: clamp(1rem, 2.6vw, 1.13rem);
+      font-weight: 800;
+      border-radius: 12px;
     }
-    .hero-grid { display: grid; gap: 14px; }
-    .hero-copy {
-      position: relative;
+    .mobile-nav a:hover { background: rgba(184, 121, 56, 0.08); color: var(--ink); }
+
+    .main { padding: 18px 0 70px; }
+    .section { padding: 22px 0; }
+    .card {
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow-sm);
       overflow: hidden;
-      padding: clamp(22px, 5vw, 44px);
     }
-    .hero-copy::after {
-      content: "";
-      position: absolute;
-      right: -150px;
-      bottom: -170px;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(184, 121, 56, 0.2), transparent 68%);
-      pointer-events: none;
+    .section-card { padding: 28px; }
+
+    .hero-grid {
+      display: grid;
+      gap: 18px;
+    }
+    .hero-copy {
+      padding: 28px;
     }
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
-      color: var(--forest);
       padding: 8px 12px;
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .hero-subtitle {
-      margin-top: 16px;
-      max-width: 46rem;
-      color: var(--gold);
-      font-size: clamp(1.06rem, 4vw, 1.55rem);
-      font-weight: 800;
-      line-height: 1.25;
-    }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-    .chip {
-      border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--forest);
-      padding: 8px 12px;
-      font-size: 0.88rem;
+      background: rgba(33, 76, 63, 0.08);
+      border: 1px solid rgba(33, 76, 63, 0.12);
+      color: var(--forest-dark);
+      font-size: 0.84rem;
       font-weight: 800;
-    }
-
-    .profile-card { padding: 14px; display: grid; gap: 12px; }
-    .portrait {
-      position: relative;
-      min-height: 360px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, rgba(33, 76, 63, 0.12), rgba(184, 121, 56, 0.16));
-    }
-    .portrait::after {
-      content: attr(data-initials);
-      position: absolute;
-      inset: 0;
-      display: none;
-      place-items: center;
-      color: var(--forest);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 5rem;
-      font-weight: 700;
-    }
-    .portrait.is-fallback::after { display: grid; }
-    .portrait img { width: 100%; height: 100%; object-fit: cover; }
-    .stats-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .stat {
-      min-height: 118px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.72);
-      padding: 14px;
-    }
-    .stat strong { display: block; color: var(--forest); font-size: 1.48rem; line-height: 1; }
-    .stat span { display: block; margin-top: 7px; color: var(--muted); font-size: 0.84rem; line-height: 1.42; }
-
-    .text-grid { display: grid; gap: 14px; }
-    .feature-grid, .platform-grid, .project-grid, .contact-grid, .unit-grid {
-      display: grid;
-      gap: 12px;
-    }
-    .mini-card, .platform-card, .project-tier, .contact-card, .timeline-item {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.68);
-      padding: 16px;
-    }
-    .mini-card strong, .platform-card h3, .project-tier h3, .contact-card h3 { display: block; color: var(--forest-dark); }
-    .mini-card span, .platform-card p, .project-tier p, .contact-card p {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .unit-card {
-      border-left: 3px solid var(--gold);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.7);
-      padding: 14px;
-    }
-    .platform-card {
-      display: grid;
-      gap: 12px;
-      min-height: 238px;
-    }
-    .platform-card header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      border: 1px solid rgba(184, 121, 56, 0.28);
-      border-radius: 999px;
-      background: rgba(184, 121, 56, 0.12);
-      color: var(--copper);
-      padding: 4px 9px;
-      font-size: 0.72rem;
-      font-weight: 900;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      white-space: nowrap;
+      margin: 0 0 16px;
     }
-    .role { color: var(--subtle); font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; }
-    .link-row {
-      align-self: end;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--forest);
-      font-weight: 900;
-      font-size: 0.94rem;
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.6rem, 6.6vw, 4.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      margin: 0;
     }
-    .link-row:hover { color: var(--gold); }
-
-    .timeline { display: grid; gap: 12px; }
-    .timeline-top {
-      display: grid;
-      gap: 6px;
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 0;
     }
-    .timeline-meta {
+    h3 {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .hero-lead, .section-note {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.72;
+      max-width: 72ch;
+      margin: 0;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .hero-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      margin-top: 18px;
+    }
+    .tag {
+      display: inline-flex;
       align-items: center;
-      color: var(--subtle);
-      font-size: 0.86rem;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(16, 37, 31, 0.08);
+      color: var(--forest-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .hero-aside {
+      display: grid;
+      gap: 18px;
+    }
+    .profile-panel {
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+    .portrait {
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(33,76,63,0.95), rgba(16,37,31,0.95));
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .stat {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(16, 37, 31, 0.08);
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      color: var(--forest-dark);
+    }
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .kicker {
+      margin: 0;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
       font-weight: 800;
     }
-    .details-btn {
-      margin-top: 12px;
-      min-height: 40px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+
+    .feature-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .mini-card, .feature-card, .contact-card, .project-card, .platform-card, .education-card, .summary-card {
+      border-radius: 20px;
+      border: 1px solid rgba(16, 37, 31, 0.08);
       background: rgba(255, 255, 255, 0.72);
-      color: var(--forest);
-      padding: 8px 12px;
-      font-weight: 900;
+      padding: 18px;
+      box-shadow: none;
     }
-    .details-btn:hover { background: rgba(184, 121, 56, 0.1); }
-    .details {
-      margin-top: 12px;
+    .mini-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    .mini-card span {
       color: var(--muted);
-      font-size: 0.95rem;
+      line-height: 1.6;
     }
-    .details[hidden] { display: none; }
-    .details ul, .project-tier ul, .contact-card ul {
-      margin: 10px 0 0;
+
+    .three-up {
+      display: grid;
+      gap: 14px;
+    }
+    .feature-card ul, .project-card ul, .platform-card ul, .contact-card ul, .education-card ul {
+      margin: 0;
       padding-left: 18px;
       color: var(--muted);
     }
-    .details li, .project-tier li, .contact-card li { margin-top: 6px; }
+    .feature-card li + li, .project-card li + li, .platform-card li + li, .education-card li + li, .contact-card li + li {
+      margin-top: 8px;
+    }
+    .feature-card .item-title {
+      font-weight: 800;
+      color: var(--forest-dark);
+      margin-bottom: 4px;
+    }
+    .feature-card p, .project-card p, .platform-card p, .education-card p, .contact-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
 
-    .project-tier h3 { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-    .tier-label {
-      color: var(--subtle);
-      font-size: 0.72rem;
-      font-weight: 900;
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+    .timeline-item {
+      border-radius: 22px;
+      border: 1px solid rgba(16, 37, 31, 0.08);
+      background: rgba(255, 255, 255, 0.72);
+      padding: 18px;
+    }
+    .timeline-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+    }
+    .timeline-meta {
+      color: var(--soft);
+      font-size: 0.84rem;
+      font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      margin-bottom: 8px;
     }
-    .contact-card a { color: var(--forest); font-weight: 900; overflow-wrap: anywhere; }
-    .contact-list { display: grid; gap: 10px; }
-    .contact-line {
+    .timeline-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+    }
+    .timeline-desc {
+      margin: 0;
+      color: var(--muted);
+    }
+    .details-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(16, 37, 31, 0.08);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--forest-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: none;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+    .details-btn:hover { transform: translateY(-1px); background: rgba(33, 76, 63, 0.06); }
+    .details-btn svg { transition: transform 0.2s ease; }
+    .details-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .details {
+      margin-top: 14px;
+      display: none;
+    }
+    .details.is-open { display: block; }
+    .details ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .details li + li { margin-top: 8px; }
+
+    .grid-2, .grid-3, .grid-4 {
       display: grid;
-      gap: 4px;
-      border-bottom: 1px solid rgba(16, 37, 31, 0.09);
-      padding-bottom: 10px;
+      gap: 14px;
+    }
+
+    .platform-card header, .project-card header, .education-card header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(33, 76, 63, 0.08);
+      border: 1px solid rgba(33, 76, 63, 0.12);
+      color: var(--forest-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .platform-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .platform-list li {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(16, 37, 31, 0.08);
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .platform-link, .project-link {
+      display: inline-flex;
+      margin-top: 14px;
+      color: var(--forest-dark);
+      font-weight: 800;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 14px;
+    }
+    .contact-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(16, 37, 31, 0.08);
     }
     .contact-line:last-child { border-bottom: 0; padding-bottom: 0; }
-    .contact-line span { color: var(--subtle); font-size: 0.8rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .contact-line span { color: var(--soft); font-weight: 800; }
+    .contact-line a {
+      text-align: right;
+      color: var(--forest-dark);
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .download-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
 
     .footer {
-      padding: 26px 0 40px;
-      color: var(--subtle);
-      font-size: 0.9rem;
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
       text-align: center;
     }
 
-    @media (min-width: 720px) {
-      .desktop-only { display: inline-flex; }
-      .language { display: flex; }
-      .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .contact-grid { grid-template-columns: 0.95fr 1.05fr; }
-      .unit-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
-    @media (min-width: 980px) {
-      .topbar-inner { grid-template-columns: auto 1fr auto; }
-      .nav {
-        position: static;
-        display: flex;
-        justify-content: center;
-        gap: 2px;
-        padding: 0;
-        border: 0;
-        background: transparent;
-        box-shadow: none;
-        opacity: 1;
-        transform: none;
-        pointer-events: auto;
-      }
-      .nav a { min-height: 40px; padding: 8px 11px; font-size: 0.88rem; }
+
+    @media (min-width: 860px) {
+      .desktop-nav { display: flex; }
       .menu-toggle { display: none; }
-      .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(310px, 0.85fr); align-items: start; }
-      .profile-card { position: sticky; top: 96px; }
-      .platform-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      .section { padding: 32px 0; }
+      .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr); align-items: start; }
+      .hero-copy { padding: 34px; }
+      .profile-panel { padding: 24px; }
+      .three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-card { padding: 34px; }
     }
-    @media (max-width: 380px) {
-      .brand-logo { width: 42px; height: 42px; }
-      .brand small { display: none; }
-      h1 { font-size: 2.45rem; }
-      .stats-grid { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.001ms !important;
-      }
+
+    @media (max-width: 859px) {
+      .lang-toggle { min-width: 154px; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .contact-line { flex-direction: column; }
+      .contact-line a { text-align: left; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nguyen Minh Triet",
+    "jobTitle": "Founder / CEO at IVS JSC",
+    "url": "https://minhtriet.online",
+    "sameAs": [
+      "https://linkedin.com/in/mtrietng",
+      "https://github.com/ivsjsc",
+      "https://ivsacademy.edu.vn"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="Nguyen Minh Triet home">
+      <a class="brand" href="/en" aria-label="Nguyen Minh Triet home">
         <img class="brand-logo" src="./images/logo/nmt-logo.png" alt="NMT logo" width="46" height="46" loading="eager" decoding="async" onerror="this.style.display='none'">
         <span>
-          <small>Founder profile</small>
-          <strong>Nguyen Minh Triet</strong>
+          <small data-i18n="brand_tag">minhtriet.online</small>
+          <strong data-i18n="brand_name">Nguyen Minh Triet</strong>
         </span>
       </a>
 
-      <nav class="nav" id="primaryNav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#ivs">IVS JSC</a>
-        <a href="#platforms">Platforms</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav class="desktop-nav" id="desktopNav" aria-label="Primary navigation">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#strength" data-i18n="nav_strength">Strengths</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#education" data-i18n="nav_education">Education</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="top-actions">
-        <div class="language" aria-label="Language selector">
-          <button class="lang-btn" type="button" aria-pressed="true">EN</button>
-          <button class="lang-btn" type="button" aria-pressed="false" id="viNoticeBtn">VI</button>
-        </div>
-
-        <div class="cv-menu" id="cvMenu">
-          <button class="btn btn-ghost" type="button" id="cvToggle" aria-haspopup="true" aria-expanded="false" aria-controls="cvPanel">
-            CV
+        <div class="lang-switcher">
+          <button class="lang-btn lang-toggle" type="button" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <strong id="langCode">EN</strong>
+            <span id="langName">English</span>
           </button>
-          <div class="cv-panel" id="cvPanel" role="menu" aria-label="CV downloads">
-            <a href="./CV.NguyenMinhTriet-vi.pdf" download data-check-file role="menuitem">
-              <span class="badge">VI</span>
-              <span>Vietnamese CV<small>Profile PDF</small></span>
-            </a>
-            <a href="./cv-online.html" target="_blank" rel="noopener" data-check-file role="menuitem">
-              <span class="badge">Web</span>
-              <span>CV Online<small>Online profile</small></span>
-            </a>
-            <span class="cv-empty" id="cvEmpty" hidden>No CV file is available on this hosting path.</span>
+          <div class="lang-menu" id="langMenu" role="menu" aria-label="Language menu">
+            <button type="button" data-lang="en" role="menuitem"><span>English</span><small>EN</small></button>
+            <button type="button" data-lang="vi" role="menuitem"><span>Tiếng Việt</span><small>VI</small></button>
+            <button type="button" data-lang="de" role="menuitem"><span>Deutsch</span><small>DE</small></button>
+            <button type="button" data-lang="es" role="menuitem"><span>Español</span><small>ES</small></button>
+            <button type="button" data-lang="fr" role="menuitem"><span>Français</span><small>FR</small></button>
+            <button type="button" data-lang="ja" role="menuitem"><span>日本語</span><small>JA</small></button>
+            <button type="button" data-lang="ko" role="menuitem"><span>한국어</span><small>KO</small></button>
+            <button type="button" data-lang="ru" role="menuitem"><span>Русский</span><small>RU</small></button>
+            <button type="button" data-lang="th" role="menuitem"><span>ไทย</span><small>TH</small></button>
+            <button type="button" data-lang="zh" role="menuitem"><span>中文</span><small>ZH</small></button>
           </div>
         </div>
 
-        <button class="icon-btn menu-toggle" type="button" id="menuToggle" aria-label="Open navigation menu" aria-controls="primaryNav" aria-expanded="false">
+        <button class="icon-btn menu-toggle" type="button" id="menuToggle" aria-label="Open navigation menu" aria-controls="mobileNav" aria-expanded="false">
           <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 7h16"></path>
             <path d="M4 12h16"></path>
@@ -646,40 +731,57 @@
         </button>
       </div>
     </div>
+
+    <nav class="wrap mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#strength" data-i18n="nav_strength">Strengths</a>
+      <a href="#experience" data-i18n="nav_experience">Experience</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#education" data-i18n="nav_education">Education</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
   </header>
 
-  <main id="main">
-    <section class="section" id="top" aria-labelledby="hero-title">
+  <main class="main" id="main">
+    <section class="section" id="hero" aria-labelledby="hero-title">
       <div class="wrap hero-grid">
         <div class="card hero-copy">
-          <span class="eyebrow">Founder / CEO at IVS JSC</span>
-          <h1 id="hero-title">Nguyen Minh Triet</h1>
-          <p class="hero-subtitle">Building education, AI and trusted digital platforms from Vietnam.</p>
-          <p class="lead">I design and lead practical digital platforms across education, AI, operations and trust-based commerce - connecting strategy, technology and execution.</p>
-          <div class="cta-row" aria-label="Profile actions">
-            <a class="btn btn-primary" href="#about">View Profile</a>
-            <a class="btn btn-gold" href="#platforms">Explore IVS Platforms</a>
-            <a class="btn btn-ghost" href="./CV.NguyenMinhTriet-vi.pdf" download data-check-file>Download CV</a>
-            <a class="btn btn-ghost" href="#contact">Contact for Collaboration</a>
+          <p class="eyebrow" data-i18n="hero_kicker">External Relations - Project Leadership - Education Digital Transformation</p>
+          <h1 id="hero-title" data-i18n="hero_title">Strategic Relations & Digital Growth</h1>
+          <p class="hero-lead" data-i18n="hero_lead">I connect external affairs, operations, and technology execution to build sustainable school-enterprise partnerships and practical value for learners.</p>
+
+          <div class="hero-actions" aria-label="Profile actions">
+            <a class="btn btn-primary btn-pill" href="#contact" data-i18n="hero_cta1">Discuss Collaboration</a>
+            <a class="btn btn-gold btn-pill" href="#experience" data-i18n="hero_cta2">View Career Journey</a>
+            <a class="btn btn-ghost btn-pill" href="./CV.NguyenMinhTriet-vi.pdf" download> Tải CV tiếng Việt </a>
+            <a class="btn btn-ghost btn-pill" href="./CV.NguyenMinhTriet-en.pdf" download> Download English CV </a>
           </div>
-          <div class="chips" aria-label="Focus areas">
-            <span class="chip">EdTech</span>
-            <span class="chip">AI Workflows</span>
-            <span class="chip">Trust Commerce</span>
-            <span class="chip">Digital Operations</span>
-            <span class="chip">Platform Builder</span>
+
+          <div class="hero-tags" aria-label="Focus areas">
+            <span class="tag">EdTech</span>
+            <span class="tag">AI Workflows</span>
+            <span class="tag">Trust Commerce</span>
+            <span class="tag">Digital Operations</span>
+            <span class="tag">Platform Builder</span>
           </div>
         </div>
 
-        <aside class="card profile-card" aria-label="Quick stats">
-          <div class="portrait" data-initials="NMT">
-            <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" width="520" height="640" loading="eager" decoding="async" onerror="this.remove(); this.parentElement.classList.add('is-fallback')">
+        <aside class="hero-aside">
+          <div class="card profile-panel" aria-label="Quick stats">
+            <div class="portrait">
+              <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" width="520" height="640" loading="eager" decoding="async" onerror="this.remove(); this.parentElement.classList.add('is-fallback')">
+            </div>
+            <div class="stats-grid">
+              <div class="stat"><strong>50+</strong><span data-i18n="stat1">schools connected through partnerships</span></div>
+              <div class="stat"><strong>1,500+</strong><span data-i18n="stat2">participants in major events</span></div>
+              <div class="stat"><strong>200+</strong><span data-i18n="stat3">tourism partners engaged</span></div>
+              <div class="stat"><strong>10+</strong><span data-i18n="stat4">advanced courses in Cloud, Security, AI</span></div>
+            </div>
           </div>
-          <div class="stats-grid">
-            <div class="stat"><strong>50+</strong><span>school partnerships</span></div>
-            <div class="stat"><strong>1,500+</strong><span>event participants</span></div>
-            <div class="stat"><strong>200+</strong><span>tourism/service partners</span></div>
-            <div class="stat"><strong>Multiple</strong><span>digital platforms built</span></div>
+
+          <div class="card section-card">
+            <p class="kicker" style="margin-bottom:8px" data-i18n="contact_box1">Direct Contact</p>
+            <p class="section-note" data-i18n="contact_note">Open for roles in external affairs, digital operations, strategic partnerships, and product development.</p>
           </div>
         </aside>
       </div>
@@ -688,86 +790,59 @@
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap card section-card">
         <div class="section-head">
-          <p class="kicker">About / Positioning</p>
-          <h2 id="about-title">Founder profile for practical platform building.</h2>
+          <p class="kicker" data-i18n="about_kicker">About</p>
+          <h2 id="about-title" data-i18n="about_title">Career Vision and Value Proposition</h2>
+          <p class="section-note" data-i18n="about_note">Focused on strategic partnerships, streamlined workflows, and learner-centered outcomes.</p>
         </div>
-        <div class="feature-grid">
-          <div class="text-grid">
-            <p class="lead">Nguyen Minh Triet is the Founder/CEO of IVS JSC, focused on building practical technology platforms for education, digital operations, AI-powered workflows and trust-based commerce.</p>
-            <p class="lead">His background combines external relations, operations management, business development, education, and hands-on product building.</p>
+
+        <div class="grid-2">
+          <div class="mini-card">
+            <strong data-i18n="about_p1">With dual degrees in English Language and Business Administration, plus formal Educational Management training, I bridge international communication and digital execution.</strong>
           </div>
-          <div class="feature-grid" aria-label="Positioning focus">
-            <div class="mini-card"><strong>Strategy to execution</strong><span>Connects business direction, operational reality and product delivery.</span></div>
-            <div class="mini-card"><strong>Education networks</strong><span>Builds collaboration models across schools, centers, teachers and learners.</span></div>
-            <div class="mini-card"><strong>AI and automation</strong><span>Applies AI workflows where they improve speed, quality and repeatability.</span></div>
-            <div class="mini-card"><strong>Trust infrastructure</strong><span>Designs marketplace and verification systems where trust is a core product layer.</span></div>
+          <div class="feature-grid">
+            <div class="mini-card"><strong data-i18n="about_b1">Advanced diplomacy and negotiation for strategic agreements (MOU/MOA/SPA).</strong></div>
+            <div class="mini-card"><strong data-i18n="about_b2">Hands-on design and implementation of LMS, AI-integrated portals, and data workflows.</strong></div>
+            <div class="mini-card"><strong data-i18n="about_b3">Lean and agile project execution across education, construction, and services.</strong></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="ivs" aria-labelledby="ivs-title">
+    <section class="section" id="strength" aria-labelledby="strength-title">
       <div class="wrap card section-card">
         <div class="section-head">
-          <p class="kicker">IVS JSC</p>
-          <h2 id="ivs-title">Integrate Vision Synergy</h2>
+          <p class="kicker" data-i18n="strength_kicker">Core Competencies</p>
+          <h2 id="strength-title" data-i18n="strength_title">Strategic Strengths and Professional Capabilities</h2>
+          <p class="section-note" data-i18n="strength_note">Built on three axes: strategic relations, digital architecture, and high-speed delivery.</p>
         </div>
-        <p class="lead">IVS JSC is a Vietnam-based company developing practical digital platforms across education, AI, commerce, and operations. The company focuses on building systems that help organizations operate better, connect more effectively, and scale with trust.</p>
-        <div class="unit-grid" style="margin-top:18px" aria-label="IVS business units">
-          <div class="unit-card"><strong>IVS Academy</strong></div>
-          <div class="unit-card"><strong>IVS Education</strong></div>
-          <div class="unit-card"><strong>IVS Celestech</strong></div>
-          <div class="unit-card"><strong>IVS Consulting</strong></div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="platforms" aria-labelledby="platforms-title">
-      <div class="wrap card section-card">
-        <div class="section-head">
-          <p class="kicker">Flagship Platforms</p>
-          <h2 id="platforms-title">Product systems with clear operating roles.</h2>
-        </div>
-        <div class="platform-grid">
-          <article class="platform-card">
-            <header><div><h3>CenterCare</h3><p class="role">Education center operations</p></div><span class="status">Live</span></header>
-            <p>A management platform for education centers: students, classes, tuition, attendance, payroll and operational reporting.</p>
-            <a class="link-row" href="https://center.ivslearning.io.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
+        <div class="three-up">
+          <article class="feature-card">
+            <h3 data-i18n="core1_title">Diplomacy and External Relations</h3>
+            <ul>
+              <li><span class="item-title" data-i18n="core1_i1_t">Language and Protocol:</span> <span data-i18n="core1_i1_d">Business English; deep understanding of diplomatic protocol and drafting official/external relations documents.</span></li>
+              <li><span class="item-title" data-i18n="core1_i2_t">International Connections:</span> <span data-i18n="core1_i2_d">Experience working with and building a network of multinational foreign teachers and lecturers in Vietnam.</span></li>
+              <li><span class="item-title" data-i18n="core1_i3_t">Corporate Relations:</span> <span data-i18n="core1_i3_d">Practical understanding of the Tourism - Restaurant - Hotel market, helping build sustainable bridges between schools and service industry enterprises.</span></li>
+              <li><span class="item-title" data-i18n="core1_i4_t">Legal and Administration:</span> <span data-i18n="core1_i4_d">Firm grasp of corporate law, tax regulations, social insurance; proficient in public administration procedures and online services.</span></li>
+            </ul>
           </article>
-          <article class="platform-card">
-            <header><div><h3>LearningCare</h3><p class="role">Parent and learner portal</p></div><span class="status">Live</span></header>
-            <p>A parent and learner engagement portal connecting families, students and education providers.</p>
-            <a class="link-row" href="https://care.ivslearning.io.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
+
+          <article class="feature-card">
+            <h3 data-i18n="core2_title">Project Management and Leadership</h3>
+            <ul>
+              <li><span class="item-title" data-i18n="core2_i1_t">Events and Infrastructure:</span> <span data-i18n="core2_i1_d">Experience in bid management, interior/exterior fit-out, and Facilities Management.</span></li>
+              <li><span class="item-title" data-i18n="core2_i2_t">Organization and Deployment:</span> <span data-i18n="core2_i2_d">Experience organizing international events, weddings, educational workshops, and gameshows (stage, contestants, audience).</span></li>
+              <li><span class="item-title" data-i18n="core2_i3_t">Technical Operations:</span> <span data-i18n="core2_i3_d">Supervision of network infrastructure and technology equipment for project deployment.</span></li>
+            </ul>
           </article>
-          <article class="platform-card">
-            <header><div><h3>IVS LMS</h3><p class="role">Digital learning platform</p></div><span class="status">Live</span></header>
-            <p>A learning management platform for structured digital learning, content delivery and academic tracking.</p>
-            <a class="link-row" href="https://lms.ivslearning.io.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
-          </article>
-          <article class="platform-card">
-            <header><div><h3>Aivy TeacherMatch</h3><p class="role">Teacher and center matching</p></div><span class="status">Active</span></header>
-            <p>A location-based teacher recruitment and education matching platform connecting foreign teachers and education centers.</p>
-            <a class="link-row" href="https://ivslearning.top" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
-          </article>
-          <article class="platform-card">
-            <header><div><h3>ACFMart</h3><p class="role">Trust commerce</p></div><span class="status">Concept</span></header>
-            <p>A trust-based marketplace concept for verified products, controlled sellers and affiliate-scaled growth.</p>
-            <a class="link-row" href="https://acfmart.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
-          </article>
-          <article class="platform-card">
-            <header><div><h3>QRVerified by IVS</h3><p class="role">Verification infrastructure</p></div><span class="status">Build</span></header>
-            <p>A QR-based product verification and trust infrastructure for authentication, traceability and anti-fraud workflows.</p>
-            <a class="link-row" href="https://qr.acfmart.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
-          </article>
-          <article class="platform-card">
-            <header><div><h3>DongNaiCity</h3><p class="role">Local real estate portal</p></div><span class="status">Active</span></header>
-            <p>A digital real estate and local information portal focused on Dong Nai.</p>
-            <a class="link-row" href="https://dongnaicity.com.vn" target="_blank" rel="noopener">Open platform <span aria-hidden="true">-&gt;</span></a>
-          </article>
-          <article class="platform-card">
-            <header><div><h3>Aivy AI / Product Suite</h3><p class="role">AI workflow tools</p></div><span class="status">Suite</span></header>
-            <p>A practical AI product suite for education operations, matching workflows, content support and business automation.</p>
-            <a class="link-row" href="#contact">Discuss collaboration <span aria-hidden="true">-&gt;</span></a>
+
+          <article class="feature-card">
+            <h3 data-i18n="core3_title">Digital Transformation and Technology</h3>
+            <ul>
+              <li><span class="item-title" data-i18n="core3_i1_t">Software Development:</span> <span data-i18n="core3_i1_d">Full-stack (React.js, TypeScript); LMS/EdTech design with Adaptive Learning integration; cross-platform Web/Mobile App development with a focus on UX.</span></li>
+              <li><span class="item-title" data-i18n="core3_i2_t">Cloud and Security:</span> <span data-i18n="core3_i2_d">Mastery of the Firebase ecosystem (NoSQL, Serverless), Google Cloud; implementation of decentralized digital identity with Microsoft Entra Verified ID.</span></li>
+              <li><span class="item-title" data-i18n="core3_i3_t">AI and Automation:</span> <span data-i18n="core3_i3_d">Integration of Generative AI (LLM) into chatbots and automated response systems; digitalization of operational processes (BPA/Workflow Automation) to optimize resources.</span></li>
+            </ul>
           </article>
         </div>
       </div>
@@ -776,39 +851,262 @@
     <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="wrap card section-card">
         <div class="section-head">
-          <p class="kicker">Experience</p>
-          <h2 id="experience-title">A timeline from operations to platform leadership.</h2>
+          <p class="kicker" data-i18n="exp_kicker">Experience</p>
+          <h2 id="experience-title" data-i18n="exp_title">Professional Journey</h2>
+          <p class="section-note" data-i18n="exp_note">A multidisciplinary track across operations, market development, technology, and premium service.</p>
         </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>CEO &amp; Founder / IVS JSC</h3><div class="timeline-meta"><span>04-2024 - Present</span><span>Founder leadership</span></div><p>Leading IVS JSC across education, AI, commerce and operations platforms.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-ivs">Expand details</button>
-            <div class="details" id="exp-ivs" hidden><ul><li>Defines platform strategy, product direction and business units.</li><li>Leads development of CenterCare, LearningCare, IVS LMS, Aivy TeacherMatch and trust commerce initiatives.</li><li>Builds partnerships across education centers, schools and service networks.</li></ul></div>
+
+        <div class="timeline" id="experienceTimeline">
+          <article class="timeline-item" data-exp-id="e1">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2024 - Present</div>
+                <h3 class="timeline-title" data-i18n="e1_role">Digital Operations & Communication (Remote)</h3>
+                <p class="timeline-desc" data-i18n="e1_desc">Built and maintained web ecosystems while strengthening cross-border digital brand presence in Florida.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e1" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e1" hidden></div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>Digital Operations &amp; Communication / Kha Dock &amp; Homes Construction LLC</h3><div class="timeline-meta"><span>10-2023 - Present</span><span>Operations and communication</span></div><p>Supporting digital communication, operating structure and process clarity.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-kha">Expand details</button>
-            <div class="details" id="exp-kha" hidden><ul><li>Coordinates digital presence, communications and internal workflow improvements.</li><li>Supports operational documentation and project follow-through.</li></ul></div>
+
+          <article class="timeline-item" data-exp-id="e2">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2024 - Present</div>
+                <h3 class="timeline-title" data-i18n="e2_role">Strategy, Finance & SaaS Product Leadership</h3>
+                <p class="timeline-desc" data-i18n="e2_desc">Leading strategy, finance, people, and SaaS product development for education services.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e2" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e2" hidden></div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>Head of Market Development / AMG International Education JSC</h3><div class="timeline-meta"><span>06-2023 - 04-2024</span><span>Market development</span></div><p>Expanded education partnerships and built channels for growth programs.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-amg">Expand details</button>
-            <div class="details" id="exp-amg" hidden><ul><li>Developed school and education center relationships.</li><li>Coordinated events, market outreach and partner communication.</li><li>Connected business goals with education delivery needs.</li></ul></div>
+
+          <article class="timeline-item" data-exp-id="e3">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2023 - 2024</div>
+                <h3 class="timeline-title" data-i18n="e3_role">School Partnerships & IELTS Station</h3>
+                <p class="timeline-desc" data-i18n="e3_desc">Expanded school partnerships to nearly 50 institutions and led IELTS Station implementation.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e3" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e3" hidden></div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>Business Development &amp; Events Manager / Song Trang Restaurant</h3><div class="timeline-meta"><span>11-2021 - 04-2023</span><span>F&amp;B and events</span></div><p>Managed business development, events and partner-facing execution.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-songtrang">Expand details</button>
-            <div class="details" id="exp-songtrang" hidden><ul><li>Organized event operations and customer-facing programs.</li><li>Built local partnership and service coordination workflows.</li></ul></div>
+
+          <article class="timeline-item" data-exp-id="e4">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2021 - 2023</div>
+                <h3 class="timeline-title" data-i18n="e4_role">Travel Partnerships & Events Growth</h3>
+                <p class="timeline-desc" data-i18n="e4_desc">Developed 200+ travel partnerships and supported service delivery for 15,000 guests in peak season.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e4" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e4" hidden></div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>Co-Founder / TUK TUK: Tea - Pizza &amp; Beer</h3><div class="timeline-meta"><span>2019 - 2021</span><span>Entrepreneurship</span></div><p>Co-built an F&amp;B business, covering operations, service and local growth.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-tuktuk">Expand details</button>
-            <div class="details" id="exp-tuktuk" hidden><ul><li>Handled early-stage operating setup, customer experience and day-to-day execution.</li><li>Converted practical constraints into repeatable service routines.</li></ul></div>
+
+          <article class="timeline-item" data-exp-id="e5">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2019 - 2021</div>
+                <h3 class="timeline-title" data-i18n="e5_role">Co-Founder</h3>
+                <p class="timeline-desc"><span data-i18n="e5_company">TUK TUK: Tea - Pizza & Beer</span></p>
+                <p class="timeline-desc" data-i18n="e5_desc">Co-founded and managed a 4-branch F&B chain, optimizing supply, operations, and service quality.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e5" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e5" hidden></div>
           </article>
-          <article class="timeline-item">
-            <div class="timeline-top"><h3>Rewards Manager &amp; Flight Crew / The Grand Ho Tram &amp; VietJet Air</h3><div class="timeline-meta"><span>2017 - 2019</span><span>Hospitality and aviation</span></div><p>Built discipline in service standards, guest experience and high-pressure operations.</p></div>
-            <button class="details-btn" type="button" aria-expanded="false" aria-controls="exp-early">Expand details</button>
-            <div class="details" id="exp-early" hidden><ul><li>Worked in service environments requiring consistency, communication and operational discipline.</li><li>Gained cross-cultural customer-facing experience and execution habits.</li></ul></div>
+
+          <article class="timeline-item" data-exp-id="e6">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-meta">2017 - 2019</div>
+                <h3 class="timeline-title" data-i18n="e6_role">Rewards Manager & Flight Crew</h3>
+                <p class="timeline-desc"><span data-i18n="e6_company">The Grand Ho Tram & VietJet Air</span></p>
+                <p class="timeline-desc" data-i18n="e6_desc">Trained in premium segment service, loyalty management, and international aviation standard emergency response.</p>
+              </div>
+              <button class="details-btn" type="button" aria-expanded="false" aria-controls="details-e6" aria-label="Toggle details">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="details" id="details-e6" hidden></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap card section-card">
+        <div class="section-head">
+          <p class="kicker" data-i18n="edu_kicker">Education</p>
+          <h2 id="education-title" data-i18n="edu_title">Education and Certifications</h2>
+          <p class="section-note" data-i18n="edu_note">A multidisciplinary academic background supporting technical and business alignment.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="education-card">
+            <h3 data-i18n="edu1_title">BA in English Language</h3>
+            <p data-i18n="edu1_desc">Vietnam Aviation Academy (2012-2016).</p>
+            <ul>
+              <li data-i18n="edu1_li1">Degree classification: Good.</li>
+              <li data-i18n="edu1_li2">Mode of study: Full-time.</li>
+              <li data-i18n="edu1_li3">Graduation year: 2016.</li>
+            </ul>
+          </article>
+          <article class="education-card">
+            <h3 data-i18n="edu2_title">Bachelor of Business Administration</h3>
+            <p data-i18n="edu2_desc">Vietnam Aviation Academy (2013-2017).</p>
+            <ul>
+              <li data-i18n="edu2_li1">Degree classification: Average good.</li>
+              <li data-i18n="edu2_li2">Mode of study: Full-time.</li>
+              <li data-i18n="edu2_li3">Graduation year: 2017.</li>
+            </ul>
+          </article>
+          <article class="education-card">
+            <h3 data-i18n="edu3_title">Educational Management Certification</h3>
+            <p data-i18n="edu3_desc">Ho Chi Minh City School of Educational Management (2024).</p>
+            <ul>
+              <li data-i18n="edu3_li1">Program: Educational management training for school leaders and teachers.</li>
+              <li data-i18n="edu3_li2">Study period: 08/04/2024 - 03/06/2024.</li>
+              <li data-i18n="edu3_li3">Certificate issued in June 2024.</li>
+            </ul>
+          </article>
+          <article class="education-card">
+            <h3 data-i18n="edu4_title">Intermediate Diploma in Aviation Commercial Services</h3>
+            <p data-i18n="edu4_desc">Vietnam Aviation Academy (VAA).</p>
+            <ul>
+              <li data-i18n="edu4_li1">Training period: 05/2013 - 05/2015.</li>
+              <li data-i18n="edu4_li2">Graduation classification: Average good.</li>
+              <li data-i18n="edu4_li3">Vocational intermediate diploma in aviation commercial services.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-3" style="margin-top:14px">
+          <article class="summary-card">
+            <span class="badge" data-i18n="edu_profile_badge">Academic Record</span>
+            <h3 data-i18n="edu_profile_title">Verified academic profile summary</h3>
+            <p data-i18n="edu_profile_desc">The education section above is aligned with the degree and certificate set provided...</p>
+            <ul>
+              <li data-i18n="edu_profile_li1">English Language Bachelor: classified Good, full-time program, awarded in 2016.</li>
+              <li data-i18n="edu_profile_li2">Business Administration Bachelor: classified Average good, full-time program, awarded in 2017.</li>
+              <li data-i18n="edu_profile_li3">Educational Management certificate: completed in 2024 for school management and teacher professional development.</li>
+              <li data-i18n="edu_profile_li4">Aviation Commercial Services intermediate diploma: vocational foundation supporting discipline, service quality, and operational standards.</li>
+            </ul>
+          </article>
+
+          <article class="summary-card">
+            <span class="badge" data-i18n="edu_cert_badge">Professional Certifications</span>
+            <h3 data-i18n="edu_cert_title">Technology Certifications</h3>
+            <p data-i18n="edu_cert_desc">Completed professional learning tracks from LinkedIn Learning, Alibaba Cloud, and Microsoft Learn, with focus areas in Cloud, Security, and AI.</p>
+            <ul>
+              <li data-i18n="edu_cert_li1">LinkedIn Learning: continuous upskilling in digital productivity, technology operations, and professional communication.</li>
+              <li data-i18n="edu_cert_li2">Alibaba Cloud: practical cloud platform knowledge, infrastructure services, and cloud-native thinking.</li>
+              <li data-i18n="edu_cert_li3">Microsoft Learn: identity, security, Azure services, automation, and AI-aligned enterprise workflows.</li>
+            </ul>
+          </article>
+
+          <article class="summary-card">
+            <span class="badge" data-i18n="edu_it_badge">Digital Capability</span>
+            <h3 data-i18n="edu_it_title">IT and Systems Competency</h3>
+            <p data-i18n="edu_it_desc">Strong practical capability in office productivity, system administration, and technical support for devices and internal infrastructure.</p>
+            <ul>
+              <li data-i18n="edu_it_li1">Advanced use of Microsoft Office for reporting, documentation, presentation, and operational coordination.</li>
+              <li data-i18n="edu_it_li2">Windows system administration with hands-on experience in installation, configuration, maintenance, and user support.</li>
+              <li data-i18n="edu_it_li3">Computer hardware and networking knowledge for troubleshooting, setup, and operational continuity.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ecosystem" aria-labelledby="ecosystem-title">
+      <div class="wrap card section-card">
+        <div class="section-head">
+          <p class="kicker" data-i18n="eco_kicker">IVS Product Suite</p>
+          <h2 id="ecosystem-title" data-i18n="eco_title">IVS Digital Ecosystem</h2>
+          <p class="section-note" data-i18n="eco_sub">The IVS digital ecosystem for language center systems, meeting all your operation, assessment, and learning needs.</p>
+        </div>
+
+        <div class="summary-card" style="margin-bottom:14px">
+          <span class="badge" data-i18n="eco_sync_badge">Software-as-a-Partner Model</span>
+          <h3 data-i18n="eco_sync_title">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
+          <ul class="platform-list">
+            <li data-i18n="eco_sync_f1">Centralized Cloud Database</li>
+            <li data-i18n="eco_sync_f2">Real-time Satellite Sync</li>
+          </ul>
+        </div>
+
+        <div class="grid-2">
+          <article class="platform-card">
+            <header><div><span class="badge" data-i18n="eco1_platform">Platform #1</span><h3 data-i18n="eco1_name">IVS CenterCare</h3></div></header>
+            <p data-i18n="eco1_desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
+            <ul class="platform-list">
+              <li data-i18n="eco1_f1">Tuition Management</li>
+              <li data-i18n="eco1_f2">Digital Attendance</li>
+              <li data-i18n="eco1_f3">Parent App Sync</li>
+              <li data-i18n="eco1_f4">Smart Scheduling</li>
+            </ul>
+            <a class="platform-link" href="https://center.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+          </article>
+
+          <article class="platform-card">
+            <header><div><span class="badge" data-i18n="eco2_platform">Platform #2</span><h3 data-i18n="eco2_name">IVS Examia</h3></div></header>
+            <p data-i18n="eco2_desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
+            <ul class="platform-list">
+              <li data-i18n="eco2_f1">Auto-Grading Engine</li>
+              <li data-i18n="eco2_f2">Competency Analytics</li>
+              <li data-i18n="eco2_f3">Question Bank</li>
+              <li data-i18n="eco2_f4">Anti-Cheat Mode</li>
+            </ul>
+            <a class="platform-link" href="https://exam.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco2_btn">Explore Specs</a>
+          </article>
+
+          <article class="platform-card">
+            <header><div><span class="badge" data-i18n="eco3_platform">Platform #3</span><h3 data-i18n="eco3_name">ELearners</h3></div></header>
+            <p data-i18n="eco3_desc">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
+            <ul class="platform-list">
+              <li data-i18n="eco3_f1">Gamified Lessons</li>
+              <li data-i18n="eco3_f2">AI Voice Feedback</li>
+              <li data-i18n="eco3_f3">Daily Goal Tracker</li>
+              <li data-i18n="eco3_f4">Reward System</li>
+            </ul>
+            <a class="platform-link" href="https://lms.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco3_btn">Explore Specs</a>
+          </article>
+
+          <article class="platform-card">
+            <header><div><span class="badge" data-i18n="eco4_platform">Platform #4</span><h3 data-i18n="eco4_name">Testing Placement</h3></div></header>
+            <p data-i18n="eco4_desc">Accurate entrance level testing tool, optimizing class classification.</p>
+            <ul class="platform-list">
+              <li data-i18n="eco4_f1">Automated Testing</li>
+              <li data-i18n="eco4_f2">Level Classification</li>
+              <li data-i18n="eco4_f3">Instant Results</li>
+              <li data-i18n="eco4_f4">Report Generation</li>
+            </ul>
+            <a class="platform-link" href="https://ivslearning.top" target="_blank" rel="noopener" data-i18n="eco4_btn">Explore Specs</a>
           </article>
         </div>
       </div>
@@ -817,47 +1115,66 @@
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="wrap card section-card">
         <div class="section-head">
-          <p class="kicker">Projects</p>
-          <h2 id="projects-title">A clearer product hierarchy.</h2>
+          <p class="kicker" data-i18n="project_kicker">Flagship Projects</p>
+          <h2 id="projects-title" data-i18n="project_title">Technology Projects</h2>
+          <p class="section-note" data-i18n="project_note">Real products focused on measurable outcomes in education, analytics, and daily operations.</p>
         </div>
-        <div class="project-grid">
-          <article class="project-tier">
-            <h3>Flagship Platforms <span class="tier-label">Primary</span></h3>
-            <p>Production-facing platforms and core product bets under IVS.</p>
+
+        <div class="grid-3">
+          <article class="project-card">
+            <h3 data-i18n="proj1_title">EdTech & Placement Testing</h3>
+            <p data-i18n="proj1_desc">English learning and placement testing platforms for students.</p>
             <ul>
-              <li>CenterCare, LearningCare and IVS LMS</li>
-              <li>Aivy TeacherMatch</li>
-              <li>ACFMart and QRVerified by IVS</li>
-              <li>DongNaiCity</li>
+              <li data-i18n="proj1_l1">iLearners - K-12+ English Learning App</li>
+              <li data-i18n="proj1_l2">AIVY English Testing Placement</li>
+              <li data-i18n="proj1_l3">IVS Testing Placement - English Proficiency Evaluation</li>
+              <li data-i18n="proj1_l4">IVS KinderLink</li>
             </ul>
           </article>
-          <article class="project-tier">
-            <h3>Business Projects <span class="tier-label">Growth</span></h3>
-            <p>Company units and go-to-market projects that support education, commerce and consulting growth.</p>
+          <article class="project-card">
+            <h3 data-i18n="proj2_title">AI Assistants & Productivity</h3>
+            <p data-i18n="proj2_desc">AI products for professional support, personal profiling, and workflow optimization.</p>
             <ul>
-              <li>IVS Academy and IVS Education</li>
-              <li>IVS Celestech and IVS Consulting</li>
-              <li>Education partnerships and center network development</li>
-              <li>Trust commerce operating models</li>
+              <li data-i18n="proj2_l1">Aivy Architect - AI Assistant for Engineers & Architects</li>
+              <li data-i18n="proj2_l2">Auto-fill with AI - Resume Builder via PDF/DOCX Upload</li>
+              <li data-i18n="proj2_l3">Ledger2gether - Shared Ledger</li>
+              <li data-i18n="proj2_l4">Cocoa AI - Psychology Assistant</li>
             </ul>
           </article>
-          <article class="project-tier">
-            <h3>Experimental / Prototype Apps <span class="tier-label">Learning</span></h3>
-            <p>Small tools used to test AI, automation and product interaction patterns before scaling.</p>
+          <article class="project-card">
+            <h3 data-i18n="proj3_title">Student Life & Utility Apps</h3>
+            <p data-i18n="proj3_desc">Utilities for student life, accommodation, and real-world transportation needs.</p>
             <ul>
-              <li>Aivy AI workflow prototypes</li>
-              <li>CV and profile automation tools</li>
-              <li>Learning utilities and internal dashboards</li>
-              <li>Operational reporting experiments</li>
+              <li data-i18n="proj3_l1">StaySmart - IVS Accommodation</li>
+              <li data-i18n="proj3_l2">Vethoi - Ride-booking Demo App</li>
             </ul>
           </article>
-          <article class="project-tier">
-            <h3>Archived / Demo Apps <span class="tier-label">Reference</span></h3>
-            <p>Older demos are treated as references, not as equal-weight flagship products.</p>
+          <article class="project-card">
+            <h3 data-i18n="proj4_title">Health & Wellness Apps</h3>
+            <p data-i18n="proj4_desc">Products focused on healthcare, positive habits, and medical study support.</p>
             <ul>
-              <li>Portfolio demos and landing page experiments</li>
-              <li>Prototype UI concepts</li>
-              <li>Legacy app trials kept for learning and documentation</li>
+              <li data-i18n="proj4_l1">Moonflow - Menstrual Cycle Tracker</li>
+              <li data-i18n="proj4_l2">Luv Yoga - App for Yoga Centers</li>
+              <li data-i18n="proj4_l3">Nursefl0w - App for Nursing Students</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <h3 data-i18n="proj5_title">Institutional & Communication Platforms</h3>
+            <p data-i18n="proj5_desc">Organization and communication platforms for the IVS education ecosystem.</p>
+            <ul>
+              <li data-i18n="proj5_l1">CENTER-CARE - Center Management</li>
+              <li data-i18n="proj5_l2">IVS Academy - Training Portal</li>
+              <li data-i18n="proj5_l3">TAMI - "Understand Language - Understand Culture - Secure Future"</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <h3 data-i18n="proj6_title">Business Operations Projects</h3>
+            <p data-i18n="proj6_desc">Practical non-tech projects focusing on business development, events, and service partners.</p>
+            <ul>
+              <li data-i18n="proj6_l1_str">IELTS Station Project Leadership</li>
+              <li data-i18n="proj6_l1_txt">– From market research and business model design to operation.</li>
+              <li data-i18n="proj6_l2">Organized a 1,500-attendee community event</li>
+              <li data-i18n="proj6_l3_str">Developed 200+ travel partners, serving 15,000 guests in peak season</li>
             </ul>
           </article>
         </div>
@@ -867,145 +1184,285 @@
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="wrap card section-card">
         <div class="section-head">
-          <p class="kicker">Contact</p>
-          <h2 id="contact-title">Connect for Strategic Collaboration</h2>
+          <p class="kicker" data-i18n="contact_kicker">Contact</p>
+          <h2 id="contact-title" data-i18n="contact_title">Connect for Collaboration</h2>
+          <p class="section-note" data-i18n="contact_note">Open for roles in external affairs, digital operations, strategic partnerships, and product development.</p>
         </div>
+
         <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Collaboration categories</h3>
-            <ul>
-              <li>Education partnerships</li>
-              <li>EdTech product development</li>
-              <li>AI workflow automation</li>
-              <li>Platform architecture</li>
-              <li>Trust commerce / marketplace collaboration</li>
-              <li>International teacher and center network</li>
-            </ul>
-          </div>
-          <div class="contact-card">
-            <h3>Direct channels</h3>
-            <div class="contact-list" style="margin-top:14px">
-              <div class="contact-line"><span>Email</span><a href="mailto:mi.triet@outlook.com">mi.triet@outlook.com</a></div>
-              <div class="contact-line"><span>LinkedIn</span><a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></div>
-              <div class="contact-line"><span>GitHub</span><a href="https://github.com/ivsjsc" target="_blank" rel="noopener">github.com/ivsjsc</a></div>
-              <div class="contact-line"><span>Messenger</span><a href="https://m.me/nmi.triet" target="_blank" rel="noopener">m.me/nmi.triet</a></div>
-              <div class="contact-line"><span>Zalo</span><a href="https://zalo.me/nmt5555789" target="_blank" rel="noopener">zalo.me/nmt5555789</a></div>
+          <article class="contact-card">
+            <h3 data-i18n="contact_box1">Direct Contact</h3>
+            <div class="contact-line"><span data-i18n="contact_label_email_work">Work Email</span><a href="mailto:ceo.mtriet@ivsacademy.edu.vn">ceo.mtriet@ivsacademy.edu.vn</a></div>
+            <div class="contact-line"><span data-i18n="contact_label_email_personal">Personal Email</span><a href="mailto:mi.triet@outlook.com">mi.triet@outlook.com</a></div>
+            <div class="contact-line"><span data-i18n="contact_label_website_personal">Website</span><a href="https://minhtriet.online" target="_blank" rel="noopener">minhtriet.online</a></div>
+            <div class="contact-line"><span data-i18n="contact_label_website_company">Company Website</span><a href="https://ivsacademy.edu.vn" target="_blank" rel="noopener">ivsacademy.edu.vn</a></div>
+            <div class="contact-line"><span data-i18n="contact_label_linkedin">LinkedIn</span><a href="https://linkedin.com/in/mtrietng" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></div>
+            <div class="contact-line"><span data-i18n="contact_label_github">GitHub</span><a href="https://github.com/ivsjsc" target="_blank" rel="noopener">github.com/ivsjsc</a></div>
+            <div class="contact-line"><span data-i18n="label_address">Address</span><a href="https://maps.google.com/?q=1104,+Group+6,+Ap+Dat+Moi,+Long+Phuoc+Commune,+Dong+Nai+Province" target="_blank" rel="noopener" data-i18n="value_address">1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province</a></div>
+          </article>
+
+          <article class="contact-card">
+            <h3 data-i18n="contact_box2">Download Resume</h3>
+            <p data-i18n="cv_note">Use the buttons below to download Markdown CV or save this page as PDF.</p>
+            <div class="download-row">
+              <a class="btn btn-primary btn-pill" href="./CV.NguyenMinhTriet-vi.pdf" download>Tải CV tiếng Việt</a>
+              <a class="btn btn-gold btn-pill" href="./CV.NguyenMinhTriet-en.pdf" download>Download English CV</a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">© <span id="year"></span> Nguyen Minh Triet. IVS JSC founder profile.</div>
+    <div class="wrap" data-i18n="footer_left">Professional profile of Nguyen Minh Triet - Strategic Relations, Operations, and Digital Growth.</div>
   </footer>
 
-  <div class="lang-note" id="langNote" role="status" aria-live="polite">Vietnamese language support is being prepared. The current complete version is English.</div>
+  <div class="sr-only" id="langStatus" aria-live="polite"></div>
 
   <script>
     (function () {
-      const menuToggle = document.getElementById("menuToggle");
-      const primaryNav = document.getElementById("primaryNav");
-      const cvMenu = document.getElementById("cvMenu");
-      const cvToggle = document.getElementById("cvToggle");
-      const langNote = document.getElementById("langNote");
-      const viNoticeBtn = document.getElementById("viNoticeBtn");
+      const supported = ['en', 'vi', 'de', 'es', 'fr', 'ja', 'ko', 'ru', 'th', 'zh'];
+      const htmlLangMap = { zh: 'zh-Hans' };
+      const langMeta = {
+        en: { code: 'EN', name: 'English', path: '/en' },
+        vi: { code: 'VI', name: 'Tiếng Việt', path: '/vi' },
+        de: { code: 'DE', name: 'Deutsch', path: '/de' },
+        es: { code: 'ES', name: 'Español', path: '/es' },
+        fr: { code: 'FR', name: 'Français', path: '/fr' },
+        ja: { code: 'JA', name: '日本語', path: '/ja' },
+        ko: { code: 'KO', name: '한국어', path: '/ko' },
+        ru: { code: 'RU', name: 'Русский', path: '/ru' },
+        th: { code: 'TH', name: 'ไทย', path: '/th' },
+        zh: { code: 'ZH', name: '中文', path: '/zh' }
+      };
 
-      document.getElementById("year").textContent = new Date().getFullYear();
+      const state = {
+        lang: 'en',
+        dicts: {}
+      };
 
-      function setMenu(open) {
-        if (!menuToggle || !primaryNav) return;
-        primaryNav.classList.toggle("is-open", open);
-        menuToggle.setAttribute("aria-expanded", String(open));
-        menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+      const langToggle = document.getElementById('langToggle');
+      const langMenu = document.getElementById('langMenu');
+      const langCode = document.getElementById('langCode');
+      const langName = document.getElementById('langName');
+      const langStatus = document.getElementById('langStatus');
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+
+      function getPathLang() {
+        const seg = location.pathname.split('/').filter(Boolean)[0];
+        return supported.includes(seg) ? seg : null;
       }
 
-      function setCv(open) {
-        if (!cvMenu || !cvToggle) return;
-        cvMenu.classList.toggle("is-open", open);
-        cvToggle.setAttribute("aria-expanded", String(open));
+      function getStoredLang() {
+        try {
+          const value = localStorage.getItem('site_lang');
+          return supported.includes(value) ? value : null;
+        } catch (err) {
+          return null;
+        }
       }
 
-      menuToggle?.addEventListener("click", function () {
-        setMenu(!primaryNav.classList.contains("is-open"));
-        setCv(false);
+      function getInitialLang() {
+        return getPathLang() || getStoredLang() || 'en';
+      }
+
+      function updatePath(lang) {
+        if (location.protocol === 'file:') return;
+        const target = langMeta[lang]?.path || '/en';
+        if (location.pathname !== target) {
+          history.replaceState({}, '', target + location.search + location.hash);
+        }
+      }
+
+      function updateMeta(dict, lang) {
+        const title = dict.page_title || dict.brand_name || document.title;
+        document.title = title;
+
+        const description = dict.hero_lead || dict.about_note || '';
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription && description) metaDescription.setAttribute('content', description);
+
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', title);
+
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc && description) ogDesc.setAttribute('content', description);
+
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', title);
+
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc && description) twDesc.setAttribute('content', description);
+
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', `https://minhtriet.online${langMeta[lang]?.path || '/en'}`);
+
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute('content', `https://minhtriet.online${langMeta[lang]?.path || '/en'}`);
+      }
+
+      function loadLang(lang) {
+        if (state.dicts[lang] || window['translations_' + lang]) {
+          state.dicts[lang] = window['translations_' + lang] || state.dicts[lang];
+          return Promise.resolve(state.dicts[lang]);
+        }
+
+        return new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = `./lang/${lang}.js`;
+          script.onload = () => {
+            const dict = window['translations_' + lang];
+            if (!dict) {
+              reject(new Error(`Missing translations for ${lang}`));
+              return;
+            }
+            state.dicts[lang] = dict;
+            resolve(dict);
+          };
+          script.onerror = () => reject(new Error(`Failed to load language file: ${lang}`));
+          document.head.appendChild(script);
+        });
+      }
+
+      function applyDictionary(dict, lang) {
+        state.lang = lang;
+        document.documentElement.lang = htmlLangMap[lang] || lang;
+
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          const value = dict[key] ?? state.dicts.en?.[key] ?? window.translations_en?.[key];
+          if (typeof value === 'string') el.textContent = value;
+        });
+
+        document.querySelectorAll('.details-btn').forEach((btn) => {
+          const target = document.getElementById(btn.getAttribute('aria-controls'));
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-label', open ? 'Collapse details' : 'Expand details');
+          if (target && target.hidden === false) {
+            const list = target.querySelector('ul');
+            if (list) return;
+          }
+        });
+
+        renderExperienceDetails(dict);
+        updateMeta(dict, lang);
+        updateLanguageSwitcher(lang);
+
+        try {
+          localStorage.setItem('site_lang', lang);
+        } catch (err) {
+          // ignore
+        }
+
+        updatePath(lang);
+        langStatus.textContent = `${langMeta[lang].name} selected`;
+      }
+
+      function renderExperienceDetails(dict) {
+        const detailsMap = dict.experienceDetails || {};
+        document.querySelectorAll('[data-exp-id]').forEach((card) => {
+          const id = card.getAttribute('data-exp-id');
+          const host = card.querySelector('.details');
+          if (!host) return;
+          const items = detailsMap[id] || [];
+          host.innerHTML = `<ul>${items.map((item) => `<li>${item}</li>`).join('')}</ul>`;
+          const open = card.dataset.open === 'true';
+          host.hidden = !open;
+          host.classList.toggle('is-open', open);
+        });
+      }
+
+      function updateLanguageSwitcher(lang) {
+        langCode.textContent = langMeta[lang].code;
+        langName.textContent = langMeta[lang].name;
+        langMenu.querySelectorAll('button[data-lang]').forEach((btn) => {
+          btn.classList.toggle('is-active', btn.dataset.lang === lang);
+        });
+      }
+
+      function setDetailsState(card, open) {
+        const host = card.querySelector('.details');
+        const btn = card.querySelector('.details-btn');
+        if (!host || !btn) return;
+        card.dataset.open = open ? 'true' : 'false';
+        host.hidden = !open;
+        host.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+      }
+
+      function toggleDetails(card) {
+        const open = card.dataset.open === 'true';
+        setDetailsState(card, !open);
+      }
+
+      function loadAndApply(lang) {
+        return loadLang(lang).then((dict) => applyDictionary(dict, lang));
+      }
+
+      langToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isOpen = langMenu.classList.toggle('is-open');
+        langToggle.setAttribute('aria-expanded', String(isOpen));
       });
 
-      primaryNav?.addEventListener("click", function (event) {
-        if (event.target.closest("a")) setMenu(false);
+      langMenu.addEventListener('click', (event) => {
+        const btn = event.target.closest('button[data-lang]');
+        if (!btn) return;
+        event.stopPropagation();
+        const lang = btn.dataset.lang;
+        langMenu.classList.remove('is-open');
+        langToggle.setAttribute('aria-expanded', 'false');
+        loadAndApply(lang).catch((err) => console.warn(err));
       });
 
-      cvToggle?.addEventListener("click", function () {
-        setCv(!cvMenu.classList.contains("is-open"));
-        setMenu(false);
+      menuToggle.addEventListener('click', () => {
+        const open = mobileNav.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(open));
       });
 
-      document.addEventListener("click", function (event) {
-        if (!event.target.closest("#cvMenu")) setCv(false);
-        if (!event.target.closest(".topbar") && primaryNav?.classList.contains("is-open")) setMenu(false);
+      document.addEventListener('click', () => {
+        langMenu.classList.remove('is-open');
+        langToggle.setAttribute('aria-expanded', 'false');
       });
 
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          setMenu(false);
-          setCv(false);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          langMenu.classList.remove('is-open');
+          langToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
         }
       });
 
-      document.querySelectorAll(".details-btn").forEach(function (button) {
-        button.addEventListener("click", function () {
-          const target = document.getElementById(button.getAttribute("aria-controls"));
-          const open = button.getAttribute("aria-expanded") === "true";
-          button.setAttribute("aria-expanded", String(!open));
-          button.textContent = open ? "Expand details" : "Collapse details";
-          if (target) target.hidden = open;
+      document.querySelectorAll('.details-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+          const card = button.closest('[data-exp-id]');
+          if (!card) return;
+          toggleDetails(card);
         });
       });
 
-      let langTimer;
-      viNoticeBtn?.addEventListener("click", function () {
-        document.documentElement.lang = "en";
-        viNoticeBtn.setAttribute("aria-pressed", "false");
-        langNote.classList.add("is-visible");
-        window.clearTimeout(langTimer);
-        langTimer = window.setTimeout(function () {
-          langNote.classList.remove("is-visible");
-        }, 3600);
+      document.querySelectorAll('.mobile-nav a, .desktop-nav a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
       });
 
-      function hideBrokenCvLinks() {
-        const links = Array.from(document.querySelectorAll("[data-check-file]"));
-        if (!links.length || !("fetch" in window)) return;
+      loadLang('en').catch(() => {});
 
-        links.forEach(function (link) {
-          const href = link.getAttribute("href");
-          if (!href || href.startsWith("#") || href.startsWith("http")) return;
+      const initialLang = getInitialLang();
+      loadAndApply(initialLang).catch((err) => {
+        console.warn(err);
+        loadAndApply('en').catch((fallbackErr) => console.error(fallbackErr));
+      });
 
-          fetch(href, { method: "HEAD", cache: "no-store" })
-            .then(function (response) {
-              if (!response.ok) {
-                if (link.closest(".cv-panel")) {
-                  link.hidden = true;
-                  const visibleCvLinks = document.querySelectorAll(".cv-panel a:not([hidden])").length;
-                  const empty = document.getElementById("cvEmpty");
-                  if (empty && visibleCvLinks === 0) empty.hidden = false;
-                } else {
-                  link.setAttribute("aria-disabled", "true");
-                  link.removeAttribute("href");
-                }
-              }
-            })
-            .catch(function () {
-              if (!link.closest(".cv-panel")) {
-                link.setAttribute("aria-disabled", "true");
-                link.removeAttribute("href");
-              }
-            });
-        });
+      // Make EN the canonical route on first load if there is no language prefix.
+      if (location.protocol !== 'file:' && !getPathLang()) {
+        history.replaceState({}, '', '/en' + location.search + location.hash);
       }
-
-      if (location.protocol !== "file:") hideBrokenCvLinks();
     })();
   </script>
 </body>
