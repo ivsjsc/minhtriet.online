@@ -5,6 +5,7 @@
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
-    "build:css": "tailwindcss -c tailwind.config.js -i ./css/styles.css -o ./css/tailwind.css --minify"
+    "build:css": "tailwindcss -c tailwind.config.js -i ./css/styles.css -o ./css/tailwind.css --minify",
+    "build": "npm run build:css && node -e \"const fs = require('fs'); if (fs.existsSync('css/tailwind.css')) { fs.mkdirSync('public/css', { recursive: true }); fs.copyFileSync('css/tailwind.css', 'public/css/tailwind.css'); }\""
   }
 }
