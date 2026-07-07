@@ -204,9 +204,17 @@ window.translations_ko = {
     "contact_label_linkedin": "링크드인",
     "contact_label_github": "GitHub",
     "label_address": "주소",
-    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province",
+    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
     "contact_box2": "이력서 다운로드",
     "cv_note": "아래 버튼으로 베트남어 및 영문 CV를 다운로드하거나 이 페이지를 PDF로 저장하십시오.",
+        "contact_form_title": "메시지 보내기",
+    "contact_name_label": "이름",
+    "contact_name_placeholder": "이름을 입력하세요...",
+    "contact_email_label": "이메일 주소",
+    "contact_email_placeholder": "이메일을 입력하세요...",
+    "contact_message_label": "메시지",
+    "contact_message_placeholder": "메시지를 입력하세요...",
+    "contact_submit_btn": "메시지 보내기",
     "footer_left": "응우옌 민 트리엣의 전문가 프로필 - 전략적 관계, 운영 및 디지털 성장.",
     "experienceDetails": {
         "e1": [

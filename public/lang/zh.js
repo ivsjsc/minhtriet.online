@@ -204,9 +204,17 @@ window.translations_zh = {
     "contact_label_linkedin": "领英",
     "contact_label_github": "GitHub",
     "label_address": "地址",
-    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai Province",
+    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
     "contact_box2": "下载简历",
     "cv_note": "使用下面的按钮下载越南语和英语简历，或将此页面另存为 PDF。",
+        "contact_form_title": "发送消息",
+    "contact_name_label": "您的姓名",
+    "contact_name_placeholder": "输入您的姓名...",
+    "contact_email_label": "电子邮箱",
+    "contact_email_placeholder": "输入您的邮箱...",
+    "contact_message_label": "消息",
+    "contact_message_placeholder": "输入消息内容...",
+    "contact_submit_btn": "发送消息",
     "footer_left": "阮明哲的专业简介 - 战略关系、运营和数字化增长。",
     "experienceDetails": {
         "e1": [
