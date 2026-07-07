@@ -214,6 +214,8 @@ window.translations_vi = {
     "contact_message_label": "Tin nhắn",
     "contact_message_placeholder": "Nhập nội dung tin nhắn...",
     "contact_submit_btn": "Gửi tin nhắn",
+    "contact_success": "Gửi tin nhắn thành công!",
+    "contact_error": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
         "btn_download_cv": "Tải CV",
     "cv_opt_vi": "Bản tiếng Việt",
     "cv_opt_en": "Bản tiếng Anh",

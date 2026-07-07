@@ -738,6 +738,34 @@
       .contact-line { flex-direction: column; }
       .contact-line a { text-align: left; }
     }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--forest);
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+      pointer-events: none;
+      font-weight: 600;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .toast-error {
+      background: #b33939;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1735,8 +1763,71 @@
       if (location.protocol !== 'file:' && !getPathLang()) {
         history.replaceState({}, '', '/en' + location.search + location.hash);
       }
+
+      // Handle form submission via AJAX
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const submitText = submitBtn.querySelector('[data-i18n="contact_submit_btn"]') || submitBtn;
+          const originalText = submitText.textContent;
+          
+          // Show sending state
+          submitBtn.disabled = true;
+          const sendingText = state.lang === 'vi' ? 'Đang gửi...' : 'Sending...';
+          submitText.textContent = sendingText;
+          
+          const formData = new FormData(form);
+          
+          fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.ok) {
+              form.reset();
+              const successMsg = state.dicts[state.lang]?.contact_success || 
+                                 (state.lang === 'vi' ? 'Gửi tin nhắn thành công!' : 'Message sent successfully!');
+              showToast(successMsg, false);
+            } else {
+              throw new Error('Formspree response was not ok');
+            }
+          })
+          .catch(error => {
+            console.error(error);
+            const errorMsg = state.dicts[state.lang]?.contact_error || 
+                             (state.lang === 'vi' ? 'Gửi tin nhắn thất bại. Vui lòng thử lại.' : 'Failed to send message. Please try again.');
+            showToast(errorMsg, true);
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitText.textContent = originalText;
+          });
+        });
+      }
+
+      function showToast(message, isError = false) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        if (!toast || !toastMsg) return;
+        
+        toastMsg.textContent = message;
+        toast.className = 'toast' + (isError ? ' toast-error' : '') + ' show';
+        
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 5000);
+      }
     })();
   </script>
+  <div id="toast" class="toast" role="alert" aria-live="assertive">
+    <span id="toast-message"></span>
+  </div>
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 </html>

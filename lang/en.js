@@ -214,6 +214,8 @@ window.translations_en = {
     "contact_message_label": "Message",
     "contact_message_placeholder": "Write your message here...",
     "contact_submit_btn": "Send Message",
+    "contact_success": "Message sent successfully!",
+    "contact_error": "Failed to send message. Please try again.",
         "btn_download_cv": "Download CV",
     "cv_opt_vi": "Vietnamese Version",
     "cv_opt_en": "English Version",
