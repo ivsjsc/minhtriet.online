@@ -387,7 +387,9 @@
     }
     .profile-panel {
       padding: 22px;
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       gap: 18px;
     }
     .portrait {
@@ -403,6 +405,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: opacity 0.2s ease-in-out;
     }
     .stats-grid {
       display: grid;
@@ -717,7 +720,7 @@
     @media (min-width: 860px) {
       .desktop-nav { display: flex; }
       .menu-toggle { display: none; }
-      .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr); align-items: start; }
+      .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr); align-items: stretch; }
       .hero-copy { padding: 34px; }
       .profile-panel { padding: 24px; }
       .three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -854,15 +857,9 @@
         </div>
 
         <aside class="hero-aside">
-          <div class="card profile-panel" aria-label="Quick stats">
-            <div class="portrait">
-              <img src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" width="520" height="640" loading="eager" decoding="async" onerror="this.remove(); this.parentElement.classList.add('is-fallback')">
-            </div>
-            <div class="stats-grid">
-              <div class="stat"><strong>50+</strong><span data-i18n="stat1">schools connected through partnerships</span></div>
-              <div class="stat"><strong>1,500+</strong><span data-i18n="stat2">participants in major events</span></div>
-              <div class="stat"><strong>200+</strong><span data-i18n="stat3">tourism partners engaged</span></div>
-              <div class="stat"><strong>10+</strong><span data-i18n="stat4">advanced courses in Cloud, Security, AI</span></div>
+          <div class="card profile-panel" aria-label="Quick stats" style="display: flex; flex-direction: column; height: 100%;">
+            <div class="portrait" style="flex: 1 1 auto; height: 100%;">
+              <img id="main-portrait-hero" src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" width="520" height="640" loading="eager" decoding="async" style="height: 100%; object-fit: cover;">
             </div>
           </div>
         </aside>
@@ -1282,7 +1279,7 @@
               <div class="contact-line"><span data-i18n="contact_label_linkedin">LinkedIn</span><a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener">linkedin.com/in/mtrietng</a></div>
               <div class="contact-line"><span data-i18n="contact_label_facebook">Facebook</span><a href="https://www.facebook.com/nmi.triet" target="_blank" rel="noopener">facebook.com/nmi.triet</a></div>
               <div class="contact-line"><span data-i18n="contact_label_github">GitHub</span><a href="https://github.com/ivsjsc" target="_blank" rel="noopener">github.com/ivsjsc</a></div>
-              <div class="contact-line"><span data-i18n="label_address">Address</span><a href="https://maps.google.com/?q=1104,+Group+6,+Ap+Dat+Moi,+Long+Phuoc+Commune,+Dong+Nai+City" target="_blank" rel="noopener" data-i18n="value_address">1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City</a></div>
+              <div class="contact-line"><span data-i18n="label_address">Address</span><a href="https://maps.google.com/?q=1104,+Group+6,+Ap+Dat+Moi,+Long+Phuoc+Commune,+Dong+Nai+City" target="_blank" rel="noopener" data-i18n="value_address">Ap Dat Moi, Long Phuoc Commune, Dong Nai City</a></div>
             </article>
 
             <article class="contact-card">
@@ -1311,27 +1308,65 @@
             </article>
           </div>
 
-          <article class="contact-card">
-            <h3 data-i18n="contact_form_title">Send a Message</h3>
-            <!-- REPLACE "xoqgkyrj" WITH YOUR FORMSPREE FORM ID -->
-            <form action="https://formspree.io/f/mlgykepq" method="POST" class="contact-form">
-              <div class="form-group">
-                <label for="contact-name" data-i18n="contact_name_label">Your Name</label>
-                <input type="text" id="contact-name" name="name" required placeholder="Họ và tên..." data-i18n-placeholder="contact_name_placeholder">
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <article class="contact-card">
+              <h3 data-i18n="contact_form_title">Send a Message</h3>
+              <!-- REPLACE "xoqgkyrj" WITH YOUR FORMSPREE FORM ID -->
+              <form action="https://formspree.io/f/mlgykepq" method="POST" class="contact-form">
+                <div class="form-group">
+                  <label for="contact-name" data-i18n="contact_name_label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="Họ và tên..." data-i18n-placeholder="contact_name_placeholder">
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" data-i18n="contact_email_label">Email Address</label>
+                  <input type="email" id="contact-email" name="email" required placeholder="Email..." data-i18n-placeholder="contact_email_placeholder">
+                </div>
+                <div class="form-group">
+                  <label for="contact-message" data-i18n="contact_message_label">Message</label>
+                  <textarea id="contact-message" name="message" required rows="4" placeholder="Nội dung tin nhắn..." data-i18n-placeholder="contact_message_placeholder"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+                  <span data-i18n="contact_submit_btn">Send Message</span>
+                </button>
+              </form>
+            </article>
+
+            <!-- Album -->
+            <article class="contact-card" style="padding: 20px;">
+              <h3 data-i18n="contact_album_title" style="margin-bottom: 12px; font-weight: 800; color: var(--forest-dark);">Album</h3>
+              <div class="portrait-gallery-contact">
+                <div class="portrait" style="border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, rgba(33,76,63,0.95), rgba(16,37,31,0.95)); aspect-ratio: 520/640; max-height: 380px; margin: 0 auto;">
+                  <img id="main-portrait-album" src="./images/avatar.webp" alt="Nguyen Minh Triet portrait" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.2s ease-in-out;">
+                </div>
+                <div class="portrait-thumbnails" style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; margin-top: 10px;">
+                  <button class="thumb-btn" onclick="changePortrait('./images/avatar.webp', this)" style="border: 2.2px solid var(--gold); border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/avatar.webp" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-01.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-01.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-02.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-02.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-04.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-04.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-05.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-05.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-06.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-06.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-07.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-07.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                  <button class="thumb-btn" onclick="changePortrait('./images/profile/image-09.png', this)" style="border: 2.2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; aspect-ratio: 1; background: transparent; cursor: pointer; display: block; width: 100%;">
+                    <img src="./images/profile/image-09.png" style="width: 100%; height: 100%; object-fit: cover;">
+                  </button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="contact-email" data-i18n="contact_email_label">Email Address</label>
-                <input type="email" id="contact-email" name="email" required placeholder="Email..." data-i18n-placeholder="contact_email_placeholder">
-              </div>
-              <div class="form-group">
-                <label for="contact-message" data-i18n="contact_message_label">Message</label>
-                <textarea id="contact-message" name="message" required rows="4" placeholder="Nội dung tin nhắn..." data-i18n-placeholder="contact_message_placeholder"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
-                <span data-i18n="contact_submit_btn">Send Message</span>
-              </button>
-            </form>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1631,6 +1666,21 @@
         console.warn(err);
         loadAndApply('en').catch((fallbackErr) => console.error(fallbackErr));
       });
+
+      window.changePortrait = function(src, btn) {
+        const main = document.getElementById('main-portrait');
+        if (main && main.src !== src) {
+          main.style.opacity = '0.3';
+          setTimeout(() => {
+            main.src = src;
+            main.style.opacity = '1';
+          }, 100);
+        }
+        document.querySelectorAll('.thumb-btn').forEach(b => {
+          b.style.borderColor = 'transparent';
+        });
+        if (btn) btn.style.borderColor = 'var(--gold)';
+      };
 
       // Make EN the canonical route on first load if there is no language prefix.
       if (location.protocol !== 'file:' && !getPathLang()) {
