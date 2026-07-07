@@ -254,5 +254,9 @@ window.translations_zh = {
             "在VietJet Air接受了应急响应和安全合规培训。",
             "根据国际服务标准培养了跨文化沟通和快速响应能力。"
         ]
-    }
+    },
+    "btn_expand": "展开",
+    "btn_collapse": "收起",
+    "contact_album_title": "相册",
+    "album_view_label": "查看照片"
 }

@@ -257,5 +257,9 @@ window.translations_en = {
             "Trained in emergency response and safety compliance at VietJet Air.",
             "Developed cross-cultural communication and rapid response skills to international service standards."
         ]
-    }
+    },
+    "btn_expand": "Expand",
+    "btn_collapse": "Collapse",
+    "contact_album_title": "Album",
+    "album_view_label": "View photo"
 };

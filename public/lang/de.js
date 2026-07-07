@@ -255,5 +255,9 @@ window.translations_de = {
             "Ausbildung in Notfallmaßnahmen und Sicherheitskonformität bei VietJet Air.",
             "Entwicklung interkultureller Kommunikations- und schneller Reaktionsfähigkeiten nach internationalen Servicestandards."
         ]
-    }
+    },
+    "btn_expand": "Erweitern",
+    "btn_collapse": "Einklappen",
+    "contact_album_title": "Album",
+    "album_view_label": "Foto ansehen"
 }

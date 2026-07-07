@@ -254,5 +254,9 @@ window.translations_ko = {
             "비엣젯 항공에서 비상 대응 및 안전 준수 교육을 받았습니다.",
             "국제 서비스 표준에 따라 다문화 커뮤니케이션 및 신속한 대응 능력을 개발했습니다."
         ]
-    }
+    },
+    "btn_expand": "펼치기",
+    "btn_collapse": "접기",
+    "contact_album_title": "앨범",
+    "album_view_label": "사진 보기"
 }
