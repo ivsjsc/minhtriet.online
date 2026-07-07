@@ -216,6 +216,9 @@ window.translations_ru = {
     "contact_message_label": "Сообщение",
     "contact_message_placeholder": "Введите сообщение...",
     "contact_submit_btn": "Отправить сообщение",
+        "btn_download_cv": "Скачать резюме",
+    "cv_opt_vi": "Вьетнамская версия",
+    "cv_opt_en": "Английская версия",
     "footer_left": "Профессиональный профиль Нгуен Минь Триета - стратегические отношения, операции и цифровой рост.",
     "experienceDetails": {
         "e1": [

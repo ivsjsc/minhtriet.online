@@ -216,6 +216,9 @@ window.translations_th = {
     "contact_message_label": "ข้อความ",
     "contact_message_placeholder": "พิมพ์ข้อความของคุณ...",
     "contact_submit_btn": "ส่งข้อความ",
+        "btn_download_cv": "ดาวน์โหลด CV",
+    "cv_opt_vi": "เวอร์ชันภาษาเวียดนาม",
+    "cv_opt_en": "เวอร์ชันภาษาอังกฤษ",
     "footer_left": "ประวัติส่วนตัวของ เหงียน มินห์ ตริเอต - ความสัมพันธ์เชิงกลยุทธ์ การดำเนินงาน และการเติบโตทางดิจิทัล",
     "experienceDetails": {
         "e1": [

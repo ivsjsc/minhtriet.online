@@ -215,6 +215,9 @@ window.translations_ko = {
     "contact_message_label": "메시지",
     "contact_message_placeholder": "메시지를 입력하세요...",
     "contact_submit_btn": "메시지 보내기",
+        "btn_download_cv": "이력서 다운로드",
+    "cv_opt_vi": "베트남어 버전",
+    "cv_opt_en": "영어 버전",
     "footer_left": "응우옌 민 트리엣의 전문가 프로필 - 전략적 관계, 운영 및 디지털 성장.",
     "experienceDetails": {
         "e1": [

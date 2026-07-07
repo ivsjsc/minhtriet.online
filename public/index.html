@@ -658,6 +658,43 @@
       box-shadow: 0 0 0 3px rgba(184, 121, 56, 0.15);
     }
 
+    .cv-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .cv-menu {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 8px);
+      min-width: 220px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 250, 242, 0.98);
+      box-shadow: var(--shadow-md);
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 100;
+    }
+    .cv-menu.is-open {
+      display: flex;
+    }
+    .cv-menu a {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .cv-menu a:hover {
+      background: rgba(184, 121, 56, 0.08);
+      color: var(--gold);
+    }
+
     .footer {
       padding: 28px 0 40px;
       color: var(--muted);
@@ -786,8 +823,20 @@
           <div class="hero-actions" aria-label="Profile actions">
             <a class="btn btn-primary btn-pill" href="#contact" data-i18n="hero_cta1">Discuss Collaboration</a>
             <a class="btn btn-gold btn-pill" href="#experience" data-i18n="hero_cta2">View Career Journey</a>
-            <a class="btn btn-ghost btn-pill" href="./CV.NguyenMinhTriet-vi.pdf" download> Tải CV tiếng Việt </a>
-            <a class="btn btn-ghost btn-pill" href="./CV.NguyenMinhTriet-en.pdf" download> Download English CV </a>
+            <div class="cv-dropdown">
+              <button class="btn btn-ghost btn-pill cv-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                <span data-i18n="btn_download_cv">Download CV</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="margin-left: 6px; transition: transform 0.2s;"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="cv-menu" role="menu" aria-label="Download CV versions">
+                <a href="./CV.NguyenMinhTriet-vi.pdf" download role="menuitem">
+                  <span data-i18n="cv_opt_vi">Vietnamese Version</span>
+                </a>
+                <a href="./CV.NguyenMinhTriet-en.pdf" download role="menuitem">
+                  <span data-i18n="cv_opt_en">English Version</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="hero-tags" aria-label="Focus areas">
@@ -1240,8 +1289,20 @@
               <h3 data-i18n="contact_box2">Download Resume</h3>
               <p data-i18n="cv_note">Use the buttons below to download Markdown CV or save this page as PDF.</p>
               <div class="download-row">
-                <a class="btn btn-primary btn-pill" href="./CV.NguyenMinhTriet-vi.pdf" download>Tải CV tiếng Việt</a>
-                <a class="btn btn-gold btn-pill" href="./CV.NguyenMinhTriet-en.pdf" download>Download English CV</a>
+                <div class="cv-dropdown">
+                  <button class="btn btn-primary btn-pill cv-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                    <span data-i18n="btn_download_cv">Download CV</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="margin-left: 6px; transition: transform 0.2s;"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="cv-menu" role="menu" aria-label="Download CV versions">
+                    <a href="./CV.NguyenMinhTriet-vi.pdf" download role="menuitem">
+                      <span data-i18n="cv_opt_vi">Vietnamese Version</span>
+                    </a>
+                    <a href="./CV.NguyenMinhTriet-en.pdf" download role="menuitem">
+                      <span data-i18n="cv_opt_en">English Version</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
@@ -1522,6 +1583,40 @@
         link.addEventListener('click', () => {
           mobileNav.classList.remove('is-open');
           menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // CV Dropdown logic
+      document.querySelectorAll('.cv-dropdown').forEach((dropdown) => {
+        const toggle = dropdown.querySelector('.cv-toggle');
+        const menu = dropdown.querySelector('.cv-menu');
+        const arrow = toggle.querySelector('svg');
+        
+        toggle.addEventListener('click', (event) => {
+          event.stopPropagation();
+          // Close other open CV dropdowns
+          document.querySelectorAll('.cv-menu').forEach((otherMenu) => {
+            if (otherMenu !== menu) {
+              otherMenu.classList.remove('is-open');
+              otherMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+              const otherArrow = otherMenu.previousElementSibling.querySelector('svg');
+              if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          const isOpen = menu.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          if (arrow) arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+      });
+
+      // Close dropdowns on document click
+      document.addEventListener('click', () => {
+        document.querySelectorAll('.cv-menu').forEach((menu) => {
+          menu.classList.remove('is-open');
+          menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+          const arrow = menu.previousElementSibling.querySelector('svg');
+          if (arrow) arrow.style.transform = 'rotate(0deg)';
         });
       });
 

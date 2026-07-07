@@ -215,6 +215,9 @@ window.translations_zh = {
     "contact_message_label": "消息",
     "contact_message_placeholder": "输入消息内容...",
     "contact_submit_btn": "发送消息",
+        "btn_download_cv": "下载简历",
+    "cv_opt_vi": "越南语版",
+    "cv_opt_en": "英文版",
     "footer_left": "阮明哲的专业简介 - 战略关系、运营和数字化增长。",
     "experienceDetails": {
         "e1": [
