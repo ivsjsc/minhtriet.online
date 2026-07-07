@@ -203,7 +203,7 @@ window.translations_vi = {
     "contact_label_facebook": "Facebook",
     "contact_label_github": "GitHub",
     "label_address": "Địa chỉ",
-    "value_address": "1104, Tổ 6, Ấp Đất Mới, Xã Long Phước, Thành phố Đồng Nai",
+    "value_address": "Ấp Đất Mới, Xã Long Phước, Thành phố Đồng Nai",
     "contact_box2": "Tải Sơ yếu lý lịch",
     "cv_note": "Sử dụng các nút bên dưới để tải xuống Sơ yếu lý lịch Markdown hoặc lưu trang này dưới dạng PDF.",
     "contact_form_title": "Gửi tin nhắn liên hệ",

@@ -204,7 +204,7 @@ window.translations_ko = {
     "contact_label_linkedin": "링크드인",
     "contact_label_github": "GitHub",
     "label_address": "주소",
-    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
+    "value_address": "Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
     "contact_box2": "이력서 다운로드",
     "cv_note": "아래 버튼으로 베트남어 및 영문 CV를 다운로드하거나 이 페이지를 PDF로 저장하십시오.",
         "contact_form_title": "메시지 보내기",

@@ -203,7 +203,7 @@ window.translations_es = {
     "contact_label_facebook": "Facebook",
     "contact_label_github": "GitHub",
     "label_address": "Dirección",
-    "value_address": "1104, Grupo 6, Ap Dat Moi, Comuna de Long Phuoc, Ciudad de Dong Nai",
+    "value_address": "Ap Dat Moi, Comuna de Long Phuoc, Ciudad de Dong Nai",
     "contact_box2": "Descargar CV",
     "cv_note": "Use los botones a continuación para descargar el CV en formato Markdown o guardar esta página como PDF.",
         "contact_form_title": "Enviar un mensaje",

@@ -205,7 +205,7 @@ window.translations_ru = {
     "contact_label_facebook": "Facebook",
     "contact_label_github": "GitHub",
     "label_address": "Адрес",
-    "value_address": "1104, группа 6, Ап Дат Мой, коммуна Лонг Фуок, город Донг Най",
+    "value_address": "Ап Дат Мой, коммуна Лонг Фуок, город Донг Най",
     "contact_box2": "Скачать резюме",
     "cv_note": "Используйте кнопки ниже, чтобы скачать CV на вьетнамском и английском языках или сохранить эту страницу в PDF.",
         "contact_form_title": "Отправить сообщение",

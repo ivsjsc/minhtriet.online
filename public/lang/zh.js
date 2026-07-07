@@ -204,7 +204,7 @@ window.translations_zh = {
     "contact_label_linkedin": "领英",
     "contact_label_github": "GitHub",
     "label_address": "地址",
-    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
+    "value_address": "Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
     "contact_box2": "下载简历",
     "cv_note": "使用下面的按钮下载越南语和英语简历，或将此页面另存为 PDF。",
         "contact_form_title": "发送消息",

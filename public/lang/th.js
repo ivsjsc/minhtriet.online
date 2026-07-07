@@ -205,7 +205,7 @@ window.translations_th = {
     "contact_label_facebook": "Facebook",
     "contact_label_github": "GitHub",
     "label_address": "ที่อยู่",
-    "value_address": "1104, หมู่ 6, ตำบลลองเฟือก, เมืองด่งนาย",
+    "value_address": "ตำบลลองเฟือก, เมืองด่งนาย",
     "contact_box2": "ดาวน์โหลดประวัติย่อ",
     "cv_note": "ใช้ปุ่มด้านล่างเพื่อดาวน์โหลด CV ภาษาเวียดนามและภาษาอังกฤษ หรือบันทึกหน้านี้เป็น PDF",
         "contact_form_title": "ส่งข้อความ",

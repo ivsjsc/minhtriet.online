@@ -203,7 +203,7 @@ window.translations_en = {
     "contact_label_facebook": "Facebook",
     "contact_label_github": "GitHub",
     "label_address": "Address",
-    "value_address": "1104, Group 6, Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
+    "value_address": "Ap Dat Moi, Long Phuoc Commune, Dong Nai City",
     "contact_box2": "Download Resume",
     "cv_note": "Use the buttons below to download Markdown CV or save this page as PDF.",
     "contact_form_title": "Send a Message",
