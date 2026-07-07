@@ -257,5 +257,9 @@ window.translations_vi = {
             "Được đào tạo về xử lý tình huống khẩn cấp và tuân thủ an toàn tại VietJet Air.",
             "Phát triển kỹ năng giao tiếp đa văn hóa và phản ứng nhanh theo tiêu chuẩn dịch vụ quốc tế."
         ]
-    }
+    },
+    "btn_expand": "Mở rộng",
+    "btn_collapse": "Thu gọn",
+    "contact_album_title": "Album",
+    "album_view_label": "Xem ảnh"
 }

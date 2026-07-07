@@ -255,5 +255,9 @@ window.translations_fr = {
             "J'ai été formé à la gestion des urgences et au respect de la sécurité chez VietJet Air.",
             "J'ai développé des compétences en communication interculturelle et en réponse rapide selon les normes de service internationales."
         ]
-    }
+    },
+    "btn_expand": "Développer",
+    "btn_collapse": "Réduire",
+    "contact_album_title": "Album",
+    "album_view_label": "Voir la photo"
 }

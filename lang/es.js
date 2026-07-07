@@ -255,5 +255,9 @@ window.translations_es = {
             "Me formé en respuesta a emergencias y cumplimiento de la seguridad en VietJet Air.",
             "Desarrollé habilidades de comunicación intercultural y respuesta rápida según los estándares de servicio internacionales."
         ]
-    }
+    },
+    "btn_expand": "Expandir",
+    "btn_collapse": "Colapsar",
+    "contact_album_title": "Álbum",
+    "album_view_label": "Ver foto"
 }

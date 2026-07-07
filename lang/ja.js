@@ -255,5 +255,9 @@ window.translations_ja = {
             "VietJet Airで緊急時対応と安全コンプライアンスのトレーニングを受けました。",
             "国際的なサービス基準に従って、異文化コミュニケーションと迅速な対応能力を養いました。"
         ]
-    }
+    },
+    "btn_expand": "展開",
+    "btn_collapse": "折りたたむ",
+    "contact_album_title": "アルバム",
+    "album_view_label": "写真を見る"
 }
