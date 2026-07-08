@@ -961,17 +961,6 @@
     }
 
     /* Floating Action Buttons */
-    .fab-container {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      z-index: 999;
-    }
-
     .fab-btn {
       width: 48px;
       height: 48px;
@@ -987,7 +976,6 @@
       box-shadow: 0 4px 12px rgba(16, 37, 31, 0.15);
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
     }
 
     .fab-btn:hover {
@@ -996,6 +984,10 @@
     }
 
     .btn-scroll-top {
+      position: fixed;
+      bottom: 84px;
+      right: 24px;
+      z-index: 999;
       opacity: 0;
       visibility: hidden;
       transform: translateY(20px);
@@ -1011,16 +1003,21 @@
     }
 
     .contact-fab-wrapper {
-      position: relative;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: row-reverse;
       align-items: center;
+      gap: 12px;
     }
 
     .contact-main-fab {
       background: var(--gold);
       color: white;
       border-color: transparent;
+      flex-shrink: 0;
     }
     
     .contact-main-fab:hover {
@@ -1030,12 +1027,11 @@
 
     .contact-fab-menu {
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
       gap: 10px;
-      margin-bottom: 12px;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(15px);
+      transform: translateX(15px);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       pointer-events: none;
     }
@@ -1044,7 +1040,7 @@
     .contact-fab-wrapper.is-active .contact-fab-menu {
       opacity: 1;
       visibility: visible;
-      transform: translateY(0);
+      transform: translateX(0);
       pointer-events: auto;
     }
 
@@ -1054,6 +1050,8 @@
       font-size: 0.9rem;
       background: var(--paper);
       color: var(--ink);
+      position: relative;
+      flex-shrink: 0;
     }
     
     .contact-sub-fab.fb { color: #1877f2; border-color: rgba(24, 119, 242, 0.2); }
@@ -1066,7 +1064,9 @@
 
     .fab-tooltip {
       position: absolute;
-      right: 60px;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
       background: var(--ink);
       color: white;
       padding: 4px 8px;
@@ -1076,7 +1076,6 @@
       white-space: nowrap;
       opacity: 0;
       visibility: hidden;
-      transform: translateX(10px);
       transition: all 0.2s ease;
       pointer-events: none;
       box-shadow: var(--shadow-sm);
@@ -1085,7 +1084,7 @@
     .contact-sub-fab:hover .fab-tooltip {
       opacity: 1;
       visibility: visible;
-      transform: translateX(0);
+      transform: translateX(-50%) translateY(0);
     }
   </style>
   <script type="application/ld+json">
@@ -2402,7 +2401,8 @@
 
       if (scrollTopBtn) {
         window.addEventListener('scroll', () => {
-          if (window.scrollY > 300) {
+          const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+          if (scrollTop > 300) {
             scrollTopBtn.classList.add('is-visible');
           } else {
             scrollTopBtn.classList.remove('is-visible');
@@ -2411,6 +2411,8 @@
 
         scrollTopBtn.addEventListener('click', () => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+          document.documentElement.scrollTop = 0;
+          document.body.scrollTop = 0;
         });
       }
 
@@ -2431,33 +2433,31 @@
   </div>
 
   <!-- Floating Action Buttons -->
-  <div class="fab-container">
-    <!-- Contact FAB Wrapper -->
-    <div class="contact-fab-wrapper" id="contactFabWrapper">
-      <button class="fab-btn contact-main-fab" id="contactMainFab" type="button" aria-label="Contact options">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-      </button>
-      <div class="contact-fab-menu">
-        <a class="fab-btn contact-sub-fab fb" href="https://www.facebook.com/nmi.triet" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          <span class="fab-tooltip">Facebook</span>
-        </a>
-        <a class="fab-btn contact-sub-fab li" href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-          <span class="fab-tooltip">LinkedIn</span>
-        </a>
-        <a class="fab-btn contact-sub-fab mail" href="mailto:ceo.mtriet@ivsacademy.edu.vn" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          <span class="fab-tooltip">Work Email</span>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Scroll to Top Button -->
-    <button class="fab-btn btn-scroll-top" id="scrollTopBtn" type="button" aria-label="Scroll to top">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  <!-- Contact FAB Wrapper -->
+  <div class="contact-fab-wrapper" id="contactFabWrapper">
+    <button class="fab-btn contact-main-fab" id="contactMainFab" type="button" aria-label="Contact options">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </button>
+    <div class="contact-fab-menu">
+      <a class="fab-btn contact-sub-fab fb" href="https://www.facebook.com/nmi.triet" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span class="fab-tooltip">Facebook</span>
+      </a>
+      <a class="fab-btn contact-sub-fab li" href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        <span class="fab-tooltip">LinkedIn</span>
+      </a>
+      <a class="fab-btn contact-sub-fab mail" href="mailto:ceo.mtriet@ivsacademy.edu.vn" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span class="fab-tooltip">Work Email</span>
+      </a>
+    </div>
   </div>
+  
+  <!-- Scroll to Top Button -->
+  <button class="fab-btn btn-scroll-top" id="scrollTopBtn" type="button" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
 
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
