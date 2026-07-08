@@ -277,6 +277,17 @@ window.translations_vi = {
     "proj_a5_t4": "Di động",
     "proj_a5_t5": "Ứng dụng tiện ích",
 
+    "proj_a6_title": "Quản lý, Vận hành",
+    "proj_a6_desc": "Các ứng dụng hỗ trợ quản lý hoạt động thực tế của doanh nghiệp, bao gồm kho bãi, vận tải, điều phối và dữ liệu vận hành.",
+    "proj_a6_l1": "WMS by IVS — Ứng dụng quản lý kho bãi, hỗ trợ theo dõi hàng hóa, nhập/xuất/tồn và vận hành kho.",
+    "proj_a6_l2": "Vận Tải by IVS — Ứng dụng quản lý vận tải, hỗ trợ điều phối chuyến, theo dõi vận hành và quản lý dữ liệu xe/chuyến.",
+    "proj_a6_t1": "Quản lý kho",
+    "proj_a6_t2": "WMS",
+    "proj_a6_t3": "Vận tải",
+    "proj_a6_t4": "Điều phối",
+    "proj_a6_t5": "Vận hành",
+    "proj_a6_t6": "Dữ liệu nội bộ",
+
     "lead_kicker": "VẬN HÀNH & KINH DOANH",
     "lead_title": "Dự án Lãnh đạo & Cộng đồng",
     "lead_sub": "Các sáng kiến tiêu biểu trong giáo dục, cộng đồng, vận hành dự án và phát triển đối tác — được xây dựng từ quá trình triển khai thực tế, phối hợp đội ngũ và kết nối các bên liên quan.",
