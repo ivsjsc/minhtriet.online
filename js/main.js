@@ -469,53 +469,25 @@ window.changeLanguage = changeLanguage;
 
 // Scroll to Top functionality
 function initScrollToTop() {
-    const scrollBtn = document.getElementById('scroll-to-top');
+    // The HTML uses id="scrollTopBtn" and class "btn-scroll-top is-visible" toggle
+    const scrollBtn = document.getElementById('scrollTopBtn');
     if (!scrollBtn) return;
 
-    // Hide button initially
-    scrollBtn.style.opacity = '0';
-    scrollBtn.style.transform = 'translateY(100px)';
+    // Ensure initial state matches CSS (hidden)
+    scrollBtn.classList.remove('is-visible');
 
-    // Show/hide button based on scroll position
+    // Show/hide button based on scroll position by toggling the visible class
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.transform = 'translateY(0)';
+            scrollBtn.classList.add('is-visible');
         } else {
-            scrollBtn.style.opacity = '0';
-            scrollBtn.style.transform = 'translateY(100px)';
+            scrollBtn.classList.remove('is-visible');
         }
     });
 
     // Scroll to top when clicked
     scrollBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Scroll to Top functionality
-function initScrollToTop() {
-    const scrollBtn = document.getElementById('scroll-to-top');
-    if (!scrollBtn) return;
-
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollBtn.classList.add('show');
-        } else {
-            scrollBtn.classList.remove('show');
-        }
-    });
-
-    // Scroll to top when clicked
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 
