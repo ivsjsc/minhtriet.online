@@ -291,7 +291,11 @@ window.translations_en = {
     "proj_a6_t3": "Transport",
     "proj_a6_t4": "Dispatch",
     "proj_a6_t5": "Operations",
-    "proj_a6_t6": "Internal Data"
+    "proj_a6_t6": "Internal Data",
+    "proj_a6_l1_link": "WMS by IVS",
+    "proj_a6_l1_desc": " — Warehouse management application for inventory tracking, inbound/outbound operations, stock control, and warehouse workflows.",
+    "proj_a6_l2_link": "Transport by IVS",
+    "proj_a6_l2_desc": " — Transportation management application for trip coordination, operational tracking, and vehicle/trip data management.",
 
     "lead_kicker": "BUSINESS & OPERATIONS",
     "lead_title": "Leadership & Community Projects",
