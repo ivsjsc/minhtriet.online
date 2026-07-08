@@ -622,6 +622,34 @@
       font-weight: 700;
       overflow-wrap: anywhere;
     }
+    .contact-line.highlighted-web {
+      background: linear-gradient(135deg, rgba(16, 37, 31, 0.03) 0%, rgba(16, 37, 31, 0.01) 100%);
+      border: 1px dashed rgba(16, 37, 31, 0.18) !important;
+      border-radius: 8px;
+      padding: 12px 14px !important;
+      margin: 6px 0;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .contact-line.highlighted-web:hover {
+      background: linear-gradient(135deg, rgba(16, 37, 31, 0.06) 0%, rgba(16, 37, 31, 0.02) 100%);
+      border-color: rgba(16, 37, 31, 0.35) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(16, 37, 31, 0.03);
+    }
+    .contact-line.highlighted-web > span {
+      font-weight: 800;
+      color: var(--forest-dark);
+    }
+    .contact-line.highlighted-web .contact-icon {
+      color: var(--forest-dark);
+      opacity: 1;
+    }
+    .contact-line.highlighted-web a {
+      color: var(--forest-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     .download-row {
       display: flex;
@@ -1086,6 +1114,31 @@
       visibility: visible;
       transform: translateX(-50%) translateY(0);
     }
+
+    /* Visual styles for product groups and tags */
+    .product-group-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin: 28px 0 14px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid rgba(184, 121, 56, 0.15);
+    }
+    .product-group-title:first-of-type {
+      margin-top: 0;
+    }
+    .platform-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 0;
+    }
+    .tag-sm {
+      font-size: 0.72rem !important;
+      padding: 3px 8px !important;
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -1097,7 +1150,8 @@
     "sameAs": [
       "https://linkedin.com/in/mtrietng",
       "https://github.com/ivsjsc",
-      "https://ivsacademy.edu.vn"
+      "https://ivsacademy.edu.vn",
+      "https://ivstech.store"
     ]
   }
   </script>
@@ -1520,64 +1574,213 @@
           </button>
         </div>
         <div class="section-body is-collapsed" id="ecosystem-body">
-        <div class="summary-card" style="margin-bottom:14px">
-          <span class="badge" data-i18n="eco_sync_badge">Software-as-a-Partner Model</span>
-          <h3 data-i18n="eco_sync_title">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
-          <ul class="platform-list">
-            <li data-i18n="eco_sync_f1">Centralized Cloud Database</li>
-            <li data-i18n="eco_sync_f2">Real-time Satellite Sync</li>
-          </ul>
-        </div>
-
-        <div class="grid-2">
-          <article class="platform-card">
-            <header><div><span class="badge" data-i18n="eco1_platform">Platform #1</span><h3 data-i18n="eco1_name">IVS CenterCare</h3></div></header>
-            <p data-i18n="eco1_desc">A comprehensive management platform that synchronizes students, class schedules, tuition fees, and real-time operational reporting.</p>
+          <div class="summary-card" style="margin-bottom:14px">
+            <span class="badge" data-i18n="eco_sync_badge">Software-as-a-Partner Model</span>
+            <h3 data-i18n="eco_sync_title">Our technology lowers the barrier for schools to partner with IVS by solving their internal management pain points.</h3>
             <ul class="platform-list">
-              <li data-i18n="eco1_f1">Tuition Management</li>
-              <li data-i18n="eco1_f2">Digital Attendance</li>
-              <li data-i18n="eco1_f3">Parent App Sync</li>
-              <li data-i18n="eco1_f4">Smart Scheduling</li>
+              <li data-i18n="eco_sync_f1">Centralized Cloud Database</li>
+              <li data-i18n="eco_sync_f2">Real-time Satellite Sync</li>
             </ul>
-            <a class="platform-link" href="https://center.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
-          </article>
+          </div>
 
-          <article class="platform-card">
-            <header><div><span class="badge" data-i18n="eco2_platform">Platform #2</span><h3 data-i18n="eco2_name">IVS Examia</h3></div></header>
-            <p data-i18n="eco2_desc">A professional assessment system for language centers, providing end-to-end solutions for mid-term, final exams, and international mock tests.</p>
-            <ul class="platform-list">
-              <li data-i18n="eco2_f1">Auto-Grading Engine</li>
-              <li data-i18n="eco2_f2">Competency Analytics</li>
-              <li data-i18n="eco2_f3">Question Bank</li>
-              <li data-i18n="eco2_f4">Anti-Cheat Mode</li>
-            </ul>
-            <a class="platform-link" href="https://exam.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco2_btn">Explore Specs</a>
-          </article>
+          <!-- Group A: Education & Learning Platforms -->
+          <h3 class="product-group-title" data-i18n="eco_group_a_title">Education & Learning Platforms</h3>
+          <div class="grid-2" style="margin-bottom: 24px;">
+            <!-- IVS CenterCare -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_live">Live</span>
+                  <h3 data-i18n="eco_a1_name">IVS CenterCare</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_a1_desc">A comprehensive center management platform for student records, class scheduling, tuition tracking, attendance, payroll, and operational reporting.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_a1_t1">Tuition Management</span>
+                <span class="tag tag-sm" data-i18n="eco_a1_t2">Digital Attendance</span>
+                <span class="tag tag-sm" data-i18n="eco_a1_t3">Class Scheduling</span>
+                <span class="tag tag-sm" data-i18n="eco_a1_t4">Payroll</span>
+                <span class="tag tag-sm" data-i18n="eco_a1_t5">Parent Sync</span>
+              </div>
+              <a class="platform-link" href="https://center.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
 
-          <article class="platform-card">
-            <header><div><span class="badge" data-i18n="eco3_platform">Platform #3</span><h3 data-i18n="eco3_name">ELearners</h3></div></header>
-            <p data-i18n="eco3_desc">An interactive self-learning application for K-12 students with personalized learning paths, bridging the gap between center and home.</p>
-            <ul class="platform-list">
-              <li data-i18n="eco3_f1">Gamified Lessons</li>
-              <li data-i18n="eco3_f2">AI Voice Feedback</li>
-              <li data-i18n="eco3_f3">Daily Goal Tracker</li>
-              <li data-i18n="eco3_f4">Reward System</li>
-            </ul>
-            <a class="platform-link" href="https://lms.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco3_btn">Explore Specs</a>
-          </article>
+            <!-- LearningCare -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_live">Live</span>
+                  <h3 data-i18n="eco_a2_name">LearningCare</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_a2_desc">A student care and parent communication portal that helps learning centers monitor student progress, attendance, tuition status, and learning engagement.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_a2_t1">Parent Portal</span>
+                <span class="tag tag-sm" data-i18n="eco_a2_t2">Student Progress</span>
+                <span class="tag tag-sm" data-i18n="eco_a2_t3">Attendance Tracking</span>
+                <span class="tag tag-sm" data-i18n="eco_a2_t4">Care Dashboard</span>
+                <span class="tag tag-sm" data-i18n="eco_a2_t5">Learning Reports</span>
+              </div>
+              <a class="platform-link" href="https://care.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
 
-          <article class="platform-card">
-            <header><div><span class="badge" data-i18n="eco4_platform">Platform #4</span><h3 data-i18n="eco4_name">Testing Placement</h3></div></header>
-            <p data-i18n="eco4_desc">Accurate entrance level testing tool, optimizing class classification.</p>
-            <ul class="platform-list">
-              <li data-i18n="eco4_f1">Automated Testing</li>
-              <li data-i18n="eco4_f2">Level Classification</li>
-              <li data-i18n="eco4_f3">Instant Results</li>
-              <li data-i18n="eco4_f4">Report Generation</li>
-            </ul>
-            <a class="platform-link" href="https://ivslearning.top" target="_blank" rel="noopener" data-i18n="eco4_btn">Explore Specs</a>
-          </article>
-        </div>
+            <!-- ELearners LMS -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_live">Live</span>
+                  <h3 data-i18n="eco_a3_name">ELearners LMS</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_a3_desc">A K–12 digital learning platform designed for structured English learning, self-study, assignments, learning paths, and performance tracking.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_a3_t1">K–12 Learning</span>
+                <span class="tag tag-sm" data-i18n="eco_a3_t2">LMS Platform</span>
+                <span class="tag tag-sm" data-i18n="eco_a3_t3">Assignments</span>
+                <span class="tag tag-sm" data-i18n="eco_a3_t4">Progress Tracking</span>
+                <span class="tag tag-sm" data-i18n="eco_a3_t5">Digital Lessons</span>
+              </div>
+              <a class="platform-link" href="https://lms.ivslearning.io.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
+
+            <!-- Aivy TeacherMatch -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_mvp">MVP</span>
+                  <h3 data-i18n="eco_a4_name">Aivy TeacherMatch</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_a4_desc">A teacher recruitment and matching platform that connects English teachers with schools and language centers through verified profiles, job posts, location-based search, and in-app communication.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_a4_t1">Teacher Recruitment</span>
+                <span class="tag tag-sm" data-i18n="eco_a4_t2">Verified Profiles</span>
+                <span class="tag tag-sm" data-i18n="eco_a4_t3">Job Matching</span>
+                <span class="tag tag-sm" data-i18n="eco_a4_t4">Location Search</span>
+                <span class="tag tag-sm" data-i18n="eco_a4_t5">In-app Chat</span>
+              </div>
+              <a class="platform-link" href="https://ivslearning.top" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
+          </div>
+
+          <!-- Group B: Trust & Commerce Infrastructure -->
+          <h3 class="product-group-title" data-i18n="eco_group_b_title">Trust & Commerce Infrastructure</h3>
+          <div class="grid-2" style="margin-bottom: 24px;">
+            <!-- ACFMart Platform -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_dev">In Development</span>
+                  <h3 data-i18n="eco_b1_name">ACFMart Platform</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_b1_desc">A trust-first marketplace platform for verified products, controlled seller onboarding, affiliate-scaled growth, and anti-counterfeit commerce infrastructure.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_b1_t1">Marketplace</span>
+                <span class="tag tag-sm" data-i18n="eco_b1_t2">Verified Sellers</span>
+                <span class="tag tag-sm" data-i18n="eco_b1_t3">Affiliate Growth</span>
+                <span class="tag tag-sm" data-i18n="eco_b1_t4">Buyer Protection</span>
+                <span class="tag tag-sm" data-i18n="eco_b1_t5">Trust Commerce</span>
+              </div>
+              <a class="platform-link" href="https://acfmart.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
+
+            <!-- QRVerified by IVS -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_proto">Prototype</span>
+                  <h3 data-i18n="eco_b2_name">QRVerified by IVS</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_b2_desc">A QR verification platform for product authentication, anti-counterfeit scanning, activation control, and public verification through secure QR codes.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_b2_t1">QR Authentication</span>
+                <span class="tag tag-sm" data-i18n="eco_b2_t2">Anti-counterfeit</span>
+                <span class="tag tag-sm" data-i18n="eco_b2_t3">Product Verification</span>
+                <span class="tag tag-sm" data-i18n="eco_b2_t4">Scan Logs</span>
+                <span class="tag tag-sm" data-i18n="eco_b2_t5">Public Verify</span>
+              </div>
+            </article>
+
+            <!-- IVS Trust Platform -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_dev">In Development</span>
+                  <h3 data-i18n="eco_b3_name">IVS Trust Platform</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_b3_desc">A backend trust infrastructure for seller verification, QR lifecycle management, compliance records, audit logs, and secure product traceability.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_b3_t1">Trust Infrastructure</span>
+                <span class="tag tag-sm" data-i18n="eco_b3_t2">Seller KYC</span>
+                <span class="tag tag-sm" data-i18n="eco_b3_t3">QR Lifecycle</span>
+                <span class="tag tag-sm" data-i18n="eco_b3_t4">Audit Logs</span>
+                <span class="tag tag-sm" data-i18n="eco_b3_t5">Compliance</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Group C: Public Digital Platforms -->
+          <h3 class="product-group-title" data-i18n="eco_group_c_title">Public Digital Platforms</h3>
+          <div class="grid-2">
+            <!-- DongNaiCity -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_live">Live</span>
+                  <h3 data-i18n="eco_c1_name">DongNaiCity</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_c1_desc">A specialized real estate information portal for Dong Nai, supporting property listings, local market content, affiliate distribution, and digital visibility for real estate services.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_c1_t1">Real Estate Portal</span>
+                <span class="tag tag-sm" data-i18n="eco_c1_t2">Dong Nai Market</span>
+                <span class="tag tag-sm" data-i18n="eco_c1_t3">Listings</span>
+                <span class="tag tag-sm" data-i18n="eco_c1_t4">Affiliate Model</span>
+                <span class="tag tag-sm" data-i18n="eco_c1_t5">Local Content</span>
+              </div>
+              <a class="platform-link" href="https://dongnaicity.com.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
+
+            <!-- IVS Academy -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_live">Live</span>
+                  <h3 data-i18n="eco_c2_name">IVS Academy</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_c2_desc">An education service platform supporting English programs, school partnerships, international teacher supply, preschool cooperation, and digital learning operations.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_c2_t1">English Programs</span>
+                <span class="tag tag-sm" data-i18n="eco_c2_t2">School Partnership</span>
+                <span class="tag tag-sm" data-i18n="eco_c2_t3">Teacher Supply</span>
+                <span class="tag tag-sm" data-i18n="eco_c2_t4">Education Services</span>
+                <span class="tag tag-sm" data-i18n="eco_c2_t5">Digital Operations</span>
+              </div>
+              <a class="platform-link" href="https://ivsacademy.edu.vn" target="_blank" rel="noopener" data-i18n="eco1_btn">Explore Specs</a>
+            </article>
+
+            <!-- IVS Service Hub -->
+            <article class="platform-card">
+              <header>
+                <div>
+                  <span class="badge" data-i18n="status_internal">Internal Tool</span>
+                  <h3 data-i18n="eco_c3_name">IVS Service Hub</h3>
+                </div>
+              </header>
+              <p data-i18n="eco_c3_desc">A professional service hub presenting IVS technology, education, consulting, and digital transformation services for schools, businesses, and partner organizations.</p>
+              <div class="platform-tags">
+                <span class="tag tag-sm" data-i18n="eco_c3_t1">Service Hub</span>
+                <span class="tag tag-sm" data-i18n="eco_c3_t2">Business Solutions</span>
+                <span class="tag tag-sm" data-i18n="eco_c3_t3">Education Services</span>
+                <span class="tag tag-sm" data-i18n="eco_c3_t4">Digital Transformation</span>
+                <span class="tag tag-sm" data-i18n="eco_c3_t5">Partner Support</span>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1586,9 +1789,9 @@
       <div class="wrap card section-card">
         <div class="section-card-header">
           <div class="section-head">
-            <p class="kicker" data-i18n="project_kicker">Flagship Projects</p>
+            <p class="kicker" data-i18n="project_kicker">SELECTED PRODUCT WORK</p>
             <h2 id="projects-title" data-i18n="project_title">Technology Projects</h2>
-            <p class="section-note" data-i18n="project_note">Real products focused on measurable outcomes in education, analytics, and daily operations.</p>
+            <p class="section-note" data-i18n="project_note">Real platforms, MVPs, and product systems developed across education, AI, marketplace, trust infrastructure, and public digital services.</p>
           </div>
           <button class="section-toggle-btn" aria-expanded="false" aria-controls="projects-body" data-section="projects">
             <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg>
@@ -1597,63 +1800,131 @@
         </div>
         <div class="section-body is-collapsed" id="projects-body">
         <div class="grid-3">
+          <!-- Card 1: Education Operating Platforms -->
           <article class="project-card">
-            <h3 data-i18n="proj1_title">EdTech & Placement Testing</h3>
-            <p data-i18n="proj1_desc">English learning and placement testing platforms for students.</p>
+            <h3 data-i18n="proj_a1_title">Education Operating Platforms</h3>
+            <p data-i18n="proj_a1_desc">Platforms for language centers, schools, students, and parent communication.</p>
             <ul>
-              <li data-i18n="proj1_l1">iLearners - K-12+ English Learning App</li>
-              <li data-i18n="proj1_l2">AIVY English Testing Placement</li>
-              <li data-i18n="proj1_l3">IVS Testing Placement - English Proficiency Evaluation</li>
-              <li data-i18n="proj1_l4">IVS KinderLink</li>
+              <li data-i18n="proj_a1_l1">IVS CenterCare — Center management, tuition, attendance, payroll, and class operations</li>
+              <li data-i18n="proj_a1_l2">LearningCare — Parent/student care portal with progress, attendance, and tuition visibility</li>
+              <li data-i18n="proj_a1_l3">ELearners LMS — K–12 English learning platform with lessons, assignments, and progress tracking</li>
+              <li data-i18n="proj_a1_l4">Aivy TeacherMatch — Teacher recruitment and school-center matching platform</li>
             </ul>
+            <div class="platform-tags" style="margin-top: 14px;">
+              <span class="tag tag-sm" data-i18n="proj_a1_t1">Center Management</span>
+              <span class="tag tag-sm" data-i18n="proj_a1_t2">LMS</span>
+              <span class="tag tag-sm" data-i18n="proj_a1_t3">Parent Portal</span>
+              <span class="tag tag-sm" data-i18n="proj_a1_t4">Teacher Matching</span>
+              <span class="tag tag-sm" data-i18n="proj_a1_t5">Education SaaS</span>
+            </div>
           </article>
+
+          <!-- Card 2: Trust & Marketplace Infrastructure -->
           <article class="project-card">
-            <h3 data-i18n="proj2_title">AI Assistants & Productivity</h3>
-            <p data-i18n="proj2_desc">AI products for professional support, personal profiling, and workflow optimization.</p>
+            <h3 data-i18n="proj_a2_title">Trust & Marketplace Infrastructure</h3>
+            <p data-i18n="proj_a2_desc">Digital trust systems for verified commerce, QR authentication, and controlled seller onboarding.</p>
             <ul>
-              <li data-i18n="proj2_l1">Aivy Architect - AI Assistant for Engineers & Architects</li>
-              <li data-i18n="proj2_l2">Auto-fill with AI - Resume Builder via PDF/DOCX Upload</li>
-              <li data-i18n="proj2_l3">Ledger2gether - Shared Ledger</li>
-              <li data-i18n="proj2_l4">Cocoa AI - Psychology Assistant</li>
+              <li data-i18n="proj_a2_l1">IVS Trust Platform — Backend infrastructure for seller KYC, QR lifecycle, compliance, and audit logs</li>
+              <li data-i18n="proj_a2_l2">QRVerified by IVS — Public QR verification platform for product authentication</li>
+              <li data-i18n="proj_a2_l3">ACFMart Platform — Verified marketplace model with seller control and affiliate-scaled growth</li>
             </ul>
+            <div class="platform-tags" style="margin-top: 14px;">
+              <span class="tag tag-sm" data-i18n="proj_a2_t1">QR Verification</span>
+              <span class="tag tag-sm" data-i18n="proj_a2_t2">Seller KYC</span>
+              <span class="tag tag-sm" data-i18n="proj_a2_t3">Marketplace</span>
+              <span class="tag tag-sm" data-i18n="proj_a2_t4">Compliance</span>
+              <span class="tag tag-sm" data-i18n="proj_a2_t5">Anti-counterfeit</span>
+            </div>
           </article>
+
+          <!-- Card 3: Public Digital Platforms -->
           <article class="project-card">
-            <h3 data-i18n="proj3_title">Student Life & Utility Apps</h3>
-            <p data-i18n="proj3_desc">Utilities for student life, accommodation, and real-world transportation needs.</p>
+            <h3 data-i18n="proj_a3_title">Public Digital Platforms</h3>
+            <p data-i18n="proj_a3_desc">Specialized public-facing portals for local information, education services, and digital visibility.</p>
             <ul>
-              <li data-i18n="proj3_l1">StaySmart - IVS Accommodation</li>
-              <li data-i18n="proj3_l2">Vethoi - Ride-booking Demo App</li>
+              <li data-i18n="proj_a3_l1">DongNaiCity — Real estate and local information portal for Dong Nai</li>
+              <li data-i18n="proj_a3_l2">IVS Academy — Education service platform for English programs and school partnerships</li>
+              <li data-i18n="proj_a3_l3">IVS Service Hub — Professional service hub for IVS technology, education, and consulting solutions</li>
             </ul>
+            <div class="platform-tags" style="margin-top: 14px;">
+              <span class="tag tag-sm" data-i18n="proj_a3_t1">Public Portal</span>
+              <span class="tag tag-sm" data-i18n="proj_a3_t2">Real Estate</span>
+              <span class="tag tag-sm" data-i18n="proj_a3_t3">Education Services</span>
+              <span class="tag tag-sm" data-i18n="proj_a3_t4">Digital Presence</span>
+              <span class="tag tag-sm" data-i18n="proj_a3_t5">Service Platform</span>
+            </div>
           </article>
+
+          <!-- Card 4: AI Assistants & Productivity Tools -->
           <article class="project-card">
-            <h3 data-i18n="proj4_title">Health & Wellness Apps</h3>
-            <p data-i18n="proj4_desc">Products focused on healthcare, positive habits, and medical study support.</p>
+            <h3 data-i18n="proj_a4_title">AI Assistants & Productivity Tools</h3>
+            <p data-i18n="proj_a4_desc">AI-supported tools for workflow automation, professional profiling, and structured productivity.</p>
             <ul>
-              <li data-i18n="proj4_l1">Moonflow - Menstrual Cycle Tracker</li>
-              <li data-i18n="proj4_l2">Luv Yoga - App for Yoga Centers</li>
-              <li data-i18n="proj4_l3">Nursefl0w - App for Nursing Students</li>
+              <li data-i18n="proj_a4_l1">Aivy Architect — AI assistant concept for engineers and software architects</li>
+              <li data-i18n="proj_a4_l2">Auto-fill CV AI — Resume builder using PDF/DOCX profile upload</li>
+              <li data-i18n="proj_a4_l3">Ledger2gether — Shared ledger and tracking tool for collaborative records</li>
             </ul>
+            <div class="platform-tags" style="margin-top: 14px;">
+              <span class="tag tag-sm" data-i18n="proj_a4_t1">AI Assistant</span>
+              <span class="tag tag-sm" data-i18n="proj_a4_t2">Workflow Automation</span>
+              <span class="tag tag-sm" data-i18n="proj_a4_t3">Resume Builder</span>
+              <span class="tag tag-sm" data-i18n="proj_a4_t4">Productivity</span>
+              <span class="tag tag-sm" data-i18n="proj_a4_t5">Structured Data</span>
+            </div>
           </article>
+
+          <!-- Card 5: Student Life & Utility Experiments -->
           <article class="project-card">
-            <h3 data-i18n="proj5_title">Institutional & Communication Platforms</h3>
-            <p data-i18n="proj5_desc">Organization and communication platforms for the IVS education ecosystem.</p>
+            <h3 data-i18n="proj_a5_title">Student Life & Utility Experiments</h3>
+            <p data-i18n="proj_a5_desc">Early-stage product concepts exploring student accommodation, transport, wellness, and lifestyle needs.</p>
             <ul>
-              <li data-i18n="proj5_l1">CENTER-CARE - Center Management</li>
-              <li data-i18n="proj5_l2">IVS Academy - Training Portal</li>
-              <li data-i18n="proj5_l3">TAMI - "Understand Language - Understand Culture - Secure Future"</li>
+              <li data-i18n="proj_a5_l1">StaySmart — Student accommodation concept</li>
+              <li data-i18n="proj_a5_l2">Vethoi — Ride-booking demo app</li>
+              <li data-i18n="proj_a5_l3">Moonflow — Menstrual cycle tracker concept</li>
+              <li data-i18n="proj_a5_l4">Nurseflow — Nursing student support app</li>
+              <li data-i18n="proj_a5_l5">Luv Yoga — Yoga center application concept</li>
             </ul>
-          </article>
-          <article class="project-card">
-            <h3 data-i18n="proj6_title">Business Operations Projects</h3>
-            <p data-i18n="proj6_desc">Practical non-tech projects focusing on business development, events, and service partners.</p>
-            <ul>
-              <li data-i18n="proj6_l1_str">IELTS Station Project Leadership</li>
-              <li data-i18n="proj6_l1_txt">– From market research and business model design to operation.</li>
-              <li data-i18n="proj6_l2">Organized a 1,500-attendee community event</li>
-              <li data-i18n="proj6_l3_str">Developed 200+ travel partners, serving 15,000 guests in peak season</li>
-            </ul>
+            <div class="platform-tags" style="margin-top: 14px;">
+              <span class="tag tag-sm" data-i18n="proj_a5_t1">Prototype</span>
+              <span class="tag tag-sm" data-i18n="proj_a5_t2">Student Life</span>
+              <span class="tag tag-sm" data-i18n="proj_a5_t3">Wellness</span>
+              <span class="tag tag-sm" data-i18n="proj_a5_t4">Mobility</span>
+              <span class="tag tag-sm" data-i18n="proj_a5_t5">Utility Apps</span>
+            </div>
           </article>
         </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="leadership" aria-labelledby="leadership-title">
+      <div class="wrap card section-card">
+        <div class="section-card-header">
+          <div class="section-head">
+            <p class="kicker" data-i18n="lead_kicker">BUSINESS & OPERATIONS</p>
+            <h2 id="leadership-title" data-i18n="lead_title">Leadership Projects</h2>
+            <p class="section-note" data-i18n="lead_sub">Selected business, education, community, and partnership initiatives.</p>
+          </div>
+          <button class="section-toggle-btn" aria-expanded="false" aria-controls="leadership-body" data-section="leadership">
+            <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M19 9l-7 7-7-7"/></svg>
+            <span data-i18n="btn_expand">Mở rộng</span>
+          </button>
+        </div>
+        <div class="section-body is-collapsed" id="leadership-body">
+          <div class="grid-3">
+            <article class="project-card">
+              <h3 data-i18n="lead1_title">IELTS Station Project Leadership</h3>
+              <p data-i18n="lead1_desc">Led market research, business model design, facility setup, and launch operations.</p>
+            </article>
+            <article class="project-card">
+              <h3 data-i18n="lead2_title">Community Event Organization</h3>
+              <p data-i18n="lead2_desc">Coordinated multi-departmental teams to design and execute a community event for over 1,500 attendees.</p>
+            </article>
+            <article class="project-card">
+              <h3 data-i18n="lead3_title">Travel Partner Development</h3>
+              <p data-i18n="lead3_desc">Established a network of over 200 travel partners, successfully serving 15,000 guests during peak season.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -1697,12 +1968,19 @@
                 </span>
                 <a href="https://minhtriet.online" target="_blank" rel="noopener">minhtriet.online</a>
               </div>
-              <div class="contact-line">
+              <div class="contact-line highlighted-web">
                 <span>
-                  <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
-                  <span data-i18n="contact_label_website_company">Company Website</span>
+                  <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                  <span data-i18n="contact_label_website_edu">Educational Alliance Portal</span>
                 </span>
                 <a href="https://ivsacademy.edu.vn" target="_blank" rel="noopener">ivsacademy.edu.vn</a>
+              </div>
+              <div class="contact-line highlighted-web">
+                <span>
+                  <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>
+                  <span data-i18n="contact_label_website_tech">Applied Technology Solutions</span>
+                </span>
+                <a href="https://ivstech.store" target="_blank" rel="noopener">ivstech.store</a>
               </div>
               <div class="contact-line">
                 <span>
