@@ -324,7 +324,12 @@ html, body {
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .footer-links a { color: var(--forest, #214c3f); font-weight: 700; text-decoration: none; }
 .footer-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.btn-scroll-top { position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 40; width: 3rem; height: 3rem; border: 0; border-radius: 50%; background: var(--forest, #214c3f); color: #fff; font-size: 1.35rem; cursor: pointer; opacity: 0; pointer-events: none; transform: translateY(10px); transition: opacity .2s ease, transform .2s ease; box-shadow: 0 8px 22px rgba(16, 37, 31, .2); }
+.fab-actions { position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 40; display: flex; gap: .65rem; align-items: center; }
+.btn-fab { display: inline-flex; width: 3rem; height: 3rem; align-items: center; justify-content: center; border: 0; border-radius: 50%; color: #fff; font-size: 1.2rem; line-height: 1; text-decoration: none; cursor: pointer; box-shadow: 0 8px 22px rgba(16, 37, 31, .2); transition: transform .2s ease, opacity .2s ease, background .2s ease; }
+.btn-fab:hover { transform: translateY(-3px); }
+.btn-contact-fab { background: #b87938; }
+.btn-contact-fab:hover { background: #9e642c; }
+.btn-scroll-top { background: var(--forest, #214c3f); opacity: 0; pointer-events: none; transform: translateY(10px); }
 .btn-scroll-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 @media (max-width: 700px) { .footer-content { grid-template-columns: 1fr; text-align: center; } .footer-links { justify-content: center; } }
 

@@ -12,14 +12,14 @@
       "sha256": "b77b97fe780d35d18248abd1d2f42f444afbabe43f6abcd8fa8ebb3d47825eee"
     },
     {
+      "path": "assets/site.45c56bf17784.css",
+      "bytes": 17273,
+      "sha256": "45c56bf1778495d17f77724fe6da4b9c4b293180443ec802283554f980513791"
+    },
+    {
       "path": "assets/site.a630b80b91c2.js",
       "bytes": 4623,
       "sha256": "a630b80b91c2f79e3184f03678a2d74274d7c5125d5d6a0abe46bd4c09f14ec5"
-    },
-    {
-      "path": "assets/site.c24b98abdd71.css",
-      "bytes": 17241,
-      "sha256": "c24b98abdd71d4d7325283614616bb67b6eb4729e000de59159e582c8764279e"
     },
     {
       "path": "aura.html",
@@ -33,8 +33,8 @@
     },
     {
       "path": "css/styles.css",
-      "bytes": 39309,
-      "sha256": "61721cf6438149842688176a396e31823a56b069ff35cc274251d79a487fe325"
+      "bytes": 39653,
+      "sha256": "e3a30b19dceadf79cdab758dd955f755aae79c3c154bf72f53f2346412214bf5"
     },
     {
       "path": "css/tailwind.css",
@@ -69,22 +69,22 @@
     {
       "path": "en/updates/centercare-saas-case-study/index.html",
       "bytes": 9583,
-      "sha256": "0274fcc7618354a6e0e463362e06f8c6127951f405084ac7e5c1803cfb44c2cc"
+      "sha256": "4ef9f18ebc9c349b0509af59daa8d9d728c2ba219160dcdb98f2fa009ae21162"
     },
     {
       "path": "en/updates/index.html",
       "bytes": 7170,
-      "sha256": "93383496fb90c486817ad855abd237ad54f3a41645103d5058c1654b090f5c4e"
+      "sha256": "17aad4b5f9fa49412d311963652b11cc05a31843c47653fa5e60bc49b8e20030"
     },
     {
       "path": "en/updates/ivs-academy-ecosystem/index.html",
       "bytes": 9230,
-      "sha256": "b9428a83dbec92d4ade04df7bb078b4d35e7d16552c6f0a7a53a03f5f8db2652"
+      "sha256": "696645666fe0d325cbb2acc6b0182715579c8ef26ef70db7e5fdb04626259c97"
     },
     {
       "path": "en/updates/ivs-tech-new-positioning/index.html",
       "bytes": 9563,
-      "sha256": "1e54a1f0e0e3656dea7b9400f8c0a88e56d5e6ca45d55be0a2a0bf06a76ec166"
+      "sha256": "824a64b009c4760b005c338b82cf8b2b9ec28f34ce8f27d7a9d3270cfbe5795b"
     },
     {
       "path": "images/avatar.webp",
@@ -288,13 +288,13 @@
     },
     {
       "path": "index-modular.html",
-      "bytes": 8211,
-      "sha256": "76b41012d9b46dbcc05c223aa42fa85f46926e4d30abc107abce968f1f8d16b5"
+      "bytes": 8395,
+      "sha256": "67bed8078696b5b7d3f7dc78aeacc5fe12d5faedd7057716f0fe898210bddd27"
     },
     {
       "path": "index.html",
       "bytes": 39212,
-      "sha256": "bd231f2ae95039a44ddf5c888030f78fc1a9bcb4718ca0f277c8022534d4cd82"
+      "sha256": "cf1ebf7e20bba23b25cf9b34ae03b668d86d3b609da3ff9a315b83f3f328284b"
     },
     {
       "path": "ivs-aitool.html",
@@ -404,22 +404,22 @@
     {
       "path": "vi/updates/centercare-saas-case-study/index.html",
       "bytes": 10822,
-      "sha256": "f0edabae9994364cf0f7a2294e50cc31cd9e51474228e61d1bbaec877bab7d1d"
+      "sha256": "8f83ed786bd84d222a13300bbe00d38b81da25c9162075b3d7350076a79e05f5"
     },
     {
       "path": "vi/updates/index.html",
       "bytes": 7706,
-      "sha256": "4c620df3c4dbb5d138ee3bd1d382eccc59c6ce6f800455b185fa77a66bd4ed6c"
+      "sha256": "eeecff9ca3bc3752e7f8903b094cb88425bc5f6514b3e9f2d30629bd516ad8aa"
     },
     {
       "path": "vi/updates/ivs-academy-ecosystem/index.html",
       "bytes": 10288,
-      "sha256": "a1d5a0db3eb0d468424ef0196c845677728e482f71a500cf493ea2e6d6ea492a"
+      "sha256": "a6f800bc8fb0d18abd0f289ff7feaec289696383d7f011d6207679f70c3c3439"
     },
     {
       "path": "vi/updates/ivs-tech-new-positioning/index.html",
       "bytes": 10622,
-      "sha256": "e5f6ebbc4fccdb664f13755af11733f3d32af56eae97619fddb6e099f72ccc8b"
+      "sha256": "fb6935133a292e559d715d905a475df759716ceb140e822c73c480e3bf881519"
     },
     {
       "path": "videos/ivs-coding.mp4",

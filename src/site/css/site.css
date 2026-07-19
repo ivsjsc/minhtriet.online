@@ -159,7 +159,7 @@ p { margin: 0; }
 .leadership-list p { margin-top: 10px; }
 
 .update-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; }
-.update-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--forest-deep); }
+.update-card > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--forest-deep); }
 .update-card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; }
 .update-card h3 { margin-top: 10px; }
 .update-card p { margin-top: 12px; color: var(--muted); }
