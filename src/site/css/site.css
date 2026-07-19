@@ -240,7 +240,18 @@ p { margin: 0; }
   .wrap, .wrap-narrow { width: min(calc(100% - 24px), var(--max)); }
   .header-inner { min-height: 66px; gap: 10px; }
   .brand span { display: none; }
-  .language-select { width: 74px; padding-inline: 10px; color: transparent; }
+  .language-select {
+    width: 82px;
+    min-height: 42px;
+    padding: 0 28px 0 14px;
+    border: 1.5px solid var(--gold);
+    background: rgba(216, 148, 67, .12);
+    color: var(--forest-deep);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    box-shadow: 0 3px 10px rgba(133, 88, 41, .12);
+  }
   .language-select option { color: var(--ink); }
   .hero { padding-top: 54px; }
   .hero-grid, .about-grid, .grid-2, .grid-3, .updates-grid, .case-grid, .leadership-list, .contact-directory { grid-template-columns: 1fr; }
