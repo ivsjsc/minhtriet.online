@@ -1,0 +1,82 @@
+{
+  "slug": "centercare-saas-case-study",
+  "datePublished": null,
+  "dateModified": null,
+  "cover": "/images/ventures/centercare-cover.webp",
+  "coverOg": "/images/ventures/centercare-og.webp",
+  "ventureUrl": "https://center.ivslearning.io.vn/",
+  "utmContent": "centercare_article",
+  "tags": ["Education Operations", "SaaS", "Product Architecture"],
+  "en": {
+    "title": "CenterCare: From Center Operations to a SaaS Platform",
+    "description": "A product case study on translating tuition, classes, attendance, teachers, and management reporting into one structured operating platform.",
+    "eyebrow": "CenterCare · Product Case Study",
+    "readingTime": "6 min read",
+    "sections": [
+      {
+        "heading": "The operational problem",
+        "paragraphs": [
+          "A language center does not operate through a single workflow. Student records affect class placement; class schedules affect teacher assignments; attendance affects parent communication; tuition status affects follow-up; and all of these activities eventually shape management reporting. When each task is handled in a separate spreadsheet or messaging thread, the organization loses a reliable shared view of its operations.",
+          "The challenge behind CenterCare was to model these relationships without turning the product into an oversized collection of screens. The system needed to reflect day-to-day work while keeping responsibilities and data boundaries understandable."
+        ]
+      },
+      {
+        "heading": "Product and architecture approach",
+        "paragraphs": [
+          "The solution was organized around core operational entities: students, guardians, classes, teachers, schedules, attendance, tuition records, and reports. Instead of treating each module as an isolated feature, the architecture considers how an action in one area should affect another and which users are allowed to see or change the related information.",
+          "The product direction prioritizes repeatable workflows, role-based access, traceable records, and a reporting layer that can be expanded as verified operational requirements become available. This creates a SaaS foundation that can evolve in stages rather than attempting to automate every edge case in the first release."
+        ]
+      },
+      {
+        "heading": "My role",
+        "paragraphs": [
+          "My role covers business analysis, product direction, information architecture, solution design, and coordination between operational expectations and technical implementation. A central part of the work is deciding what should be standardized in the product and what should remain configurable for different centers.",
+          "This requires listening to how staff actually complete tasks, identifying where duplicate entry or unclear ownership creates risk, and turning that understanding into a coherent product model."
+        ]
+      },
+      {
+        "heading": "Outcome and evidence policy",
+        "paragraphs": [
+          "CenterCare now provides a structured reference model for connecting the main administrative workflows of a language center. The current public outcome is intentionally qualitative. Adoption figures, processing-time improvements, or other performance metrics will not be published until the measurement method and underlying data have been verified."
+        ]
+      }
+    ],
+    "cta": "Explore CenterCare"
+  },
+  "vi": {
+    "title": "CenterCare: Từ bài toán vận hành trung tâm đến nền tảng SaaS",
+    "description": "Case study sản phẩm về việc chuyển học phí, lớp học, điểm danh, giáo viên và báo cáo quản trị thành một nền tảng vận hành có cấu trúc.",
+    "eyebrow": "CenterCare · Case study sản phẩm",
+    "readingTime": "6 phút đọc",
+    "sections": [
+      {
+        "heading": "Bài toán vận hành",
+        "paragraphs": [
+          "Một trung tâm ngoại ngữ không vận hành theo một quy trình duy nhất. Hồ sơ học viên ảnh hưởng đến xếp lớp; lịch lớp ảnh hưởng đến phân công giáo viên; điểm danh liên quan đến trao đổi với phụ huynh; tình trạng học phí ảnh hưởng đến chăm sóc; và tất cả hoạt động này cuối cùng tạo nên báo cáo quản trị. Khi mỗi công việc nằm trong một bảng tính hoặc nhóm tin nhắn riêng, tổ chức không còn một góc nhìn chung đáng tin cậy về vận hành.",
+          "Thách thức của CenterCare là mô hình hóa các mối quan hệ đó mà không biến sản phẩm thành một tập hợp màn hình quá lớn. Hệ thống cần phản ánh công việc hằng ngày, đồng thời giữ cho trách nhiệm và ranh giới dữ liệu dễ hiểu."
+        ]
+      },
+      {
+        "heading": "Cách tiếp cận sản phẩm và kiến trúc",
+        "paragraphs": [
+          "Giải pháp được tổ chức quanh các thực thể vận hành cốt lõi: học viên, phụ huynh, lớp học, giáo viên, lịch học, điểm danh, hồ sơ học phí và báo cáo. Thay vì xem từng module là một tính năng độc lập, kiến trúc xem xét hành động ở một khu vực sẽ ảnh hưởng đến khu vực khác thế nào và người dùng nào được phép xem hoặc thay đổi thông tin liên quan.",
+          "Định hướng sản phẩm ưu tiên quy trình có thể lặp lại, phân quyền theo vai trò, hồ sơ có thể truy vết và lớp báo cáo có thể mở rộng khi yêu cầu vận hành đã xác minh xuất hiện. Đây là nền tảng SaaS có thể phát triển theo từng giai đoạn, thay vì cố tự động hóa mọi trường hợp ngoại lệ trong phiên bản đầu tiên."
+        ]
+      },
+      {
+        "heading": "Vai trò của tôi",
+        "paragraphs": [
+          "Vai trò của tôi bao gồm phân tích nghiệp vụ, định hướng sản phẩm, kiến trúc thông tin, thiết kế giải pháp và điều phối giữa kỳ vọng vận hành với triển khai kỹ thuật. Một phần quan trọng là xác định nội dung nào cần được chuẩn hóa trong sản phẩm và nội dung nào nên cho phép cấu hình theo từng trung tâm.",
+          "Điều đó đòi hỏi lắng nghe cách nhân sự thực sự hoàn thành công việc, xác định nơi nhập liệu trùng lặp hoặc trách nhiệm chưa rõ tạo ra rủi ro, rồi chuyển hiểu biết đó thành một mô hình sản phẩm thống nhất."
+        ]
+      },
+      {
+        "heading": "Kết quả và nguyên tắc công bố bằng chứng",
+        "paragraphs": [
+          "CenterCare hiện cung cấp một mô hình tham chiếu có cấu trúc để kết nối những quy trình hành chính chính của trung tâm ngoại ngữ. Kết quả công khai hiện tại chủ động được trình bày theo hướng định tính. Số liệu áp dụng, mức cải thiện thời gian xử lý hoặc chỉ số hiệu quả khác sẽ không được công bố cho đến khi phương pháp đo và dữ liệu nền được xác minh."
+        ]
+      }
+    ],
+    "cta": "Khám phá CenterCare"
+  }
+}

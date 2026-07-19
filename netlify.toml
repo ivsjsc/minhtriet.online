@@ -1,3 +1,22 @@
+ [build]
+  command = "npm run build"
+  publish = "public"
+
+[[redirects]]
+  from = "/updates"
+  to = "/en/updates/"
+  status = 301
+
+[[redirects]]
+  from = "/updates/"
+  to = "/en/updates/"
+  status = 301
+
+[[redirects]]
+  from = "/updates/:slug"
+  to = "/en/updates/:slug/"
+  status = 301
+
 [[redirects]]
   from = "/"
   to = "/en"
@@ -69,3 +88,13 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

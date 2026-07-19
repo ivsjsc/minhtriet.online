@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251f">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://minhtriet.online/images/ventures/updates-og.webp">
+  <meta property="og:locale" content="{{OG_LOCALE}}">
+  <meta property="og:locale:alternate" content="{{OG_ALT_LOCALE}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="https://minhtriet.online/images/ventures/updates-og.webp">
+  <link rel="canonical" href="{{CANONICAL}}">
+  <link rel="alternate" hreflang="en" href="https://minhtriet.online/en/updates/">
+  <link rel="alternate" hreflang="vi" href="https://minhtriet.online/vi/updates/">
+  <link rel="alternate" hreflang="x-default" href="https://minhtriet.online/en/updates/">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{SITE_CSS}}">
+  <title>{{TITLE}}</title>
+  <script type="application/ld+json">{{SCHEMA}}</script>
+</head>
+<body data-page-lang="{{LANG}}" data-page-type="updates-index">
+  <a class="skip-link" href="#main">{{SKIP}}</a>
+  {{HEADER}}
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap page-hero-inner">
+        <p class="eyebrow">{{EYEBROW}}</p>
+        <h1>{{HEADING}}</h1>
+        <p>{{INTRO}}</p>
+      </div>
+    </section>
+    <section class="section section-plain" aria-labelledby="updates-list-title">
+      <div class="wrap">
+        <h2 class="sr-only" id="updates-list-title">{{LIST_LABEL}}</h2>
+        <div class="updates-grid">{{CARDS}}</div>
+      </div>
+    </section>
+  </main>
+  {{FOOTER}}
+  <script src="{{SITE_JS}}" defer></script>
+</body>
+</html>

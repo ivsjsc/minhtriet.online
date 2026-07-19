@@ -68,3 +68,9 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Deterministic site build output. Authoring source lives under src/.
+/public/
+
+# Local preview artifacts
+/artifacts/

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ivs-academy",
+    "name": "IVS Academy",
+    "website": "https://ivsacademy.edu.vn/",
+    "campaign": "ivs_ecosystem",
+    "contentTag": "academy_venture",
+    "cover": "/images/ventures/ivs-academy-cover.webp",
+    "coverOg": "/images/ventures/ivs-academy-og.webp",
+    "metrics": []
+  },
+  {
+    "id": "ivs-tech",
+    "name": "IVS TECH",
+    "website": "https://ivstech.store/",
+    "campaign": "ivs_ecosystem",
+    "contentTag": "tech_venture",
+    "cover": "/images/ventures/ivs-tech-cover.webp",
+    "coverOg": "/images/ventures/ivs-tech-og.webp",
+    "metrics": []
+  }
+]
