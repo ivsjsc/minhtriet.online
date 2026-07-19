@@ -4,6 +4,13 @@
   const languageSelect = document.querySelector('[data-language-select]');
   const menuButton = document.querySelector('[data-menu-button]');
   const mobileNav = document.querySelector('[data-mobile-nav]');
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    const updateScrollTop = () => scrollTopBtn.classList.toggle('is-visible', window.scrollY > 300);
+    window.addEventListener('scroll', updateScrollTop, { passive: true });
+    updateScrollTop();
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
 
   const firstSegment = () => location.pathname.split('/').filter(Boolean)[0] || 'en';
   const currentLang = supported.includes(firstSegment())
