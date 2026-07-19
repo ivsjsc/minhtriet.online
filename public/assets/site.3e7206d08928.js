@@ -5,6 +5,20 @@
   const menuButton = document.querySelector('[data-menu-button]');
   const mobileNav = document.querySelector('[data-mobile-nav]');
   const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const contactFab = document.getElementById('contactFab');
+  const fabActions = contactFab?.closest('.fab-actions');
+  if (contactFab && fabActions) {
+    contactFab.addEventListener('click', () => {
+      const open = fabActions.classList.toggle('is-open');
+      contactFab.setAttribute('aria-expanded', String(open));
+      contactFab.setAttribute('aria-label', open ? 'Close social links' : 'Open social links');
+      contactFab.setAttribute('title', open ? 'Close social links' : 'Open social links');
+    });
+    fabActions.querySelectorAll('.fab-social-link').forEach((link) => link.addEventListener('click', () => {
+      fabActions.classList.remove('is-open');
+      contactFab.setAttribute('aria-expanded', 'false');
+    }));
+  }
   if (scrollTopBtn) {
     const updateScrollTop = () => scrollTopBtn.classList.toggle('is-visible', window.scrollY > 300);
     window.addEventListener('scroll', updateScrollTop, { passive: true });
