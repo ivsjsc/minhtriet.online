@@ -33,8 +33,8 @@
     },
     {
       "path": "css/styles.css",
-      "bytes": 38075,
-      "sha256": "e49561e01c1ba37c1d7e4336391411ccc04a188de3b84937d5e6ecd3ad873836"
+      "bytes": 39309,
+      "sha256": "61721cf6438149842688176a396e31823a56b069ff35cc274251d79a487fe325"
     },
     {
       "path": "css/tailwind.css",
@@ -288,13 +288,13 @@
     },
     {
       "path": "index-modular.html",
-      "bytes": 7164,
-      "sha256": "8dbd590ba1a200d3e5b5e48940de0c1aebeca52132cfd9c3b42455a0588e7516"
+      "bytes": 8211,
+      "sha256": "76b41012d9b46dbcc05c223aa42fa85f46926e4d30abc107abce968f1f8d16b5"
     },
     {
       "path": "index.html",
-      "bytes": 39187,
-      "sha256": "18deb1d1a88ef1adbb1ea718c2f47cb838e14d7b859ed5d4fde6809880d13aa8"
+      "bytes": 39212,
+      "sha256": "bd231f2ae95039a44ddf5c888030f78fc1a9bcb4718ca0f277c8022534d4cd82"
     },
     {
       "path": "ivs-aitool.html",

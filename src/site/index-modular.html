@@ -123,11 +123,21 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p data-i18n="footer_left">Professional profile of Nguyen Minh Triet</p>
-            <p>&copy; <span id="year">2024</span> Nguyen Minh Triet</p>
+        <div class="container footer-content">
+            <div>
+                <p class="footer-title" data-i18n="footer_left">Professional profile of Nguyen Minh Triet</p>
+                <p class="footer-copy">Strategic Relations, Operations, and Digital Growth.</p>
+            </div>
+            <nav class="footer-links" aria-label="Contact links">
+                <a href="mailto:mi.triet@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/mtrietng" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://m.me/nmi.triet" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </nav>
+            <p class="footer-copyright">&copy; <span id="year">2024</span> Nguyen Minh Triet</p>
         </div>
     </footer>
+
+    <button id="scrollTopBtn" class="btn-scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">↑</button>
 
     <!-- Scripts -->
     <!-- Load translation data first -->
@@ -161,6 +171,12 @@
                     setTimeout(() => loadingOverlay.style.display = 'none', 500);
                 }
             }, 1000);
+
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                scrollTopBtn.classList.toggle('is-visible', window.scrollY > 300);
+            }, { passive: true });
+            scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         });
     </script>
 </body>
