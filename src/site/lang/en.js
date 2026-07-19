@@ -329,7 +329,7 @@ window.translations_en = {
     "lead_feat_caption": "TheGenZ iCon — a youth-focused community event with over 1,500 attendees.",
     "lead_feat_alt": "TheGenZ iCon community event moment with youth representatives on stage.",
     "contact_kicker": "Contact",
-    "contact_title": "Connect for Collaboration",
+    "contact_title": "Let’s discuss a practical next step.",
     "label_phone": "Phone",
     "contact_label_email_work": "Work Email",
     "contact_label_email_personal": "Personal Email",
@@ -482,5 +482,6 @@ window.translations_en = {
     "view_all_updates": "View all updates",
     "education_intro": "Academic foundations in language, business administration, education management, and aviation commercial services.",
     "contact_intro": "Open to conversations about education partnerships, product strategy, applied technology, and digital operations.",
+    "contact_cta": "Send an email",
     "footer_text": "Personal portfolio of Nguyen Minh Triet. IVS Academy and IVS TECH are referenced as ventures he helps shape and lead."
 };

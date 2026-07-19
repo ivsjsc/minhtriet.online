@@ -1,50 +1,53 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e14a6201-310f-45a8-8adb-6a493ac9a7a7/deploy-status)](https://app.netlify.com/projects/minhtrietonline/deploys)
 # minhtriet.online
 
-> Website cá nhân, portfolio, showcase sản phẩm EdTech, AI, dịch vụ công nghệ và blog của Nguyễn Minh Triết (IVS JSC).
+Personal portfolio for Nguyen Minh Triet, covering professional experience, featured ventures, applied technology products, case studies, and long-form updates.
 
-## 🚀 Demo
+## Source of truth
 
-- Trang chính: [https://minhtriet.online](https://minhtriet.online)
-- Trang AI Toolbox: [https://minhtriet.online/ivs-aitool](https://minhtriet.online/ivs-aitool)
+All deployable source files live under `src/`:
 
-## 📁 Cấu trúc thư mục
+- `src/site/`: static pages, scripts, languages, images, PDFs, and legacy public pages.
+- `src/content/`: structured venture, case-study, and update content.
+- `src/templates/`: templates used to generate bilingual update pages.
+- `scripts/`: deterministic build, validation, link checking, and local preview.
+- `public/`: generated output only. Do not edit it manually.
 
+The build checks a migration allowlist before replacing `public/`, so required PDFs, images, videos, favicon, robots, CNAME, and language files cannot disappear silently.
+
+## Commands
+
+```powershell
+npm run build
+npm run validate
+npm run check:links
+npm run preview
 ```
-├── index.html                # Trang chủ
-├── ivs-aitool.html           # Trang AI Toolbox
-├── css/                      # File CSS (styles.css)
-├── js/                       # File JS (main.js, translations.js, utils.js)
-├── lang/                     # File dịch đa ngôn ngữ (en.js, vi.js, ...)
-├── images/                   # Ảnh, favicon, logo
-├── videos/                   # Video nền, demo
-├── sw.js                     # Service Worker (nếu có)
-├── CNAME, robots.txt, sitemap.xml
-```
 
-## 🛠️ Công nghệ sử dụng
+Local preview: `http://127.0.0.1:4173/en`
 
-- HTML5, CSS3 (TailwindCSS), JavaScript thuần
-- Đa ngôn ngữ (i18n) client-side
-- Netlify Forms (đăng ký nhận tin)
-- Triển khai miễn phí trên Netlify
+## Deployment parity
 
-## 🌐 Hướng dẫn deploy lên Netlify
+Firebase and Netlify both deploy `public/` and run `npm run build` first:
 
-1. Fork hoặc clone repo này về máy.
-2. Đăng nhập Netlify, tạo site mới, kết nối với repo GitHub.
-3. Trỏ domain về Netlify (CNAME hoặc Netlify DNS).
-4. Netlify sẽ tự động build & cấp SSL miễn phí.
+- Netlify: `[build] command = "npm run build"`, `publish = "public"`.
+- Firebase: `hosting.public = "public"`, `hosting.predeploy = ["npm run build"]`.
 
-**Lưu ý:**
-- Đảm bảo domain không có bản ghi A trỏ về IP lạ, chỉ dùng CNAME/ACNAME về Netlify.
-- Nếu muốn sửa nội dung, chỉ cần push lên main, Netlify sẽ tự động deploy.
+Production deployment is intentionally separate from the build and preview workflow.
 
-## 📬 Liên hệ
+## Localized update routes
 
-- Email: info@minhtriet.online
-- Website: [https://minhtriet.online](https://minhtriet.online)
-- Website Công ty: [https://ivsacademy.com.vn](https://ivsacademy.com.vn)
+- `/updates/` redirects permanently to `/en/updates/`.
+- `/en/updates/` and `/vi/updates/` are the only indexable language collections.
+- Each update has matching `/en/updates/<slug>/` and `/vi/updates/<slug>/` pages.
+- The remaining eight homepage languages continue to fall back to English for new untranslated keys; no duplicate update URLs are generated for them.
 
----
-**IVS JSC - EdTech, Automation, AI, Web Solutions**
+Update entries with no verified `datePublished` are rendered as drafts with `noindex` and excluded from sitemaps. `dateModified` is optional and must never exist without `datePublished`.
+
+## Visual assets
+
+Editorial visual backgrounds are stored in `src/site/images/ventures/` as:
+
+- 1600×900 WebP content covers.
+- 1200×630 WebP Open Graph derivatives.
+
+Official logos remain separate source assets and are not regenerated or color-altered.

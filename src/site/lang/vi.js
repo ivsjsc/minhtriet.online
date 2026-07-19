@@ -324,7 +324,7 @@ window.translations_vi = {
     "lead_feat_caption": "TheGenZ iCon — sự kiện cộng đồng dành cho thế hệ trẻ với hơn 1.500 người tham dự.",
     "lead_feat_alt": "Khoảnh khắc sự kiện TheGenZ iCon với các đại diện trẻ trên sân khấu.",
     "contact_kicker": "Liên hệ",
-    "contact_title": "Kết nối để Hợp tác",
+    "contact_title": "Cùng thảo luận một bước đi thực tiễn.",
     "label_phone": "Điện thoại",
     "contact_label_email_work": "Email công việc",
     "contact_label_email_personal": "Email cá nhân",
@@ -477,5 +477,6 @@ window.translations_vi = {
     "view_all_updates": "Xem tất cả cập nhật",
     "education_intro": "Nền tảng học thuật về ngôn ngữ, quản trị kinh doanh, quản lý giáo dục và dịch vụ thương mại hàng không.",
     "contact_intro": "Sẵn sàng trao đổi về hợp tác giáo dục, chiến lược sản phẩm, công nghệ ứng dụng và vận hành số.",
+    "contact_cta": "Gửi email",
     "footer_text": "Portfolio cá nhân của Nguyễn Minh Triết. IVS Academy và IVS TECH được tham chiếu là những dự án anh tham gia kiến tạo và dẫn dắt."
 }

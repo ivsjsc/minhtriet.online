@@ -8,6 +8,7 @@
     "build": "node scripts/build-site.mjs",
     "validate": "node scripts/validate-site.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "check:hosting": "node scripts/check-hosting-parity.mjs",
     "preview": "node scripts/preview-server.mjs"
   }
 }

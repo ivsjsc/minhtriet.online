@@ -1,0 +1,440 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "3. CV.pdf",
+      "bytes": 4483887,
+      "sha256": "3b7489695cfbf1562105cbea91d95739b1311f38f155c75b0ac044663bef36a8"
+    },
+    {
+      "path": "404.html",
+      "bytes": 1808,
+      "sha256": "b77b97fe780d35d18248abd1d2f42f444afbabe43f6abcd8fa8ebb3d47825eee"
+    },
+    {
+      "path": "assets/site.0fb8b239c10e.js",
+      "bytes": 4359,
+      "sha256": "0fb8b239c10e6224f2a2b5de3903fbe83fc3f05d8b760feb8b28f149347e2ea4"
+    },
+    {
+      "path": "assets/site.6cf14bf6e66b.css",
+      "bytes": 13097,
+      "sha256": "6cf14bf6e66be0ffb61b8d9dc3230c07b6327c0c0f85f878c8cb60b2b888ebd1"
+    },
+    {
+      "path": "aura.html",
+      "bytes": 32425,
+      "sha256": "e123c52f4458de273f8b8f7b2c5d00676186f657d2a6e348ac886c2e26864a35"
+    },
+    {
+      "path": "CNAME",
+      "bytes": 16,
+      "sha256": "0825e871206e8af0fc89f59292a996b846260825171342b64eb6b05ee69b2e32"
+    },
+    {
+      "path": "css/styles.css",
+      "bytes": 38075,
+      "sha256": "e49561e01c1ba37c1d7e4336391411ccc04a188de3b84937d5e6ecd3ad873836"
+    },
+    {
+      "path": "css/tailwind.css",
+      "bytes": 63839,
+      "sha256": "33899582bdbe4e5e994cb68d02db432ff275448fdabed0fa3eec657f5c4c0d32"
+    },
+    {
+      "path": "cv-online.html",
+      "bytes": 216551,
+      "sha256": "b75bdbdef5d6cf0859750122fb8e08ee98470d7a1c3676e66665152cefd917cc"
+    },
+    {
+      "path": "CV.NguyenMinhTriet-en.pdf",
+      "bytes": 520967,
+      "sha256": "bdefbce2a6c3acc6287c8cee4e260a4bdf211b5f0a52c983c6a7903bbc32644e"
+    },
+    {
+      "path": "CV.NguyenMinhTriet-vi.pdf",
+      "bytes": 548040,
+      "sha256": "6f18220c7432fbfad1f1b2aedf9a5a38f119a4a194838761baecd5cd148f0f12"
+    },
+    {
+      "path": "data/translations-data.js",
+      "bytes": 5364,
+      "sha256": "aa90f81479784027b4fc66f793385e8bb20aad26e14fac4d73fae3df8e9ead0c"
+    },
+    {
+      "path": "ecommerce.html",
+      "bytes": 1387,
+      "sha256": "c6df2e3aa3b3688c3da9ef6a2f97fa9e0e26b9ad70b14974c6bb31adaaa499db"
+    },
+    {
+      "path": "en/updates/centercare-saas-case-study/index.html",
+      "bytes": 9583,
+      "sha256": "dce3e13c680a69728944958b4848e1fc11a8fbbc3608415e1949fc62deb35077"
+    },
+    {
+      "path": "en/updates/index.html",
+      "bytes": 7170,
+      "sha256": "064248793fee4c20e713ad8c9d06bd9645c9b8279d02307c2eea14dc9a4ea5ff"
+    },
+    {
+      "path": "en/updates/ivs-academy-ecosystem/index.html",
+      "bytes": 9230,
+      "sha256": "0987aeedef5064860f0e256714a3f67bc07cc6441238e899185f15e1a826115a"
+    },
+    {
+      "path": "en/updates/ivs-tech-new-positioning/index.html",
+      "bytes": 9563,
+      "sha256": "dbeb65f6d4fad61459ea2a588146e171f2c328520bdd554e44859b4e5c3d827b"
+    },
+    {
+      "path": "images/avatar.webp",
+      "bytes": 163248,
+      "sha256": "03c49d5788c1a5983c30b1e7c9521ad21039bf17ce6e85ffdec955f0144832f6"
+    },
+    {
+      "path": "images/coding.webp",
+      "bytes": 71784,
+      "sha256": "f5ce4f64fab96b1c6ae1073377a307966cc28d0ebf699654eabc5fcd6be2f9df"
+    },
+    {
+      "path": "images/englishlearnersapp.png",
+      "bytes": 1055483,
+      "sha256": "6368e1baaa1fe38913174e2e72bd44f9be66f7869e93c688bdf1b8456554e140"
+    },
+    {
+      "path": "images/favicon.svg",
+      "bytes": 6884184,
+      "sha256": "23589000324891a3eb37fcf8d4b9c94231087a3d0fb3cc07db34ccf0ef2882df"
+    },
+    {
+      "path": "images/ivs-mastery.png",
+      "bytes": 1144593,
+      "sha256": "62926d524ad95528c409bf76d3789bfe077d1a0ff0f9bfb9f5fb3f85a39f433e"
+    },
+    {
+      "path": "images/logo/logo-centercare.png",
+      "bytes": 797144,
+      "sha256": "17964d5d4deea10d1cbdba0dfd3c3c4e4eca76f6443d2b755f95ffea7a6669c6"
+    },
+    {
+      "path": "images/logo/logo-elearners.png",
+      "bytes": 445595,
+      "sha256": "db65a4182125d6c509116dbc29baf901cc155f39cdc7b66e2b37ab8933075b24"
+    },
+    {
+      "path": "images/logo/logo-examia.png",
+      "bytes": 1105117,
+      "sha256": "1bfc18e68195924dc2fa6e123091f8c30c689497217256008ebe4f6b84a7955e"
+    },
+    {
+      "path": "images/logo/logo-ivs.png",
+      "bytes": 171550,
+      "sha256": "cec8b23fdea567c82307fcbe13a6fa83d18eeb72120eaaeb6949c212bfee85b3"
+    },
+    {
+      "path": "images/logo/logo-testing.png",
+      "bytes": 279079,
+      "sha256": "3448aee437dab91e17d4de9e3264d5a48179374d4d83fb195923bc34db9a67d7"
+    },
+    {
+      "path": "images/logo/logo.png",
+      "bytes": 891104,
+      "sha256": "ac641f7442073b30c25f974d4fed7777161b276b70c902eab6d86d344b5bc5c8"
+    },
+    {
+      "path": "images/logo/nmt-logo.png",
+      "bytes": 735497,
+      "sha256": "443b66e2683967d055f4e4329d0e3bc0923d2c70282be41ce5e5ff8794f62998"
+    },
+    {
+      "path": "images/pages/englishlearners/1.jpg",
+      "bytes": 160512,
+      "sha256": "fbc41d808c0790f724348e91be6938624e7aeb53daade197d82cad0c3a0c29c4"
+    },
+    {
+      "path": "images/pages/englishlearners/10.jpg",
+      "bytes": 158669,
+      "sha256": "a4dbfc0a2da12473bf4a6d1eb7e1a40605409c4c100a53954044aa2e527111a8"
+    },
+    {
+      "path": "images/pages/englishlearners/11.png",
+      "bytes": 433203,
+      "sha256": "2651d5888e849a8b1ebd266ca01217388d84915bb7ebe03899d5acea4da5994c"
+    },
+    {
+      "path": "images/pages/englishlearners/2.jpg",
+      "bytes": 151143,
+      "sha256": "321ca715a7ff044c9c27cdb4f64ee5a48d2034c064986ad94b28d505f6532a6b"
+    },
+    {
+      "path": "images/pages/englishlearners/3.jpg",
+      "bytes": 169456,
+      "sha256": "f68cf7e9e36347c8ca34214e5cb0b35cf40b66bbc39a21fbbab3f34414ee748e"
+    },
+    {
+      "path": "images/pages/englishlearners/4.jpg",
+      "bytes": 183609,
+      "sha256": "70f7cfd39229c9aba8737330eb0772e0c4c562f69b40091dae0e871a935c99fa"
+    },
+    {
+      "path": "images/pages/englishlearners/5.jpg",
+      "bytes": 133707,
+      "sha256": "cd1e4da9a9eff46aea1139763176aeee7b520ef4c214ff4febde5aa37947df0a"
+    },
+    {
+      "path": "images/pages/englishlearners/6.jpg",
+      "bytes": 203786,
+      "sha256": "53365c4af2238d3a704ad02a5ce92c143bfea269c6baa38afe4241dcbf6c9c12"
+    },
+    {
+      "path": "images/pages/englishlearners/7.jpg",
+      "bytes": 134443,
+      "sha256": "d477a5ddc0bb469659be36f1e864b5fb3d00341bde694c1e12a76e3c2f2c8c7e"
+    },
+    {
+      "path": "images/pages/englishlearners/8.jpg",
+      "bytes": 135937,
+      "sha256": "99c33edac1fb51b8726d6e5a09305c7074253f17eac1c778f45a89193a51b62a"
+    },
+    {
+      "path": "images/pages/englishlearners/9.jpg",
+      "bytes": 137604,
+      "sha256": "158f92386b734996eb80f54941f0d1cda6899ff4fcadec82ee9813ffaad36fd2"
+    },
+    {
+      "path": "images/pages/englishlearners/minhtriet.online.png",
+      "bytes": 1456933,
+      "sha256": "f91234668982ae20f0768690211c2e4326faa0a6fdbe38b9a0b03d2119050d78"
+    },
+    {
+      "path": "images/profile/image-01.png",
+      "bytes": 1395382,
+      "sha256": "ce7b545a5f05a5ca2393ae89f495a1a67f4209e510a7fdf4cf8347b44911945a"
+    },
+    {
+      "path": "images/profile/image-02.png",
+      "bytes": 818863,
+      "sha256": "bd9890f27b3deb379b020161d7055c145d0af3eacdc98cff8c795ff76c78f7e3"
+    },
+    {
+      "path": "images/profile/image-04.png",
+      "bytes": 970379,
+      "sha256": "cf7863765cd9d0728afb23afb5d9c786397154f94a2328c8f192ef742e6f5635"
+    },
+    {
+      "path": "images/profile/image-05.png",
+      "bytes": 956428,
+      "sha256": "1e8ce7a7eb521175421da3fd96319e69937d3630d8841a9d343c08f632fab6d0"
+    },
+    {
+      "path": "images/profile/image-06.png",
+      "bytes": 1003279,
+      "sha256": "eb06d4c9f2d3885ecf99fdfcbaec82396094707169d495830711daaa18bb8c5d"
+    },
+    {
+      "path": "images/profile/image-07.png",
+      "bytes": 1000154,
+      "sha256": "ded3261ee826fc23cbf05b7ce3d092050b747739e9840a58e9fab947bd5c956c"
+    },
+    {
+      "path": "images/profile/image-09.png",
+      "bytes": 1076268,
+      "sha256": "8718bd83c769a759cf34754d9aeb238e4c9032fb5bc84f3274a2f0402e0fff48"
+    },
+    {
+      "path": "images/thegenz-icon-event.jpg",
+      "bytes": 65836,
+      "sha256": "ba1929ff07db7d346d224f7641b882a277281674b344a936ba2442e79de4db3b"
+    },
+    {
+      "path": "images/ventures/centercare-cover.webp",
+      "bytes": 113604,
+      "sha256": "0c40bc46f3b49bf832deb5a41720bfacd5a64bf565e8bd369aa1fb6d890b81ce"
+    },
+    {
+      "path": "images/ventures/centercare-og.webp",
+      "bytes": 75220,
+      "sha256": "4228eaa60b9f5188f550d3a6103c519cdab81a2e636269c1689343d2a8d6bce3"
+    },
+    {
+      "path": "images/ventures/ivs-academy-cover.webp",
+      "bytes": 160770,
+      "sha256": "9766ec415f18f412ec086d25581eac65f67607bb67e4d48117fa7abe850bfe36"
+    },
+    {
+      "path": "images/ventures/ivs-academy-og.webp",
+      "bytes": 96420,
+      "sha256": "8160b67c41ae939ca86e00dd0f648204e4889f27b9d0d3cf8d7ca8cb9cb9141e"
+    },
+    {
+      "path": "images/ventures/ivs-tech-cover.webp",
+      "bytes": 84598,
+      "sha256": "baa08cc548fe5a8fdae03fb36770e23230955bf56fa99c6ef3f6a2e48827a434"
+    },
+    {
+      "path": "images/ventures/ivs-tech-og.webp",
+      "bytes": 51656,
+      "sha256": "ae516c5684211a3f711257e6e3e2c18ca7a4f6b669fe6649ee7825de7ccff0cc"
+    },
+    {
+      "path": "images/ventures/portfolio-og.webp",
+      "bytes": 51656,
+      "sha256": "ae516c5684211a3f711257e6e3e2c18ca7a4f6b669fe6649ee7825de7ccff0cc"
+    },
+    {
+      "path": "images/ventures/updates-og.webp",
+      "bytes": 75220,
+      "sha256": "4228eaa60b9f5188f550d3a6103c519cdab81a2e636269c1689343d2a8d6bce3"
+    },
+    {
+      "path": "index-modular.html",
+      "bytes": 7164,
+      "sha256": "8dbd590ba1a200d3e5b5e48940de0c1aebeca52132cfd9c3b42455a0588e7516"
+    },
+    {
+      "path": "index.html",
+      "bytes": 26071,
+      "sha256": "cd443d5d90a8d541e8d9432999e8bb8e9b982cdfb2435f9be705e5dea7e7ee87"
+    },
+    {
+      "path": "ivs-aitool.html",
+      "bytes": 157841,
+      "sha256": "ff367afacc18d79dab5096e3a850053cc6bb206717d69436d3d266773ecc821d"
+    },
+    {
+      "path": "js/i18n-manager.js",
+      "bytes": 5791,
+      "sha256": "e54c31b514cc074ecc7b5bf95a83c065b5d23eb5cc74c5924321378bbb19ead1"
+    },
+    {
+      "path": "js/main.js",
+      "bytes": 19526,
+      "sha256": "26b410cc3f3640889c71c4f802b52f2b0abff80c5b4364011080bab415fb1cc3"
+    },
+    {
+      "path": "js/translations.js",
+      "bytes": 77,
+      "sha256": "ce7358c03cc9299845bc3a35d587fae9bf1c14b0e8486c6ce89a0cfeaf0ec8f3"
+    },
+    {
+      "path": "js/utils.js",
+      "bytes": 15532,
+      "sha256": "7052482239f98d84d0ebc1f3fa273971a4b7ee1448a25aec37a654ce6ab3e515"
+    },
+    {
+      "path": "lang/de.js",
+      "bytes": 18703,
+      "sha256": "f39cd0fcb2f5ae1ac17274cfdcd808ace6f9c874a30541090a6e711bdf718ccd"
+    },
+    {
+      "path": "lang/en.js",
+      "bytes": 33227,
+      "sha256": "2cf949f94725a7adee2dda217deef5bb3b1187df438eba7da5087d0ea3fe4dc9"
+    },
+    {
+      "path": "lang/es.js",
+      "bytes": 19409,
+      "sha256": "f140abea8ae4f881235b198468ce7c7925d67cccfaf461cacdfb1116949d0d45"
+    },
+    {
+      "path": "lang/fr.js",
+      "bytes": 20232,
+      "sha256": "d216309b56411ce79c63c160e73ef85cd521d1dfa0bf61d50c7703921b1e71a9"
+    },
+    {
+      "path": "lang/fr.js.bak",
+      "bytes": 6,
+      "sha256": "54d00d867758cef816bc4685f58e327b949712b07ebd17c3485f3ffc9e9f5133"
+    },
+    {
+      "path": "lang/ja.js",
+      "bytes": 20532,
+      "sha256": "28a4f9e9e3ce70b79606dde33be56e6822f6581666bbfb24e3b0533b353ef838"
+    },
+    {
+      "path": "lang/ko.js",
+      "bytes": 18236,
+      "sha256": "3f75f7ac102963eabf22d07c5521b3acbf5f7c220c396c1c4146cec2ae8338fe"
+    },
+    {
+      "path": "lang/ru.js",
+      "bytes": 29754,
+      "sha256": "b3dabe89beb1703acf883553972802c876875fcbecc88766efa28cb97149e480"
+    },
+    {
+      "path": "lang/th.js",
+      "bytes": 36625,
+      "sha256": "5ac649b0ad37119e9d01c9748133bab08e812b38b803d569f32418c1c1ca6e94"
+    },
+    {
+      "path": "lang/vi.js",
+      "bytes": 39884,
+      "sha256": "8026a08965249687806d2451610072cf1b45a13525d4e588895ebe79a3e62985"
+    },
+    {
+      "path": "lang/zh.js",
+      "bytes": 15569,
+      "sha256": "8c27f1c2b63cd41534fbf9cf9dccd9786f5669eba8b3045eed625f5337485ebf"
+    },
+    {
+      "path": "redesign.html",
+      "bytes": 36900,
+      "sha256": "30ea9566f58ddc9598d4e8c1e1a4b7b58fc46ff73abd254d3f5566d24f9a61ab"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 289,
+      "sha256": "34a6b0e4242542549efc9f1a1c2b3c4c8bf253a246fff7a10a713d5128063267"
+    },
+    {
+      "path": "sitemap-multilingual.xml",
+      "bytes": 486,
+      "sha256": "a9033de7296da998a7231a97ba88be3d10ae7e52a679a0b28c8423e74a7328c5"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 486,
+      "sha256": "a9033de7296da998a7231a97ba88be3d10ae7e52a679a0b28c8423e74a7328c5"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2370,
+      "sha256": "d5ca1e1d06f0636dc08f9486749ad45a9773bef6005bbd26dbf2fa91cfb83164"
+    },
+    {
+      "path": "vi/updates/centercare-saas-case-study/index.html",
+      "bytes": 10822,
+      "sha256": "f5e76a8d4ae19c572cf257bff01389e16b9c870df13f32d3dd9baccbaf65ff73"
+    },
+    {
+      "path": "vi/updates/index.html",
+      "bytes": 7706,
+      "sha256": "0a3cf86c92ba7a47a96a812fd809872bbe9f0e465762caed789e04ae648fe698"
+    },
+    {
+      "path": "vi/updates/ivs-academy-ecosystem/index.html",
+      "bytes": 10288,
+      "sha256": "3261ad3571f19cbaeb4b6d5ebfee9c398baacd701371b37ef502f55571c19a03"
+    },
+    {
+      "path": "vi/updates/ivs-tech-new-positioning/index.html",
+      "bytes": 10622,
+      "sha256": "fa35f8479a6c0b6e6a77518d681a1d5bd5cf6fdfbda456971fcdae3726e95d6a"
+    },
+    {
+      "path": "videos/ivs-coding.mp4",
+      "bytes": 1700085,
+      "sha256": "d731931d0682953d2680608c7ed4d12e6d313e004ee9bcc7d4ddcbb8c2b0d2e3"
+    },
+    {
+      "path": "videos/videowebdesign.mp4",
+      "bytes": 914705,
+      "sha256": "fc8c63aec5eff2ba296178ac9ac12dcd2a02078cf892f53ee7393420115670cb"
+    },
+    {
+      "path": "wb.html",
+      "bytes": 21130,
+      "sha256": "e1ecf91287decd9a4e0b822a7546187af263c7726a00d416ac68d1820f644ae0"
+    }
+  ]
+}
