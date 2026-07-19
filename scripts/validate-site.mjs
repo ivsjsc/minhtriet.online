@@ -1,6 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import vm from 'node:vm';
 
 const root = process.cwd();
 const output = path.join(root, 'public');
@@ -41,6 +42,20 @@ const keys = [...homeSource.matchAll(/data-i18n(?:-alt)?="([^"]+)"/g)].map((matc
 for (const key of new Set(keys)) {
   if (!enText.includes(`"${key}"`)) fail(`Missing EN key: ${key}`);
   if (!viText.includes(`"${key}"`)) fail(`Missing VI key: ${key}`);
+}
+
+for (const lang of ['en', 'vi', 'de', 'es', 'fr', 'ja', 'ko', 'ru', 'th', 'zh']) {
+  const sandbox = { window: {} };
+  const script = await fs.readFile(path.join(root, 'src', 'site', 'lang', `${lang}.js`), 'utf8');
+  try { vm.runInNewContext(script, sandbox); } catch (error) { fail(`${lang}: language file cannot execute (${error.message})`); continue; }
+  const dictionary = sandbox.window[`translations_${lang}`] || {};
+  const englishSandbox = { window: {} };
+  vm.runInNewContext(enText, englishSandbox);
+  const english = englishSandbox.window.translations_en || {};
+  for (const key of new Set(keys)) {
+    const value = dictionary[key] ?? english[key];
+    if (typeof value !== 'string') fail(`${lang}: fallback cannot resolve ${key}`);
+  }
 }
 
 const pages = ['index.html'];

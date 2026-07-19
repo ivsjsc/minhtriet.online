@@ -18,6 +18,11 @@
   status = 301
 
 [[redirects]]
+  from = "/updates/:slug/"
+  to = "/en/updates/:slug/"
+  status = 301
+
+[[redirects]]
   from = "/"
   to = "/en"
   status = 301

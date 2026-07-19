@@ -27,6 +27,11 @@
         "type": 301
       },
       {
+        "source": "/updates/:slug/",
+        "destination": "/en/updates/:slug/",
+        "type": 301
+      },
+      {
         "source": "/",
         "destination": "/en",
         "type": 301

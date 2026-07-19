@@ -8,6 +8,9 @@
     "build": "node scripts/build-site.mjs",
     "validate": "node scripts/validate-site.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "check:a11y": "node scripts/check-accessibility.mjs",
+    "check:schema": "node scripts/check-schema.mjs",
+    "check:performance": "node scripts/check-performance.mjs",
     "check:hosting": "node scripts/check-hosting-parity.mjs",
     "preview": "node scripts/preview-server.mjs"
   }

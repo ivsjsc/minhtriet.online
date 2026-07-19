@@ -18,6 +18,12 @@ for (const source of ['/updates', '/updates/']) {
   const escaped = source.replaceAll('/', '\\/');
   assert(new RegExp(`from\\s*=\\s*"${escaped}"[\\s\\S]*?to\\s*=\\s*"\\/en\\/updates\\/"[\\s\\S]*?status\\s*=\\s*301`).test(netlify), `Netlify redirect mismatch for ${source}`);
 }
+for (const source of ['/updates/:slug', '/updates/:slug/']) {
+  const rule = firebaseRedirects.find((item) => item.source === source);
+  assert(rule?.destination === '/en/updates/:slug/' && rule?.type === 301, `Firebase slug redirect mismatch for ${source}`);
+  const escaped = source.replaceAll('/', '\\/');
+  assert(new RegExp(`from\\s*=\\s*"${escaped}"[\\s\\S]*?to\\s*=\\s*"\\/en\\/updates\\/:slug\\/"[\\s\\S]*?status\\s*=\\s*301`).test(netlify), `Netlify slug redirect mismatch for ${source}`);
+}
 
 const firebaseAssetHeader = (firebase.hosting.headers || []).find((rule) => rule.source === '/assets/**');
 assert(firebaseAssetHeader?.headers?.some((header) => header.key === 'Cache-Control' && header.value.includes('immutable')), 'Firebase hashed assets must be immutable');
