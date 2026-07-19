@@ -38,12 +38,14 @@
     const selected = lang === 'en' ? english : await loadDictionary(lang).catch(() => ({}));
     document.querySelectorAll('[data-i18n]').forEach((element) => {
       const key = element.dataset.i18n;
-      const value = selected[key] ?? english[key];
+      const englishOnly = lang !== 'en' && lang !== 'vi' && element.closest('[data-en-vi-content]');
+      const value = englishOnly ? english[key] : (selected[key] ?? english[key]);
       if (typeof value === 'string') element.textContent = value;
     });
     document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
       const key = element.dataset.i18nAlt;
-      const value = selected[key] ?? english[key];
+      const englishOnly = lang !== 'en' && lang !== 'vi' && element.closest('[data-en-vi-content]');
+      const value = englishOnly ? english[key] : (selected[key] ?? english[key]);
       if (typeof value === 'string') element.setAttribute('alt', value);
     });
     const title = selected.page_title ?? english.page_title;
