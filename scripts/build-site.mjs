@@ -10,6 +10,8 @@ const contentRoot = path.join(root, 'src', 'content');
 const templateRoot = path.join(root, 'src', 'templates');
 const outputRoot = path.join(root, 'public');
 
+const ALL_LANGS = ['en', 'vi', 'de', 'es', 'fr', 'ja', 'ko', 'ru', 'th', 'zh'];
+
 const migrationAllowlist = JSON.parse(await fs.readFile(path.join(root, 'src', 'migration-allowlist.json'), 'utf8'));
 const requiredSourceFiles = migrationAllowlist.required;
 
@@ -65,6 +67,22 @@ async function copyTree(from, to) {
   }
 }
 
+async function renderHomePages() {
+  const rootIndex = path.join(outputRoot, 'index.html');
+  const baseHtml = await fs.readFile(rootIndex, 'utf8');
+  for (const lang of ALL_LANGS) {
+    let localized = baseHtml
+      .replace(/<html lang="[^"]*">/, `<html lang="${lang}">`)
+      .replace(/<body data-page-type="home" data-page-lang="[^"]*">/, `<body data-page-type="home" data-page-lang="${lang}">`)
+      .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="https://minhtriet.online/${lang}">`)
+      .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="https://minhtriet.online/${lang}">`)
+      .replace(/<script src="\/lang\/en\.js" data-lang-script><\/script>/, `<script src="/lang/${lang}.js" data-lang-script></script>`);
+    const outPath = path.join(outputRoot, lang, 'index.html');
+    await fs.mkdir(path.dirname(outPath), { recursive: true });
+    await fs.writeFile(outPath, localized);
+  }
+}
+
 async function fingerprintAssets() {
   const css = await fs.readFile(path.join(sourceRoot, 'css', 'site.css'));
   const js = await fs.readFile(path.join(sourceRoot, 'js', 'site.js'));
@@ -78,10 +96,23 @@ async function fingerprintAssets() {
 
 function header(lang) {
   const vi = lang === 'vi';
+  const options = [
+    { value: 'en', label: 'English' },
+    { value: 'vi', label: 'Tiếng Việt' },
+    { value: 'de', label: 'Deutsch' },
+    { value: 'es', label: 'Español' },
+    { value: 'fr', label: 'Français' },
+    { value: 'ja', label: '日本語' },
+    { value: 'ko', label: '한국어' },
+    { value: 'ru', label: 'Русский' },
+    { value: 'th', label: 'ไทย' },
+    { value: 'zh', label: '中文' }
+  ].map((opt) => `<option value="${opt.value}"${opt.value === lang ? ' selected' : ''}>${opt.label}</option>`).join('');
+
   return `<header class="site-header"><div class="wrap header-inner">
     <a class="brand" href="/${lang}/" aria-label="${vi ? 'Trang chủ Nguyễn Minh Triết' : 'Nguyen Minh Triet home'}"><img src="/images/logo/nmt-logo.png" alt="NMT" width="42" height="42"><span><small>minhtriet.online</small><strong>${vi ? 'Nguyễn Minh Triết' : 'Nguyen Minh Triet'}</strong></span></a>
     <nav class="desktop-nav" aria-label="${vi ? 'Điều hướng chính' : 'Primary navigation'}"><a href="/${lang}/#about">${vi ? 'Giới thiệu' : 'About'}</a><a href="/${lang}/#ventures">${vi ? 'Dự án trọng điểm' : 'Ventures'}</a><a href="/${lang}/#case-studies">Case Studies</a><a href="/${lang}/updates/">${vi ? 'Cập nhật' : 'Updates'}</a><a href="/${lang}/#contact">${vi ? 'Liên hệ' : 'Contact'}</a></nav>
-    <label class="sr-only" for="language-select">Language</label><select class="language-select" id="language-select" data-language-select aria-label="Language"><option value="en">English</option><option value="vi">Tiếng Việt</option></select>
+    <label class="sr-only" for="language-select">Language</label><select class="language-select" id="language-select" data-language-select aria-label="Language">${options}</select>
     <button class="menu-button" type="button" aria-label="${vi ? 'Mở điều hướng' : 'Open navigation'}" aria-expanded="false" aria-controls="mobile-nav" data-menu-button><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div><nav class="wrap mobile-nav" id="mobile-nav" aria-label="Mobile navigation" data-mobile-nav><a href="/${lang}/#about">${vi ? 'Giới thiệu' : 'About'}</a><a href="/${lang}/#ventures">${vi ? 'Dự án trọng điểm' : 'Ventures'}</a><a href="/${lang}/#case-studies">Case Studies</a><a href="/${lang}/updates/">${vi ? 'Cập nhật' : 'Updates'}</a><a href="/${lang}/#contact">${vi ? 'Liên hệ' : 'Contact'}</a></nav></header>`;
 }
@@ -100,7 +131,8 @@ async function loadUpdates() {
 }
 
 function articleSchema(item, lang) {
-  const content = item[lang];
+  const vi = lang === 'vi';
+  const content = item[lang] || (vi ? item.vi : item.en);
   const url = `https://minhtriet.online/${lang}/updates/${item.slug}/`;
   const schema = {
     '@context': 'https://schema.org',
@@ -123,12 +155,13 @@ function articleSchema(item, lang) {
 }
 
 function collectionSchema(lang, updates) {
+  const vi = lang === 'vi';
   const url = `https://minhtriet.online/${lang}/updates/`;
   return JSON.stringify({
     '@context': 'https://schema.org', '@graph': [
       { '@type': 'Person', '@id': 'https://minhtriet.online/#person', name: 'Nguyen Minh Triet', url: 'https://minhtriet.online/' },
-      { '@type': 'CollectionPage', '@id': `${url}#page`, url, name: lang === 'vi' ? 'Cập nhật' : 'Updates', about: { '@id': 'https://minhtriet.online/#person' },
-        mainEntity: { '@type': 'ItemList', itemListElement: updates.map((item, index) => ({ '@type': 'ListItem', position: index + 1, url: `https://minhtriet.online/${lang}/updates/${item.slug}/`, name: item[lang].title })) } }
+      { '@type': 'CollectionPage', '@id': `${url}#page`, url, name: vi ? 'Cập nhật' : 'Updates', about: { '@id': 'https://minhtriet.online/#person' },
+        mainEntity: { '@type': 'ItemList', itemListElement: updates.map((item, index) => ({ '@type': 'ListItem', position: index + 1, url: `https://minhtriet.online/${lang}/updates/${item.slug}/`, name: (item[lang] || (vi ? item.vi : item.en)).title })) } }
     ]
   }).replaceAll('<', '\\u003c');
 }
@@ -136,11 +169,11 @@ function collectionSchema(lang, updates) {
 async function renderUpdates(assets, updates) {
   const indexTemplate = await fs.readFile(path.join(templateRoot, 'updates-index.html'), 'utf8');
   const articleTemplate = await fs.readFile(path.join(templateRoot, 'update-article.html'), 'utf8');
-  for (const lang of ['en', 'vi']) {
+  for (const lang of ALL_LANGS) {
     const vi = lang === 'vi';
     const hasPublished = updates.some((item) => Boolean(item.datePublished));
     const cards = updates.map((item) => {
-      const content = item[lang];
+      const content = item[lang] || (vi ? item.vi : item.en);
       return `<article class="card update-card"><img src="${item.cover}" alt="${escapeHtml(content.title)}" width="1600" height="900" loading="lazy"><div class="update-card-body"><span class="draft-label">${item.datePublished ? escapeHtml(item.datePublished) : (vi ? 'Bản nháp để duyệt' : 'Draft for preview')}</span><h3>${escapeHtml(content.title)}</h3><p>${escapeHtml(content.description)}</p><a class="text-link" href="/${lang}/updates/${item.slug}/">${vi ? 'Đọc cập nhật →' : 'Read update →'}</a></div></article>`;
     }).join('');
     const indexValues = {
@@ -161,10 +194,10 @@ async function renderUpdates(assets, updates) {
     await fs.writeFile(indexOutput, replaceTokens(indexTemplate, indexValues));
 
     for (const item of updates) {
-      const content = item[lang];
+      const content = item[lang] || (vi ? item.vi : item.en);
       const enUrl = `https://minhtriet.online/en/updates/${item.slug}/`;
       const viUrl = `https://minhtriet.online/vi/updates/${item.slug}/`;
-      const canonical = lang === 'vi' ? viUrl : enUrl;
+      const canonical = `https://minhtriet.online/${lang}/updates/${item.slug}/`;
       const articleBody = content.sections.map((section) => `<section><h2>${escapeHtml(section.heading)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</section>`).join('');
       const utm = new URL(item.ventureUrl);
       utm.searchParams.set('utm_source', 'minhtriet.online'); utm.searchParams.set('utm_medium', 'portfolio');
@@ -205,17 +238,26 @@ async function replaceAssetTokens(assets) {
 }
 
 async function writeSitemaps(updates) {
-  const staticUrls = [
-    ['/en', '1.0'], ['/vi', '1.0'], ['/cv-online.html', '0.8'], ['/ivs-aitool', '0.7']
-  ];
+  const staticUrls = ALL_LANGS.map((lang) => [`/${lang}`, '1.0']).concat([['/cv-online.html', '0.8'], ['/ivs-aitool', '0.7']]);
   const published = updates.filter((item) => item.datePublished);
   const urls = [...staticUrls.map(([url, priority]) => ({ url, priority, lastmod: null }))];
-  for (const item of published) for (const lang of ['en', 'vi']) urls.push({ url: `/${lang}/updates/${item.slug}/`, priority: '0.8', lastmod: item.dateModified || item.datePublished });
-  if (published.length) for (const lang of ['en', 'vi']) urls.push({ url: `/${lang}/updates/`, priority: '0.9', lastmod: published.map((item) => item.dateModified || item.datePublished).sort().at(-1) });
+  for (const item of published) for (const lang of ALL_LANGS) urls.push({ url: `/${lang}/updates/${item.slug}/`, priority: '0.8', lastmod: item.dateModified || item.datePublished });
+  if (published.length) for (const lang of ALL_LANGS) urls.push({ url: `/${lang}/updates/`, priority: '0.9', lastmod: published.map((item) => item.dateModified || item.datePublished).sort().at(-1) });
   const body = urls.map((entry) => `  <url>\n    <loc>https://minhtriet.online${entry.url}</loc>${entry.lastmod ? `\n    <lastmod>${entry.lastmod}</lastmod>` : ''}\n    <priority>${entry.priority}</priority>\n  </url>`).join('\n');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
   await fs.writeFile(path.join(outputRoot, 'sitemap.xml'), xml);
   await fs.writeFile(path.join(outputRoot, 'sitemap-multilingual.xml'), xml);
+}
+
+async function writeRedirects() {
+  const redirects = [
+    '/updates /en/updates/ 301',
+    '/updates/ /en/updates/ 301',
+    '/updates/:slug /en/updates/:slug/ 301',
+    '/updates/:slug/ /en/updates/:slug/ 301',
+    ...ALL_LANGS.map((lang) => `/${lang} /${lang}/ 301`)
+  ].join('\n') + '\n';
+  await fs.writeFile(path.join(outputRoot, '_redirects'), redirects);
 }
 
 async function writeManifest() {
@@ -237,6 +279,7 @@ async function writeManifest() {
 await assertSourceAllowlist();
 await cleanOutput();
 await copyTree(sourceRoot, outputRoot);
+await renderHomePages();
 await fs.cp(contentRoot, path.join(outputRoot, 'content'), { recursive: true });
 const assets = await fingerprintAssets();
 
@@ -244,8 +287,9 @@ const updates = await loadUpdates();
 await renderUpdates(assets, updates);
 await replaceAssetTokens(assets);
 await writeSitemaps(updates);
+await writeRedirects();
 await writeManifest();
 
 const validation = spawnSync(process.execPath, [path.join(root, 'scripts', 'validate-site.mjs')], { stdio: 'inherit' });
 if (validation.status !== 0) process.exit(validation.status || 1);
-console.log(`Built ${updates.length} bilingual updates into ${path.relative(root, outputRoot)}.`);
+console.log(`Built ${updates.length} multilingual updates into ${path.relative(root, outputRoot)}.`);

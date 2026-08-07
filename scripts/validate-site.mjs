@@ -58,9 +58,11 @@ for (const lang of ['en', 'vi', 'de', 'es', 'fr', 'ja', 'ko', 'ru', 'th', 'zh'])
   }
 }
 
+const allLangs = ['en', 'vi', 'de', 'es', 'fr', 'ja', 'ko', 'ru', 'th', 'zh'];
 const pages = ['index.html'];
-for (const item of updates) for (const lang of ['en', 'vi']) pages.push(`${lang}/updates/${item.slug}/index.html`);
-for (const lang of ['en', 'vi']) pages.push(`${lang}/updates/index.html`);
+for (const lang of allLangs) pages.push(`${lang}/index.html`);
+for (const item of updates) for (const lang of allLangs) pages.push(`${lang}/updates/${item.slug}/index.html`);
+for (const lang of allLangs) pages.push(`${lang}/updates/index.html`);
 
 for (const relative of pages) {
   const full = path.join(output, relative);

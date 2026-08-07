@@ -35,10 +35,9 @@
     const type = document.body.dataset.pageType;
     const slug = document.body.dataset.pageSlug;
     if (type === 'update-article') {
-      if (lang === 'vi') return `/vi/updates/${slug}/`;
-      return `/en/updates/${slug}/`;
+      return `/${lang}/updates/${slug}/`;
     }
-    if (type === 'updates-index') return `/${lang === 'vi' ? 'vi' : 'en'}/updates/`;
+    if (type === 'updates-index') return `/${lang}/updates/`;
     return `/${lang}/`;
   };
 
@@ -79,12 +78,11 @@
     const localizedUrl = `https://minhtriet.online/${lang}`;
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', localizedUrl);
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', localizedUrl);
-    const articleLang = lang === 'vi' ? 'vi' : 'en';
     document.querySelectorAll('[data-localized-update]').forEach((link) => {
-      link.href = `/${articleLang}/updates/${link.dataset.localizedUpdate}/`;
+      link.href = `/${lang}/updates/${link.dataset.localizedUpdate}/`;
     });
     document.querySelectorAll('[data-localized-updates-index]').forEach((link) => {
-      link.href = `/${articleLang}/updates/`;
+      link.href = `/${lang}/updates/`;
     });
   };
 

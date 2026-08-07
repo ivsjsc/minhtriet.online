@@ -9,6 +9,38 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://minhtriet.online/de</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/es</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/fr</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/ja</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/ko</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/ru</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/th</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://minhtriet.online/zh</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://minhtriet.online/cv-online.html</loc>
     <priority>0.8</priority>
   </url>
