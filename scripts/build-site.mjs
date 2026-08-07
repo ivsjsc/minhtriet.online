@@ -43,8 +43,24 @@ async function copyTree(from, to) {
     const source = path.join(from, entry.name);
     const destination = path.join(to, entry.name);
     const relative = path.relative(sourceRoot, source).replaceAll('\\', '/');
-    if (relative === 'css/site.css' || relative === 'js/site.js' || relative === 'sitemap.xml' || relative === 'sitemap-multilingual.xml') continue;
+    if (relative === 'css/site.css' || relative === 'js/site.js' || relative === 'sitemap.xml' || relative === 'sitemap-multilingual.xml' || relative.startsWith('sections/')) continue;
     if (entry.isDirectory()) await copyTree(source, destination);
+    else if (relative === 'index.html') {
+      let content = await fs.readFile(source, 'utf8');
+      const sectionsDir = path.join(sourceRoot, 'sections');
+      const sectionFiles = ['hero.html', 'about.html', 'strengths.html', 'experience.html', 'ventures.html', 'products.html', 'education.html', 'contact.html'];
+      for (const sectionFile of sectionFiles) {
+        const sectionPath = path.join(sectionsDir, sectionFile);
+        try {
+          const sectionHtml = await fs.readFile(sectionPath, 'utf8');
+          const placeholder = `<!-- SECTION: ${sectionFile.replace('.html', '').toUpperCase()} -->`;
+          content = content.replace(placeholder, sectionHtml);
+        } catch (e) {
+          // If section file doesn't exist, ignore
+        }
+      }
+      await fs.writeFile(destination, content);
+    }
     else await fs.copyFile(source, destination);
   }
 }
