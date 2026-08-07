@@ -1,7 +1,6 @@
 {
   "purpose": "Files present in the legacy public deployment that must survive the src-to-public migration.",
   "required": [
-    "3. CV.pdf",
     "404.html",
     "aura.html",
     "CNAME",
@@ -63,7 +62,6 @@
     "lang/en.js",
     "lang/es.js",
     "lang/fr.js",
-    "lang/fr.js.bak",
     "lang/ja.js",
     "lang/ko.js",
     "lang/ru.js",

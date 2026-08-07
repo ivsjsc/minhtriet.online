@@ -41,7 +41,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/site.bab91c2b1327.css">
+  <link rel="stylesheet" href="/assets/site.e95c274192cf.css">
   <title>Nguyen Minh Triet | Founder and Digital Product Architect</title>
   <script type="application/ld+json">
   {
@@ -140,8 +140,25 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#ventures" data-i18n="hero_cta_ventures">Explore Ventures</a>
         <a class="btn btn-secondary" href="#contact" data-i18n="hero_cta_contact">Discuss Collaboration</a>
-        <a class="btn btn-secondary" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt</a>
-        <a class="btn btn-secondary" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV</a>
+        <div class="cv-dropdown">
+          <button type="button" class="btn btn-cv-dropdown" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+            <span>CV</span>
+            <i class="fa-solid fa-chevron-down cv-dropdown-icon" aria-hidden="true"></i>
+          </button>
+          <ul class="cv-dropdown-menu" role="menu">
+            <li role="none">
+              <a role="menuitem" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <nav class="hero-socials" aria-label="Social links">
         <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
@@ -560,9 +577,26 @@
           <li><strong>GitHub:</strong> <a href="https://github.com/ivsjsc" target="_blank" rel="noopener noreferrer">github.com/ivsjsc</a></li>
         </ul>
       </div>
-    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-      <a class="btn btn-primary" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt</a>
-      <a class="btn btn-secondary" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV</a>
+    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: center;">
+      <div class="cv-dropdown">
+        <button type="button" class="btn btn-cv-dropdown" aria-expanded="false" aria-haspopup="true">
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+          <span>CV</span>
+          <i class="fa-solid fa-chevron-down cv-dropdown-icon" aria-hidden="true"></i>
+        </button>
+        <ul class="cv-dropdown-menu" role="menu">
+          <li role="none">
+            <a role="menuitem" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download">
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download">
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV
+            </a>
+          </li>
+        </ul>
+      </div>
       <a class="btn btn-secondary" href="/cv-online.html" target="_blank"><i class="fa-solid fa-globe" aria-hidden="true"></i> Online CV</a>
     </div>
   </div>
@@ -582,6 +616,6 @@
     <button id="contactFab" class="btn-fab btn-contact-fab" type="button" aria-label="Open social links" aria-expanded="false" aria-controls="fabSocials" title="Open social links"><i class="fa-solid fa-envelope" aria-hidden="true"></i></button>
   </div>
   <script src="/lang/de.js" data-lang-script></script>
-  <script src="/assets/site.ae04fed7e9eb.js" defer></script>
+  <script src="/assets/site.d0f7b41531ed.js" defer></script>
 </body>
 </html>

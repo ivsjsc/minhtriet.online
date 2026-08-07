@@ -8,8 +8,25 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="#ventures" data-i18n="hero_cta_ventures">Explore Ventures</a>
         <a class="btn btn-secondary" href="#contact" data-i18n="hero_cta_contact">Discuss Collaboration</a>
-        <a class="btn btn-secondary" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt</a>
-        <a class="btn btn-secondary" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV</a>
+        <div class="cv-dropdown">
+          <button type="button" class="btn btn-cv-dropdown" aria-expanded="false" aria-haspopup="true">
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+            <span>CV</span>
+            <i class="fa-solid fa-chevron-down cv-dropdown-icon" aria-hidden="true"></i>
+          </button>
+          <ul class="cv-dropdown-menu" role="menu">
+            <li role="none">
+              <a role="menuitem" href="/CV.NguyenMinhTriet-vi.pdf" target="_blank" download data-i18n="cv_vi_download">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Tải CV Tiếng Việt
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="/CV.NguyenMinhTriet-en.pdf" target="_blank" download data-i18n="cv_en_download">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download English CV
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <nav class="hero-socials" aria-label="Social links">
         <a href="https://www.linkedin.com/in/mtrietng/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
