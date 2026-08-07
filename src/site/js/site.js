@@ -115,7 +115,81 @@
   document.documentElement.lang = htmlLangMap[currentLang] || currentLang;
   applyHomeLanguage(currentLang).catch(() => {});
 
+  // Experience timeline accordion logic
+  const initTimelineAccordion = () => {
+    const cards = document.querySelectorAll('[data-exp-card]');
+    const toggleAllBtn = document.getElementById('toggleAllExpBtn');
+
+    if (!cards.length) return;
+
+    const getLang = () => document.documentElement.lang || currentLang || 'vi';
+
+    const updateLabel = (element, key) => {
+      if (!element) return;
+      element.setAttribute('data-i18n', key);
+      const lang = getLang() === 'vi' ? 'vi' : 'en';
+      const dict = (lang === 'vi' ? window.translations_vi : window.translations_en) || window[`translations_${currentLang}`] || {};
+      const fallbackText = {
+        exp_expand: lang === 'vi' ? 'Mở rộng' : 'Expand',
+        exp_collapse: lang === 'vi' ? 'Thu gọn' : 'Collapse',
+        exp_expand_all: lang === 'vi' ? 'Mở rộng tất cả' : 'Expand all',
+        exp_collapse_all: lang === 'vi' ? 'Thu gọn tất cả' : 'Collapse all'
+      };
+      element.textContent = dict[key] || fallbackText[key] || '';
+    };
+
+    const toggleCard = (card, forceState) => {
+      const header = card.querySelector('.timeline-card-header');
+      const toggleBtn = card.querySelector('.btn-exp-toggle');
+      const details = card.querySelector('.timeline-details');
+      const labelSpan = card.querySelector('.exp-toggle-label');
+      
+      const isExpanded = forceState !== undefined ? forceState : !card.classList.contains('is-expanded');
+      
+      card.classList.toggle('is-expanded', isExpanded);
+      if (header) header.setAttribute('aria-expanded', String(isExpanded));
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+      if (details) details.setAttribute('aria-hidden', String(!isExpanded));
+
+      updateLabel(labelSpan, isExpanded ? 'exp_collapse' : 'exp_expand');
+      updateToggleAllState();
+    };
+
+    const updateToggleAllState = () => {
+      if (!toggleAllBtn) return;
+      const allExpanded = Array.from(cards).every(c => c.classList.contains('is-expanded'));
+      toggleAllBtn.setAttribute('aria-expanded', String(allExpanded));
+      const labelSpan = toggleAllBtn.querySelector('.toggle-all-text');
+      updateLabel(labelSpan, allExpanded ? 'exp_collapse_all' : 'exp_expand_all');
+    };
+
+    cards.forEach(card => {
+      const header = card.querySelector('.timeline-card-header');
+      if (header) {
+        header.addEventListener('click', (e) => {
+          toggleCard(card);
+        });
+        header.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleCard(card);
+          }
+        });
+      }
+    });
+
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', () => {
+        const allExpanded = Array.from(cards).every(c => c.classList.contains('is-expanded'));
+        cards.forEach(card => toggleCard(card, !allExpanded));
+      });
+    }
+  };
+
+  initTimelineAccordion();
+
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
   }
 })();
+
