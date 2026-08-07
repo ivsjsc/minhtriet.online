@@ -488,8 +488,8 @@
     },
     {
       "path": "lang/de.js",
-      "bytes": 18703,
-      "sha256": "f39cd0fcb2f5ae1ac17274cfdcd808ace6f9c874a30541090a6e711bdf718ccd"
+      "bytes": 43025,
+      "sha256": "b5c0096fd55f4643cd1c98edbc3f6fcbf5b97dfd255c5855537f783403709272"
     },
     {
       "path": "lang/en.js",
@@ -498,13 +498,13 @@
     },
     {
       "path": "lang/es.js",
-      "bytes": 19409,
-      "sha256": "f140abea8ae4f881235b198468ce7c7925d67cccfaf461cacdfb1116949d0d45"
+      "bytes": 43734,
+      "sha256": "62f3e036f9e9ff5e6f5b9d7af5567327bdbfa96e1bb06774dfbd5489b5494e93"
     },
     {
       "path": "lang/fr.js",
-      "bytes": 20232,
-      "sha256": "d216309b56411ce79c63c160e73ef85cd521d1dfa0bf61d50c7703921b1e71a9"
+      "bytes": 44566,
+      "sha256": "db234c7cec644bc097ea65e570308beffd3ad690644b0f2a4121273ee5306740"
     },
     {
       "path": "lang/fr.js.bak",
@@ -513,33 +513,33 @@
     },
     {
       "path": "lang/ja.js",
-      "bytes": 20532,
-      "sha256": "28a4f9e9e3ce70b79606dde33be56e6822f6581666bbfb24e3b0533b353ef838"
+      "bytes": 44881,
+      "sha256": "55f21a725a2c0136e84f3db840a635cfa4c297a058ee33dc0ee7306b30293197"
     },
     {
       "path": "lang/ko.js",
-      "bytes": 18236,
-      "sha256": "3f75f7ac102963eabf22d07c5521b3acbf5f7c220c396c1c4146cec2ae8338fe"
+      "bytes": 42593,
+      "sha256": "03cb0f39ffca3b4f3cfb34e367862144123b07d5e13c68acf1ef4eea97ce4afb"
     },
     {
       "path": "lang/ru.js",
-      "bytes": 29754,
-      "sha256": "b3dabe89beb1703acf883553972802c876875fcbecc88766efa28cb97149e480"
+      "bytes": 53929,
+      "sha256": "816233171bab857a4cd70ef489f1b781de0ded56417dd87d60ddd4865a95602d"
     },
     {
       "path": "lang/th.js",
-      "bytes": 36625,
-      "sha256": "5ac649b0ad37119e9d01c9748133bab08e812b38b803d569f32418c1c1ca6e94"
+      "bytes": 61090,
+      "sha256": "edefb4c689412291f000f6deef85a858ae9174dd4da0386ff4eadc66e48f620c"
     },
     {
       "path": "lang/vi.js",
-      "bytes": 46434,
-      "sha256": "70f1c0b26c685b09381554de680f7031d023f42ddb69748902e0e3f664fdee8d"
+      "bytes": 46294,
+      "sha256": "4d205ecb7f0f5d291814021c44af8a255cddb0dcd9bebaf678379d61c42a91fb"
     },
     {
       "path": "lang/zh.js",
-      "bytes": 15569,
-      "sha256": "8c27f1c2b63cd41534fbf9cf9dccd9786f5669eba8b3045eed625f5337485ebf"
+      "bytes": 39908,
+      "sha256": "33446c54645dc86f3246604544ee0d6d3e2bba9bb3e68ef3cb3d0eda7a7da7a0"
     },
     {
       "path": "redesign.html",
