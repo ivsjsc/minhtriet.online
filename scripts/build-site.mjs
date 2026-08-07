@@ -237,7 +237,9 @@ async function writeManifest() {
 await assertSourceAllowlist();
 await cleanOutput();
 await copyTree(sourceRoot, outputRoot);
+await fs.cp(contentRoot, path.join(outputRoot, 'content'), { recursive: true });
 const assets = await fingerprintAssets();
+
 const updates = await loadUpdates();
 await renderUpdates(assets, updates);
 await replaceAssetTokens(assets);

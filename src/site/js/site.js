@@ -188,8 +188,132 @@
 
   initTimelineAccordion();
 
+
+  // Master Portfolio dynamic rendering & tab filtering logic
+  const initMasterPortfolio = async () => {
+    const container = document.getElementById('portfolioContainer');
+    const tabButtons = document.querySelectorAll('[data-portfolio-tab]');
+    const categoryFilter = document.getElementById('portfolioCategoryFilter');
+    const categoryBtns = document.querySelectorAll('[data-category]');
+
+    if (!container) return;
+
+    let masterData = [];
+    try {
+      const response = await fetch('/content/PROJECT_PORTFOLIO_MASTER.json');
+      if (response.ok) {
+        masterData = await response.json();
+      }
+    } catch (e) {
+      console.warn('Could not load portfolio master JSON:', e);
+    }
+
+    if (!masterData.length) return;
+
+    let currentTier = 'featured';
+    let currentCategory = 'all';
+
+    const getLang = () => (document.documentElement.lang === 'vi' || currentLang === 'vi') ? 'vi' : 'en';
+
+    const renderCard = (item, index) => {
+      const lang = getLang();
+      const title = lang === 'vi' ? item.title_vi : item.title_en;
+      const desc = lang === 'vi' ? item.desc_vi : item.desc_en;
+      const role = lang === 'vi' ? item.role_vi : item.role_en;
+      const contributions = lang === 'vi' ? item.contributions_vi : item.contributions_en;
+
+      let statusBadgeClass = 'badge-status-active';
+      if (item.tier === 'business') statusBadgeClass = 'badge-status-business';
+      if (item.tier === 'labs') statusBadgeClass = 'badge-status-prototype';
+
+      const tagsHtml = (item.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+      const metricHtml = item.highlight_metric ? `<div class="portfolio-highlight-metric"><i class="fa-solid fa-chart-line"></i> ${item.highlight_metric}</div>` : '';
+      const githubLink = item.github_repo ? `<a class="portfolio-link-btn" href="https://github.com/${item.github_repo}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>` : '';
+      const liveLink = item.live_url ? `<a class="portfolio-link-btn" href="${item.live_url}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>` : '';
+
+      return `
+        <article class="portfolio-item-card">
+          <div class="portfolio-card-header">
+            <span class="card-index">${String(index + 1).padStart(2, '0')}</span>
+            <span class="portfolio-badge-status ${statusBadgeClass}">${item.status || 'Active'}</span>
+          </div>
+          <h3>${title}</h3>
+          <p class="eyebrow" style="margin-top: 4px; margin-bottom: 8px;">${item.category} · ${item.subcategory}</p>
+          <p style="font-size: 0.92rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px;">${desc}</p>
+          <div class="role-block" style="margin-top: auto; padding-top: 12px;">
+            <strong>${lang === 'vi' ? 'Vai trò & Đóng góp:' : 'Role & Contribution:'}</strong>
+            <span style="color: var(--muted); font-size: 0.85rem;">${role} — ${contributions}</span>
+          </div>
+          ${metricHtml}
+          <div class="tag-list">${tagsHtml}</div>
+          <div class="portfolio-footer-meta">
+            <span><i class="fa-regular fa-calendar-check"></i> ${item.period || '2024'}</span>
+            <div class="portfolio-links">
+              ${githubLink}
+              ${liveLink}
+            </div>
+          </div>
+        </article>
+      `;
+    };
+
+    const updatePortfolioView = () => {
+      let filtered = masterData.filter(item => item.tier === currentTier);
+
+      if (currentTier === 'full' && currentCategory !== 'all') {
+        filtered = masterData.filter(item => item.category === currentCategory || item.tier === 'full');
+      }
+
+      if (currentTier === 'full') {
+        categoryFilter?.classList.remove('hidden');
+      } else {
+        categoryFilter?.classList.add('hidden');
+      }
+
+      if (currentTier === 'full' || currentTier === 'labs') {
+        container.classList.add('portfolio-grid-full');
+      } else {
+        container.classList.remove('portfolio-grid-full');
+      }
+
+      if (!filtered.length) {
+        container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 30px;">${getLang() === 'vi' ? 'Không có dự án nào phù hợp.' : 'No projects found matching criteria.'}</p>`;
+        return;
+      }
+
+      container.innerHTML = filtered.map((item, idx) => renderCard(item, idx)).join('');
+    };
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        currentTier = btn.dataset.portfolioTab;
+        updatePortfolioView();
+      });
+    });
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.dataset.category;
+        updatePortfolioView();
+      });
+    });
+
+    updatePortfolioView();
+  };
+
+  initMasterPortfolio();
+
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
   }
 })();
+
 

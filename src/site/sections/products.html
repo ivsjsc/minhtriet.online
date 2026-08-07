@@ -2,50 +2,45 @@
 <section class="section" id="products" aria-labelledby="products-title" data-en-vi-content>
   <div class="wrap">
     <div class="section-heading">
-      <div><p class="kicker" data-i18n="products_kicker">Digital Products &amp; Platforms</p><h2 id="products-title" data-i18n="products_title">Selected Product &amp; Project Portfolio</h2></div>
-      <p class="section-intro" data-i18n="products_intro">Key platforms and software tools designed, architected, and executed across SaaS, EdTech, Marketplace, Trust, and AI workflows.</p>
-    </div>
-    <div class="grid-2">
-      <article class="card content-card product-card">
-        <span class="card-index">01</span>
-        <h3 data-i18n="prod1_title">CenterCare / LearningCare / E-Learners LMS</h3>
-        <p class="eyebrow">EdTech · CRM &amp; LMS Platform</p>
-        <p data-i18n="prod1_desc">Comprehensive CRM/LMS for language centers and school operations: role-based access, tuition management, attendance, progress tracking, and executive dashboards.</p>
-        <div class="role-block"><strong data-i18n="my_contribution">Contribution:</strong> <span data-i18n="prod1_role">Business analysis, workflow &amp; data-field design, user stories, UAT, and rollout coordination.</span></div>
-        <div class="tag-list"><span class="tag">CRM/LMS</span><span class="tag">Data Model</span><span class="tag">Dashboard</span></div>
-      </article>
-
-      <article class="card content-card product-card">
-        <span class="card-index">02</span>
-        <h3 data-i18n="prod2_title">Aivy TeacherMatch</h3>
-        <p class="eyebrow">Marketplace · Two-sided Matching</p>
-        <p data-i18n="prod2_desc">Two-sided platform connecting international teachers with schools &amp; education centers: job postings, matching logic, verification lifecycle, and candidate pipeline.</p>
-        <div class="role-block"><strong data-i18n="my_contribution">Contribution:</strong> <span data-i18n="prod2_role">Product discovery, user flow &amp; matching logic, platform operations, and stakeholder alignment.</span></div>
-        <div class="tag-list"><span class="tag">Marketplace</span><span class="tag">Matching Engine</span><span class="tag">Verification</span></div>
-      </article>
-
-      <article class="card content-card product-card">
-        <span class="card-index">03</span>
-        <h3 data-i18n="prod3_title">Aivy Platform</h3>
-        <p class="eyebrow">AI &amp; Workflow Automation</p>
-        <p data-i18n="prod3_desc">AI assistant, knowledge workspace, and business process automation platform empowering the entire IVS ecosystem.</p>
-        <div class="role-block"><strong data-i18n="my_contribution">Contribution:</strong> <span data-i18n="prod3_role">Product direction, LLM use case mapping, process automation, and business-technology alignment.</span></div>
-        <div class="tag-list"><span class="tag">AI Workspace</span><span class="tag">LLM Automation</span><span class="tag">Process Automation</span></div>
-      </article>
-
-      <article class="card content-card product-card">
-        <span class="card-index">04</span>
-        <h3 data-i18n="prod4_title">QRVerified by IVS</h3>
-        <p class="eyebrow">Trust Platform · Verification System</p>
-        <p data-i18n="prod4_desc">Digital trust platform supporting QR lifecycle management, activation, scan logs, audit trails, and public verification UX.</p>
-        <div class="role-block"><strong data-i18n="my_contribution">Contribution:</strong> <span data-i18n="prod4_role">Business/process architecture, lifecycle logic, data &amp; audit trail requirements, and verification UX design.</span></div>
-        <div class="tag-list"><span class="tag">Verified ID</span><span class="tag">Audit Trail</span><span class="tag">Security &amp; Trust</span></div>
-      </article>
+      <div>
+        <p class="kicker" data-i18n="products_kicker">Master Product &amp; Initiative Portfolio</p>
+        <h2 id="products-title" data-i18n="products_title">Danh mục Sản phẩm &amp; Dự án Tiêu biểu</h2>
+      </div>
+      <p class="section-intro" data-i18n="products_intro">Tổng hợp toàn bộ các sản phẩm phần mềm số, giải pháp SaaS/EdTech/AI, nền tảng tin cậy và các dự án chuyển đổi số / vận hành kinh doanh thực tế.</p>
     </div>
 
-    <div class="card ecosystem-initiatives" style="margin-top: 1.5rem; text-align: center; padding: 1.5rem;">
-      <strong data-i18n="other_initiatives_title">Other Ecosystem Initiatives:</strong>
-      <p style="margin-top: 0.5rem; color: var(--color-muted);" data-i18n="other_initiatives_list">Examia · Testing Placement · iLearners · Aivy English Testing Placement · KinderLink · Aivy Architect · AI Resume Builder · Ledger2gether · Cocoa AI</p>
+    <!-- Tier Navigation Tabs -->
+    <div class="portfolio-tabs-container">
+      <div class="portfolio-tabs" role="tablist" aria-label="Portfolio Categories">
+        <button class="portfolio-tab active" type="button" role="tab" aria-selected="true" data-portfolio-tab="featured" id="tab-featured" aria-controls="panel-portfolio" data-i18n="tab_featured">
+          <i class="fa-solid fa-star" aria-hidden="true"></i> Featured Tech Products
+        </button>
+        <button class="portfolio-tab" type="button" role="tab" aria-selected="false" data-portfolio-tab="business" id="tab-business" aria-controls="panel-portfolio" data-i18n="tab_business">
+          <i class="fa-solid fa-briefcase" aria-hidden="true"></i> Business &amp; Operations
+        </button>
+        <button class="portfolio-tab" type="button" role="tab" aria-selected="false" data-portfolio-tab="full" id="tab-full" aria-controls="panel-portfolio" data-i18n="tab_full">
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Ecosystem Catalog (30+)
+        </button>
+        <button class="portfolio-tab" type="button" role="tab" aria-selected="false" data-portfolio-tab="labs" id="tab-labs" aria-controls="panel-portfolio" data-i18n="tab_labs">
+          <i class="fa-solid fa-flask" aria-hidden="true"></i> Labs &amp; R&amp;D Prototypes
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Filter Controls (Shown primarily for Ecosystem Catalog) -->
+    <div class="portfolio-category-filter hidden" id="portfolioCategoryFilter">
+      <span class="filter-label" data-i18n="filter_label"><i class="fa-solid fa-filter"></i> Lọc theo nhóm:</span>
+      <button class="category-btn active" type="button" data-category="all" data-i18n="cat_all">Tất cả</button>
+      <button class="category-btn" type="button" data-category="EdTech & SaaS" data-i18n="cat_edtech">EdTech &amp; SaaS</button>
+      <button class="category-btn" type="button" data-category="AI & Automation" data-i18n="cat_ai">AI &amp; Automation</button>
+      <button class="category-btn" type="button" data-category="Trust & Commerce" data-i18n="cat_trust">Trust &amp; Commerce</button>
+      <button class="category-btn" type="button" data-category="Community & Platforms" data-i18n="cat_community">Community &amp; Platforms</button>
+    </div>
+
+    <!-- Dynamic Portfolio Container Grid -->
+    <div class="grid-2 portfolio-grid" id="portfolioContainer" role="tabpanel" aria-labelledby="tab-featured">
+      <!-- Dynamic content rendered by JS from PROJECT_PORTFOLIO_MASTER.json -->
     </div>
   </div>
 </section>
+
