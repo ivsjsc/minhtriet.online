@@ -83,13 +83,13 @@
     },
     {
       "path": "CV.NguyenMinhTriet-en.pdf",
-      "bytes": 520967,
-      "sha256": "bdefbce2a6c3acc6287c8cee4e260a4bdf211b5f0a52c983c6a7903bbc32644e"
+      "bytes": 472056,
+      "sha256": "c5a6995fc785bf1ae38827c231ce9ee34d15b61e629dd5ca8b5e0a8275516e00"
     },
     {
       "path": "CV.NguyenMinhTriet-vi.pdf",
-      "bytes": 548040,
-      "sha256": "6f18220c7432fbfad1f1b2aedf9a5a38f119a4a194838761baecd5cd148f0f12"
+      "bytes": 600020,
+      "sha256": "b863a9963ff0127924481cdc4248ce1860b17ade18b51f79b33f75a14a6d7e35"
     },
     {
       "path": "data/translations-data.js",
