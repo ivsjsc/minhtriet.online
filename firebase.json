@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "public",
-    "site": "minhtriet",
+    "site": "ivs-tech",
     "predeploy": [
       "npm run build"
     ],
