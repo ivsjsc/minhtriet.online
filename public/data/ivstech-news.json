@@ -1,0 +1,169 @@
+{
+  "source": "https://ivstech.store",
+  "sourceMode": "firestore-public-read",
+  "generatedAt": "2026-09-04T23:49:00.720Z",
+  "vi": [
+    {
+      "slug": "5-nang-luc-so-cot-loi-ky-nguyen-ai-tu-chu",
+      "title": "5 năng lực số cốt lõi thế hệ trẻ cần trang bị trong kỷ nguyên AI tự chủ 2027–2030",
+      "excerpt": "Khi AI có thể tự viết code và thiết kế đồ họa, những kỹ năng tin học văn phòng cũ trở nên lạc hậu. Khám phá 5 năng lực số thế hệ mới giúp người học làm chủ tương lai nghề nghiệp.",
+      "category": "Đào tạo IT / IVS Academy",
+      "date": "2026-08-21",
+      "readTime": "7 phút đọc",
+      "image": "https://ivstech.store/images/pages/ivstech03.png",
+      "url": "https://ivstech.store/tin-tuc/5-nang-luc-so-cot-loi-ky-nguyen-ai-tu-chu"
+    },
+    {
+      "slug": "ai-agent-khac-gi-chatbot-truyen-thong-sme-2027",
+      "title": "AI Agent khác gì Chatbot truyền thống? Cách doanh nghiệp SME ứng dụng năm 2027",
+      "excerpt": "Năm 2027 đánh dấu sự chuyển dịch mạnh mẽ từ chatbot phản hồi tĩnh sang AI Agent tự chủ. Phân tích sự khác biệt cốt lõi về khả năng lập kế hoạch, sử dụng công cụ, trí nhớ và lộ trình ứng dụng cho SMEs.",
+      "category": "Giải pháp AI & Automation",
+      "date": "2026-08-21",
+      "readTime": "8 phút đọc",
+      "image": "https://ivstech.store/images/pages/ivstech01.png",
+      "url": "https://ivstech.store/tin-tuc/ai-agent-khac-gi-chatbot-truyen-thong-sme-2027"
+    },
+    {
+      "slug": "ai-automation-khac-rpa-truyen-thong-o-dau",
+      "title": "AI Automation khác RPA ở đâu? Định hình lại quy trình tự động hóa cho SMEs",
+      "excerpt": "So sánh chi tiết giữa tự động hóa bằng AI (AI Automation) và RPA truyền thống. Giải pháp giúp doanh nghiệp SME tự động hóa các quy trình động, không có cấu trúc cố định trong năm 2027.",
+      "category": "Giải pháp AI & Automation",
+      "date": "2026-08-21",
+      "readTime": "7 phút đọc",
+      "image": "https://ivstech.store/images/pages/ivstech02.png",
+      "url": "https://ivstech.store/tin-tuc/ai-automation-khac-rpa-truyen-thong-o-dau"
+    },
+    {
+      "slug": "human-ai-mo-hinh-luc-luong-lao-dong-moi",
+      "title": "Human + AI: Kiến tạo mô hình lực lượng lao động mới và phương pháp đào tạo nhân sự số",
+      "excerpt": "Mô hình nhân sự truyền thống đang được thay thế bởi sự kết hợp giữa Con người và AI. Hướng dẫn doanh nghiệp tái cấu trúc đội ngũ, phân chia vai trò và đào tạo kỹ năng số thực chiến.",
+      "category": "Chuyển đổi số",
+      "date": "2026-08-21",
+      "readTime": "8 phút đọc",
+      "image": "https://ivstech.store/images/pages/ivstech01.png",
+      "url": "https://ivstech.store/tin-tuc/human-ai-mo-hinh-luc-luong-lao-dong-moi"
+    },
+    {
+      "slug": "ngoai-ngu-co-con-quan-trong-trong-thoi-dai-ai-dich-thuat",
+      "title": "Ngoại ngữ còn quan trọng không khi AI dịch thuật ngày càng tốt?",
+      "excerpt": "Khi AI có thể dịch thời gian thực bằng giọng nói và viết email chuẩn bản xứ, người học ngoại ngữ cần thay đổi tư duy. Ngoại ngữ không còn là công cụ ghi nhớ từ vựng, mà là chìa khóa kết nối văn hóa và tư duy prompt.",
+      "category": "Đào tạo IT / IVS Academy",
+      "date": "2026-08-21",
+      "readTime": "8 phút đọc",
+      "image": "https://ivstech.store/images/pages/it-learners.png",
+      "url": "https://ivstech.store/tin-tuc/ngoai-ngu-co-con-quan-trong-trong-thoi-dai-ai-dich-thuat"
+    },
+    {
+      "slug": "smes-nen-bat-dau-chuyen-doi-so-tu-dau",
+      "title": "Chuyển đổi số SMEs: Nên bắt đầu từ Website, CRM hay AI Automation?",
+      "excerpt": "Nhiều doanh nghiệp SME thất bại khi đầu tư công nghệ theo phong trào. Phân tích lộ trình chuyển đổi số thực tế cho SMEs: Xây dựng nền tảng, chuẩn hóa quy trình và tích hợp AI đúng thời điểm.",
+      "category": "Chuyển đổi số",
+      "date": "2026-08-21",
+      "readTime": "8 phút đọc",
+      "image": "https://ivstech.store/images/pages/ivstech04.png",
+      "url": "https://ivstech.store/tin-tuc/smes-nen-bat-dau-chuyen-doi-so-tu-dau"
+    },
+    {
+      "slug": "ivs-jsc-gioi-thieu-tiktok-commerce-2027-xay-tiktok-shop-thanh-he-thong-kinh-doanh-co-the-van-hanh-va-mo-rong",
+      "title": "IVS JSC giới thiệu TikTok Commerce 2027: Xây TikTok Shop thành hệ thống kinh doanh có thể vận hành và mở rộng",
+      "excerpt": "IVS JSC giới thiệu TikTok Commerce 2027 – mô hình triển khai TikTok Shop dành cho doanh nghiệp, từ thiết lập Seller Center, chuẩn hóa sản phẩm, Product Compliance, nội dung, Affiliate đến quản trị dữ liệu, P&L và chuyển giao vận hành.",
+      "category": "Giải pháp",
+      "date": "2026-08-07",
+      "readTime": "3 phút",
+      "image": "https://i.ytimg.com/vi/j0VaAc5D4eE/maxresdefault.jpg",
+      "url": "https://ivstech.store/tin-tuc/ivs-jsc-gioi-thieu-tiktok-commerce-2027-xay-tiktok-shop-thanh-he-thong-kinh-doanh-co-the-van-hanh-va-mo-rong"
+    },
+    {
+      "slug": "ivs-tech-gioi-thieu-dich-vu-doanh-nghiep-tu-website-ha-tang-so-den-ai-tu-dong-hoa",
+      "title": "IVS TECH giới thiệu Dịch vụ Doanh nghiệp: Từ Website, Hạ tầng số đến AI & Tự động hóa",
+      "excerpt": "IVS TECH giới thiệu nhóm Dịch vụ Doanh nghiệp tích hợp Website, phần mềm quản trị, AI & Automation và hạ tầng số, giúp doanh nghiệp xây dựng nền tảng công nghệ theo đúng nhu cầu vận hành và có khả năng mở rộng lâu dài.",
+      "category": "Giải pháp doanh nghiệp",
+      "date": "2026-08-07",
+      "readTime": "3 phút",
+      "image": "https://ivstech.store/banner-01.png",
+      "url": "https://ivstech.store/tin-tuc/ivs-tech-gioi-thieu-dich-vu-doanh-nghiep-tu-website-ha-tang-so-den-ai-tu-dong-hoa"
+    }
+  ],
+  "en": [
+    {
+      "slug": "5-nang-luc-so-cot-loi-ky-nguyen-ai-tu-chu",
+      "title": "5 Core Digital Competencies Youth Must Equip in the Autonomous AI Era 2027–2030",
+      "excerpt": "As AI automates coding and design, legacy digital skills become obsolete. Explore the 5 core digital competencies needed to thrive in the autonomous AI era of 2027–2030.",
+      "category": "Technology Training",
+      "date": "2026-08-21",
+      "readTime": "7 min read",
+      "image": "https://ivstech.store/images/pages/ivstech03.png",
+      "url": "https://ivstech.store/news/5-nang-luc-so-cot-loi-ky-nguyen-ai-tu-chu"
+    },
+    {
+      "slug": "ai-agent-khac-gi-chatbot-truyen-thong-sme-2027",
+      "title": "AI Agent vs Traditional Chatbot: Core Differences and SME Application in 2027",
+      "excerpt": "2027 marks a major shift from static chatbots to autonomous AI Agents. Discover the core differences in planning, tool use, memory, and how SMEs can deploy them for operational growth.",
+      "category": "AI & Automation Solutions",
+      "date": "2026-08-21",
+      "readTime": "8 min read",
+      "image": "https://ivstech.store/images/pages/ivstech01.png",
+      "url": "https://ivstech.store/news/ai-agent-khac-gi-chatbot-truyen-thong-sme-2027"
+    },
+    {
+      "slug": "ai-automation-khac-rpa-truyen-thong-o-dau",
+      "title": "AI Automation vs RPA: Redefining Process Automation for SMEs",
+      "excerpt": "A detailed comparison between AI Automation and traditional RPA. Discover how SMEs can automate dynamic, unstructured business workflows in 2027.",
+      "category": "AI & Automation Solutions",
+      "date": "2026-08-21",
+      "readTime": "7 min read",
+      "image": "https://ivstech.store/images/pages/ivstech02.png",
+      "url": "https://ivstech.store/news/ai-automation-khac-rpa-truyen-thong-o-dau"
+    },
+    {
+      "slug": "human-ai-mo-hinh-luc-luong-lao-dong-moi",
+      "title": "Human + AI: Building a New Workforce Model and Digital HR Training Methodologies",
+      "excerpt": "Traditional HR models are evolving into a collaborative Human + AI workforce. Learn how to restructure teams, partition roles, and implement practical digital training.",
+      "category": "Digital Transformation",
+      "date": "2026-08-21",
+      "readTime": "8 min read",
+      "image": "https://ivstech.store/images/pages/ivstech01.png",
+      "url": "https://ivstech.store/news/human-ai-mo-hinh-luc-luong-lao-dong-moi"
+    },
+    {
+      "slug": "ngoai-ngu-co-con-quan-trong-trong-thoi-dai-ai-dich-thuat",
+      "title": "Is Language Learning Still Critical When AI Translation Keeps Improving?",
+      "excerpt": "With real-time AI translation and automated local writing tools, language learners must pivot. Explore why foreign languages remain vital as cognitive portals and prompt frameworks.",
+      "category": "Technology Training",
+      "date": "2026-08-21",
+      "readTime": "8 min read",
+      "image": "https://ivstech.store/images/pages/it-learners.png",
+      "url": "https://ivstech.store/news/ngoai-ngu-co-con-quan-trong-trong-thoi-dai-ai-dich-thuat"
+    },
+    {
+      "slug": "smes-nen-bat-dau-chuyen-doi-so-tu-dau",
+      "title": "SME Digital Transformation: Should You Start with Website, CRM, or AI Automation?",
+      "excerpt": "Many SMEs fail by investing in technology based on hype. Discover a practical digital transformation roadmap: building foundations, standardizing processes, and integrating AI.",
+      "category": "Digital Transformation",
+      "date": "2026-08-21",
+      "readTime": "8 min read",
+      "image": "https://ivstech.store/images/pages/ivstech04.png",
+      "url": "https://ivstech.store/news/smes-nen-bat-dau-chuyen-doi-so-tu-dau"
+    },
+    {
+      "slug": "ivs-jsc-gioi-thieu-tiktok-commerce-2027-xay-tiktok-shop-thanh-he-thong-kinh-doanh-co-the-van-hanh-va-mo-rong",
+      "title": "IVS JSC Introduces TikTok Commerce 2027: Building TikTok Shop into a Scalable Commerce System",
+      "excerpt": "TikTok Shop is increasingly becoming part of the digital commerce infrastructure where content, creators, products, transactions and customer interactions operate within one connected ecosystem.",
+      "category": "Giải pháp",
+      "date": "2026-08-07",
+      "readTime": "3 min read",
+      "image": "https://i.ytimg.com/vi/j0VaAc5D4eE/maxresdefault.jpg",
+      "url": "https://ivstech.store/news/ivs-jsc-gioi-thieu-tiktok-commerce-2027-xay-tiktok-shop-thanh-he-thong-kinh-doanh-co-the-van-hanh-va-mo-rong"
+    },
+    {
+      "slug": "ivs-tech-gioi-thieu-dich-vu-doanh-nghiep-tu-website-ha-tang-so-den-ai-tu-dong-hoa",
+      "title": "IVS TECH Introduces Business Services: From Websites and Digital Infrastructure to AI & Automation",
+      "excerpt": "IVS TECH Introduces Business Services: From Websites and Digital Infrastructure to AI & Automation",
+      "category": "Giải pháp doanh nghiệp",
+      "date": "2026-08-07",
+      "readTime": "3 min read",
+      "image": "https://ivstech.store/banner-01.png",
+      "url": "https://ivstech.store/news/ivs-tech-gioi-thieu-dich-vu-doanh-nghiep-tu-website-ha-tang-so-den-ai-tu-dong-hoa"
+    }
+  ]
+}
