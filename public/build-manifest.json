@@ -73,18 +73,18 @@
     },
     {
       "path": "cv-online.html",
-      "bytes": 217127,
-      "sha256": "e3eff210b346288cf5b5db08b9a0b8683f752cfc77594d993904691c21520be5"
+      "bytes": 231227,
+      "sha256": "a83a129f8e956e74862bdd53e018995a33b1d80d78358c045e0665efd9beafdd"
     },
     {
       "path": "CV.NguyenMinhTriet-en.pdf",
-      "bytes": 760656,
-      "sha256": "2d885032595bcbef05cf08ce87f97025d85cda78ab1927d6e842f750f51c1b4b"
+      "bytes": 706829,
+      "sha256": "3224e030ad5c17b96d380d5d5122266d1f93ae04f02e5ec842af41f46c54f3fa"
     },
     {
       "path": "CV.NguyenMinhTriet-vi.pdf",
-      "bytes": 706829,
-      "sha256": "3224e030ad5c17b96d380d5d5122266d1f93ae04f02e5ec842af41f46c54f3fa"
+      "bytes": 760656,
+      "sha256": "2d885032595bcbef05cf08ce87f97025d85cda78ab1927d6e842f750f51c1b4b"
     },
     {
       "path": "data/translations-data.js",
