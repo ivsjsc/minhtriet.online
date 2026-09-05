@@ -73,18 +73,18 @@
     },
     {
       "path": "cv-online.html",
-      "bytes": 217279,
-      "sha256": "3c5b5d0f6d42593f00eef3482fc0d7063725c15cb932fc5eaf1141a5d026e6d7"
+      "bytes": 217127,
+      "sha256": "e3eff210b346288cf5b5db08b9a0b8683f752cfc77594d993904691c21520be5"
     },
     {
       "path": "CV.NguyenMinhTriet-en.pdf",
-      "bytes": 472056,
-      "sha256": "c5a6995fc785bf1ae38827c231ce9ee34d15b61e629dd5ca8b5e0a8275516e00"
+      "bytes": 760656,
+      "sha256": "2d885032595bcbef05cf08ce87f97025d85cda78ab1927d6e842f750f51c1b4b"
     },
     {
       "path": "CV.NguyenMinhTriet-vi.pdf",
-      "bytes": 600020,
-      "sha256": "b863a9963ff0127924481cdc4248ce1860b17ade18b51f79b33f75a14a6d7e35"
+      "bytes": 706829,
+      "sha256": "3224e030ad5c17b96d380d5d5122266d1f93ae04f02e5ec842af41f46c54f3fa"
     },
     {
       "path": "data/translations-data.js",
@@ -93,8 +93,8 @@
     },
     {
       "path": "de/index.html",
-      "bytes": 48507,
-      "sha256": "a5d3f825c3879d41a577740f4719a53472c181a8861d7a7539202a0ccb39260d"
+      "bytes": 48203,
+      "sha256": "031585b00e8c0aecc547c7653579f63440fb3beddf6b59a01f191b74274aa275"
     },
     {
       "path": "de/updates/centercare-saas-case-study/index.html",
@@ -123,8 +123,8 @@
     },
     {
       "path": "en/index.html",
-      "bytes": 48507,
-      "sha256": "ca865085350075c22b07846f1a961a6445f241271387748da35c468ba149c7a2"
+      "bytes": 48203,
+      "sha256": "156dcd0820f3b329b16536c4e09a81e47875503118898d5b84753d65d9b18e5e"
     },
     {
       "path": "en/updates/centercare-saas-case-study/index.html",
@@ -148,8 +148,8 @@
     },
     {
       "path": "es/index.html",
-      "bytes": 48507,
-      "sha256": "4c5fb739912bd5781e57825b7d9e60758e6ad4d7b74517d3d4952b015d259d25"
+      "bytes": 48203,
+      "sha256": "ab7c8a7f9e966321c39f69ce57117096a2cb3f8fa019af9c60efd21b527e7b21"
     },
     {
       "path": "es/updates/centercare-saas-case-study/index.html",
@@ -173,8 +173,8 @@
     },
     {
       "path": "fr/index.html",
-      "bytes": 48507,
-      "sha256": "2b1bc7cf8cf3348f0c039ae363d4a643b9a2084f8a3858f4b30f6698fb8674b3"
+      "bytes": 48203,
+      "sha256": "832bd7ebe7a3059a060b5e615b920ae572d37c51d74389037e3ad16a33ffb695"
     },
     {
       "path": "fr/updates/centercare-saas-case-study/index.html",
@@ -403,8 +403,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 48507,
-      "sha256": "ca865085350075c22b07846f1a961a6445f241271387748da35c468ba149c7a2"
+      "bytes": 48203,
+      "sha256": "156dcd0820f3b329b16536c4e09a81e47875503118898d5b84753d65d9b18e5e"
     },
     {
       "path": "ivs-aitool.html",
@@ -413,8 +413,8 @@
     },
     {
       "path": "ja/index.html",
-      "bytes": 48507,
-      "sha256": "d1aae5473640934b6aa65cc74bd0f59148f950ef321636146d3087c018d988a0"
+      "bytes": 48203,
+      "sha256": "b3de1eba464c8d0c91006b8e0463ea774b569c0b59175f338406484cdd4fa080"
     },
     {
       "path": "ja/updates/centercare-saas-case-study/index.html",
@@ -458,8 +458,8 @@
     },
     {
       "path": "ko/index.html",
-      "bytes": 48507,
-      "sha256": "82b0c8b304a103ddf51ca23b66e5dbb0629ceb51d9c7e8670951ed8df9816e24"
+      "bytes": 48203,
+      "sha256": "cfd99dee76aebc1cf5405928347c8880b43bbac4ec81f804c7f23379c3ed6d80"
     },
     {
       "path": "ko/updates/centercare-saas-case-study/index.html",
@@ -538,8 +538,8 @@
     },
     {
       "path": "redesign.html",
-      "bytes": 37488,
-      "sha256": "ab58823eb48bd2ef76c77e08d45201def4a9a16883f28408fba10fdeb210a5f7"
+      "bytes": 37293,
+      "sha256": "7ecdfbfb4fc0aa9c498b1da0c0e6b839925e06f013cd359a4d7937ea6608ad42"
     },
     {
       "path": "robots.txt",
@@ -548,8 +548,8 @@
     },
     {
       "path": "ru/index.html",
-      "bytes": 48507,
-      "sha256": "70046690adc56115de19d407ea746b9a9d1fda40c895ef840e71f84dd5b39729"
+      "bytes": 48203,
+      "sha256": "b5d71ad593434c94e157cd268538403646e83f74bb3ed3f5f5c148c65f04b063"
     },
     {
       "path": "ru/updates/centercare-saas-case-study/index.html",
@@ -588,8 +588,8 @@
     },
     {
       "path": "th/index.html",
-      "bytes": 48507,
-      "sha256": "94f87e6d554e51ed36367239b1a01cb7b4e51b56eb01c84756959f8760d2718f"
+      "bytes": 48203,
+      "sha256": "b880f042c3b718fb1a271c8217d8a673d1ec489eac1d47fd86fc166970b1565e"
     },
     {
       "path": "th/updates/centercare-saas-case-study/index.html",
@@ -613,8 +613,8 @@
     },
     {
       "path": "vi/index.html",
-      "bytes": 48507,
-      "sha256": "d3c53ad4ab5676a475aa7975cce415a25f8d9530b7fd40cd387d6c99325fdf2e"
+      "bytes": 48203,
+      "sha256": "c3d3a8c5c18416083f75f9dd6a4ed90bff352fe479acb328bc7fa02857faeb6a"
     },
     {
       "path": "vi/updates/centercare-saas-case-study/index.html",
@@ -653,8 +653,8 @@
     },
     {
       "path": "zh/index.html",
-      "bytes": 48507,
-      "sha256": "663670a941f9087d5b91d7d658a6bcfd1986c7caaa16e59aef62068d3dfe7a5b"
+      "bytes": 48203,
+      "sha256": "9560407bb063f4323c1ee7402cdab28a88dcd38e0f72142cbcb693c733112f55"
     },
     {
       "path": "zh/updates/centercare-saas-case-study/index.html",
