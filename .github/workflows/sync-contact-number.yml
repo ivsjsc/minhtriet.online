@@ -38,13 +38,22 @@ jobs:
 
           root = Path('.')
           excluded_roots = {'.git', 'node_modules', 'public'}
+          exact_display = '0795555789 (Zalo) | 0559656608 (Phone)'
           replacements = [
-              ('0896920547', '0559656608'),
-              ('089 692 0547', '0559656608'),
-              ('0896 920 547', '0559656608'),
+              ('0795 555 789 (Zalo) | 089 692 0547', exact_display),
+              ('0795555789 (Zalo) | 0896920547', exact_display),
+              ('0795 555 789 (Zalo) | 0896920547', exact_display),
+              ('0795555789 (Zalo) | 089 692 0547', exact_display),
+              ('0795 555 789 (Zalo) | 0559 656 608 (Phone)', exact_display),
+              ('0795 555 789 (Zalo) | 0559656608 (Phone)', exact_display),
+              ('0795555789 (Zalo) | 0559 656 608 (Phone)', exact_display),
+              ('0795555789 (Zalo) | 0559656608', exact_display),
               ('+84896920547', '+84559656608'),
               ('tel:0896920547', 'tel:+84559656608'),
               ('tel:+84896920547', 'tel:+84559656608'),
+              ('089 692 0547', '0559656608 (Phone)'),
+              ('0896 920 547', '0559656608 (Phone)'),
+              ('0896920547', '0559656608 (Phone)'),
               ('0795 555 789 (Zalo)', '0795555789 (Zalo)'),
               ('0559 656 608 (Phone)', '0559656608 (Phone)'),
           ]
@@ -81,7 +90,9 @@ jobs:
               Path('src/site/CV.NguyenMinhTriet-en.pdf'),
           ]
           old_variants = ['089 692 0547', '0896920547', '0896 920 547']
-          new_value = '0559656608'
+          new_value = '0559656608 (Phone)'
+          preview_dir = Path('/tmp/cv-previews')
+          preview_dir.mkdir(parents=True, exist_ok=True)
 
           def color_int_to_rgb(value):
               if value is None:
@@ -93,6 +104,7 @@ jobs:
                   raise SystemExit(f'Missing CV PDF: {pdf_path}')
               doc = fitz.open(pdf_path)
               total_hits = 0
+              changed_pages = set()
               for page in doc:
                   hits = []
                   for old in old_variants:
@@ -114,35 +126,46 @@ jobs:
                                       font_size = max(6.0, float(span.get('size', 9.0)))
                                       color = color_int_to_rgb(span.get('color', 0))
                                       break
-                      expanded = fitz.Rect(rect.x0 - 1, rect.y0 - 1, max(rect.x1 + 18, rect.x0 + 76), rect.y1 + 1)
+                      expanded = fitz.Rect(rect.x0 - 1, rect.y0 - 1, max(rect.x1 + 64, rect.x0 + 118), rect.y1 + 1)
                       page.add_redact_annot(expanded, fill=(1, 1, 1))
                       page.apply_redactions()
-                      inserted = page.insert_textbox(
-                          expanded,
-                          new_value,
-                          fontname='helv',
-                          fontsize=font_size,
-                          color=color,
-                          align=fitz.TEXT_ALIGN_LEFT,
-                      )
-                      if inserted < 0:
-                          smaller = max(6.0, font_size - 1.0)
-                          inserted = page.insert_textbox(expanded, new_value, fontname='helv', fontsize=smaller, color=color, align=fitz.TEXT_ALIGN_LEFT)
+                      inserted = -1
+                      trial_size = font_size
+                      while inserted < 0 and trial_size >= 6.0:
+                          inserted = page.insert_textbox(
+                              expanded,
+                              new_value,
+                              fontname='helv',
+                              fontsize=trial_size,
+                              color=color,
+                              align=fitz.TEXT_ALIGN_LEFT,
+                          )
+                          trial_size -= 0.5
                       if inserted < 0:
                           raise SystemExit(f'Could not fit replacement phone in {pdf_path} page {page.number + 1}')
                       total_hits += 1
+                      changed_pages.add(page.number)
 
               extracted = ''.join(page.get_text() for page in doc)
-              still_old = any(old in extracted for old in old_variants)
-              if still_old:
+              if any(old in extracted for old in old_variants):
                   raise SystemExit(f'Old phone still present in PDF text after edit: {pdf_path}')
               if total_hits:
                   tmp = pdf_path.with_suffix('.tmp.pdf')
                   doc.save(tmp, garbage=4, deflate=True, clean=True)
                   doc.close()
                   tmp.replace(pdf_path)
+                  verify = fitz.open(pdf_path)
+                  for page_no in sorted(changed_pages):
+                      pix = verify[page_no].get_pixmap(matrix=fitz.Matrix(1.6, 1.6), alpha=False)
+                      pix.save(preview_dir / f'{pdf_path.stem}-page-{page_no + 1}.png')
+                  verify.close()
                   print(f'Updated {pdf_path}: {total_hits} occurrence(s)')
               else:
+                  for page_no, page in enumerate(doc):
+                      txt = page.get_text()
+                      if '0559656608' in txt or '0559 656 608' in txt:
+                          pix = page.get_pixmap(matrix=fitz.Matrix(1.6, 1.6), alpha=False)
+                          pix.save(preview_dir / f'{pdf_path.stem}-page-{page_no + 1}.png')
                   doc.close()
                   print(f'No old phone occurrence found in {pdf_path}; PDF may already be current.')
 
@@ -195,7 +218,8 @@ jobs:
               doc.close()
               if any(old in text for old in old_variants):
                   failures.append(f'{pdf_path}: old phone remains')
-              if '0559656608' not in text and '0559 656 608' not in text:
+              normalized = ' '.join(text.split())
+              if '0559656608' not in normalized and '0559 656 608' not in normalized:
                   failures.append(f'{pdf_path}: new phone not found in extractable text')
 
           print(f'Scanned {scanned} text files.')
@@ -203,6 +227,15 @@ jobs:
               print('\n'.join(failures))
               raise SystemExit(1)
           print('Verification passed.')
+
+      - name: Upload CV visual previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-phone-update-previews
+          path: /tmp/cv-previews/*.png
+          if-no-files-found: warn
+          retention-days: 1
 
       - name: Commit synchronized site and CV files
         run: |
