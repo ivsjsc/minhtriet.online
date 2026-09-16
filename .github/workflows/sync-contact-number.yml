@@ -1,0 +1,217 @@
+name: Sync contact number across site and CV assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-contact-number.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-contact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF editing dependency
+        run: python -m pip install --disable-pip-version-check pymupdf
+
+      - name: Replace phone number in source text files
+        shell: python
+        run: |
+          from pathlib import Path
+
+          root = Path('.')
+          excluded_roots = {'.git', 'node_modules', 'public'}
+          replacements = [
+              ('0896920547', '0559656608'),
+              ('089 692 0547', '0559656608'),
+              ('0896 920 547', '0559656608'),
+              ('+84896920547', '+84559656608'),
+              ('tel:0896920547', 'tel:+84559656608'),
+              ('tel:+84896920547', 'tel:+84559656608'),
+              ('0795 555 789 (Zalo)', '0795555789 (Zalo)'),
+              ('0559 656 608 (Phone)', '0559656608 (Phone)'),
+          ]
+          changed = []
+          for path in root.rglob('*'):
+              if not path.is_file():
+                  continue
+              if any(part in excluded_roots for part in path.parts):
+                  continue
+              if path.suffix.lower() in {'.pdf', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.zip', '.woff', '.woff2', '.ttf', '.eot', '.mp4', '.mp3'}:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated = text
+              for old, new in replacements:
+                  updated = updated.replace(old, new)
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(str(path))
+          print('Updated text files:')
+          for item in changed:
+              print(f'  - {item}')
+
+      - name: Update phone number inside CV PDFs
+        shell: python
+        run: |
+          from pathlib import Path
+          import fitz
+
+          pdfs = [
+              Path('src/site/CV.NguyenMinhTriet-vi.pdf'),
+              Path('src/site/CV.NguyenMinhTriet-en.pdf'),
+          ]
+          old_variants = ['089 692 0547', '0896920547', '0896 920 547']
+          new_value = '0559656608'
+
+          def color_int_to_rgb(value):
+              if value is None:
+                  return (0, 0, 0)
+              return (((value >> 16) & 255) / 255.0, ((value >> 8) & 255) / 255.0, (value & 255) / 255.0)
+
+          for pdf_path in pdfs:
+              if not pdf_path.exists():
+                  raise SystemExit(f'Missing CV PDF: {pdf_path}')
+              doc = fitz.open(pdf_path)
+              total_hits = 0
+              for page in doc:
+                  hits = []
+                  for old in old_variants:
+                      for rect in page.search_for(old):
+                          if not any(abs(rect.x0-r.x0) < 0.5 and abs(rect.y0-r.y0) < 0.5 for r in hits):
+                              hits.append(rect)
+                  if not hits:
+                      continue
+
+                  page_dict = page.get_text('dict')
+                  for rect in hits:
+                      font_size = 9.0
+                      color = (0, 0, 0)
+                      for block in page_dict.get('blocks', []):
+                          for line in block.get('lines', []):
+                              for span in line.get('spans', []):
+                                  srect = fitz.Rect(span.get('bbox', (0, 0, 0, 0)))
+                                  if srect.intersects(rect):
+                                      font_size = max(6.0, float(span.get('size', 9.0)))
+                                      color = color_int_to_rgb(span.get('color', 0))
+                                      break
+                      expanded = fitz.Rect(rect.x0 - 1, rect.y0 - 1, max(rect.x1 + 18, rect.x0 + 76), rect.y1 + 1)
+                      page.add_redact_annot(expanded, fill=(1, 1, 1))
+                      page.apply_redactions()
+                      inserted = page.insert_textbox(
+                          expanded,
+                          new_value,
+                          fontname='helv',
+                          fontsize=font_size,
+                          color=color,
+                          align=fitz.TEXT_ALIGN_LEFT,
+                      )
+                      if inserted < 0:
+                          smaller = max(6.0, font_size - 1.0)
+                          inserted = page.insert_textbox(expanded, new_value, fontname='helv', fontsize=smaller, color=color, align=fitz.TEXT_ALIGN_LEFT)
+                      if inserted < 0:
+                          raise SystemExit(f'Could not fit replacement phone in {pdf_path} page {page.number + 1}')
+                      total_hits += 1
+
+              extracted = ''.join(page.get_text() for page in doc)
+              still_old = any(old in extracted for old in old_variants)
+              if still_old:
+                  raise SystemExit(f'Old phone still present in PDF text after edit: {pdf_path}')
+              if total_hits:
+                  tmp = pdf_path.with_suffix('.tmp.pdf')
+                  doc.save(tmp, garbage=4, deflate=True, clean=True)
+                  doc.close()
+                  tmp.replace(pdf_path)
+                  print(f'Updated {pdf_path}: {total_hits} occurrence(s)')
+              else:
+                  doc.close()
+                  print(f'No old phone occurrence found in {pdf_path}; PDF may already be current.')
+
+      - name: Build generated public site
+        run: npm run build
+
+      - name: Verify old number is absent and new number is present
+        shell: python
+        run: |
+          from pathlib import Path
+          import fitz
+
+          old_variants = ['0896920547', '089 692 0547', '0896 920 547', '+84896920547']
+          required_display = '0795555789 (Zalo) | 0559656608 (Phone)'
+          excluded = {'.git', 'node_modules'}
+          failures = []
+          scanned = 0
+          for path in Path('.').rglob('*'):
+              if not path.is_file() or any(part in excluded for part in path.parts):
+                  continue
+              if path.suffix.lower() in {'.pdf', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.zip', '.woff', '.woff2', '.ttf', '.eot', '.mp4', '.mp3'}:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              scanned += 1
+              for old in old_variants:
+                  if old in text:
+                      failures.append(f'{path}: contains {old}')
+
+          required_text_files = [
+              Path('Nguyen_Minh_Triet_CV_Bilingual_2026.md'),
+              Path('src/site/cv-online.html'),
+              Path('src/site/sections/contact.html'),
+              Path('public/cv-online.html'),
+              Path('public/index.html'),
+          ]
+          for path in required_text_files:
+              if not path.exists():
+                  failures.append(f'{path}: missing')
+                  continue
+              text = path.read_text(encoding='utf-8')
+              if required_display not in text:
+                  failures.append(f'{path}: required display string missing')
+
+          for pdf_path in [Path('src/site/CV.NguyenMinhTriet-vi.pdf'), Path('src/site/CV.NguyenMinhTriet-en.pdf')]:
+              doc = fitz.open(pdf_path)
+              text = ''.join(page.get_text() for page in doc)
+              doc.close()
+              if any(old in text for old in old_variants):
+                  failures.append(f'{pdf_path}: old phone remains')
+              if '0559656608' not in text and '0559 656 608' not in text:
+                  failures.append(f'{pdf_path}: new phone not found in extractable text')
+
+          print(f'Scanned {scanned} text files.')
+          if failures:
+              print('\n'.join(failures))
+              raise SystemExit(1)
+          print('Verification passed.')
+
+      - name: Commit synchronized site and CV files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "fix(contact): sync phone number across site and CV files"
+          git push
