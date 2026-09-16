@@ -1,4 +1,5 @@
 name: Sync contact number across site and CV assets
+# Canonical contact: 0795555789 (Zalo) | 0559656608 (Phone)
 
 on:
   push:
