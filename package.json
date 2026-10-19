@@ -2,7 +2,7 @@
   "name": "minhtriet-online",
   "private": true,
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.3.3"
   },
   "scripts": {
     "build": "node scripts/build-site.mjs && node scripts/inject-cv-apps.mjs && node scripts/integrate-ivstech-news.mjs",
