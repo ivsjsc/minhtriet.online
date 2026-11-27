@@ -524,5 +524,7 @@ window.translations_vi = {
   "value_address": "Ấp Đất Mới, Xã Long Phước, Tỉnh Đồng Nai",
   "contact_box2": "Tải xuống CV",
   "cv_note": "Sử dụng các nút bên dưới để tải CV dạng Markdown hoặc lưu trang này thành PDF.",
-  "contact_form_title": "Gửi tin nhắn"
+  "contact_form_title": "Gửi tin nhắn",
+  "hero_card_academy_eyebrow": "ĐÀO TẠO",
+  "hero_card_tech_eyebrow": "CÔNG NGHỆ"
 };
