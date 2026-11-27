@@ -526,5 +526,6 @@ window.translations_vi = {
   "cv_note": "Sử dụng các nút bên dưới để tải CV dạng Markdown hoặc lưu trang này thành PDF.",
   "contact_form_title": "Gửi tin nhắn",
   "hero_card_academy_eyebrow": "ĐÀO TẠO",
-  "hero_card_tech_eyebrow": "CÔNG NGHỆ"
+  "hero_card_tech_eyebrow": "CÔNG NGHỆ",
+  "cv_online_link": "CV Online"
 };

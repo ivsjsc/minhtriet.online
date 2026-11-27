@@ -459,6 +459,7 @@ window.translations_en = {
     "hero_badge": "Founder / CEO at IVS JSC",
     "hero_card_academy_eyebrow": "EDUCATION",
     "hero_card_tech_eyebrow": "TECH & STORE",
+    "cv_online_link": "CV Online",
     "avatar_alt": "Portrait of Nguyen Minh Triet",
     "about_intro": "My work begins with the operating problem: who is responsible, what information is needed, where decisions break down, and how a digital system can support the people involved.",
     "about_statement": "I work across education partnerships, product direction, business analysis, and solution architecture. This multidisciplinary perspective helps turn broad ideas into service journeys, product boundaries, implementation priorities, and systems that can evolve without losing their purpose.",
